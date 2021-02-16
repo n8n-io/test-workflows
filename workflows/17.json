@@ -1,0 +1,49 @@
+{
+  "id": 17,
+  "name": "OpenThesaurus:: Get Synonyms",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "text": "Wasser",
+        "options": {
+          "similar": true
+        }
+      },
+      "name": "OpenThesaurus",
+      "type": "n8n-nodes-base.openThesaurus",
+      "typeVersion": 1,
+      "position": [
+        500,
+        300
+      ]
+    }
+  ],
+  "connections": {
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "OpenThesaurus",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-02-16T12:25:56.509Z",
+  "updatedAt": "2021-02-16T12:26:09.769Z",
+  "settings": {},
+  "staticData": null
+}

@@ -1,0 +1,96 @@
+{
+  "id": 5,
+  "name": "Hackernews:All:getAll:Article:get:User:get",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "all",
+        "limit": 10,
+        "additionalFields": {}
+      },
+      "name": "Hacker News",
+      "type": "n8n-nodes-base.hackerNews",
+      "typeVersion": 1,
+      "position": [
+        450,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "articleId": "={{$json[\"objectID\"]}}",
+        "additionalFields": {}
+      },
+      "name": "Hacker News1",
+      "type": "n8n-nodes-base.hackerNews",
+      "typeVersion": 1,
+      "position": [
+        650,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "user",
+        "username": "={{$json[\"author\"]}}"
+      },
+      "name": "Hacker News2",
+      "type": "n8n-nodes-base.hackerNews",
+      "typeVersion": 1,
+      "position": [
+        850,
+        300
+      ]
+    }
+  ],
+  "connections": {
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Hacker News",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Hacker News": {
+      "main": [
+        [
+          {
+            "node": "Hacker News1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Hacker News1": {
+      "main": [
+        [
+          {
+            "node": "Hacker News2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-02-15T11:38:21.443Z",
+  "updatedAt": "2021-02-15T11:38:21.443Z",
+  "settings": {},
+  "staticData": null
+}

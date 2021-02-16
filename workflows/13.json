@@ -1,0 +1,92 @@
+{
+  "id": 13,
+  "name": "[remove executeSingle] WriteBinaryFile test",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "fileSelector": "/home/dali/Work/assets/*"
+      },
+      "name": "Read Binary Files",
+      "type": "n8n-nodes-base.readBinaryFiles",
+      "typeVersion": 1,
+      "position": [
+        460,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "fileName": "=/home/dali/Work/assets/Copied{{$binary.data.fileName}}"
+      },
+      "name": "Write Binary File",
+      "type": "n8n-nodes-base.writeBinaryFile",
+      "typeVersion": 1,
+      "position": [
+        670,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "command": "rm /home/dali/Work/assets/Copied*"
+      },
+      "name": "Execute Command",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [
+        920,
+        300
+      ]
+    }
+  ],
+  "connections": {
+    "Read Binary Files": {
+      "main": [
+        [
+          {
+            "node": "Write Binary File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Read Binary Files",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Write Binary File": {
+      "main": [
+        [
+          {
+            "node": "Execute Command",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-02-16T08:54:28.131Z",
+  "updatedAt": "2021-02-16T09:40:49.754Z",
+  "settings": {},
+  "staticData": null
+}

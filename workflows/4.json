@@ -1,0 +1,102 @@
+{
+  "id": 4,
+  "name": "FTP:ftp:list download upload",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "list"
+      },
+      "name": "FTP1",
+      "type": "n8n-nodes-base.ftp",
+      "typeVersion": 1,
+      "position": [
+        430,
+        300
+      ],
+      "credentials": {
+        "ftp": "Tele2 Public FTP http://speedtest.tele2.net/"
+      }
+    },
+    {
+      "parameters": {
+        "path": "1MB.zip"
+      },
+      "name": "FTP",
+      "type": "n8n-nodes-base.ftp",
+      "typeVersion": 1,
+      "position": [
+        610,
+        300
+      ],
+      "credentials": {
+        "ftp": "Tele2 Public FTP http://speedtest.tele2.net/"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "upload",
+        "path": "/upload/test.zip"
+      },
+      "name": "FTP2",
+      "type": "n8n-nodes-base.ftp",
+      "typeVersion": 1,
+      "position": [
+        790,
+        300
+      ],
+      "credentials": {
+        "ftp": "Tele2 Public FTP http://speedtest.tele2.net/"
+      }
+    }
+  ],
+  "connections": {
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "FTP1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "FTP1": {
+      "main": [
+        [
+          {
+            "node": "FTP",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "FTP": {
+      "main": [
+        [
+          {
+            "node": "FTP2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-01-21T13:48:02.703Z",
+  "updatedAt": "2021-02-09T12:33:18.568Z",
+  "settings": {},
+  "staticData": null
+}

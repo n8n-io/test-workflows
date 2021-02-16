@@ -1,0 +1,92 @@
+{
+  "id": 14,
+  "name": "[remove executeSingle] ReadBinaryFile test",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "command": "find /home/dali/Work/assets -type f"
+      },
+      "name": "Execute Command",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [
+        470,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "functionCode": "filenames= items[0].json.stdout.split('\\n');\nitems=[];\nfilenames.forEach(fn => items.push({json:{filename:fn}}));\nreturn items;"
+      },
+      "name": "Function",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        670,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "filePath": "={{$json[\"filename\"]}}"
+      },
+      "name": "Read Binary File",
+      "type": "n8n-nodes-base.readBinaryFile",
+      "typeVersion": 1,
+      "position": [
+        850,
+        300
+      ]
+    }
+  ],
+  "connections": {
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Execute Command",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Execute Command": {
+      "main": [
+        [
+          {
+            "node": "Function",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Function": {
+      "main": [
+        [
+          {
+            "node": "Read Binary File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-02-16T09:55:08.210Z",
+  "updatedAt": "2021-02-16T09:55:25.740Z",
+  "settings": {},
+  "staticData": null
+}

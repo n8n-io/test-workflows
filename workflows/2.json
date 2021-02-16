@@ -1,0 +1,51 @@
+{
+  "id": 2,
+  "name": "Twitter:tweet:search:Search tweets with @n8n_io",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "search",
+        "searchText": "@n8n_io",
+        "additionalFields": {}
+      },
+      "name": "Twitter",
+      "type": "n8n-nodes-base.twitter",
+      "typeVersion": 1,
+      "position": [
+        450,
+        300
+      ],
+      "credentials": {
+        "twitterOAuth1Api": "Twitter API"
+      }
+    }
+  ],
+  "connections": {
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Twitter",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-01-21T10:54:49.679Z",
+  "updatedAt": "2021-01-21T11:12:10.141Z",
+  "settings": {},
+  "staticData": null
+}

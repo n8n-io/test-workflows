@@ -1,0 +1,248 @@
+{
+  "id": 15,
+  "name": "DropBox:File: upload move copy download delete",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        120,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "path": "={{$json[\"metadata\"][\"path_display\"]}}/testFile",
+        "fileContent": "Uplod file test"
+      },
+      "name": "Dropbox",
+      "type": "n8n-nodes-base.dropbox",
+      "typeVersion": 1,
+      "position": [
+        500,
+        300
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "dropboxApi": "Dropbox token"
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "resource": "folder",
+        "path": "/uploadTest"
+      },
+      "name": "Dropbox1",
+      "type": "n8n-nodes-base.dropbox",
+      "typeVersion": 1,
+      "position": [
+        320,
+        300
+      ],
+      "credentials": {
+        "dropboxApi": "Dropbox token"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "move",
+        "path": "={{$json[\"metadata\"][\"path_display\"]}}/testFile",
+        "toPath": "={{$json[\"metadata\"][\"path_display\"]}}/moveTestFile"
+      },
+      "name": "Dropbox2",
+      "type": "n8n-nodes-base.dropbox",
+      "typeVersion": 1,
+      "position": [
+        660,
+        300
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "dropboxApi": "Dropbox token"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "copy",
+        "path": "={{$json[\"metadata\"][\"path_display\"]}}",
+        "toPath": "={{$node[\"Dropbox1\"].json[\"metadata\"][\"path_display\"]}}/copiedTestFile"
+      },
+      "name": "Dropbox3",
+      "type": "n8n-nodes-base.dropbox",
+      "typeVersion": 1,
+      "position": [
+        850,
+        300
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "dropboxApi": "Dropbox token"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "path": "={{$json[\"metadata\"][\"path_display\"]}}"
+      },
+      "name": "Dropbox4",
+      "type": "n8n-nodes-base.dropbox",
+      "typeVersion": 1,
+      "position": [
+        1020,
+        300
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "dropboxApi": "Dropbox token"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "download",
+        "path": "={{$json[\"metadata\"][\"path_display\"]}}"
+      },
+      "name": "Dropbox5",
+      "type": "n8n-nodes-base.dropbox",
+      "typeVersion": 1,
+      "position": [
+        810,
+        460
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "dropboxApi": "Dropbox token"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "path": "={{$json[\"metadata\"][\"path_display\"]}}"
+      },
+      "name": "Dropbox6",
+      "type": "n8n-nodes-base.dropbox",
+      "typeVersion": 1,
+      "position": [
+        990,
+        460
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "dropboxApi": "Dropbox token"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "folder",
+        "operation": "delete",
+        "path": "/uploadTest"
+      },
+      "name": "Dropbox7",
+      "type": "n8n-nodes-base.dropbox",
+      "typeVersion": 1,
+      "position": [
+        1180,
+        400
+      ],
+      "credentials": {
+        "dropboxApi": "Dropbox token"
+      }
+    }
+  ],
+  "connections": {
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Dropbox1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Dropbox1": {
+      "main": [
+        [
+          {
+            "node": "Dropbox",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Dropbox": {
+      "main": [
+        [
+          {
+            "node": "Dropbox2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Dropbox2": {
+      "main": [
+        [
+          {
+            "node": "Dropbox3",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Dropbox5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Dropbox3": {
+      "main": [
+        [
+          {
+            "node": "Dropbox4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Dropbox5": {
+      "main": [
+        [
+          {
+            "node": "Dropbox6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Dropbox4": {
+      "main": [
+        []
+      ]
+    },
+    "Dropbox6": {
+      "main": [
+        [
+          {
+            "node": "Dropbox7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-02-16T10:16:46.803Z",
+  "updatedAt": "2021-02-16T10:17:00.418Z",
+  "settings": {},
+  "staticData": null
+}

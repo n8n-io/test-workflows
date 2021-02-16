@@ -1,0 +1,187 @@
+{
+  "id": 10,
+  "name": "PagerDuty:incident:create get update getAll:incidentNote: create getAll",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        240,
+        260
+      ]
+    },
+    {
+      "parameters": {
+        "title": "Test",
+        "serviceId": "PUDZOWN",
+        "email": "servfrdali@yahoo.fr",
+        "additionalFields": {}
+      },
+      "name": "PagerDuty",
+      "type": "n8n-nodes-base.pagerDuty",
+      "typeVersion": 1,
+      "position": [
+        400,
+        260
+      ],
+      "credentials": {
+        "pagerDutyApi": "pagerduty token"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "incidentId": "={{$json[\"id\"]}}"
+      },
+      "name": "PagerDuty1",
+      "type": "n8n-nodes-base.pagerDuty",
+      "typeVersion": 1,
+      "position": [
+        550,
+        260
+      ],
+      "credentials": {
+        "pagerDutyApi": "pagerduty token"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "incidentId": "={{$json[\"id\"]}}",
+        "email": "servfrdali@yahoo.fr",
+        "updateFields": {
+          "status": "acknowledged"
+        }
+      },
+      "name": "PagerDuty2",
+      "type": "n8n-nodes-base.pagerDuty",
+      "typeVersion": 1,
+      "position": [
+        870,
+        260
+      ],
+      "credentials": {
+        "pagerDutyApi": "pagerduty token"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "limit": 1,
+        "options": {
+          "statuses": [
+            "acknowledged"
+          ]
+        }
+      },
+      "name": "PagerDuty3",
+      "type": "n8n-nodes-base.pagerDuty",
+      "typeVersion": 1,
+      "position": [
+        1030,
+        260
+      ],
+      "credentials": {
+        "pagerDutyApi": "pagerduty token"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "incidentNote",
+        "incidentId": "={{$json[\"id\"]}}",
+        "content": "Simple note for an incident",
+        "email": "servfrdali@yahoo.fr"
+      },
+      "name": "PagerDuty4",
+      "type": "n8n-nodes-base.pagerDuty",
+      "typeVersion": 1,
+      "position": [
+        750,
+        410
+      ],
+      "credentials": {
+        "pagerDutyApi": "pagerduty token"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "incidentNote",
+        "operation": "getAll",
+        "incidentId": "={{$json[\"id\"]}}"
+      },
+      "name": "PagerDuty5",
+      "type": "n8n-nodes-base.pagerDuty",
+      "typeVersion": 1,
+      "position": [
+        750,
+        80
+      ],
+      "credentials": {
+        "pagerDutyApi": "pagerduty token"
+      }
+    }
+  ],
+  "connections": {
+    "PagerDuty": {
+      "main": [
+        [
+          {
+            "node": "PagerDuty1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "PagerDuty1": {
+      "main": [
+        [
+          {
+            "node": "PagerDuty4",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "PagerDuty5",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "PagerDuty2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "PagerDuty2": {
+      "main": [
+        [
+          {
+            "node": "PagerDuty3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "PagerDuty",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-02-15T13:56:59.611Z",
+  "updatedAt": "2021-02-16T11:57:43.701Z",
+  "settings": {},
+  "staticData": null
+}

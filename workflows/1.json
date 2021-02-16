@@ -1,0 +1,133 @@
+{
+  "id": 1,
+  "name": "Twitter:tweet:create:create like retweet delete",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "text": "=Hello from n8n testing framework {{$evaluateExpression(Math.random())}}",
+        "additionalFields": {}
+      },
+      "name": "Twitter",
+      "type": "n8n-nodes-base.twitter",
+      "typeVersion": 1,
+      "position": [
+        450,
+        300
+      ],
+      "credentials": {
+        "twitterOAuth1Api": "Twitter API"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "like",
+        "tweetId": "={{$node[\"Twitter\"].json[\"id_str\"]}}",
+        "additionalFields": {}
+      },
+      "name": "Twitter1",
+      "type": "n8n-nodes-base.twitter",
+      "typeVersion": 1,
+      "position": [
+        650,
+        300
+      ],
+      "credentials": {
+        "twitterOAuth1Api": "Twitter API"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "retweet",
+        "tweetId": "={{$node[\"Twitter\"].json[\"id_str\"]}}",
+        "additionalFields": {}
+      },
+      "name": "Twitter2",
+      "type": "n8n-nodes-base.twitter",
+      "typeVersion": 1,
+      "position": [
+        850,
+        300
+      ],
+      "credentials": {
+        "twitterOAuth1Api": "Twitter API"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "tweetId": "={{$node[\"Twitter\"].json[\"id_str\"]}}"
+      },
+      "name": "Twitter3",
+      "type": "n8n-nodes-base.twitter",
+      "typeVersion": 1,
+      "position": [
+        1050,
+        300
+      ],
+      "credentials": {
+        "twitterOAuth1Api": "Twitter API"
+      }
+    }
+  ],
+  "connections": {
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Twitter",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Twitter": {
+      "main": [
+        [
+          {
+            "node": "Twitter1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Twitter1": {
+      "main": [
+        [
+          {
+            "node": "Twitter2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Twitter2": {
+      "main": [
+        [
+          {
+            "node": "Twitter3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-01-21T10:32:07.628Z",
+  "updatedAt": "2021-01-21T13:23:36.884Z",
+  "settings": {},
+  "staticData": null
+}
