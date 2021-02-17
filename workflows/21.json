@@ -1,1 +1,411 @@
-[{"id":21,"name":"Hubspot:Deal: create update getall search getRecentlyModified getRecentlyCreated get delete:Ticket: create update get All get delete","active":false,"nodes":[{"parameters":{},"name":"Start","type":"n8n-nodes-base.start","typeVersion":1,"position":[180,300]},{"parameters":{"stage":"appointmentscheduled","additionalFields":{"dealName":"testDeal"}},"name":"Hubspot","type":"n8n-nodes-base.hubspot","typeVersion":1,"position":[370,230],"credentials":{"hubspotApi":"hubsport api key"}},{"parameters":{"operation":"getAll","limit":1,"filters":{}},"name":"Hubspot1","type":"n8n-nodes-base.hubspot","typeVersion":1,"position":[650,230],"credentials":{"hubspotApi":"hubsport api key"}},{"parameters":{"operation":"get","dealId":"={{$json[\"dealId\"]}}","additionalFields":{}},"name":"Hubspot2","type":"n8n-nodes-base.hubspot","typeVersion":1,"position":[1250,230],"credentials":{"hubspotApi":"hubsport api key"}},{"parameters":{"operation":"search","limit":1,"filterGroupsUi":{"filterGroupsValues":[]},"additionalFields":{}},"name":"Hubspot3","type":"n8n-nodes-base.hubspot","typeVersion":1,"position":[780,230],"notesInFlow":false,"alwaysOutputData":true,"credentials":{"hubspotApi":"hubsport api key"}},{"parameters":{"operation":"update","dealId":"={{$json[\"dealId\"]}}","updateFields":{"dealName":"dealTestUpdated"}},"name":"Hubspot4","type":"n8n-nodes-base.hubspot","typeVersion":1,"position":[500,230],"notesInFlow":false,"alwaysOutputData":true,"credentials":{"hubspotApi":"hubsport api key"}},{"parameters":{"operation":"getRecentlyModified","limit":1,"filters":{}},"name":"Hubspot5","type":"n8n-nodes-base.hubspot","typeVersion":1,"position":[930,230],"notesInFlow":false,"alwaysOutputData":true,"credentials":{"hubspotApi":"hubsport api key"}},{"parameters":{"operation":"delete","dealId":"={{$json[\"dealId\"]}}"},"name":"Hubspot6","type":"n8n-nodes-base.hubspot","typeVersion":1,"position":[1380,230],"notesInFlow":false,"alwaysOutputData":true,"credentials":{"hubspotApi":"hubsport api key"}},{"parameters":{"operation":"getRecentlyCreated","limit":1,"filters":{}},"name":"Hubspot7","type":"n8n-nodes-base.hubspot","typeVersion":1,"position":[1100,230],"notesInFlow":false,"alwaysOutputData":true,"credentials":{"hubspotApi":"hubsport api key"}},{"parameters":{"resource":"ticket","pipelineId":"0","stageId":"3","ticketName":"testTicket","additionalFields":{}},"name":"Hubspot8","type":"n8n-nodes-base.hubspot","typeVersion":1,"position":[370,400],"notesInFlow":false,"alwaysOutputData":true,"credentials":{"hubspotApi":"hubsport api key"}},{"parameters":{"resource":"ticket","operation":"update","ticketId":"={{$json[\"objectId\"]}}","updateFields":{}},"name":"Hubspot9","type":"n8n-nodes-base.hubspot","typeVersion":1,"position":[530,400],"notesInFlow":false,"alwaysOutputData":true,"credentials":{"hubspotApi":"hubsport api key"}},{"parameters":{"resource":"ticket","operation":"getAll","limit":1,"additionalFields":{}},"name":"Hubspot10","type":"n8n-nodes-base.hubspot","typeVersion":1,"position":[680,400],"notesInFlow":false,"alwaysOutputData":true,"credentials":{"hubspotApi":"hubsport api key"}},{"parameters":{"resource":"ticket","operation":"get","ticketId":"={{$json[\"objectId\"]}}","additionalFields":{}},"name":"Hubspot11","type":"n8n-nodes-base.hubspot","typeVersion":1,"position":[830,400],"notesInFlow":false,"alwaysOutputData":true,"credentials":{"hubspotApi":"hubsport api key"}},{"parameters":{"resource":"ticket","operation":"delete","ticketId":"={{$json[\"objectId\"]}}"},"name":"Hubspot12","type":"n8n-nodes-base.hubspot","typeVersion":1,"position":[990,400],"notesInFlow":false,"alwaysOutputData":true,"credentials":{"hubspotApi":"hubsport api key"}}],"connections":{"Hubspot":{"main":[[{"node":"Hubspot4","type":"main","index":0}]]},"Hubspot1":{"main":[[{"node":"Hubspot3","type":"main","index":0}]]},"Hubspot2":{"main":[[{"node":"Hubspot6","type":"main","index":0}]]},"Hubspot3":{"main":[[{"node":"Hubspot5","type":"main","index":0}]]},"Start":{"main":[[{"node":"Hubspot8","type":"main","index":0},{"node":"Hubspot","type":"main","index":0}]]},"Hubspot4":{"main":[[{"node":"Hubspot1","type":"main","index":0}]]},"Hubspot5":{"main":[[{"node":"Hubspot7","type":"main","index":0}]]},"Hubspot7":{"main":[[{"node":"Hubspot2","type":"main","index":0}]]},"Hubspot8":{"main":[[{"node":"Hubspot9","type":"main","index":0}]]},"Hubspot9":{"main":[[{"node":"Hubspot10","type":"main","index":0}]]},"Hubspot10":{"main":[[{"node":"Hubspot11","type":"main","index":0}]]},"Hubspot11":{"main":[[{"node":"Hubspot12","type":"main","index":0}]]}},"createdAt":"2021-02-16T16:12:15.992Z","updatedAt":"2021-02-16T16:28:47.865Z","settings":{},"staticData":null}]
+{
+  "id": 21,
+  "name": "Hubspot:Deal: create update getall search getRecentlyModified getRecentlyCreated get delete:Ticket: create update get All get delete",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        180,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "stage": "appointmentscheduled",
+        "additionalFields": {
+          "dealName": "testDeal"
+        }
+      },
+      "name": "Hubspot",
+      "type": "n8n-nodes-base.hubspot",
+      "typeVersion": 1,
+      "position": [
+        370,
+        230
+      ],
+      "credentials": {
+        "hubspotApi": "hubsport api key"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "limit": 1,
+        "filters": {}
+      },
+      "name": "Hubspot1",
+      "type": "n8n-nodes-base.hubspot",
+      "typeVersion": 1,
+      "position": [
+        650,
+        230
+      ],
+      "credentials": {
+        "hubspotApi": "hubsport api key"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "dealId": "={{$json[\"dealId\"]}}",
+        "additionalFields": {}
+      },
+      "name": "Hubspot2",
+      "type": "n8n-nodes-base.hubspot",
+      "typeVersion": 1,
+      "position": [
+        1250,
+        230
+      ],
+      "credentials": {
+        "hubspotApi": "hubsport api key"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "search",
+        "limit": 1,
+        "filterGroupsUi": {
+          "filterGroupsValues": []
+        },
+        "additionalFields": {}
+      },
+      "name": "Hubspot3",
+      "type": "n8n-nodes-base.hubspot",
+      "typeVersion": 1,
+      "position": [
+        780,
+        230
+      ],
+      "notesInFlow": false,
+      "alwaysOutputData": true,
+      "credentials": {
+        "hubspotApi": "hubsport api key"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "dealId": "={{$json[\"dealId\"]}}",
+        "updateFields": {
+          "dealName": "dealTestUpdated"
+        }
+      },
+      "name": "Hubspot4",
+      "type": "n8n-nodes-base.hubspot",
+      "typeVersion": 1,
+      "position": [
+        500,
+        230
+      ],
+      "notesInFlow": false,
+      "alwaysOutputData": true,
+      "credentials": {
+        "hubspotApi": "hubsport api key"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getRecentlyModified",
+        "limit": 1,
+        "filters": {}
+      },
+      "name": "Hubspot5",
+      "type": "n8n-nodes-base.hubspot",
+      "typeVersion": 1,
+      "position": [
+        930,
+        230
+      ],
+      "notesInFlow": false,
+      "alwaysOutputData": true,
+      "credentials": {
+        "hubspotApi": "hubsport api key"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "dealId": "={{$json[\"dealId\"]}}"
+      },
+      "name": "Hubspot6",
+      "type": "n8n-nodes-base.hubspot",
+      "typeVersion": 1,
+      "position": [
+        1380,
+        230
+      ],
+      "notesInFlow": false,
+      "alwaysOutputData": true,
+      "credentials": {
+        "hubspotApi": "hubsport api key"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getRecentlyCreated",
+        "limit": 1,
+        "filters": {}
+      },
+      "name": "Hubspot7",
+      "type": "n8n-nodes-base.hubspot",
+      "typeVersion": 1,
+      "position": [
+        1100,
+        230
+      ],
+      "notesInFlow": false,
+      "alwaysOutputData": true,
+      "credentials": {
+        "hubspotApi": "hubsport api key"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "ticket",
+        "pipelineId": "0",
+        "stageId": "3",
+        "ticketName": "testTicket",
+        "additionalFields": {}
+      },
+      "name": "Hubspot8",
+      "type": "n8n-nodes-base.hubspot",
+      "typeVersion": 1,
+      "position": [
+        370,
+        400
+      ],
+      "notesInFlow": false,
+      "alwaysOutputData": true,
+      "credentials": {
+        "hubspotApi": "hubsport api key"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "ticket",
+        "operation": "update",
+        "ticketId": "={{$json[\"objectId\"]}}",
+        "updateFields": {}
+      },
+      "name": "Hubspot9",
+      "type": "n8n-nodes-base.hubspot",
+      "typeVersion": 1,
+      "position": [
+        530,
+        400
+      ],
+      "notesInFlow": false,
+      "alwaysOutputData": true,
+      "credentials": {
+        "hubspotApi": "hubsport api key"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "ticket",
+        "operation": "getAll",
+        "limit": 1,
+        "additionalFields": {}
+      },
+      "name": "Hubspot10",
+      "type": "n8n-nodes-base.hubspot",
+      "typeVersion": 1,
+      "position": [
+        680,
+        400
+      ],
+      "notesInFlow": false,
+      "alwaysOutputData": true,
+      "credentials": {
+        "hubspotApi": "hubsport api key"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "ticket",
+        "operation": "get",
+        "ticketId": "={{$json[\"objectId\"]}}",
+        "additionalFields": {}
+      },
+      "name": "Hubspot11",
+      "type": "n8n-nodes-base.hubspot",
+      "typeVersion": 1,
+      "position": [
+        830,
+        400
+      ],
+      "notesInFlow": false,
+      "alwaysOutputData": true,
+      "credentials": {
+        "hubspotApi": "hubsport api key"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "ticket",
+        "operation": "delete",
+        "ticketId": "={{$json[\"objectId\"]}}"
+      },
+      "name": "Hubspot12",
+      "type": "n8n-nodes-base.hubspot",
+      "typeVersion": 1,
+      "position": [
+        990,
+        400
+      ],
+      "notesInFlow": false,
+      "alwaysOutputData": true,
+      "credentials": {
+        "hubspotApi": "hubsport api key"
+      }
+    }
+  ],
+  "connections": {
+    "Hubspot": {
+      "main": [
+        [
+          {
+            "node": "Hubspot4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Hubspot1": {
+      "main": [
+        [
+          {
+            "node": "Hubspot3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Hubspot2": {
+      "main": [
+        [
+          {
+            "node": "Hubspot6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Hubspot3": {
+      "main": [
+        [
+          {
+            "node": "Hubspot5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Hubspot8",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Hubspot",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Hubspot4": {
+      "main": [
+        [
+          {
+            "node": "Hubspot1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Hubspot5": {
+      "main": [
+        [
+          {
+            "node": "Hubspot7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Hubspot7": {
+      "main": [
+        [
+          {
+            "node": "Hubspot2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Hubspot8": {
+      "main": [
+        [
+          {
+            "node": "Hubspot9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Hubspot9": {
+      "main": [
+        [
+          {
+            "node": "Hubspot10",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Hubspot10": {
+      "main": [
+        [
+          {
+            "node": "Hubspot11",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Hubspot11": {
+      "main": [
+        [
+          {
+            "node": "Hubspot12",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-02-16T16:12:15.992Z",
+  "updatedAt": "2021-02-16T16:28:47.865Z",
+  "settings": {},
+  "staticData": null
+}
