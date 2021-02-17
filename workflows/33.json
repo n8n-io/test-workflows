@@ -1,0 +1,164 @@
+{
+  "id": 33,
+  "name": "Zoom:Meeting:create update getAll get delete",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "topic": "test",
+        "additionalFields": {}
+      },
+      "name": "Zoom",
+      "type": "n8n-nodes-base.zoom",
+      "typeVersion": 1,
+      "position": [
+        450,
+        300
+      ],
+      "credentials": {
+        "zoomApi": "Zoom JWT token"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "meetingId": "={{$node[\"Zoom\"].json[\"id\"]}}",
+        "updateFields": {
+          "duration": 30
+        }
+      },
+      "name": "Zoom1",
+      "type": "n8n-nodes-base.zoom",
+      "typeVersion": 1,
+      "position": [
+        600,
+        300
+      ],
+      "credentials": {
+        "zoomApi": "Zoom JWT token"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "limit": 1,
+        "filters": {}
+      },
+      "name": "Zoom2",
+      "type": "n8n-nodes-base.zoom",
+      "typeVersion": 1,
+      "position": [
+        750,
+        300
+      ],
+      "credentials": {
+        "zoomApi": "Zoom JWT token"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "meetingId": "={{$node[\"Zoom\"].json[\"id\"]}}",
+        "additionalFields": {}
+      },
+      "name": "Zoom3",
+      "type": "n8n-nodes-base.zoom",
+      "typeVersion": 1,
+      "position": [
+        900,
+        300
+      ],
+      "credentials": {
+        "zoomApi": "Zoom JWT token"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "meetingId": "={{$node[\"Zoom\"].json[\"id\"]}}",
+        "additionalFields": {}
+      },
+      "name": "Zoom4",
+      "type": "n8n-nodes-base.zoom",
+      "typeVersion": 1,
+      "position": [
+        1050,
+        300
+      ],
+      "credentials": {
+        "zoomApi": "Zoom JWT token"
+      }
+    }
+  ],
+  "connections": {
+    "Zoom": {
+      "main": [
+        [
+          {
+            "node": "Zoom1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Zoom1": {
+      "main": [
+        [
+          {
+            "node": "Zoom2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Zoom2": {
+      "main": [
+        [
+          {
+            "node": "Zoom3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Zoom3": {
+      "main": [
+        [
+          {
+            "node": "Zoom4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Zoom",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-02-17T13:25:16.665Z",
+  "updatedAt": "2021-02-17T13:25:16.665Z",
+  "settings": {},
+  "staticData": null
+}
