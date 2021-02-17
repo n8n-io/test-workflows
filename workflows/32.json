@@ -1,0 +1,134 @@
+{
+  "id": 32,
+  "name": "Drif:Contact:create update get delete",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "email": "nodeqa@n8n.io",
+        "additionalFields": {}
+      },
+      "name": "Drift ",
+      "type": "n8n-nodes-base.drift",
+      "typeVersion": 1,
+      "position": [
+        500,
+        300
+      ],
+      "credentials": {
+        "driftApi": "Drift API credentials"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "contactId": "={{$node[\"Drift \"].json[\"id\"]}}",
+        "updateFields": {
+          "name": "node qtest"
+        }
+      },
+      "name": "Drift 1",
+      "type": "n8n-nodes-base.drift",
+      "typeVersion": 1,
+      "position": [
+        640,
+        300
+      ],
+      "credentials": {
+        "driftApi": "Drift API credentials"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "contactId": "={{$node[\"Drift \"].json[\"id\"]}}"
+      },
+      "name": "Drift 2",
+      "type": "n8n-nodes-base.drift",
+      "typeVersion": 1,
+      "position": [
+        790,
+        300
+      ],
+      "credentials": {
+        "driftApi": "Drift API credentials"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "contactId": "={{$node[\"Drift \"].json[\"id\"]}}"
+      },
+      "name": "Drift 3",
+      "type": "n8n-nodes-base.drift",
+      "typeVersion": 1,
+      "position": [
+        940,
+        300
+      ],
+      "credentials": {
+        "driftApi": "Drift API credentials"
+      }
+    }
+  ],
+  "connections": {
+    "Drift ": {
+      "main": [
+        [
+          {
+            "node": "Drift 1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Drift 1": {
+      "main": [
+        [
+          {
+            "node": "Drift 2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Drift 2": {
+      "main": [
+        [
+          {
+            "node": "Drift 3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Drift ",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-02-17T12:54:18.856Z",
+  "updatedAt": "2021-02-17T13:27:51.016Z",
+  "settings": {},
+  "staticData": null
+}
