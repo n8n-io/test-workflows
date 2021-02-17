@@ -1,0 +1,368 @@
+{
+  "id": 35,
+  "name": "Slack:User:getPresence info:UserProfile:get update:Message:post getPermalink update postEphermera l delete:Reaction:add get remove",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        220,
+        550
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "userProfile",
+        "additionalFields": {}
+      },
+      "name": "Slack",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 1,
+      "position": [
+        460,
+        450
+      ],
+      "credentials": {
+        "slackApi": "Slack Token"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "userProfile",
+        "operation": "update",
+        "additionalFields": {
+          "status_text": "Testing..."
+        }
+      },
+      "name": "Slack1",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 1,
+      "position": [
+        600,
+        450
+      ],
+      "credentials": {
+        "slackApi": "Slack Token"
+      }
+    },
+    {
+      "parameters": {
+        "channel": "random",
+        "text": "=Message at{{(new Date().toString())}}",
+        "attachments": [],
+        "otherOptions": {}
+      },
+      "name": "Slack13",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 1,
+      "position": [
+        420,
+        630
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "slackApi": "Slack Token"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getPermalink",
+        "channelId": "C01MZ82T9TR",
+        "timestamp": "={{$node[\"Slack13\"].json[\"message\"][\"ts\"]}}"
+      },
+      "name": "Slack14",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 1,
+      "position": [
+        1060,
+        630
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "slackApi": "Slack Token"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "channelId": "C01MZ82T9TR",
+        "text": "Message Updated ",
+        "ts": "={{$node[\"Slack13\"].json[\"message\"][\"ts\"]}}",
+        "updateFields": {},
+        "attachments": []
+      },
+      "name": "Slack15",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 1,
+      "position": [
+        1190,
+        630
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "slackApi": "Slack Token"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "postEphemeral",
+        "channel": "random",
+        "user": "={{$node[\"Slack13\"].json[\"message\"][\"user\"]}}",
+        "text": "Message for Me Only",
+        "attachments": [],
+        "otherOptions": {}
+      },
+      "name": "Slack16",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 1,
+      "position": [
+        1320,
+        630
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "slackApi": "Slack Token"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "channelId": "C01MZ82T9TR",
+        "timestamp": "={{$node[\"Slack13\"].json[\"message\"][\"ts\"]}}"
+      },
+      "name": "Slack17",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 1,
+      "position": [
+        1470,
+        630
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "slackApi": "Slack Token"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "reaction",
+        "channelId": "C01MZ82T9TR",
+        "name": "+1",
+        "timestamp": "={{$node[\"Slack13\"].json[\"message\"][\"ts\"]}}"
+      },
+      "name": "Slack18",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 1,
+      "position": [
+        580,
+        700
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "slackApi": "Slack Token"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "reaction",
+        "operation": "get",
+        "channelId": "C01MZ82T9TR",
+        "timestamp": "={{$node[\"Slack13\"].json[\"message\"][\"ts\"]}}"
+      },
+      "name": "Slack19",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 1,
+      "position": [
+        720,
+        700
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "slackApi": "Slack Token"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "reaction",
+        "operation": "remove",
+        "channelId": "C01MZ82T9TR",
+        "name": "+1",
+        "timestamp": "={{$node[\"Slack13\"].json[\"message\"][\"ts\"]}}"
+      },
+      "name": "Slack20",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 1,
+      "position": [
+        870,
+        700
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "slackApi": "Slack Token"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "user",
+        "operation": "getPresence",
+        "user": "={{$node[\"Slack13\"].json[\"message\"][\"user\"]}}"
+      },
+      "name": "Slack24",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 1,
+      "position": [
+        580,
+        850
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "slackApi": "Slack Token"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "user",
+        "user": "={{$node[\"Slack13\"].json[\"message\"][\"user\"]}}"
+      },
+      "name": "Slack25",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 1,
+      "position": [
+        730,
+        850
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "slackApi": "Slack Token"
+      }
+    }
+  ],
+  "connections": {
+    "Slack": {
+      "main": [
+        [
+          {
+            "node": "Slack1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Slack",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Slack13",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Slack13": {
+      "main": [
+        [
+          {
+            "node": "Slack18",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Slack24",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Slack15": {
+      "main": [
+        [
+          {
+            "node": "Slack16",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Slack16": {
+      "main": [
+        [
+          {
+            "node": "Slack17",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Slack14": {
+      "main": [
+        [
+          {
+            "node": "Slack15",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Slack18": {
+      "main": [
+        [
+          {
+            "node": "Slack19",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Slack19": {
+      "main": [
+        [
+          {
+            "node": "Slack20",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Slack20": {
+      "main": [
+        [
+          {
+            "node": "Slack14",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Slack24": {
+      "main": [
+        [
+          {
+            "node": "Slack25",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-02-17T16:01:29.116Z",
+  "updatedAt": "2021-02-17T18:38:58.265Z",
+  "settings": {},
+  "staticData": null
+}
