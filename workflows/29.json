@@ -1,0 +1,264 @@
+{
+  "id": 29,
+  "name": "ClickUp:Comment:create update getAll delete",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "folder",
+        "team": "4651110",
+        "space": "8716115",
+        "name": "Test2"
+      },
+      "name": "ClickUp",
+      "type": "n8n-nodes-base.clickUp",
+      "typeVersion": 1,
+      "position": [
+        400,
+        300
+      ],
+      "credentials": {
+        "clickUpApi": "clickup cred"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "list",
+        "operation": "create",
+        "team": "4651110",
+        "space": "8716115",
+        "folder": "={{$node[\"ClickUp\"].json[\"id\"]}}",
+        "name": "testingList2",
+        "additionalFields": {}
+      },
+      "name": "ClickUp1",
+      "type": "n8n-nodes-base.clickUp",
+      "typeVersion": 1,
+      "position": [
+        550,
+        350
+      ],
+      "credentials": {
+        "clickUpApi": "clickup cred"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "comment",
+        "commentOn": "list",
+        "id": "={{$node[\"ClickUp1\"].json[\"id\"]}}",
+        "commentText": "CommentOnList2",
+        "additionalFields": {}
+      },
+      "name": "ClickUp2",
+      "type": "n8n-nodes-base.clickUp",
+      "typeVersion": 1,
+      "position": [
+        700,
+        420
+      ],
+      "credentials": {
+        "clickUpApi": "clickup cred"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "comment",
+        "operation": "update",
+        "comment": "={{$node[\"ClickUp2\"].json[\"id\"]}}",
+        "updateFields": {
+          "commentText": "commentUpdated"
+        }
+      },
+      "name": "ClickUp3",
+      "type": "n8n-nodes-base.clickUp",
+      "typeVersion": 1,
+      "position": [
+        850,
+        420
+      ],
+      "credentials": {
+        "clickUpApi": "clickup cred"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "comment",
+        "operation": "getAll",
+        "commentsOn": "list",
+        "id": "={{$node[\"ClickUp1\"].json[\"id\"]}}",
+        "limit": 1
+      },
+      "name": "ClickUp4",
+      "type": "n8n-nodes-base.clickUp",
+      "typeVersion": 1,
+      "position": [
+        990,
+        420
+      ],
+      "credentials": {
+        "clickUpApi": "clickup cred"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "comment",
+        "operation": "delete",
+        "comment": "={{$node[\"ClickUp4\"].json[\"id\"]}}"
+      },
+      "name": "ClickUp5",
+      "type": "n8n-nodes-base.clickUp",
+      "typeVersion": 1,
+      "position": [
+        1140,
+        420
+      ],
+      "credentials": {
+        "clickUpApi": "clickup cred"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "folder",
+        "operation": "delete",
+        "team": "4651110",
+        "space": "8716115",
+        "folder": "={{$node[\"ClickUp\"].json[\"id\"]}}"
+      },
+      "name": "ClickUp7",
+      "type": "n8n-nodes-base.clickUp",
+      "typeVersion": 1,
+      "position": [
+        1420,
+        290
+      ],
+      "credentials": {
+        "clickUpApi": "clickup cred"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "list",
+        "operation": "delete",
+        "team": "4651110",
+        "space": "8716115",
+        "folder": "={{$node[\"ClickUp\"].json[\"id\"]}}",
+        "list": "={{$node[\"ClickUp1\"].json[\"id\"]}}"
+      },
+      "name": "ClickUp6",
+      "type": "n8n-nodes-base.clickUp",
+      "typeVersion": 1,
+      "position": [
+        1280,
+        350
+      ],
+      "credentials": {
+        "clickUpApi": "clickup cred"
+      }
+    }
+  ],
+  "connections": {
+    "ClickUp": {
+      "main": [
+        [
+          {
+            "node": "ClickUp1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "ClickUp",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ClickUp1": {
+      "main": [
+        [
+          {
+            "node": "ClickUp2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ClickUp2": {
+      "main": [
+        [
+          {
+            "node": "ClickUp3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ClickUp3": {
+      "main": [
+        [
+          {
+            "node": "ClickUp4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ClickUp4": {
+      "main": [
+        [
+          {
+            "node": "ClickUp5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ClickUp6": {
+      "main": [
+        [
+          {
+            "node": "ClickUp7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ClickUp5": {
+      "main": [
+        [
+          {
+            "node": "ClickUp6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-02-17T11:06:49.772Z",
+  "updatedAt": "2021-02-17T12:09:32.990Z",
+  "settings": {},
+  "staticData": null
+}
