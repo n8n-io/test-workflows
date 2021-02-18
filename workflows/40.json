@@ -1,0 +1,477 @@
+[
+  {
+    "id": 40,
+    "name": "Gmail:Draft:create getAll get delete:Label:create getAll get delete:Message:send getAll get reply delete:MessageLabel:add remove",
+    "active": false,
+    "nodes": [
+      {
+        "parameters": {},
+        "name": "Start",
+        "type": "n8n-nodes-base.start",
+        "typeVersion": 1,
+        "position": [
+          340,
+          400
+        ]
+      },
+      {
+        "parameters": {
+          "subject": "=Draft created at {{(new Date()).toGMTString()}}",
+          "message": "=Draft Test Body",
+          "additionalFields": {}
+        },
+        "name": "Gmail",
+        "type": "n8n-nodes-base.gmail",
+        "typeVersion": 1,
+        "position": [
+          600,
+          230
+        ],
+        "credentials": {
+          "gmailOAuth2": "Gmail 0auth"
+        }
+      },
+      {
+        "parameters": {
+          "operation": "getAll",
+          "limit": 1,
+          "additionalFields": {}
+        },
+        "name": "Gmail1",
+        "type": "n8n-nodes-base.gmail",
+        "typeVersion": 1,
+        "position": [
+          760,
+          230
+        ],
+        "credentials": {
+          "gmailOAuth2": "Gmail 0auth"
+        }
+      },
+      {
+        "parameters": {
+          "operation": "get",
+          "messageId": "={{$node[\"Gmail\"].json[\"id\"]}}",
+          "additionalFields": {}
+        },
+        "name": "Gmail2",
+        "type": "n8n-nodes-base.gmail",
+        "typeVersion": 1,
+        "position": [
+          920,
+          230
+        ],
+        "credentials": {
+          "gmailOAuth2": "Gmail 0auth"
+        }
+      },
+      {
+        "parameters": {
+          "operation": "delete",
+          "messageId": "={{$node[\"Gmail\"].json[\"id\"]}}"
+        },
+        "name": "Gmail3",
+        "type": "n8n-nodes-base.gmail",
+        "typeVersion": 1,
+        "position": [
+          1070,
+          230
+        ],
+        "credentials": {
+          "gmailOAuth2": "Gmail 0auth"
+        }
+      },
+      {
+        "parameters": {
+          "resource": "label",
+          "name": "TestLabel"
+        },
+        "name": "Gmail4",
+        "type": "n8n-nodes-base.gmail",
+        "typeVersion": 1,
+        "position": [
+          600,
+          380
+        ],
+        "credentials": {
+          "gmailOAuth2": "Gmail 0auth"
+        }
+      },
+      {
+        "parameters": {
+          "resource": "label",
+          "operation": "getAll",
+          "limit": 1
+        },
+        "name": "Gmail5",
+        "type": "n8n-nodes-base.gmail",
+        "typeVersion": 1,
+        "position": [
+          760,
+          380
+        ],
+        "credentials": {
+          "gmailOAuth2": "Gmail 0auth"
+        }
+      },
+      {
+        "parameters": {
+          "resource": "label",
+          "operation": "get",
+          "labelId": "={{$node[\"Gmail4\"].json[\"id\"]}}"
+        },
+        "name": "Gmail7",
+        "type": "n8n-nodes-base.gmail",
+        "typeVersion": 1,
+        "position": [
+          920,
+          380
+        ],
+        "credentials": {
+          "gmailOAuth2": "Gmail 0auth"
+        }
+      },
+      {
+        "parameters": {
+          "resource": "message",
+          "subject": "=Subject  {{(new Date()).toGMTString()}}",
+          "message": "=Email Body {{(new Date()).toGMTString()}}",
+          "toList": [
+            "node8qa@gmail.com"
+          ],
+          "additionalFields": {}
+        },
+        "name": "Gmail8",
+        "type": "n8n-nodes-base.gmail",
+        "typeVersion": 1,
+        "position": [
+          610,
+          530
+        ],
+        "credentials": {
+          "gmailOAuth2": "Gmail 0auth"
+        }
+      },
+      {
+        "parameters": {
+          "resource": "message",
+          "operation": "getAll",
+          "limit": 1,
+          "additionalFields": {}
+        },
+        "name": "Gmail9",
+        "type": "n8n-nodes-base.gmail",
+        "typeVersion": 1,
+        "position": [
+          1040,
+          530
+        ],
+        "credentials": {
+          "gmailOAuth2": "Gmail 0auth"
+        }
+      },
+      {
+        "parameters": {
+          "resource": "message",
+          "operation": "get",
+          "messageId": "={{$node[\"Gmail8\"].json[\"id\"]}}",
+          "additionalFields": {}
+        },
+        "name": "Gmail10",
+        "type": "n8n-nodes-base.gmail",
+        "typeVersion": 1,
+        "position": [
+          1190,
+          530
+        ],
+        "credentials": {
+          "gmailOAuth2": "Gmail 0auth"
+        }
+      },
+      {
+        "parameters": {
+          "resource": "message",
+          "operation": "delete",
+          "messageId": "={{$node[\"Gmail8\"].json[\"id\"]}}"
+        },
+        "name": "Gmail11",
+        "type": "n8n-nodes-base.gmail",
+        "typeVersion": 1,
+        "position": [
+          1460,
+          530
+        ],
+        "credentials": {
+          "gmailOAuth2": "Gmail 0auth"
+        }
+      },
+      {
+        "parameters": {
+          "resource": "message",
+          "operation": "reply",
+          "threadId": "={{$node[\"Gmail8\"].json[\"threadId\"]}}",
+          "messageId": "={{$node[\"Gmail8\"].json[\"id\"]}}",
+          "subject": "=Reply {{(new Date()).toGMTString()}}",
+          "message": "=Reply body {{(new Date()).toGMTString()}}",
+          "toList": [
+            "node8qa@gmail.com"
+          ],
+          "additionalFields": {}
+        },
+        "name": "Gmail12",
+        "type": "n8n-nodes-base.gmail",
+        "typeVersion": 1,
+        "position": [
+          1330,
+          530
+        ],
+        "credentials": {
+          "gmailOAuth2": "Gmail 0auth"
+        }
+      },
+      {
+        "parameters": {
+          "resource": "messageLabel",
+          "messageId": "={{$node[\"Gmail8\"].json[\"id\"]}}",
+          "labelIds": [
+            "SPAM"
+          ]
+        },
+        "name": "Gmail13",
+        "type": "n8n-nodes-base.gmail",
+        "typeVersion": 1,
+        "position": [
+          740,
+          650
+        ],
+        "credentials": {
+          "gmailOAuth2": "Gmail 0auth"
+        }
+      },
+      {
+        "parameters": {
+          "resource": "message",
+          "operation": "delete",
+          "messageId": "={{$node[\"Gmail12\"].json[\"id\"]}}"
+        },
+        "name": "Gmail14",
+        "type": "n8n-nodes-base.gmail",
+        "typeVersion": 1,
+        "position": [
+          1590,
+          530
+        ],
+        "credentials": {
+          "gmailOAuth2": "Gmail 0auth"
+        }
+      },
+      {
+        "parameters": {
+          "resource": "messageLabel",
+          "operation": "remove",
+          "messageId": "={{$node[\"Gmail8\"].json[\"id\"]}}",
+          "labelIds": [
+            "SPAM"
+          ]
+        },
+        "name": "Gmail15",
+        "type": "n8n-nodes-base.gmail",
+        "typeVersion": 1,
+        "position": [
+          880,
+          650
+        ],
+        "credentials": {
+          "gmailOAuth2": "Gmail 0auth"
+        }
+      },
+      {
+        "parameters": {
+          "resource": "label",
+          "operation": "delete",
+          "labelId": "={{$node[\"Gmail4\"].json[\"id\"]}}"
+        },
+        "name": "Gmail16",
+        "type": "n8n-nodes-base.gmail",
+        "typeVersion": 1,
+        "position": [
+          1070,
+          380
+        ],
+        "credentials": {
+          "gmailOAuth2": "Gmail 0auth"
+        }
+      }
+    ],
+    "connections": {
+      "Gmail": {
+        "main": [
+          [
+            {
+              "node": "Gmail1",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Gmail1": {
+        "main": [
+          [
+            {
+              "node": "Gmail2",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Gmail2": {
+        "main": [
+          [
+            {
+              "node": "Gmail3",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Start": {
+        "main": [
+          [
+            {
+              "node": "Gmail8",
+              "type": "main",
+              "index": 0
+            },
+            {
+              "node": "Gmail4",
+              "type": "main",
+              "index": 0
+            },
+            {
+              "node": "Gmail",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Gmail4": {
+        "main": [
+          [
+            {
+              "node": "Gmail5",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Gmail5": {
+        "main": [
+          [
+            {
+              "node": "Gmail7",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Gmail9": {
+        "main": [
+          [
+            {
+              "node": "Gmail10",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Gmail8": {
+        "main": [
+          [
+            {
+              "node": "Gmail13",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Gmail10": {
+        "main": [
+          [
+            {
+              "node": "Gmail12",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Gmail12": {
+        "main": [
+          [
+            {
+              "node": "Gmail11",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Gmail11": {
+        "main": [
+          [
+            {
+              "node": "Gmail14",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Gmail13": {
+        "main": [
+          [
+            {
+              "node": "Gmail15",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Gmail15": {
+        "main": [
+          [
+            {
+              "node": "Gmail9",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Gmail7": {
+        "main": [
+          [
+            {
+              "node": "Gmail16",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      }
+    },
+    "createdAt": "2021-02-18T14:57:48.780Z",
+    "updatedAt": "2021-02-18T15:11:04.095Z",
+    "settings": {},
+    "staticData": null
+  }
+]
