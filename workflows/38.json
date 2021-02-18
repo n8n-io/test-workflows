@@ -1,0 +1,78 @@
+[
+  {
+    "id": 38,
+    "name": "Medium:Post:create:Publication:getall",
+    "active": false,
+    "nodes": [
+      {
+        "parameters": {},
+        "name": "Start",
+        "type": "n8n-nodes-base.start",
+        "typeVersion": 1,
+        "position": [
+          250,
+          300
+        ]
+      },
+      {
+        "parameters": {
+          "title": "=Medium node TestQA Draft {{ (new Date()).toGMTString()}}",
+          "contentFormat": "markdown",
+          "content": "=# QA test Draft Content\n\n#### {{ (new Date()).toGMTString()}}",
+          "additionalFields": {
+            "publishStatus": "draft"
+          }
+        },
+        "name": "Medium",
+        "type": "n8n-nodes-base.medium",
+        "typeVersion": 1,
+        "position": [
+          500,
+          250
+        ],
+        "credentials": {
+          "mediumApi": "Medium token"
+        }
+      },
+      {
+        "parameters": {
+          "resource": "publication",
+          "operation": "getAll",
+          "limit": 1
+        },
+        "name": "Medium1",
+        "type": "n8n-nodes-base.medium",
+        "typeVersion": 1,
+        "position": [
+          500,
+          400
+        ],
+        "credentials": {
+          "mediumApi": "Medium token"
+        }
+      }
+    ],
+    "connections": {
+      "Start": {
+        "main": [
+          [
+            {
+              "node": "Medium",
+              "type": "main",
+              "index": 0
+            },
+            {
+              "node": "Medium1",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      }
+    },
+    "createdAt": "2021-02-18T09:13:09.580Z",
+    "updatedAt": "2021-02-18T09:13:09.580Z",
+    "settings": {},
+    "staticData": null
+  }
+]
