@@ -1,6 +1,6 @@
 {
   "id": 10,
-  "name": "PagerDuty:incident:create get update getAll:incidentNote: create getAll",
+  "name": "PagerDuty:Incident:create get update getAll:IncidentNote:create getAll:User:get:LogEntry:getAll get",
   "active": false,
   "nodes": [
     {
@@ -16,8 +16,8 @@
     {
       "parameters": {
         "title": "Test",
-        "serviceId": "PUDZOWN",
-        "email": "servfrdali@yahoo.fr",
+        "serviceId": "PS66D8E",
+        "email": "nodeqa@n8n.io",
         "additionalFields": {}
       },
       "name": "PagerDuty",
@@ -28,7 +28,7 @@
         260
       ],
       "credentials": {
-        "pagerDutyApi": "pagerduty token"
+        "pagerDutyApi": "PagerDuty creds"
       }
     },
     {
@@ -44,14 +44,14 @@
         260
       ],
       "credentials": {
-        "pagerDutyApi": "pagerduty token"
+        "pagerDutyApi": "PagerDuty creds"
       }
     },
     {
       "parameters": {
         "operation": "update",
         "incidentId": "={{$json[\"id\"]}}",
-        "email": "servfrdali@yahoo.fr",
+        "email": "nodeqa@n8n.io",
         "updateFields": {
           "status": "acknowledged"
         }
@@ -64,18 +64,14 @@
         260
       ],
       "credentials": {
-        "pagerDutyApi": "pagerduty token"
+        "pagerDutyApi": "PagerDuty creds"
       }
     },
     {
       "parameters": {
         "operation": "getAll",
         "limit": 1,
-        "options": {
-          "statuses": [
-            "acknowledged"
-          ]
-        }
+        "options": {}
       },
       "name": "PagerDuty3",
       "type": "n8n-nodes-base.pagerDuty",
@@ -85,7 +81,7 @@
         260
       ],
       "credentials": {
-        "pagerDutyApi": "pagerduty token"
+        "pagerDutyApi": "PagerDuty creds"
       }
     },
     {
@@ -93,34 +89,85 @@
         "resource": "incidentNote",
         "incidentId": "={{$json[\"id\"]}}",
         "content": "Simple note for an incident",
-        "email": "servfrdali@yahoo.fr"
+        "email": "nodeqa@n8n.io"
       },
       "name": "PagerDuty4",
       "type": "n8n-nodes-base.pagerDuty",
       "typeVersion": 1,
       "position": [
-        750,
-        410
+        720,
+        350
       ],
       "credentials": {
-        "pagerDutyApi": "pagerduty token"
+        "pagerDutyApi": "PagerDuty creds"
       }
     },
     {
       "parameters": {
         "resource": "incidentNote",
         "operation": "getAll",
-        "incidentId": "={{$json[\"id\"]}}"
+        "incidentId": "={{$json[\"id\"]}}",
+        "limit": 1
       },
       "name": "PagerDuty5",
       "type": "n8n-nodes-base.pagerDuty",
       "typeVersion": 1,
       "position": [
-        750,
-        80
+        720,
+        160
       ],
       "credentials": {
-        "pagerDutyApi": "pagerduty token"
+        "pagerDutyApi": "PagerDuty creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "user",
+        "userId": "PIP3SRL"
+      },
+      "name": "PagerDuty6",
+      "type": "n8n-nodes-base.pagerDuty",
+      "typeVersion": 1,
+      "position": [
+        400,
+        110
+      ],
+      "credentials": {
+        "pagerDutyApi": "PagerDuty creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "logEntry",
+        "operation": "getAll",
+        "limit": 1,
+        "options": {}
+      },
+      "name": "PagerDuty7",
+      "type": "n8n-nodes-base.pagerDuty",
+      "typeVersion": 1,
+      "position": [
+        400,
+        440
+      ],
+      "credentials": {
+        "pagerDutyApi": "PagerDuty creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "logEntry",
+        "logEntryId": "={{$node[\"PagerDuty\"].json[\"first_trigger_log_entry\"][\"id\"]}}"
+      },
+      "name": "PagerDuty8",
+      "type": "n8n-nodes-base.pagerDuty",
+      "typeVersion": 1,
+      "position": [
+        550,
+        440
+      ],
+      "credentials": {
+        "pagerDutyApi": "PagerDuty creds"
       }
     }
   ],
@@ -130,6 +177,11 @@
         [
           {
             "node": "PagerDuty1",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "PagerDuty8",
             "type": "main",
             "index": 0
           }
@@ -175,13 +227,28 @@
             "node": "PagerDuty",
             "type": "main",
             "index": 0
+          },
+          {
+            "node": "PagerDuty6",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "PagerDuty7",
+            "type": "main",
+            "index": 0
           }
         ]
+      ]
+    },
+    "PagerDuty7": {
+      "main": [
+        []
       ]
     }
   },
   "createdAt": "2021-02-15T13:56:59.611Z",
-  "updatedAt": "2021-02-16T11:57:43.701Z",
+  "updatedAt": "2021-02-19T11:45:25.483Z",
   "settings": {},
   "staticData": null
 }
