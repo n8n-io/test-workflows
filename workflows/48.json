@@ -1,0 +1,525 @@
+{
+  "id": 48,
+  "name": "Asana:Project:getAll get:Task:create update move getAll get delete:TaskComment:add remove:TaskTag:add remove:TaskProject:add remov e:SubTask:create getAll:User:get getAll",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        280,
+        390
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "project",
+        "operation": "getAll",
+        "workspace": "1177253494675264",
+        "limit": 1,
+        "additionalFields": {}
+      },
+      "name": "Asana",
+      "type": "n8n-nodes-base.asana",
+      "typeVersion": 1,
+      "position": [
+        510,
+        300
+      ],
+      "credentials": {
+        "asanaApi": "Asana creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "project",
+        "id": "={{$node[\"Asana\"].json[\"gid\"]}}"
+      },
+      "name": "Asana1",
+      "type": "n8n-nodes-base.asana",
+      "typeVersion": 1,
+      "position": [
+        660,
+        300
+      ],
+      "credentials": {
+        "asanaApi": "Asana creds"
+      }
+    },
+    {
+      "parameters": {
+        "workspace": "1177253494675264",
+        "name": "TaskTest",
+        "otherProperties": {
+          "assignee": "1199961026001666"
+        }
+      },
+      "name": "Asana2",
+      "type": "n8n-nodes-base.asana",
+      "typeVersion": 1,
+      "position": [
+        510,
+        450
+      ],
+      "credentials": {
+        "asanaApi": "Asana creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "id": "={{$node[\"Asana2\"].json[\"gid\"]}}",
+        "otherProperties": {
+          "name": "UpdatedTestTask"
+        }
+      },
+      "name": "Asana3",
+      "type": "n8n-nodes-base.asana",
+      "typeVersion": 1,
+      "position": [
+        660,
+        450
+      ],
+      "credentials": {
+        "asanaApi": "Asana creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "move",
+        "id": "={{$node[\"Asana2\"].json[\"gid\"]}}",
+        "projectId": "1199961131378839",
+        "section": "1199961131378842"
+      },
+      "name": "Asana4",
+      "type": "n8n-nodes-base.asana",
+      "typeVersion": 1,
+      "position": [
+        820,
+        450
+      ],
+      "credentials": {
+        "asanaApi": "Asana creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "limit": 1,
+        "filters": {
+          "assignee": "1199961026001666",
+          "workspace": "1177253494675264"
+        }
+      },
+      "name": "Asana5",
+      "type": "n8n-nodes-base.asana",
+      "typeVersion": 1,
+      "position": [
+        970,
+        450
+      ],
+      "credentials": {
+        "asanaApi": "Asana creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "id": "={{$node[\"Asana2\"].json[\"gid\"]}}"
+      },
+      "name": "Asana6",
+      "type": "n8n-nodes-base.asana",
+      "typeVersion": 1,
+      "position": [
+        1130,
+        450
+      ],
+      "credentials": {
+        "asanaApi": "Asana creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "id": "={{$node[\"Asana2\"].json[\"gid\"]}}"
+      },
+      "name": "Asana7",
+      "type": "n8n-nodes-base.asana",
+      "typeVersion": 1,
+      "position": [
+        1680,
+        460
+      ],
+      "credentials": {
+        "asanaApi": "Asana creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "taskComment",
+        "id": "={{$node[\"Asana2\"].json[\"gid\"]}}",
+        "text": "TestTaskComment",
+        "additionalFields": {}
+      },
+      "name": "Asana8",
+      "type": "n8n-nodes-base.asana",
+      "typeVersion": 1,
+      "position": [
+        1310,
+        300
+      ],
+      "credentials": {
+        "asanaApi": "Asana creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "taskComment",
+        "operation": "remove",
+        "id": "={{$node[\"Asana8\"].json[\"gid\"]}}"
+      },
+      "name": "Asana9",
+      "type": "n8n-nodes-base.asana",
+      "typeVersion": 1,
+      "position": [
+        1460,
+        300
+      ],
+      "credentials": {
+        "asanaApi": "Asana creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "taskTag",
+        "id": "={{$node[\"Asana2\"].json[\"gid\"]}}",
+        "tag": "1199534487398432"
+      },
+      "name": "Asana10",
+      "type": "n8n-nodes-base.asana",
+      "typeVersion": 1,
+      "position": [
+        1310,
+        450
+      ],
+      "credentials": {
+        "asanaApi": "Asana creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "taskTag",
+        "operation": "remove",
+        "id": "={{$node[\"Asana2\"].json[\"gid\"]}}",
+        "tag": "1199534487398432"
+      },
+      "name": "Asana11",
+      "type": "n8n-nodes-base.asana",
+      "typeVersion": 1,
+      "position": [
+        1460,
+        450
+      ],
+      "credentials": {
+        "asanaApi": "Asana creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "taskProject",
+        "id": "={{$node[\"Asana2\"].json[\"gid\"]}}",
+        "project": "1199961131378839",
+        "additionalFields": {}
+      },
+      "name": "Asana12",
+      "type": "n8n-nodes-base.asana",
+      "typeVersion": 1,
+      "position": [
+        1310,
+        600
+      ],
+      "credentials": {
+        "asanaApi": "Asana creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "taskProject",
+        "operation": "remove",
+        "id": "={{$node[\"Asana2\"].json[\"gid\"]}}",
+        "project": "1199961131378839"
+      },
+      "name": "Asana13",
+      "type": "n8n-nodes-base.asana",
+      "typeVersion": 1,
+      "position": [
+        1460,
+        600
+      ],
+      "credentials": {
+        "asanaApi": "Asana creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "user",
+        "userId": "1199961026001666"
+      },
+      "name": "Asana14",
+      "type": "n8n-nodes-base.asana",
+      "typeVersion": 1,
+      "position": [
+        510,
+        620
+      ],
+      "credentials": {
+        "asanaApi": "Asana creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "user",
+        "operation": "getAll",
+        "workspace": "1177253494675264"
+      },
+      "name": "Asana15",
+      "type": "n8n-nodes-base.asana",
+      "typeVersion": 1,
+      "position": [
+        650,
+        620
+      ],
+      "credentials": {
+        "asanaApi": "Asana creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "subtask",
+        "taskId": "={{$node[\"Asana2\"].json[\"gid\"]}}",
+        "name": "SubTestTask",
+        "otherProperties": {}
+      },
+      "name": "Asana16",
+      "type": "n8n-nodes-base.asana",
+      "typeVersion": 1,
+      "position": [
+        1310,
+        760
+      ],
+      "credentials": {
+        "asanaApi": "Asana creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "subtask",
+        "operation": "getAll",
+        "taskId": "={{$node[\"Asana2\"].json[\"gid\"]}}",
+        "limit": 1,
+        "options": {}
+      },
+      "name": "Asana17",
+      "type": "n8n-nodes-base.asana",
+      "typeVersion": 1,
+      "position": [
+        1460,
+        760
+      ],
+      "credentials": {
+        "asanaApi": "Asana creds"
+      }
+    }
+  ],
+  "connections": {
+    "Asana": {
+      "main": [
+        [
+          {
+            "node": "Asana1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Asana2": {
+      "main": [
+        [
+          {
+            "node": "Asana3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Asana3": {
+      "main": [
+        [
+          {
+            "node": "Asana4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Asana4": {
+      "main": [
+        [
+          {
+            "node": "Asana5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Asana5": {
+      "main": [
+        [
+          {
+            "node": "Asana6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Asana6": {
+      "main": [
+        [
+          {
+            "node": "Asana8",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Asana10",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Asana12",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Asana16",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Asana8": {
+      "main": [
+        [
+          {
+            "node": "Asana9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Asana9": {
+      "main": [
+        []
+      ]
+    },
+    "Asana10": {
+      "main": [
+        [
+          {
+            "node": "Asana11",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Asana11": {
+      "main": [
+        []
+      ]
+    },
+    "Asana12": {
+      "main": [
+        [
+          {
+            "node": "Asana13",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Asana13": {
+      "main": [
+        []
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Asana2",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Asana14",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Asana",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Asana14": {
+      "main": [
+        [
+          {
+            "node": "Asana15",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Asana16": {
+      "main": [
+        [
+          {
+            "node": "Asana17",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Asana17": {
+      "main": [
+        [
+          {
+            "node": "Asana7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-02-19T14:19:19.630Z",
+  "updatedAt": "2021-02-19T14:42:39.385Z",
+  "settings": {},
+  "staticData": null
+}
