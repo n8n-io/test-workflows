@@ -1,0 +1,292 @@
+{
+  "id": 46,
+  "name": "GoogleBooks:Volume:getAll get:BookShelf:getAll get:BookShelfVolume:add move getAll remove clear",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        190,
+        380
+      ]
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "resource": "volume",
+        "operation": "getAll",
+        "searchQuery": "lean startup",
+        "limit": 2
+      },
+      "name": "Google Books",
+      "type": "n8n-nodes-base.googleBooks",
+      "typeVersion": 1,
+      "position": [
+        480,
+        300
+      ],
+      "credentials": {
+        "googleBooksOAuth2Api": "Google Books creds"
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "resource": "volume",
+        "volumeId": "={{$node[\"Google Books\"].json[\"id\"]}}"
+      },
+      "name": "Google Books1",
+      "type": "n8n-nodes-base.googleBooks",
+      "typeVersion": 1,
+      "position": [
+        650,
+        300
+      ],
+      "credentials": {
+        "googleBooksOAuth2Api": "Google Books creds"
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "operation": "getAll",
+        "myLibrary": true,
+        "limit": 1
+      },
+      "name": "Google Books2",
+      "type": "n8n-nodes-base.googleBooks",
+      "typeVersion": 1,
+      "position": [
+        480,
+        460
+      ],
+      "credentials": {
+        "googleBooksOAuth2Api": "Google Books creds"
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "myLibrary": true,
+        "shelfId": "1001"
+      },
+      "name": "Google Books3",
+      "type": "n8n-nodes-base.googleBooks",
+      "typeVersion": 1,
+      "position": [
+        640,
+        460
+      ],
+      "credentials": {
+        "googleBooksOAuth2Api": "Google Books creds"
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "resource": "bookshelfVolume",
+        "operation": "add",
+        "shelfId": "1001",
+        "volumeId": "={{$node[\"Google Books1\"].json[\"id\"]}}"
+      },
+      "name": "Google Books4",
+      "type": "n8n-nodes-base.googleBooks",
+      "typeVersion": 1,
+      "position": [
+        820,
+        420
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "googleBooksOAuth2Api": "Google Books creds"
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "resource": "bookshelfVolume",
+        "operation": "move",
+        "shelfId": "1001",
+        "volumeId": "={{$node[\"Google Books1\"].json[\"id\"]}}",
+        "volumePosition": "1"
+      },
+      "name": "Google Books5",
+      "type": "n8n-nodes-base.googleBooks",
+      "typeVersion": 1,
+      "position": [
+        990,
+        420
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "googleBooksOAuth2Api": "Google Books creds"
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "resource": "bookshelfVolume",
+        "myLibrary": true,
+        "shelfId": "1001",
+        "limit": 1
+      },
+      "name": "Google Books6",
+      "type": "n8n-nodes-base.googleBooks",
+      "typeVersion": 1,
+      "position": [
+        1150,
+        420
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "googleBooksOAuth2Api": "Google Books creds"
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "resource": "bookshelfVolume",
+        "operation": "remove",
+        "shelfId": "1001",
+        "volumeId": "={{$node[\"Google Books1\"].json[\"id\"]}}"
+      },
+      "name": "Google Books7",
+      "type": "n8n-nodes-base.googleBooks",
+      "typeVersion": 1,
+      "position": [
+        1340,
+        420
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "googleBooksOAuth2Api": "Google Books creds"
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "resource": "bookshelfVolume",
+        "operation": "clear",
+        "shelfId": "1001"
+      },
+      "name": "Google Books8",
+      "type": "n8n-nodes-base.googleBooks",
+      "typeVersion": 1,
+      "position": [
+        1520,
+        420
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "googleBooksOAuth2Api": "Google Books creds"
+      }
+    }
+  ],
+  "connections": {
+    "Google Books": {
+      "main": [
+        [
+          {
+            "node": "Google Books1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Google Books",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Google Books2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Books2": {
+      "main": [
+        [
+          {
+            "node": "Google Books3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Books1": {
+      "main": [
+        [
+          {
+            "node": "Google Books4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Books3": {
+      "main": [
+        []
+      ]
+    },
+    "Google Books4": {
+      "main": [
+        [
+          {
+            "node": "Google Books5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Books5": {
+      "main": [
+        [
+          {
+            "node": "Google Books6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Books6": {
+      "main": [
+        [
+          {
+            "node": "Google Books7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Books7": {
+      "main": [
+        [
+          {
+            "node": "Google Books8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-02-19T09:10:55.093Z",
+  "updatedAt": "2021-02-19T09:41:00.358Z",
+  "settings": {},
+  "staticData": null
+}
