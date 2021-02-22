@@ -1,0 +1,577 @@
+{
+  "id": 52,
+  "name": "Coda:Table:getAllColumns getColumn getAllRows getRow createRow pushButton deleteRow:View:getAll get getAllViewColumns getAllViewRows updateViewRow pushViewButto n:Formula:get getAll:Control:get getAll",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        450
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "control",
+        "operation": "getAll",
+        "docId": "2-5DWWeFZp",
+        "limit": 1
+      },
+      "name": "Coda",
+      "type": "n8n-nodes-base.coda",
+      "typeVersion": 1,
+      "position": [
+        430,
+        220
+      ],
+      "credentials": {
+        "codaApi": "Code creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "control",
+        "docId": "2-5DWWeFZp",
+        "controlId": "={{$node[\"Coda\"].json[\"id\"]}}"
+      },
+      "name": "Coda1",
+      "type": "n8n-nodes-base.coda",
+      "typeVersion": 1,
+      "position": [
+        580,
+        220
+      ],
+      "credentials": {
+        "codaApi": "Code creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "formula",
+        "operation": "getAll",
+        "docId": "2-5DWWeFZp",
+        "limit": 1
+      },
+      "name": "Coda2",
+      "type": "n8n-nodes-base.coda",
+      "typeVersion": 1,
+      "position": [
+        430,
+        370
+      ],
+      "credentials": {
+        "codaApi": "Code creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "formula",
+        "docId": "2-5DWWeFZp",
+        "formulaId": "={{$node[\"Coda2\"].json[\"id\"]}}"
+      },
+      "name": "Coda3",
+      "type": "n8n-nodes-base.coda",
+      "typeVersion": 1,
+      "position": [
+        580,
+        370
+      ],
+      "credentials": {
+        "codaApi": "Code creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getAllColumns",
+        "docId": "2-5DWWeFZp",
+        "tableId": "grid-lDqTU2W4nP",
+        "limit": 1
+      },
+      "name": "Coda4",
+      "type": "n8n-nodes-base.coda",
+      "typeVersion": 1,
+      "position": [
+        430,
+        530
+      ],
+      "credentials": {
+        "codaApi": "Code creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getColumn",
+        "docId": "2-5DWWeFZp",
+        "tableId": "grid-lDqTU2W4nP",
+        "columnId": "={{$node[\"Coda4\"].json[\"id\"]}}"
+      },
+      "name": "Coda5",
+      "type": "n8n-nodes-base.coda",
+      "typeVersion": 1,
+      "position": [
+        580,
+        530
+      ],
+      "credentials": {
+        "codaApi": "Code creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getAllRows",
+        "docId": "2-5DWWeFZp",
+        "tableId": "grid-lDqTU2W4nP",
+        "limit": 1,
+        "options": {}
+      },
+      "name": "Coda6",
+      "type": "n8n-nodes-base.coda",
+      "typeVersion": 1,
+      "position": [
+        730,
+        530
+      ],
+      "credentials": {
+        "codaApi": "Code creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getRow",
+        "docId": "2-5DWWeFZp",
+        "tableId": "grid-lDqTU2W4nP",
+        "rowId": "={{$node[\"Coda6\"].json[\"id\"]}}",
+        "options": {}
+      },
+      "name": "Coda7",
+      "type": "n8n-nodes-base.coda",
+      "typeVersion": 1,
+      "position": [
+        880,
+        530
+      ],
+      "credentials": {
+        "codaApi": "Code creds"
+      }
+    },
+    {
+      "parameters": {
+        "docId": "2-5DWWeFZp",
+        "tableId": "grid-lDqTU2W4nP",
+        "options": {}
+      },
+      "name": "Coda8",
+      "type": "n8n-nodes-base.coda",
+      "typeVersion": 1,
+      "position": [
+        1180,
+        530
+      ],
+      "credentials": {
+        "codaApi": "Code creds"
+      }
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "number": [
+            {
+              "name": "number",
+              "value": 101
+            },
+            {
+              "name": "sum"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Set",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        1030,
+        530
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "deleteRow",
+        "docId": "2-5DWWeFZp",
+        "tableId": "grid-lDqTU2W4nP",
+        "rowId": "={{$node[\"Coda6\"].json[\"id\"]}}"
+      },
+      "name": "Coda9",
+      "type": "n8n-nodes-base.coda",
+      "typeVersion": 1,
+      "position": [
+        1480,
+        530
+      ],
+      "credentials": {
+        "codaApi": "Code creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "pushButton",
+        "docId": "2-5DWWeFZp",
+        "tableId": "grid-lDqTU2W4nP",
+        "rowId": "={{$node[\"Coda6\"].json[\"id\"]}}",
+        "columnId": "c-hTB8QwFtUS"
+      },
+      "name": "Coda10",
+      "type": "n8n-nodes-base.coda",
+      "typeVersion": 1,
+      "position": [
+        1330,
+        530
+      ],
+      "credentials": {
+        "codaApi": "Code creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "view",
+        "operation": "getAll",
+        "docId": "2-5DWWeFZp",
+        "limit": 1
+      },
+      "name": "Coda11",
+      "type": "n8n-nodes-base.coda",
+      "typeVersion": 1,
+      "position": [
+        430,
+        700
+      ],
+      "credentials": {
+        "codaApi": "Code creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "view",
+        "docId": "2-5DWWeFZp",
+        "viewId": "={{$node[\"Coda11\"].json[\"id\"]}}"
+      },
+      "name": "Coda12",
+      "type": "n8n-nodes-base.coda",
+      "typeVersion": 1,
+      "position": [
+        580,
+        700
+      ],
+      "credentials": {
+        "codaApi": "Code creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "view",
+        "operation": "getAllViewColumns",
+        "docId": "2-5DWWeFZp",
+        "viewId": "table-K1_z3jl_HH",
+        "limit": 1
+      },
+      "name": "Coda13",
+      "type": "n8n-nodes-base.coda",
+      "typeVersion": 1,
+      "position": [
+        730,
+        700
+      ],
+      "credentials": {
+        "codaApi": "Code creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "view",
+        "operation": "getAllViewRows",
+        "docId": "2-5DWWeFZp",
+        "viewId": "table-K1_z3jl_HH",
+        "limit": 1,
+        "options": {}
+      },
+      "name": "Coda14",
+      "type": "n8n-nodes-base.coda",
+      "typeVersion": 1,
+      "position": [
+        880,
+        700
+      ],
+      "credentials": {
+        "codaApi": "Code creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "view",
+        "operation": "updateViewRow",
+        "docId": "2-5DWWeFZp",
+        "viewId": "table-K1_z3jl_HH",
+        "rowId": "={{$node[\"Coda14\"].json[\"id\"]}}",
+        "keyName": "number",
+        "options": {
+          "disableParsing": true
+        }
+      },
+      "name": "Coda15",
+      "type": "n8n-nodes-base.coda",
+      "typeVersion": 1,
+      "position": [
+        1180,
+        700
+      ],
+      "credentials": {
+        "codaApi": "Code creds"
+      }
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "number": [
+            {
+              "name": "number",
+              "value": 102
+            },
+            {
+              "name": "sum"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Set1",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        1030,
+        700
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "view",
+        "operation": "pushViewButton",
+        "docId": "2-5DWWeFZp",
+        "viewId": "table-K1_z3jl_HH",
+        "rowId": "={{$node[\"Coda14\"].json[\"id\"]}}",
+        "columnId": "c-v8RAVAABYN"
+      },
+      "name": "Coda16",
+      "type": "n8n-nodes-base.coda",
+      "typeVersion": 1,
+      "position": [
+        1330,
+        700
+      ],
+      "credentials": {
+        "codaApi": "Code creds"
+      }
+    }
+  ],
+  "connections": {
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Coda4",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Coda11",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Coda2",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Coda",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Coda": {
+      "main": [
+        [
+          {
+            "node": "Coda1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Coda2": {
+      "main": [
+        [
+          {
+            "node": "Coda3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Coda4": {
+      "main": [
+        [
+          {
+            "node": "Coda5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Coda5": {
+      "main": [
+        [
+          {
+            "node": "Coda6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Coda6": {
+      "main": [
+        [
+          {
+            "node": "Coda7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Coda7": {
+      "main": [
+        [
+          {
+            "node": "Set",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Coda8": {
+      "main": [
+        [
+          {
+            "node": "Coda10",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set": {
+      "main": [
+        [
+          {
+            "node": "Coda8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Coda10": {
+      "main": [
+        [
+          {
+            "node": "Coda9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Coda11": {
+      "main": [
+        [
+          {
+            "node": "Coda12",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Coda12": {
+      "main": [
+        [
+          {
+            "node": "Coda13",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Coda13": {
+      "main": [
+        [
+          {
+            "node": "Coda14",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Coda14": {
+      "main": [
+        [
+          {
+            "node": "Set1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Coda15": {
+      "main": [
+        [
+          {
+            "node": "Coda16",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set1": {
+      "main": [
+        [
+          {
+            "node": "Coda15",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-02-22T08:19:03.344Z",
+  "updatedAt": "2021-02-22T08:48:37.140Z",
+  "settings": {},
+  "staticData": null
+}
