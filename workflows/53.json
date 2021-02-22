@@ -1,0 +1,355 @@
+{
+  "id": 53,
+  "name": "ConvertKit:CustomField:create getAll update delete:Form:getAll addSubscriber getSubscriptions:Tag:create getAll:TagSubscriber:add getAll delete",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "customField",
+        "operation": "create",
+        "label": "testField"
+      },
+      "name": "ConvertKit",
+      "type": "n8n-nodes-base.convertKit",
+      "typeVersion": 1,
+      "position": [
+        450,
+        240
+      ],
+      "credentials": {
+        "convertKitApi": "ConvertKit creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "customField",
+        "operation": "getAll",
+        "limit": 1
+      },
+      "name": "ConvertKit1",
+      "type": "n8n-nodes-base.convertKit",
+      "typeVersion": 1,
+      "position": [
+        600,
+        240
+      ],
+      "credentials": {
+        "convertKitApi": "ConvertKit creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "customField",
+        "id": "={{$node[\"ConvertKit\"].json[\"id\"]}}",
+        "label": "UpdatedTestField"
+      },
+      "name": "ConvertKit2",
+      "type": "n8n-nodes-base.convertKit",
+      "typeVersion": 1,
+      "position": [
+        750,
+        240
+      ],
+      "credentials": {
+        "convertKitApi": "ConvertKit creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "customField",
+        "operation": "delete",
+        "id": "={{$node[\"ConvertKit\"].json[\"id\"]}}"
+      },
+      "name": "ConvertKit3",
+      "type": "n8n-nodes-base.convertKit",
+      "typeVersion": 1,
+      "position": [
+        900,
+        240
+      ],
+      "credentials": {
+        "convertKitApi": "ConvertKit creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getAll"
+      },
+      "name": "ConvertKit4",
+      "type": "n8n-nodes-base.convertKit",
+      "typeVersion": 1,
+      "position": [
+        450,
+        400
+      ],
+      "credentials": {
+        "convertKitApi": "ConvertKit creds"
+      }
+    },
+    {
+      "parameters": {
+        "id": 2059113,
+        "email": "=fakeemail{{Date.now()}}@gmail.com",
+        "additionalFields": {}
+      },
+      "name": "ConvertKit5",
+      "type": "n8n-nodes-base.convertKit",
+      "typeVersion": 1,
+      "position": [
+        600,
+        400
+      ],
+      "credentials": {
+        "convertKitApi": "ConvertKit creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getSubscriptions",
+        "id": 2059113,
+        "limit": 1,
+        "additionalFields": {}
+      },
+      "name": "ConvertKit6",
+      "type": "n8n-nodes-base.convertKit",
+      "typeVersion": 1,
+      "position": [
+        1490,
+        400
+      ],
+      "credentials": {
+        "convertKitApi": "ConvertKit creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "tag",
+        "name": "=tag{{Date.now()}}"
+      },
+      "name": "ConvertKit7",
+      "type": "n8n-nodes-base.convertKit",
+      "typeVersion": 1,
+      "position": [
+        750,
+        490
+      ],
+      "credentials": {
+        "convertKitApi": "ConvertKit creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "tag",
+        "operation": "getAll",
+        "limit": 1
+      },
+      "name": "ConvertKit8",
+      "type": "n8n-nodes-base.convertKit",
+      "typeVersion": 1,
+      "position": [
+        890,
+        490
+      ],
+      "credentials": {
+        "convertKitApi": "ConvertKit creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "tagSubscriber",
+        "operation": "add",
+        "tagId": "={{$node[\"ConvertKit7\"].json[\"id\"]}}",
+        "email": "={{$node[\"ConvertKit5\"].json[\"subscriber\"][\"email_address\"]}}",
+        "additionalFields": {}
+      },
+      "name": "ConvertKit9",
+      "type": "n8n-nodes-base.convertKit",
+      "typeVersion": 1,
+      "position": [
+        1050,
+        550
+      ],
+      "credentials": {
+        "convertKitApi": "ConvertKit creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "tagSubscriber",
+        "operation": "getAll",
+        "tagId": "={{$node[\"ConvertKit7\"].json[\"id\"]}}",
+        "additionalFields": {}
+      },
+      "name": "ConvertKit10",
+      "type": "n8n-nodes-base.convertKit",
+      "typeVersion": 1,
+      "position": [
+        1200,
+        550
+      ],
+      "credentials": {
+        "convertKitApi": "ConvertKit creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "tagSubscriber",
+        "operation": "delete",
+        "tagId": "={{$node[\"ConvertKit7\"].json[\"id\"]}}",
+        "email": "={{$node[\"ConvertKit5\"].json[\"subscriber\"][\"email_address\"]}}"
+      },
+      "name": "ConvertKit11",
+      "type": "n8n-nodes-base.convertKit",
+      "typeVersion": 1,
+      "position": [
+        1350,
+        550
+      ],
+      "credentials": {
+        "convertKitApi": "ConvertKit creds"
+      }
+    }
+  ],
+  "connections": {
+    "ConvertKit": {
+      "main": [
+        [
+          {
+            "node": "ConvertKit1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ConvertKit1": {
+      "main": [
+        [
+          {
+            "node": "ConvertKit2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ConvertKit2": {
+      "main": [
+        [
+          {
+            "node": "ConvertKit3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "ConvertKit",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "ConvertKit4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ConvertKit5": {
+      "main": [
+        [
+          {
+            "node": "ConvertKit7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ConvertKit4": {
+      "main": [
+        [
+          {
+            "node": "ConvertKit5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ConvertKit7": {
+      "main": [
+        [
+          {
+            "node": "ConvertKit8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ConvertKit8": {
+      "main": [
+        [
+          {
+            "node": "ConvertKit9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ConvertKit9": {
+      "main": [
+        [
+          {
+            "node": "ConvertKit10",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ConvertKit10": {
+      "main": [
+        [
+          {
+            "node": "ConvertKit11",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ConvertKit11": {
+      "main": [
+        [
+          {
+            "node": "ConvertKit6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-02-22T09:25:07.982Z",
+  "updatedAt": "2021-02-22T09:29:28.235Z",
+  "settings": {},
+  "staticData": null
+}
