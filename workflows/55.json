@@ -1,0 +1,107 @@
+{
+  "id": 55,
+  "name": "Hunter: domainSearch emailFinder emailVerifier",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "domain": "n8n.io",
+        "limit": 1,
+        "filters": {}
+      },
+      "name": "Hunter",
+      "type": "n8n-nodes-base.hunter",
+      "typeVersion": 1,
+      "position": [
+        450,
+        300
+      ],
+      "credentials": {
+        "hunterApi": "Hunter creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "emailFinder",
+        "domain": "n8n.io",
+        "firstname": "hosting",
+        "lastname": "test"
+      },
+      "name": "Hunter1",
+      "type": "n8n-nodes-base.hunter",
+      "typeVersion": 1,
+      "position": [
+        600,
+        300
+      ],
+      "credentials": {
+        "hunterApi": "Hunter creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "emailVerifier",
+        "email": "nodeqa@n8n.io"
+      },
+      "name": "Hunter2",
+      "type": "n8n-nodes-base.hunter",
+      "typeVersion": 1,
+      "position": [
+        750,
+        300
+      ],
+      "credentials": {
+        "hunterApi": "Hunter creds"
+      }
+    }
+  ],
+  "connections": {
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Hunter",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Hunter": {
+      "main": [
+        [
+          {
+            "node": "Hunter1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Hunter1": {
+      "main": [
+        [
+          {
+            "node": "Hunter2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-02-22T11:10:50.078Z",
+  "updatedAt": "2021-02-22T11:10:50.078Z",
+  "settings": {},
+  "staticData": null
+}
