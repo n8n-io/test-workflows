@@ -1,0 +1,166 @@
+{
+  "id": 60,
+  "name": "Taiga:Issue:create update get getAll delete",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        170,
+        350
+      ]
+    },
+    {
+      "parameters": {
+        "projectId": 399742,
+        "subject": "Test",
+        "additionalFields": {
+          "description": "TestIssue"
+        }
+      },
+      "name": "Taiga",
+      "type": "n8n-nodes-base.taiga",
+      "typeVersion": 1,
+      "position": [
+        350,
+        350
+      ],
+      "credentials": {
+        "taigaCloudApi": "Taiga Cloud creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "projectId": 399742,
+        "issueId": "={{$node[\"Taiga\"].json[\"id\"]}}",
+        "updateFields": {
+          "subject": "UpdatedTest"
+        }
+      },
+      "name": "Taiga1",
+      "type": "n8n-nodes-base.taiga",
+      "typeVersion": 1,
+      "position": [
+        500,
+        350
+      ],
+      "credentials": {
+        "taigaCloudApi": "Taiga Cloud creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "issueId": "={{$node[\"Taiga\"].json[\"id\"]}}"
+      },
+      "name": "Taiga2",
+      "type": "n8n-nodes-base.taiga",
+      "typeVersion": 1,
+      "position": [
+        650,
+        350
+      ],
+      "credentials": {
+        "taigaCloudApi": "Taiga Cloud creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "projectId": 399742,
+        "limit": 1
+      },
+      "name": "Taiga3",
+      "type": "n8n-nodes-base.taiga",
+      "typeVersion": 1,
+      "position": [
+        800,
+        350
+      ],
+      "credentials": {
+        "taigaCloudApi": "Taiga Cloud creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "issueId": "={{$node[\"Taiga\"].json[\"id\"]}}"
+      },
+      "name": "Taiga4",
+      "type": "n8n-nodes-base.taiga",
+      "typeVersion": 1,
+      "position": [
+        950,
+        350
+      ],
+      "credentials": {
+        "taigaCloudApi": "Taiga Cloud creds"
+      }
+    }
+  ],
+  "connections": {
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Taiga",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Taiga": {
+      "main": [
+        [
+          {
+            "node": "Taiga1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Taiga1": {
+      "main": [
+        [
+          {
+            "node": "Taiga2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Taiga2": {
+      "main": [
+        [
+          {
+            "node": "Taiga3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Taiga3": {
+      "main": [
+        [
+          {
+            "node": "Taiga4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-02-23T15:27:09.090Z",
+  "updatedAt": "2021-02-23T15:29:22.526Z",
+  "settings": {},
+  "staticData": null
+}
