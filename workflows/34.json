@@ -1,0 +1,223 @@
+{
+  "id": 34,
+  "name": "Strava:Activity:create get update getAll getComments getKudos getLaps",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "name": "TestActivity",
+        "type": "Run",
+        "startDate": "={{Date.now()}}",
+        "elapsedTime": 5,
+        "additionalFields": {}
+      },
+      "name": "Strava",
+      "type": "n8n-nodes-base.strava",
+      "typeVersion": 1,
+      "position": [
+        450,
+        300
+      ],
+      "credentials": {
+        "stravaOAuth2Api": "Strava credentials"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "activityId": "={{$node[\"Strava\"].json[\"id\"]}}",
+        "updateFields": {
+          "type": "Ride"
+        }
+      },
+      "name": "Strava1",
+      "type": "n8n-nodes-base.strava",
+      "typeVersion": 1,
+      "position": [
+        750,
+        300
+      ],
+      "credentials": {
+        "stravaOAuth2Api": "Strava credentials"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "limit": 1
+      },
+      "name": "Strava2",
+      "type": "n8n-nodes-base.strava",
+      "typeVersion": 1,
+      "position": [
+        900,
+        300
+      ],
+      "credentials": {
+        "stravaOAuth2Api": "Strava credentials"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "activityId": "={{$node[\"Strava\"].json[\"id\"]}}"
+      },
+      "name": "Strava3",
+      "type": "n8n-nodes-base.strava",
+      "typeVersion": 1,
+      "position": [
+        600,
+        300
+      ],
+      "credentials": {
+        "stravaOAuth2Api": "Strava credentials"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getComments",
+        "activityId": "={{$node[\"Strava\"].json[\"id\"]}}",
+        "limit": 1
+      },
+      "name": "Strava4",
+      "type": "n8n-nodes-base.strava",
+      "typeVersion": 1,
+      "position": [
+        600,
+        460
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "stravaOAuth2Api": "Strava credentials"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getKudos",
+        "activityId": "={{$node[\"Strava\"].json[\"id\"]}}",
+        "limit": 1
+      },
+      "name": "Strava5",
+      "type": "n8n-nodes-base.strava",
+      "typeVersion": 1,
+      "position": [
+        750,
+        460
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "stravaOAuth2Api": "Strava credentials"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getLaps",
+        "activityId": "={{$node[\"Strava\"].json[\"id\"]}}",
+        "limit": 1
+      },
+      "name": "Strava6",
+      "type": "n8n-nodes-base.strava",
+      "typeVersion": 1,
+      "position": [
+        900,
+        460
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "stravaOAuth2Api": "Strava credentials"
+      }
+    }
+  ],
+  "connections": {
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Strava",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Strava": {
+      "main": [
+        [
+          {
+            "node": "Strava4",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Strava3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Strava1": {
+      "main": [
+        [
+          {
+            "node": "Strava2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Strava5": {
+      "main": [
+        [
+          {
+            "node": "Strava6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Strava4": {
+      "main": [
+        [
+          {
+            "node": "Strava5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Strava3": {
+      "main": [
+        [
+          {
+            "node": "Strava1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Strava6": {
+      "main": [
+        []
+      ]
+    }
+  },
+  "createdAt": "2021-02-17T14:32:51.109Z",
+  "updatedAt": "2021-02-17T14:34:50.063Z",
+  "settings": {},
+  "staticData": null
+}
