@@ -15,8 +15,10 @@
     },
     {
       "parameters": {
-        "email": "nodeqa@n8n.io",
-        "additionalFields": {}
+        "email": "=fake{{Date.now()}}@gmail.com",
+        "additionalFields": {
+          "name": "=Test{{Date.now()}}"
+        }
       },
       "name": "Drift ",
       "type": "n8n-nodes-base.drift",
@@ -34,7 +36,7 @@
         "operation": "update",
         "contactId": "={{$node[\"Drift \"].json[\"id\"]}}",
         "updateFields": {
-          "name": "node qtest"
+          "name": "=node qtest{{Date.now()}}"
         }
       },
       "name": "Drift 1",
@@ -128,7 +130,7 @@
     }
   },
   "createdAt": "2021-02-17T12:54:18.856Z",
-  "updatedAt": "2021-02-17T13:27:51.016Z",
+  "updatedAt": "2021-02-24T12:51:15.701Z",
   "settings": {},
   "staticData": null
 }
