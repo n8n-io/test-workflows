@@ -1,0 +1,353 @@
+{
+  "id": 28,
+  "name": "ClickUp:CheckList:create update delete:CheckListItem:create update delete",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "folder",
+        "team": "4651110",
+        "space": "8716115",
+        "name": "=test{{Date.now()}}"
+      },
+      "name": "ClickUp",
+      "type": "n8n-nodes-base.clickUp",
+      "typeVersion": 1,
+      "position": [
+        440,
+        300
+      ],
+      "credentials": {
+        "clickUpApi": "clickup cred"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "list",
+        "operation": "create",
+        "team": "4651110",
+        "space": "8716115",
+        "folder": "={{$node[\"ClickUp\"].json[\"id\"]}}",
+        "name": "=testingList{{Date.now()}}",
+        "additionalFields": {}
+      },
+      "name": "ClickUp1",
+      "type": "n8n-nodes-base.clickUp",
+      "typeVersion": 1,
+      "position": [
+        580,
+        350
+      ],
+      "credentials": {
+        "clickUpApi": "clickup cred"
+      }
+    },
+    {
+      "parameters": {
+        "team": "4651110",
+        "space": "8716115",
+        "folder": "={{$json[\"folder\"][\"id\"]}}",
+        "list": "={{$json[\"id\"]}}",
+        "name": "=testingTask{{Date.now()}}",
+        "additionalFields": {}
+      },
+      "name": "ClickUp2",
+      "type": "n8n-nodes-base.clickUp",
+      "typeVersion": 1,
+      "position": [
+        710,
+        400
+      ],
+      "credentials": {
+        "clickUpApi": "clickup cred"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "checklist",
+        "task": "={{$json[\"id\"]}}",
+        "name": "=checkListTest{{Date.now()}}"
+      },
+      "name": "ClickUp3",
+      "type": "n8n-nodes-base.clickUp",
+      "typeVersion": 1,
+      "position": [
+        860,
+        400
+      ],
+      "credentials": {
+        "clickUpApi": "clickup cred"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "checklist",
+        "operation": "update",
+        "checklist": "={{$node[\"ClickUp3\"].json[\"id\"]}}",
+        "updateFields": {
+          "name": "=checkListUpdated{{Date.now()}}"
+        }
+      },
+      "name": "ClickUp5",
+      "type": "n8n-nodes-base.clickUp",
+      "typeVersion": 1,
+      "position": [
+        1420,
+        400
+      ],
+      "credentials": {
+        "clickUpApi": "clickup cred"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "checklist",
+        "operation": "delete",
+        "checklist": "={{$node[\"ClickUp3\"].json[\"id\"]}}"
+      },
+      "name": "ClickUp6",
+      "type": "n8n-nodes-base.clickUp",
+      "typeVersion": 1,
+      "position": [
+        1550,
+        400
+      ],
+      "credentials": {
+        "clickUpApi": "clickup cred"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "list",
+        "operation": "delete",
+        "team": "4651110",
+        "space": "8716115",
+        "folder": "={{$node[\"ClickUp\"].json[\"id\"]}}",
+        "list": "={{$node[\"ClickUp1\"].json[\"id\"]}}"
+      },
+      "name": "ClickUp4",
+      "type": "n8n-nodes-base.clickUp",
+      "typeVersion": 1,
+      "position": [
+        1700,
+        350
+      ],
+      "credentials": {
+        "clickUpApi": "clickup cred"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "folder",
+        "operation": "delete",
+        "team": "4651110",
+        "space": "8716115",
+        "folder": "={{$node[\"ClickUp\"].json[\"id\"]}}"
+      },
+      "name": "ClickUp7",
+      "type": "n8n-nodes-base.clickUp",
+      "typeVersion": 1,
+      "position": [
+        1840,
+        290
+      ],
+      "credentials": {
+        "clickUpApi": "clickup cred"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "checklistItem",
+        "checklist": "={{$node[\"ClickUp3\"].json[\"id\"]}}",
+        "name": "=Item{{Date.now()}}",
+        "additionalFields": {}
+      },
+      "name": "ClickUp8",
+      "type": "n8n-nodes-base.clickUp",
+      "typeVersion": 1,
+      "position": [
+        990,
+        500
+      ],
+      "credentials": {
+        "clickUpApi": "clickup cred"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "checklistItem",
+        "operation": "update",
+        "checklist": "={{$node[\"ClickUp3\"].json[\"id\"]}}",
+        "checklistItem": "={{$node[\"ClickUp8\"].json[\"items\"][0][\"id\"]}}",
+        "updateFields": {
+          "name": "=UpdatedItem{{Date.now()}}"
+        }
+      },
+      "name": "ClickUp9",
+      "type": "n8n-nodes-base.clickUp",
+      "typeVersion": 1,
+      "position": [
+        1140,
+        500
+      ],
+      "credentials": {
+        "clickUpApi": "clickup cred"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "checklistItem",
+        "operation": "delete",
+        "checklist": "={{$node[\"ClickUp3\"].json[\"id\"]}}",
+        "checklistItem": "={{$node[\"ClickUp8\"].json[\"items\"][0][\"id\"]}}"
+      },
+      "name": "ClickUp10",
+      "type": "n8n-nodes-base.clickUp",
+      "typeVersion": 1,
+      "position": [
+        1270,
+        500
+      ],
+      "credentials": {
+        "clickUpApi": "clickup cred"
+      }
+    }
+  ],
+  "connections": {
+    "ClickUp": {
+      "main": [
+        [
+          {
+            "node": "ClickUp1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ClickUp1": {
+      "main": [
+        [
+          {
+            "node": "ClickUp2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ClickUp2": {
+      "main": [
+        [
+          {
+            "node": "ClickUp3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "ClickUp",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ClickUp3": {
+      "main": [
+        [
+          {
+            "node": "ClickUp8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ClickUp5": {
+      "main": [
+        [
+          {
+            "node": "ClickUp6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ClickUp6": {
+      "main": [
+        [
+          {
+            "node": "ClickUp4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ClickUp4": {
+      "main": [
+        [
+          {
+            "node": "ClickUp7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ClickUp8": {
+      "main": [
+        [
+          {
+            "node": "ClickUp9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ClickUp9": {
+      "main": [
+        [
+          {
+            "node": "ClickUp10",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ClickUp10": {
+      "main": [
+        [
+          {
+            "node": "ClickUp5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-02-17T10:31:28.487Z",
+  "updatedAt": "2021-02-24T11:49:08.808Z",
+  "settings": {},
+  "staticData": null
+}

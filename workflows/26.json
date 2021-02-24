@@ -1,0 +1,404 @@
+{
+  "id": 26,
+  "name": "ClickUp:Folder:create update getAll get delete:Goal:create update getAll get delete:GoalKeyResult:create update delete",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "folder",
+        "team": "4651110",
+        "space": "8716115",
+        "name": "=testFolder{{Date.now()}}"
+      },
+      "name": "ClickUp",
+      "type": "n8n-nodes-base.clickUp",
+      "typeVersion": 1,
+      "position": [
+        460,
+        200
+      ],
+      "credentials": {
+        "clickUpApi": "clickup cred"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "folder",
+        "operation": "update",
+        "team": "4651110",
+        "space": "8716115",
+        "folder": "={{$node[\"ClickUp\"].json[\"id\"]}}",
+        "updateFields": {
+          "name": "=testFolderUpdated{{Date.now()}}"
+        }
+      },
+      "name": "ClickUp1",
+      "type": "n8n-nodes-base.clickUp",
+      "typeVersion": 1,
+      "position": [
+        610,
+        200
+      ],
+      "credentials": {
+        "clickUpApi": "clickup cred"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "folder",
+        "operation": "getAll",
+        "team": "4651110",
+        "space": "8716115",
+        "limit": 1,
+        "filters": {}
+      },
+      "name": "ClickUp2",
+      "type": "n8n-nodes-base.clickUp",
+      "typeVersion": 1,
+      "position": [
+        750,
+        200
+      ],
+      "credentials": {
+        "clickUpApi": "clickup cred"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "folder",
+        "operation": "get",
+        "team": "4651110",
+        "space": "8716115",
+        "folder": "={{$node[\"ClickUp\"].json[\"id\"]}}"
+      },
+      "name": "ClickUp3",
+      "type": "n8n-nodes-base.clickUp",
+      "typeVersion": 1,
+      "position": [
+        890,
+        200
+      ],
+      "credentials": {
+        "clickUpApi": "clickup cred"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "folder",
+        "operation": "delete",
+        "team": "4651110",
+        "space": "8716115",
+        "folder": "={{$node[\"ClickUp\"].json[\"id\"]}}"
+      },
+      "name": "ClickUp4",
+      "type": "n8n-nodes-base.clickUp",
+      "typeVersion": 1,
+      "position": [
+        1030,
+        200
+      ],
+      "credentials": {
+        "clickUpApi": "clickup cred"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "goal",
+        "team": "4651110",
+        "name": "=testGoal{{Date.now()}}",
+        "additionalFields": {}
+      },
+      "name": "ClickUp5",
+      "type": "n8n-nodes-base.clickUp",
+      "typeVersion": 1,
+      "position": [
+        450,
+        380
+      ],
+      "credentials": {
+        "clickUpApi": "clickup cred"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "goal",
+        "operation": "update",
+        "goal": "={{$node[\"ClickUp5\"].json[\"id\"]}}",
+        "updateFields": {
+          "name": "=testGoalUpdated{{Date.now()}}"
+        }
+      },
+      "name": "ClickUp6",
+      "type": "n8n-nodes-base.clickUp",
+      "typeVersion": 1,
+      "position": [
+        1050,
+        370
+      ],
+      "credentials": {
+        "clickUpApi": "clickup cred"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "goal",
+        "operation": "getAll",
+        "team": "4651110",
+        "limit": 1
+      },
+      "name": "ClickUp7",
+      "type": "n8n-nodes-base.clickUp",
+      "typeVersion": 1,
+      "position": [
+        1200,
+        370
+      ],
+      "credentials": {
+        "clickUpApi": "clickup cred"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "goal",
+        "operation": "get",
+        "goal": "={{$node[\"ClickUp5\"].json[\"id\"]}}"
+      },
+      "name": "ClickUp8",
+      "type": "n8n-nodes-base.clickUp",
+      "typeVersion": 1,
+      "position": [
+        1340,
+        370
+      ],
+      "credentials": {
+        "clickUpApi": "clickup cred"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "goal",
+        "operation": "delete",
+        "goal": "={{$node[\"ClickUp5\"].json[\"id\"]}}"
+      },
+      "name": "ClickUp9",
+      "type": "n8n-nodes-base.clickUp",
+      "typeVersion": 1,
+      "position": [
+        1480,
+        370
+      ],
+      "credentials": {
+        "clickUpApi": "clickup cred"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "goalKeyResult",
+        "goal": "={{$node[\"ClickUp5\"].json[\"id\"]}}",
+        "name": "=testGoalResult{{Date.now()}}",
+        "type": "boolean",
+        "additionalFields": {}
+      },
+      "name": "ClickUp10",
+      "type": "n8n-nodes-base.clickUp",
+      "typeVersion": 1,
+      "position": [
+        600,
+        490
+      ],
+      "credentials": {
+        "clickUpApi": "clickup cred"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "goalKeyResult",
+        "operation": "update",
+        "keyResult": "={{$node[\"ClickUp10\"].json[\"id\"]}}",
+        "updateFields": {
+          "name": "=Updated Key result{{Date.now()}}"
+        }
+      },
+      "name": "ClickUp11",
+      "type": "n8n-nodes-base.clickUp",
+      "typeVersion": 1,
+      "position": [
+        760,
+        490
+      ],
+      "credentials": {
+        "clickUpApi": "clickup cred"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "goalKeyResult",
+        "operation": "delete",
+        "keyResult": "={{$node[\"ClickUp10\"].json[\"id\"]}}"
+      },
+      "name": "ClickUp12",
+      "type": "n8n-nodes-base.clickUp",
+      "typeVersion": 1,
+      "position": [
+        900,
+        490
+      ],
+      "credentials": {
+        "clickUpApi": "clickup cred"
+      }
+    }
+  ],
+  "connections": {
+    "ClickUp": {
+      "main": [
+        [
+          {
+            "node": "ClickUp1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ClickUp1": {
+      "main": [
+        [
+          {
+            "node": "ClickUp2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ClickUp2": {
+      "main": [
+        [
+          {
+            "node": "ClickUp3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ClickUp3": {
+      "main": [
+        [
+          {
+            "node": "ClickUp4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "ClickUp5",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "ClickUp",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ClickUp5": {
+      "main": [
+        [
+          {
+            "node": "ClickUp10",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ClickUp6": {
+      "main": [
+        [
+          {
+            "node": "ClickUp7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ClickUp7": {
+      "main": [
+        [
+          {
+            "node": "ClickUp8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ClickUp8": {
+      "main": [
+        [
+          {
+            "node": "ClickUp9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ClickUp10": {
+      "main": [
+        [
+          {
+            "node": "ClickUp11",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ClickUp11": {
+      "main": [
+        [
+          {
+            "node": "ClickUp12",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ClickUp12": {
+      "main": [
+        [
+          {
+            "node": "ClickUp6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-02-17T09:14:09.452Z",
+  "updatedAt": "2021-02-24T11:42:28.785Z",
+  "settings": {},
+  "staticData": null
+}
