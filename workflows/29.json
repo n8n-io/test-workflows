@@ -18,7 +18,7 @@
         "resource": "folder",
         "team": "4651110",
         "space": "8716115",
-        "name": "Test2"
+        "name": "=Test2{{Date.now()}}"
       },
       "name": "ClickUp",
       "type": "n8n-nodes-base.clickUp",
@@ -38,7 +38,7 @@
         "team": "4651110",
         "space": "8716115",
         "folder": "={{$node[\"ClickUp\"].json[\"id\"]}}",
-        "name": "testingList2",
+        "name": "=testingList2{{Date.now()}}",
         "additionalFields": {}
       },
       "name": "ClickUp1",
@@ -57,7 +57,7 @@
         "resource": "comment",
         "commentOn": "list",
         "id": "={{$node[\"ClickUp1\"].json[\"id\"]}}",
-        "commentText": "CommentOnList2",
+        "commentText": "=CommentOnList2{{Date.now()}}",
         "additionalFields": {}
       },
       "name": "ClickUp2",
@@ -77,7 +77,7 @@
         "operation": "update",
         "comment": "={{$node[\"ClickUp2\"].json[\"id\"]}}",
         "updateFields": {
-          "commentText": "commentUpdated"
+          "commentText": "=commentUpdated{{Date.now()}}"
         }
       },
       "name": "ClickUp3",
@@ -258,7 +258,7 @@
     }
   },
   "createdAt": "2021-02-17T11:06:49.772Z",
-  "updatedAt": "2021-02-17T12:09:32.990Z",
+  "updatedAt": "2021-02-24T11:50:14.407Z",
   "settings": {},
   "staticData": null
 }

@@ -18,7 +18,7 @@
         "resource": "folder",
         "team": "4651110",
         "space": "8716115",
-        "name": "TestFolder3"
+        "name": "=TestFolder3{{Date.now()}}"
       },
       "name": "ClickUp",
       "type": "n8n-nodes-base.clickUp",
@@ -38,7 +38,7 @@
         "team": "4651110",
         "space": "8716115",
         "folder": "={{$node[\"ClickUp\"].json[\"id\"]}}",
-        "name": "TestList",
+        "name": "=TestList{{Date.now()}}",
         "additionalFields": {}
       },
       "name": "ClickUp1",
@@ -58,7 +58,7 @@
         "space": "8716115",
         "folder": "={{$node[\"ClickUp\"].json[\"id\"]}}",
         "list": "={{$node[\"ClickUp1\"].json[\"id\"]}}",
-        "name": "testTask",
+        "name": "={{Date.now()}}task",
         "additionalFields": {}
       },
       "name": "ClickUp9",
@@ -451,7 +451,7 @@
     }
   },
   "createdAt": "2021-02-17T11:37:42.892Z",
-  "updatedAt": "2021-02-17T12:06:34.165Z",
+  "updatedAt": "2021-02-24T12:47:59.926Z",
   "settings": {},
   "staticData": null
 }

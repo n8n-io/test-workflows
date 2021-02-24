@@ -18,7 +18,7 @@
         "resource": "folder",
         "team": "4651110",
         "space": "8716115",
-        "name": "=TestFolder"
+        "name": "=TestFolder{{Date.now()}}"
       },
       "name": "ClickUp",
       "type": "n8n-nodes-base.clickUp",
@@ -38,7 +38,7 @@
         "team": "4651110",
         "space": "8716115",
         "folder": "={{$json[\"id\"]}}",
-        "name": "TestList",
+        "name": "=TestList{{Date.now()}}",
         "additionalFields": {}
       },
       "name": "ClickUp1",
@@ -61,7 +61,7 @@
         "folder": "={{$node[\"ClickUp\"].json[\"id\"]}}",
         "list": "={{$node[\"ClickUp1\"].json[\"id\"]}}",
         "updateFields": {
-          "name": "UpdateTestList"
+          "name": "=UpdateTestList{{Date.now()}}"
         }
       },
       "name": "ClickUp2",
@@ -145,8 +145,8 @@
         "operation": "get",
         "team": "4651110",
         "space": "8716115",
-        "folder": "={{$json[\"folder\"][\"id\"]}}",
-        "list": "={{$json[\"id\"]}}"
+        "folder": "={{$node[\"ClickUp\"].json[\"id\"]}}",
+        "list": "={{$node[\"ClickUp1\"].json[\"id\"]}}"
       },
       "name": "ClickUp6",
       "type": "n8n-nodes-base.clickUp",
@@ -166,8 +166,8 @@
         "operation": "delete",
         "team": "4651110",
         "space": "8716115",
-        "folder": "={{$json[\"folder\"][\"id\"]}}",
-        "list": "={{$json[\"id\"]}}"
+        "folder": "={{$node[\"ClickUp\"].json[\"id\"]}}",
+        "list": "={{$node[\"ClickUp1\"].json[\"id\"]}}"
       },
       "name": "ClickUp7",
       "type": "n8n-nodes-base.clickUp",
@@ -206,7 +206,7 @@
         "space": "8716115",
         "folder": "={{$json[\"folder\"][\"id\"]}}",
         "list": "={{$json[\"id\"]}}",
-        "name": "testTask",
+        "name": "=testTask{{Date.now()}}",
         "additionalFields": {}
       },
       "name": "ClickUp9",
@@ -225,7 +225,7 @@
         "operation": "update",
         "id": "={{$json[\"id\"]}}",
         "updateFields": {
-          "name": "={{$json[\"name\"]}}Updated"
+          "name": "={{$json[\"name\"]}}Updated{{Date.now()}}"
         }
       },
       "name": "ClickUp10",
@@ -484,7 +484,7 @@
     }
   },
   "createdAt": "2021-02-17T09:32:18.514Z",
-  "updatedAt": "2021-02-17T12:15:59.914Z",
+  "updatedAt": "2021-02-24T11:47:33.047Z",
   "settings": {},
   "staticData": null
 }

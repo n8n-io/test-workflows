@@ -18,7 +18,7 @@
         "resource": "folder",
         "team": "4651110",
         "space": "8716115",
-        "name": "testFolder"
+        "name": "=testFolder{{Date.now()}}"
       },
       "name": "ClickUp",
       "type": "n8n-nodes-base.clickUp",
@@ -37,9 +37,9 @@
         "operation": "update",
         "team": "4651110",
         "space": "8716115",
-        "folder": "={{$json[\"id\"]}}",
+        "folder": "={{$node[\"ClickUp\"].json[\"id\"]}}",
         "updateFields": {
-          "name": "testFolderUpdated"
+          "name": "=testFolderUpdated{{Date.now()}}"
         }
       },
       "name": "ClickUp1",
@@ -79,7 +79,7 @@
         "operation": "get",
         "team": "4651110",
         "space": "8716115",
-        "folder": "={{$json[\"id\"]}}"
+        "folder": "={{$node[\"ClickUp\"].json[\"id\"]}}"
       },
       "name": "ClickUp3",
       "type": "n8n-nodes-base.clickUp",
@@ -98,7 +98,7 @@
         "operation": "delete",
         "team": "4651110",
         "space": "8716115",
-        "folder": "={{$json[\"id\"]}}"
+        "folder": "={{$node[\"ClickUp\"].json[\"id\"]}}"
       },
       "name": "ClickUp4",
       "type": "n8n-nodes-base.clickUp",
@@ -115,7 +115,7 @@
       "parameters": {
         "resource": "goal",
         "team": "4651110",
-        "name": "testGoal",
+        "name": "=testGoal{{Date.now()}}",
         "additionalFields": {}
       },
       "name": "ClickUp5",
@@ -135,7 +135,7 @@
         "operation": "update",
         "goal": "={{$node[\"ClickUp5\"].json[\"id\"]}}",
         "updateFields": {
-          "name": "testGoalUpdated"
+          "name": "=testGoalUpdated{{Date.now()}}"
         }
       },
       "name": "ClickUp6",
@@ -171,7 +171,7 @@
       "parameters": {
         "resource": "goal",
         "operation": "get",
-        "goal": "={{$json[\"id\"]}}"
+        "goal": "={{$node[\"ClickUp5\"].json[\"id\"]}}"
       },
       "name": "ClickUp8",
       "type": "n8n-nodes-base.clickUp",
@@ -188,7 +188,7 @@
       "parameters": {
         "resource": "goal",
         "operation": "delete",
-        "goal": "={{$json[\"id\"]}}"
+        "goal": "={{$node[\"ClickUp5\"].json[\"id\"]}}"
       },
       "name": "ClickUp9",
       "type": "n8n-nodes-base.clickUp",
@@ -205,7 +205,7 @@
       "parameters": {
         "resource": "goalKeyResult",
         "goal": "={{$node[\"ClickUp5\"].json[\"id\"]}}",
-        "name": "testGoalResult",
+        "name": "=testGoalResult{{Date.now()}}",
         "type": "boolean",
         "additionalFields": {}
       },
@@ -226,7 +226,7 @@
         "operation": "update",
         "keyResult": "={{$node[\"ClickUp10\"].json[\"id\"]}}",
         "updateFields": {
-          "name": "Updated Key result"
+          "name": "=Updated Key result{{Date.now()}}"
         }
       },
       "name": "ClickUp11",
@@ -398,7 +398,7 @@
     }
   },
   "createdAt": "2021-02-17T09:14:09.452Z",
-  "updatedAt": "2021-02-17T11:14:22.882Z",
+  "updatedAt": "2021-02-24T11:42:28.785Z",
   "settings": {},
   "staticData": null
 }

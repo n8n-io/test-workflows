@@ -18,7 +18,7 @@
         "resource": "folder",
         "team": "4651110",
         "space": "8716115",
-        "name": "test"
+        "name": "=test{{Date.now()}}"
       },
       "name": "ClickUp",
       "type": "n8n-nodes-base.clickUp",
@@ -38,7 +38,7 @@
         "team": "4651110",
         "space": "8716115",
         "folder": "={{$node[\"ClickUp\"].json[\"id\"]}}",
-        "name": "testingList",
+        "name": "=testingList{{Date.now()}}",
         "additionalFields": {}
       },
       "name": "ClickUp1",
@@ -58,7 +58,7 @@
         "space": "8716115",
         "folder": "={{$json[\"folder\"][\"id\"]}}",
         "list": "={{$json[\"id\"]}}",
-        "name": "testingTask",
+        "name": "=testingTask{{Date.now()}}",
         "additionalFields": {}
       },
       "name": "ClickUp2",
@@ -76,7 +76,7 @@
       "parameters": {
         "resource": "checklist",
         "task": "={{$json[\"id\"]}}",
-        "name": "checkListTest"
+        "name": "=checkListTest{{Date.now()}}"
       },
       "name": "ClickUp3",
       "type": "n8n-nodes-base.clickUp",
@@ -95,7 +95,7 @@
         "operation": "update",
         "checklist": "={{$node[\"ClickUp3\"].json[\"id\"]}}",
         "updateFields": {
-          "name": "checkListUpdated"
+          "name": "=checkListUpdated{{Date.now()}}"
         }
       },
       "name": "ClickUp5",
@@ -169,7 +169,7 @@
       "parameters": {
         "resource": "checklistItem",
         "checklist": "={{$node[\"ClickUp3\"].json[\"id\"]}}",
-        "name": "Item",
+        "name": "=Item{{Date.now()}}",
         "additionalFields": {}
       },
       "name": "ClickUp8",
@@ -190,7 +190,7 @@
         "checklist": "={{$node[\"ClickUp3\"].json[\"id\"]}}",
         "checklistItem": "={{$node[\"ClickUp8\"].json[\"items\"][0][\"id\"]}}",
         "updateFields": {
-          "name": "UpdatedItem"
+          "name": "=UpdatedItem{{Date.now()}}"
         }
       },
       "name": "ClickUp9",
@@ -347,7 +347,7 @@
     }
   },
   "createdAt": "2021-02-17T10:31:28.487Z",
-  "updatedAt": "2021-02-17T12:10:22.167Z",
+  "updatedAt": "2021-02-24T11:49:08.808Z",
   "settings": {},
   "staticData": null
 }
