@@ -1,0 +1,630 @@
+{
+  "id": 73,
+  "name": "Youtube:Channel:get getAll update:Playlist:create update getAll get delete:PlaylistItem:add getAll get delete:videoCategory:getAll:Video:rate get upload update delete",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        310,
+        550
+      ]
+    },
+    {
+      "parameters": {
+        "limit": 1,
+        "filters": {
+          "id": "UCkdph8FDLpq2UD2i_OlwErA"
+        },
+        "options": {}
+      },
+      "name": "YouTube",
+      "type": "n8n-nodes-base.youTube",
+      "typeVersion": 1,
+      "position": [
+        650,
+        300
+      ],
+      "credentials": {
+        "youTubeOAuth2Api": "YouTube OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "channelId": "UCiHVTkJtWSdc9N3h0nUGWLg"
+      },
+      "name": "YouTube1",
+      "type": "n8n-nodes-base.youTube",
+      "typeVersion": 1,
+      "position": [
+        500,
+        300
+      ],
+      "credentials": {
+        "youTubeOAuth2Api": "YouTube OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "channelId": "={{$node[\"YouTube\"].json[\"id\"]}}",
+        "updateFields": {
+          "brandingSettingsUi": {
+            "channelSettingsValues": {
+              "channel": {
+                "description": "=Update description {{Date.now()}}"
+              }
+            }
+          }
+        }
+      },
+      "name": "YouTube2",
+      "type": "n8n-nodes-base.youTube",
+      "typeVersion": 1,
+      "position": [
+        800,
+        300
+      ],
+      "credentials": {
+        "youTubeOAuth2Api": "YouTube OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "uploadBanner",
+        "channelId": "UCkdph8FDLpq2UD2i_OlwErA"
+      },
+      "name": "YouTube3",
+      "type": "n8n-nodes-base.youTube",
+      "typeVersion": 1,
+      "position": [
+        1100,
+        300
+      ],
+      "credentials": {
+        "youTubeOAuth2Api": "YouTube OAuth2 creds"
+      },
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "resource": "playlist",
+        "operation": "create",
+        "title": "=Test{{Date.now()}}",
+        "options": {}
+      },
+      "name": "YouTube4",
+      "type": "n8n-nodes-base.youTube",
+      "typeVersion": 1,
+      "position": [
+        500,
+        450
+      ],
+      "credentials": {
+        "youTubeOAuth2Api": "YouTube OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "playlist",
+        "operation": "update",
+        "playlistId": "={{$node[\"YouTube4\"].json[\"id\"]}}",
+        "title": "=UpdatePlaylist{{Date.now()}}",
+        "updateFields": {}
+      },
+      "name": "YouTube5",
+      "type": "n8n-nodes-base.youTube",
+      "typeVersion": 1,
+      "position": [
+        650,
+        450
+      ],
+      "credentials": {
+        "youTubeOAuth2Api": "YouTube OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "playlist",
+        "limit": 1,
+        "filters": {},
+        "options": {}
+      },
+      "name": "YouTube6",
+      "type": "n8n-nodes-base.youTube",
+      "typeVersion": 1,
+      "position": [
+        1410,
+        450
+      ],
+      "credentials": {
+        "youTubeOAuth2Api": "YouTube OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "playlist",
+        "operation": "get",
+        "playlistId": "={{$node[\"YouTube4\"].json[\"id\"]}}",
+        "options": {}
+      },
+      "name": "YouTube7",
+      "type": "n8n-nodes-base.youTube",
+      "typeVersion": 1,
+      "position": [
+        1560,
+        450
+      ],
+      "credentials": {
+        "youTubeOAuth2Api": "YouTube OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "playlist",
+        "operation": "delete",
+        "playlistId": "={{$node[\"YouTube4\"].json[\"id\"]}}",
+        "options": {}
+      },
+      "name": "YouTube8",
+      "type": "n8n-nodes-base.youTube",
+      "typeVersion": 1,
+      "position": [
+        1710,
+        450
+      ],
+      "credentials": {
+        "youTubeOAuth2Api": "YouTube OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "playlistItem",
+        "playlistId": "={{$node[\"YouTube4\"].json[\"id\"]}}",
+        "videoId": "sJO3b0WXm8I",
+        "options": {}
+      },
+      "name": "YouTube9",
+      "type": "n8n-nodes-base.youTube",
+      "typeVersion": 1,
+      "position": [
+        800,
+        550
+      ],
+      "credentials": {
+        "youTubeOAuth2Api": "YouTube OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "playlistItem",
+        "operation": "getAll",
+        "playlistId": "={{$node[\"YouTube4\"].json[\"id\"]}}",
+        "part": [
+          "id",
+          "status",
+          "contentDetails"
+        ],
+        "limit": 1,
+        "options": {}
+      },
+      "name": "YouTube10",
+      "type": "n8n-nodes-base.youTube",
+      "typeVersion": 1,
+      "position": [
+        950,
+        550
+      ],
+      "credentials": {
+        "youTubeOAuth2Api": "YouTube OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "playlistItem",
+        "operation": "get",
+        "playlistItemId": "={{$node[\"YouTube9\"].json[\"id\"]}}",
+        "part": [
+          "contentDetails",
+          "id",
+          "status"
+        ],
+        "options": {}
+      },
+      "name": "YouTube11",
+      "type": "n8n-nodes-base.youTube",
+      "typeVersion": 1,
+      "position": [
+        1100,
+        550
+      ],
+      "credentials": {
+        "youTubeOAuth2Api": "YouTube OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "playlistItem",
+        "operation": "delete",
+        "playlistItemId": "={{$node[\"YouTube9\"].json[\"id\"]}}",
+        "options": {}
+      },
+      "name": "YouTube12",
+      "type": "n8n-nodes-base.youTube",
+      "typeVersion": 1,
+      "position": [
+        1250,
+        550
+      ],
+      "credentials": {
+        "youTubeOAuth2Api": "YouTube OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "video",
+        "operation": "rate",
+        "videoId": "sJO3b0WXm8I",
+        "rating": "like"
+      },
+      "name": "YouTube13",
+      "type": "n8n-nodes-base.youTube",
+      "typeVersion": 1,
+      "position": [
+        500,
+        800
+      ],
+      "credentials": {
+        "youTubeOAuth2Api": "YouTube OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "video",
+        "operation": "get",
+        "videoId": "sJO3b0WXm8I",
+        "part": [
+          "status",
+          "id",
+          "snippet"
+        ],
+        "options": {}
+      },
+      "name": "YouTube14",
+      "type": "n8n-nodes-base.youTube",
+      "typeVersion": 1,
+      "position": [
+        650,
+        800
+      ],
+      "credentials": {
+        "youTubeOAuth2Api": "YouTube OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "video",
+        "operation": "upload",
+        "title": "Earth spin",
+        "regionCode": "DE",
+        "categoryId": "27",
+        "options": {}
+      },
+      "name": "YouTube15",
+      "type": "n8n-nodes-base.youTube",
+      "typeVersion": 1,
+      "position": [
+        950,
+        800
+      ],
+      "credentials": {
+        "youTubeOAuth2Api": "YouTube OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "url": "https://file-examples-com.github.io/uploads/2017/04/file_example_MP4_480_1_5MG.mp4",
+        "responseFormat": "file",
+        "options": {}
+      },
+      "name": "HTTP Request",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 1,
+      "position": [
+        800,
+        800
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "video",
+        "operation": "update",
+        "videoId": "={{$node[\"YouTube15\"].json[\"id\"]}}",
+        "title": "=Updated Earth spin",
+        "regionCode": "DE",
+        "categoryId": "27",
+        "updateFields": {}
+      },
+      "name": "YouTube16",
+      "type": "n8n-nodes-base.youTube",
+      "typeVersion": 1,
+      "position": [
+        1100,
+        800
+      ],
+      "credentials": {
+        "youTubeOAuth2Api": "YouTube OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "video",
+        "operation": "delete",
+        "videoId": "={{$node[\"YouTube15\"].json[\"id\"]}}",
+        "options": {}
+      },
+      "name": "YouTube17",
+      "type": "n8n-nodes-base.youTube",
+      "typeVersion": 1,
+      "position": [
+        1250,
+        800
+      ],
+      "credentials": {
+        "youTubeOAuth2Api": "YouTube OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "videoCategory",
+        "regionCode": "DE",
+        "limit": 1
+      },
+      "name": "YouTube18",
+      "type": "n8n-nodes-base.youTube",
+      "typeVersion": 1,
+      "position": [
+        500,
+        630
+      ],
+      "credentials": {
+        "youTubeOAuth2Api": "YouTube OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "filePath": "../../../assets/n8n-logo.png"
+      },
+      "name": "Read Binary File",
+      "type": "n8n-nodes-base.readBinaryFile",
+      "typeVersion": 1,
+      "position": [
+        950,
+        300
+      ]
+    }
+  ],
+  "connections": {
+    "YouTube": {
+      "main": [
+        [
+          {
+            "node": "YouTube2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "YouTube1": {
+      "main": [
+        [
+          {
+            "node": "YouTube",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "YouTube4": {
+      "main": [
+        [
+          {
+            "node": "YouTube5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "YouTube5": {
+      "main": [
+        [
+          {
+            "node": "YouTube9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "YouTube6": {
+      "main": [
+        [
+          {
+            "node": "YouTube7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "YouTube7": {
+      "main": [
+        [
+          {
+            "node": "YouTube8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "YouTube13",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "YouTube18",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "YouTube4",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "YouTube1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "YouTube9": {
+      "main": [
+        [
+          {
+            "node": "YouTube10",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "YouTube10": {
+      "main": [
+        [
+          {
+            "node": "YouTube11",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "YouTube11": {
+      "main": [
+        [
+          {
+            "node": "YouTube12",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "YouTube12": {
+      "main": [
+        [
+          {
+            "node": "YouTube6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "YouTube13": {
+      "main": [
+        [
+          {
+            "node": "YouTube14",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "YouTube15",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "YouTube14": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "YouTube15": {
+      "main": [
+        [
+          {
+            "node": "YouTube16",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "YouTube16": {
+      "main": [
+        [
+          {
+            "node": "YouTube17",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "YouTube2": {
+      "main": [
+        [
+          {
+            "node": "Read Binary File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read Binary File": {
+      "main": [
+        [
+          {
+            "node": "YouTube3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-02-25T15:49:55.037Z",
+  "updatedAt": "2021-02-25T16:12:39.833Z",
+  "settings": {},
+  "staticData": null
+}
