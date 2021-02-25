@@ -1,0 +1,109 @@
+{
+  "id": 49,
+  "name": "Bitly:Link:create get update",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        300,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "longUrl": "https://n8n.io/",
+        "additionalFields": {
+          "title": "n8n"
+        }
+      },
+      "name": "Bitly",
+      "type": "n8n-nodes-base.bitly",
+      "typeVersion": 1,
+      "position": [
+        560,
+        300
+      ],
+      "credentials": {
+        "bitlyApi": "Bitly creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "id": "={{$node[\"Bitly\"].json[\"id\"]}}"
+      },
+      "name": "Bitly1",
+      "type": "n8n-nodes-base.bitly",
+      "typeVersion": 1,
+      "position": [
+        730,
+        300
+      ],
+      "credentials": {
+        "bitlyApi": "Bitly creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "id": "={{$node[\"Bitly\"].json[\"id\"]}}",
+        "updateFields": {
+          "group": "Bl2jgvxfKYU"
+        }
+      },
+      "name": "Bitly2",
+      "type": "n8n-nodes-base.bitly",
+      "typeVersion": 1,
+      "position": [
+        890,
+        300
+      ],
+      "credentials": {
+        "bitlyApi": "Bitly creds"
+      }
+    }
+  ],
+  "connections": {
+    "Bitly": {
+      "main": [
+        [
+          {
+            "node": "Bitly1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Bitly1": {
+      "main": [
+        [
+          {
+            "node": "Bitly2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Bitly",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-02-19T16:46:19.188Z",
+  "updatedAt": "2021-02-19T16:46:33.650Z",
+  "settings": {},
+  "staticData": null
+}
