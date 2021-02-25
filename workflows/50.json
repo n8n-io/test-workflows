@@ -1,0 +1,166 @@
+{
+  "id": 50,
+  "name": "Brandfetch:color company font logo industry",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "color",
+        "domain": "n8n.io"
+      },
+      "name": "Brandfetch",
+      "type": "n8n-nodes-base.Brandfetch",
+      "typeVersion": 1,
+      "position": [
+        500,
+        300
+      ],
+      "credentials": {
+        "brandfetchApi": "Brandfetch creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "company",
+        "domain": "n8n.io"
+      },
+      "name": "Brandfetch1",
+      "type": "n8n-nodes-base.Brandfetch",
+      "typeVersion": 1,
+      "position": [
+        650,
+        300
+      ],
+      "credentials": {
+        "brandfetchApi": "Brandfetch creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "font",
+        "domain": "n8n.io"
+      },
+      "name": "Brandfetch2",
+      "type": "n8n-nodes-base.Brandfetch",
+      "typeVersion": 1,
+      "position": [
+        800,
+        300
+      ],
+      "credentials": {
+        "brandfetchApi": "Brandfetch creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "industry",
+        "domain": "n8n.io"
+      },
+      "name": "Brandfetch3",
+      "type": "n8n-nodes-base.Brandfetch",
+      "typeVersion": 1,
+      "position": [
+        1100,
+        300
+      ],
+      "credentials": {
+        "brandfetchApi": "Brandfetch creds"
+      }
+    },
+    {
+      "parameters": {
+        "domain": "n8n.io",
+        "download": true,
+        "imageTypes": [
+          "icon"
+        ]
+      },
+      "name": "Brandfetch4",
+      "type": "n8n-nodes-base.Brandfetch",
+      "typeVersion": 1,
+      "position": [
+        950,
+        300
+      ],
+      "credentials": {
+        "brandfetchApi": "Brandfetch creds"
+      }
+    }
+  ],
+  "connections": {
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Brandfetch",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Brandfetch": {
+      "main": [
+        [
+          {
+            "node": "Brandfetch1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Brandfetch1": {
+      "main": [
+        [
+          {
+            "node": "Brandfetch2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Brandfetch2": {
+      "main": [
+        [
+          {
+            "node": "Brandfetch4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Brandfetch3": {
+      "main": [
+        []
+      ]
+    },
+    "Brandfetch4": {
+      "main": [
+        [
+          {
+            "node": "Brandfetch3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-02-19T17:00:08.359Z",
+  "updatedAt": "2021-02-19T17:00:09.839Z",
+  "settings": {},
+  "staticData": null
+}
