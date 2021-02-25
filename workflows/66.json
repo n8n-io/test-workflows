@@ -1,0 +1,140 @@
+{
+  "id": 66,
+  "name": "Storyblok:Story:get getAll publish unpublish",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "source": "managementApi",
+        "operation": "getAll",
+        "space": 106530,
+        "returnAll": true,
+        "filters": {}
+      },
+      "name": "Storyblok",
+      "type": "n8n-nodes-base.storyblok",
+      "typeVersion": 1,
+      "position": [
+        440,
+        300
+      ],
+      "credentials": {
+        "storyblokManagementApi": "Storyblok Management creds"
+      }
+    },
+    {
+      "parameters": {
+        "source": "managementApi",
+        "space": 106530,
+        "storyId": "={{$node[\"Storyblok\"].json[\"id\"]}}"
+      },
+      "name": "Storyblok1",
+      "type": "n8n-nodes-base.storyblok",
+      "typeVersion": 1,
+      "position": [
+        600,
+        300
+      ],
+      "credentials": {
+        "storyblokManagementApi": "Storyblok Management creds"
+      }
+    },
+    {
+      "parameters": {
+        "source": "managementApi",
+        "operation": "publish",
+        "space": 106530,
+        "storyId": "={{$node[\"Storyblok\"].json[\"id\"]}}",
+        "options": {}
+      },
+      "name": "Storyblok2",
+      "type": "n8n-nodes-base.storyblok",
+      "typeVersion": 1,
+      "position": [
+        750,
+        300
+      ],
+      "credentials": {
+        "storyblokManagementApi": "Storyblok Management creds"
+      }
+    },
+    {
+      "parameters": {
+        "source": "managementApi",
+        "operation": "unpublish",
+        "space": 106530,
+        "storyId": "={{$node[\"Storyblok\"].json[\"id\"]}}"
+      },
+      "name": "Storyblok3",
+      "type": "n8n-nodes-base.storyblok",
+      "typeVersion": 1,
+      "position": [
+        900,
+        300
+      ],
+      "credentials": {
+        "storyblokManagementApi": "Storyblok Management creds"
+      }
+    }
+  ],
+  "connections": {
+    "Storyblok": {
+      "main": [
+        [
+          {
+            "node": "Storyblok1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Storyblok1": {
+      "main": [
+        [
+          {
+            "node": "Storyblok2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Storyblok2": {
+      "main": [
+        [
+          {
+            "node": "Storyblok3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Storyblok",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-02-25T10:14:44.063Z",
+  "updatedAt": "2021-02-25T10:14:44.063Z",
+  "settings": {},
+  "staticData": null
+}
