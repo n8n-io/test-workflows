@@ -1,0 +1,122 @@
+{
+  "id": 57,
+  "name": "Mindee:receipt:predict:invoice:predict",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        330,
+        230
+      ]
+    },
+    {
+      "parameters": {},
+      "name": "Mindee",
+      "type": "n8n-nodes-base.mindee",
+      "typeVersion": 1,
+      "position": [
+        650,
+        150
+      ],
+      "credentials": {
+        "mindeeReceiptApi": "Mindee Receipt creds"
+      }
+    },
+    {
+      "parameters": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/0/0b/ReceiptSwiss.jpg",
+        "responseFormat": "file",
+        "options": {}
+      },
+      "name": "HTTP Request",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 1,
+      "position": [
+        500,
+        150
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "invoice"
+      },
+      "name": "Mindee1",
+      "type": "n8n-nodes-base.mindee",
+      "typeVersion": 1,
+      "position": [
+        650,
+        300
+      ],
+      "credentials": {
+        "mindeeInvoiceApi": "Mindee Invoice creds"
+      }
+    },
+    {
+      "parameters": {
+        "url": "https://www.invoicesimple.com/wp-content/uploads/2018/06/Sample-Invoice-printable.png",
+        "responseFormat": "file",
+        "options": {}
+      },
+      "name": "HTTP Request1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 1,
+      "position": [
+        500,
+        300
+      ]
+    }
+  ],
+  "connections": {
+    "Mindee": {
+      "main": [
+        []
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "HTTP Request1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "Mindee",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request1": {
+      "main": [
+        [
+          {
+            "node": "Mindee1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-02-22T13:24:15.920Z",
+  "updatedAt": "2021-02-23T09:50:26.791Z",
+  "settings": {},
+  "staticData": null
+}
