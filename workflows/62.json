@@ -1,0 +1,99 @@
+{
+  "id": 62,
+  "name": "ProfitWell:Company:getSetting:Metric:getMontly getDaily",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        300,
+        350
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "company"
+      },
+      "name": "ProfitWell",
+      "type": "n8n-nodes-base.profitWell",
+      "typeVersion": 1,
+      "position": [
+        500,
+        270
+      ],
+      "credentials": {
+        "profitWellApi": "ProfitWell creds"
+      }
+    },
+    {
+      "parameters": {
+        "type": "monthly",
+        "options": {}
+      },
+      "name": "ProfitWell1",
+      "type": "n8n-nodes-base.profitWell",
+      "typeVersion": 1,
+      "position": [
+        500,
+        420
+      ],
+      "credentials": {
+        "profitWellApi": "ProfitWell creds"
+      }
+    },
+    {
+      "parameters": {
+        "type": "daily",
+        "month": "={{(new Date()).toISOString().slice(0,7)}}",
+        "simple": false,
+        "options": {}
+      },
+      "name": "ProfitWell2",
+      "type": "n8n-nodes-base.profitWell",
+      "typeVersion": 1,
+      "position": [
+        650,
+        420
+      ],
+      "credentials": {
+        "profitWellApi": "ProfitWell creds"
+      }
+    }
+  ],
+  "connections": {
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "ProfitWell",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "ProfitWell1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ProfitWell1": {
+      "main": [
+        [
+          {
+            "node": "ProfitWell2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-02-25T08:31:03.195Z",
+  "updatedAt": "2021-02-25T08:32:00.908Z",
+  "settings": {},
+  "staticData": null
+}
