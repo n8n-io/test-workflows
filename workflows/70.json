@@ -1,0 +1,194 @@
+{
+  "id": 70,
+  "name": "Contentful-delivery-api:locale:getAll:entry:getAll:ContentType:get:Asset:getAll get:Space:get",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        260,
+        390
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "limit": 1,
+        "additionalFields": {
+          "content_type": "blogPost"
+        }
+      },
+      "name": "Contentful",
+      "type": "n8n-nodes-base.contentful",
+      "typeVersion": 1,
+      "position": [
+        550,
+        250
+      ],
+      "credentials": {
+        "contentfulApi": "Contenful creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "contentType",
+        "contentTypeId": "blogPost",
+        "additionalFields": {}
+      },
+      "name": "Contentful1",
+      "type": "n8n-nodes-base.contentful",
+      "typeVersion": 1,
+      "position": [
+        550,
+        420
+      ],
+      "credentials": {
+        "contentfulApi": "Contenful creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "asset",
+        "limit": 1,
+        "additionalFields": {}
+      },
+      "name": "Contentful2",
+      "type": "n8n-nodes-base.contentful",
+      "typeVersion": 1,
+      "position": [
+        550,
+        570
+      ],
+      "credentials": {
+        "contentfulApi": "Contenful creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "asset",
+        "operation": "get",
+        "assetId": "5UvpPFo279OoVXHLRXqlo9"
+      },
+      "name": "Contentful3",
+      "type": "n8n-nodes-base.contentful",
+      "typeVersion": 1,
+      "position": [
+        700,
+        570
+      ],
+      "credentials": {
+        "contentfulApi": "Contenful creds"
+      },
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "entryId": "={{$node[\"Contentful\"].json[\"author\"][\"sys\"][\"id\"]}}"
+      },
+      "name": "Contentful4",
+      "type": "n8n-nodes-base.contentful",
+      "typeVersion": 1,
+      "position": [
+        700,
+        250
+      ],
+      "credentials": {
+        "contentfulApi": "Contenful creds"
+      },
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "resource": "locale",
+        "limit": 1
+      },
+      "name": "Contentful5",
+      "type": "n8n-nodes-base.contentful",
+      "typeVersion": 1,
+      "position": [
+        550,
+        100
+      ],
+      "credentials": {
+        "contentfulApi": "Contenful creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "space"
+      },
+      "name": "Contentful6",
+      "type": "n8n-nodes-base.contentful",
+      "typeVersion": 1,
+      "position": [
+        550,
+        730
+      ],
+      "credentials": {
+        "contentfulApi": "Contenful creds"
+      }
+    }
+  ],
+  "connections": {
+    "Contentful": {
+      "main": [
+        [
+          {
+            "node": "Contentful4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Contentful2": {
+      "main": [
+        [
+          {
+            "node": "Contentful3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Contentful5",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Contentful",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Contentful1",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Contentful2",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Contentful6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-02-25T13:38:22.940Z",
+  "updatedAt": "2021-02-25T13:38:22.940Z",
+  "settings": {},
+  "staticData": null
+}
