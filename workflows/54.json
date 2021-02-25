@@ -1,0 +1,742 @@
+{
+  "id": 54,
+  "name": "InvoiceNinja:Client:create getAll get delete:Expense:create getAll get delete:Invoice:create getAll get email delete:Payment:create get getAll delete:Quote:crea te getAll get email delete:Task:create getAll get delete",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        850
+      ]
+    },
+    {
+      "parameters": {
+        "additionalFields": {
+          "clientName": "=TestClient{{Date.now()}}"
+        }
+      },
+      "name": "Invoice Ninja",
+      "type": "n8n-nodes-base.invoiceNinja",
+      "typeVersion": 1,
+      "position": [
+        500,
+        390
+      ],
+      "credentials": {
+        "invoiceNinjaApi": "Invoice Ninja creds "
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "limit": 1,
+        "options": {}
+      },
+      "name": "Invoice Ninja1",
+      "type": "n8n-nodes-base.invoiceNinja",
+      "typeVersion": 1,
+      "position": [
+        650,
+        390
+      ],
+      "credentials": {
+        "invoiceNinjaApi": "Invoice Ninja creds "
+      }
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "clientId": "={{$node[\"Invoice Ninja\"].json[\"id\"]}}",
+        "options": {}
+      },
+      "name": "Invoice Ninja2",
+      "type": "n8n-nodes-base.invoiceNinja",
+      "typeVersion": 1,
+      "position": [
+        800,
+        390
+      ],
+      "credentials": {
+        "invoiceNinjaApi": "Invoice Ninja creds "
+      }
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "clientId": "={{$node[\"Invoice Ninja\"].json[\"id\"]}}"
+      },
+      "name": "Invoice Ninja3",
+      "type": "n8n-nodes-base.invoiceNinja",
+      "typeVersion": 1,
+      "position": [
+        950,
+        390
+      ],
+      "credentials": {
+        "invoiceNinjaApi": "Invoice Ninja creds "
+      }
+    },
+    {
+      "parameters": {
+        "resource": "expense",
+        "additionalFields": {
+          "amount": 100
+        }
+      },
+      "name": "Invoice Ninja4",
+      "type": "n8n-nodes-base.invoiceNinja",
+      "typeVersion": 1,
+      "position": [
+        500,
+        550
+      ],
+      "credentials": {
+        "invoiceNinjaApi": "Invoice Ninja creds "
+      }
+    },
+    {
+      "parameters": {
+        "resource": "expense",
+        "operation": "getAll",
+        "limit": 1
+      },
+      "name": "Invoice Ninja5",
+      "type": "n8n-nodes-base.invoiceNinja",
+      "typeVersion": 1,
+      "position": [
+        650,
+        550
+      ],
+      "credentials": {
+        "invoiceNinjaApi": "Invoice Ninja creds "
+      }
+    },
+    {
+      "parameters": {
+        "resource": "expense",
+        "operation": "get",
+        "expenseId": "={{$node[\"Invoice Ninja4\"].json[\"id\"]}}"
+      },
+      "name": "Invoice Ninja6",
+      "type": "n8n-nodes-base.invoiceNinja",
+      "typeVersion": 1,
+      "position": [
+        800,
+        550
+      ],
+      "credentials": {
+        "invoiceNinjaApi": "Invoice Ninja creds "
+      }
+    },
+    {
+      "parameters": {
+        "resource": "expense",
+        "operation": "delete",
+        "expenseId": "={{$node[\"Invoice Ninja4\"].json[\"id\"]}}"
+      },
+      "name": "Invoice Ninja7",
+      "type": "n8n-nodes-base.invoiceNinja",
+      "typeVersion": 1,
+      "position": [
+        950,
+        550
+      ],
+      "credentials": {
+        "invoiceNinjaApi": "Invoice Ninja creds "
+      }
+    },
+    {
+      "parameters": {
+        "resource": "invoice",
+        "additionalFields": {
+          "email": "test@gmail.com"
+        }
+      },
+      "name": "Invoice Ninja8",
+      "type": "n8n-nodes-base.invoiceNinja",
+      "typeVersion": 1,
+      "position": [
+        500,
+        710
+      ],
+      "credentials": {
+        "invoiceNinjaApi": "Invoice Ninja creds "
+      }
+    },
+    {
+      "parameters": {
+        "resource": "invoice",
+        "operation": "getAll",
+        "limit": 1,
+        "options": {}
+      },
+      "name": "Invoice Ninja9",
+      "type": "n8n-nodes-base.invoiceNinja",
+      "typeVersion": 1,
+      "position": [
+        1250,
+        710
+      ],
+      "credentials": {
+        "invoiceNinjaApi": "Invoice Ninja creds "
+      }
+    },
+    {
+      "parameters": {
+        "resource": "invoice",
+        "operation": "get",
+        "invoiceId": "={{$node[\"Invoice Ninja8\"].json[\"id\"]}}",
+        "options": {}
+      },
+      "name": "Invoice Ninja10",
+      "type": "n8n-nodes-base.invoiceNinja",
+      "typeVersion": 1,
+      "position": [
+        1400,
+        710
+      ],
+      "credentials": {
+        "invoiceNinjaApi": "Invoice Ninja creds "
+      }
+    },
+    {
+      "parameters": {
+        "resource": "invoice",
+        "operation": "email",
+        "invoiceId": "={{$node[\"Invoice Ninja8\"].json[\"id\"]}}"
+      },
+      "name": "Invoice Ninja11",
+      "type": "n8n-nodes-base.invoiceNinja",
+      "typeVersion": 1,
+      "position": [
+        1550,
+        710
+      ],
+      "credentials": {
+        "invoiceNinjaApi": "Invoice Ninja creds "
+      }
+    },
+    {
+      "parameters": {
+        "resource": "invoice",
+        "operation": "delete",
+        "invoiceId": "={{$node[\"Invoice Ninja8\"].json[\"id\"]}}"
+      },
+      "name": "Invoice Ninja12",
+      "type": "n8n-nodes-base.invoiceNinja",
+      "typeVersion": 1,
+      "position": [
+        1700,
+        710
+      ],
+      "credentials": {
+        "invoiceNinjaApi": "Invoice Ninja creds "
+      }
+    },
+    {
+      "parameters": {
+        "resource": "payment",
+        "invoice": "={{$node[\"Invoice Ninja8\"].json[\"id\"]}}",
+        "amount": 102,
+        "additionalFields": {}
+      },
+      "name": "Invoice Ninja14",
+      "type": "n8n-nodes-base.invoiceNinja",
+      "typeVersion": 1,
+      "position": [
+        650,
+        820
+      ],
+      "credentials": {
+        "invoiceNinjaApi": "Invoice Ninja creds "
+      }
+    },
+    {
+      "parameters": {
+        "resource": "quote",
+        "additionalFields": {
+          "email": "test@gmail.com"
+        }
+      },
+      "name": "Invoice Ninja15",
+      "type": "n8n-nodes-base.invoiceNinja",
+      "typeVersion": 1,
+      "position": [
+        500,
+        1020
+      ],
+      "credentials": {
+        "invoiceNinjaApi": "Invoice Ninja creds "
+      }
+    },
+    {
+      "parameters": {
+        "resource": "quote",
+        "operation": "getAll",
+        "limit": 1,
+        "options": {}
+      },
+      "name": "Invoice Ninja16",
+      "type": "n8n-nodes-base.invoiceNinja",
+      "typeVersion": 1,
+      "position": [
+        650,
+        1020
+      ],
+      "credentials": {
+        "invoiceNinjaApi": "Invoice Ninja creds "
+      }
+    },
+    {
+      "parameters": {
+        "resource": "quote",
+        "operation": "get",
+        "quoteId": "={{$node[\"Invoice Ninja15\"].json[\"id\"]}}",
+        "options": {}
+      },
+      "name": "Invoice Ninja17",
+      "type": "n8n-nodes-base.invoiceNinja",
+      "typeVersion": 1,
+      "position": [
+        800,
+        1020
+      ],
+      "credentials": {
+        "invoiceNinjaApi": "Invoice Ninja creds "
+      }
+    },
+    {
+      "parameters": {
+        "resource": "quote",
+        "operation": "email",
+        "quoteId": "={{$node[\"Invoice Ninja15\"].json[\"id\"]}}"
+      },
+      "name": "Invoice Ninja18",
+      "type": "n8n-nodes-base.invoiceNinja",
+      "typeVersion": 1,
+      "position": [
+        950,
+        1020
+      ],
+      "credentials": {
+        "invoiceNinjaApi": "Invoice Ninja creds "
+      }
+    },
+    {
+      "parameters": {
+        "resource": "quote",
+        "operation": "delete",
+        "quoteId": "={{$node[\"Invoice Ninja15\"].json[\"id\"]}}"
+      },
+      "name": "Invoice Ninja19",
+      "type": "n8n-nodes-base.invoiceNinja",
+      "typeVersion": 1,
+      "position": [
+        1100,
+        1020
+      ],
+      "credentials": {
+        "invoiceNinjaApi": "Invoice Ninja creds "
+      }
+    },
+    {
+      "parameters": {
+        "resource": "task",
+        "additionalFields": {}
+      },
+      "name": "Invoice Ninja20",
+      "type": "n8n-nodes-base.invoiceNinja",
+      "typeVersion": 1,
+      "position": [
+        500,
+        1180
+      ],
+      "credentials": {
+        "invoiceNinjaApi": "Invoice Ninja creds "
+      }
+    },
+    {
+      "parameters": {
+        "resource": "task",
+        "operation": "getAll",
+        "limit": 1,
+        "options": {}
+      },
+      "name": "Invoice Ninja21",
+      "type": "n8n-nodes-base.invoiceNinja",
+      "typeVersion": 1,
+      "position": [
+        650,
+        1180
+      ],
+      "credentials": {
+        "invoiceNinjaApi": "Invoice Ninja creds "
+      }
+    },
+    {
+      "parameters": {
+        "resource": "task",
+        "operation": "get",
+        "taskId": "={{$node[\"Invoice Ninja20\"].json[\"id\"]}}",
+        "options": {}
+      },
+      "name": "Invoice Ninja22",
+      "type": "n8n-nodes-base.invoiceNinja",
+      "typeVersion": 1,
+      "position": [
+        800,
+        1180
+      ],
+      "credentials": {
+        "invoiceNinjaApi": "Invoice Ninja creds "
+      }
+    },
+    {
+      "parameters": {
+        "resource": "task",
+        "operation": "delete",
+        "taskId": "={{$node[\"Invoice Ninja20\"].json[\"id\"]}}"
+      },
+      "name": "Invoice Ninja23",
+      "type": "n8n-nodes-base.invoiceNinja",
+      "typeVersion": 1,
+      "position": [
+        950,
+        1180
+      ],
+      "credentials": {
+        "invoiceNinjaApi": "Invoice Ninja creds "
+      }
+    },
+    {
+      "parameters": {
+        "resource": "payment",
+        "operation": "get",
+        "paymentId": "={{$node[\"Invoice Ninja14\"].json[\"id\"]}}",
+        "options": {}
+      },
+      "name": "Invoice Ninja24",
+      "type": "n8n-nodes-base.invoiceNinja",
+      "typeVersion": 1,
+      "position": [
+        800,
+        820
+      ],
+      "credentials": {
+        "invoiceNinjaApi": "Invoice Ninja creds "
+      }
+    },
+    {
+      "parameters": {
+        "resource": "payment",
+        "operation": "getAll",
+        "limit": 1,
+        "options": {}
+      },
+      "name": "Invoice Ninja25",
+      "type": "n8n-nodes-base.invoiceNinja",
+      "typeVersion": 1,
+      "position": [
+        950,
+        820
+      ],
+      "credentials": {
+        "invoiceNinjaApi": "Invoice Ninja creds "
+      }
+    },
+    {
+      "parameters": {
+        "resource": "payment",
+        "operation": "delete",
+        "paymentId": "={{$node[\"Invoice Ninja14\"].json[\"id\"]}}"
+      },
+      "name": "Invoice Ninja26",
+      "type": "n8n-nodes-base.invoiceNinja",
+      "typeVersion": 1,
+      "position": [
+        1100,
+        820
+      ],
+      "credentials": {
+        "invoiceNinjaApi": "Invoice Ninja creds "
+      }
+    }
+  ],
+  "connections": {
+    "Invoice Ninja": {
+      "main": [
+        [
+          {
+            "node": "Invoice Ninja1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Invoice Ninja1": {
+      "main": [
+        [
+          {
+            "node": "Invoice Ninja2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Invoice Ninja4",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Invoice Ninja8",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Invoice Ninja15",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Invoice Ninja",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Invoice Ninja20",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Invoice Ninja3": {
+      "main": [
+        []
+      ]
+    },
+    "Invoice Ninja2": {
+      "main": [
+        [
+          {
+            "node": "Invoice Ninja3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Invoice Ninja4": {
+      "main": [
+        [
+          {
+            "node": "Invoice Ninja5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Invoice Ninja5": {
+      "main": [
+        [
+          {
+            "node": "Invoice Ninja6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Invoice Ninja6": {
+      "main": [
+        [
+          {
+            "node": "Invoice Ninja7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Invoice Ninja8": {
+      "main": [
+        [
+          {
+            "node": "Invoice Ninja14",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Invoice Ninja9": {
+      "main": [
+        [
+          {
+            "node": "Invoice Ninja10",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Invoice Ninja10": {
+      "main": [
+        [
+          {
+            "node": "Invoice Ninja11",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Invoice Ninja11": {
+      "main": [
+        [
+          {
+            "node": "Invoice Ninja12",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Invoice Ninja15": {
+      "main": [
+        [
+          {
+            "node": "Invoice Ninja16",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Invoice Ninja16": {
+      "main": [
+        [
+          {
+            "node": "Invoice Ninja17",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Invoice Ninja17": {
+      "main": [
+        [
+          {
+            "node": "Invoice Ninja18",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Invoice Ninja18": {
+      "main": [
+        [
+          {
+            "node": "Invoice Ninja19",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Invoice Ninja20": {
+      "main": [
+        [
+          {
+            "node": "Invoice Ninja21",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Invoice Ninja21": {
+      "main": [
+        [
+          {
+            "node": "Invoice Ninja22",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Invoice Ninja22": {
+      "main": [
+        [
+          {
+            "node": "Invoice Ninja23",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Invoice Ninja14": {
+      "main": [
+        [
+          {
+            "node": "Invoice Ninja24",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Invoice Ninja24": {
+      "main": [
+        [
+          {
+            "node": "Invoice Ninja25",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Invoice Ninja25": {
+      "main": [
+        [
+          {
+            "node": "Invoice Ninja26",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Invoice Ninja26": {
+      "main": [
+        [
+          {
+            "node": "Invoice Ninja9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-02-22T10:00:31.563Z",
+  "updatedAt": "2021-02-22T10:50:12.567Z",
+  "settings": {},
+  "staticData": null
+}
