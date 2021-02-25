@@ -257,7 +257,7 @@
       "parameters": {
         "resource": "view",
         "docId": "2-5DWWeFZp",
-        "viewId": "={{$node[\"Coda11\"].json[\"id\"]}}"
+        "viewId": "table-FTj1L0rh08"
       },
       "name": "Coda12",
       "type": "n8n-nodes-base.coda",
@@ -275,7 +275,7 @@
         "resource": "view",
         "operation": "getAllViewColumns",
         "docId": "2-5DWWeFZp",
-        "viewId": "table-K1_z3jl_HH",
+        "viewId": "table-FTj1L0rh08",
         "limit": 1
       },
       "name": "Coda13",
@@ -294,7 +294,7 @@
         "resource": "view",
         "operation": "getAllViewRows",
         "docId": "2-5DWWeFZp",
-        "viewId": "table-K1_z3jl_HH",
+        "viewId": "table-FTj1L0rh08",
         "limit": 1,
         "options": {}
       },
@@ -314,7 +314,7 @@
         "resource": "view",
         "operation": "updateViewRow",
         "docId": "2-5DWWeFZp",
-        "viewId": "table-K1_z3jl_HH",
+        "viewId": "table-FTj1L0rh08",
         "rowId": "={{$node[\"Coda14\"].json[\"id\"]}}",
         "keyName": "number",
         "options": {
@@ -361,9 +361,9 @@
         "resource": "view",
         "operation": "pushViewButton",
         "docId": "2-5DWWeFZp",
-        "viewId": "table-K1_z3jl_HH",
+        "viewId": "table-FTj1L0rh08",
         "rowId": "={{$node[\"Coda14\"].json[\"id\"]}}",
-        "columnId": "c-v8RAVAABYN"
+        "columnId": "c-hTB8QwFtUS"
       },
       "name": "Coda16",
       "type": "n8n-nodes-base.coda",
@@ -382,12 +382,12 @@
       "main": [
         [
           {
-            "node": "Coda4",
+            "node": "Coda11",
             "type": "main",
             "index": 0
           },
           {
-            "node": "Coda11",
+            "node": "Coda4",
             "type": "main",
             "index": 0
           },
@@ -571,7 +571,7 @@
     }
   },
   "createdAt": "2021-02-22T08:19:03.344Z",
-  "updatedAt": "2021-02-22T08:48:37.140Z",
+  "updatedAt": "2021-02-25T09:52:14.205Z",
   "settings": {},
   "staticData": null
 }
