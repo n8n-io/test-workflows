@@ -1,0 +1,79 @@
+{
+  "id": 64,
+  "name": "SIGNL4:Alert:send resolve",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "message": "=test{{Date.now()}}",
+        "additionalFields": {
+          "title": "=Title{{Date.now()}}"
+        }
+      },
+      "name": "SIGNL4",
+      "type": "n8n-nodes-base.signl4",
+      "typeVersion": 1,
+      "position": [
+        450,
+        300
+      ],
+      "credentials": {
+        "signl4Api": "Signal4 creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "resolve",
+        "externalId": "={{$node[\"SIGNL4\"].json[\"eventId\"]}}"
+      },
+      "name": "SIGNL",
+      "type": "n8n-nodes-base.signl4",
+      "typeVersion": 1,
+      "position": [
+        600,
+        300
+      ],
+      "credentials": {
+        "signl4Api": "Signal4 creds"
+      }
+    }
+  ],
+  "connections": {
+    "SIGNL4": {
+      "main": [
+        [
+          {
+            "node": "SIGNL",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "SIGNL4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-02-25T09:24:41.132Z",
+  "updatedAt": "2021-02-25T09:24:41.132Z",
+  "settings": {},
+  "staticData": null
+}
