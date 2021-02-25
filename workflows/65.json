@@ -1,0 +1,110 @@
+{
+  "id": 65,
+  "name": "Spontit:Push:create",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "content": "=Content {{Date.now()}}",
+        "additionalFields": {
+          "pushTitle": "=TestNotif {{Date.now()}}"
+        }
+      },
+      "name": "Spontit",
+      "type": "n8n-nodes-base.spontit",
+      "typeVersion": 1,
+      "position": [
+        470,
+        300
+      ],
+      "credentials": {
+        "spontitApi": "Spontit creds"
+      }
+    },
+    {
+      "parameters": {
+        "url": "={{$node[\"Spontit\"].json[\"message\"].replace(\"Pushed! Available at \",\"\")}}",
+        "responseFormat": "string",
+        "options": {}
+      },
+      "name": "HTTP Request",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 1,
+      "position": [
+        650,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "extractionValues": {
+          "values": [
+            {
+              "key": "data-subscription",
+              "cssSelector": "#loadApp_script[data-subscription]",
+              "returnValue": "attribute",
+              "attribute": "data-subscription"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "HTML Extract",
+      "type": "n8n-nodes-base.htmlExtract",
+      "typeVersion": 1,
+      "position": [
+        850,
+        300
+      ]
+    }
+  ],
+  "connections": {
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Spontit",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Spontit": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "HTML Extract",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-02-25T09:43:01.461Z",
+  "updatedAt": "2021-02-25T09:43:01.461Z",
+  "settings": {},
+  "staticData": null
+}
