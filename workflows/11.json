@@ -1,6 +1,6 @@
 {
   "id": 11,
-  "name": "Mailchimp:Member:getall get create update delete:Member Tag:create delete",
+  "name": "Mailchimp:Member:getall get create update delete:Member Tag:create delete:ListGroup:getAll:Campaign:getAll get replicate delete",
   "active": false,
   "nodes": [
     {
@@ -9,14 +9,14 @@
       "type": "n8n-nodes-base.start",
       "typeVersion": 1,
       "position": [
-        250,
+        160,
         300
       ]
     },
     {
       "parameters": {
         "operation": "getAll",
-        "list": "cfa5715c0a",
+        "list": "eb9ad4be19",
         "options": {}
       },
       "name": "Mailchimp1",
@@ -27,14 +27,14 @@
         300
       ],
       "credentials": {
-        "mailchimpApi": "mailchimp key"
+        "mailchimpApi": "Mailchimp creds"
       }
     },
     {
       "parameters": {
         "operation": "get",
-        "list": "cfa5715c0a",
-        "email": "servfrdali@yahoo.fr",
+        "list": "eb9ad4be19",
+        "email": "nodeqa@n8n.io",
         "options": {}
       },
       "name": "Mailchimp",
@@ -45,13 +45,13 @@
         300
       ],
       "credentials": {
-        "mailchimpApi": "mailchimp key"
+        "mailchimpApi": "Mailchimp creds"
       }
     },
     {
       "parameters": {
         "operation": "update",
-        "list": "cfa5715c0a",
+        "list": "eb9ad4be19",
         "email": "={{$json[\"email_address\"]}}",
         "updateFields": {
           "emailType": "html"
@@ -65,14 +65,14 @@
         300
       ],
       "credentials": {
-        "mailchimpApi": "mailchimp key"
+        "mailchimpApi": "Mailchimp creds"
       }
     },
     {
       "parameters": {
         "resource": "memberTag",
-        "list": "cfa5715c0a",
-        "email": "servfrdali@yahoo.fr",
+        "list": "eb9ad4be19",
+        "email": "nodeqa@n8n.io",
         "tags": [
           "n8n"
         ],
@@ -86,15 +86,15 @@
         140
       ],
       "credentials": {
-        "mailchimpApi": "mailchimp key"
+        "mailchimpApi": "Mailchimp creds"
       }
     },
     {
       "parameters": {
         "resource": "memberTag",
         "operation": "delete",
-        "list": "cfa5715c0a",
-        "email": "servfrdali@yahoo.fr",
+        "list": "eb9ad4be19",
+        "email": "nodeqa@n8n.io",
         "tags": [
           "n8n"
         ],
@@ -108,12 +108,12 @@
         140
       ],
       "credentials": {
-        "mailchimpApi": "mailchimp key"
+        "mailchimpApi": "Mailchimp creds"
       }
     },
     {
       "parameters": {
-        "list": "cfa5715c0a",
+        "list": "eb9ad4be19",
         "email": "={{$json[\"email\"]}}",
         "status": "subscribed",
         "options": {}
@@ -122,11 +122,11 @@
       "type": "n8n-nodes-base.mailchimp",
       "typeVersion": 1,
       "position": [
-        510,
+        570,
         450
       ],
       "credentials": {
-        "mailchimpApi": "mailchimp key"
+        "mailchimpApi": "Mailchimp creds"
       }
     },
     {
@@ -137,7 +137,7 @@
       "type": "n8n-nodes-base.function",
       "typeVersion": 1,
       "position": [
-        370,
+        430,
         450
       ],
       "notesInFlow": true,
@@ -146,18 +146,104 @@
     {
       "parameters": {
         "operation": "delete",
-        "list": "cfa5715c0a",
+        "list": "eb9ad4be19",
         "email": "={{$json[\"email_address\"]}}"
       },
       "name": "Mailchimp6",
       "type": "n8n-nodes-base.mailchimp",
       "typeVersion": 1,
       "position": [
-        670,
+        730,
         450
       ],
       "credentials": {
-        "mailchimpApi": "mailchimp key"
+        "mailchimpApi": "Mailchimp creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "listGroup",
+        "list": "eb9ad4be19",
+        "groupCategory": "2adbc0d543",
+        "limit": 1
+      },
+      "name": "Mailchimp7",
+      "type": "n8n-nodes-base.mailchimp",
+      "typeVersion": 1,
+      "position": [
+        430,
+        140
+      ],
+      "credentials": {
+        "mailchimpApi": "Mailchimp creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "campaign",
+        "limit": 1,
+        "options": {}
+      },
+      "name": "Mailchimp8",
+      "type": "n8n-nodes-base.mailchimp",
+      "typeVersion": 1,
+      "position": [
+        430,
+        610
+      ],
+      "credentials": {
+        "mailchimpApi": "Mailchimp creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "campaign",
+        "operation": "get",
+        "campaignId": "={{$node[\"Mailchimp8\"].json[\"id\"]}}"
+      },
+      "name": "Mailchimp9",
+      "type": "n8n-nodes-base.mailchimp",
+      "typeVersion": 1,
+      "position": [
+        580,
+        610
+      ],
+      "credentials": {
+        "mailchimpApi": "Mailchimp creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "campaign",
+        "operation": "replicate",
+        "campaignId": "={{$node[\"Mailchimp8\"].json[\"id\"]}}"
+      },
+      "name": "Mailchimp10",
+      "type": "n8n-nodes-base.mailchimp",
+      "typeVersion": 1,
+      "position": [
+        720,
+        610
+      ],
+      "credentials": {
+        "mailchimpApi": "Mailchimp creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "campaign",
+        "operation": "delete",
+        "campaignId": "={{$node[\"Mailchimp10\"].json[\"id\"]}}"
+      },
+      "name": "Mailchimp11",
+      "type": "n8n-nodes-base.mailchimp",
+      "typeVersion": 1,
+      "position": [
+        870,
+        610
+      ],
+      "credentials": {
+        "mailchimpApi": "Mailchimp creds"
       }
     }
   ],
@@ -201,6 +287,16 @@
             "node": "Function",
             "type": "main",
             "index": 0
+          },
+          {
+            "node": "Mailchimp7",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Mailchimp8",
+            "type": "main",
+            "index": 0
           }
         ]
       ]
@@ -237,10 +333,48 @@
           }
         ]
       ]
+    },
+    "Mailchimp8": {
+      "main": [
+        [
+          {
+            "node": "Mailchimp9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mailchimp9": {
+      "main": [
+        [
+          {
+            "node": "Mailchimp10",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mailchimp10": {
+      "main": [
+        [
+          {
+            "node": "Mailchimp11",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mailchimp11": {
+      "main": [
+        []
+      ]
     }
   },
   "createdAt": "2021-02-15T16:15:47.074Z",
-  "updatedAt": "2021-02-16T11:57:07.645Z",
+  "updatedAt": "2021-02-19T12:58:26.406Z",
   "settings": {},
   "staticData": null
 }
