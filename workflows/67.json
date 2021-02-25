@@ -1,0 +1,164 @@
+{
+  "id": 67,
+  "name": "Twist:Channel:create update get getAll:MessageConversation:create",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "channel",
+        "workspaceId": 164330,
+        "name": "=TestChannel{{Date.now()}}",
+        "additionalFields": {}
+      },
+      "name": "Twist",
+      "type": "n8n-nodes-base.twist",
+      "typeVersion": 1,
+      "position": [
+        400,
+        300
+      ],
+      "credentials": {
+        "twistOAuth2Api": "Twist OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "channel",
+        "operation": "update",
+        "channelId": "={{$node[\"Twist\"].json[\"id\"]}}",
+        "updateFields": {
+          "name": "=UpdatedChannel{{Date.now()}}"
+        }
+      },
+      "name": "Twist1",
+      "type": "n8n-nodes-base.twist",
+      "typeVersion": 1,
+      "position": [
+        550,
+        300
+      ],
+      "credentials": {
+        "twistOAuth2Api": "Twist OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "channel",
+        "operation": "get",
+        "channelId": "={{$node[\"Twist\"].json[\"id\"]}}"
+      },
+      "name": "Twist2",
+      "type": "n8n-nodes-base.twist",
+      "typeVersion": 1,
+      "position": [
+        700,
+        300
+      ],
+      "credentials": {
+        "twistOAuth2Api": "Twist OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "channel",
+        "operation": "getAll",
+        "workspaceId": 164330,
+        "limit": 1,
+        "filters": {}
+      },
+      "name": "Twist3",
+      "type": "n8n-nodes-base.twist",
+      "typeVersion": 1,
+      "position": [
+        850,
+        300
+      ],
+      "credentials": {
+        "twistOAuth2Api": "Twist OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "workspaceId": 164330,
+        "conversationId": 1067233,
+        "content": "=Message {{Date.now()}}",
+        "additionalFields": {}
+      },
+      "name": "Twist4",
+      "type": "n8n-nodes-base.twist",
+      "typeVersion": 1,
+      "position": [
+        400,
+        450
+      ],
+      "credentials": {
+        "twistOAuth2Api": "Twist OAuth2 creds"
+      }
+    }
+  ],
+  "connections": {
+    "Twist": {
+      "main": [
+        [
+          {
+            "node": "Twist1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Twist1": {
+      "main": [
+        [
+          {
+            "node": "Twist2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Twist2": {
+      "main": [
+        [
+          {
+            "node": "Twist3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Twist",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Twist4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-02-25T11:13:34.019Z",
+  "updatedAt": "2021-02-25T11:13:34.019Z",
+  "settings": {},
+  "staticData": null
+}
