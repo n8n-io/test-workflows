@@ -1,0 +1,241 @@
+{
+  "id": 69,
+  "name": "CoinGecko:Coin:get getAll  history candlesick market marketChart price ticker:Event:getAll",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        230,
+        430
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "event",
+        "limit": 1,
+        "options": {
+          "upcoming_events_only": true
+        }
+      },
+      "name": "CoinGecko",
+      "type": "n8n-nodes-base.coinGecko",
+      "typeVersion": 1,
+      "position": [
+        400,
+        290
+      ]
+    },
+    {
+      "parameters": {
+        "limit": 1
+      },
+      "name": "CoinGecko1",
+      "type": "n8n-nodes-base.coinGecko",
+      "typeVersion": 1,
+      "position": [
+        400,
+        550
+      ],
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "operation": "history",
+        "coinId": "bitcoin",
+        "date": "2021-02-24T23:00:00.000Z",
+        "options": {
+          "localization": false
+        }
+      },
+      "name": "CoinGecko2",
+      "type": "n8n-nodes-base.coinGecko",
+      "typeVersion": 1,
+      "position": [
+        770,
+        330
+      ],
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "coinId": "bitcoin",
+        "options": {
+          "localization": false
+        }
+      },
+      "name": "CoinGecko3",
+      "type": "n8n-nodes-base.coinGecko",
+      "typeVersion": 1,
+      "position": [
+        630,
+        330
+      ],
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "operation": "candlestick",
+        "baseCurrency": "bitcoin",
+        "quoteCurrency": "eur",
+        "days": "1"
+      },
+      "name": "CoinGecko4",
+      "type": "n8n-nodes-base.coinGecko",
+      "typeVersion": 1,
+      "position": [
+        910,
+        330
+      ],
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "operation": "market",
+        "baseCurrency": "btc",
+        "limit": 1,
+        "options": {}
+      },
+      "name": "CoinGecko5",
+      "type": "n8n-nodes-base.coinGecko",
+      "typeVersion": 1,
+      "position": [
+        630,
+        480
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "marketChart",
+        "baseCurrency": "oxbitcoin",
+        "quoteCurrency": "btc",
+        "days": "1"
+      },
+      "name": "CoinGecko6",
+      "type": "n8n-nodes-base.coinGecko",
+      "typeVersion": 1,
+      "position": [
+        630,
+        630
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "price",
+        "baseCurrencies": [
+          "ethereum-classic"
+        ],
+        "quoteCurrencies": [
+          "btc"
+        ],
+        "options": {}
+      },
+      "name": "CoinGecko7",
+      "type": "n8n-nodes-base.coinGecko",
+      "typeVersion": 1,
+      "position": [
+        630,
+        780
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "ticker",
+        "coinId": "bitcoin",
+        "limit": 1,
+        "options": {}
+      },
+      "name": "CoinGecko8",
+      "type": "n8n-nodes-base.coinGecko",
+      "typeVersion": 1,
+      "position": [
+        630,
+        930
+      ]
+    }
+  ],
+  "connections": {
+    "CoinGecko1": {
+      "main": [
+        [
+          {
+            "node": "CoinGecko3",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "CoinGecko5",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "CoinGecko6",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "CoinGecko7",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "CoinGecko8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "CoinGecko3": {
+      "main": [
+        [
+          {
+            "node": "CoinGecko2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "CoinGecko2": {
+      "main": [
+        [
+          {
+            "node": "CoinGecko4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "CoinGecko4": {
+      "main": [
+        []
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "CoinGecko1",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "CoinGecko",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-02-25T13:03:37.942Z",
+  "updatedAt": "2021-02-25T13:17:14.998Z",
+  "settings": {},
+  "staticData": null
+}
