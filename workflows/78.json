@@ -1,0 +1,412 @@
+{
+  "id": 78,
+  "name": "NASA:ALL:",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        140,
+        530
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "asteroidNeoBrowse",
+        "limit": 1
+      },
+      "name": "NASA",
+      "type": "n8n-nodes-base.nasa",
+      "typeVersion": 1,
+      "position": [
+        450,
+        220
+      ],
+      "credentials": {
+        "nasaApi": "Nasa creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "asteroidNeoLookup",
+        "asteroidId": "={{$node[\"NASA\"].json[\"id\"]}}",
+        "additionalFields": {}
+      },
+      "name": "NASA1",
+      "type": "n8n-nodes-base.nasa",
+      "typeVersion": 1,
+      "position": [
+        620,
+        220
+      ],
+      "credentials": {
+        "nasaApi": "Nasa creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "asteroidNeoFeed",
+        "additionalFields": {
+          "startDate": "2020-08-10T22:00:00.000Z",
+          "endDate": "2020-08-10T22:00:00.000Z"
+        }
+      },
+      "name": "NASA2",
+      "type": "n8n-nodes-base.nasa",
+      "typeVersion": 1,
+      "position": [
+        790,
+        220
+      ],
+      "credentials": {
+        "nasaApi": "Nasa creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "donkiCoronalMassEjection",
+        "additionalFields": {}
+      },
+      "name": "NASA3",
+      "type": "n8n-nodes-base.nasa",
+      "typeVersion": 1,
+      "position": [
+        450,
+        370
+      ],
+      "credentials": {
+        "nasaApi": "Nasa creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "donkiInterplanetaryShock",
+        "additionalFields": {
+          "location": "STEREO A"
+        }
+      },
+      "name": "NASA4",
+      "type": "n8n-nodes-base.nasa",
+      "typeVersion": 1,
+      "position": [
+        450,
+        680
+      ],
+      "credentials": {
+        "nasaApi": "Nasa creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "donkiSolarFlare",
+        "additionalFields": {}
+      },
+      "name": "NASA5",
+      "type": "n8n-nodes-base.nasa",
+      "typeVersion": 1,
+      "position": [
+        450,
+        520
+      ],
+      "credentials": {
+        "nasaApi": "Nasa creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "donkiSolarEnergeticParticle",
+        "additionalFields": {}
+      },
+      "name": "NASA6",
+      "type": "n8n-nodes-base.nasa",
+      "typeVersion": 1,
+      "position": [
+        650,
+        670
+      ],
+      "credentials": {
+        "nasaApi": "Nasa creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "donkiMagnetopauseCrossing",
+        "additionalFields": {}
+      },
+      "name": "NASA7",
+      "type": "n8n-nodes-base.nasa",
+      "typeVersion": 1,
+      "position": [
+        650,
+        370
+      ],
+      "credentials": {
+        "nasaApi": "Nasa creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "donkiRadiationBeltEnhancement",
+        "additionalFields": {}
+      },
+      "name": "NASA8",
+      "type": "n8n-nodes-base.nasa",
+      "typeVersion": 1,
+      "position": [
+        650,
+        520
+      ],
+      "credentials": {
+        "nasaApi": "Nasa creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "donkiHighSpeedStream",
+        "additionalFields": {}
+      },
+      "name": "NASA9",
+      "type": "n8n-nodes-base.nasa",
+      "typeVersion": 1,
+      "position": [
+        450,
+        830
+      ],
+      "credentials": {
+        "nasaApi": "Nasa creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "donkiWsaEnlilSimulation",
+        "additionalFields": {}
+      },
+      "name": "NASA10",
+      "type": "n8n-nodes-base.nasa",
+      "typeVersion": 1,
+      "position": [
+        650,
+        830
+      ],
+      "credentials": {
+        "nasaApi": "Nasa creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "donkiNotifications",
+        "additionalFields": {}
+      },
+      "name": "NASA11",
+      "type": "n8n-nodes-base.nasa",
+      "typeVersion": 1,
+      "position": [
+        450,
+        980
+      ],
+      "credentials": {
+        "nasaApi": "Nasa creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "earthImagery",
+        "lat": 52.52,
+        "lon": 13.405,
+        "additionalFields": {
+          "date": "=2019-05-05"
+        }
+      },
+      "name": "NASA12",
+      "type": "n8n-nodes-base.nasa",
+      "typeVersion": 1,
+      "position": [
+        620,
+        980
+      ],
+      "credentials": {
+        "nasaApi": "Nasa creds"
+      }
+    },
+    {
+      "parameters": {
+        "additionalFields": {
+          "date": "=2019-05-05"
+        }
+      },
+      "name": "NASA14",
+      "type": "n8n-nodes-base.nasa",
+      "typeVersion": 1,
+      "position": [
+        450,
+        70
+      ],
+      "credentials": {
+        "nasaApi": "Nasa creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "earthAssets",
+        "lat": 0,
+        "lon": 0,
+        "additionalFields": {
+          "date": "2021-01-31T23:00:00.000Z"
+        }
+      },
+      "name": "NASA13",
+      "type": "n8n-nodes-base.nasa",
+      "typeVersion": 1,
+      "position": [
+        160,
+        790
+      ],
+      "credentials": {
+        "nasaApi": "Nasa creds"
+      },
+      "disabled": true
+    }
+  ],
+  "connections": {
+    "NASA": {
+      "main": [
+        [
+          {
+            "node": "NASA1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "NASA1": {
+      "main": [
+        [
+          {
+            "node": "NASA2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "NASA3": {
+      "main": [
+        []
+      ]
+    },
+    "NASA4": {
+      "main": [
+        []
+      ]
+    },
+    "NASA5": {
+      "main": [
+        []
+      ]
+    },
+    "NASA6": {
+      "main": [
+        []
+      ]
+    },
+    "NASA7": {
+      "main": [
+        []
+      ]
+    },
+    "NASA8": {
+      "main": [
+        []
+      ]
+    },
+    "NASA9": {
+      "main": [
+        []
+      ]
+    },
+    "NASA10": {
+      "main": [
+        []
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "NASA",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "NASA3",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "NASA7",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "NASA5",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "NASA8",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "NASA6",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "NASA4",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "NASA9",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "NASA10",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "NASA11",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "NASA12",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "NASA14",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "NASA13",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-02-26T13:19:21.412Z",
+  "updatedAt": "2021-02-26T13:24:19.510Z",
+  "settings": {},
+  "staticData": null
+}
