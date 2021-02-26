@@ -1,0 +1,189 @@
+{
+  "id": 79,
+  "name": "ZohoCRM:Lead:create update get getAll delete getFields",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "lastName": "=Last{{Date.now()}}",
+        "additionalFields": {}
+      },
+      "name": "Zoho CRM",
+      "type": "n8n-nodes-base.zohoCrm",
+      "typeVersion": 1,
+      "position": [
+        450,
+        300
+      ],
+      "credentials": {
+        "zohoOAuth2Api": "Zoho OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "leadId": "={{$node[\"Zoho CRM\"].json[\"id\"]}}",
+        "additionalFields": {
+          "lastName": "=UpdatedLast{{Date.now()}}"
+        }
+      },
+      "name": "Zoho CRM1",
+      "type": "n8n-nodes-base.zohoCrm",
+      "typeVersion": 1,
+      "position": [
+        600,
+        300
+      ],
+      "credentials": {
+        "zohoOAuth2Api": "Zoho OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "leadId": "={{$node[\"Zoho CRM\"].json[\"id\"]}}"
+      },
+      "name": "Zoho CRM2",
+      "type": "n8n-nodes-base.zohoCrm",
+      "typeVersion": 1,
+      "position": [
+        750,
+        300
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "zohoOAuth2Api": "Zoho OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "limit": 1,
+        "options": {}
+      },
+      "name": "Zoho CRM3",
+      "type": "n8n-nodes-base.zohoCrm",
+      "typeVersion": 1,
+      "position": [
+        900,
+        300
+      ],
+      "credentials": {
+        "zohoOAuth2Api": "Zoho OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "leadId": "={{$node[\"Zoho CRM\"].json[\"id\"]}}"
+      },
+      "name": "Zoho CRM4",
+      "type": "n8n-nodes-base.zohoCrm",
+      "typeVersion": 1,
+      "position": [
+        1050,
+        300
+      ],
+      "credentials": {
+        "zohoOAuth2Api": "Zoho OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getFields"
+      },
+      "name": "Zoho CRM5",
+      "type": "n8n-nodes-base.zohoCrm",
+      "typeVersion": 1,
+      "position": [
+        1200,
+        300
+      ],
+      "credentials": {
+        "zohoOAuth2Api": "Zoho OAuth2 creds"
+      }
+    }
+  ],
+  "connections": {
+    "Zoho CRM": {
+      "main": [
+        [
+          {
+            "node": "Zoho CRM1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Zoho CRM1": {
+      "main": [
+        [
+          {
+            "node": "Zoho CRM2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Zoho CRM2": {
+      "main": [
+        [
+          {
+            "node": "Zoho CRM3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Zoho CRM3": {
+      "main": [
+        [
+          {
+            "node": "Zoho CRM4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Zoho CRM4": {
+      "main": [
+        [
+          {
+            "node": "Zoho CRM5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Zoho CRM",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-02-26T15:36:21.900Z",
+  "updatedAt": "2021-02-26T15:40:43.297Z",
+  "settings": {},
+  "staticData": null
+}
