@@ -1,0 +1,183 @@
+{
+  "id": 43,
+  "name": "GoogleContacts:create update getAll get delete",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "familyName": "QA",
+        "givenName": "node",
+        "additionalFields": {
+          "companyUi": {
+            "companyValues": [
+              {
+                "current": true,
+                "domain": "n8n",
+                "name": "QA",
+                "title": "n8nQA"
+              }
+            ]
+          }
+        }
+      },
+      "name": "Google Contacts",
+      "type": "n8n-nodes-base.googleContacts",
+      "typeVersion": 1,
+      "position": [
+        450,
+        300
+      ],
+      "credentials": {
+        "googleContactsOAuth2Api": "Google Contacts creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "contactId": "={{$node[\"Google Contacts\"].json[\"contactId\"]}}",
+        "fields": [
+          "names"
+        ],
+        "updateFields": {
+          "givenName": "nodemation"
+        }
+      },
+      "name": "Google Contacts1",
+      "type": "n8n-nodes-base.googleContacts",
+      "typeVersion": 1,
+      "position": [
+        600,
+        300
+      ],
+      "credentials": {
+        "googleContactsOAuth2Api": "Google Contacts creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "limit": 1,
+        "fields": [
+          "*"
+        ],
+        "options": {}
+      },
+      "name": "Google Contacts2",
+      "type": "n8n-nodes-base.googleContacts",
+      "typeVersion": 1,
+      "position": [
+        760,
+        300
+      ],
+      "credentials": {
+        "googleContactsOAuth2Api": "Google Contacts creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "contactId": "={{$node[\"Google Contacts\"].json[\"contactId\"]}}",
+        "fields": [
+          "*"
+        ]
+      },
+      "name": "Google Contacts3",
+      "type": "n8n-nodes-base.googleContacts",
+      "typeVersion": 1,
+      "position": [
+        920,
+        300
+      ],
+      "credentials": {
+        "googleContactsOAuth2Api": "Google Contacts creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "contactId": "={{$node[\"Google Contacts\"].json[\"contactId\"]}}"
+      },
+      "name": "Google Contacts4",
+      "type": "n8n-nodes-base.googleContacts",
+      "typeVersion": 1,
+      "position": [
+        1070,
+        300
+      ],
+      "credentials": {
+        "googleContactsOAuth2Api": "Google Contacts creds"
+      }
+    }
+  ],
+  "connections": {
+    "Google Contacts": {
+      "main": [
+        [
+          {
+            "node": "Google Contacts1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Contacts1": {
+      "main": [
+        [
+          {
+            "node": "Google Contacts2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Contacts2": {
+      "main": [
+        [
+          {
+            "node": "Google Contacts3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Contacts3": {
+      "main": [
+        [
+          {
+            "node": "Google Contacts4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Google Contacts",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-02-19T07:31:35.734Z",
+  "updatedAt": "2021-02-19T07:31:35.734Z",
+  "settings": {},
+  "staticData": null
+}
