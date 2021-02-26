@@ -1,0 +1,428 @@
+{
+  "id": 61,
+  "name": "Spotify:Artist:get getAlbums getRelatedArtists getTopTracks:Album:get getTracks:Track:get getAudioFeatures:Playlist:getUserPlaylists get add getTracks delete:Player:recentylPlayed currentlyPlaying",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "artist",
+        "id": "0dwFxqYkvZLSA6U6XfQcDV"
+      },
+      "name": "Spotify",
+      "type": "n8n-nodes-base.spotify",
+      "typeVersion": 1,
+      "position": [
+        440,
+        300
+      ],
+      "credentials": {
+        "spotifyOAuth2Api": "Spotify OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "artist",
+        "operation": "getAlbums",
+        "id": "0dwFxqYkvZLSA6U6XfQcDV",
+        "limit": 1
+      },
+      "name": "Spotify1",
+      "type": "n8n-nodes-base.spotify",
+      "typeVersion": 1,
+      "position": [
+        600,
+        300
+      ],
+      "credentials": {
+        "spotifyOAuth2Api": "Spotify OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "artist",
+        "operation": "getRelatedArtists",
+        "id": "0dwFxqYkvZLSA6U6XfQcDV"
+      },
+      "name": "Spotify2",
+      "type": "n8n-nodes-base.spotify",
+      "typeVersion": 1,
+      "position": [
+        600,
+        150
+      ],
+      "credentials": {
+        "spotifyOAuth2Api": "Spotify OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "artist",
+        "operation": "getTopTracks",
+        "id": "0dwFxqYkvZLSA6U6XfQcDV"
+      },
+      "name": "Spotify3",
+      "type": "n8n-nodes-base.spotify",
+      "typeVersion": 1,
+      "position": [
+        600,
+        460
+      ],
+      "credentials": {
+        "spotifyOAuth2Api": "Spotify OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "album",
+        "id": "={{$node[\"Spotify1\"].json[\"id\"]}}"
+      },
+      "name": "Spotify4",
+      "type": "n8n-nodes-base.spotify",
+      "typeVersion": 1,
+      "position": [
+        810,
+        300
+      ],
+      "credentials": {
+        "spotifyOAuth2Api": "Spotify OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "album",
+        "operation": "getTracks",
+        "id": "={{$node[\"Spotify1\"].json[\"id\"]}}",
+        "limit": 1
+      },
+      "name": "Spotify5",
+      "type": "n8n-nodes-base.spotify",
+      "typeVersion": 1,
+      "position": [
+        950,
+        300
+      ],
+      "credentials": {
+        "spotifyOAuth2Api": "Spotify OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "track",
+        "operation": "get",
+        "id": "={{$node[\"Spotify5\"].json[\"id\"]}}"
+      },
+      "name": "Spotify6",
+      "type": "n8n-nodes-base.spotify",
+      "typeVersion": 1,
+      "position": [
+        1100,
+        300
+      ],
+      "credentials": {
+        "spotifyOAuth2Api": "Spotify OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "track",
+        "operation": "getAudioFeatures",
+        "id": "={{$node[\"Spotify5\"].json[\"id\"]}}"
+      },
+      "name": "Spotify7",
+      "type": "n8n-nodes-base.spotify",
+      "typeVersion": 1,
+      "position": [
+        1250,
+        300
+      ],
+      "credentials": {
+        "spotifyOAuth2Api": "Spotify OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "playlist",
+        "operation": "getUserPlaylists",
+        "limit": 1
+      },
+      "name": "Spotify8",
+      "type": "n8n-nodes-base.spotify",
+      "typeVersion": 1,
+      "position": [
+        450,
+        610
+      ],
+      "credentials": {
+        "spotifyOAuth2Api": "Spotify OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "playlist",
+        "operation": "get",
+        "id": "={{$node[\"Spotify8\"].json[\"id\"]}}"
+      },
+      "name": "Spotify9",
+      "type": "n8n-nodes-base.spotify",
+      "typeVersion": 1,
+      "position": [
+        600,
+        610
+      ],
+      "credentials": {
+        "spotifyOAuth2Api": "Spotify OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "playlist",
+        "id": "={{$node[\"Spotify8\"].json[\"id\"]}}",
+        "trackID": "spotify:track:2ea6bt302Bq8Hiulp8Bn2C"
+      },
+      "name": "Spotify10",
+      "type": "n8n-nodes-base.spotify",
+      "typeVersion": 1,
+      "position": [
+        750,
+        610
+      ],
+      "credentials": {
+        "spotifyOAuth2Api": "Spotify OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "playlist",
+        "operation": "getTracks",
+        "id": "={{$node[\"Spotify8\"].json[\"id\"]}}",
+        "limit": 1
+      },
+      "name": "Spotify11",
+      "type": "n8n-nodes-base.spotify",
+      "typeVersion": 1,
+      "position": [
+        900,
+        610
+      ],
+      "credentials": {
+        "spotifyOAuth2Api": "Spotify OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "playlist",
+        "operation": "delete",
+        "id": "={{$node[\"Spotify8\"].json[\"id\"]}}",
+        "trackID": "spotify:track:2ea6bt302Bq8Hiulp8Bn2C"
+      },
+      "name": "Spotify12",
+      "type": "n8n-nodes-base.spotify",
+      "typeVersion": 1,
+      "position": [
+        1050,
+        610
+      ],
+      "credentials": {
+        "spotifyOAuth2Api": "Spotify OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "recentlyPlayed",
+        "limit": 1
+      },
+      "name": "Spotify14",
+      "type": "n8n-nodes-base.spotify",
+      "typeVersion": 1,
+      "position": [
+        450,
+        0
+      ],
+      "credentials": {
+        "spotifyOAuth2Api": "Spotify OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "currentlyPlaying"
+      },
+      "name": "Spotify15",
+      "type": "n8n-nodes-base.spotify",
+      "typeVersion": 1,
+      "position": [
+        600,
+        0
+      ],
+      "credentials": {
+        "spotifyOAuth2Api": "Spotify OAuth2 creds"
+      }
+    }
+  ],
+  "connections": {
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Spotify",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Spotify8",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Spotify14",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Spotify": {
+      "main": [
+        [
+          {
+            "node": "Spotify1",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Spotify3",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Spotify2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Spotify2": {
+      "main": [
+        []
+      ]
+    },
+    "Spotify1": {
+      "main": [
+        [
+          {
+            "node": "Spotify4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Spotify4": {
+      "main": [
+        [
+          {
+            "node": "Spotify5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Spotify5": {
+      "main": [
+        [
+          {
+            "node": "Spotify6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Spotify6": {
+      "main": [
+        [
+          {
+            "node": "Spotify7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Spotify7": {
+      "main": [
+        []
+      ]
+    },
+    "Spotify8": {
+      "main": [
+        [
+          {
+            "node": "Spotify9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Spotify9": {
+      "main": [
+        [
+          {
+            "node": "Spotify10",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Spotify10": {
+      "main": [
+        [
+          {
+            "node": "Spotify11",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Spotify11": {
+      "main": [
+        [
+          {
+            "node": "Spotify12",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Spotify14": {
+      "main": [
+        [
+          {
+            "node": "Spotify15",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-02-23T16:32:02.682Z",
+  "updatedAt": "2021-02-23T16:54:16.325Z",
+  "settings": {},
+  "staticData": null
+}
