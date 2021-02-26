@@ -1,0 +1,201 @@
+{
+  "id": 71,
+  "name": "Contentful-preview-api:locale:getAll:entry:getAll:ContentType:get:Asset:getAll get:Space:get",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        300,
+        450
+      ]
+    },
+    {
+      "parameters": {
+        "source": "previewApi",
+        "operation": "getAll",
+        "limit": 1,
+        "additionalFields": {
+          "content_type": "blogPost"
+        }
+      },
+      "name": "Contentful",
+      "type": "n8n-nodes-base.contentful",
+      "typeVersion": 1,
+      "position": [
+        510,
+        130
+      ],
+      "credentials": {
+        "contentfulApi": "Contenful creds"
+      }
+    },
+    {
+      "parameters": {
+        "source": "previewApi",
+        "resource": "contentType",
+        "contentTypeId": "blogPost",
+        "additionalFields": {}
+      },
+      "name": "Contentful1",
+      "type": "n8n-nodes-base.contentful",
+      "typeVersion": 1,
+      "position": [
+        510,
+        450
+      ],
+      "credentials": {
+        "contentfulApi": "Contenful creds"
+      }
+    },
+    {
+      "parameters": {
+        "source": "previewApi",
+        "resource": "asset",
+        "limit": 1,
+        "additionalFields": {}
+      },
+      "name": "Contentful2",
+      "type": "n8n-nodes-base.contentful",
+      "typeVersion": 1,
+      "position": [
+        510,
+        300
+      ],
+      "credentials": {
+        "contentfulApi": "Contenful creds"
+      }
+    },
+    {
+      "parameters": {
+        "source": "previewApi",
+        "resource": "asset",
+        "operation": "get",
+        "assetId": "5UvpPFo279OoVXHLRXqlo9"
+      },
+      "name": "Contentful3",
+      "type": "n8n-nodes-base.contentful",
+      "typeVersion": 1,
+      "position": [
+        650,
+        300
+      ],
+      "credentials": {
+        "contentfulApi": "Contenful creds"
+      },
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "source": "previewApi",
+        "entryId": "={{$node[\"Contentful\"].json[\"author\"][\"sys\"][\"id\"]}}"
+      },
+      "name": "Contentful4",
+      "type": "n8n-nodes-base.contentful",
+      "typeVersion": 1,
+      "position": [
+        660,
+        130
+      ],
+      "credentials": {
+        "contentfulApi": "Contenful creds"
+      },
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "source": "previewApi",
+        "resource": "locale",
+        "limit": 1
+      },
+      "name": "Contentful5",
+      "type": "n8n-nodes-base.contentful",
+      "typeVersion": 1,
+      "position": [
+        510,
+        750
+      ],
+      "credentials": {
+        "contentfulApi": "Contenful creds"
+      }
+    },
+    {
+      "parameters": {
+        "source": "previewApi",
+        "resource": "space"
+      },
+      "name": "Contentful6",
+      "type": "n8n-nodes-base.contentful",
+      "typeVersion": 1,
+      "position": [
+        510,
+        610
+      ],
+      "credentials": {
+        "contentfulApi": "Contenful creds"
+      }
+    }
+  ],
+  "connections": {
+    "Contentful": {
+      "main": [
+        [
+          {
+            "node": "Contentful4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Contentful2": {
+      "main": [
+        [
+          {
+            "node": "Contentful3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Contentful1",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Contentful",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Contentful5",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Contentful2",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Contentful6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-02-25T13:44:10.456Z",
+  "updatedAt": "2021-02-25T13:44:14.960Z",
+  "settings": {},
+  "staticData": null
+}
