@@ -1,0 +1,306 @@
+{
+  "id": 45,
+  "name": "GoogleSheets:SpreadSheet:create:Sheet:append read lookup update delete clean",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "resource": "spreadsheet",
+        "title": "=TestSpreadSheet {{(new Date()).toGMTString()}}",
+        "sheetsUi": {
+          "sheetValues": []
+        },
+        "options": {}
+      },
+      "name": "Google Sheets",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 1,
+      "position": [
+        440,
+        200
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": "Google Sheets creds"
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "operation": "append",
+        "sheetId": "1Vp6KkHSquwxi2Y4xiloyUMFrTAg9VHJ-PhGdgYq4apE",
+        "range": "A:B",
+        "options": {
+          "valueInputMode": "USER_ENTERED"
+        }
+      },
+      "name": "Google Sheets1",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 1,
+      "position": [
+        610,
+        360
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": "Google Sheets creds"
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "operation": "update",
+        "sheetId": "1Vp6KkHSquwxi2Y4xiloyUMFrTAg9VHJ-PhGdgYq4apE",
+        "range": "Sheet1!A1:B2",
+        "options": {
+          "valueInputMode": "USER_ENTERED"
+        }
+      },
+      "name": "Google Sheets2",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 1,
+      "position": [
+        1200,
+        360
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": "Google Sheets creds"
+      }
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "number": [
+            {
+              "name": "id",
+              "value": "={{$node[\"Function\"].json[\"id\"]}}"
+            }
+          ],
+          "string": [
+            {
+              "name": "name",
+              "value": "=Updated {{$node[\"Function\"].json[\"name\"]}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Set1",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        1050,
+        360
+      ],
+      "typeVersion": 1,
+      "alwaysOutputData": false,
+      "notesInFlow": true,
+      "notes": "Update one item name"
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "sheetId": "1Vp6KkHSquwxi2Y4xiloyUMFrTAg9VHJ-PhGdgYq4apE",
+        "range": "Sheet1!A1:B2",
+        "options": {}
+      },
+      "name": "Google Sheets3",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 1,
+      "position": [
+        770,
+        360
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": "Google Sheets creds"
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "operation": "lookup",
+        "sheetId": "1Vp6KkHSquwxi2Y4xiloyUMFrTAg9VHJ-PhGdgYq4apE",
+        "range": "Sheet1!A1:B2",
+        "lookupColumn": "name",
+        "lookupValue": "test1",
+        "options": {}
+      },
+      "name": "Google Sheets4",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 1,
+      "position": [
+        910,
+        360
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": "Google Sheets creds"
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "operation": "clear",
+        "sheetId": "1Vp6KkHSquwxi2Y4xiloyUMFrTAg9VHJ-PhGdgYq4apE",
+        "range": "A2:B4"
+      },
+      "name": "Google Sheets5",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 1,
+      "position": [
+        1500,
+        360
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": "Google Sheets creds"
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "operation": "delete",
+        "sheetId": "1Vp6KkHSquwxi2Y4xiloyUMFrTAg9VHJ-PhGdgYq4apE",
+        "toDelete": {
+          "columns": [],
+          "rows": [
+            {
+              "sheetId": 0,
+              "startIndex": 1
+            }
+          ]
+        }
+      },
+      "name": "Google Sheets6",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 1,
+      "position": [
+        1350,
+        360
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": "Google Sheets creds"
+      }
+    },
+    {
+      "parameters": {
+        "functionCode": "items = [\n    {\n        json:{\n            id: Math.round(Math.random()*1000),\n            name: 'test1'\n        }   \n    },\n    {\n        json:{\n            id: Math.round(Math.random()*1000),\n            name: 'test2'\n        }   \n    }\n]\nreturn items;"
+      },
+      "name": "Function",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        440,
+        360
+      ],
+      "notesInFlow": true,
+      "notes": "create the input data"
+    }
+  ],
+  "connections": {
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Function",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets1": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets2": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set1": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets3": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets4": {
+      "main": [
+        [
+          {
+            "node": "Set1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets6": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Function": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-02-19T09:08:47.547Z",
+  "updatedAt": "2021-02-19T09:14:20.412Z",
+  "settings": {},
+  "staticData": null
+}
