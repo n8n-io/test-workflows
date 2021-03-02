@@ -16,7 +16,7 @@
     {
       "parameters": {
         "resource": "folder",
-        "path": "/testFolder"
+        "path": "=/testFolder{{Date.now()}}"
       },
       "name": "Dropbox",
       "type": "n8n-nodes-base.dropbox",
@@ -26,7 +26,7 @@
         300
       ],
       "credentials": {
-        "dropboxApi": "Dropbox token"
+        "dropboxApi": "Dropbox creds"
       }
     },
     {
@@ -44,7 +44,7 @@
       ],
       "alwaysOutputData": true,
       "credentials": {
-        "dropboxApi": "Dropbox token"
+        "dropboxApi": "Dropbox creds"
       }
     },
     {
@@ -62,7 +62,7 @@
         300
       ],
       "credentials": {
-        "dropboxApi": "Dropbox token"
+        "dropboxApi": "Dropbox creds"
       }
     },
     {
@@ -79,7 +79,7 @@
         300
       ],
       "credentials": {
-        "dropboxApi": "Dropbox token"
+        "dropboxApi": "Dropbox creds"
       }
     }
   ],
@@ -130,7 +130,7 @@
     }
   },
   "createdAt": "2021-02-15T13:18:48.380Z",
-  "updatedAt": "2021-02-16T10:01:50.296Z",
+  "updatedAt": "2021-03-02T09:09:50.745Z",
   "settings": {},
   "staticData": null
 }

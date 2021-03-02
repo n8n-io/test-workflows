@@ -16,53 +16,53 @@
     {
       "parameters": {
         "path": "={{$json[\"metadata\"][\"path_display\"]}}/testFile",
-        "fileContent": "Uplod file test"
+        "binaryData": true
       },
       "name": "Dropbox",
       "type": "n8n-nodes-base.dropbox",
       "typeVersion": 1,
       "position": [
-        500,
+        600,
         300
       ],
       "alwaysOutputData": true,
       "credentials": {
-        "dropboxApi": "Dropbox token"
+        "dropboxApi": "Dropbox creds"
       },
       "continueOnFail": true
     },
     {
       "parameters": {
         "resource": "folder",
-        "path": "/uploadTest"
+        "path": "=/uploadTest{{Date.now()}}"
       },
       "name": "Dropbox1",
       "type": "n8n-nodes-base.dropbox",
       "typeVersion": 1,
       "position": [
-        320,
+        300,
         300
       ],
       "credentials": {
-        "dropboxApi": "Dropbox token"
+        "dropboxApi": "Dropbox creds"
       }
     },
     {
       "parameters": {
         "operation": "move",
-        "path": "={{$json[\"metadata\"][\"path_display\"]}}/testFile",
-        "toPath": "={{$json[\"metadata\"][\"path_display\"]}}/moveTestFile"
+        "path": "={{$node[\"Dropbox1\"].json[\"metadata\"][\"path_display\"]}}/testFile",
+        "toPath": "={{$node[\"Dropbox1\"].json[\"metadata\"][\"path_display\"]}}/moveTestFile{{Date.now()}}"
       },
       "name": "Dropbox2",
       "type": "n8n-nodes-base.dropbox",
       "typeVersion": 1,
       "position": [
-        660,
+        760,
         300
       ],
       "alwaysOutputData": true,
       "credentials": {
-        "dropboxApi": "Dropbox token"
+        "dropboxApi": "Dropbox creds"
       }
     },
     {
@@ -75,12 +75,12 @@
       "type": "n8n-nodes-base.dropbox",
       "typeVersion": 1,
       "position": [
-        850,
+        950,
         300
       ],
       "alwaysOutputData": true,
       "credentials": {
-        "dropboxApi": "Dropbox token"
+        "dropboxApi": "Dropbox creds"
       }
     },
     {
@@ -92,12 +92,12 @@
       "type": "n8n-nodes-base.dropbox",
       "typeVersion": 1,
       "position": [
-        1020,
+        1120,
         300
       ],
       "alwaysOutputData": true,
       "credentials": {
-        "dropboxApi": "Dropbox token"
+        "dropboxApi": "Dropbox creds"
       }
     },
     {
@@ -109,12 +109,12 @@
       "type": "n8n-nodes-base.dropbox",
       "typeVersion": 1,
       "position": [
-        810,
+        910,
         460
       ],
       "alwaysOutputData": true,
       "credentials": {
-        "dropboxApi": "Dropbox token"
+        "dropboxApi": "Dropbox creds"
       }
     },
     {
@@ -126,30 +126,42 @@
       "type": "n8n-nodes-base.dropbox",
       "typeVersion": 1,
       "position": [
-        990,
+        1090,
         460
       ],
       "alwaysOutputData": true,
       "credentials": {
-        "dropboxApi": "Dropbox token"
+        "dropboxApi": "Dropbox creds"
       }
     },
     {
       "parameters": {
         "resource": "folder",
         "operation": "delete",
-        "path": "/uploadTest"
+        "path": "={{$node[\"Dropbox1\"].json[\"metadata\"][\"path_display\"]}}"
       },
       "name": "Dropbox7",
       "type": "n8n-nodes-base.dropbox",
       "typeVersion": 1,
       "position": [
-        1180,
+        1280,
         400
       ],
       "credentials": {
-        "dropboxApi": "Dropbox token"
+        "dropboxApi": "Dropbox creds"
       }
+    },
+    {
+      "parameters": {
+        "filePath": "../../../assets/n8n-logo.png"
+      },
+      "name": "Read Binary File",
+      "type": "n8n-nodes-base.readBinaryFile",
+      "typeVersion": 1,
+      "position": [
+        450,
+        300
+      ]
     }
   ],
   "connections": {
@@ -168,7 +180,7 @@
       "main": [
         [
           {
-            "node": "Dropbox",
+            "node": "Read Binary File",
             "type": "main",
             "index": 0
           }
@@ -224,11 +236,6 @@
         ]
       ]
     },
-    "Dropbox4": {
-      "main": [
-        []
-      ]
-    },
     "Dropbox6": {
       "main": [
         [
@@ -239,10 +246,21 @@
           }
         ]
       ]
+    },
+    "Read Binary File": {
+      "main": [
+        [
+          {
+            "node": "Dropbox",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "createdAt": "2021-02-16T10:16:46.803Z",
-  "updatedAt": "2021-02-16T10:17:00.418Z",
+  "updatedAt": "2021-03-02T09:17:33.943Z",
   "settings": {},
   "staticData": null
 }
