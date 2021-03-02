@@ -1,0 +1,109 @@
+{
+  "id": 85,
+  "name": "Linkedin:Post:create",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        200,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "postAs": "person",
+        "person": "rgAhz21q-G",
+        "text": "=Test Post created by person at {{new Date()}}",
+        "additionalFields": {
+          "visibility": "CONNECTIONS"
+        }
+      },
+      "name": "LinkedIn",
+      "type": "n8n-nodes-base.linkedIn",
+      "typeVersion": 1,
+      "position": [
+        550,
+        200
+      ],
+      "credentials": {
+        "linkedInOAuth2Api": "LinkedIn OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "postAs": "person",
+        "person": "rgAhz21q-G",
+        "text": "=Test Post created by person at {{new Date()}}",
+        "shareMediaCategory": "IMAGE",
+        "additionalFields": {
+          "title": "=ImagePost {{Date.now()}}",
+          "visibility": "CONNECTIONS"
+        }
+      },
+      "name": "LinkedIn1",
+      "type": "n8n-nodes-base.linkedIn",
+      "typeVersion": 1,
+      "position": [
+        560,
+        350
+      ],
+      "credentials": {
+        "linkedInOAuth2Api": "LinkedIn OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "filePath": "../../../assets/n8n-logo.png"
+      },
+      "name": "Read Binary File",
+      "type": "n8n-nodes-base.readBinaryFile",
+      "typeVersion": 1,
+      "position": [
+        420,
+        350
+      ]
+    }
+  ],
+  "connections": {
+    "LinkedIn1": {
+      "main": [
+        []
+      ]
+    },
+    "Read Binary File": {
+      "main": [
+        [
+          {
+            "node": "LinkedIn1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Read Binary File",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "LinkedIn",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-03-02T10:23:05.991Z",
+  "updatedAt": "2021-03-02T10:23:05.991Z",
+  "settings": {},
+  "staticData": null
+}
