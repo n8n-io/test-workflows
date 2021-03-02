@@ -1,0 +1,469 @@
+{
+  "id": 88,
+  "name": "ActiveCampaign:EcommerceCustomer:create update get getAll delete:EcommerceOrder:create update get getAll delete:EcommerceOrderProduct:getByProductId getByOrderId getAll",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "connection",
+        "service": "n8n",
+        "externalid": "=account{{Date.now()}}",
+        "name": "=AccountName{{Date.now()}}",
+        "logoUrl": "https://n8n.io/_nuxt/img/df5be1c.png",
+        "linkUrl": "https://n8n.io"
+      },
+      "name": "ActiveCampaign",
+      "type": "n8n-nodes-base.activeCampaign",
+      "typeVersion": 1,
+      "position": [
+        450,
+        300
+      ],
+      "credentials": {
+        "activeCampaignApi": "ActiveCampaign creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "ecommerceCustomer",
+        "connectionid": "={{$node[\"ActiveCampaign\"].json[\"connection\"][\"id\"]}}",
+        "externalid": "=customer{{Date.now()}}",
+        "email": "=fake{{Date.now()}}@gmail.com",
+        "additionalFields": {}
+      },
+      "name": "ActiveCampaign1",
+      "type": "n8n-nodes-base.activeCampaign",
+      "typeVersion": 1,
+      "position": [
+        600,
+        350
+      ],
+      "credentials": {
+        "activeCampaignApi": "ActiveCampaign creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "ecommerceCustomer",
+        "operation": "update",
+        "ecommerceCustomerId": "={{$node[\"ActiveCampaign1\"].json[\"ecomCustomer\"][\"id\"]}}",
+        "updateFields": {
+          "acceptsMarketing": true
+        }
+      },
+      "name": "ActiveCampaign2",
+      "type": "n8n-nodes-base.activeCampaign",
+      "typeVersion": 1,
+      "position": [
+        1930,
+        350
+      ],
+      "credentials": {
+        "activeCampaignApi": "ActiveCampaign creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "ecommerceCustomer",
+        "operation": "get",
+        "ecommerceCustomerId": "={{$node[\"ActiveCampaign1\"].json[\"ecomCustomer\"][\"id\"]}}"
+      },
+      "name": "ActiveCampaign3",
+      "type": "n8n-nodes-base.activeCampaign",
+      "typeVersion": 1,
+      "position": [
+        2080,
+        350
+      ],
+      "credentials": {
+        "activeCampaignApi": "ActiveCampaign creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "ecommerceCustomer",
+        "operation": "getAll",
+        "limit": 1
+      },
+      "name": "ActiveCampaign4",
+      "type": "n8n-nodes-base.activeCampaign",
+      "typeVersion": 1,
+      "position": [
+        2230,
+        350
+      ],
+      "credentials": {
+        "activeCampaignApi": "ActiveCampaign creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "ecommerceCustomer",
+        "operation": "delete",
+        "ecommerceCustomerId": "={{$node[\"ActiveCampaign1\"].json[\"ecomCustomer\"][\"id\"]}}"
+      },
+      "name": "ActiveCampaign5",
+      "type": "n8n-nodes-base.activeCampaign",
+      "typeVersion": 1,
+      "position": [
+        2380,
+        350
+      ],
+      "credentials": {
+        "activeCampaignApi": "ActiveCampaign creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "connection",
+        "operation": "delete",
+        "connectionId": "={{$node[\"ActiveCampaign\"].json[\"connection\"][\"id\"]}}"
+      },
+      "name": "ActiveCampaign6",
+      "type": "n8n-nodes-base.activeCampaign",
+      "typeVersion": 1,
+      "position": [
+        2530,
+        300
+      ],
+      "credentials": {
+        "activeCampaignApi": "ActiveCampaign creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "ecommerceOrder",
+        "externalid": "=externalOrderId{{Date.now()}}",
+        "email": "=customerEmail{{Date.now()}}@gmail.com",
+        "totalPrice": 101,
+        "connectionid": "={{$node[\"ActiveCampaign1\"].json[\"connections\"][0][\"id\"]}}",
+        "customerid": "={{$node[\"ActiveCampaign1\"].json[\"ecomCustomer\"][\"id\"]}}",
+        "externalCreatedDate": "2021-03-02T17:48:16.000Z",
+        "orderProducts": [
+          {
+            "name": "=Product{{Date.now()}}",
+            "price": 101,
+            "externalid": "=ProductId{{Date.now()}}",
+            "category": "Test",
+            "quantity": 1
+          }
+        ],
+        "additionalFields": {}
+      },
+      "name": "ActiveCampaign7",
+      "type": "n8n-nodes-base.activeCampaign",
+      "typeVersion": 1,
+      "position": [
+        750,
+        500
+      ],
+      "credentials": {
+        "activeCampaignApi": "ActiveCampaign creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "ecommerceOrder",
+        "operation": "update",
+        "orderId": "={{$node[\"ActiveCampaign7\"].json[\"ecomOrder\"][\"id\"]}}",
+        "updateFields": {
+          "totalPrice": 201
+        }
+      },
+      "name": "ActiveCampaign8",
+      "type": "n8n-nodes-base.activeCampaign",
+      "typeVersion": 1,
+      "position": [
+        1330,
+        500
+      ],
+      "credentials": {
+        "activeCampaignApi": "ActiveCampaign creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "ecommerceOrder",
+        "operation": "get",
+        "orderId": "={{$node[\"ActiveCampaign7\"].json[\"ecomOrder\"][\"id\"]}}"
+      },
+      "name": "ActiveCampaign9",
+      "type": "n8n-nodes-base.activeCampaign",
+      "typeVersion": 1,
+      "position": [
+        1480,
+        500
+      ],
+      "credentials": {
+        "activeCampaignApi": "ActiveCampaign creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "ecommerceOrder",
+        "operation": "getAll",
+        "limit": 1
+      },
+      "name": "ActiveCampaign10",
+      "type": "n8n-nodes-base.activeCampaign",
+      "typeVersion": 1,
+      "position": [
+        1630,
+        500
+      ],
+      "credentials": {
+        "activeCampaignApi": "ActiveCampaign creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "ecommerceOrder",
+        "operation": "delete",
+        "orderId": "={{$node[\"ActiveCampaign7\"].json[\"ecomOrder\"][\"id\"]}}"
+      },
+      "name": "ActiveCampaign11",
+      "type": "n8n-nodes-base.activeCampaign",
+      "typeVersion": 1,
+      "position": [
+        1780,
+        500
+      ],
+      "credentials": {
+        "activeCampaignApi": "ActiveCampaign creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "ecommerceOrderProducts",
+        "operation": "getByProductId",
+        "procuctId": "={{$node[\"ActiveCampaign7\"].json[\"ecomOrderProducts\"][0][\"id\"]}}"
+      },
+      "name": "ActiveCampaign12",
+      "type": "n8n-nodes-base.activeCampaign",
+      "typeVersion": 1,
+      "position": [
+        900,
+        630
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "activeCampaignApi": "ActiveCampaign creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "ecommerceOrderProducts",
+        "operation": "getByOrderId",
+        "orderId": "={{$node[\"ActiveCampaign7\"].json[\"ecomOrder\"][\"id\"]}}"
+      },
+      "name": "ActiveCampaign13",
+      "type": "n8n-nodes-base.activeCampaign",
+      "typeVersion": 1,
+      "position": [
+        1050,
+        630
+      ],
+      "credentials": {
+        "activeCampaignApi": "ActiveCampaign creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "ecommerceOrderProducts",
+        "limit": 1
+      },
+      "name": "ActiveCampaign14",
+      "type": "n8n-nodes-base.activeCampaign",
+      "typeVersion": 1,
+      "position": [
+        1200,
+        630
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "activeCampaignApi": "ActiveCampaign creds"
+      }
+    }
+  ],
+  "connections": {
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "ActiveCampaign",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ActiveCampaign": {
+      "main": [
+        [
+          {
+            "node": "ActiveCampaign1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ActiveCampaign1": {
+      "main": [
+        [
+          {
+            "node": "ActiveCampaign7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ActiveCampaign2": {
+      "main": [
+        [
+          {
+            "node": "ActiveCampaign3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ActiveCampaign3": {
+      "main": [
+        [
+          {
+            "node": "ActiveCampaign4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ActiveCampaign4": {
+      "main": [
+        [
+          {
+            "node": "ActiveCampaign5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ActiveCampaign5": {
+      "main": [
+        [
+          {
+            "node": "ActiveCampaign6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ActiveCampaign7": {
+      "main": [
+        [
+          {
+            "node": "ActiveCampaign12",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ActiveCampaign8": {
+      "main": [
+        [
+          {
+            "node": "ActiveCampaign9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ActiveCampaign9": {
+      "main": [
+        [
+          {
+            "node": "ActiveCampaign10",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ActiveCampaign10": {
+      "main": [
+        [
+          {
+            "node": "ActiveCampaign11",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ActiveCampaign11": {
+      "main": [
+        [
+          {
+            "node": "ActiveCampaign2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ActiveCampaign12": {
+      "main": [
+        [
+          {
+            "node": "ActiveCampaign13",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ActiveCampaign13": {
+      "main": [
+        [
+          {
+            "node": "ActiveCampaign14",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ActiveCampaign14": {
+      "main": [
+        [
+          {
+            "node": "ActiveCampaign8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-03-02T17:43:57.153Z",
+  "updatedAt": "2021-03-02T18:03:07.491Z",
+  "settings": {},
+  "staticData": null
+}

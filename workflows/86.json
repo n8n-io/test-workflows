@@ -1,0 +1,501 @@
+{
+  "id": 86,
+  "name": "ActiveCampaign:Contact:create update get getAll delete:Account:create update get getAll delete:AccountContact:create update delete:ContactTag:add remove:ContactList:add remove",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        240,
+        250
+      ]
+    },
+    {
+      "parameters": {
+        "email": "=fake{{Date.now()}}@gmail.com",
+        "additionalFields": {}
+      },
+      "name": "ActiveCampaign",
+      "type": "n8n-nodes-base.activeCampaign",
+      "typeVersion": 1,
+      "position": [
+        400,
+        250
+      ],
+      "credentials": {
+        "activeCampaignApi": "ActiveCampaign creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "contactId": "={{$node[\"ActiveCampaign\"].json[\"id\"]}}",
+        "updateFields": {
+          "email": "=updatedFake{{Date.now()}}@gmail.com"
+        }
+      },
+      "name": "ActiveCampaign1",
+      "type": "n8n-nodes-base.activeCampaign",
+      "typeVersion": 1,
+      "position": [
+        2100,
+        270
+      ],
+      "credentials": {
+        "activeCampaignApi": "ActiveCampaign creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "contactId": "={{$node[\"ActiveCampaign\"].json[\"id\"]}}"
+      },
+      "name": "ActiveCampaign2",
+      "type": "n8n-nodes-base.activeCampaign",
+      "typeVersion": 1,
+      "position": [
+        2250,
+        270
+      ],
+      "credentials": {
+        "activeCampaignApi": "ActiveCampaign creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "limit": 1,
+        "additionalFields": {}
+      },
+      "name": "ActiveCampaign3",
+      "type": "n8n-nodes-base.activeCampaign",
+      "typeVersion": 1,
+      "position": [
+        2400,
+        270
+      ],
+      "credentials": {
+        "activeCampaignApi": "ActiveCampaign creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "contactId": "={{$node[\"ActiveCampaign\"].json[\"id\"]}}"
+      },
+      "name": "ActiveCampaign4",
+      "type": "n8n-nodes-base.activeCampaign",
+      "typeVersion": 1,
+      "position": [
+        2550,
+        270
+      ],
+      "credentials": {
+        "activeCampaignApi": "ActiveCampaign creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "contactList",
+        "listId": 1,
+        "contactId": "={{$node[\"ActiveCampaign\"].json[\"id\"]}}"
+      },
+      "name": "ActiveCampaign5",
+      "type": "n8n-nodes-base.activeCampaign",
+      "typeVersion": 1,
+      "position": [
+        1800,
+        360
+      ],
+      "credentials": {
+        "activeCampaignApi": "ActiveCampaign creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "contactList",
+        "operation": "remove",
+        "listId": 1,
+        "contactId": "={{$node[\"ActiveCampaign\"].json[\"id\"]}}"
+      },
+      "name": "ActiveCampaign6",
+      "type": "n8n-nodes-base.activeCampaign",
+      "typeVersion": 1,
+      "position": [
+        1950,
+        360
+      ],
+      "credentials": {
+        "activeCampaignApi": "ActiveCampaign creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "contactTag",
+        "tagId": "1",
+        "contactId": "={{$node[\"ActiveCampaign\"].json[\"id\"]}}"
+      },
+      "name": "ActiveCampaign7",
+      "type": "n8n-nodes-base.activeCampaign",
+      "typeVersion": 1,
+      "position": [
+        1800,
+        160
+      ],
+      "credentials": {
+        "activeCampaignApi": "ActiveCampaign creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "contactTag",
+        "operation": "remove",
+        "contactTagId": "={{$node[\"ActiveCampaign7\"].json[\"id\"]}}"
+      },
+      "name": "ActiveCampaign8",
+      "type": "n8n-nodes-base.activeCampaign",
+      "typeVersion": 1,
+      "position": [
+        1950,
+        160
+      ],
+      "credentials": {
+        "activeCampaignApi": "ActiveCampaign creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "account",
+        "name": "=Name{{Date.now()}}",
+        "additionalFields": {}
+      },
+      "name": "ActiveCampaign9",
+      "type": "n8n-nodes-base.activeCampaign",
+      "typeVersion": 1,
+      "position": [
+        550,
+        300
+      ],
+      "credentials": {
+        "activeCampaignApi": "ActiveCampaign creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "account",
+        "operation": "update",
+        "accountId": "={{$node[\"ActiveCampaign9\"].json[\"id\"]}}",
+        "updateFields": {
+          "name": "=updatedName{{Date.now()}}"
+        }
+      },
+      "name": "ActiveCampaign10",
+      "type": "n8n-nodes-base.activeCampaign",
+      "typeVersion": 1,
+      "position": [
+        1150,
+        300
+      ],
+      "credentials": {
+        "activeCampaignApi": "ActiveCampaign creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "account",
+        "operation": "get",
+        "accountId": "={{$node[\"ActiveCampaign9\"].json[\"id\"]}}"
+      },
+      "name": "ActiveCampaign11",
+      "type": "n8n-nodes-base.activeCampaign",
+      "typeVersion": 1,
+      "position": [
+        1300,
+        300
+      ],
+      "credentials": {
+        "activeCampaignApi": "ActiveCampaign creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "account",
+        "operation": "getAll",
+        "limit": 1,
+        "filters": {}
+      },
+      "name": "ActiveCampaign12",
+      "type": "n8n-nodes-base.activeCampaign",
+      "typeVersion": 1,
+      "position": [
+        1450,
+        300
+      ],
+      "credentials": {
+        "activeCampaignApi": "ActiveCampaign creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "account",
+        "operation": "delete",
+        "accountId": "={{$node[\"ActiveCampaign9\"].json[\"id\"]}}"
+      },
+      "name": "ActiveCampaign13",
+      "type": "n8n-nodes-base.activeCampaign",
+      "typeVersion": 1,
+      "position": [
+        1600,
+        300
+      ],
+      "credentials": {
+        "activeCampaignApi": "ActiveCampaign creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "accountContact",
+        "account": "={{$node[\"ActiveCampaign9\"].json[\"id\"]}}",
+        "contact": "={{$node[\"ActiveCampaign\"].json[\"id\"]}}",
+        "additionalFields": {}
+      },
+      "name": "ActiveCampaign14",
+      "type": "n8n-nodes-base.activeCampaign",
+      "typeVersion": 1,
+      "position": [
+        700,
+        400
+      ],
+      "credentials": {
+        "activeCampaignApi": "ActiveCampaign creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "accountContact",
+        "operation": "update",
+        "accountContactId": "={{$node[\"ActiveCampaign14\"].json[\"id\"]}}",
+        "updateFields": {
+          "jobTitle": "TestJobTitle"
+        }
+      },
+      "name": "ActiveCampaign15",
+      "type": "n8n-nodes-base.activeCampaign",
+      "typeVersion": 1,
+      "position": [
+        850,
+        400
+      ],
+      "credentials": {
+        "activeCampaignApi": "ActiveCampaign creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "accountContact",
+        "operation": "delete",
+        "accountContactId": "={{$node[\"ActiveCampaign14\"].json[\"id\"]}}"
+      },
+      "name": "ActiveCampaign16",
+      "type": "n8n-nodes-base.activeCampaign",
+      "typeVersion": 1,
+      "position": [
+        1000,
+        400
+      ],
+      "credentials": {
+        "activeCampaignApi": "ActiveCampaign creds"
+      }
+    }
+  ],
+  "connections": {
+    "ActiveCampaign": {
+      "main": [
+        [
+          {
+            "node": "ActiveCampaign9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ActiveCampaign1": {
+      "main": [
+        [
+          {
+            "node": "ActiveCampaign2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ActiveCampaign2": {
+      "main": [
+        [
+          {
+            "node": "ActiveCampaign3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ActiveCampaign3": {
+      "main": [
+        [
+          {
+            "node": "ActiveCampaign4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ActiveCampaign5": {
+      "main": [
+        [
+          {
+            "node": "ActiveCampaign6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ActiveCampaign7": {
+      "main": [
+        [
+          {
+            "node": "ActiveCampaign8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ActiveCampaign8": {
+      "main": [
+        [
+          {
+            "node": "ActiveCampaign1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "ActiveCampaign",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ActiveCampaign9": {
+      "main": [
+        [
+          {
+            "node": "ActiveCampaign14",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ActiveCampaign10": {
+      "main": [
+        [
+          {
+            "node": "ActiveCampaign11",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ActiveCampaign11": {
+      "main": [
+        [
+          {
+            "node": "ActiveCampaign12",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ActiveCampaign12": {
+      "main": [
+        [
+          {
+            "node": "ActiveCampaign13",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ActiveCampaign14": {
+      "main": [
+        [
+          {
+            "node": "ActiveCampaign15",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ActiveCampaign15": {
+      "main": [
+        [
+          {
+            "node": "ActiveCampaign16",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ActiveCampaign16": {
+      "main": [
+        [
+          {
+            "node": "ActiveCampaign10",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ActiveCampaign13": {
+      "main": [
+        [
+          {
+            "node": "ActiveCampaign5",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "ActiveCampaign7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-03-02T16:28:15.682Z",
+  "updatedAt": "2021-03-02T16:51:15.335Z",
+  "settings": {},
+  "staticData": null
+}
