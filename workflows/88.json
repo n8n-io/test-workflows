@@ -116,7 +116,7 @@
       "type": "n8n-nodes-base.activeCampaign",
       "typeVersion": 1,
       "position": [
-        2380,
+        2700,
         350
       ],
       "credentials": {
@@ -133,8 +133,8 @@
       "type": "n8n-nodes-base.activeCampaign",
       "typeVersion": 1,
       "position": [
-        2530,
-        300
+        2960,
+        310
       ],
       "credentials": {
         "activeCampaignApi": "ActiveCampaign creds"
@@ -293,6 +293,41 @@
       "credentials": {
         "activeCampaignApi": "ActiveCampaign creds"
       }
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "limit": 1,
+        "additionalFields": {
+          "email": "={{$node[\"ActiveCampaign3\"].json[\"ecomCustomer\"][\"email\"]}}"
+        }
+      },
+      "name": "ActiveCampaign15",
+      "type": "n8n-nodes-base.activeCampaign",
+      "typeVersion": 1,
+      "position": [
+        2400,
+        200
+      ],
+      "credentials": {
+        "activeCampaignApi": "ActiveCampaign creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "contactId": "={{$node[\"ActiveCampaign15\"].json[\"id\"]}}"
+      },
+      "name": "ActiveCampaign16",
+      "type": "n8n-nodes-base.activeCampaign",
+      "typeVersion": 1,
+      "position": [
+        2550,
+        200
+      ],
+      "credentials": {
+        "activeCampaignApi": "ActiveCampaign creds"
+      }
     }
   ],
   "connections": {
@@ -355,7 +390,7 @@
       "main": [
         [
           {
-            "node": "ActiveCampaign5",
+            "node": "ActiveCampaign15",
             "type": "main",
             "index": 0
           }
@@ -460,10 +495,32 @@
           }
         ]
       ]
+    },
+    "ActiveCampaign15": {
+      "main": [
+        [
+          {
+            "node": "ActiveCampaign16",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ActiveCampaign16": {
+      "main": [
+        [
+          {
+            "node": "ActiveCampaign5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "createdAt": "2021-03-02T17:43:57.153Z",
-  "updatedAt": "2021-03-02T18:03:07.491Z",
+  "updatedAt": "2021-03-02T18:24:50.151Z",
   "settings": {},
   "staticData": null
 }
