@@ -1,0 +1,118 @@
+{
+  "id": 94,
+  "name": "XML:toJSON:toXML",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "jsonToxml",
+        "options": {}
+      },
+      "name": "XML",
+      "type": "n8n-nodes-base.xml",
+      "typeVersion": 1,
+      "position": [
+        650,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "functionCode": "item= {\n  name:'testing xml',\n  arr:[{key:'item1'},{key:'item2'}],\n  subobj:{\n    arr:[1,2,3,4,5],\n    secondarr:[{key:'subitem1'},{key:'subitem2'},{key:'subitem3'}]\n  }\n};\nreturn item;"
+      },
+      "name": "FunctionItem",
+      "type": "n8n-nodes-base.functionItem",
+      "typeVersion": 1,
+      "position": [
+        450,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "options": {
+          "explicitRoot": false
+        }
+      },
+      "name": "XML1",
+      "type": "n8n-nodes-base.xml",
+      "typeVersion": 1,
+      "position": [
+        800,
+        350
+      ]
+    },
+    {
+      "parameters": {
+        "functionCode": "if(JSON.stringify($node['FunctionItem'].json) !== JSON.stringify($node['XML1'].json) ){\n    throw new Error('Problem in XML conversion');\n}\nreturn items;"
+      },
+      "name": "Function",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        990,
+        350
+      ]
+    }
+  ],
+  "connections": {
+    "XML": {
+      "main": [
+        [
+          {
+            "node": "XML1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "FunctionItem": {
+      "main": [
+        [
+          {
+            "node": "XML",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "XML1": {
+      "main": [
+        [
+          {
+            "node": "Function",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "FunctionItem",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-03-03T14:18:03.010Z",
+  "updatedAt": "2021-03-03T14:18:09.549Z",
+  "settings": {},
+  "staticData": null
+}
