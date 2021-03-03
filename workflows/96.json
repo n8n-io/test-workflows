@@ -1,0 +1,72 @@
+{
+  "id": 96,
+  "name": "MessageBird:Sms:send:Balance:get",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "balance"
+      },
+      "name": "MessageBird",
+      "type": "n8n-nodes-base.messageBird",
+      "typeVersion": 1,
+      "position": [
+        500,
+        240
+      ],
+      "credentials": {
+        "messageBirdApi": "MessageBird creds"
+      }
+    },
+    {
+      "parameters": {
+        "originator": "4930270504079 ",
+        "recipients": "4930270504079 ",
+        "message": "TestMessage",
+        "additionalFields": {}
+      },
+      "name": "MessageBird1",
+      "type": "n8n-nodes-base.messageBird",
+      "typeVersion": 1,
+      "position": [
+        500,
+        400
+      ],
+      "credentials": {
+        "messageBirdApi": "MessageBird creds"
+      }
+    }
+  ],
+  "connections": {
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "MessageBird",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "MessageBird1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-03-03T14:48:52.147Z",
+  "updatedAt": "2021-03-03T14:49:01.728Z",
+  "settings": {},
+  "staticData": null
+}
