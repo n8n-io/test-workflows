@@ -1,0 +1,835 @@
+{
+  "id": 92,
+  "name": "IF",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        260,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": true,
+              "operation": "notEqual"
+            }
+          ]
+        }
+      },
+      "name": "IF",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        450,
+        100
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [],
+          "dateTime": [
+            {
+              "value1": "2021-03-01T23:00:00.000Z",
+              "value2": "2021-02-28T23:00:00.000Z"
+            }
+          ]
+        }
+      },
+      "name": "IF1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        450,
+        250
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [],
+          "dateTime": [],
+          "number": [
+            {
+              "value1": 5,
+              "value2": 10
+            }
+          ]
+        }
+      },
+      "name": "IF2",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        450,
+        410
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [],
+          "dateTime": [],
+          "number": [],
+          "string": [
+            {
+              "value1": "n8n.io",
+              "operation": "contains",
+              "value2": "io"
+            }
+          ]
+        }
+      },
+      "name": "IF3",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        450,
+        670
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": true,
+              "value2": true
+            }
+          ]
+        }
+      },
+      "name": "IF4",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        620,
+        100
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [],
+          "dateTime": [
+            {
+              "value1": "2021-02-27T23:00:00.000Z",
+              "operation": "before",
+              "value2": "2021-02-28T23:00:00.000Z"
+            }
+          ]
+        }
+      },
+      "name": "IF5",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        610,
+        250
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [],
+          "dateTime": [],
+          "number": [
+            {
+              "value1": 5,
+              "operation": "smallerEqual",
+              "value2": 5
+            }
+          ]
+        }
+      },
+      "name": "IF6",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        600,
+        410
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [],
+          "dateTime": [],
+          "number": [
+            {
+              "value1": 5,
+              "operation": "equal",
+              "value2": 5
+            }
+          ]
+        }
+      },
+      "name": "IF7",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        750,
+        410
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [],
+          "dateTime": [],
+          "number": [
+            {
+              "value1": 6,
+              "operation": "notEqual",
+              "value2": 5
+            }
+          ]
+        }
+      },
+      "name": "IF8",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        900,
+        410
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [],
+          "dateTime": [],
+          "number": [
+            {
+              "value1": 6,
+              "operation": "larger",
+              "value2": 5
+            }
+          ]
+        }
+      },
+      "name": "IF9",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        1050,
+        410
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [],
+          "dateTime": [],
+          "number": [
+            {
+              "value1": 6,
+              "operation": "largerEqual",
+              "value2": 5
+            }
+          ]
+        }
+      },
+      "name": "IF10",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        1200,
+        410
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [],
+          "dateTime": [],
+          "number": [],
+          "string": [
+            {
+              "value1": "n8n.io",
+              "operation": "endsWith",
+              "value2": "io"
+            }
+          ]
+        }
+      },
+      "name": "IF11",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        600,
+        670
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [],
+          "dateTime": [],
+          "number": [],
+          "string": [
+            {
+              "value1": "n8n",
+              "value2": "n8n"
+            }
+          ]
+        }
+      },
+      "name": "IF12",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        750,
+        670
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [],
+          "dateTime": [],
+          "number": [],
+          "string": [
+            {
+              "value1": "n8n",
+              "operation": "notContains",
+              "value2": "9"
+            }
+          ]
+        }
+      },
+      "name": "IF13",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        900,
+        670
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [],
+          "dateTime": [],
+          "number": [],
+          "string": [
+            {
+              "value1": "n8n",
+              "operation": "notEqual",
+              "value2": "n9n"
+            }
+          ]
+        }
+      },
+      "name": "IF14",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        1050,
+        670
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [],
+          "dateTime": [],
+          "number": [],
+          "string": [
+            {
+              "value1": "n8n",
+              "operation": "regex",
+              "value2": "/n[1-8]n/i"
+            }
+          ]
+        }
+      },
+      "name": "IF15",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        1200,
+        670
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [],
+          "dateTime": [],
+          "number": [],
+          "string": [
+            {
+              "value1": "n8n.io",
+              "operation": "startsWith",
+              "value2": "n8n"
+            }
+          ]
+        }
+      },
+      "name": "IF16",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        1350,
+        670
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [],
+          "dateTime": [],
+          "number": [],
+          "string": [
+            {
+              "operation": "isEmpty"
+            }
+          ]
+        }
+      },
+      "name": "IF17",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        1500,
+        670
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [],
+          "dateTime": [],
+          "number": [
+            {
+              "value1": "={{}}",
+              "operation": "isEmpty"
+            }
+          ]
+        }
+      },
+      "name": "IF18",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        1350,
+        410
+      ]
+    },
+    {
+      "parameters": {
+        "functionCode": "throw Error('Problem in boolean statement');\n"
+      },
+      "name": "Function",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        800,
+        90
+      ],
+      "notesInFlow": true,
+      "notes": "Boolean Error"
+    },
+    {
+      "parameters": {
+        "functionCode": "throw Error('Problem in Date&Time statement');\n"
+      },
+      "name": "Function1",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        790,
+        250
+      ],
+      "notesInFlow": true,
+      "notes": "Date&Time Error"
+    },
+    {
+      "parameters": {
+        "functionCode": "throw Error('Problem in Number statement');\n"
+      },
+      "name": "Function2",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        840,
+        540
+      ],
+      "notesInFlow": true,
+      "notes": "Number Error"
+    },
+    {
+      "parameters": {
+        "functionCode": "throw Error('Problem in String comparison statement');\n"
+      },
+      "name": "Function3",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        970,
+        840
+      ],
+      "notesInFlow": true,
+      "notes": "String Error"
+    }
+  ],
+  "connections": {
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "IF",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "IF1",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "IF2",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "IF3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF": {
+      "main": [
+        [
+          {
+            "node": "IF4",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Function",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF1": {
+      "main": [
+        [
+          {
+            "node": "IF5",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Function1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF2": {
+      "main": [
+        [
+          {
+            "node": "IF6",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Function2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF4": {
+      "main": [
+        [],
+        [
+          {
+            "node": "Function",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF5": {
+      "main": [
+        [],
+        [
+          {
+            "node": "Function1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF10": {
+      "main": [
+        [
+          {
+            "node": "IF18",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Function2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF9": {
+      "main": [
+        [
+          {
+            "node": "IF10",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Function2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF8": {
+      "main": [
+        [
+          {
+            "node": "IF9",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Function2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF7": {
+      "main": [
+        [
+          {
+            "node": "IF8",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Function2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF6": {
+      "main": [
+        [
+          {
+            "node": "IF7",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Function2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF3": {
+      "main": [
+        [
+          {
+            "node": "IF11",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Function3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF11": {
+      "main": [
+        [
+          {
+            "node": "IF12",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Function3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF12": {
+      "main": [
+        [
+          {
+            "node": "IF13",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Function3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF13": {
+      "main": [
+        [
+          {
+            "node": "IF14",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Function3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF14": {
+      "main": [
+        [
+          {
+            "node": "IF15",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Function3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF15": {
+      "main": [
+        [
+          {
+            "node": "IF16",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Function3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF16": {
+      "main": [
+        [
+          {
+            "node": "IF17",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Function3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF18": {
+      "main": [
+        [],
+        [
+          {
+            "node": "Function2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF17": {
+      "main": [
+        [],
+        [
+          {
+            "node": "Function3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-03-03T12:12:08.076Z",
+  "updatedAt": "2021-03-03T12:18:09.812Z",
+  "settings": {},
+  "staticData": null
+}
