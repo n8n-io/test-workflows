@@ -1,0 +1,156 @@
+{
+  "id": 103,
+  "name": "ExecuteCommand",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "command": "=echo 'test' > /tmp/{{$node[\"Set\"].json[\"filename\"]}}"
+      },
+      "name": "Execute Command",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [
+        660,
+        300
+      ],
+      "notesInFlow": true,
+      "notes": "write file to /tmp"
+    },
+    {
+      "parameters": {
+        "filePath": "=/tmp/{{$node[\"Set\"].json[\"filename\"]}}"
+      },
+      "name": "Read Binary File",
+      "type": "n8n-nodes-base.readBinaryFile",
+      "typeVersion": 1,
+      "position": [
+        860,
+        300
+      ],
+      "notesInFlow": true,
+      "notes": "read file"
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "filename",
+              "value": "=filename{{Date.now()}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Set",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        450,
+        300
+      ],
+      "notesInFlow": true,
+      "notes": "generate filename"
+    },
+    {
+      "parameters": {
+        "functionCode": "testData= 'dGVzdAo='\nif($node['Execute Command'].json['exitCode']!==0 || items[0].binary.data.data !== testData){\n  throw new Error('Error Execute Command in node');\n}\nreturn items;"
+      },
+      "name": "Function",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        1050,
+        300
+      ],
+      "notesInFlow": true,
+      "notes": "verify file content"
+    },
+    {
+      "parameters": {
+        "command": "=rm /tmp/{{$node[\"Set\"].json[\"filename\"]}}"
+      },
+      "name": "Execute Command1",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [
+        1250,
+        300
+      ],
+      "notesInFlow": true,
+      "notes": "remove file from /tmp"
+    }
+  ],
+  "connections": {
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Set",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Execute Command": {
+      "main": [
+        [
+          {
+            "node": "Read Binary File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set": {
+      "main": [
+        [
+          {
+            "node": "Execute Command",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read Binary File": {
+      "main": [
+        [
+          {
+            "node": "Function",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Function": {
+      "main": [
+        [
+          {
+            "node": "Execute Command1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-03-04T11:22:05.930Z",
+  "updatedAt": "2021-03-04T11:24:54.336Z",
+  "settings": {},
+  "staticData": null
+}
