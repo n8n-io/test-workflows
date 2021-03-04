@@ -1,0 +1,1038 @@
+{
+  "id": 108,
+  "name": "Merge:append keepKeyMatches mergeByIndex(leftjoin,innerjoin,outerjoin) mergeByKey(ifBlank,always,ifMissing) Multiplex passThrough removeKeyMatches",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        120,
+        1510
+      ]
+    },
+    {
+      "parameters": {},
+      "name": "Merge",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 1,
+      "position": [
+        580,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "boolean": [
+            {
+              "name": "value1",
+              "value": true
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Set",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        430,
+        220
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "boolean": [],
+          "number": [
+            {
+              "name": "value2",
+              "value": 5
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Set1",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        430,
+        370
+      ]
+    },
+    {
+      "parameters": {
+        "functionCode": "testData= JSON.stringify([{value1:true},{value2:5}]);\n\nif(JSON.stringify(items.map(item => item.json)) !== testData){\n  throw new Error('Error in Merge node : append');\n}\nreturn items;"
+      },
+      "name": "Function",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        780,
+        300
+      ],
+      "notesInFlow": true,
+      "notes": "Verify merge operation"
+    },
+    {
+      "parameters": {
+        "mode": "keepKeyMatches",
+        "propertyName1": "prop3",
+        "propertyName2": "prop4"
+      },
+      "name": "Merge1",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 1,
+      "position": [
+        580,
+        580
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "boolean": [],
+          "number": [
+            {
+              "name": "prop1",
+              "value": 1
+            },
+            {
+              "name": "prop3",
+              "value": -1
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Set2",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        430,
+        500
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "boolean": [],
+          "number": [
+            {
+              "name": "prop2",
+              "value": 2
+            },
+            {
+              "name": "prop4",
+              "value": -1
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Set3",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        430,
+        650
+      ]
+    },
+    {
+      "parameters": {
+        "functionCode": "testData= JSON.stringify({prop1:1,prop3:-1});\n\nif(JSON.stringify(items[0].json) !== testData){\n  throw new Error('Error in Merge node : keepKeyMatches');\n}\nreturn items;"
+      },
+      "name": "Function1",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        780,
+        580
+      ],
+      "notesInFlow": true,
+      "notes": "Verify merge operation"
+    },
+    {
+      "parameters": {
+        "mode": "mergeByIndex",
+        "join": "inner"
+      },
+      "name": "Merge2",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 1,
+      "position": [
+        600,
+        900
+      ]
+    },
+    {
+      "parameters": {
+        "functionCode": "testData= JSON.stringify([{title:'Input2item1'},{title:'Input2item2'},{title:'Input2item3'}]);\n\nif(JSON.stringify(items.map(item => item.json)) !== testData){\n  throw new Error('Error in Merge node : mergeByIndex: innerjoin');\n}\nreturn items;"
+      },
+      "name": "Function2",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        750,
+        900
+      ],
+      "notesInFlow": true,
+      "notes": "Verify mergeByIndex operation"
+    },
+    {
+      "parameters": {
+        "mode": "mergeByIndex"
+      },
+      "name": "Merge3",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 1,
+      "position": [
+        600,
+        750
+      ]
+    },
+    {
+      "parameters": {
+        "functionCode": "testData= JSON.stringify([{title:'Input2item1'},{title:'Input2item2'},{title:'Input2item3'}]);\n\nif(JSON.stringify(items.map(item => item.json)) !== testData){\n  throw new Error('Error in Merge node : mergeByIndex: leftjoin');\n}\nreturn items;"
+      },
+      "name": "Function3",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        750,
+        750
+      ],
+      "notesInFlow": true,
+      "notes": "Verify mergeByIndex operation"
+    },
+    {
+      "parameters": {
+        "mode": "mergeByIndex",
+        "join": "outer"
+      },
+      "name": "Merge4",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 1,
+      "position": [
+        600,
+        1050
+      ],
+      "notesInFlow": false,
+      "notes": "outerjoin"
+    },
+    {
+      "parameters": {
+        "functionCode": "testData= JSON.stringify([{title:'Input2item1'},{title:'Input2item2'},{title:'Input2item3'},{title:'Input2item4'}]);\n\nif(JSON.stringify(items.map(item => item.json)) !== testData){\n  throw new Error('Error in Merge node : mergeByIndex: outerjoin');\n}\nreturn items;"
+      },
+      "name": "Function4",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        750,
+        1050
+      ],
+      "notesInFlow": true,
+      "notes": "Verify mergeByIndex operation"
+    },
+    {
+      "parameters": {
+        "mode": "mergeByKey",
+        "propertyName1": "prop3",
+        "propertyName2": "prop4"
+      },
+      "name": "Merge5",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 1,
+      "position": [
+        580,
+        1380
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "boolean": [],
+          "number": [
+            {
+              "name": "prop2",
+              "value": 2
+            },
+            {
+              "name": "prop3",
+              "value": -2
+            },
+            {
+              "name": "prop4",
+              "value": -3
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Set6",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        400,
+        1440
+      ]
+    },
+    {
+      "parameters": {
+        "functionCode": "testData= JSON.stringify({prop1:1,prop3:-1});\n\nif(JSON.stringify(items[0].json) !== testData){\n  throw new Error('Error in Merge node : keepKeyMatches');\n}\nreturn items;"
+      },
+      "name": "Function5",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        750,
+        1380
+      ],
+      "notesInFlow": true,
+      "notes": "Verify mergeByKey operation"
+    },
+    {
+      "parameters": {
+        "values": {
+          "boolean": [],
+          "number": [
+            {
+              "name": "prop1",
+              "value": 1
+            },
+            {
+              "name": "prop3",
+              "value": -1
+            }
+          ],
+          "string": []
+        },
+        "options": {}
+      },
+      "name": "Set7",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        400,
+        1290
+      ]
+    },
+    {
+      "parameters": {
+        "functionCode": "testData= JSON.stringify({prop1:1,prop3:-1});\n\nif(JSON.stringify(items[0].json) !== testData){\n  throw new Error('Error in Merge node : keepKeyMatches');\n}\nreturn items;"
+      },
+      "name": "Function6",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        750,
+        1230
+      ],
+      "notesInFlow": true,
+      "notes": "Verify mergeByKey operation"
+    },
+    {
+      "parameters": {
+        "mode": "mergeByKey",
+        "propertyName1": "prop3",
+        "propertyName2": "prop4",
+        "overwrite": "blank"
+      },
+      "name": "Merge6",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 1,
+      "position": [
+        580,
+        1230
+      ]
+    },
+    {
+      "parameters": {
+        "functionCode": "testData= JSON.stringify({prop1:1,prop3:-1});\n\nif(JSON.stringify(items[0].json) !== testData){\n  throw new Error('Error in Merge node : keepKeyMatches');\n}\nreturn items;"
+      },
+      "name": "Function7",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        750,
+        1530
+      ],
+      "notesInFlow": true,
+      "notes": "Verify mergeByKey operation"
+    },
+    {
+      "parameters": {
+        "mode": "mergeByKey",
+        "propertyName1": "prop3",
+        "propertyName2": "prop4",
+        "overwrite": "undefined"
+      },
+      "name": "Merge7",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 1,
+      "position": [
+        580,
+        1530
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "multiplex"
+      },
+      "name": "Merge8",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 1,
+      "position": [
+        580,
+        1780
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "boolean": [],
+          "number": [
+            {
+              "name": "prop3",
+              "value": 2
+            },
+            {
+              "name": "prop4",
+              "value": -4
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Set8",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        430,
+        1850
+      ]
+    },
+    {
+      "parameters": {
+        "functionCode": "testData= JSON.stringify({prop1: 1,prop2: -1,prop3: 2,prop4: -4});\n\nif(JSON.stringify(items[0].json) !== testData){\n  throw new Error('Error in Merge node : multiplex');\n}\nreturn items;"
+      },
+      "name": "Function8",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        780,
+        1780
+      ],
+      "notesInFlow": true,
+      "notes": "Verify multiplex operation"
+    },
+    {
+      "parameters": {
+        "values": {
+          "boolean": [],
+          "number": [
+            {
+              "name": "prop1",
+              "value": 1
+            },
+            {
+              "name": "prop2",
+              "value": -1
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Set9",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        430,
+        1700
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "passThrough"
+      },
+      "name": "Merge9",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 1,
+      "position": [
+        590,
+        2080
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "boolean": [],
+          "number": [
+            {
+              "name": "prop3",
+              "value": 2
+            },
+            {
+              "name": "prop4",
+              "value": -4
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Set10",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        440,
+        2150
+      ]
+    },
+    {
+      "parameters": {
+        "functionCode": "testData= JSON.stringify({prop1: 1,prop2: -1});\n\nif(JSON.stringify(items[0].json) !== testData){\n  throw new Error('Error in Merge node : passThrough');\n}\nreturn items;"
+      },
+      "name": "Function9",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        790,
+        2080
+      ],
+      "notesInFlow": true,
+      "notes": "Verify passThrough operation"
+    },
+    {
+      "parameters": {
+        "values": {
+          "boolean": [],
+          "number": [
+            {
+              "name": "prop1",
+              "value": 1
+            },
+            {
+              "name": "prop2",
+              "value": -1
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Set11",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        440,
+        2000
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "removeKeyMatches",
+        "propertyName1": "prop1",
+        "propertyName2": "prop3"
+      },
+      "name": "Merge10",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 1,
+      "position": [
+        600,
+        2380
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "boolean": [],
+          "number": [
+            {
+              "name": "prop3",
+              "value": 2
+            },
+            {
+              "name": "prop4",
+              "value": -4
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Set12",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        450,
+        2450
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "boolean": [],
+          "number": [
+            {
+              "name": "prop1",
+              "value": 1
+            },
+            {
+              "name": "prop2",
+              "value": -1
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Set13",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        450,
+        2300
+      ]
+    },
+    {
+      "parameters": {
+        "functionCode": "testData= JSON.stringify({prop1: 1,prop2: -1});\n\nif(JSON.stringify(items[0].json) !== testData){\n  throw new Error('Error in Merge node : removeKeyMatches');\n}\nreturn items;"
+      },
+      "name": "Function10",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        800,
+        2380
+      ],
+      "notesInFlow": true,
+      "notes": "Verify removeKeyMatches operation"
+    },
+    {
+      "parameters": {
+        "functionCode": "items = [{\n    json:{\n        title:'Input1item1'\n    }\n},{\n    json:{\n        title:'Input1item2'\n    }\n},{\n    json:{\n        title:'Input1item3'\n    }\n}]\nreturn items;"
+      },
+      "name": "Function11",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        430,
+        810
+      ],
+      "notesInFlow": true,
+      "notes": "Input 1"
+    },
+    {
+      "parameters": {
+        "functionCode": "items = [{\n    json:{\n        title:'Input2item1'\n    }\n},{\n    json:{\n        title:'Input2item2'\n    }\n},{\n    json:{\n        title:'Input2item3'\n    }\n},{\n    json:{\n        title:'Input2item4'\n    }\n}]\nreturn items;"
+      },
+      "name": "Function12",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        430,
+        960
+      ],
+      "notesInFlow": true,
+      "notes": "Input 2"
+    }
+  ],
+  "connections": {
+    "Merge": {
+      "main": [
+        [
+          {
+            "node": "Function",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set1": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Set": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge1": {
+      "main": [
+        [
+          {
+            "node": "Function1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set2": {
+      "main": [
+        [
+          {
+            "node": "Merge1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set3": {
+      "main": [
+        [
+          {
+            "node": "Merge1",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Merge2": {
+      "main": [
+        [
+          {
+            "node": "Function2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge3": {
+      "main": [
+        [
+          {
+            "node": "Function3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge4": {
+      "main": [
+        [
+          {
+            "node": "Function4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge5": {
+      "main": [
+        [
+          {
+            "node": "Function5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set6": {
+      "main": [
+        [
+          {
+            "node": "Merge5",
+            "type": "main",
+            "index": 1
+          },
+          {
+            "node": "Merge6",
+            "type": "main",
+            "index": 1
+          },
+          {
+            "node": "Merge7",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Set7": {
+      "main": [
+        [
+          {
+            "node": "Merge5",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Merge6",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Merge7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge6": {
+      "main": [
+        [
+          {
+            "node": "Function6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge7": {
+      "main": [
+        [
+          {
+            "node": "Function7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge8": {
+      "main": [
+        [
+          {
+            "node": "Function8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set8": {
+      "main": [
+        [
+          {
+            "node": "Merge8",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Set9": {
+      "main": [
+        [
+          {
+            "node": "Merge8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge9": {
+      "main": [
+        [
+          {
+            "node": "Function9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set10": {
+      "main": [
+        [
+          {
+            "node": "Merge9",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Set11": {
+      "main": [
+        [
+          {
+            "node": "Merge9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge10": {
+      "main": [
+        [
+          {
+            "node": "Function10",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set12": {
+      "main": [
+        [
+          {
+            "node": "Merge10",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Set13": {
+      "main": [
+        [
+          {
+            "node": "Merge10",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Set",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Set1",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Set2",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Set3",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Set7",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Set6",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Set9",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Set8",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Set11",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Set10",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Set13",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Set12",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Function11",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Function12",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Function11": {
+      "main": [
+        [
+          {
+            "node": "Merge3",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Merge2",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Merge4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Function12": {
+      "main": [
+        [
+          {
+            "node": "Merge3",
+            "type": "main",
+            "index": 1
+          },
+          {
+            "node": "Merge2",
+            "type": "main",
+            "index": 1
+          },
+          {
+            "node": "Merge4",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-03-04T16:23:06.210Z",
+  "updatedAt": "2021-03-04T17:33:16.605Z",
+  "settings": {},
+  "staticData": null
+}
