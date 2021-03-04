@@ -1,0 +1,123 @@
+{
+  "id": 105,
+  "name": "WriteBinaryFile",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "fileName": "/tmp/test_write_binary_file.txt"
+      },
+      "name": "Write Binary File",
+      "type": "n8n-nodes-base.writeBinaryFile",
+      "typeVersion": 1,
+      "position": [
+        650,
+        300
+      ],
+      "notesInFlow": true,
+      "notes": "Write binary file in /tmp directory"
+    },
+    {
+      "parameters": {
+        "filePath": "/tmp/test_write_binary_file.txt"
+      },
+      "name": "Read Binary File",
+      "type": "n8n-nodes-base.readBinaryFile",
+      "typeVersion": 1,
+      "position": [
+        850,
+        300
+      ],
+      "notesInFlow": true,
+      "notes": "Read file data"
+    },
+    {
+      "parameters": {
+        "functionCode": "items = [\n{\njson:{},\nbinary: {\n\tdata: {\n\t\tdata: 'VGVzdCBXcml0ZSBCaW5hcnkgRmlsZSBub2Rl',\n\t\tfileExtension: 'txt', \n\t\tfileName: 'file.txt', \n\t}\n}\n}\n\n];\nreturn items;"
+      },
+      "name": "Function",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        460,
+        300
+      ],
+      "notesInFlow": true,
+      "notes": "Prepare file data"
+    },
+    {
+      "parameters": {
+        "functionCode": "testData ='VGVzdCBXcml0ZSBCaW5hcnkgRmlsZSBub2Rl';\n\nif(items[0].binary.data.data !== testData){\n  throw new Error('Error in Write Binary File node');\n}\nreturn items;"
+      },
+      "name": "Function1",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        1020,
+        300
+      ],
+      "notesInFlow": true,
+      "notes": "Verify file data"
+    }
+  ],
+  "connections": {
+    "Write Binary File": {
+      "main": [
+        [
+          {
+            "node": "Read Binary File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Function": {
+      "main": [
+        [
+          {
+            "node": "Write Binary File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Function",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read Binary File": {
+      "main": [
+        [
+          {
+            "node": "Function1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-03-04T13:31:56.288Z",
+  "updatedAt": "2021-03-04T13:31:56.288Z",
+  "settings": {},
+  "staticData": null
+}
