@@ -1,0 +1,143 @@
+{
+  "id": 98,
+  "name": "Disqus:Forum:get getCategories getThreads getPosts",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "id": "disqus-demo-page",
+        "additionalFields": {}
+      },
+      "name": "Disqus",
+      "type": "n8n-nodes-base.disqus",
+      "typeVersion": 1,
+      "position": [
+        500,
+        300
+      ],
+      "credentials": {
+        "disqusApi": "Disqus token"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getCategories",
+        "id": "disqus-demo-page",
+        "limit": 1,
+        "additionalFields": {
+          "order": "asc"
+        }
+      },
+      "name": "Disqus1",
+      "type": "n8n-nodes-base.disqus",
+      "typeVersion": 1,
+      "position": [
+        650,
+        300
+      ],
+      "credentials": {
+        "disqusApi": "Disqus token"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getThreads",
+        "id": "disqus-demo-page",
+        "limit": 1,
+        "additionalFields": {
+          "order": "desc"
+        }
+      },
+      "name": "Disqus2",
+      "type": "n8n-nodes-base.disqus",
+      "typeVersion": 1,
+      "position": [
+        800,
+        300
+      ],
+      "credentials": {
+        "disqusApi": "Disqus token"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getPosts",
+        "id": "disqus-demo-page",
+        "limit": 1,
+        "additionalFields": {
+          "order": "desc"
+        }
+      },
+      "name": "Disqus3",
+      "type": "n8n-nodes-base.disqus",
+      "typeVersion": 1,
+      "position": [
+        950,
+        300
+      ],
+      "credentials": {
+        "disqusApi": "Disqus token"
+      }
+    }
+  ],
+  "connections": {
+    "Disqus2": {
+      "main": [
+        [
+          {
+            "node": "Disqus3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Disqus1": {
+      "main": [
+        [
+          {
+            "node": "Disqus2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Disqus": {
+      "main": [
+        [
+          {
+            "node": "Disqus1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Disqus",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-03-04T08:38:05.147Z",
+  "updatedAt": "2021-03-04T08:38:05.147Z",
+  "settings": {},
+  "staticData": null
+}
