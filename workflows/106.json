@@ -1,0 +1,338 @@
+{
+  "id": 106,
+  "name": "Box:Folder:create search delete:File:upload get download copy search delete",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "folder",
+        "name": "=Folder{{Date.now()}}",
+        "options": {}
+      },
+      "name": "Box",
+      "type": "n8n-nodes-base.box",
+      "typeVersion": 1,
+      "position": [
+        500,
+        300
+      ],
+      "credentials": {
+        "boxOAuth2Api": "Box OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "folder",
+        "operation": "search",
+        "query": "folder",
+        "limit": 1,
+        "additionalFields": {}
+      },
+      "name": "Box1",
+      "type": "n8n-nodes-base.box",
+      "typeVersion": 1,
+      "position": [
+        1850,
+        300
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "boxOAuth2Api": "Box OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "folder",
+        "operation": "delete",
+        "folderId": "={{$node[\"Box\"].json[\"id\"]}}"
+      },
+      "name": "Box2",
+      "type": "n8n-nodes-base.box",
+      "typeVersion": 1,
+      "position": [
+        2000,
+        300
+      ],
+      "credentials": {
+        "boxOAuth2Api": "Box OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "fileName": "=logo{{Date.now()}}.png",
+        "binaryData": true,
+        "parentId": "={{$node[\"Box\"].json[\"id\"]}}"
+      },
+      "name": "Box3",
+      "type": "n8n-nodes-base.box",
+      "typeVersion": 1,
+      "position": [
+        800,
+        400
+      ],
+      "credentials": {
+        "boxOAuth2Api": "Box OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "filePath": "../../../assets/n8n-screenshot.png"
+      },
+      "name": "Read Binary File",
+      "type": "n8n-nodes-base.readBinaryFile",
+      "typeVersion": 1,
+      "position": [
+        650,
+        400
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "fileId": "={{$node[\"Box3\"].json[\"id\"]}}",
+        "additionalFields": {}
+      },
+      "name": "Box4",
+      "type": "n8n-nodes-base.box",
+      "typeVersion": 1,
+      "position": [
+        950,
+        400
+      ],
+      "credentials": {
+        "boxOAuth2Api": "Box OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "download",
+        "fileId": "={{$node[\"Box3\"].json[\"id\"]}}"
+      },
+      "name": "Box5",
+      "type": "n8n-nodes-base.box",
+      "typeVersion": 1,
+      "position": [
+        1100,
+        400
+      ],
+      "credentials": {
+        "boxOAuth2Api": "Box OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "copy",
+        "fileId": "={{$node[\"Box3\"].json[\"id\"]}}",
+        "parentId": "={{$node[\"Box\"].json[\"id\"]}}",
+        "additionalFields": {
+          "name": "=Copied-logo{{Date.now()}}.png"
+        }
+      },
+      "name": "Box6",
+      "type": "n8n-nodes-base.box",
+      "typeVersion": 1,
+      "position": [
+        1250,
+        400
+      ],
+      "credentials": {
+        "boxOAuth2Api": "Box OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "search",
+        "query": "logo",
+        "limit": 1,
+        "additionalFields": {
+          "file_extensions": "png"
+        }
+      },
+      "name": "Box7",
+      "type": "n8n-nodes-base.box",
+      "typeVersion": 1,
+      "position": [
+        1400,
+        400
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "boxOAuth2Api": "Box OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "fileId": "={{$node[\"Box3\"].json[\"id\"]}}"
+      },
+      "name": "Box8",
+      "type": "n8n-nodes-base.box",
+      "typeVersion": 1,
+      "position": [
+        1550,
+        400
+      ],
+      "credentials": {
+        "boxOAuth2Api": "Box OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "fileId": "={{$node[\"Box6\"].json[\"id\"]}}"
+      },
+      "name": "Box10",
+      "type": "n8n-nodes-base.box",
+      "typeVersion": 1,
+      "position": [
+        1700,
+        400
+      ],
+      "credentials": {
+        "boxOAuth2Api": "Box OAuth2 creds"
+      }
+    }
+  ],
+  "connections": {
+    "Box": {
+      "main": [
+        [
+          {
+            "node": "Read Binary File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Box1": {
+      "main": [
+        [
+          {
+            "node": "Box2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Box3": {
+      "main": [
+        [
+          {
+            "node": "Box4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read Binary File": {
+      "main": [
+        [
+          {
+            "node": "Box3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Box4": {
+      "main": [
+        [
+          {
+            "node": "Box5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Box5": {
+      "main": [
+        [
+          {
+            "node": "Box6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Box6": {
+      "main": [
+        [
+          {
+            "node": "Box7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Box7": {
+      "main": [
+        [
+          {
+            "node": "Box8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Box8": {
+      "main": [
+        [
+          {
+            "node": "Box10",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Box2": {
+      "main": [
+        []
+      ]
+    },
+    "Box10": {
+      "main": [
+        [
+          {
+            "node": "Box1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Box",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-03-04T14:19:59.064Z",
+  "updatedAt": "2021-03-04T14:19:59.064Z",
+  "settings": {},
+  "staticData": null
+}
