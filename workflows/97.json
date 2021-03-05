@@ -1,0 +1,528 @@
+{
+  "id": 97,
+  "name": "Crypto",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        270,
+        340
+      ]
+    },
+    {
+      "parameters": {
+        "type": "SHA256",
+        "value": "n8n"
+      },
+      "name": "Crypto1",
+      "type": "n8n-nodes-base.crypto",
+      "typeVersion": 1,
+      "position": [
+        650,
+        170
+      ]
+    },
+    {
+      "parameters": {
+        "type": "SHA384",
+        "value": "n8n"
+      },
+      "name": "Crypto2",
+      "type": "n8n-nodes-base.crypto",
+      "typeVersion": 1,
+      "position": [
+        800,
+        170
+      ]
+    },
+    {
+      "parameters": {
+        "type": "SHA512",
+        "value": "n8n"
+      },
+      "name": "Crypto3",
+      "type": "n8n-nodes-base.crypto",
+      "typeVersion": 1,
+      "position": [
+        950,
+        170
+      ]
+    },
+    {
+      "parameters": {
+        "functionCode": "testData = ['5877e26c078d6409fde54d508bf25721','636396f02b6571e40d8fe91cba550515c0cdc0e7d314c210e00b02256375a796','c7049c8950ea211bec236edffb37cbecf2aa338443c5e048c1cbb4e2ee20eb60fa9a1d34699d7a86e7362b010bb4ffe7','a8a7eec953f1f31484a479c84982d52847de602d7f220ac3903518369a7536693d60882e5eb782599e72024fb649cc03aa0a19ebce632e9039b4f604335834af']\n\nfor(let i=0;i<4;i++){\n  if($node[`Crypto${i}`].json['data'] !== testData[i]){\n    throw new Error(`Error in HASH: ${$node[`Crypto${i}`].parameter[\"type\"]} operation`);\n  }\n}\nreturn items;"
+      },
+      "name": "Function",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        1150,
+        170
+      ],
+      "notesInFlow": true,
+      "notes": "Verify hash values"
+    },
+    {
+      "parameters": {
+        "value": "n8n"
+      },
+      "name": "Crypto0",
+      "type": "n8n-nodes-base.crypto",
+      "typeVersion": 1,
+      "position": [
+        500,
+        170
+      ]
+    },
+    {
+      "parameters": {
+        "action": "hmac",
+        "value": "n8n",
+        "secret": "secrect"
+      },
+      "name": "Crypto4",
+      "type": "n8n-nodes-base.crypto",
+      "typeVersion": 1,
+      "position": [
+        500,
+        320
+      ]
+    },
+    {
+      "parameters": {
+        "action": "hmac",
+        "type": "SHA256",
+        "value": "n8n",
+        "secret": "secrect"
+      },
+      "name": "Crypto5",
+      "type": "n8n-nodes-base.crypto",
+      "typeVersion": 1,
+      "position": [
+        650,
+        320
+      ]
+    },
+    {
+      "parameters": {
+        "action": "hmac",
+        "type": "SHA384",
+        "value": "n8n",
+        "secret": "secrect"
+      },
+      "name": "Crypto6",
+      "type": "n8n-nodes-base.crypto",
+      "typeVersion": 1,
+      "position": [
+        800,
+        320
+      ]
+    },
+    {
+      "parameters": {
+        "action": "hmac",
+        "type": "SHA512",
+        "value": "n8n",
+        "secret": "secrect"
+      },
+      "name": "Crypto7",
+      "type": "n8n-nodes-base.crypto",
+      "typeVersion": 1,
+      "position": [
+        950,
+        320
+      ]
+    },
+    {
+      "parameters": {
+        "functionCode": "testData = ['3fb7c95bca84c0bf49045b4e6a279dc0','a8066096944b87daa8d0459629d8f3958d35fa453c310e7370b619d0b81ce48e','08bec8212275cd79a1c6bf52cad5b31ccd46ec87c7a8a9d1c8589c816f8a7124313528040b138229e15c32c1b3c82b80','0f53f3a374314123991b32e47159ad44e1c61d1c0e96809c1f19d54a5e955c06d5b633f376f2a8419e36ea4b63346fcb39d389714c344771140fd512ac55723a']\n\nfor(let i=4;i<8;i++){\n  if($node[`Crypto${i}`].json['data'] !== testData[i-4]){\n    throw new Error(`Error in Hmac: ${$node[`Crypto${i}`].parameter[\"type\"]} operation`);\n  }\n}\nreturn items;"
+      },
+      "name": "Function1",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        1150,
+        320
+      ],
+      "notesInFlow": true,
+      "notes": "Verify hmac values"
+    },
+    {
+      "parameters": {
+        "action": "sign",
+        "value": "n8n",
+        "algorithm": "md4",
+        "privateKey": "-----BEGIN RSA PRIVATE KEY-----\nMIICXAIBAAKBgQDuY4lRGHHAW9mXYY57m/CUzM4zqQ1e0W9D3e76YpipgF6rWtUn\nS8aSD+DxGxp4MldazZTwPPcpJHcV/Hr3A/KezsY9aOpXdnUdquV85969OgyGCRJk\nBv2gowSGfy4ueomfm4PFTPF0anPir+X1IZzAyzO6igL5ZE0Y5rcVrOgLKwIDAQAB\nAoGARfQ4he8d5jwt0HHkzVoX0Zp+AgPgNAxSUcCNEbWgJdFRNoh7l0HxvcfiEu6I\nqG/hWXiNdaf2QYD9XxrNfLIQXj+2MVOh4wpeqbO1DlqiGa9J8y7rLOVO+64ODXGt\nbZns6kcWLx8gYnhwqIJHnqfzvAsFjEKuKiSxpyeK8EvjDW0CQQD91J9DzhSXyvwE\nNaZT4Y9BcEbazVv+xUVhkSs7WRWStimeb57eIrIcXPE9heiT+6QpAnm6EZQR7RWN\n48PiAfbnAkEA8G0gwMWsnpmtb9VbF2uuQxs4Bw5Nuzb6l/+0zTqMELSVCaHIGnxk\nkV08NHfnck1jp1RU9MiUFI1yfRrN6vz1HQJBAMWQ8w3Rn1Gumo2kPHvZeqlSfLPd\nV5drcF9KoL2mzxXMV4SMGLmJg9xzswlR6v8TxGhvFtPuzrNNN5OjDlohcU0CQBOC\nZ3P9FmLQSZiXkYq2/C8J2GQKLxiP/4myADPfGlqIrMdZT2mGyopZLHd9e1R1Hy8G\n0tYCKLH6QF4SfL8iw6kCQCV81eZ/3JthrEfsIMv9lxvTLaRrprI5Eei8Rl+cFhNH\nziv/tOUxppOn1SkHvxXni5F5dbNR9u4mjaCLDau+qIg=\n-----END RSA PRIVATE KEY-----"
+      },
+      "name": "Crypto8",
+      "type": "n8n-nodes-base.crypto",
+      "typeVersion": 1,
+      "position": [
+        500,
+        470
+      ],
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "action": "sign",
+        "value": "n8n",
+        "algorithm": "md5",
+        "privateKey": "-----BEGIN RSA PRIVATE KEY-----\nMIICXAIBAAKBgQDuY4lRGHHAW9mXYY57m/CUzM4zqQ1e0W9D3e76YpipgF6rWtUn\nS8aSD+DxGxp4MldazZTwPPcpJHcV/Hr3A/KezsY9aOpXdnUdquV85969OgyGCRJk\nBv2gowSGfy4ueomfm4PFTPF0anPir+X1IZzAyzO6igL5ZE0Y5rcVrOgLKwIDAQAB\nAoGARfQ4he8d5jwt0HHkzVoX0Zp+AgPgNAxSUcCNEbWgJdFRNoh7l0HxvcfiEu6I\nqG/hWXiNdaf2QYD9XxrNfLIQXj+2MVOh4wpeqbO1DlqiGa9J8y7rLOVO+64ODXGt\nbZns6kcWLx8gYnhwqIJHnqfzvAsFjEKuKiSxpyeK8EvjDW0CQQD91J9DzhSXyvwE\nNaZT4Y9BcEbazVv+xUVhkSs7WRWStimeb57eIrIcXPE9heiT+6QpAnm6EZQR7RWN\n48PiAfbnAkEA8G0gwMWsnpmtb9VbF2uuQxs4Bw5Nuzb6l/+0zTqMELSVCaHIGnxk\nkV08NHfnck1jp1RU9MiUFI1yfRrN6vz1HQJBAMWQ8w3Rn1Gumo2kPHvZeqlSfLPd\nV5drcF9KoL2mzxXMV4SMGLmJg9xzswlR6v8TxGhvFtPuzrNNN5OjDlohcU0CQBOC\nZ3P9FmLQSZiXkYq2/C8J2GQKLxiP/4myADPfGlqIrMdZT2mGyopZLHd9e1R1Hy8G\n0tYCKLH6QF4SfL8iw6kCQCV81eZ/3JthrEfsIMv9lxvTLaRrprI5Eei8Rl+cFhNH\nziv/tOUxppOn1SkHvxXni5F5dbNR9u4mjaCLDau+qIg=\n-----END RSA PRIVATE KEY-----"
+      },
+      "name": "Crypto9",
+      "type": "n8n-nodes-base.crypto",
+      "typeVersion": 1,
+      "position": [
+        650,
+        470
+      ],
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "action": "sign",
+        "value": "n8n",
+        "algorithm": "mdc2",
+        "privateKey": "-----BEGIN RSA PRIVATE KEY-----\nMIICXAIBAAKBgQDuY4lRGHHAW9mXYY57m/CUzM4zqQ1e0W9D3e76YpipgF6rWtUn\nS8aSD+DxGxp4MldazZTwPPcpJHcV/Hr3A/KezsY9aOpXdnUdquV85969OgyGCRJk\nBv2gowSGfy4ueomfm4PFTPF0anPir+X1IZzAyzO6igL5ZE0Y5rcVrOgLKwIDAQAB\nAoGARfQ4he8d5jwt0HHkzVoX0Zp+AgPgNAxSUcCNEbWgJdFRNoh7l0HxvcfiEu6I\nqG/hWXiNdaf2QYD9XxrNfLIQXj+2MVOh4wpeqbO1DlqiGa9J8y7rLOVO+64ODXGt\nbZns6kcWLx8gYnhwqIJHnqfzvAsFjEKuKiSxpyeK8EvjDW0CQQD91J9DzhSXyvwE\nNaZT4Y9BcEbazVv+xUVhkSs7WRWStimeb57eIrIcXPE9heiT+6QpAnm6EZQR7RWN\n48PiAfbnAkEA8G0gwMWsnpmtb9VbF2uuQxs4Bw5Nuzb6l/+0zTqMELSVCaHIGnxk\nkV08NHfnck1jp1RU9MiUFI1yfRrN6vz1HQJBAMWQ8w3Rn1Gumo2kPHvZeqlSfLPd\nV5drcF9KoL2mzxXMV4SMGLmJg9xzswlR6v8TxGhvFtPuzrNNN5OjDlohcU0CQBOC\nZ3P9FmLQSZiXkYq2/C8J2GQKLxiP/4myADPfGlqIrMdZT2mGyopZLHd9e1R1Hy8G\n0tYCKLH6QF4SfL8iw6kCQCV81eZ/3JthrEfsIMv9lxvTLaRrprI5Eei8Rl+cFhNH\nziv/tOUxppOn1SkHvxXni5F5dbNR9u4mjaCLDau+qIg=\n-----END RSA PRIVATE KEY-----"
+      },
+      "name": "Crypto10",
+      "type": "n8n-nodes-base.crypto",
+      "typeVersion": 1,
+      "position": [
+        800,
+        470
+      ],
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "action": "sign",
+        "value": "n8n",
+        "algorithm": "ripemd",
+        "privateKey": "-----BEGIN RSA PRIVATE KEY-----\nMIICXAIBAAKBgQDuY4lRGHHAW9mXYY57m/CUzM4zqQ1e0W9D3e76YpipgF6rWtUn\nS8aSD+DxGxp4MldazZTwPPcpJHcV/Hr3A/KezsY9aOpXdnUdquV85969OgyGCRJk\nBv2gowSGfy4ueomfm4PFTPF0anPir+X1IZzAyzO6igL5ZE0Y5rcVrOgLKwIDAQAB\nAoGARfQ4he8d5jwt0HHkzVoX0Zp+AgPgNAxSUcCNEbWgJdFRNoh7l0HxvcfiEu6I\nqG/hWXiNdaf2QYD9XxrNfLIQXj+2MVOh4wpeqbO1DlqiGa9J8y7rLOVO+64ODXGt\nbZns6kcWLx8gYnhwqIJHnqfzvAsFjEKuKiSxpyeK8EvjDW0CQQD91J9DzhSXyvwE\nNaZT4Y9BcEbazVv+xUVhkSs7WRWStimeb57eIrIcXPE9heiT+6QpAnm6EZQR7RWN\n48PiAfbnAkEA8G0gwMWsnpmtb9VbF2uuQxs4Bw5Nuzb6l/+0zTqMELSVCaHIGnxk\nkV08NHfnck1jp1RU9MiUFI1yfRrN6vz1HQJBAMWQ8w3Rn1Gumo2kPHvZeqlSfLPd\nV5drcF9KoL2mzxXMV4SMGLmJg9xzswlR6v8TxGhvFtPuzrNNN5OjDlohcU0CQBOC\nZ3P9FmLQSZiXkYq2/C8J2GQKLxiP/4myADPfGlqIrMdZT2mGyopZLHd9e1R1Hy8G\n0tYCKLH6QF4SfL8iw6kCQCV81eZ/3JthrEfsIMv9lxvTLaRrprI5Eei8Rl+cFhNH\nziv/tOUxppOn1SkHvxXni5F5dbNR9u4mjaCLDau+qIg=\n-----END RSA PRIVATE KEY-----"
+      },
+      "name": "Crypto11",
+      "type": "n8n-nodes-base.crypto",
+      "typeVersion": 1,
+      "position": [
+        950,
+        470
+      ],
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "action": "sign",
+        "value": "n8n",
+        "algorithm": "ripemd160",
+        "privateKey": "-----BEGIN RSA PRIVATE KEY-----\nMIICXAIBAAKBgQDuY4lRGHHAW9mXYY57m/CUzM4zqQ1e0W9D3e76YpipgF6rWtUn\nS8aSD+DxGxp4MldazZTwPPcpJHcV/Hr3A/KezsY9aOpXdnUdquV85969OgyGCRJk\nBv2gowSGfy4ueomfm4PFTPF0anPir+X1IZzAyzO6igL5ZE0Y5rcVrOgLKwIDAQAB\nAoGARfQ4he8d5jwt0HHkzVoX0Zp+AgPgNAxSUcCNEbWgJdFRNoh7l0HxvcfiEu6I\nqG/hWXiNdaf2QYD9XxrNfLIQXj+2MVOh4wpeqbO1DlqiGa9J8y7rLOVO+64ODXGt\nbZns6kcWLx8gYnhwqIJHnqfzvAsFjEKuKiSxpyeK8EvjDW0CQQD91J9DzhSXyvwE\nNaZT4Y9BcEbazVv+xUVhkSs7WRWStimeb57eIrIcXPE9heiT+6QpAnm6EZQR7RWN\n48PiAfbnAkEA8G0gwMWsnpmtb9VbF2uuQxs4Bw5Nuzb6l/+0zTqMELSVCaHIGnxk\nkV08NHfnck1jp1RU9MiUFI1yfRrN6vz1HQJBAMWQ8w3Rn1Gumo2kPHvZeqlSfLPd\nV5drcF9KoL2mzxXMV4SMGLmJg9xzswlR6v8TxGhvFtPuzrNNN5OjDlohcU0CQBOC\nZ3P9FmLQSZiXkYq2/C8J2GQKLxiP/4myADPfGlqIrMdZT2mGyopZLHd9e1R1Hy8G\n0tYCKLH6QF4SfL8iw6kCQCV81eZ/3JthrEfsIMv9lxvTLaRrprI5Eei8Rl+cFhNH\nziv/tOUxppOn1SkHvxXni5F5dbNR9u4mjaCLDau+qIg=\n-----END RSA PRIVATE KEY-----"
+      },
+      "name": "Crypto12",
+      "type": "n8n-nodes-base.crypto",
+      "typeVersion": 1,
+      "position": [
+        1100,
+        470
+      ],
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "action": "sign",
+        "value": "n8n",
+        "algorithm": "rmd160",
+        "privateKey": "-----BEGIN RSA PRIVATE KEY-----\nMIICXAIBAAKBgQDuY4lRGHHAW9mXYY57m/CUzM4zqQ1e0W9D3e76YpipgF6rWtUn\nS8aSD+DxGxp4MldazZTwPPcpJHcV/Hr3A/KezsY9aOpXdnUdquV85969OgyGCRJk\nBv2gowSGfy4ueomfm4PFTPF0anPir+X1IZzAyzO6igL5ZE0Y5rcVrOgLKwIDAQAB\nAoGARfQ4he8d5jwt0HHkzVoX0Zp+AgPgNAxSUcCNEbWgJdFRNoh7l0HxvcfiEu6I\nqG/hWXiNdaf2QYD9XxrNfLIQXj+2MVOh4wpeqbO1DlqiGa9J8y7rLOVO+64ODXGt\nbZns6kcWLx8gYnhwqIJHnqfzvAsFjEKuKiSxpyeK8EvjDW0CQQD91J9DzhSXyvwE\nNaZT4Y9BcEbazVv+xUVhkSs7WRWStimeb57eIrIcXPE9heiT+6QpAnm6EZQR7RWN\n48PiAfbnAkEA8G0gwMWsnpmtb9VbF2uuQxs4Bw5Nuzb6l/+0zTqMELSVCaHIGnxk\nkV08NHfnck1jp1RU9MiUFI1yfRrN6vz1HQJBAMWQ8w3Rn1Gumo2kPHvZeqlSfLPd\nV5drcF9KoL2mzxXMV4SMGLmJg9xzswlR6v8TxGhvFtPuzrNNN5OjDlohcU0CQBOC\nZ3P9FmLQSZiXkYq2/C8J2GQKLxiP/4myADPfGlqIrMdZT2mGyopZLHd9e1R1Hy8G\n0tYCKLH6QF4SfL8iw6kCQCV81eZ/3JthrEfsIMv9lxvTLaRrprI5Eei8Rl+cFhNH\nziv/tOUxppOn1SkHvxXni5F5dbNR9u4mjaCLDau+qIg=\n-----END RSA PRIVATE KEY-----"
+      },
+      "name": "Crypto13",
+      "type": "n8n-nodes-base.crypto",
+      "typeVersion": 1,
+      "position": [
+        1250,
+        470
+      ],
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "action": "sign",
+        "value": "n8n",
+        "algorithm": "sha1",
+        "privateKey": "-----BEGIN RSA PRIVATE KEY-----\nMIICXAIBAAKBgQDuY4lRGHHAW9mXYY57m/CUzM4zqQ1e0W9D3e76YpipgF6rWtUn\nS8aSD+DxGxp4MldazZTwPPcpJHcV/Hr3A/KezsY9aOpXdnUdquV85969OgyGCRJk\nBv2gowSGfy4ueomfm4PFTPF0anPir+X1IZzAyzO6igL5ZE0Y5rcVrOgLKwIDAQAB\nAoGARfQ4he8d5jwt0HHkzVoX0Zp+AgPgNAxSUcCNEbWgJdFRNoh7l0HxvcfiEu6I\nqG/hWXiNdaf2QYD9XxrNfLIQXj+2MVOh4wpeqbO1DlqiGa9J8y7rLOVO+64ODXGt\nbZns6kcWLx8gYnhwqIJHnqfzvAsFjEKuKiSxpyeK8EvjDW0CQQD91J9DzhSXyvwE\nNaZT4Y9BcEbazVv+xUVhkSs7WRWStimeb57eIrIcXPE9heiT+6QpAnm6EZQR7RWN\n48PiAfbnAkEA8G0gwMWsnpmtb9VbF2uuQxs4Bw5Nuzb6l/+0zTqMELSVCaHIGnxk\nkV08NHfnck1jp1RU9MiUFI1yfRrN6vz1HQJBAMWQ8w3Rn1Gumo2kPHvZeqlSfLPd\nV5drcF9KoL2mzxXMV4SMGLmJg9xzswlR6v8TxGhvFtPuzrNNN5OjDlohcU0CQBOC\nZ3P9FmLQSZiXkYq2/C8J2GQKLxiP/4myADPfGlqIrMdZT2mGyopZLHd9e1R1Hy8G\n0tYCKLH6QF4SfL8iw6kCQCV81eZ/3JthrEfsIMv9lxvTLaRrprI5Eei8Rl+cFhNH\nziv/tOUxppOn1SkHvxXni5F5dbNR9u4mjaCLDau+qIg=\n-----END RSA PRIVATE KEY-----"
+      },
+      "name": "Crypto14",
+      "type": "n8n-nodes-base.crypto",
+      "typeVersion": 1,
+      "position": [
+        1400,
+        470
+      ],
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "action": "sign",
+        "value": "n8n",
+        "algorithm": "sha224",
+        "privateKey": "-----BEGIN RSA PRIVATE KEY-----\nMIICXAIBAAKBgQDuY4lRGHHAW9mXYY57m/CUzM4zqQ1e0W9D3e76YpipgF6rWtUn\nS8aSD+DxGxp4MldazZTwPPcpJHcV/Hr3A/KezsY9aOpXdnUdquV85969OgyGCRJk\nBv2gowSGfy4ueomfm4PFTPF0anPir+X1IZzAyzO6igL5ZE0Y5rcVrOgLKwIDAQAB\nAoGARfQ4he8d5jwt0HHkzVoX0Zp+AgPgNAxSUcCNEbWgJdFRNoh7l0HxvcfiEu6I\nqG/hWXiNdaf2QYD9XxrNfLIQXj+2MVOh4wpeqbO1DlqiGa9J8y7rLOVO+64ODXGt\nbZns6kcWLx8gYnhwqIJHnqfzvAsFjEKuKiSxpyeK8EvjDW0CQQD91J9DzhSXyvwE\nNaZT4Y9BcEbazVv+xUVhkSs7WRWStimeb57eIrIcXPE9heiT+6QpAnm6EZQR7RWN\n48PiAfbnAkEA8G0gwMWsnpmtb9VbF2uuQxs4Bw5Nuzb6l/+0zTqMELSVCaHIGnxk\nkV08NHfnck1jp1RU9MiUFI1yfRrN6vz1HQJBAMWQ8w3Rn1Gumo2kPHvZeqlSfLPd\nV5drcF9KoL2mzxXMV4SMGLmJg9xzswlR6v8TxGhvFtPuzrNNN5OjDlohcU0CQBOC\nZ3P9FmLQSZiXkYq2/C8J2GQKLxiP/4myADPfGlqIrMdZT2mGyopZLHd9e1R1Hy8G\n0tYCKLH6QF4SfL8iw6kCQCV81eZ/3JthrEfsIMv9lxvTLaRrprI5Eei8Rl+cFhNH\nziv/tOUxppOn1SkHvxXni5F5dbNR9u4mjaCLDau+qIg=\n-----END RSA PRIVATE KEY-----"
+      },
+      "name": "Crypto15",
+      "type": "n8n-nodes-base.crypto",
+      "typeVersion": 1,
+      "position": [
+        1550,
+        470
+      ],
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "action": "sign",
+        "value": "n8n",
+        "algorithm": "sha256",
+        "privateKey": "-----BEGIN RSA PRIVATE KEY-----\nMIICXAIBAAKBgQDuY4lRGHHAW9mXYY57m/CUzM4zqQ1e0W9D3e76YpipgF6rWtUn\nS8aSD+DxGxp4MldazZTwPPcpJHcV/Hr3A/KezsY9aOpXdnUdquV85969OgyGCRJk\nBv2gowSGfy4ueomfm4PFTPF0anPir+X1IZzAyzO6igL5ZE0Y5rcVrOgLKwIDAQAB\nAoGARfQ4he8d5jwt0HHkzVoX0Zp+AgPgNAxSUcCNEbWgJdFRNoh7l0HxvcfiEu6I\nqG/hWXiNdaf2QYD9XxrNfLIQXj+2MVOh4wpeqbO1DlqiGa9J8y7rLOVO+64ODXGt\nbZns6kcWLx8gYnhwqIJHnqfzvAsFjEKuKiSxpyeK8EvjDW0CQQD91J9DzhSXyvwE\nNaZT4Y9BcEbazVv+xUVhkSs7WRWStimeb57eIrIcXPE9heiT+6QpAnm6EZQR7RWN\n48PiAfbnAkEA8G0gwMWsnpmtb9VbF2uuQxs4Bw5Nuzb6l/+0zTqMELSVCaHIGnxk\nkV08NHfnck1jp1RU9MiUFI1yfRrN6vz1HQJBAMWQ8w3Rn1Gumo2kPHvZeqlSfLPd\nV5drcF9KoL2mzxXMV4SMGLmJg9xzswlR6v8TxGhvFtPuzrNNN5OjDlohcU0CQBOC\nZ3P9FmLQSZiXkYq2/C8J2GQKLxiP/4myADPfGlqIrMdZT2mGyopZLHd9e1R1Hy8G\n0tYCKLH6QF4SfL8iw6kCQCV81eZ/3JthrEfsIMv9lxvTLaRrprI5Eei8Rl+cFhNH\nziv/tOUxppOn1SkHvxXni5F5dbNR9u4mjaCLDau+qIg=\n-----END RSA PRIVATE KEY-----"
+      },
+      "name": "Crypto16",
+      "type": "n8n-nodes-base.crypto",
+      "typeVersion": 1,
+      "position": [
+        1700,
+        470
+      ],
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "functionCode": "testData = [\n  '7a6a3a4e1207925bb77e2e5f4965c3a0de3dd6cab38b5f2d84526fe0c4bcffb1c037d7c00833e59c3c306cb0b8d21f00047f9aaf875a9098fe304bbda44440d453c6d99a19dad683b5767d7610e3e43ea7f8a5deddc30286397933ab77a7f85b64ead86b0783c7304c11a74cab2b19a4154f3635fa17fa74343a7c044b6e4572',\n  '9d0bc120a967882743370f715dfa90789c4d9322a4faf691d1f80b306c6bd900bfcba5f62946ef88ba7e1fdd008ff3efe8545b979299b14e0e0eccd3e33b1afa11397494526e31968f13d2ac3e3deaa2bc4a27862b7025444c91ebed5f1b98d2c0390630d8eabc6a7662a9ab069cb3aab273ae1c09f20f51fa8e04af4bcccbc6',\n  '569983d257842de8cf0c151d09ba5209400dd6313c2fca43d2192d80ace0e77f6bce31e5a657306a6ff10635eb9c5a46bbe8c3cabfdddedd44a2739a4dbac5f7c63c124cdb57e3b740d106ea4ce0c2b5454bb9d24a252950fb111b470047a3e6693220fafaf7fe0c9262c06c7f76838b5aa9ba624aba5f0e1ea40f996ac7c570',\n  '0b494c8146f7efd7aa53b418a7057a3a57317a0380c06c7d18114077a03fc6441b57ca8c03edff4ca6fdc2394d026893258b97d34bf0c5c44bc20bd264899eb1316da1e624db1455c73c9054ff732464f775b473b3ba67250ffd74ee42b1acfdf5539bf793d7002327d8d156424444624a625f8dd3f013d40a7ba7b6726186a9',\n  '0b494c8146f7efd7aa53b418a7057a3a57317a0380c06c7d18114077a03fc6441b57ca8c03edff4ca6fdc2394d026893258b97d34bf0c5c44bc20bd264899eb1316da1e624db1455c73c9054ff732464f775b473b3ba67250ffd74ee42b1acfdf5539bf793d7002327d8d156424444624a625f8dd3f013d40a7ba7b6726186a9',\n  '0b494c8146f7efd7aa53b418a7057a3a57317a0380c06c7d18114077a03fc6441b57ca8c03edff4ca6fdc2394d026893258b97d34bf0c5c44bc20bd264899eb1316da1e624db1455c73c9054ff732464f775b473b3ba67250ffd74ee42b1acfdf5539bf793d7002327d8d156424444624a625f8dd3f013d40a7ba7b6726186a9',\n  'b9d0c7c4acb8ef55b5c323f82755fb420e5145bafe4de34925e86c53c9f652eb08ec0d87a9be95ca0c0d90b16dd1b55f1200d87c13e4cdb1ae902f41998314f7b85ffc82f0f1d5296119bd92e23ae685b8b59a3a4ba4b8d54db2314c077b1b238c4ac582e36b51c18c0b5474f0d68c1f42e01c08985111ded4cfd3463068d89a',\n  '1387958052cf887bd50925a8d44bbf8f138cdd23f51a3422028edf39ad413a1591f5ebd653c4f225298cd6857044648bcfb768113674e7bd11c632fb0fc40cfa646301934b8fcf4da9799272a737155a239e1f8db5e92a23bfa2aeabc6732f5be14078a5815fff542842efed681ac3b919f9d42bfc822b0fd611c0b22286f241',\n  '922659a8d40b12f81080425a8676830be06f26dd8cd18cad25d02055332c94b8b9634598ef5b172ee53e53788d33c183bf0984ae3b48d792f426a601dbf2eb4771bc844bc2464de8ca5b6746bbdc2f1713a1e1d57a6970568f033e588c759e4b179b791b7fcb75d323c98cc5c6f33c3659410b159c94bc13834e81ce297ce98d'\n]\n\nfor(let i=8;i<17;i++){\n  if($node[`Crypto${i}`].json['data'] !== testData[i-8]){\n    throw new Error(`Error in Hmac: ${$node[`Crypto${i}`].parameter[\"algorithm\"]} operation (node:Crypto${i})`);\n  }\n}\n\nconsole.log(testData);\nreturn items;"
+      },
+      "name": "Function2",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        1840,
+        470
+      ],
+      "alwaysOutputData": true,
+      "notesInFlow": true,
+      "notes": "Verify signing values"
+    }
+  ],
+  "connections": {
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Crypto0",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Crypto4",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Crypto8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Crypto1": {
+      "main": [
+        [
+          {
+            "node": "Crypto2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Crypto2": {
+      "main": [
+        [
+          {
+            "node": "Crypto3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Crypto3": {
+      "main": [
+        [
+          {
+            "node": "Function",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Crypto0": {
+      "main": [
+        [
+          {
+            "node": "Crypto1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Crypto4": {
+      "main": [
+        [
+          {
+            "node": "Crypto5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Crypto5": {
+      "main": [
+        [
+          {
+            "node": "Crypto6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Crypto6": {
+      "main": [
+        [
+          {
+            "node": "Crypto7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Crypto7": {
+      "main": [
+        [
+          {
+            "node": "Function1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Crypto8": {
+      "main": [
+        [
+          {
+            "node": "Crypto9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Crypto9": {
+      "main": [
+        [
+          {
+            "node": "Crypto10",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Crypto10": {
+      "main": [
+        [
+          {
+            "node": "Crypto11",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Crypto11": {
+      "main": [
+        [
+          {
+            "node": "Crypto12",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Crypto12": {
+      "main": [
+        [
+          {
+            "node": "Crypto13",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Crypto13": {
+      "main": [
+        [
+          {
+            "node": "Crypto14",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Crypto14": {
+      "main": [
+        [
+          {
+            "node": "Crypto15",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Crypto15": {
+      "main": [
+        [
+          {
+            "node": "Crypto16",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Crypto16": {
+      "main": [
+        [
+          {
+            "node": "Function2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-03-03T15:46:22.970Z",
+  "updatedAt": "2021-03-05T16:01:38.779Z",
+  "settings": {},
+  "staticData": null
+}
