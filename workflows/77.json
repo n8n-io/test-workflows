@@ -1,0 +1,392 @@
+{
+  "id": 77,
+  "name": "Harvest:Expense:create update get getAll delete:Estimate:create update get getAll delete",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        220
+      ]
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "resource": "client",
+        "accountId": 1416330,
+        "operation": "create",
+        "name": "=Client{{Date.now()}}",
+        "additionalFields": {}
+      },
+      "name": "Harvest",
+      "type": "n8n-nodes-base.harvest",
+      "typeVersion": 1,
+      "position": [
+        450,
+        300
+      ],
+      "credentials": {
+        "harvestOAuth2Api": "Harvest OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "resource": "client",
+        "accountId": 1416330,
+        "operation": "delete",
+        "id": "={{$node[\"Harvest\"].json[\"id\"]}}"
+      },
+      "name": "Harvest1",
+      "type": "n8n-nodes-base.harvest",
+      "typeVersion": 1,
+      "position": [
+        1340,
+        300
+      ],
+      "credentials": {
+        "harvestOAuth2Api": "Harvest OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "resource": "estimate",
+        "accountId": 1416330,
+        "operation": "create",
+        "clientId": "={{$node[\"Harvest\"].json[\"id\"]}}",
+        "additionalFields": {
+          "subject": "=Estimate{{Date.now()}}"
+        }
+      },
+      "name": "Harvest2",
+      "type": "n8n-nodes-base.harvest",
+      "typeVersion": 1,
+      "position": [
+        600,
+        400
+      ],
+      "credentials": {
+        "harvestOAuth2Api": "Harvest OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "resource": "estimate",
+        "accountId": 1416330,
+        "operation": "update",
+        "id": "={{$node[\"Harvest2\"].json[\"id\"]}}",
+        "updateFields": {
+          "subject": "=UpdateSubject{{Date.now()}}"
+        }
+      },
+      "name": "Harvest3",
+      "type": "n8n-nodes-base.harvest",
+      "typeVersion": 1,
+      "position": [
+        750,
+        400
+      ],
+      "credentials": {
+        "harvestOAuth2Api": "Harvest OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "resource": "estimate",
+        "accountId": 1416330,
+        "operation": "get",
+        "id": "={{$node[\"Harvest2\"].json[\"id\"]}}"
+      },
+      "name": "Harvest4",
+      "type": "n8n-nodes-base.harvest",
+      "typeVersion": 1,
+      "position": [
+        900,
+        400
+      ],
+      "credentials": {
+        "harvestOAuth2Api": "Harvest OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "resource": "estimate",
+        "accountId": 1416330,
+        "limit": 1,
+        "filters": {}
+      },
+      "name": "Harvest5",
+      "type": "n8n-nodes-base.harvest",
+      "typeVersion": 1,
+      "position": [
+        1050,
+        400
+      ],
+      "credentials": {
+        "harvestOAuth2Api": "Harvest OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "resource": "estimate",
+        "accountId": 1416330,
+        "operation": "delete",
+        "id": "={{$node[\"Harvest2\"].json[\"id\"]}}"
+      },
+      "name": "Harvest6",
+      "type": "n8n-nodes-base.harvest",
+      "typeVersion": 1,
+      "position": [
+        1200,
+        400
+      ],
+      "credentials": {
+        "harvestOAuth2Api": "Harvest OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "resource": "expense",
+        "accountId": 1416330,
+        "operation": "create",
+        "projectId": "27925524",
+        "expenseCategoryId": "7737171",
+        "spentDate": "2021-02-26T10:51:40.112Z",
+        "additionalFields": {
+          "total_cost": "101"
+        }
+      },
+      "name": "Harvest7",
+      "type": "n8n-nodes-base.harvest",
+      "typeVersion": 1,
+      "position": [
+        460,
+        150
+      ],
+      "credentials": {
+        "harvestOAuth2Api": "Harvest OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "resource": "expense",
+        "accountId": 1416330,
+        "operation": "update",
+        "id": "={{$node[\"Harvest7\"].json[\"id\"]}}",
+        "updateFields": {
+          "total_cost": "201"
+        }
+      },
+      "name": "Harvest8",
+      "type": "n8n-nodes-base.harvest",
+      "typeVersion": 1,
+      "position": [
+        600,
+        150
+      ],
+      "credentials": {
+        "harvestOAuth2Api": "Harvest OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "resource": "expense",
+        "accountId": 1416330,
+        "operation": "get",
+        "id": "={{$node[\"Harvest7\"].json[\"id\"]}}"
+      },
+      "name": "Harvest9",
+      "type": "n8n-nodes-base.harvest",
+      "typeVersion": 1,
+      "position": [
+        750,
+        150
+      ],
+      "credentials": {
+        "harvestOAuth2Api": "Harvest OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "resource": "expense",
+        "accountId": 1416330,
+        "limit": 1,
+        "filters": {}
+      },
+      "name": "Harvest10",
+      "type": "n8n-nodes-base.harvest",
+      "typeVersion": 1,
+      "position": [
+        900,
+        150
+      ],
+      "credentials": {
+        "harvestOAuth2Api": "Harvest OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "resource": "expense",
+        "accountId": 1416330,
+        "operation": "delete",
+        "id": "={{$node[\"Harvest7\"].json[\"id\"]}}"
+      },
+      "name": "Harvest11",
+      "type": "n8n-nodes-base.harvest",
+      "typeVersion": 1,
+      "position": [
+        1050,
+        150
+      ],
+      "credentials": {
+        "harvestOAuth2Api": "Harvest OAuth2 creds"
+      }
+    }
+  ],
+  "connections": {
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Harvest",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Harvest7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Harvest": {
+      "main": [
+        [
+          {
+            "node": "Harvest2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Harvest2": {
+      "main": [
+        [
+          {
+            "node": "Harvest3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Harvest3": {
+      "main": [
+        [
+          {
+            "node": "Harvest4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Harvest4": {
+      "main": [
+        [
+          {
+            "node": "Harvest5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Harvest5": {
+      "main": [
+        [
+          {
+            "node": "Harvest6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Harvest6": {
+      "main": [
+        [
+          {
+            "node": "Harvest1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Harvest7": {
+      "main": [
+        [
+          {
+            "node": "Harvest8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Harvest8": {
+      "main": [
+        [
+          {
+            "node": "Harvest9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Harvest9": {
+      "main": [
+        [
+          {
+            "node": "Harvest10",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Harvest10": {
+      "main": [
+        [
+          {
+            "node": "Harvest11",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-02-26T10:47:07.557Z",
+  "updatedAt": "2021-02-26T10:54:33.074Z",
+  "settings": {},
+  "staticData": null
+}
