@@ -1,0 +1,184 @@
+{
+  "id": 112,
+  "name": "Rabbitmq:queue:exchange",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "queue": "=SimpleQueue",
+        "sendInputData": false,
+        "message": "=Message{{Date.now()}}",
+        "options": {
+          "autoDelete": true,
+          "durable": false
+        }
+      },
+      "name": "RabbitMQ",
+      "type": "n8n-nodes-base.rabbitmq",
+      "typeVersion": 1,
+      "position": [
+        500,
+        200
+      ],
+      "credentials": {
+        "rabbitmq": "RabbitMQ creds"
+      }
+    },
+    {
+      "parameters": {
+        "mode": "exchange",
+        "exchange": "FanoutExchange",
+        "routingKey": "test",
+        "sendInputData": false,
+        "message": "=FanoutMessage{{Date.now()}}",
+        "options": {
+          "durable": false
+        }
+      },
+      "name": "RabbitMQ1",
+      "type": "n8n-nodes-base.rabbitmq",
+      "typeVersion": 1,
+      "position": [
+        500,
+        350
+      ],
+      "credentials": {
+        "rabbitmq": "RabbitMQ creds"
+      }
+    },
+    {
+      "parameters": {
+        "mode": "exchange",
+        "exchange": "DirectExchange",
+        "exchangeType": "direct",
+        "routingKey": "test",
+        "sendInputData": false,
+        "message": "=DirectMessage{{Date.now()}}",
+        "options": {
+          "durable": false
+        }
+      },
+      "name": "RabbitMQ2",
+      "type": "n8n-nodes-base.rabbitmq",
+      "typeVersion": 1,
+      "position": [
+        650,
+        350
+      ],
+      "credentials": {
+        "rabbitmq": "RabbitMQ creds"
+      }
+    },
+    {
+      "parameters": {
+        "mode": "exchange",
+        "exchange": "TopicExchange",
+        "exchangeType": "topic",
+        "routingKey": "test",
+        "sendInputData": false,
+        "message": "=TopicMessage{{Date.now()}}",
+        "options": {
+          "durable": false
+        }
+      },
+      "name": "RabbitMQ3",
+      "type": "n8n-nodes-base.rabbitmq",
+      "typeVersion": 1,
+      "position": [
+        800,
+        350
+      ],
+      "credentials": {
+        "rabbitmq": "RabbitMQ creds"
+      }
+    },
+    {
+      "parameters": {
+        "mode": "exchange",
+        "exchange": "HeadersExchange",
+        "exchangeType": "headers",
+        "routingKey": "test",
+        "sendInputData": false,
+        "message": "=HeadersMessage{{Date.now()}}",
+        "options": {
+          "durable": false
+        }
+      },
+      "name": "RabbitMQ4",
+      "type": "n8n-nodes-base.rabbitmq",
+      "typeVersion": 1,
+      "position": [
+        950,
+        350
+      ],
+      "credentials": {
+        "rabbitmq": "RabbitMQ creds"
+      }
+    }
+  ],
+  "connections": {
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "RabbitMQ",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "RabbitMQ1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RabbitMQ1": {
+      "main": [
+        [
+          {
+            "node": "RabbitMQ2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RabbitMQ2": {
+      "main": [
+        [
+          {
+            "node": "RabbitMQ3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RabbitMQ3": {
+      "main": [
+        [
+          {
+            "node": "RabbitMQ4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-03-09T14:05:33.799Z",
+  "updatedAt": "2021-03-09T14:15:46.076Z",
+  "settings": {},
+  "staticData": null
+}
