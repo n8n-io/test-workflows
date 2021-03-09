@@ -1,0 +1,91 @@
+{
+  "id": 113,
+  "name": "AMQP",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "sink": "AMQPQueue",
+        "headerParametersJson": "{}",
+        "options": {
+          "reconnect": true,
+          "reconnectLimit": 5
+        }
+      },
+      "name": "AMQP Sender",
+      "type": "n8n-nodes-base.amqp",
+      "typeVersion": 1,
+      "position": [
+        650,
+        300
+      ],
+      "credentials": {
+        "amqp": "AMQP creds"
+      }
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "message",
+              "value": "=AMQPMessage{{Date.now()}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Set",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        450,
+        300
+      ]
+    }
+  ],
+  "connections": {
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Set",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AMQP Sender": {
+      "main": [
+        []
+      ]
+    },
+    "Set": {
+      "main": [
+        [
+          {
+            "node": "AMQP Sender",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-03-09T14:26:06.900Z",
+  "updatedAt": "2021-03-09T17:25:17.607Z",
+  "settings": {},
+  "staticData": null
+}
