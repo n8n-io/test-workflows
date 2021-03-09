@@ -1,6 +1,6 @@
 {
   "id": 106,
-  "name": "Box:Folder:create search delete:File:upload get download copy search delete",
+  "name": "Box:Folder:create search get delete:File:upload get download copy search delete",
   "active": false,
   "nodes": [
     {
@@ -60,7 +60,7 @@
       "type": "n8n-nodes-base.box",
       "typeVersion": 1,
       "position": [
-        2000,
+        2140,
         300
       ],
       "credentials": {
@@ -201,6 +201,23 @@
       "credentials": {
         "boxOAuth2Api": "Box OAuth2 creds"
       }
+    },
+    {
+      "parameters": {
+        "resource": "folder",
+        "operation": "get",
+        "folderId": "={{$node[\"Box\"].json[\"id\"]}}"
+      },
+      "name": "Box9",
+      "type": "n8n-nodes-base.box",
+      "typeVersion": 1,
+      "position": [
+        2000,
+        300
+      ],
+      "credentials": {
+        "boxOAuth2Api": "Box OAuth2 creds"
+      }
     }
   ],
   "connections": {
@@ -219,7 +236,7 @@
       "main": [
         [
           {
-            "node": "Box2",
+            "node": "Box9",
             "type": "main",
             "index": 0
           }
@@ -303,11 +320,6 @@
         ]
       ]
     },
-    "Box2": {
-      "main": [
-        []
-      ]
-    },
     "Box10": {
       "main": [
         [
@@ -329,10 +341,21 @@
           }
         ]
       ]
+    },
+    "Box9": {
+      "main": [
+        [
+          {
+            "node": "Box2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "createdAt": "2021-03-04T14:19:59.064Z",
-  "updatedAt": "2021-03-04T14:19:59.064Z",
+  "updatedAt": "2021-03-09T08:07:08.936Z",
   "settings": {},
   "staticData": null
 }
