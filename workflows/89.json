@@ -1,0 +1,383 @@
+{
+  "id": 89,
+  "name": "S3:Bucket:create getAll search:File:upload getAll download copy delete:Folder:create getAll delete",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        100,
+        450
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "bucket",
+        "name": "=Bucket{{Date.now()}}",
+        "additionalFields": {}
+      },
+      "name": "S3",
+      "type": "n8n-nodes-base.s3",
+      "typeVersion": 1,
+      "position": [
+        300,
+        300
+      ],
+      "credentials": {
+        "s3": "S3 creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "bucket",
+        "operation": "getAll",
+        "limit": 1
+      },
+      "name": "S",
+      "type": "n8n-nodes-base.s3",
+      "typeVersion": 1,
+      "position": [
+        450,
+        300
+      ],
+      "credentials": {
+        "s3": "S3 creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "bucket",
+        "operation": "search",
+        "bucketName": "={{$node[\"S\"].json[\"Name\"]}}",
+        "limit": 1,
+        "additionalFields": {}
+      },
+      "name": "S1",
+      "type": "n8n-nodes-base.s3",
+      "typeVersion": 1,
+      "position": [
+        600,
+        300
+      ],
+      "credentials": {
+        "s3": "S3 creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "upload",
+        "bucketName": "fixedbucket",
+        "fileName": "=File{{Date.now()}}",
+        "additionalFields": {},
+        "tagsUi": {
+          "tagsValues": []
+        }
+      },
+      "name": "S2",
+      "type": "n8n-nodes-base.s3",
+      "typeVersion": 1,
+      "position": [
+        450,
+        450
+      ],
+      "credentials": {
+        "s3": "S3 creds"
+      }
+    },
+    {
+      "parameters": {
+        "filePath": "../../../assets/n8n-logo.png"
+      },
+      "name": "Read Binary File",
+      "type": "n8n-nodes-base.readBinaryFile",
+      "typeVersion": 1,
+      "position": [
+        300,
+        450
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "bucketName": "fixedbucket",
+        "limit": 1,
+        "options": {}
+      },
+      "name": "S4",
+      "type": "n8n-nodes-base.s3",
+      "typeVersion": 1,
+      "position": [
+        600,
+        450
+      ],
+      "credentials": {
+        "s3": "S3 creds"
+      }
+    },
+    {
+      "parameters": {
+        "bucketName": "fixedbucket",
+        "fileKey": "={{$node[\"S4\"].json[\"Key\"]}}"
+      },
+      "name": "S5",
+      "type": "n8n-nodes-base.s3",
+      "typeVersion": 1,
+      "position": [
+        750,
+        450
+      ],
+      "credentials": {
+        "s3": "S3 creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "copy",
+        "sourcePath": "=/fixedbucket/{{$node[\"S4\"].json[\"Key\"]}}",
+        "destinationPath": "=/fixedbucket/Copied{{$node[\"S4\"].json[\"Key\"]}}",
+        "additionalFields": {}
+      },
+      "name": "S6",
+      "type": "n8n-nodes-base.s3",
+      "typeVersion": 1,
+      "position": [
+        900,
+        450
+      ],
+      "credentials": {
+        "s3": "S3 creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "bucketName": "fixedbucket",
+        "fileKey": "={{$node[\"S4\"].json[\"Key\"]}}",
+        "options": {}
+      },
+      "name": "S7",
+      "type": "n8n-nodes-base.s3",
+      "typeVersion": 1,
+      "position": [
+        1050,
+        450
+      ],
+      "credentials": {
+        "s3": "S3 creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "bucketName": "fixedbucket",
+        "fileKey": "=Copied{{$node[\"S4\"].json[\"Key\"]}}",
+        "options": {}
+      },
+      "name": "S8",
+      "type": "n8n-nodes-base.s3",
+      "typeVersion": 1,
+      "position": [
+        1200,
+        450
+      ],
+      "credentials": {
+        "s3": "S3 creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "folder",
+        "bucketName": "fixedbucket",
+        "folderName": "=Folder{{Date.now()}}",
+        "additionalFields": {}
+      },
+      "name": "S9",
+      "type": "n8n-nodes-base.s3",
+      "typeVersion": 1,
+      "position": [
+        300,
+        600
+      ],
+      "credentials": {
+        "s3": "S3 creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "folder",
+        "operation": "getAll",
+        "bucketName": "fixedbucket",
+        "limit": 1,
+        "options": {}
+      },
+      "name": "S10",
+      "type": "n8n-nodes-base.s3",
+      "typeVersion": 1,
+      "position": [
+        450,
+        600
+      ],
+      "credentials": {
+        "s3": "S3 creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "folder",
+        "operation": "delete",
+        "bucketName": "fixedbucket",
+        "folderKey": "={{$node[\"S10\"].json[\"Key\"]}}"
+      },
+      "name": "S11",
+      "type": "n8n-nodes-base.s3",
+      "typeVersion": 1,
+      "position": [
+        600,
+        600
+      ],
+      "credentials": {
+        "s3": "S3 creds"
+      }
+    }
+  ],
+  "connections": {
+    "S3": {
+      "main": [
+        [
+          {
+            "node": "S",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "S": {
+      "main": [
+        [
+          {
+            "node": "S1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "S2": {
+      "main": [
+        [
+          {
+            "node": "S4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read Binary File": {
+      "main": [
+        [
+          {
+            "node": "S2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "S4": {
+      "main": [
+        [
+          {
+            "node": "S5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "S5": {
+      "main": [
+        [
+          {
+            "node": "S6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "S6": {
+      "main": [
+        [
+          {
+            "node": "S7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "S7": {
+      "main": [
+        [
+          {
+            "node": "S8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "S9": {
+      "main": [
+        [
+          {
+            "node": "S10",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "S10": {
+      "main": [
+        [
+          {
+            "node": "S11",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Read Binary File",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "S3",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "S9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-03-03T09:10:46.509Z",
+  "updatedAt": "2021-03-03T09:14:14.253Z",
+  "settings": {},
+  "staticData": null
+}
