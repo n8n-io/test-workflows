@@ -75,8 +75,14 @@
       "parameters": {
         "resource": "group",
         "userId": "rzfu5AbHm7U3rj7jMdqsjW",
+        "groupId": "=FixedGroupID",
         "traits": {
-          "traitsUi": []
+          "traitsUi": [
+            {
+              "key": "mode",
+              "value": "test"
+            }
+          ]
         }
       },
       "name": "Segment3",
@@ -88,8 +94,7 @@
       ],
       "credentials": {
         "segmentApi": "Segment creds"
-      },
-      "disabled": true
+      }
     }
   ],
   "connections": {
@@ -127,7 +132,7 @@
     }
   },
   "createdAt": "2021-02-25T09:15:01.281Z",
-  "updatedAt": "2021-03-01T16:11:25.772Z",
+  "updatedAt": "2021-03-10T14:03:08.426Z",
   "settings": {},
   "staticData": null
 }
