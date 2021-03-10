@@ -1,0 +1,391 @@
+{
+  "id": 80,
+  "name": "Zendesk:Ticket:create update get getAll delete:TicketField:getAll get:User:create update getAll search get delete",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        200,
+        460
+      ]
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "description": "=Description{{Date.now()}}",
+        "additionalFields": {}
+      },
+      "name": "Zendesk",
+      "type": "n8n-nodes-base.zendesk",
+      "typeVersion": 1,
+      "position": [
+        400,
+        300
+      ],
+      "credentials": {
+        "zendeskOAuth2Api": "Zendesk OAuth2 "
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "operation": "update",
+        "id": "={{$node[\"Zendesk\"].json[\"id\"]}}",
+        "updateFields": {
+          "subject": "=UpdatedSubject{{Date.now()}}"
+        }
+      },
+      "name": "Zendesk1",
+      "type": "n8n-nodes-base.zendesk",
+      "typeVersion": 1,
+      "position": [
+        550,
+        300
+      ],
+      "credentials": {
+        "zendeskOAuth2Api": "Zendesk OAuth2 "
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "operation": "get",
+        "id": "={{$node[\"Zendesk\"].json[\"id\"]}}"
+      },
+      "name": "Zendesk2",
+      "type": "n8n-nodes-base.zendesk",
+      "typeVersion": 1,
+      "position": [
+        700,
+        300
+      ],
+      "credentials": {
+        "zendeskOAuth2Api": "Zendesk OAuth2 "
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "operation": "getAll",
+        "limit": 1,
+        "options": {}
+      },
+      "name": "Zendesk3",
+      "type": "n8n-nodes-base.zendesk",
+      "typeVersion": 1,
+      "position": [
+        850,
+        300
+      ],
+      "credentials": {
+        "zendeskOAuth2Api": "Zendesk OAuth2 "
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "operation": "delete",
+        "id": "={{$node[\"Zendesk\"].json[\"id\"]}}"
+      },
+      "name": "Zendesk4",
+      "type": "n8n-nodes-base.zendesk",
+      "typeVersion": 1,
+      "position": [
+        1000,
+        300
+      ],
+      "credentials": {
+        "zendeskOAuth2Api": "Zendesk OAuth2 "
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "resource": "ticketField",
+        "operation": "getAll",
+        "limit": 1
+      },
+      "name": "Zendesk5",
+      "type": "n8n-nodes-base.zendesk",
+      "typeVersion": 1,
+      "position": [
+        400,
+        450
+      ],
+      "credentials": {
+        "zendeskOAuth2Api": "Zendesk OAuth2 "
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "resource": "ticketField",
+        "ticketFieldId": "={{$node[\"Zendesk5\"].json[\"id\"]}}"
+      },
+      "name": "Zendesk6",
+      "type": "n8n-nodes-base.zendesk",
+      "typeVersion": 1,
+      "position": [
+        550,
+        450
+      ],
+      "credentials": {
+        "zendeskOAuth2Api": "Zendesk OAuth2 "
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "resource": "user",
+        "name": "=Name{{Date.now()}}",
+        "additionalFields": {}
+      },
+      "name": "Zendesk7",
+      "type": "n8n-nodes-base.zendesk",
+      "typeVersion": 1,
+      "position": [
+        400,
+        600
+      ],
+      "credentials": {
+        "zendeskOAuth2Api": "Zendesk OAuth2 "
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "resource": "user",
+        "operation": "update",
+        "id": "={{$node[\"Zendesk7\"].json[\"id\"]}}",
+        "updateFields": {
+          "name": "=UpdatedName{{Date.now()}}"
+        }
+      },
+      "name": "Zendesk8",
+      "type": "n8n-nodes-base.zendesk",
+      "typeVersion": 1,
+      "position": [
+        550,
+        600
+      ],
+      "credentials": {
+        "zendeskOAuth2Api": "Zendesk OAuth2 "
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "resource": "user",
+        "operation": "getAll",
+        "limit": 1,
+        "filters": {}
+      },
+      "name": "Zendesk9",
+      "type": "n8n-nodes-base.zendesk",
+      "typeVersion": 1,
+      "position": [
+        700,
+        600
+      ],
+      "credentials": {
+        "zendeskOAuth2Api": "Zendesk OAuth2 "
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "resource": "user",
+        "operation": "search",
+        "limit": 1,
+        "filters": {}
+      },
+      "name": "Zendesk10",
+      "type": "n8n-nodes-base.zendesk",
+      "typeVersion": 1,
+      "position": [
+        850,
+        600
+      ],
+      "credentials": {
+        "zendeskOAuth2Api": "Zendesk OAuth2 "
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "resource": "user",
+        "operation": "get",
+        "id": "={{$node[\"Zendesk7\"].json[\"id\"]}}"
+      },
+      "name": "Zendesk11",
+      "type": "n8n-nodes-base.zendesk",
+      "typeVersion": 1,
+      "position": [
+        1000,
+        600
+      ],
+      "credentials": {
+        "zendeskOAuth2Api": "Zendesk OAuth2 "
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "resource": "user",
+        "operation": "delete",
+        "id": "={{$node[\"Zendesk7\"].json[\"id\"]}}"
+      },
+      "name": "Zendesk12",
+      "type": "n8n-nodes-base.zendesk",
+      "typeVersion": 1,
+      "position": [
+        1150,
+        600
+      ],
+      "credentials": {
+        "zendeskOAuth2Api": "Zendesk OAuth2 "
+      }
+    }
+  ],
+  "connections": {
+    "Zendesk": {
+      "main": [
+        [
+          {
+            "node": "Zendesk1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Zendesk1": {
+      "main": [
+        [
+          {
+            "node": "Zendesk2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Zendesk2": {
+      "main": [
+        [
+          {
+            "node": "Zendesk3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Zendesk3": {
+      "main": [
+        [
+          {
+            "node": "Zendesk4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Zendesk5": {
+      "main": [
+        [
+          {
+            "node": "Zendesk6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Zendesk",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Zendesk5",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Zendesk7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Zendesk7": {
+      "main": [
+        [
+          {
+            "node": "Zendesk8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Zendesk8": {
+      "main": [
+        [
+          {
+            "node": "Zendesk9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Zendesk9": {
+      "main": [
+        [
+          {
+            "node": "Zendesk10",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Zendesk10": {
+      "main": [
+        [
+          {
+            "node": "Zendesk11",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Zendesk11": {
+      "main": [
+        [
+          {
+            "node": "Zendesk12",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-02-26T16:19:59.941Z",
+  "updatedAt": "2021-02-26T16:20:47.874Z",
+  "settings": {},
+  "staticData": null
+}
