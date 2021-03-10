@@ -1,0 +1,97 @@
+{
+  "id": 104,
+  "name": "ReadPDF",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {},
+      "name": "Read PDF",
+      "type": "n8n-nodes-base.readPDF",
+      "typeVersion": 1,
+      "position": [
+        650,
+        300
+      ],
+      "notesInFlow": true,
+      "notes": "Parse PDF"
+    },
+    {
+      "parameters": {
+        "filePath": "../../../node_modules/pdf-parse/test/data/05-versions-space.pdf"
+      },
+      "name": "Read Binary File",
+      "type": "n8n-nodes-base.readBinaryFile",
+      "typeVersion": 1,
+      "position": [
+        450,
+        300
+      ],
+      "alwaysOutputData": false,
+      "notesInFlow": true,
+      "notes": "Read static pdf file from node_modules"
+    },
+    {
+      "parameters": {
+        "functionCode": "testData= `\\n\\nDadfrtfjh,mgf  \\nv.0.01 `;\n\nif($node['Read PDF'].json['text'] !== testData){\n  throw new Error('Error in Read PDF node');\n}\nreturn items;\n"
+      },
+      "name": "Function",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        850,
+        300
+      ],
+      "notesInFlow": true,
+      "notes": "Verify PDF text"
+    }
+  ],
+  "connections": {
+    "Read PDF": {
+      "main": [
+        [
+          {
+            "node": "Function",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read Binary File": {
+      "main": [
+        [
+          {
+            "node": "Read PDF",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Read Binary File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-03-04T13:14:37.236Z",
+  "updatedAt": "2021-03-04T13:14:46.348Z",
+  "settings": {},
+  "staticData": null
+}
