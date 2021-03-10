@@ -1,0 +1,226 @@
+{
+  "id": 116,
+  "name": "Ghost:Post(Admin API):create update get getAll delete:Post(Content API):getAll get",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "source": "adminApi",
+        "operation": "create",
+        "title": "=PostTitle{{Date.now()}}",
+        "content": "=Post Content written at {{Date.now()}}",
+        "additionalFields": {}
+      },
+      "name": "Ghost",
+      "type": "n8n-nodes-base.ghost",
+      "typeVersion": 1,
+      "position": [
+        550,
+        300
+      ],
+      "credentials": {
+        "ghostAdminApi": "Ghost Admin api creds"
+      }
+    },
+    {
+      "parameters": {
+        "source": "adminApi",
+        "operation": "update",
+        "postId": "={{$node[\"Ghost\"].json[\"id\"]}}",
+        "updateFields": {
+          "title": "=UpdateTitle{{Date.now()}}"
+        }
+      },
+      "name": "Ghost1",
+      "type": "n8n-nodes-base.ghost",
+      "typeVersion": 1,
+      "position": [
+        700,
+        300
+      ],
+      "credentials": {
+        "ghostAdminApi": "Ghost Admin api creds"
+      }
+    },
+    {
+      "parameters": {
+        "source": "adminApi",
+        "by": "id",
+        "identifier": "={{$node[\"Ghost\"].json[\"id\"]}}",
+        "options": {}
+      },
+      "name": "Ghost2",
+      "type": "n8n-nodes-base.ghost",
+      "typeVersion": 1,
+      "position": [
+        850,
+        300
+      ],
+      "credentials": {
+        "ghostAdminApi": "Ghost Admin api creds"
+      }
+    },
+    {
+      "parameters": {
+        "source": "adminApi",
+        "operation": "getAll",
+        "limit": 1,
+        "options": {}
+      },
+      "name": "Ghost3",
+      "type": "n8n-nodes-base.ghost",
+      "typeVersion": 1,
+      "position": [
+        1000,
+        300
+      ],
+      "credentials": {
+        "ghostAdminApi": "Ghost Admin api creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "limit": 1,
+        "options": {}
+      },
+      "name": "Ghost4",
+      "type": "n8n-nodes-base.ghost",
+      "typeVersion": 1,
+      "position": [
+        1150,
+        450
+      ],
+      "credentials": {
+        "ghostContentApi": "Ghost Content creds"
+      }
+    },
+    {
+      "parameters": {
+        "by": "id",
+        "identifier": "={{$node[\"Ghost4\"].json[\"id\"]}}",
+        "options": {}
+      },
+      "name": "Ghost5",
+      "type": "n8n-nodes-base.ghost",
+      "typeVersion": 1,
+      "position": [
+        1300,
+        450
+      ],
+      "credentials": {
+        "ghostContentApi": "Ghost Content creds"
+      }
+    },
+    {
+      "parameters": {
+        "source": "adminApi",
+        "operation": "delete",
+        "postId": "={{$node[\"Ghost\"].json[\"id\"]}}"
+      },
+      "name": "Ghost6",
+      "type": "n8n-nodes-base.ghost",
+      "typeVersion": 1,
+      "position": [
+        1450,
+        300
+      ],
+      "credentials": {
+        "ghostAdminApi": "Ghost Admin api creds"
+      }
+    }
+  ],
+  "connections": {
+    "Ghost": {
+      "main": [
+        [
+          {
+            "node": "Ghost1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ghost1": {
+      "main": [
+        [
+          {
+            "node": "Ghost2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ghost2": {
+      "main": [
+        [
+          {
+            "node": "Ghost3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ghost3": {
+      "main": [
+        [
+          {
+            "node": "Ghost4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ghost4": {
+      "main": [
+        [
+          {
+            "node": "Ghost5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ghost5": {
+      "main": [
+        [
+          {
+            "node": "Ghost6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Ghost",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-03-10T10:32:50.903Z",
+  "updatedAt": "2021-03-10T10:32:50.903Z",
+  "settings": {},
+  "staticData": null
+}
