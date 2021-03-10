@@ -1,0 +1,71 @@
+{
+  "id": 110,
+  "name": "GraphQL",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "requestMethod": "GET",
+        "endpoint": "https://countries.trevorblades.com/",
+        "query": "query{\n  country(code:\"DE\"){\n    name,code,capital,currency\n  }\n}"
+      },
+      "name": "GraphQL",
+      "type": "n8n-nodes-base.graphql",
+      "typeVersion": 1,
+      "position": [
+        450,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "functionCode": "testData = JSON.stringify({ country: { name: \"Germany\", code: \"DE\", capital: \"Berlin\", currency: \"EUR\" } })\n\nif(JSON.stringify($node['GraphQL'].json.data) !== testData){\n  throw new Error('Error in GraphQL node');\n}\nreturn items;"
+      },
+      "name": "Function",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        650,
+        300
+      ]
+    }
+  ],
+  "connections": {
+    "GraphQL": {
+      "main": [
+        [
+          {
+            "node": "Function",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "GraphQL",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-03-09T09:32:25.259Z",
+  "updatedAt": "2021-03-09T09:32:25.259Z",
+  "settings": {},
+  "staticData": null
+}
