@@ -132,7 +132,7 @@
         "resource": "file",
         "owner": "nodemationqa",
         "repository": "nodeQA",
-        "filePath": "testFile",
+        "filePath": "=testFile{{Date.now()}}",
         "fileContent": "Test file content, create file operation",
         "commitMessage": "=Commited {{(new Date()).toGMTString()}}",
         "additionalParameters": {
@@ -159,7 +159,7 @@
         "operation": "edit",
         "owner": "nodemationqa",
         "repository": "nodeQA",
-        "filePath": "testFile",
+        "filePath": "={{$node[\"GitHub6\"].json[\"content\"][\"path\"]}}",
         "fileContent": "Updated Test file content, create file operation",
         "commitMessage": "=Updated commit message {{(new Date()).toGMTString()}}",
         "additionalParameters": {
@@ -186,7 +186,7 @@
         "operation": "get",
         "owner": "nodemationqa",
         "repository": "nodeQA",
-        "filePath": "testFile",
+        "filePath": "={{$node[\"GitHub6\"].json[\"content\"][\"path\"]}}",
         "asBinaryProperty": false
       },
       "name": "GitHub8",
@@ -207,7 +207,7 @@
         "operation": "delete",
         "owner": "nodemationqa",
         "repository": "nodeQA",
-        "filePath": "testFile",
+        "filePath": "={{$node[\"GitHub6\"].json[\"content\"][\"path\"]}}",
         "commitMessage": "=delete commit message {{(new Date()).toGMTString()}}",
         "additionalParameters": {
           "branch": {
@@ -275,7 +275,7 @@
         "repository": "nodeQA",
         "issueNumber": "={{$node[\"GitHub10\"].json[\"number\"]}}",
         "editFields": {
-          "title": "=Updated {{$node[\"GitHub10\"].json[\"title\"]}}",
+          "title": "=Updated {{$node[\"GitHub10\"].json[\"title\"]}}{{Date.now()}}",
           "body": "=updated Test issue body {{(new Date()).toGMTString()}}"
         }
       },
@@ -691,7 +691,7 @@
     }
   },
   "createdAt": "2021-02-18T10:30:52.070Z",
-  "updatedAt": "2021-02-18T13:22:45.690Z",
+  "updatedAt": "2021-03-01T13:23:04.461Z",
   "settings": {},
   "staticData": null
 }
