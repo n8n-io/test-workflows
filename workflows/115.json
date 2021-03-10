@@ -1,0 +1,176 @@
+{
+  "id": 115,
+  "name": "Cockpit:Collection:createEntry updateEntry getAllEntries:Singleton:get:Form:submit",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "create",
+        "collection": "FixedCollection",
+        "dataFieldsUi": {
+          "field": [
+            {
+              "name": "Name",
+              "value": "=entry{{Date.now()}}"
+            }
+          ]
+        }
+      },
+      "name": "Cockpit",
+      "type": "n8n-nodes-base.cockpit",
+      "typeVersion": 1,
+      "position": [
+        550,
+        180
+      ],
+      "credentials": {
+        "cockpitApi": "Cockpit API creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "collection": "FixedCollection",
+        "id": "={{$node[\"Cockpit\"].json[\"_id\"]}}",
+        "dataFieldsUi": {
+          "field": [
+            {
+              "name": "Name",
+              "value": "=UpdatedEntry{{Date.now()}}"
+            }
+          ]
+        }
+      },
+      "name": "Cockpit1",
+      "type": "n8n-nodes-base.cockpit",
+      "typeVersion": 1,
+      "position": [
+        700,
+        180
+      ],
+      "credentials": {
+        "cockpitApi": "Cockpit API creds"
+      }
+    },
+    {
+      "parameters": {
+        "collection": "FixedCollection",
+        "limit": 1,
+        "options": {}
+      },
+      "name": "Cockpit2",
+      "type": "n8n-nodes-base.cockpit",
+      "typeVersion": 1,
+      "position": [
+        850,
+        180
+      ],
+      "credentials": {
+        "cockpitApi": "Cockpit API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "singleton",
+        "singleton": "FixedSingleton"
+      },
+      "name": "Cockpit3",
+      "type": "n8n-nodes-base.cockpit",
+      "typeVersion": 1,
+      "position": [
+        550,
+        350
+      ],
+      "credentials": {
+        "cockpitApi": "Cockpit API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "form",
+        "form": "FixedForm",
+        "dataFieldsUi": {
+          "field": [
+            {
+              "name": "name",
+              "value": "=name{{Date.now()}}"
+            },
+            {
+              "name": "tag",
+              "value": "=tag{{Date.now()}}"
+            }
+          ]
+        }
+      },
+      "name": "Cockpit4",
+      "type": "n8n-nodes-base.cockpit",
+      "typeVersion": 1,
+      "position": [
+        550,
+        500
+      ],
+      "credentials": {
+        "cockpitApi": "Cockpit API creds"
+      }
+    }
+  ],
+  "connections": {
+    "Cockpit": {
+      "main": [
+        [
+          {
+            "node": "Cockpit1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Cockpit1": {
+      "main": [
+        [
+          {
+            "node": "Cockpit2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Cockpit",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Cockpit3",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Cockpit4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-03-10T09:08:07.793Z",
+  "updatedAt": "2021-03-10T09:08:07.793Z",
+  "settings": {},
+  "staticData": null
+}
