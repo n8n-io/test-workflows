@@ -1,0 +1,139 @@
+{
+  "id": 81,
+  "name": "PhantomBuster:getAll get launch getOutput",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "limit": 1
+      },
+      "name": "Phantombuster",
+      "type": "n8n-nodes-base.phantombuster",
+      "typeVersion": 1,
+      "position": [
+        450,
+        300
+      ],
+      "credentials": {
+        "phantombusterApi": "Phantombuster creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "agentId": "={{$node[\"Phantombuster\"].json[\"id\"]}}"
+      },
+      "name": "Phantombuster1",
+      "type": "n8n-nodes-base.phantombuster",
+      "typeVersion": 1,
+      "position": [
+        600,
+        300
+      ],
+      "credentials": {
+        "phantombusterApi": "Phantombuster creds"
+      }
+    },
+    {
+      "parameters": {
+        "agentId": "={{$node[\"Phantombuster\"].json[\"id\"]}}",
+        "resolveData": false,
+        "jsonParameters": true,
+        "additionalFields": {
+          "argumentsJson": "{\n\t\"urls\": [\n\t\t\"https://n8n.io/\"\n\t],\n\t\"timeToWait\": 5000,\n\t\"pagesPerLaunch\": 1,\n\t\"onlyGetOneEmail\": false\n}"
+        }
+      },
+      "name": "Phantombuster2",
+      "type": "n8n-nodes-base.phantombuster",
+      "typeVersion": 1,
+      "position": [
+        750,
+        300
+      ],
+      "credentials": {
+        "phantombusterApi": "Phantombuster creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getOutput",
+        "agentId": "={{$node[\"Phantombuster\"].json[\"id\"]}}",
+        "resolveData": false,
+        "additionalFields": {
+          "prevContainerId": "={{$node[\"Phantombuster2\"].json[\"containerId\"]}}"
+        }
+      },
+      "name": "Phantombuster3",
+      "type": "n8n-nodes-base.phantombuster",
+      "typeVersion": 1,
+      "position": [
+        900,
+        300
+      ],
+      "credentials": {
+        "phantombusterApi": "Phantombuster creds"
+      }
+    }
+  ],
+  "connections": {
+    "Phantombuster": {
+      "main": [
+        [
+          {
+            "node": "Phantombuster1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Phantombuster1": {
+      "main": [
+        [
+          {
+            "node": "Phantombuster2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Phantombuster2": {
+      "main": [
+        [
+          {
+            "node": "Phantombuster3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Phantombuster",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-03-01T09:51:34.123Z",
+  "updatedAt": "2021-03-01T09:51:41.264Z",
+  "settings": {},
+  "staticData": null
+}
