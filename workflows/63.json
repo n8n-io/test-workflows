@@ -1,0 +1,138 @@
+{
+  "id": 63,
+  "name": "Segment:Identify:create:Track:event page",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        400
+      ]
+    },
+    {
+      "parameters": {
+        "userId": "rzfu5AbHm7U3rj7jMdqsjW",
+        "traits": {
+          "traitsUi": [
+            {
+              "key": "type",
+              "value": "test"
+            }
+          ]
+        }
+      },
+      "name": "Segment",
+      "type": "n8n-nodes-base.segment",
+      "typeVersion": 1,
+      "position": [
+        500,
+        250
+      ],
+      "credentials": {
+        "segmentApi": "Segment creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "track",
+        "userId": "rzfu5AbHm7U3rj7jMdqsjW",
+        "event": "click"
+      },
+      "name": "Segment1",
+      "type": "n8n-nodes-base.segment",
+      "typeVersion": 1,
+      "position": [
+        500,
+        400
+      ],
+      "credentials": {
+        "segmentApi": "Segment creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "track",
+        "operation": "page",
+        "userId": "rzfu5AbHm7U3rj7jMdqsjW",
+        "name": "landing"
+      },
+      "name": "Segment2",
+      "type": "n8n-nodes-base.segment",
+      "typeVersion": 1,
+      "position": [
+        650,
+        400
+      ],
+      "credentials": {
+        "segmentApi": "Segment creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "group",
+        "userId": "rzfu5AbHm7U3rj7jMdqsjW",
+        "groupId": "=FixedGroupID",
+        "traits": {
+          "traitsUi": [
+            {
+              "key": "mode",
+              "value": "test"
+            }
+          ]
+        }
+      },
+      "name": "Segment3",
+      "type": "n8n-nodes-base.segment",
+      "typeVersion": 1,
+      "position": [
+        500,
+        550
+      ],
+      "credentials": {
+        "segmentApi": "Segment creds"
+      }
+    }
+  ],
+  "connections": {
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Segment",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Segment1",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Segment3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Segment1": {
+      "main": [
+        [
+          {
+            "node": "Segment2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-02-25T09:15:01.281Z",
+  "updatedAt": "2021-03-10T14:03:08.426Z",
+  "settings": {},
+  "staticData": null
+}
