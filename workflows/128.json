@@ -1,0 +1,106 @@
+{
+  "id": 128,
+  "name": "Yourls:Url:shorten stats expand",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "url": "=https://n8n.io/{{Date.now()}}",
+        "additionalFields": {
+          "title": "n8n-ulr with random suffix"
+        }
+      },
+      "name": "Yourls",
+      "type": "n8n-nodes-base.yourls",
+      "typeVersion": 1,
+      "position": [
+        500,
+        300
+      ],
+      "credentials": {
+        "yourlsApi": "Yourls API creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "stats",
+        "shortUrl": "={{$node[\"Yourls\"].json[\"shorturl\"]}}"
+      },
+      "name": "Yourls1",
+      "type": "n8n-nodes-base.yourls",
+      "typeVersion": 1,
+      "position": [
+        700,
+        300
+      ],
+      "credentials": {
+        "yourlsApi": "Yourls API creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "expand",
+        "shortUrl": "={{$node[\"Yourls\"].json[\"shorturl\"]}}"
+      },
+      "name": "Yourls2",
+      "type": "n8n-nodes-base.yourls",
+      "typeVersion": 1,
+      "position": [
+        900,
+        300
+      ],
+      "credentials": {
+        "yourlsApi": "Yourls API creds"
+      }
+    }
+  ],
+  "connections": {
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Yourls",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Yourls": {
+      "main": [
+        [
+          {
+            "node": "Yourls1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Yourls1": {
+      "main": [
+        [
+          {
+            "node": "Yourls2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-03-11T17:20:04.889Z",
+  "updatedAt": "2021-03-11T17:22:00.219Z",
+  "settings": {},
+  "staticData": null
+}
