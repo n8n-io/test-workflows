@@ -1,0 +1,780 @@
+{
+  "id": 130,
+  "name": "Wekan:Board:create get getAll delete:List:create get getAll delete:Card:create update get getAll delete:CardComment:create get getAll delete:CheckList:create get getAll delete:CheckListItem:get update delete",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "board",
+        "title": "=Board{{Date.now()}}",
+        "owner": "E27bvzwJ5A26xfAPG",
+        "additionalFields": {}
+      },
+      "name": "Wekan",
+      "type": "n8n-nodes-base.wekan",
+      "typeVersion": 1,
+      "position": [
+        490,
+        280
+      ],
+      "credentials": {
+        "wekanApi": "Wekan API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "board",
+        "operation": "get",
+        "boardId": "={{$node[\"Wekan\"].json[\"_id\"]}}"
+      },
+      "name": "Wekan1",
+      "type": "n8n-nodes-base.wekan",
+      "typeVersion": 1,
+      "position": [
+        650,
+        280
+      ],
+      "credentials": {
+        "wekanApi": "Wekan API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "board",
+        "operation": "getAll",
+        "IdUser": "E27bvzwJ5A26xfAPG",
+        "limit": 1
+      },
+      "name": "Wekan2",
+      "type": "n8n-nodes-base.wekan",
+      "typeVersion": 1,
+      "position": [
+        800,
+        280
+      ],
+      "credentials": {
+        "wekanApi": "Wekan API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "board",
+        "operation": "delete",
+        "boardId": "={{$node[\"Wekan\"].json[\"_id\"]}}"
+      },
+      "name": "Wekan3",
+      "type": "n8n-nodes-base.wekan",
+      "typeVersion": 1,
+      "position": [
+        3500,
+        260
+      ],
+      "credentials": {
+        "wekanApi": "Wekan API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "list",
+        "boardId": "={{$node[\"Wekan\"].json[\"_id\"]}}",
+        "title": "=List{{Date.now()}}"
+      },
+      "name": "Wekan4",
+      "type": "n8n-nodes-base.wekan",
+      "typeVersion": 1,
+      "position": [
+        950,
+        400
+      ],
+      "credentials": {
+        "wekanApi": "Wekan API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "list",
+        "operation": "get",
+        "boardId": "={{$node[\"Wekan\"].json[\"_id\"]}}",
+        "listId": "={{$node[\"Wekan4\"].json[\"_id\"]}}"
+      },
+      "name": "Wekan5",
+      "type": "n8n-nodes-base.wekan",
+      "typeVersion": 1,
+      "position": [
+        1100,
+        400
+      ],
+      "credentials": {
+        "wekanApi": "Wekan API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "list",
+        "operation": "getAll",
+        "boardId": "={{$node[\"Wekan\"].json[\"_id\"]}}",
+        "limit": 1
+      },
+      "name": "Wekan6",
+      "type": "n8n-nodes-base.wekan",
+      "typeVersion": 1,
+      "position": [
+        1250,
+        400
+      ],
+      "credentials": {
+        "wekanApi": "Wekan API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "list",
+        "operation": "delete",
+        "boardId": "={{$node[\"Wekan\"].json[\"_id\"]}}",
+        "listId": "={{$node[\"Wekan4\"].json[\"_id\"]}}"
+      },
+      "name": "Wekan7",
+      "type": "n8n-nodes-base.wekan",
+      "typeVersion": 1,
+      "position": [
+        3350,
+        400
+      ],
+      "credentials": {
+        "wekanApi": "Wekan API creds"
+      }
+    },
+    {
+      "parameters": {
+        "boardId": "={{$node[\"Wekan\"].json[\"_id\"]}}",
+        "listId": "={{$node[\"Wekan4\"].json[\"_id\"]}}",
+        "title": "=Card{{Date.now()}}",
+        "swimlaneId": "CJ44cd7gPRf8qT3Xb",
+        "authorId": "E27bvzwJ5A26xfAPG",
+        "additionalFields": {}
+      },
+      "name": "Wekan8",
+      "type": "n8n-nodes-base.wekan",
+      "typeVersion": 1,
+      "position": [
+        1400,
+        500
+      ],
+      "credentials": {
+        "wekanApi": "Wekan API creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "boardId": "={{$node[\"Wekan\"].json[\"_id\"]}}",
+        "listId": "={{$node[\"Wekan4\"].json[\"_id\"]}}",
+        "cardId": "={{$node[\"Wekan8\"].json[\"_id\"]}}",
+        "updateFields": {
+          "title": "=UpdatedCard{{Date.now()}}"
+        }
+      },
+      "name": "Wekan9",
+      "type": "n8n-nodes-base.wekan",
+      "typeVersion": 1,
+      "position": [
+        1550,
+        500
+      ],
+      "credentials": {
+        "wekanApi": "Wekan API creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "boardId": "={{$node[\"Wekan\"].json[\"_id\"]}}",
+        "listId": "={{$node[\"Wekan4\"].json[\"_id\"]}}",
+        "cardId": "={{$node[\"Wekan8\"].json[\"_id\"]}}"
+      },
+      "name": "Wekan10",
+      "type": "n8n-nodes-base.wekan",
+      "typeVersion": 1,
+      "position": [
+        1700,
+        500
+      ],
+      "credentials": {
+        "wekanApi": "Wekan API creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "boardId": "={{$node[\"Wekan\"].json[\"_id\"]}}",
+        "fromObject": "list",
+        "listId": "={{$node[\"Wekan4\"].json[\"_id\"]}}",
+        "limit": 1
+      },
+      "name": "Wekan11",
+      "type": "n8n-nodes-base.wekan",
+      "typeVersion": 1,
+      "position": [
+        1850,
+        500
+      ],
+      "credentials": {
+        "wekanApi": "Wekan API creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "boardId": "={{$node[\"Wekan\"].json[\"_id\"]}}",
+        "listId": "={{$node[\"Wekan4\"].json[\"_id\"]}}",
+        "cardId": "={{$node[\"Wekan8\"].json[\"_id\"]}}"
+      },
+      "name": "Wekan12",
+      "type": "n8n-nodes-base.wekan",
+      "typeVersion": 1,
+      "position": [
+        3220,
+        500
+      ],
+      "credentials": {
+        "wekanApi": "Wekan API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "cardComment",
+        "boardId": "={{$node[\"Wekan\"].json[\"_id\"]}}",
+        "listId": "={{$node[\"Wekan4\"].json[\"_id\"]}}",
+        "cardId": "={{$node[\"Wekan8\"].json[\"_id\"]}}",
+        "authorId": "E27bvzwJ5A26xfAPG",
+        "comment": "=CardComment{{Date.now()}}"
+      },
+      "name": "Wekan13",
+      "type": "n8n-nodes-base.wekan",
+      "typeVersion": 1,
+      "position": [
+        2000,
+        650
+      ],
+      "credentials": {
+        "wekanApi": "Wekan API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "cardComment",
+        "operation": "get",
+        "boardId": "={{$node[\"Wekan\"].json[\"_id\"]}}",
+        "listId": "={{$node[\"Wekan4\"].json[\"_id\"]}}",
+        "cardId": "={{$node[\"Wekan8\"].json[\"_id\"]}}",
+        "commentId": "={{$node[\"Wekan13\"].json[\"_id\"]}}"
+      },
+      "name": "Wekan14",
+      "type": "n8n-nodes-base.wekan",
+      "typeVersion": 1,
+      "position": [
+        2150,
+        650
+      ],
+      "credentials": {
+        "wekanApi": "Wekan API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "cardComment",
+        "operation": "getAll",
+        "boardId": "={{$node[\"Wekan\"].json[\"_id\"]}}",
+        "listId": "={{$node[\"Wekan4\"].json[\"_id\"]}}",
+        "cardId": "={{$node[\"Wekan8\"].json[\"_id\"]}}",
+        "limit": 1
+      },
+      "name": "Wekan15",
+      "type": "n8n-nodes-base.wekan",
+      "typeVersion": 1,
+      "position": [
+        2300,
+        650
+      ],
+      "credentials": {
+        "wekanApi": "Wekan API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "cardComment",
+        "operation": "delete",
+        "boardId": "={{$node[\"Wekan\"].json[\"_id\"]}}",
+        "listId": "={{$node[\"Wekan4\"].json[\"_id\"]}}",
+        "cardId": "={{$node[\"Wekan8\"].json[\"_id\"]}}",
+        "commentId": "={{$node[\"Wekan13\"].json[\"_id\"]}}"
+      },
+      "name": "Wekan16",
+      "type": "n8n-nodes-base.wekan",
+      "typeVersion": 1,
+      "position": [
+        2450,
+        650
+      ],
+      "credentials": {
+        "wekanApi": "Wekan API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "checklist",
+        "operation": "create",
+        "boardId": "={{$node[\"Wekan\"].json[\"_id\"]}}",
+        "listId": "={{$node[\"Wekan4\"].json[\"_id\"]}}",
+        "cardId": "={{$node[\"Wekan8\"].json[\"_id\"]}}",
+        "title": "=Checklist{{Date.now()}}",
+        "items": [
+          "=ChecklistItem{{Date.now()}}"
+        ]
+      },
+      "name": "Wekan17",
+      "type": "n8n-nodes-base.wekan",
+      "typeVersion": 1,
+      "position": [
+        2000,
+        350
+      ],
+      "credentials": {
+        "wekanApi": "Wekan API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "checklist",
+        "operation": "get",
+        "boardId": "={{$node[\"Wekan\"].json[\"_id\"]}}",
+        "listId": "={{$node[\"Wekan4\"].json[\"_id\"]}}",
+        "cardId": "={{$node[\"Wekan8\"].json[\"_id\"]}}",
+        "checklistId": "={{$node[\"Wekan17\"].json[\"_id\"]}}"
+      },
+      "name": "Wekan18",
+      "type": "n8n-nodes-base.wekan",
+      "typeVersion": 1,
+      "position": [
+        2150,
+        350
+      ],
+      "credentials": {
+        "wekanApi": "Wekan API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "checklist",
+        "boardId": "={{$node[\"Wekan\"].json[\"_id\"]}}",
+        "listId": "={{$node[\"Wekan4\"].json[\"_id\"]}}",
+        "cardId": "={{$node[\"Wekan8\"].json[\"_id\"]}}",
+        "limit": 1
+      },
+      "name": "Wekan19",
+      "type": "n8n-nodes-base.wekan",
+      "typeVersion": 1,
+      "position": [
+        2300,
+        350
+      ],
+      "credentials": {
+        "wekanApi": "Wekan API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "checklist",
+        "operation": "delete",
+        "boardId": "={{$node[\"Wekan\"].json[\"_id\"]}}",
+        "listId": "={{$node[\"Wekan4\"].json[\"_id\"]}}",
+        "cardId": "={{$node[\"Wekan8\"].json[\"_id\"]}}",
+        "checklistId": "={{$node[\"Wekan17\"].json[\"_id\"]}}"
+      },
+      "name": "Wekan20",
+      "type": "n8n-nodes-base.wekan",
+      "typeVersion": 1,
+      "position": [
+        2900,
+        350
+      ],
+      "credentials": {
+        "wekanApi": "Wekan API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "checklistItem",
+        "operation": "get",
+        "boardId": "={{$node[\"Wekan\"].json[\"_id\"]}}",
+        "listId": "={{$node[\"Wekan4\"].json[\"_id\"]}}",
+        "cardId": "={{$node[\"Wekan8\"].json[\"_id\"]}}",
+        "checklistId": "={{$node[\"Wekan17\"].json[\"_id\"]}}",
+        "checklistItemId": "={{$node[\"Wekan18\"].json[\"items\"][0][\"_id\"]}}"
+      },
+      "name": "Wekan21",
+      "type": "n8n-nodes-base.wekan",
+      "typeVersion": 1,
+      "position": [
+        2450,
+        450
+      ],
+      "credentials": {
+        "wekanApi": "Wekan API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "checklistItem",
+        "operation": "update",
+        "boardId": "={{$node[\"Wekan\"].json[\"_id\"]}}",
+        "listId": "={{$node[\"Wekan4\"].json[\"_id\"]}}",
+        "cardId": "={{$node[\"Wekan8\"].json[\"_id\"]}}",
+        "checklistId": "={{$node[\"Wekan17\"].json[\"_id\"]}}",
+        "checklistItemId": "={{$node[\"Wekan18\"].json[\"items\"][0][\"_id\"]}}",
+        "updateFields": {
+          "isFinished": true
+        }
+      },
+      "name": "Wekan22",
+      "type": "n8n-nodes-base.wekan",
+      "typeVersion": 1,
+      "position": [
+        2600,
+        450
+      ],
+      "credentials": {
+        "wekanApi": "Wekan API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "checklistItem",
+        "operation": "delete",
+        "boardId": "={{$node[\"Wekan\"].json[\"_id\"]}}",
+        "listId": "={{$node[\"Wekan4\"].json[\"_id\"]}}",
+        "cardId": "={{$node[\"Wekan8\"].json[\"_id\"]}}",
+        "checklistId": "={{$node[\"Wekan17\"].json[\"_id\"]}}",
+        "checklistItemId": "={{$node[\"Wekan18\"].json[\"items\"][0][\"_id\"]}}"
+      },
+      "name": "Wekan23",
+      "type": "n8n-nodes-base.wekan",
+      "typeVersion": 1,
+      "position": [
+        2750,
+        450
+      ],
+      "credentials": {
+        "wekanApi": "Wekan API creds"
+      }
+    },
+    {
+      "parameters": {
+        "mode": "wait"
+      },
+      "name": "Merge",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 1,
+      "position": [
+        3050,
+        500
+      ]
+    }
+  ],
+  "connections": {
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Wekan",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wekan": {
+      "main": [
+        [
+          {
+            "node": "Wekan1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wekan1": {
+      "main": [
+        [
+          {
+            "node": "Wekan2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wekan2": {
+      "main": [
+        [
+          {
+            "node": "Wekan4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wekan4": {
+      "main": [
+        [
+          {
+            "node": "Wekan5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wekan5": {
+      "main": [
+        [
+          {
+            "node": "Wekan6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wekan6": {
+      "main": [
+        [
+          {
+            "node": "Wekan8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wekan7": {
+      "main": [
+        [
+          {
+            "node": "Wekan3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wekan8": {
+      "main": [
+        [
+          {
+            "node": "Wekan9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wekan9": {
+      "main": [
+        [
+          {
+            "node": "Wekan10",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wekan10": {
+      "main": [
+        [
+          {
+            "node": "Wekan11",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wekan12": {
+      "main": [
+        [
+          {
+            "node": "Wekan7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wekan11": {
+      "main": [
+        [
+          {
+            "node": "Wekan13",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Wekan17",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wekan13": {
+      "main": [
+        [
+          {
+            "node": "Wekan14",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wekan14": {
+      "main": [
+        [
+          {
+            "node": "Wekan15",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wekan16": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Wekan17": {
+      "main": [
+        [
+          {
+            "node": "Wekan18",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wekan18": {
+      "main": [
+        [
+          {
+            "node": "Wekan19",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wekan20": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wekan15": {
+      "main": [
+        [
+          {
+            "node": "Wekan16",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wekan19": {
+      "main": [
+        [
+          {
+            "node": "Wekan21",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wekan21": {
+      "main": [
+        [
+          {
+            "node": "Wekan22",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wekan22": {
+      "main": [
+        [
+          {
+            "node": "Wekan23",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wekan23": {
+      "main": [
+        [
+          {
+            "node": "Wekan20",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge": {
+      "main": [
+        [
+          {
+            "node": "Wekan12",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-03-12T12:14:08.727Z",
+  "updatedAt": "2021-03-12T12:35:37.990Z",
+  "settings": {},
+  "staticData": null
+}
