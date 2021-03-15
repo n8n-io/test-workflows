@@ -1,0 +1,147 @@
+{
+  "id": 135,
+  "name": "Cortex:Analyzer:execute:Job:report get:Responder:execute",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "analyzer": "f4abc1b633b80f45af165970793fd4fd::Abuse_Finder_3_0",
+        "observableType": "ip",
+        "observableValue": "129.178.188.205",
+        "tlp": 1,
+        "additionalFields": {}
+      },
+      "name": "Cortex",
+      "type": "n8n-nodes-base.cortex",
+      "typeVersion": 1,
+      "position": [
+        490,
+        300
+      ],
+      "credentials": {
+        "cortexApi": "Cortex API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "job",
+        "operation": "report",
+        "jobId": "={{$node[\"Cortex\"].json[\"_id\"]}}"
+      },
+      "name": "Cortex1",
+      "type": "n8n-nodes-base.cortex",
+      "typeVersion": 1,
+      "position": [
+        640,
+        300
+      ],
+      "credentials": {
+        "cortexApi": "Cortex API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "job",
+        "jobId": "={{$node[\"Cortex\"].json[\"_id\"]}}"
+      },
+      "name": "Cortex2",
+      "type": "n8n-nodes-base.cortex",
+      "typeVersion": 1,
+      "position": [
+        790,
+        300
+      ],
+      "credentials": {
+        "cortexApi": "Cortex API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "responder",
+        "responder": "fbe415a38eb649eb7df174aa11a32cfe::KnowBe4_1_0",
+        "entityType": "case_artifact",
+        "parameters": {
+          "values": {
+            "dataType": "ip",
+            "data": "129.178.188.205",
+            "message": "test",
+            "startDate": "2021-03-23T23:00:00.000Z",
+            "ioc": true,
+            "status": "Ok"
+          }
+        }
+      },
+      "name": "Cortex3",
+      "type": "n8n-nodes-base.cortex",
+      "typeVersion": 1,
+      "position": [
+        940,
+        300
+      ],
+      "credentials": {
+        "cortexApi": "Cortex API creds"
+      },
+      "disabled": true
+    }
+  ],
+  "connections": {
+    "Cortex": {
+      "main": [
+        [
+          {
+            "node": "Cortex1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Cortex1": {
+      "main": [
+        [
+          {
+            "node": "Cortex2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Cortex2": {
+      "main": [
+        [
+          {
+            "node": "Cortex3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Cortex",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-03-15T11:07:38.626Z",
+  "updatedAt": "2021-03-15T11:09:41.430Z",
+  "settings": {},
+  "staticData": null
+}
