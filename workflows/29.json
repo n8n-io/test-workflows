@@ -45,7 +45,7 @@
       "type": "n8n-nodes-base.clickUp",
       "typeVersion": 1,
       "position": [
-        550,
+        680,
         350
       ],
       "credentials": {
@@ -64,7 +64,7 @@
       "type": "n8n-nodes-base.clickUp",
       "typeVersion": 1,
       "position": [
-        700,
+        960,
         420
       ],
       "credentials": {
@@ -84,7 +84,7 @@
       "type": "n8n-nodes-base.clickUp",
       "typeVersion": 1,
       "position": [
-        850,
+        1230,
         420
       ],
       "credentials": {
@@ -103,7 +103,7 @@
       "type": "n8n-nodes-base.clickUp",
       "typeVersion": 1,
       "position": [
-        990,
+        1520,
         420
       ],
       "credentials": {
@@ -120,7 +120,7 @@
       "type": "n8n-nodes-base.clickUp",
       "typeVersion": 1,
       "position": [
-        1140,
+        1830,
         420
       ],
       "credentials": {
@@ -139,7 +139,7 @@
       "type": "n8n-nodes-base.clickUp",
       "typeVersion": 1,
       "position": [
-        1420,
+        2400,
         290
       ],
       "credentials": {
@@ -159,12 +159,96 @@
       "type": "n8n-nodes-base.clickUp",
       "typeVersion": 1,
       "position": [
-        1280,
+        2130,
         350
       ],
       "credentials": {
         "clickUpApi": "clickup cred"
       }
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(500);\n\n// Output data\nreturn items;"
+      },
+      "name": "Delay",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        550,
+        300
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(500);\n\n// Output data\nreturn items;"
+      },
+      "name": "Delay1",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        810,
+        400
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(500);\n\n// Output data\nreturn items;"
+      },
+      "name": "Delay2",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        1100,
+        420
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(500);\n\n// Output data\nreturn items;"
+      },
+      "name": "Delay3",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        1370,
+        420
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(500);\n\n// Output data\nreturn items;"
+      },
+      "name": "Delay4",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        1670,
+        420
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(500);\n\n// Output data\nreturn items;"
+      },
+      "name": "Delay5",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        2000,
+        350
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(500);\n\n// Output data\nreturn items;"
+      },
+      "name": "Delay6",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        2270,
+        290
+      ],
+      "typeVersion": 1
     }
   ],
   "connections": {
@@ -172,7 +256,7 @@
       "main": [
         [
           {
-            "node": "ClickUp1",
+            "node": "Delay",
             "type": "main",
             "index": 0
           }
@@ -194,7 +278,7 @@
       "main": [
         [
           {
-            "node": "ClickUp2",
+            "node": "Delay1",
             "type": "main",
             "index": 0
           }
@@ -205,7 +289,7 @@
       "main": [
         [
           {
-            "node": "ClickUp3",
+            "node": "Delay2",
             "type": "main",
             "index": 0
           }
@@ -216,7 +300,7 @@
       "main": [
         [
           {
-            "node": "ClickUp4",
+            "node": "Delay3",
             "type": "main",
             "index": 0
           }
@@ -227,7 +311,7 @@
       "main": [
         [
           {
-            "node": "ClickUp5",
+            "node": "Delay4",
             "type": "main",
             "index": 0
           }
@@ -238,7 +322,7 @@
       "main": [
         [
           {
-            "node": "ClickUp7",
+            "node": "Delay6",
             "type": "main",
             "index": 0
           }
@@ -249,7 +333,84 @@
       "main": [
         [
           {
+            "node": "Delay5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Delay": {
+      "main": [
+        [
+          {
+            "node": "ClickUp1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Delay1": {
+      "main": [
+        [
+          {
+            "node": "ClickUp2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Delay2": {
+      "main": [
+        [
+          {
+            "node": "ClickUp3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Delay3": {
+      "main": [
+        [
+          {
+            "node": "ClickUp4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Delay4": {
+      "main": [
+        [
+          {
+            "node": "ClickUp5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Delay5": {
+      "main": [
+        [
+          {
             "node": "ClickUp6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Delay6": {
+      "main": [
+        [
+          {
+            "node": "ClickUp7",
             "type": "main",
             "index": 0
           }
@@ -258,7 +419,7 @@
     }
   },
   "createdAt": "2021-02-17T11:06:49.772Z",
-  "updatedAt": "2021-02-24T11:50:14.407Z",
+  "updatedAt": "2021-03-15T15:22:50.638Z",
   "settings": {},
   "staticData": null
 }
