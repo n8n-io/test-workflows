@@ -1,0 +1,133 @@
+{
+  "id": 136,
+  "name": "Pushbullet:Push:create update getAll delete",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "title": "=Push{{Date.now()}}",
+        "body": "=Body{{Date.now()}}"
+      },
+      "name": "Pushbullet",
+      "type": "n8n-nodes-base.pushbullet",
+      "typeVersion": 1,
+      "position": [
+        450,
+        300
+      ],
+      "credentials": {
+        "pushbulletOAuth2Api": "Pushbullet OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "pushId": "={{$node[\"Pushbullet\"].json[\"iden\"]}}",
+        "dismissed": true
+      },
+      "name": "Pushbullet1",
+      "type": "n8n-nodes-base.pushbullet",
+      "typeVersion": 1,
+      "position": [
+        600,
+        300
+      ],
+      "credentials": {
+        "pushbulletOAuth2Api": "Pushbullet OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "limit": 1,
+        "filters": {}
+      },
+      "name": "Pushbullet2",
+      "type": "n8n-nodes-base.pushbullet",
+      "typeVersion": 1,
+      "position": [
+        750,
+        300
+      ],
+      "credentials": {
+        "pushbulletOAuth2Api": "Pushbullet OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "pushId": "={{$node[\"Pushbullet\"].json[\"iden\"]}}"
+      },
+      "name": "Pushbullet3",
+      "type": "n8n-nodes-base.pushbullet",
+      "typeVersion": 1,
+      "position": [
+        900,
+        300
+      ],
+      "credentials": {
+        "pushbulletOAuth2Api": "Pushbullet OAuth2 API creds"
+      }
+    }
+  ],
+  "connections": {
+    "Pushbullet": {
+      "main": [
+        [
+          {
+            "node": "Pushbullet1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Pushbullet1": {
+      "main": [
+        [
+          {
+            "node": "Pushbullet2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Pushbullet2": {
+      "main": [
+        [
+          {
+            "node": "Pushbullet3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Pushbullet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-03-15T11:39:24.637Z",
+  "updatedAt": "2021-03-15T11:39:24.637Z",
+  "settings": {},
+  "staticData": null
+}
