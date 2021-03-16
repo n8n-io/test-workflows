@@ -83,7 +83,7 @@
     {
       "parameters": {
         "resource": "label",
-        "name": "TestLabel"
+        "name": "=TestLabel{{Date.now()}}"
       },
       "name": "Gmail4",
       "type": "n8n-nodes-base.gmail",
@@ -197,7 +197,7 @@
       "type": "n8n-nodes-base.gmail",
       "typeVersion": 1,
       "position": [
-        1460,
+        1620,
         530
       ],
       "credentials": {
@@ -257,7 +257,7 @@
       "type": "n8n-nodes-base.gmail",
       "typeVersion": 1,
       "position": [
-        1590,
+        1890,
         530
       ],
       "credentials": {
@@ -300,6 +300,30 @@
       "credentials": {
         "gmailOAuth2": "Gmail 0auth"
       }
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(500);\n\n// Output data\nreturn items;"
+      },
+      "name": "Sleep 0.5 Second",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        1470,
+        530
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(500);\n\n// Output data\nreturn items;"
+      },
+      "name": "Sleep 0.5 Second1",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        1760,
+        530
+      ],
+      "typeVersion": 1
     }
   ],
   "connections": {
@@ -416,18 +440,7 @@
       "main": [
         [
           {
-            "node": "Gmail11",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Gmail11": {
-      "main": [
-        [
-          {
-            "node": "Gmail14",
+            "node": "Sleep 0.5 Second",
             "type": "main",
             "index": 0
           }
@@ -466,10 +479,48 @@
           }
         ]
       ]
+    },
+    "Gmail14": {
+      "main": [
+        []
+      ]
+    },
+    "Sleep 0.5 Second": {
+      "main": [
+        [
+          {
+            "node": "Gmail11",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sleep 0.5 Second1": {
+      "main": [
+        [
+          {
+            "node": "Gmail14",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gmail11": {
+      "main": [
+        [
+          {
+            "node": "Sleep 0.5 Second1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "createdAt": "2021-02-18T14:57:48.780Z",
-  "updatedAt": "2021-02-18T15:11:04.095Z",
+  "updatedAt": "2021-03-16T10:54:02.671Z",
   "settings": {},
   "staticData": null
 }
