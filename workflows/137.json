@@ -1,6 +1,6 @@
 {
   "id": 137,
-  "name": "Thehive(v3)",
+  "name": "TheHive[v3]:Alert:create update get getAll promote merge:Case:create update get getAll:Observable:create update get search getAll:Task:create update get search getAll:Log:create get getAll",
   "active": false,
   "nodes": [
     {
@@ -108,19 +108,19 @@
     {
       "parameters": {
         "operation": "merge",
-        "id": "={{$node[\"TheHive\"].json[\"id\"]}}"
+        "id": "={{$node[\"TheHive30\"].json[\"id\"]}}",
+        "caseId": "={{$node[\"TheHive29\"].json[\"id\"]}}"
       },
       "name": "TheHive5",
       "type": "n8n-nodes-base.theHive",
       "typeVersion": 1,
       "position": [
-        1200,
-        300
+        750,
+        150
       ],
       "credentials": {
         "theHiveApi": "The Hive API creds"
-      },
-      "disabled": true
+      }
     },
     {
       "parameters": {
@@ -547,6 +547,50 @@
         "theHiveApi": "The Hive API creds"
       },
       "disabled": true
+    },
+    {
+      "parameters": {
+        "resource": "case",
+        "operation": "create",
+        "title": "=MergingCase{{Date.now()}}",
+        "description": "desc",
+        "startDate": "={{(new Date()).toISOString()}}",
+        "owner": "nodeqa",
+        "tags": "test",
+        "options": {}
+      },
+      "name": "TheHive29",
+      "type": "n8n-nodes-base.theHive",
+      "typeVersion": 1,
+      "position": [
+        450,
+        150
+      ],
+      "credentials": {
+        "theHiveApi": "The Hive API creds"
+      }
+    },
+    {
+      "parameters": {
+        "title": "=MergingAlert{{Date.now()}}",
+        "description": "desc",
+        "date": "={{(new Date()).toISOString()}}",
+        "tags": "test",
+        "type": "test",
+        "source": "n8n",
+        "sourceRef": "={{Date.now().toString()}}",
+        "additionalFields": {}
+      },
+      "name": "TheHive30",
+      "type": "n8n-nodes-base.theHive",
+      "typeVersion": 1,
+      "position": [
+        600,
+        150
+      ],
+      "credentials": {
+        "theHiveApi": "The Hive API creds"
+      }
     }
   ],
   "connections": {
@@ -753,6 +797,11 @@
             "node": "TheHive",
             "type": "main",
             "index": 0
+          },
+          {
+            "node": "TheHive29",
+            "type": "main",
+            "index": 0
           }
         ]
       ]
@@ -789,10 +838,32 @@
           }
         ]
       ]
+    },
+    "TheHive30": {
+      "main": [
+        [
+          {
+            "node": "TheHive5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "TheHive29": {
+      "main": [
+        [
+          {
+            "node": "TheHive30",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "createdAt": "2021-03-16T15:47:37.279Z",
-  "updatedAt": "2021-03-16T16:57:43.889Z",
+  "updatedAt": "2021-03-16T17:24:18.533Z",
   "settings": {},
   "staticData": null
 }

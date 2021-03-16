@@ -1,6 +1,6 @@
 {
   "id": 138,
-  "name": "Thehive(v4)",
+  "name": "TheHive[v4]:Alert:create update get getAll promote merge:Case:create update get getAll:Observable:create update get search getAll:Task:create update get search getAll:Log:create get getAll",
   "active": false,
   "nodes": [
     {
@@ -104,23 +104,6 @@
       "credentials": {
         "theHiveApi": "The Hive API creds (v1)"
       }
-    },
-    {
-      "parameters": {
-        "operation": "merge",
-        "id": "={{$node[\"TheHive\"].json[\"id\"]}}"
-      },
-      "name": "TheHive5",
-      "type": "n8n-nodes-base.theHive",
-      "typeVersion": 1,
-      "position": [
-        1450,
-        50
-      ],
-      "credentials": {
-        "theHiveApi": "The Hive API creds (v1)"
-      },
-      "disabled": true
     },
     {
       "parameters": {
@@ -454,7 +437,7 @@
       "type": "n8n-nodes-base.theHive",
       "typeVersion": 1,
       "position": [
-        1590,
+        1400,
         50
       ],
       "credentials": {
@@ -610,6 +593,67 @@
       "position": [
         1350,
         520
+      ],
+      "credentials": {
+        "theHiveApi": "The Hive API creds (v1)"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "merge",
+        "id": "={{$node[\"TheHive35\"].json[\"id\"]}}",
+        "caseId": "={{$node[\"TheHive34\"].json[\"id\"]}}"
+      },
+      "name": "TheHive33",
+      "type": "n8n-nodes-base.theHive",
+      "typeVersion": 1,
+      "position": [
+        770,
+        -100
+      ],
+      "credentials": {
+        "theHiveApi": "The Hive API creds (v1)"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "case",
+        "operation": "create",
+        "title": "=MergingCase{{Date.now()}}",
+        "description": "desc",
+        "startDate": "={{(new Date()).toISOString()}}",
+        "owner": "nodeqa",
+        "tags": "test",
+        "options": {}
+      },
+      "name": "TheHive34",
+      "type": "n8n-nodes-base.theHive",
+      "typeVersion": 1,
+      "position": [
+        470,
+        -100
+      ],
+      "credentials": {
+        "theHiveApi": "The Hive API creds (v1)"
+      }
+    },
+    {
+      "parameters": {
+        "title": "=MergingAlert{{Date.now()}}",
+        "description": "desc",
+        "date": "={{(new Date()).toISOString()}}",
+        "tags": "test",
+        "type": "test",
+        "source": "n8n",
+        "sourceRef": "={{Date.now().toString()}}",
+        "additionalFields": {}
+      },
+      "name": "TheHive35",
+      "type": "n8n-nodes-base.theHive",
+      "typeVersion": 1,
+      "position": [
+        620,
+        -100
       ],
       "credentials": {
         "theHiveApi": "The Hive API creds (v1)"
@@ -775,11 +819,6 @@
         ]
       ]
     },
-    "TheHive18": {
-      "main": [
-        []
-      ]
-    },
     "TheHive19": {
       "main": [
         [
@@ -847,6 +886,11 @@
             "node": "TheHive",
             "type": "main",
             "index": 0
+          },
+          {
+            "node": "TheHive34",
+            "type": "main",
+            "index": 0
           }
         ]
       ]
@@ -883,10 +927,32 @@
           }
         ]
       ]
+    },
+    "TheHive34": {
+      "main": [
+        [
+          {
+            "node": "TheHive35",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "TheHive35": {
+      "main": [
+        [
+          {
+            "node": "TheHive33",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "createdAt": "2021-03-16T16:58:12.352Z",
-  "updatedAt": "2021-03-16T17:10:30.692Z",
+  "updatedAt": "2021-03-16T17:24:47.184Z",
   "settings": {},
   "staticData": null
 }
