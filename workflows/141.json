@@ -1,0 +1,304 @@
+{
+  "id": 141,
+  "name": "MicrosoftExcel:Table:lookup getRows getColumns addRow:Workbook:addWorksheet getAll:Worksheet:getAll getContent",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "addWorksheet",
+        "workbook": "51F07A8CA9E72D69!136",
+        "additionalFields": {
+          "name": "=WorkSheet{{Date.now()}}"
+        }
+      },
+      "name": "Microsoft Excel",
+      "type": "n8n-nodes-base.microsoftExcel",
+      "typeVersion": 1,
+      "position": [
+        500,
+        300
+      ],
+      "credentials": {
+        "microsoftExcelOAuth2Api": "Microsoft Excel OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "limit": 1,
+        "filters": {}
+      },
+      "name": "Microsoft Excel1",
+      "type": "n8n-nodes-base.microsoftExcel",
+      "typeVersion": 1,
+      "position": [
+        650,
+        300
+      ],
+      "credentials": {
+        "microsoftExcelOAuth2Api": "Microsoft Excel OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "worksheet",
+        "operation": "getAll",
+        "workbook": "51F07A8CA9E72D69!136",
+        "limit": 1,
+        "filters": {}
+      },
+      "name": "Microsoft Excel2",
+      "type": "n8n-nodes-base.microsoftExcel",
+      "typeVersion": 1,
+      "position": [
+        500,
+        450
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "microsoftExcelOAuth2Api": "Microsoft Excel OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "worksheet",
+        "operation": "getContent",
+        "workbook": "51F07A8CA9E72D69!136",
+        "worksheet": "{00000000-0001-0000-0000-000000000000}",
+        "range": "A1:D2"
+      },
+      "name": "Microsoft Excel3",
+      "type": "n8n-nodes-base.microsoftExcel",
+      "typeVersion": 1,
+      "position": [
+        650,
+        450
+      ],
+      "credentials": {
+        "microsoftExcelOAuth2Api": "Microsoft Excel OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "table",
+        "operation": "lookup",
+        "workbook": "51F07A8CA9E72D69!136",
+        "worksheet": "{00000000-0001-0000-0000-000000000000}",
+        "table": "{36FB1939-0994-4A3D-8612-14A5283A6A80}",
+        "lookupColumn": "t",
+        "lookupValue": "n",
+        "options": {}
+      },
+      "name": "Microsoft Excel4",
+      "type": "n8n-nodes-base.microsoftExcel",
+      "typeVersion": 1,
+      "position": [
+        500,
+        150
+      ],
+      "credentials": {
+        "microsoftExcelOAuth2Api": "Microsoft Excel OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "table",
+        "operation": "getRows",
+        "workbook": "51F07A8CA9E72D69!136",
+        "worksheet": "{00000000-0001-0000-0000-000000000000}",
+        "table": "{36FB1939-0994-4A3D-8612-14A5283A6A80}",
+        "limit": 1
+      },
+      "name": "Microsoft Excel5",
+      "type": "n8n-nodes-base.microsoftExcel",
+      "typeVersion": 1,
+      "position": [
+        650,
+        150
+      ],
+      "credentials": {
+        "microsoftExcelOAuth2Api": "Microsoft Excel OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "table",
+        "operation": "getColumns",
+        "workbook": "51F07A8CA9E72D69!136",
+        "worksheet": "{00000000-0001-0000-0000-000000000000}",
+        "table": "{36FB1939-0994-4A3D-8612-14A5283A6A80}",
+        "limit": 1
+      },
+      "name": "Microsoft Excel6",
+      "type": "n8n-nodes-base.microsoftExcel",
+      "typeVersion": 1,
+      "position": [
+        800,
+        150
+      ],
+      "credentials": {
+        "microsoftExcelOAuth2Api": "Microsoft Excel OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "table",
+        "workbook": "51F07A8CA9E72D69!136",
+        "worksheet": "{00000000-0001-0000-0000-000000000000}",
+        "table": "{36FB1939-0994-4A3D-8612-14A5283A6A80}",
+        "additionalFields": {}
+      },
+      "name": "Microsoft Excel7",
+      "type": "n8n-nodes-base.microsoftExcel",
+      "typeVersion": 1,
+      "position": [
+        1100,
+        150
+      ],
+      "credentials": {
+        "microsoftExcelOAuth2Api": "Microsoft Excel OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [],
+          "number": [
+            {
+              "name": "t",
+              "value": "={{Math.round(Math.random()*100)}}"
+            },
+            {
+              "name": "e",
+              "value": "={{Math.round(Math.random()*100)}}"
+            },
+            {
+              "name": "s",
+              "value": "={{Math.round(Math.random()*100)}}"
+            },
+            {
+              "name": "t2",
+              "value": "={{Math.round(Math.random()*100)}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Set",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        950,
+        150
+      ]
+    }
+  ],
+  "connections": {
+    "Microsoft Excel": {
+      "main": [
+        [
+          {
+            "node": "Microsoft Excel1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Microsoft Excel2": {
+      "main": [
+        [
+          {
+            "node": "Microsoft Excel3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Microsoft Excel",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Microsoft Excel2",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Microsoft Excel4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Microsoft Excel4": {
+      "main": [
+        [
+          {
+            "node": "Microsoft Excel5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Microsoft Excel5": {
+      "main": [
+        [
+          {
+            "node": "Microsoft Excel6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Microsoft Excel7": {
+      "main": [
+        []
+      ]
+    },
+    "Microsoft Excel6": {
+      "main": [
+        [
+          {
+            "node": "Set",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set": {
+      "main": [
+        [
+          {
+            "node": "Microsoft Excel7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-03-19T10:44:59.685Z",
+  "updatedAt": "2021-03-19T13:23:03.320Z",
+  "settings": {},
+  "staticData": null
+}
