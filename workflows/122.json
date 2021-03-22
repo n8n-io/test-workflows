@@ -1,0 +1,456 @@
+{
+  "id": 122,
+  "name": "Orbit:Member:upsert get update delete getAll lookup:Note:create update getAll:Activity:create getAll",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        410,
+        200
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "upsert",
+        "workspaceId": "937",
+        "identityUi": {
+          "identityValue": {
+            "source": "email",
+            "email": "={{$node[\"Set\"].json[\"email\"]}}"
+          }
+        },
+        "additionalFields": {
+          "name": "=Name{{Date.now()}}"
+        }
+      },
+      "name": "Orbit",
+      "type": "n8n-nodes-base.orbit",
+      "typeVersion": 1,
+      "position": [
+        750,
+        200
+      ],
+      "credentials": {
+        "orbitApi": "Orbit API creds"
+      }
+    },
+    {
+      "parameters": {
+        "workspaceId": "937",
+        "memberId": "={{$node[\"Orbit\"].json[\"id\"]}}"
+      },
+      "name": "Orbit1",
+      "type": "n8n-nodes-base.orbit",
+      "typeVersion": 1,
+      "position": [
+        900,
+        200
+      ],
+      "credentials": {
+        "orbitApi": "Orbit API creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "workspaceId": "937",
+        "limit": 1,
+        "options": {}
+      },
+      "name": "Orbit2",
+      "type": "n8n-nodes-base.orbit",
+      "typeVersion": 1,
+      "position": [
+        600,
+        500
+      ],
+      "credentials": {
+        "orbitApi": "Orbit API creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "workspaceId": "937",
+        "memberId": "={{$node[\"Orbit\"].json[\"id\"]}}",
+        "updateFields": {
+          "name": "=Updated{{$node[\"Orbit\"].json[\"attributes\"][\"name\"]}}"
+        }
+      },
+      "name": "Orbit3",
+      "type": "n8n-nodes-base.orbit",
+      "typeVersion": 1,
+      "position": [
+        1050,
+        200
+      ],
+      "credentials": {
+        "orbitApi": "Orbit API creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "lookup",
+        "workspaceId": "937",
+        "source": "github",
+        "searchBy": "username",
+        "username": "={{$node[\"Orbit2\"].json[\"attributes\"][\"github\"]}}"
+      },
+      "name": "Orbit4",
+      "type": "n8n-nodes-base.orbit",
+      "typeVersion": 1,
+      "position": [
+        750,
+        500
+      ],
+      "credentials": {
+        "orbitApi": "Orbit API creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "workspaceId": "937",
+        "memberId": "={{$node[\"Orbit\"].json[\"id\"]}}"
+      },
+      "name": "Orbit5",
+      "type": "n8n-nodes-base.orbit",
+      "typeVersion": 1,
+      "position": [
+        1200,
+        200
+      ],
+      "credentials": {
+        "orbitApi": "Orbit API creds"
+      }
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "email",
+              "value": "=fake{{Date.now()}}@gmail.com"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Set",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        600,
+        200
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "activity",
+        "workspaceId": "937",
+        "memberId": "={{$node[\"Orbit\"].json[\"id\"]}}",
+        "title": "=Title{{Date.now()}}",
+        "additionalFields": {}
+      },
+      "name": "Orbit6",
+      "type": "n8n-nodes-base.orbit",
+      "typeVersion": 1,
+      "position": [
+        900,
+        350
+      ],
+      "credentials": {
+        "orbitApi": "Orbit API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "activity",
+        "operation": "getAll",
+        "workspaceId": "937",
+        "limit": 1,
+        "filters": {}
+      },
+      "name": "Orbit7",
+      "type": "n8n-nodes-base.orbit",
+      "typeVersion": 1,
+      "position": [
+        1050,
+        350
+      ],
+      "credentials": {
+        "orbitApi": "Orbit API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "note",
+        "workspaceId": "937",
+        "memberId": "={{$node[\"Orbit\"].json[\"id\"]}}",
+        "note": "=Note{{Date.now()}}"
+      },
+      "name": "Orbit8",
+      "type": "n8n-nodes-base.orbit",
+      "typeVersion": 1,
+      "position": [
+        900,
+        50
+      ],
+      "credentials": {
+        "orbitApi": "Orbit API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "note",
+        "operation": "update",
+        "workspaceId": "937",
+        "memberId": "={{$node[\"Orbit\"].json[\"id\"]}}",
+        "noteId": "={{$node[\"Orbit8\"].json[\"id\"]}}",
+        "note": "=Updated{{$node[\"Orbit8\"].json[\"attributes\"][\"body\"]}}"
+      },
+      "name": "Orbit9",
+      "type": "n8n-nodes-base.orbit",
+      "typeVersion": 1,
+      "position": [
+        1050,
+        50
+      ],
+      "credentials": {
+        "orbitApi": "Orbit API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "note",
+        "operation": "getAll",
+        "workspaceId": "937",
+        "memberId": "={{$node[\"Orbit\"].json[\"id\"]}}",
+        "limit": 1
+      },
+      "name": "Orbit10",
+      "type": "n8n-nodes-base.orbit",
+      "typeVersion": 1,
+      "position": [
+        1200,
+        50
+      ],
+      "credentials": {
+        "orbitApi": "Orbit API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "post",
+        "workspaceId": "937",
+        "memberId": "={{$node[\"Orbit4\"].json[\"id\"]}}",
+        "url": "https://n8n.io/blog/why-business-process-automation-with-n8n-can-change-your-daily-life/",
+        "additionalFields": {}
+      },
+      "name": "Orbit11",
+      "type": "n8n-nodes-base.orbit",
+      "typeVersion": 1,
+      "position": [
+        900,
+        500
+      ],
+      "credentials": {
+        "orbitApi": "Orbit API creds"
+      },
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "resource": "post",
+        "operation": "getAll",
+        "workspaceId": "937",
+        "filters": {}
+      },
+      "name": "Orbit12",
+      "type": "n8n-nodes-base.orbit",
+      "typeVersion": 1,
+      "position": [
+        1050,
+        500
+      ],
+      "credentials": {
+        "orbitApi": "Orbit API creds"
+      },
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "resource": "post",
+        "operation": "delete",
+        "workspaceId": "937"
+      },
+      "name": "Orbit13",
+      "type": "n8n-nodes-base.orbit",
+      "typeVersion": 1,
+      "position": [
+        1210,
+        500
+      ],
+      "credentials": {
+        "orbitApi": "Orbit API creds"
+      },
+      "disabled": true
+    }
+  ],
+  "connections": {
+    "Orbit": {
+      "main": [
+        [
+          {
+            "node": "Orbit6",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Orbit8",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Orbit1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Orbit1": {
+      "main": [
+        [
+          {
+            "node": "Orbit3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Orbit2": {
+      "main": [
+        [
+          {
+            "node": "Orbit4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Orbit3": {
+      "main": [
+        [
+          {
+            "node": "Orbit5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Orbit5": {
+      "main": [
+        []
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Set",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Orbit2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set": {
+      "main": [
+        [
+          {
+            "node": "Orbit",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Orbit6": {
+      "main": [
+        [
+          {
+            "node": "Orbit7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Orbit8": {
+      "main": [
+        [
+          {
+            "node": "Orbit9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Orbit9": {
+      "main": [
+        [
+          {
+            "node": "Orbit10",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Orbit4": {
+      "main": [
+        []
+      ]
+    },
+    "Orbit11": {
+      "main": [
+        [
+          {
+            "node": "Orbit12",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Orbit12": {
+      "main": [
+        [
+          {
+            "node": "Orbit13",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-03-11T08:54:28.548Z",
+  "updatedAt": "2021-03-22T08:47:25.731Z",
+  "settings": {},
+  "staticData": null
+}
