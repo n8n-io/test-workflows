@@ -1,0 +1,52 @@
+{
+  "id": 161,
+  "name": "Vonage:SMS:send",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "from": "21624827732",
+        "to": "21624827732",
+        "message": "=Message{{Date.now()}}",
+        "additionalFields": {}
+      },
+      "name": "Vonage",
+      "type": "n8n-nodes-base.vonage",
+      "typeVersion": 1,
+      "position": [
+        450,
+        300
+      ],
+      "credentials": {
+        "vonageApi": "Vonage API creds"
+      }
+    }
+  ],
+  "connections": {
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Vonage",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-03-29T08:38:31.241Z",
+  "updatedAt": "2021-03-29T08:39:51.181Z",
+  "settings": {},
+  "staticData": null
+}
