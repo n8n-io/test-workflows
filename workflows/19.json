@@ -1,6 +1,6 @@
 {
   "id": 19,
-  "name": "SentryIo:Organization:get getAll:Team:create get getAll:Project:getAll get:Issue:getAll get update:Event:getAll get",
+  "name": "SentryIo:Organization:create get getAll update:Team:create get getAll update delete:Project:getAll get update:Issue:getAll get update:Event:getAll get:Release:create get getAll update delete",
   "active": false,
   "nodes": [
     {
@@ -9,15 +9,15 @@
       "type": "n8n-nodes-base.start",
       "typeVersion": 1,
       "position": [
-        200,
-        460
+        210,
+        580
       ]
     },
     {
       "parameters": {
         "resource": "organization",
         "operation": "create",
-        "name": "TestOrg",
+        "name": "=Org{{Date.now()}}",
         "agreeTerms": true,
         "additionalFields": {}
       },
@@ -35,7 +35,7 @@
     {
       "parameters": {
         "resource": "organization",
-        "organizationSlug": "n8n-iq"
+        "organizationSlug": "={{$node[\"Sentry.io\"].json[\"slug\"]}}"
       },
       "name": "Sentry.io1",
       "type": "n8n-nodes-base.sentryIo",
@@ -59,7 +59,7 @@
       "type": "n8n-nodes-base.sentryIo",
       "typeVersion": 1,
       "position": [
-        800,
+        980,
         300
       ],
       "credentials": {
@@ -71,7 +71,7 @@
         "resource": "team",
         "operation": "create",
         "organizationSlug": "n8n-iq",
-        "name": "n8nteam",
+        "name": "=Team{{Date.now()}}",
         "additionalFields": {}
       },
       "name": "Sentry.io3",
@@ -89,7 +89,7 @@
       "parameters": {
         "resource": "team",
         "organizationSlug": "n8n-iq",
-        "teamSlug": "={{$json[\"name\"]}}"
+        "teamSlug": "={{$node[\"Sentry.io3\"].json[\"slug\"]}}"
       },
       "name": "Sentry.io4",
       "type": "n8n-nodes-base.sentryIo",
@@ -113,7 +113,7 @@
       "type": "n8n-nodes-base.sentryIo",
       "typeVersion": 1,
       "position": [
-        730,
+        930,
         140
       ],
       "credentials": {
@@ -141,13 +141,13 @@
       "parameters": {
         "resource": "project",
         "organizationSlug": "n8n-iq",
-        "projectSlug": "nodejsproject"
+        "projectSlug": "={{$node[\"Sentry.io6\"].json[\"slug\"]}}"
       },
       "name": "Sentry.io7",
       "type": "n8n-nodes-base.sentryIo",
       "typeVersion": 1,
       "position": [
-        630,
+        610,
         470
       ],
       "credentials": {
@@ -245,6 +245,180 @@
       "credentials": {
         "sentryIoApi": "sentry io token"
       }
+    },
+    {
+      "parameters": {
+        "resource": "release",
+        "operation": "create",
+        "organizationSlug": "n8n-iq",
+        "version": "={{Date.now().toString()}}",
+        "url": "http://n8n.io",
+        "projects": "={{[$node[\"Sentry.io6\"].json[\"slug\"]]}}",
+        "additionalFields": {}
+      },
+      "name": "Sentry.io13",
+      "type": "n8n-nodes-base.sentryIo",
+      "typeVersion": 1,
+      "position": [
+        950,
+        540
+      ],
+      "credentials": {
+        "sentryIoApi": "sentry io token"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "release",
+        "organizationSlug": "n8n-iq",
+        "version": "={{$node[\"Sentry.io13\"].json[\"shortVersion\"]}}"
+      },
+      "name": "Sentry.io14",
+      "type": "n8n-nodes-base.sentryIo",
+      "typeVersion": 1,
+      "position": [
+        1110,
+        540
+      ],
+      "credentials": {
+        "sentryIoApi": "sentry io token"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "release",
+        "operation": "getAll",
+        "organizationSlug": "n8n-iq",
+        "limit": 1,
+        "additionalFields": {}
+      },
+      "name": "Sentry.io15",
+      "type": "n8n-nodes-base.sentryIo",
+      "typeVersion": 1,
+      "position": [
+        1290,
+        540
+      ],
+      "credentials": {
+        "sentryIoApi": "sentry io token"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "team",
+        "operation": "update",
+        "organizationSlug": "n8n-iq",
+        "teamSlug": "={{$node[\"Sentry.io3\"].json[\"slug\"]}}",
+        "name": "=Updated{{$node[\"Sentry.io3\"].json[\"name\"]}}",
+        "additionalFields": {}
+      },
+      "name": "Sentry.io16",
+      "type": "n8n-nodes-base.sentryIo",
+      "typeVersion": 1,
+      "position": [
+        750,
+        140
+      ],
+      "credentials": {
+        "sentryIoApi": "sentry io token"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "team",
+        "operation": "delete",
+        "organizationSlug": "n8n-iq",
+        "teamSlug": "={{$node[\"Sentry.io3\"].json[\"slug\"]}}"
+      },
+      "name": "Sentry.io17",
+      "type": "n8n-nodes-base.sentryIo",
+      "typeVersion": 1,
+      "position": [
+        1100,
+        140
+      ],
+      "credentials": {
+        "sentryIoApi": "sentry io token"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "organization",
+        "operation": "update",
+        "organization_slug": "={{$node[\"Sentry.io\"].json[\"slug\"]}}",
+        "name": "=Update{{$node[\"Sentry.io\"].json[\"name\"]}}",
+        "additionalFields": {}
+      },
+      "name": "Sentry.io18",
+      "type": "n8n-nodes-base.sentryIo",
+      "typeVersion": 1,
+      "position": [
+        790,
+        300
+      ],
+      "credentials": {
+        "sentryIoApi": "sentry io token"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "project",
+        "operation": "update",
+        "organizationSlug": "n8n-iq",
+        "projectSlug": "={{$node[\"Sentry.io6\"].json[\"slug\"]}}",
+        "additionalFields": {
+          "name": "=Update{{$node[\"Sentry.io6\"].json[\"name\"]}}{{Date.now()}}"
+        }
+      },
+      "name": "Sentry.io19",
+      "type": "n8n-nodes-base.sentryIo",
+      "typeVersion": 1,
+      "position": [
+        780,
+        470
+      ],
+      "credentials": {
+        "sentryIoApi": "sentry io token"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "release",
+        "operation": "update",
+        "organizationSlug": "n8n-iq",
+        "version": "={{$node[\"Sentry.io13\"].json[\"shortVersion\"]}}",
+        "additionalFields": {
+          "url": "http://community.n8n.io"
+        }
+      },
+      "name": "Sentry.io20",
+      "type": "n8n-nodes-base.sentryIo",
+      "typeVersion": 1,
+      "position": [
+        1450,
+        540
+      ],
+      "credentials": {
+        "sentryIoApi": "sentry io token"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "release",
+        "operation": "delete",
+        "organizationSlug": "n8n-iq",
+        "version": "={{$node[\"Sentry.io13\"].json[\"shortVersion\"]}}"
+      },
+      "name": "Sentry.io21",
+      "type": "n8n-nodes-base.sentryIo",
+      "typeVersion": 1,
+      "position": [
+        1600,
+        540
+      ],
+      "credentials": {
+        "sentryIoApi": "sentry io token"
+      }
     }
   ],
   "connections": {
@@ -253,11 +427,6 @@
         [
           {
             "node": "Sentry.io9",
-            "type": "main",
-            "index": 0
-          },
-          {
-            "node": "Sentry.io6",
             "type": "main",
             "index": 0
           },
@@ -273,6 +442,11 @@
           },
           {
             "node": "Sentry.io3",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Sentry.io6",
             "type": "main",
             "index": 0
           }
@@ -294,7 +468,7 @@
       "main": [
         [
           {
-            "node": "Sentry.io2",
+            "node": "Sentry.io18",
             "type": "main",
             "index": 0
           }
@@ -316,7 +490,7 @@
       "main": [
         [
           {
-            "node": "Sentry.io5",
+            "node": "Sentry.io16",
             "type": "main",
             "index": 0
           }
@@ -366,10 +540,114 @@
           }
         ]
       ]
+    },
+    "Sentry.io13": {
+      "main": [
+        [
+          {
+            "node": "Sentry.io14",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sentry.io14": {
+      "main": [
+        [
+          {
+            "node": "Sentry.io15",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sentry.io16": {
+      "main": [
+        [
+          {
+            "node": "Sentry.io5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sentry.io5": {
+      "main": [
+        [
+          {
+            "node": "Sentry.io17",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sentry.io18": {
+      "main": [
+        [
+          {
+            "node": "Sentry.io2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sentry.io7": {
+      "main": [
+        [
+          {
+            "node": "Sentry.io19",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sentry.io10": {
+      "main": [
+        []
+      ]
+    },
+    "Sentry.io19": {
+      "main": [
+        [
+          {
+            "node": "Sentry.io13",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sentry.io15": {
+      "main": [
+        [
+          {
+            "node": "Sentry.io20",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sentry.io20": {
+      "main": [
+        [
+          {
+            "node": "Sentry.io21",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "createdAt": "2021-02-16T14:22:05.872Z",
-  "updatedAt": "2021-02-16T14:43:21.043Z",
+  "updatedAt": "2021-03-30T14:34:59.092Z",
   "settings": {},
   "staticData": null
 }
