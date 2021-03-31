@@ -1,6 +1,6 @@
 {
   "id": 45,
-  "name": "GoogleSheets:SpreadSheet:create:Sheet:append read lookup update delete clean",
+  "name": "GoogleSheets:SpreadSheet:create:Sheet:add append read lookup update delete clean",
   "active": false,
   "nodes": [
     {
@@ -141,6 +141,7 @@
         910,
         360
       ],
+      "alwaysOutputData": true,
       "credentials": {
         "googleSheetsOAuth2Api": "Google Sheets creds"
       }
@@ -202,6 +203,32 @@
       ],
       "notesInFlow": true,
       "notes": "create the input data"
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "operation": "add",
+        "spreadsheetId": "={{$node[\"Google Sheets\"].json[\"spreadsheetId\"]}}",
+        "options": {
+          "index": 1,
+          "gridProperties": {
+            "rowCount": 20,
+            "columnCount": 10
+          },
+          "tabColor": "#FF6E39",
+          "rightToLeft": false
+        }
+      },
+      "name": "Google Sheets7",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 1,
+      "position": [
+        600,
+        200
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": "Google Sheets creds"
+      }
     }
   ],
   "connections": {
@@ -297,10 +324,21 @@
           }
         ]
       ]
+    },
+    "Google Sheets": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "createdAt": "2021-02-19T09:08:47.547Z",
-  "updatedAt": "2021-02-19T09:14:20.412Z",
+  "updatedAt": "2021-03-31T17:24:29.616Z",
   "settings": {},
   "staticData": null
 }
