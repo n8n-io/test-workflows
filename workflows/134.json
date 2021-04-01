@@ -26,7 +26,7 @@
       "type": "n8n-nodes-base.travisCi",
       "typeVersion": 1,
       "position": [
-        600,
+        750,
         300
       ],
       "credentials": {
@@ -43,7 +43,7 @@
       "type": "n8n-nodes-base.travisCi",
       "typeVersion": 1,
       "position": [
-        750,
+        900,
         300
       ],
       "credentials": {
@@ -77,7 +77,7 @@
       "type": "n8n-nodes-base.travisCi",
       "typeVersion": 1,
       "position": [
-        900,
+        1200,
         300
       ],
       "credentials": {
@@ -92,12 +92,48 @@
       "type": "n8n-nodes-base.travisCi",
       "typeVersion": 1,
       "position": [
-        1050,
+        1500,
         300
       ],
       "credentials": {
         "travisCiApi": "Travis API"
       }
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(2000);\n\n// Output data\nreturn items;"
+      },
+      "name": "Sleep 2 Seconds",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        600,
+        300
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(2000);\n\n// Output data\nreturn items;"
+      },
+      "name": "Sleep 2 Seconds1",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        1050,
+        300
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(2000);\n\n// Output data\nreturn items;"
+      },
+      "name": "Sleep 2 Seconds2",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        1350,
+        300
+      ],
+      "typeVersion": 1
     }
   ],
   "connections": {
@@ -127,6 +163,17 @@
       "main": [
         [
           {
+            "node": "Sleep 2 Seconds",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sleep 2 Seconds": {
+      "main": [
+        [
+          {
             "node": "TravisCI",
             "type": "main",
             "index": 0
@@ -135,6 +182,17 @@
       ]
     },
     "TravisCI1": {
+      "main": [
+        [
+          {
+            "node": "Sleep 2 Seconds1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sleep 2 Seconds1": {
       "main": [
         [
           {
@@ -149,21 +207,27 @@
       "main": [
         [
           {
-            "node": "TravisCI4",
+            "node": "Sleep 2 Seconds2",
             "type": "main",
             "index": 0
           }
         ]
       ]
     },
-    "TravisCI4": {
+    "Sleep 2 Seconds2": {
       "main": [
-        []
+        [
+          {
+            "node": "TravisCI4",
+            "type": "main",
+            "index": 0
+          }
+        ]
       ]
     }
   },
   "createdAt": "2021-03-15T08:59:35.889Z",
-  "updatedAt": "2021-03-15T09:10:38.510Z",
+  "updatedAt": "2021-04-01T15:38:45.311Z",
   "settings": {},
   "staticData": null
 }
