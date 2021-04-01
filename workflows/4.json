@@ -15,49 +15,70 @@
     },
     {
       "parameters": {
-        "operation": "list"
+        "operation": "list",
+        "path": "/1KB.zip"
       },
       "name": "FTP1",
       "type": "n8n-nodes-base.ftp",
       "typeVersion": 1,
       "position": [
-        430,
+        450,
         300
       ],
       "credentials": {
-        "ftp": "Tele2 Public FTP http://speedtest.tele2.net/"
+        "ftp": "FTP creds"
       }
     },
     {
       "parameters": {
-        "path": "1MB.zip"
+        "path": "1KB.zip"
       },
       "name": "FTP",
       "type": "n8n-nodes-base.ftp",
       "typeVersion": 1,
       "position": [
-        610,
+        600,
         300
       ],
       "credentials": {
-        "ftp": "Tele2 Public FTP http://speedtest.tele2.net/"
+        "ftp": "FTP creds"
       }
     },
     {
       "parameters": {
         "operation": "upload",
-        "path": "/upload/test.zip"
+        "path": "=/upload/{{$node[\"Set\"].json[\"filename\"]}}"
       },
       "name": "FTP2",
       "type": "n8n-nodes-base.ftp",
       "typeVersion": 1,
       "position": [
-        790,
+        900,
         300
       ],
       "credentials": {
-        "ftp": "Tele2 Public FTP http://speedtest.tele2.net/"
+        "ftp": "FTP creds"
       }
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "filename",
+              "value": "=test{{Date.now()}}.zip"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Set",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        750,
+        300
+      ]
     }
   ],
   "connections": {
@@ -87,6 +108,22 @@
       "main": [
         [
           {
+            "node": "Set",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "FTP2": {
+      "main": [
+        []
+      ]
+    },
+    "Set": {
+      "main": [
+        [
+          {
             "node": "FTP2",
             "type": "main",
             "index": 0
@@ -96,7 +133,7 @@
     }
   },
   "createdAt": "2021-01-21T13:48:02.703Z",
-  "updatedAt": "2021-02-09T12:33:18.568Z",
+  "updatedAt": "2021-03-15T13:59:19.891Z",
   "settings": {},
   "staticData": null
 }
