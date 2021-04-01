@@ -1,0 +1,147 @@
+{
+  "id": 124,
+  "name": "QuestDB: insert executeQuery",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "table": "TestTable",
+        "columns": "id,name"
+      },
+      "name": "QuestDB",
+      "type": "n8n-nodes-base.questDb",
+      "typeVersion": 1,
+      "position": [
+        650,
+        300
+      ],
+      "credentials": {
+        "questDb": "QuestDB creds"
+      }
+    },
+    {
+      "parameters": {
+        "values": {
+          "number": [
+            {
+              "name": "id",
+              "value": "={{Math.round(Math.random()*1000)}}"
+            }
+          ],
+          "string": [
+            {
+              "name": "name",
+              "value": "=Name{{Date.now()}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Set",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        450,
+        300
+      ],
+      "notesInFlow": true,
+      "notes": "prepare data"
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "=SELECT * FROM TestTable WHERE id={{$node[\"QuestDB\"].json[\"id\"]}} LIMIT 1;"
+      },
+      "name": "QuestDB1",
+      "type": "n8n-nodes-base.questDb",
+      "typeVersion": 1,
+      "position": [
+        850,
+        300
+      ],
+      "notesInFlow": true,
+      "credentials": {
+        "questDb": "QuestDB creds"
+      },
+      "notes": "get data"
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "=TRUNCATE TABLE TestTable;"
+      },
+      "name": "QuestDB2",
+      "type": "n8n-nodes-base.questDb",
+      "typeVersion": 1,
+      "position": [
+        1050,
+        300
+      ],
+      "notesInFlow": true,
+      "credentials": {
+        "questDb": "QuestDB creds"
+      },
+      "notes": "delete data"
+    }
+  ],
+  "connections": {
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Set",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set": {
+      "main": [
+        [
+          {
+            "node": "QuestDB",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "QuestDB": {
+      "main": [
+        [
+          {
+            "node": "QuestDB1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "QuestDB1": {
+      "main": [
+        [
+          {
+            "node": "QuestDB2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-03-11T12:18:29.698Z",
+  "updatedAt": "2021-03-11T12:18:29.698Z",
+  "settings": {},
+  "staticData": null
+}
