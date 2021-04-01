@@ -1,0 +1,179 @@
+{
+  "id": 119,
+  "name": "CrateDB:insert update executeQuery",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "table": "testtable",
+        "columns": "id,name"
+      },
+      "name": "CrateDB",
+      "type": "n8n-nodes-base.crateDb",
+      "typeVersion": 1,
+      "position": [
+        650,
+        300
+      ],
+      "credentials": {
+        "crateDb": "CrateDB creds"
+      }
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "name",
+              "value": "=Name{{Date.now()}}"
+            }
+          ],
+          "number": [
+            {
+              "name": "id",
+              "value": "={{Math.round(Math.random()*100000)}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Set",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        450,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": "testtable",
+        "columns": "id,name"
+      },
+      "name": "CrateDB1",
+      "type": "n8n-nodes-base.crateDb",
+      "typeVersion": 1,
+      "position": [
+        1050,
+        300
+      ],
+      "credentials": {
+        "crateDb": "CrateDB creds"
+      }
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "name",
+              "value": "=UpdatedName{{Date.now()}}"
+            }
+          ],
+          "number": [
+            {
+              "name": "id",
+              "value": "={{$node[\"Set\"].json[\"id\"]}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Set1",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        850,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "=DELETE FROM \"doc\".\"testtable\" WHERE id={{$node[\"Set1\"].json[\"id\"]}};"
+      },
+      "name": "CrateDB2",
+      "type": "n8n-nodes-base.crateDb",
+      "typeVersion": 1,
+      "position": [
+        1250,
+        300
+      ],
+      "credentials": {
+        "crateDb": "CrateDB creds"
+      }
+    }
+  ],
+  "connections": {
+    "CrateDB": {
+      "main": [
+        [
+          {
+            "node": "Set1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Set",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set": {
+      "main": [
+        [
+          {
+            "node": "CrateDB",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set1": {
+      "main": [
+        [
+          {
+            "node": "CrateDB1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "CrateDB1": {
+      "main": [
+        [
+          {
+            "node": "CrateDB2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-03-10T15:10:43.540Z",
+  "updatedAt": "2021-03-10T15:13:14.859Z",
+  "settings": {},
+  "staticData": null
+}
