@@ -1,0 +1,210 @@
+{
+  "id": 123,
+  "name": "MongoDB:insert find update delete",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "insert",
+        "collection": "TestCollection",
+        "fields": "id,name,valid"
+      },
+      "name": "MongoDB",
+      "type": "n8n-nodes-base.mongoDb",
+      "typeVersion": 1,
+      "position": [
+        600,
+        300
+      ],
+      "credentials": {
+        "mongoDb": "MongoDB creds"
+      }
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "name",
+              "value": "=Test{{Date.now()}}"
+            }
+          ],
+          "number": [
+            {
+              "name": "id",
+              "value": "={{Math.round(Math.random()*10000)}}"
+            }
+          ],
+          "boolean": [
+            {
+              "name": "valid",
+              "value": "={{(Math.random()*100) > 50}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Set",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        450,
+        300
+      ],
+      "notesInFlow": true,
+      "notes": "set document"
+    },
+    {
+      "parameters": {
+        "collection": "TestCollection"
+      },
+      "name": "MongoDB1",
+      "type": "n8n-nodes-base.mongoDb",
+      "typeVersion": 1,
+      "position": [
+        750,
+        300
+      ],
+      "credentials": {
+        "mongoDb": "MongoDB creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "collection": "TestCollection",
+        "fields": "name"
+      },
+      "name": "MongoDB2",
+      "type": "n8n-nodes-base.mongoDb",
+      "typeVersion": 1,
+      "position": [
+        1050,
+        300
+      ],
+      "credentials": {
+        "mongoDb": "MongoDB creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "collection": "TestCollection"
+      },
+      "name": "MongoDB3",
+      "type": "n8n-nodes-base.mongoDb",
+      "typeVersion": 1,
+      "position": [
+        1200,
+        300
+      ],
+      "credentials": {
+        "mongoDb": "MongoDB creds"
+      }
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "name",
+              "value": "=UpdatedName{{Date.now()}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Set1",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        900,
+        300
+      ],
+      "notesInFlow": true,
+      "notes": "update name attribut"
+    }
+  ],
+  "connections": {
+    "MongoDB": {
+      "main": [
+        [
+          {
+            "node": "MongoDB1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set": {
+      "main": [
+        [
+          {
+            "node": "MongoDB",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "MongoDB1": {
+      "main": [
+        [
+          {
+            "node": "Set1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "MongoDB2": {
+      "main": [
+        [
+          {
+            "node": "MongoDB3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set1": {
+      "main": [
+        [
+          {
+            "node": "MongoDB2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Set",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-03-11T09:31:40.228Z",
+  "updatedAt": "2021-03-11T09:32:06.868Z",
+  "settings": {},
+  "staticData": null
+}
