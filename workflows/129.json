@@ -1,0 +1,453 @@
+{
+  "id": 129,
+  "name": "NextCloud:NextCloud:Folder:create move copy delete list:File:upload move copy download delete",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "resource": "folder",
+        "path": "={{$node[\"Set\"].json[\"name\"]}}"
+      },
+      "name": "Nextcloud",
+      "type": "n8n-nodes-base.nextCloud",
+      "typeVersion": 1,
+      "position": [
+        600,
+        300
+      ],
+      "credentials": {
+        "nextCloudOAuth2Api": "NextCloud OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "resource": "folder",
+        "operation": "move",
+        "path": "=/{{$node[\"Set\"].json[\"name\"]}}",
+        "toPath": "=/Updated{{$node[\"Set\"].json[\"name\"]}}"
+      },
+      "name": "Nextcloud1",
+      "type": "n8n-nodes-base.nextCloud",
+      "typeVersion": 1,
+      "position": [
+        750,
+        300
+      ],
+      "credentials": {
+        "nextCloudOAuth2Api": "NextCloud OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "name",
+              "value": "=Folder{{Date.now()}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Set",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        400,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "resource": "folder",
+        "operation": "copy",
+        "path": "=/Updated{{$node[\"Set\"].json[\"name\"]}}",
+        "toPath": "=/Copied{{$node[\"Set\"].json[\"name\"]}}"
+      },
+      "name": "Nextcloud2",
+      "type": "n8n-nodes-base.nextCloud",
+      "typeVersion": 1,
+      "position": [
+        900,
+        300
+      ],
+      "credentials": {
+        "nextCloudOAuth2Api": "NextCloud OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "resource": "folder",
+        "operation": "delete",
+        "path": "=/Copied{{$node[\"Set\"].json[\"name\"]}}"
+      },
+      "name": "Nextcloud3",
+      "type": "n8n-nodes-base.nextCloud",
+      "typeVersion": 1,
+      "position": [
+        1050,
+        300
+      ],
+      "credentials": {
+        "nextCloudOAuth2Api": "NextCloud OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "resource": "folder",
+        "operation": "list",
+        "path": "=/Updated{{$node[\"Set\"].json[\"name\"]}}"
+      },
+      "name": "Nextcloud4",
+      "type": "n8n-nodes-base.nextCloud",
+      "typeVersion": 1,
+      "position": [
+        2250,
+        290
+      ],
+      "credentials": {
+        "nextCloudOAuth2Api": "NextCloud OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "resource": "folder",
+        "operation": "delete",
+        "path": "=/Updated{{$node[\"Set\"].json[\"name\"]}}"
+      },
+      "name": "Nextcloud5",
+      "type": "n8n-nodes-base.nextCloud",
+      "typeVersion": 1,
+      "position": [
+        2400,
+        290
+      ],
+      "credentials": {
+        "nextCloudOAuth2Api": "NextCloud OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "path": "=/Updated{{$node[\"Set\"].json[\"name\"]}}/{{$node[\"Set1\"].json[\"name\"]}}",
+        "binaryDataUpload": true
+      },
+      "name": "Nextcloud6",
+      "type": "n8n-nodes-base.nextCloud",
+      "typeVersion": 1,
+      "position": [
+        1500,
+        450
+      ],
+      "credentials": {
+        "nextCloudOAuth2Api": "NextCloud OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "name",
+              "value": "=File{{Date.now()}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Set1",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        1200,
+        450
+      ]
+    },
+    {
+      "parameters": {
+        "filePath": "../../../assets/n8n-logo.png"
+      },
+      "name": "Read Binary File",
+      "type": "n8n-nodes-base.readBinaryFile",
+      "typeVersion": 1,
+      "position": [
+        1350,
+        450
+      ]
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "operation": "move",
+        "path": "=/Updated{{$node[\"Set\"].json[\"name\"]}}/{{$node[\"Set1\"].json[\"name\"]}}",
+        "toPath": "=/Updated{{$node[\"Set\"].json[\"name\"]}}/Moved{{$node[\"Set1\"].json[\"name\"]}}"
+      },
+      "name": "Nextcloud7",
+      "type": "n8n-nodes-base.nextCloud",
+      "typeVersion": 1,
+      "position": [
+        1650,
+        450
+      ],
+      "credentials": {
+        "nextCloudOAuth2Api": "NextCloud OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "operation": "copy",
+        "path": "=/Updated{{$node[\"Set\"].json[\"name\"]}}/Moved{{$node[\"Set1\"].json[\"name\"]}}",
+        "toPath": "=/Updated{{$node[\"Set\"].json[\"name\"]}}/Copied{{$node[\"Set1\"].json[\"name\"]}}"
+      },
+      "name": "Nextcloud8",
+      "type": "n8n-nodes-base.nextCloud",
+      "typeVersion": 1,
+      "position": [
+        1800,
+        450
+      ],
+      "credentials": {
+        "nextCloudOAuth2Api": "NextCloud OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "operation": "download",
+        "path": "=/Updated{{$node[\"Set\"].json[\"name\"]}}/Moved{{$node[\"Set1\"].json[\"name\"]}}"
+      },
+      "name": "Nextcloud9",
+      "type": "n8n-nodes-base.nextCloud",
+      "typeVersion": 1,
+      "position": [
+        1950,
+        450
+      ],
+      "credentials": {
+        "nextCloudOAuth2Api": "NextCloud OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "operation": "delete",
+        "path": "=/Updated{{$node[\"Set\"].json[\"name\"]}}/Moved{{$node[\"Set1\"].json[\"name\"]}}"
+      },
+      "name": "Nextcloud10",
+      "type": "n8n-nodes-base.nextCloud",
+      "typeVersion": 1,
+      "position": [
+        2100,
+        450
+      ],
+      "credentials": {
+        "nextCloudOAuth2Api": "NextCloud OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "resource": "user",
+        "userId": "=Username{{Date.now()}}",
+        "email": "=email{{Date.now()}}@fakeemail.com",
+        "additionalFields": {
+          "displayName": "=Username{{Date.now()}}"
+        }
+      },
+      "name": "Nextcloud11",
+      "type": "n8n-nodes-base.nextCloud",
+      "typeVersion": 1,
+      "position": [
+        400,
+        450
+      ],
+      "credentials": {
+        "nextCloudOAuth2Api": "NextCloud OAuth2 API creds"
+      },
+      "disabled": true
+    }
+  ],
+  "connections": {
+    "Nextcloud": {
+      "main": [
+        [
+          {
+            "node": "Nextcloud1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set": {
+      "main": [
+        [
+          {
+            "node": "Nextcloud",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Nextcloud1": {
+      "main": [
+        [
+          {
+            "node": "Nextcloud2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Nextcloud2": {
+      "main": [
+        [
+          {
+            "node": "Nextcloud3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Nextcloud3": {
+      "main": [
+        [
+          {
+            "node": "Set1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Nextcloud4": {
+      "main": [
+        [
+          {
+            "node": "Nextcloud5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set1": {
+      "main": [
+        [
+          {
+            "node": "Read Binary File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Nextcloud6": {
+      "main": [
+        [
+          {
+            "node": "Nextcloud7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read Binary File": {
+      "main": [
+        [
+          {
+            "node": "Nextcloud6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Nextcloud7": {
+      "main": [
+        [
+          {
+            "node": "Nextcloud8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Nextcloud8": {
+      "main": [
+        [
+          {
+            "node": "Nextcloud9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Nextcloud9": {
+      "main": [
+        [
+          {
+            "node": "Nextcloud10",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Nextcloud10": {
+      "main": [
+        [
+          {
+            "node": "Nextcloud4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Set",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Nextcloud11",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-03-12T09:33:57.650Z",
+  "updatedAt": "2021-03-12T09:37:48.527Z",
+  "settings": {},
+  "staticData": null
+}
