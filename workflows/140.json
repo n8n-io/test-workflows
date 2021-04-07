@@ -1,0 +1,52 @@
+{
+  "id": 140,
+  "name": "Mailgun",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "fromEmail": "nodeqa@n8n.io",
+        "toEmail": "node8qa@gmail.com",
+        "subject": "=Mailgun{{Date.now()}}",
+        "text": "=Test text {{(new Date).toUTCString()}}"
+      },
+      "name": "Mailgun",
+      "type": "n8n-nodes-base.mailgun",
+      "typeVersion": 1,
+      "position": [
+        470,
+        300
+      ],
+      "credentials": {
+        "mailgunApi": "Mailgun API creds"
+      }
+    }
+  ],
+  "connections": {
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Mailgun",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-03-19T09:48:14.284Z",
+  "updatedAt": "2021-03-19T09:48:14.284Z",
+  "settings": {},
+  "staticData": null
+}
