@@ -1,0 +1,773 @@
+{
+  "id": 142,
+  "name": "MicrosoftOutlook:Folder:create get getAll getChildren delete:Message send getAll get getMime update delete:FolderMessage:getAll:Draft:create update get delete send:MessageAttachment:add getAll get download",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "subject": "=Subject {{Date.now()}}",
+        "bodyContent": "=Test {{(new Date).toUTCString()}}",
+        "toRecipients": "node8qa@gmail.com",
+        "additionalFields": {}
+      },
+      "name": "Microsoft Outlook",
+      "type": "n8n-nodes-base.microsoftOutlook",
+      "typeVersion": 1,
+      "position": [
+        450,
+        300
+      ],
+      "credentials": {
+        "microsoftOutlookOAuth2Api": "Microsoft Outlook OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "limit": 1,
+        "additionalFields": {}
+      },
+      "name": "Microsoft Outlook1",
+      "type": "n8n-nodes-base.microsoftOutlook",
+      "typeVersion": 1,
+      "position": [
+        600,
+        300
+      ],
+      "credentials": {
+        "microsoftOutlookOAuth2Api": "Microsoft Outlook OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "messageId": "={{$node[\"Microsoft Outlook1\"].json[\"id\"]}}",
+        "additionalFields": {}
+      },
+      "name": "Microsoft Outlook2",
+      "type": "n8n-nodes-base.microsoftOutlook",
+      "typeVersion": 1,
+      "position": [
+        750,
+        300
+      ],
+      "credentials": {
+        "microsoftOutlookOAuth2Api": "Microsoft Outlook OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getMime",
+        "messageId": "={{$node[\"Microsoft Outlook1\"].json[\"id\"]}}"
+      },
+      "name": "Microsoft Outlook3",
+      "type": "n8n-nodes-base.microsoftOutlook",
+      "typeVersion": 1,
+      "position": [
+        900,
+        300
+      ],
+      "credentials": {
+        "microsoftOutlookOAuth2Api": "Microsoft Outlook OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "messageId": "={{$node[\"Microsoft Outlook2\"].json[\"id\"]}}",
+        "updateFields": {
+          "bodyContent": "=Updated{{$node[\"Microsoft Outlook2\"].json[\"body\"][\"content\"]}}"
+        }
+      },
+      "name": "Microsoft Outlook4",
+      "type": "n8n-nodes-base.microsoftOutlook",
+      "typeVersion": 1,
+      "position": [
+        1050,
+        300
+      ],
+      "credentials": {
+        "microsoftOutlookOAuth2Api": "Microsoft Outlook OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "messageId": "={{$node[\"Microsoft Outlook1\"].json[\"id\"]}}"
+      },
+      "name": "Microsoft Outlook5",
+      "type": "n8n-nodes-base.microsoftOutlook",
+      "typeVersion": 1,
+      "position": [
+        1350,
+        300
+      ],
+      "credentials": {
+        "microsoftOutlookOAuth2Api": "Microsoft Outlook OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "draft",
+        "subject": "=Draft{{Date.now()}}",
+        "bodyContent": "=draft test{{(new Date).toUTCString()}}",
+        "additionalFields": {
+          "toRecipients": " node8qa@gmail.com "
+        }
+      },
+      "name": "Microsoft Outlook6",
+      "type": "n8n-nodes-base.microsoftOutlook",
+      "typeVersion": 1,
+      "position": [
+        450,
+        500
+      ],
+      "credentials": {
+        "microsoftOutlookOAuth2Api": "Microsoft Outlook OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "draft",
+        "operation": "update",
+        "messageId": "={{$node[\"Microsoft Outlook6\"].json[\"id\"]}}",
+        "updateFields": {
+          "bodyContent": "=Updated{{$node[\"Microsoft Outlook6\"].json[\"body\"][\"content\"]}}"
+        }
+      },
+      "name": "Microsoft Outlook7",
+      "type": "n8n-nodes-base.microsoftOutlook",
+      "typeVersion": 1,
+      "position": [
+        600,
+        500
+      ],
+      "credentials": {
+        "microsoftOutlookOAuth2Api": "Microsoft Outlook OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "draft",
+        "operation": "get",
+        "messageId": "={{$node[\"Microsoft Outlook6\"].json[\"id\"]}}",
+        "additionalFields": {}
+      },
+      "name": "Microsoft Outlook8",
+      "type": "n8n-nodes-base.microsoftOutlook",
+      "typeVersion": 1,
+      "position": [
+        750,
+        500
+      ],
+      "credentials": {
+        "microsoftOutlookOAuth2Api": "Microsoft Outlook OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "draft",
+        "operation": "delete",
+        "messageId": "={{$node[\"Microsoft Outlook6\"].json[\"id\"]}}"
+      },
+      "name": "Microsoft Outlook9",
+      "type": "n8n-nodes-base.microsoftOutlook",
+      "typeVersion": 1,
+      "position": [
+        900,
+        500
+      ],
+      "credentials": {
+        "microsoftOutlookOAuth2Api": "Microsoft Outlook OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "draft",
+        "subject": "=Draft{{Date.now()}}",
+        "bodyContent": "=draft test{{Date.now()}}",
+        "additionalFields": {
+          "toRecipients": " node8qa@gmail.com "
+        }
+      },
+      "name": "Microsoft Outlook10",
+      "type": "n8n-nodes-base.microsoftOutlook",
+      "typeVersion": 1,
+      "position": [
+        1050,
+        550
+      ],
+      "credentials": {
+        "microsoftOutlookOAuth2Api": "Microsoft Outlook OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "draft",
+        "operation": "send",
+        "messageId": "={{$node[\"Microsoft Outlook10\"].json[\"id\"]}}",
+        "additionalFields": {
+          "recipients": "node8qa@gmail.com"
+        }
+      },
+      "name": "Microsoft Outlook11",
+      "type": "n8n-nodes-base.microsoftOutlook",
+      "typeVersion": 1,
+      "position": [
+        2120,
+        550
+      ],
+      "credentials": {
+        "microsoftOutlookOAuth2Api": "Microsoft Outlook OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "messageId": "={{$node[\"Microsoft Outlook13\"].json[\"id\"]}}"
+      },
+      "name": "Microsoft Outlook12",
+      "type": "n8n-nodes-base.microsoftOutlook",
+      "typeVersion": 1,
+      "position": [
+        2410,
+        550
+      ],
+      "credentials": {
+        "microsoftOutlookOAuth2Api": "Microsoft Outlook OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "limit": 1,
+        "additionalFields": {}
+      },
+      "name": "Microsoft Outlook13",
+      "type": "n8n-nodes-base.microsoftOutlook",
+      "typeVersion": 1,
+      "position": [
+        2270,
+        550
+      ],
+      "credentials": {
+        "microsoftOutlookOAuth2Api": "Microsoft Outlook OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "folder",
+        "displayName": "=Folder{{(new Date).toUTCString()}}"
+      },
+      "name": "Microsoft Outlook14",
+      "type": "n8n-nodes-base.microsoftOutlook",
+      "typeVersion": 1,
+      "position": [
+        450,
+        140
+      ],
+      "credentials": {
+        "microsoftOutlookOAuth2Api": "Microsoft Outlook OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "folder",
+        "operation": "get",
+        "folderId": "={{$node[\"Microsoft Outlook14\"].json[\"id\"]}}",
+        "additionalFields": {}
+      },
+      "name": "Microsoft Outlook15",
+      "type": "n8n-nodes-base.microsoftOutlook",
+      "typeVersion": 1,
+      "position": [
+        600,
+        140
+      ],
+      "credentials": {
+        "microsoftOutlookOAuth2Api": "Microsoft Outlook OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "folder",
+        "operation": "getAll",
+        "limit": 1,
+        "additionalFields": {
+          "filter": "startsWith(displayName,'Folder')"
+        }
+      },
+      "name": "Microsoft Outlook16",
+      "type": "n8n-nodes-base.microsoftOutlook",
+      "typeVersion": 1,
+      "position": [
+        750,
+        140
+      ],
+      "credentials": {
+        "microsoftOutlookOAuth2Api": "Microsoft Outlook OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "folder",
+        "operation": "getChildren",
+        "folderId": "={{$node[\"Microsoft Outlook14\"].json[\"id\"]}}",
+        "limit": 1,
+        "additionalFields": {}
+      },
+      "name": "Microsoft Outlook17",
+      "type": "n8n-nodes-base.microsoftOutlook",
+      "typeVersion": 1,
+      "position": [
+        900,
+        140
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "microsoftOutlookOAuth2Api": "Microsoft Outlook OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "folder",
+        "operation": "delete",
+        "folderId": "={{$node[\"Microsoft Outlook14\"].json[\"id\"]}}"
+      },
+      "name": "Microsoft Outlook18",
+      "type": "n8n-nodes-base.microsoftOutlook",
+      "typeVersion": 1,
+      "position": [
+        1050,
+        140
+      ],
+      "credentials": {
+        "microsoftOutlookOAuth2Api": "Microsoft Outlook OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "folderMessage",
+        "operation": "getAll",
+        "folderId": "AQMkADAwATNiZmYAZC0zODgAZC1jYjlmLTAwAi0wMAoALgAAA7ObUbW4UV9AtQb9CKQozz8BAIHMmBimhDVHlaNbe8JltA4AAAIBCQAAAA==",
+        "limit": 1,
+        "additionalFields": {}
+      },
+      "name": "Microsoft Outlook19",
+      "type": "n8n-nodes-base.microsoftOutlook",
+      "typeVersion": 1,
+      "position": [
+        1200,
+        350
+      ],
+      "credentials": {
+        "microsoftOutlookOAuth2Api": "Microsoft Outlook OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "messageAttachment",
+        "messageId": "={{$node[\"Microsoft Outlook10\"].json[\"id\"]}}",
+        "additionalFields": {
+          "fileName": "test"
+        }
+      },
+      "name": "Microsoft Outlook20",
+      "type": "n8n-nodes-base.microsoftOutlook",
+      "typeVersion": 1,
+      "position": [
+        1500,
+        650
+      ],
+      "credentials": {
+        "microsoftOutlookOAuth2Api": "Microsoft Outlook OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "mode": "jsonToBinary",
+        "options": {
+          "keepSource": false
+        }
+      },
+      "name": "Move Binary Data",
+      "type": "n8n-nodes-base.moveBinaryData",
+      "typeVersion": 1,
+      "position": [
+        1350,
+        650
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "data",
+              "value": "dGVzdCBmb3IgbWljcm9zb2Z0IG91dGxvb2s="
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Set",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        1200,
+        650
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "messageAttachment",
+        "operation": "getAll",
+        "messageId": "={{$node[\"Microsoft Outlook10\"].json[\"id\"]}}",
+        "additionalFields": {}
+      },
+      "name": "Microsoft Outlook21",
+      "type": "n8n-nodes-base.microsoftOutlook",
+      "typeVersion": 1,
+      "position": [
+        1650,
+        650
+      ],
+      "credentials": {
+        "microsoftOutlookOAuth2Api": "Microsoft Outlook OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "messageAttachment",
+        "operation": "get",
+        "messageId": "={{$node[\"Microsoft Outlook10\"].json[\"id\"]}}",
+        "attachmentId": "={{$node[\"Microsoft Outlook21\"].json[\"id\"]}}",
+        "additionalFields": {}
+      },
+      "name": "Microsoft Outlook22",
+      "type": "n8n-nodes-base.microsoftOutlook",
+      "typeVersion": 1,
+      "position": [
+        1800,
+        650
+      ],
+      "credentials": {
+        "microsoftOutlookOAuth2Api": "Microsoft Outlook OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "messageAttachment",
+        "operation": "download",
+        "messageId": "={{$node[\"Microsoft Outlook10\"].json[\"id\"]}}",
+        "attachmentId": "={{$node[\"Microsoft Outlook21\"].json[\"id\"]}}"
+      },
+      "name": "Microsoft Outlook23",
+      "type": "n8n-nodes-base.microsoftOutlook",
+      "typeVersion": 1,
+      "position": [
+        1950,
+        650
+      ],
+      "credentials": {
+        "microsoftOutlookOAuth2Api": "Microsoft Outlook OAuth2 creds"
+      }
+    }
+  ],
+  "connections": {
+    "Microsoft Outlook": {
+      "main": [
+        [
+          {
+            "node": "Microsoft Outlook1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Microsoft Outlook1": {
+      "main": [
+        [
+          {
+            "node": "Microsoft Outlook2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Microsoft Outlook2": {
+      "main": [
+        [
+          {
+            "node": "Microsoft Outlook3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Microsoft Outlook3": {
+      "main": [
+        [
+          {
+            "node": "Microsoft Outlook4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Microsoft Outlook4": {
+      "main": [
+        [
+          {
+            "node": "Microsoft Outlook19",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Microsoft Outlook5": {
+      "main": [
+        [
+          {
+            "node": "Microsoft Outlook6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Microsoft Outlook",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Microsoft Outlook14",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Microsoft Outlook6": {
+      "main": [
+        [
+          {
+            "node": "Microsoft Outlook7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Microsoft Outlook7": {
+      "main": [
+        [
+          {
+            "node": "Microsoft Outlook8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Microsoft Outlook8": {
+      "main": [
+        [
+          {
+            "node": "Microsoft Outlook9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Microsoft Outlook10": {
+      "main": [
+        [
+          {
+            "node": "Set",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Microsoft Outlook11": {
+      "main": [
+        [
+          {
+            "node": "Microsoft Outlook13",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Microsoft Outlook13": {
+      "main": [
+        [
+          {
+            "node": "Microsoft Outlook12",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Microsoft Outlook9": {
+      "main": [
+        [
+          {
+            "node": "Microsoft Outlook10",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Microsoft Outlook14": {
+      "main": [
+        [
+          {
+            "node": "Microsoft Outlook15",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Microsoft Outlook15": {
+      "main": [
+        [
+          {
+            "node": "Microsoft Outlook16",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Microsoft Outlook16": {
+      "main": [
+        [
+          {
+            "node": "Microsoft Outlook17",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Microsoft Outlook17": {
+      "main": [
+        [
+          {
+            "node": "Microsoft Outlook18",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Microsoft Outlook19": {
+      "main": [
+        [
+          {
+            "node": "Microsoft Outlook5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Move Binary Data": {
+      "main": [
+        [
+          {
+            "node": "Microsoft Outlook20",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set": {
+      "main": [
+        [
+          {
+            "node": "Move Binary Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Microsoft Outlook20": {
+      "main": [
+        [
+          {
+            "node": "Microsoft Outlook21",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Microsoft Outlook21": {
+      "main": [
+        [
+          {
+            "node": "Microsoft Outlook22",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Microsoft Outlook22": {
+      "main": [
+        [
+          {
+            "node": "Microsoft Outlook23",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Microsoft Outlook23": {
+      "main": [
+        [
+          {
+            "node": "Microsoft Outlook11",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-03-19T11:16:17.356Z",
+  "updatedAt": "2021-03-19T12:22:46.705Z",
+  "settings": {},
+  "staticData": null
+}
