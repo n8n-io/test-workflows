@@ -1,0 +1,86 @@
+{
+  "id": 126,
+  "name": "Kafka",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "topic": "=TopicTest{{Date.now()}}",
+        "headersUi": {
+          "headerValues": []
+        },
+        "options": {
+          "compression": true
+        }
+      },
+      "name": "Kafka",
+      "type": "n8n-nodes-base.kafka",
+      "typeVersion": 1,
+      "position": [
+        710,
+        300
+      ],
+      "credentials": {
+        "kafka": "Kafka creds"
+      }
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "input",
+              "value": "={{(new Date()).toISOString()}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Set",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        500,
+        300
+      ]
+    }
+  ],
+  "connections": {
+    "Set": {
+      "main": [
+        [
+          {
+            "node": "Kafka",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Set",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-03-11T14:51:32.026Z",
+  "updatedAt": "2021-03-18T10:28:03.209Z",
+  "settings": {},
+  "staticData": null
+}
