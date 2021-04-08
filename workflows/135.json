@@ -58,7 +58,7 @@
       "type": "n8n-nodes-base.cortex",
       "typeVersion": 1,
       "position": [
-        790,
+        800,
         300
       ],
       "credentials": {
@@ -85,13 +85,41 @@
       "type": "n8n-nodes-base.cortex",
       "typeVersion": 1,
       "position": [
-        940,
+        950,
         300
       ],
       "credentials": {
         "cortexApi": "Cortex API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "job",
+        "operation": "report",
+        "jobId": "={{$node[\"Cortex3\"].json[\"_id\"]}}"
       },
-      "disabled": true
+      "name": "Cortex4",
+      "type": "n8n-nodes-base.cortex",
+      "typeVersion": 1,
+      "position": [
+        1250,
+        300
+      ],
+      "credentials": {
+        "cortexApi": "Cortex API creds"
+      }
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\nawait sleep(4000);\n// Output data\nreturn items;"
+      },
+      "name": "Sleep 4 seconds",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        1100,
+        300
+      ],
+      "typeVersion": 1
     }
   ],
   "connections": {
@@ -138,10 +166,32 @@
           }
         ]
       ]
+    },
+    "Cortex3": {
+      "main": [
+        [
+          {
+            "node": "Sleep 4 seconds",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sleep 4 seconds": {
+      "main": [
+        [
+          {
+            "node": "Cortex4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "createdAt": "2021-03-15T11:07:38.626Z",
-  "updatedAt": "2021-03-15T11:09:41.430Z",
+  "updatedAt": "2021-04-08T08:50:44.636Z",
   "settings": {},
   "staticData": null
 }
