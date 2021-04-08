@@ -203,7 +203,8 @@
       "parameters": {
         "resource": "case",
         "operation": "executeResponder",
-        "id": "={{$node[\"TheHive6\"].json[\"caseId\"]}}"
+        "id": "={{$node[\"TheHive6\"].json[\"id\"]}}",
+        "responder": "23bc4aef9aa1c88d6624004a3d04aeae"
       },
       "name": "TheHive10",
       "type": "n8n-nodes-base.theHive",
@@ -214,8 +215,7 @@
       ],
       "credentials": {
         "theHiveApi": "The Hive API creds"
-      },
-      "disabled": true
+      }
     },
     {
       "parameters": {
@@ -448,24 +448,29 @@
     {
       "parameters": {
         "operation": "executeResponder",
-        "id": "={{$node[\"TheHive\"].json[\"id\"]}}"
+        "id": "={{$node[\"TheHive\"].json[\"id\"]}}",
+        "responder": "23bc4aef9aa1c88d6624004a3d04aeae"
       },
       "name": "TheHive15",
       "type": "n8n-nodes-base.theHive",
       "typeVersion": 1,
       "position": [
-        1340,
+        1240,
         300
       ],
       "credentials": {
         "theHiveApi": "The Hive API creds"
-      },
-      "disabled": true
+      }
     },
     {
       "parameters": {
         "resource": "observable",
-        "operation": "executeAnalyzer"
+        "operation": "executeAnalyzer",
+        "id": "={{$node[\"TheHive21\"].json[\"id\"]}}",
+        "dataType": "={{$node[\"TheHive21\"].json[\"dataType\"]}}",
+        "analyzers": [
+          "6fdd3c9b5432f1e2094cd3b8f2347d09::cortex"
+        ]
       },
       "name": "TheHive24",
       "type": "n8n-nodes-base.theHive",
@@ -476,25 +481,25 @@
       ],
       "credentials": {
         "theHiveApi": "The Hive API creds"
-      },
-      "disabled": true
+      }
     },
     {
       "parameters": {
         "resource": "observable",
-        "operation": "executeResponder"
+        "operation": "executeResponder",
+        "id": "={{$node[\"TheHive21\"].json[\"id\"]}}",
+        "responder": "fbe415a38eb649eb7df174aa11a32cfe"
       },
       "name": "TheHive25",
       "type": "n8n-nodes-base.theHive",
       "typeVersion": 1,
       "position": [
-        1500,
+        1540,
         450
       ],
       "credentials": {
         "theHiveApi": "The Hive API creds"
-      },
-      "disabled": true
+      }
     },
     {
       "parameters": {
@@ -517,7 +522,9 @@
     {
       "parameters": {
         "resource": "task",
-        "operation": "executeResponder"
+        "operation": "executeResponder",
+        "id": "={{$node[\"TheHive11\"].json[\"id\"]}}",
+        "responder": "23bc4aef9aa1c88d6624004a3d04aeae"
       },
       "name": "TheHive27",
       "type": "n8n-nodes-base.theHive",
@@ -528,13 +535,13 @@
       ],
       "credentials": {
         "theHiveApi": "The Hive API creds"
-      },
-      "disabled": true
+      }
     },
     {
       "parameters": {
         "resource": "log",
-        "operation": "executeResponder"
+        "operation": "executeResponder",
+        "id": "={{$node[\"TheHive16\"].json[\"_id\"]}}"
       },
       "name": "TheHive28",
       "type": "n8n-nodes-base.theHive",
@@ -623,6 +630,11 @@
             "node": "TheHive3",
             "type": "main",
             "index": 0
+          },
+          {
+            "node": "TheHive15",
+            "type": "main",
+            "index": 0
           }
         ]
       ]
@@ -677,6 +689,11 @@
             "node": "TheHive9",
             "type": "main",
             "index": 0
+          },
+          {
+            "node": "TheHive10",
+            "type": "main",
+            "index": 0
           }
         ]
       ]
@@ -715,6 +732,11 @@
             "node": "TheHive14",
             "type": "main",
             "index": 0
+          },
+          {
+            "node": "TheHive27",
+            "type": "main",
+            "index": 0
           }
         ]
       ]
@@ -735,6 +757,11 @@
         [
           {
             "node": "TheHive18",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "TheHive28",
             "type": "main",
             "index": 0
           }
@@ -768,6 +795,16 @@
         [
           {
             "node": "TheHive22",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "TheHive24",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "TheHive25",
             "type": "main",
             "index": 0
           }
@@ -819,24 +856,12 @@
     },
     "TheHive26": {
       "main": [
-        [
-          {
-            "node": "TheHive27",
-            "type": "main",
-            "index": 0
-          }
-        ]
+        []
       ]
     },
     "TheHive18": {
       "main": [
-        [
-          {
-            "node": "TheHive28",
-            "type": "main",
-            "index": 0
-          }
-        ]
+        []
       ]
     },
     "TheHive30": {
@@ -860,10 +885,20 @@
           }
         ]
       ]
+    },
+    "TheHive23": {
+      "main": [
+        []
+      ]
+    },
+    "TheHive9": {
+      "main": [
+        []
+      ]
     }
   },
   "createdAt": "2021-03-16T15:47:37.279Z",
-  "updatedAt": "2021-03-16T17:24:18.533Z",
+  "updatedAt": "2021-04-08T09:50:44.290Z",
   "settings": {},
   "staticData": null
 }
