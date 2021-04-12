@@ -1,6 +1,6 @@
 {
   "id": 19,
-  "name": "SentryIo:Organization:create get getAll update:Team:create get getAll update delete:Project:getAll get update:Issue:getAll get update:Event:getAll get:Release:create get getAll update delete",
+  "name": "SentryIo:Organization:create get getAll update:Team:create get getAll update delete:Project:create getAll get update delete:Issue:getAll get update:Event:getAll get:Release:create get getAll update delete",
   "active": false,
   "nodes": [
     {
@@ -130,7 +130,7 @@
       "type": "n8n-nodes-base.sentryIo",
       "typeVersion": 1,
       "position": [
-        420,
+        590,
         470
       ],
       "credentials": {
@@ -141,13 +141,13 @@
       "parameters": {
         "resource": "project",
         "organizationSlug": "n8n-iq",
-        "projectSlug": "={{$node[\"Sentry.io6\"].json[\"slug\"]}}"
+        "projectSlug": "={{$node[\"Sentry.io22\"].json[\"slug\"]}}"
       },
       "name": "Sentry.io7",
       "type": "n8n-nodes-base.sentryIo",
       "typeVersion": 1,
       "position": [
-        610,
+        780,
         470
       ],
       "credentials": {
@@ -222,7 +222,7 @@
       "type": "n8n-nodes-base.sentryIo",
       "typeVersion": 1,
       "position": [
-        420,
+        430,
         780
       ],
       "credentials": {
@@ -239,7 +239,7 @@
       "type": "n8n-nodes-base.sentryIo",
       "typeVersion": 1,
       "position": [
-        600,
+        610,
         780
       ],
       "credentials": {
@@ -253,15 +253,15 @@
         "organizationSlug": "n8n-iq",
         "version": "={{Date.now().toString()}}",
         "url": "http://n8n.io",
-        "projects": "={{[$node[\"Sentry.io6\"].json[\"slug\"]]}}",
+        "projects": "={{[$node[\"Sentry.io22\"].json[\"slug\"]]}}",
         "additionalFields": {}
       },
       "name": "Sentry.io13",
       "type": "n8n-nodes-base.sentryIo",
       "typeVersion": 1,
       "position": [
-        950,
-        540
+        1100,
+        530
       ],
       "credentials": {
         "sentryIoApi": "sentry io token"
@@ -277,8 +277,8 @@
       "type": "n8n-nodes-base.sentryIo",
       "typeVersion": 1,
       "position": [
-        1110,
-        540
+        1260,
+        530
       ],
       "credentials": {
         "sentryIoApi": "sentry io token"
@@ -296,8 +296,8 @@
       "type": "n8n-nodes-base.sentryIo",
       "typeVersion": 1,
       "position": [
-        1290,
-        540
+        1440,
+        530
       ],
       "credentials": {
         "sentryIoApi": "sentry io token"
@@ -367,14 +367,14 @@
         "organizationSlug": "n8n-iq",
         "projectSlug": "={{$node[\"Sentry.io6\"].json[\"slug\"]}}",
         "additionalFields": {
-          "name": "=Update{{$node[\"Sentry.io6\"].json[\"name\"]}}{{Date.now()}}"
+          "name": "=Update{{$node[\"Sentry.io22\"].json[\"name\"]}}{{Date.now()}}"
         }
       },
       "name": "Sentry.io19",
       "type": "n8n-nodes-base.sentryIo",
       "typeVersion": 1,
       "position": [
-        780,
+        950,
         470
       ],
       "credentials": {
@@ -395,8 +395,8 @@
       "type": "n8n-nodes-base.sentryIo",
       "typeVersion": 1,
       "position": [
-        1450,
-        540
+        1600,
+        530
       ],
       "credentials": {
         "sentryIoApi": "sentry io token"
@@ -413,8 +413,46 @@
       "type": "n8n-nodes-base.sentryIo",
       "typeVersion": 1,
       "position": [
-        1600,
-        540
+        1750,
+        530
+      ],
+      "credentials": {
+        "sentryIoApi": "sentry io token"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "project",
+        "operation": "create",
+        "organizationSlug": "n8n-iq",
+        "teamSlug": "n8nteam",
+        "name": "=ProjectTest{{Date.now()}}",
+        "additionalFields": {}
+      },
+      "name": "Sentry.io22",
+      "type": "n8n-nodes-base.sentryIo",
+      "typeVersion": 1,
+      "position": [
+        430,
+        470
+      ],
+      "credentials": {
+        "sentryIoApi": "sentry io token"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "project",
+        "operation": "delete",
+        "organizationSlug": "n8n-iq",
+        "projectSlug": "={{$node[\"Sentry.io22\"].json[\"slug\"]}}"
+      },
+      "name": "Sentry.io23",
+      "type": "n8n-nodes-base.sentryIo",
+      "typeVersion": 1,
+      "position": [
+        1900,
+        480
       ],
       "credentials": {
         "sentryIoApi": "sentry io token"
@@ -446,7 +484,7 @@
             "index": 0
           },
           {
-            "node": "Sentry.io6",
+            "node": "Sentry.io22",
             "type": "main",
             "index": 0
           }
@@ -607,11 +645,6 @@
         ]
       ]
     },
-    "Sentry.io10": {
-      "main": [
-        []
-      ]
-    },
     "Sentry.io19": {
       "main": [
         [
@@ -644,10 +677,32 @@
           }
         ]
       ]
+    },
+    "Sentry.io22": {
+      "main": [
+        [
+          {
+            "node": "Sentry.io6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sentry.io21": {
+      "main": [
+        [
+          {
+            "node": "Sentry.io23",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "createdAt": "2021-02-16T14:22:05.872Z",
-  "updatedAt": "2021-03-30T14:34:59.092Z",
+  "updatedAt": "2021-04-12T07:29:32.073Z",
   "settings": {},
   "staticData": null
 }
