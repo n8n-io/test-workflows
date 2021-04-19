@@ -1,0 +1,96 @@
+{
+  "id": 162,
+  "name": "AWSSQS:sendMessage",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "queue": "https://sqs.us-east-1.amazonaws.com/589875339869/StandardTestQueue",
+        "sendInputData": false,
+        "message": "=StandardMessage{{Date.now()}}",
+        "options": {
+          "messageAttributes": {
+            "string": [
+              {
+                "name": "type",
+                "value": "test"
+              }
+            ]
+          }
+        }
+      },
+      "name": "AWS SQS",
+      "type": "n8n-nodes-base.awsSqs",
+      "typeVersion": 1,
+      "position": [
+        550,
+        200
+      ],
+      "credentials": {
+        "aws": "AWS creds"
+      }
+    },
+    {
+      "parameters": {
+        "queue": "https://sqs.us-east-1.amazonaws.com/589875339869/FifoTestQueue.fifo",
+        "queueType": "fifo",
+        "sendInputData": false,
+        "message": "=FIFOMessage{{Date.now()}}",
+        "messageGroupId": "TestMessageGroupId",
+        "options": {
+          "messageAttributes": {
+            "string": [
+              {
+                "name": "type",
+                "value": "test"
+              }
+            ]
+          },
+          "messageDeduplicationId": "DedupTestMessageGroupId"
+        }
+      },
+      "name": "AWS SQS1",
+      "type": "n8n-nodes-base.awsSqs",
+      "typeVersion": 1,
+      "position": [
+        550,
+        380
+      ],
+      "credentials": {
+        "aws": "AWS creds"
+      }
+    }
+  ],
+  "connections": {
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "AWS SQS1",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "AWS SQS",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-04-06T08:27:12.354Z",
+  "updatedAt": "2021-04-19T08:16:20.657Z",
+  "settings": {},
+  "staticData": null
+}
