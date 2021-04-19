@@ -1,0 +1,142 @@
+{
+  "id": 172,
+  "name": "Paypal:Payout:create get:PayoutItem:get",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "senderBatchId": "={{Date.now()}}",
+        "itemsUi": {
+          "itemsValues": [
+            {
+              "receiverValue": "sb-0ci8p5941871@business.example.com",
+              "amount": "20"
+            }
+          ]
+        },
+        "additionalFields": {}
+      },
+      "name": "PayPal",
+      "type": "n8n-nodes-base.payPal",
+      "typeVersion": 1,
+      "position": [
+        450,
+        200
+      ],
+      "credentials": {
+        "payPalApi": "PayPal API creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "payoutBatchId": "={{$node[\"PayPal\"].json[\"batch_header\"][\"payout_batch_id\"]}}",
+        "limit": 1
+      },
+      "name": "PayPal1",
+      "type": "n8n-nodes-base.payPal",
+      "typeVersion": 1,
+      "position": [
+        600,
+        200
+      ],
+      "credentials": {
+        "payPalApi": "PayPal API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "payoutItem",
+        "payoutItemId": "={{$node[\"PayPal1\"].json[\"payout_item_id\"]}}"
+      },
+      "name": "PayPal2",
+      "type": "n8n-nodes-base.payPal",
+      "typeVersion": 1,
+      "position": [
+        750,
+        250
+      ],
+      "credentials": {
+        "payPalApi": "PayPal API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "payoutItem",
+        "operation": "cancel",
+        "payoutItemId": "={{$node[\"PayPal1\"].json[\"payout_item_id\"]}}"
+      },
+      "name": "PayPal3",
+      "type": "n8n-nodes-base.payPal",
+      "typeVersion": 1,
+      "position": [
+        900,
+        250
+      ],
+      "credentials": {
+        "payPalApi": "PayPal API creds"
+      },
+      "disabled": true
+    }
+  ],
+  "connections": {
+    "PayPal": {
+      "main": [
+        [
+          {
+            "node": "PayPal1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "PayPal1": {
+      "main": [
+        [
+          {
+            "node": "PayPal2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "PayPal2": {
+      "main": [
+        [
+          {
+            "node": "PayPal3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "PayPal",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-04-19T13:01:49.487Z",
+  "updatedAt": "2021-04-19T13:04:32.370Z",
+  "settings": {},
+  "staticData": null
+}
