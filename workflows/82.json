@@ -1,6 +1,6 @@
 {
   "id": 82,
-  "name": "Microsoft OneDrive:Folder:create getChildren share search:File:upload get share download copy delete search",
+  "name": "Microsoft OneDrive:Folder:create getChildren share search delete:File:upload get share download copy delete search",
   "active": false,
   "nodes": [
     {
@@ -52,14 +52,14 @@
       "parameters": {
         "resource": "folder",
         "operation": "search",
-        "query": "test"
+        "query": "TestFolder"
       },
       "name": "Microsoft OneDrive2",
       "type": "n8n-nodes-base.microsoftOneDrive",
       "typeVersion": 1,
       "position": [
-        2010,
-        300
+        2000,
+        150
       ],
       "alwaysOutputData": true,
       "credentials": {
@@ -209,6 +209,24 @@
       "credentials": {
         "microsoftOneDriveOAuth2Api": "Microsoft Drive OAuth2 creds"
       }
+    },
+    {
+      "parameters": {
+        "resource": "folder",
+        "operation": "delete",
+        "folderId": "={{$node[\"Microsoft OneDrive\"].json[\"id\"]}}"
+      },
+      "name": "Microsoft OneDrive11",
+      "type": "n8n-nodes-base.microsoftOneDrive",
+      "typeVersion": 1,
+      "position": [
+        2000,
+        300
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "microsoftOneDriveOAuth2Api": "Microsoft Drive OAuth2 creds"
+      }
     }
   ],
   "connections": {
@@ -237,6 +255,11 @@
     "Microsoft OneDrive3": {
       "main": [
         [
+          {
+            "node": "Microsoft OneDrive11",
+            "type": "main",
+            "index": 0
+          },
           {
             "node": "Microsoft OneDrive2",
             "type": "main",
@@ -332,10 +355,20 @@
           }
         ]
       ]
+    },
+    "Microsoft OneDrive2": {
+      "main": [
+        []
+      ]
+    },
+    "Microsoft OneDrive11": {
+      "main": [
+        []
+      ]
     }
   },
   "createdAt": "2021-03-01T10:15:48.446Z",
-  "updatedAt": "2021-03-01T11:29:30.539Z",
+  "updatedAt": "2021-04-23T13:45:19.671Z",
   "settings": {},
   "staticData": null
 }
