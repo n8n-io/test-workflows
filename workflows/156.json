@@ -1,0 +1,51 @@
+{
+  "id": 156,
+  "name": "AWSSNS:publish",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "topic": "arn:aws:sns:us-east-1:589875339869:TestingTopic",
+        "subject": "=Subject{{Date.now()}}",
+        "message": "=Message{{Date.now()}}"
+      },
+      "name": "AWS SNS",
+      "type": "n8n-nodes-base.awsSns",
+      "typeVersion": 1,
+      "position": [
+        450,
+        300
+      ],
+      "credentials": {
+        "aws": "AWS creds"
+      }
+    }
+  ],
+  "connections": {
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "AWS SNS",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-03-25T10:56:20.715Z",
+  "updatedAt": "2021-03-25T10:56:20.715Z",
+  "settings": {},
+  "staticData": null
+}
