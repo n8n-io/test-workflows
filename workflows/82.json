@@ -58,8 +58,8 @@
       "type": "n8n-nodes-base.microsoftOneDrive",
       "typeVersion": 1,
       "position": [
-        2010,
-        300
+        2000,
+        150
       ],
       "alwaysOutputData": true,
       "credentials": {
@@ -220,7 +220,7 @@
       "type": "n8n-nodes-base.microsoftOneDrive",
       "typeVersion": 1,
       "position": [
-        2150,
+        2000,
         300
       ],
       "alwaysOutputData": true,
@@ -255,6 +255,11 @@
     "Microsoft OneDrive3": {
       "main": [
         [
+          {
+            "node": "Microsoft OneDrive11",
+            "type": "main",
+            "index": 0
+          },
           {
             "node": "Microsoft OneDrive2",
             "type": "main",
@@ -353,18 +358,17 @@
     },
     "Microsoft OneDrive2": {
       "main": [
-        [
-          {
-            "node": "Microsoft OneDrive11",
-            "type": "main",
-            "index": 0
-          }
-        ]
+        []
+      ]
+    },
+    "Microsoft OneDrive11": {
+      "main": [
+        []
       ]
     }
   },
   "createdAt": "2021-03-01T10:15:48.446Z",
-  "updatedAt": "2021-04-08T11:03:55.602Z",
+  "updatedAt": "2021-04-23T13:45:19.671Z",
   "settings": {},
   "staticData": null
 }
