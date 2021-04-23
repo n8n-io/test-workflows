@@ -184,24 +184,6 @@
     },
     {
       "parameters": {
-        "resource": "case",
-        "operation": "executeResponder",
-        "id": "={{$node[\"TheHive6\"].json[\"caseId\"]}}"
-      },
-      "name": "TheHive10",
-      "type": "n8n-nodes-base.theHive",
-      "typeVersion": 1,
-      "position": [
-        1200,
-        350
-      ],
-      "credentials": {
-        "theHiveApi": "The Hive API creds (v1)"
-      },
-      "disabled": true
-    },
-    {
-      "parameters": {
         "resource": "task",
         "operation": "create",
         "caseId": "={{$node[\"TheHive6\"].json[\"caseId\"]}}",
@@ -430,57 +412,6 @@
     },
     {
       "parameters": {
-        "operation": "executeResponder",
-        "id": "={{$node[\"TheHive\"].json[\"id\"]}}"
-      },
-      "name": "TheHive15",
-      "type": "n8n-nodes-base.theHive",
-      "typeVersion": 1,
-      "position": [
-        1400,
-        50
-      ],
-      "credentials": {
-        "theHiveApi": "The Hive API creds (v1)"
-      },
-      "disabled": true
-    },
-    {
-      "parameters": {
-        "resource": "observable",
-        "operation": "executeAnalyzer"
-      },
-      "name": "TheHive24",
-      "type": "n8n-nodes-base.theHive",
-      "typeVersion": 1,
-      "position": [
-        1510,
-        200
-      ],
-      "credentials": {
-        "theHiveApi": "The Hive API creds (v1)"
-      },
-      "disabled": true
-    },
-    {
-      "parameters": {
-        "resource": "observable",
-        "operation": "executeResponder"
-      },
-      "name": "TheHive25",
-      "type": "n8n-nodes-base.theHive",
-      "typeVersion": 1,
-      "position": [
-        1660,
-        200
-      ],
-      "credentials": {
-        "theHiveApi": "The Hive API creds (v1)"
-      },
-      "disabled": true
-    },
-    {
-      "parameters": {
         "resource": "task",
         "caseId": "={{$node[\"TheHive6\"].json[\"_id\"]}}",
         "limit": 1,
@@ -496,23 +427,6 @@
       "credentials": {
         "theHiveApi": "The Hive API creds (v1)"
       }
-    },
-    {
-      "parameters": {
-        "resource": "task",
-        "operation": "executeResponder"
-      },
-      "name": "TheHive27",
-      "type": "n8n-nodes-base.theHive",
-      "typeVersion": 1,
-      "position": [
-        1510,
-        520
-      ],
-      "credentials": {
-        "theHiveApi": "The Hive API creds (v1)"
-      },
-      "disabled": true
     },
     {
       "parameters": {
@@ -658,6 +572,98 @@
       "credentials": {
         "theHiveApi": "The Hive API creds (v1)"
       }
+    },
+    {
+      "parameters": {
+        "operation": "executeResponder",
+        "id": "={{$node[\"TheHive\"].json[\"id\"]}}",
+        "responder": "23bc4aef9aa1c88d6624004a3d04aeae"
+      },
+      "name": "TheHive15",
+      "type": "n8n-nodes-base.theHive",
+      "typeVersion": 1,
+      "position": [
+        1400,
+        50
+      ],
+      "credentials": {
+        "theHiveApi": "The Hive API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "observable",
+        "operation": "executeResponder",
+        "id": "={{$node[\"TheHive21\"].json[\"_id\"]}}",
+        "responder": "fbe415a38eb649eb7df174aa11a32cfe"
+      },
+      "name": "TheHive25",
+      "type": "n8n-nodes-base.theHive",
+      "typeVersion": 1,
+      "position": [
+        1690,
+        200
+      ],
+      "credentials": {
+        "theHiveApi": "The Hive API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "observable",
+        "operation": "executeAnalyzer",
+        "id": "={{$node[\"TheHive21\"].json[\"_id\"]}}",
+        "dataType": "={{$node[\"TheHive21\"].json[\"dataType\"]}}",
+        "analyzers": [
+          "6fdd3c9b5432f1e2094cd3b8f2347d09::cortex"
+        ]
+      },
+      "name": "TheHive24",
+      "type": "n8n-nodes-base.theHive",
+      "typeVersion": 1,
+      "position": [
+        1500,
+        200
+      ],
+      "credentials": {
+        "theHiveApi": "The Hive API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "case",
+        "operation": "executeResponder",
+        "id": "={{$node[\"TheHive6\"].json[\"id\"]}}",
+        "responder": "23bc4aef9aa1c88d6624004a3d04aeae"
+      },
+      "name": "TheHive10",
+      "type": "n8n-nodes-base.theHive",
+      "typeVersion": 1,
+      "position": [
+        1200,
+        350
+      ],
+      "credentials": {
+        "theHiveApi": "The Hive API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "task",
+        "operation": "executeResponder",
+        "id": "={{$node[\"TheHive11\"].json[\"id\"]}}",
+        "responder": "23bc4aef9aa1c88d6624004a3d04aeae"
+      },
+      "name": "TheHive27",
+      "type": "n8n-nodes-base.theHive",
+      "typeVersion": 1,
+      "position": [
+        1500,
+        520
+      ],
+      "credentials": {
+        "theHiveApi": "The Hive API creds"
+      }
     }
   ],
   "connections": {
@@ -699,6 +705,11 @@
         [
           {
             "node": "TheHive4",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "TheHive15",
             "type": "main",
             "index": 0
           }
@@ -744,6 +755,11 @@
             "node": "TheHive9",
             "type": "main",
             "index": 0
+          },
+          {
+            "node": "TheHive10",
+            "type": "main",
+            "index": 0
           }
         ]
       ]
@@ -780,6 +796,11 @@
         [
           {
             "node": "TheHive14",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "TheHive27",
             "type": "main",
             "index": 0
           }
@@ -846,6 +867,16 @@
         [
           {
             "node": "TheHive22",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "TheHive24",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "TheHive25",
             "type": "main",
             "index": 0
           }
@@ -949,10 +980,15 @@
           }
         ]
       ]
+    },
+    "TheHive31": {
+      "main": [
+        []
+      ]
     }
   },
   "createdAt": "2021-03-16T16:58:12.352Z",
-  "updatedAt": "2021-03-16T17:24:47.184Z",
+  "updatedAt": "2021-04-08T09:56:35.086Z",
   "settings": {},
   "staticData": null
 }
