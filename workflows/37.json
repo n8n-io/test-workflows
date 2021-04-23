@@ -1,6 +1,6 @@
 {
   "id": 37,
-  "name": "GitLab:Repository:get getIssues:Issue:create createComment edit get lock:Release:create:User:getRepositories",
+  "name": "GitLab:Repository:get getIssues:Issue:create createComment edit get lock:Release:create get getAll update delete:User:getRepositories",
   "active": false,
   "nodes": [
     {
@@ -152,7 +152,7 @@
         "repository": "nodemationQA",
         "releaseTag": "=Release-tag-test{{Date.now()}}",
         "additionalFields": {
-          "name": "=Release [{{(new Date()).toString()}}]",
+          "name": "=Release{{Date.now()}}",
           "ref": "master"
         }
       },
@@ -178,6 +178,90 @@
       "position": [
         540,
         640
+      ],
+      "credentials": {
+        "gitlabApi": "Gitlap token"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "release",
+        "operation": "get",
+        "owner": "nodeqa",
+        "repository": "nodemationQA",
+        "projectId": "24497029",
+        "tag_name": "={{$node[\"Gitlab7\"].json[\"tag_name\"]}}"
+      },
+      "name": "Gitlab9",
+      "type": "n8n-nodes-base.gitlab",
+      "typeVersion": 1,
+      "position": [
+        710,
+        490
+      ],
+      "credentials": {
+        "gitlabApi": "Gitlap token"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "release",
+        "operation": "getAll",
+        "owner": "nodeqa",
+        "repository": "nodemationQA",
+        "projectId": "24497029",
+        "limit": 1,
+        "additionalFields": {}
+      },
+      "name": "Gitlab10",
+      "type": "n8n-nodes-base.gitlab",
+      "typeVersion": 1,
+      "position": [
+        870,
+        490
+      ],
+      "credentials": {
+        "gitlabApi": "Gitlap token"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "release",
+        "operation": "update",
+        "owner": "nodeqa",
+        "repository": "nodemationQA",
+        "projectId": "24497029",
+        "tag_name": "={{$node[\"Gitlab7\"].json[\"tag_name\"]}}",
+        "additionalFields": {
+          "name": "=Updated{{$node[\"Gitlab7\"].json[\"name\"]}}"
+        }
+      },
+      "name": "Gitlab11",
+      "type": "n8n-nodes-base.gitlab",
+      "typeVersion": 1,
+      "position": [
+        1020,
+        490
+      ],
+      "credentials": {
+        "gitlabApi": "Gitlap token"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "release",
+        "operation": "delete",
+        "owner": "nodeqa",
+        "repository": "nodemationQA",
+        "projectId": "24497029",
+        "tag_name": "={{$node[\"Gitlab7\"].json[\"tag_name\"]}}"
+      },
+      "name": "Gitlab12",
+      "type": "n8n-nodes-base.gitlab",
+      "typeVersion": 1,
+      "position": [
+        1180,
+        490
       ],
       "credentials": {
         "gitlabApi": "Gitlap token"
@@ -265,10 +349,54 @@
           }
         ]
       ]
+    },
+    "Gitlab7": {
+      "main": [
+        [
+          {
+            "node": "Gitlab9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gitlab9": {
+      "main": [
+        [
+          {
+            "node": "Gitlab10",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gitlab10": {
+      "main": [
+        [
+          {
+            "node": "Gitlab11",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gitlab11": {
+      "main": [
+        [
+          {
+            "node": "Gitlab12",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "createdAt": "2021-02-18T08:29:31.569Z",
-  "updatedAt": "2021-02-18T08:44:18.157Z",
+  "updatedAt": "2021-04-06T15:55:27.454Z",
   "settings": {},
   "staticData": null
 }
