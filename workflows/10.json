@@ -1,6 +1,6 @@
 {
   "id": 10,
-  "name": "PagerDuty:Incident:create get update getAll:IncidentNote:create getAll:User:get:LogEntry:getAll get",
+  "name": "PagerDuty:incident:create get update getAll:incidentNote:create getAll:User:get:LogEntry:getAll get",
   "active": false,
   "nodes": [
     {
@@ -15,8 +15,9 @@
     },
     {
       "parameters": {
+        "authentication": "oAuth2",
         "title": "Test",
-        "serviceId": "PS66D8E",
+        "serviceId": "PO5XHDI",
         "email": "nodeqa@n8n.io",
         "additionalFields": {}
       },
@@ -28,11 +29,12 @@
         260
       ],
       "credentials": {
-        "pagerDutyApi": "PagerDuty creds"
+        "pagerDutyOAuth2Api": "PagerDuty OAuth2 API creds"
       }
     },
     {
       "parameters": {
+        "authentication": "oAuth2",
         "operation": "get",
         "incidentId": "={{$json[\"id\"]}}"
       },
@@ -44,11 +46,12 @@
         260
       ],
       "credentials": {
-        "pagerDutyApi": "PagerDuty creds"
+        "pagerDutyOAuth2Api": "PagerDuty OAuth2 API creds"
       }
     },
     {
       "parameters": {
+        "authentication": "oAuth2",
         "operation": "update",
         "incidentId": "={{$json[\"id\"]}}",
         "email": "nodeqa@n8n.io",
@@ -64,11 +67,12 @@
         260
       ],
       "credentials": {
-        "pagerDutyApi": "PagerDuty creds"
+        "pagerDutyOAuth2Api": "PagerDuty OAuth2 API creds"
       }
     },
     {
       "parameters": {
+        "authentication": "oAuth2",
         "operation": "getAll",
         "limit": 1,
         "options": {}
@@ -81,11 +85,12 @@
         260
       ],
       "credentials": {
-        "pagerDutyApi": "PagerDuty creds"
+        "pagerDutyOAuth2Api": "PagerDuty OAuth2 API creds"
       }
     },
     {
       "parameters": {
+        "authentication": "oAuth2",
         "resource": "incidentNote",
         "incidentId": "={{$json[\"id\"]}}",
         "content": "Simple note for an incident",
@@ -99,11 +104,12 @@
         350
       ],
       "credentials": {
-        "pagerDutyApi": "PagerDuty creds"
+        "pagerDutyOAuth2Api": "PagerDuty OAuth2 API creds"
       }
     },
     {
       "parameters": {
+        "authentication": "oAuth2",
         "resource": "incidentNote",
         "operation": "getAll",
         "incidentId": "={{$json[\"id\"]}}",
@@ -117,13 +123,14 @@
         160
       ],
       "credentials": {
-        "pagerDutyApi": "PagerDuty creds"
+        "pagerDutyOAuth2Api": "PagerDuty OAuth2 API creds"
       }
     },
     {
       "parameters": {
+        "authentication": "oAuth2",
         "resource": "user",
-        "userId": "PIP3SRL"
+        "userId": "PT0VVWO"
       },
       "name": "PagerDuty6",
       "type": "n8n-nodes-base.pagerDuty",
@@ -133,11 +140,12 @@
         110
       ],
       "credentials": {
-        "pagerDutyApi": "PagerDuty creds"
+        "pagerDutyOAuth2Api": "PagerDuty OAuth2 API creds"
       }
     },
     {
       "parameters": {
+        "authentication": "oAuth2",
         "resource": "logEntry",
         "operation": "getAll",
         "limit": 1,
@@ -151,11 +159,12 @@
         440
       ],
       "credentials": {
-        "pagerDutyApi": "PagerDuty creds"
+        "pagerDutyOAuth2Api": "PagerDuty OAuth2 API creds"
       }
     },
     {
       "parameters": {
+        "authentication": "oAuth2",
         "resource": "logEntry",
         "logEntryId": "={{$node[\"PagerDuty\"].json[\"first_trigger_log_entry\"][\"id\"]}}"
       },
@@ -167,11 +176,32 @@
         440
       ],
       "credentials": {
-        "pagerDutyApi": "PagerDuty creds"
+        "pagerDutyOAuth2Api": "PagerDuty OAuth2 API creds"
       }
     }
   ],
   "connections": {
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "PagerDuty",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "PagerDuty7",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "PagerDuty6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
     "PagerDuty": {
       "main": [
         [
@@ -219,36 +249,10 @@
           }
         ]
       ]
-    },
-    "Start": {
-      "main": [
-        [
-          {
-            "node": "PagerDuty",
-            "type": "main",
-            "index": 0
-          },
-          {
-            "node": "PagerDuty6",
-            "type": "main",
-            "index": 0
-          },
-          {
-            "node": "PagerDuty7",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "PagerDuty7": {
-      "main": [
-        []
-      ]
     }
   },
   "createdAt": "2021-02-15T13:56:59.611Z",
-  "updatedAt": "2021-02-19T11:45:25.483Z",
+  "updatedAt": "2021-03-25T08:33:56.080Z",
   "settings": {},
   "staticData": null
 }
