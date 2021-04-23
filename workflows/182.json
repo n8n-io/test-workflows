@@ -1,0 +1,206 @@
+{
+  "id": 182,
+  "name": "Webflow:Item:create get update delete getAll",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "create",
+        "siteId": "6082884ac940c371277833ae",
+        "collectionId": "608289f18593d40792d70d54",
+        "fieldsUi": {
+          "fieldValues": [
+            {
+              "fieldId": "name",
+              "fieldValue": "=Item{{Date.now()}}"
+            },
+            {
+              "fieldId": "slug",
+              "fieldValue": "=ItemSlug{{Date.now()}}"
+            },
+            {
+              "fieldId": "_archived",
+              "fieldValue": "False"
+            },
+            {
+              "fieldId": "_draft",
+              "fieldValue": "True"
+            }
+          ]
+        }
+      },
+      "name": "Webflow",
+      "type": "n8n-nodes-base.webflow",
+      "typeVersion": 1,
+      "position": [
+        450,
+        300
+      ],
+      "credentials": {
+        "webflowApi": "Webflow API creds"
+      }
+    },
+    {
+      "parameters": {
+        "siteId": "6082884ac940c371277833ae",
+        "collectionId": "608289f18593d40792d70d54",
+        "itemId": "={{$node[\"Webflow\"].json[\"_id\"]}}"
+      },
+      "name": "Webflow1",
+      "type": "n8n-nodes-base.webflow",
+      "typeVersion": 1,
+      "position": [
+        650,
+        300
+      ],
+      "credentials": {
+        "webflowApi": "Webflow API creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "siteId": "6082884ac940c371277833ae",
+        "collectionId": "608289f18593d40792d70d54",
+        "itemId": "={{$node[\"Webflow\"].json[\"_id\"]}}",
+        "fieldsUi": {
+          "fieldValues": [
+            {
+              "fieldId": "_draft",
+              "fieldValue": "False"
+            },
+            {
+              "fieldId": "_archived",
+              "fieldValue": "False"
+            },
+            {
+              "fieldId": "slug",
+              "fieldValue": "=Updated{{$node[\"Webflow1\"].json[\"slug\"]}}"
+            },
+            {
+              "fieldId": "name",
+              "fieldValue": "=Updated{{$node[\"Webflow1\"].json[\"name\"]}}"
+            }
+          ]
+        }
+      },
+      "name": "Webflow2",
+      "type": "n8n-nodes-base.webflow",
+      "typeVersion": 1,
+      "position": [
+        850,
+        300
+      ],
+      "credentials": {
+        "webflowApi": "Webflow API creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "siteId": "6082884ac940c371277833ae",
+        "collectionId": "608289f18593d40792d70d54",
+        "itemId": "={{$node[\"Webflow\"].json[\"_id\"]}}"
+      },
+      "name": "Webflow3",
+      "type": "n8n-nodes-base.webflow",
+      "typeVersion": 1,
+      "position": [
+        1050,
+        300
+      ],
+      "credentials": {
+        "webflowApi": "Webflow API creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "siteId": "6082884ac940c371277833ae",
+        "collectionId": "608289f18593d40792d70d54",
+        "limit": 1
+      },
+      "name": "Webflow4",
+      "type": "n8n-nodes-base.webflow",
+      "typeVersion": 1,
+      "position": [
+        1250,
+        300
+      ],
+      "credentials": {
+        "webflowApi": "Webflow API creds"
+      }
+    }
+  ],
+  "connections": {
+    "Webflow": {
+      "main": [
+        [
+          {
+            "node": "Webflow1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Webflow1": {
+      "main": [
+        [
+          {
+            "node": "Webflow2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Webflow2": {
+      "main": [
+        [
+          {
+            "node": "Webflow3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Webflow3": {
+      "main": [
+        [
+          {
+            "node": "Webflow4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Webflow",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-04-23T08:55:02.078Z",
+  "updatedAt": "2021-04-23T08:55:02.078Z",
+  "settings": {},
+  "staticData": null
+}
