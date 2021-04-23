@@ -425,6 +425,64 @@
       "credentials": {
         "harvestOAuth2Api": "Harvest OAuth2 creds"
       }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "accountId": 1416330,
+        "operation": "create",
+        "name": "=Task{{Date.now()}}",
+        "additionalFields": {}
+      },
+      "name": "Harvest9",
+      "type": "n8n-nodes-base.harvest",
+      "typeVersion": 1,
+      "position": [
+        700,
+        500
+      ],
+      "credentials": {
+        "harvestOAuth2Api": "Harvest OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "accountId": 1416330,
+        "operation": "update",
+        "id": "={{$node[\"Harvest9\"].json[\"id\"]}}",
+        "updateFields": {
+          "name": "=Update{{$node[\"Harvest9\"].json[\"name\"]}}"
+        }
+      },
+      "name": "Harvest10",
+      "type": "n8n-nodes-base.harvest",
+      "typeVersion": 1,
+      "position": [
+        850,
+        500
+      ],
+      "credentials": {
+        "harvestOAuth2Api": "Harvest OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "accountId": 1416330,
+        "operation": "delete",
+        "id": "={{$node[\"Harvest9\"].json[\"id\"]}}"
+      },
+      "name": "Harvest23",
+      "type": "n8n-nodes-base.harvest",
+      "typeVersion": 1,
+      "position": [
+        990,
+        500
+      ],
+      "credentials": {
+        "harvestOAuth2Api": "Harvest OAuth2 creds"
+      }
     }
   ],
   "connections": {
@@ -637,12 +695,40 @@
     },
     "Harvest8": {
       "main": [
-        []
+        [
+          {
+            "node": "Harvest9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Harvest9": {
+      "main": [
+        [
+          {
+            "node": "Harvest10",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Harvest10": {
+      "main": [
+        [
+          {
+            "node": "Harvest23",
+            "type": "main",
+            "index": 0
+          }
+        ]
       ]
     }
   },
   "createdAt": "2021-02-26T09:54:20.362Z",
-  "updatedAt": "2021-02-26T11:01:07.014Z",
+  "updatedAt": "2021-03-29T15:02:36.931Z",
   "settings": {},
   "staticData": null
 }
