@@ -112,6 +112,7 @@
         "resource": "repository",
         "owner": "nodemationqa",
         "repository": "nodeQA",
+        "limit": 1,
         "getRepositoryIssuesFilters": {}
       },
       "name": "GitHub5",
@@ -124,8 +125,7 @@
       "alwaysOutputData": true,
       "credentials": {
         "githubApi": "Github creds"
-      },
-      "disabled": true
+      }
     },
     {
       "parameters": {
@@ -523,8 +523,8 @@
         "repository": "nodeQA",
         "release_id": "={{$node[\"GitHub15\"].json[\"id\"]}}",
         "additionalFields": {
-          "name": "=Updated{{$node[\"GitHub15\"].json[\"name\"]}}",
           "draft": true,
+          "name": "=Updated{{$node[\"GitHub15\"].json[\"name\"]}}",
           "tag_name": "=Updated{{$node[\"GitHub15\"].json[\"tag_name\"]}}"
         }
       },
@@ -820,7 +820,7 @@
     }
   },
   "createdAt": "2021-02-18T10:30:52.070Z",
-  "updatedAt": "2021-04-01T10:33:08.614Z",
+  "updatedAt": "2021-04-23T11:28:54.118Z",
   "settings": {},
   "staticData": null
 }
