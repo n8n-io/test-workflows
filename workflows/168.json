@@ -1,0 +1,131 @@
+{
+  "id": 168,
+  "name": "Demio:Event:getAll get register:Report:get",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        400,
+        480
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "limit": 1,
+        "filters": {}
+      },
+      "name": "Demio",
+      "type": "n8n-nodes-base.demio",
+      "typeVersion": 1,
+      "position": [
+        650,
+        420
+      ],
+      "credentials": {
+        "demioApi": "Demio API creds"
+      }
+    },
+    {
+      "parameters": {
+        "eventId": "={{$node[\"Demio\"].json[\"id\"]}}",
+        "additionalFields": {}
+      },
+      "name": "Demio1",
+      "type": "n8n-nodes-base.demio",
+      "typeVersion": 1,
+      "position": [
+        790,
+        420
+      ],
+      "credentials": {
+        "demioApi": "Demio API creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "register",
+        "eventId": "={{$node[\"Demio\"].json[\"id\"]}}",
+        "firstName": "=Name{{Date.now()}}",
+        "email": "=Fake{{Date.now()}}@email.com",
+        "additionalFields": {}
+      },
+      "name": "Demio2",
+      "type": "n8n-nodes-base.demio",
+      "typeVersion": 1,
+      "position": [
+        940,
+        420
+      ],
+      "credentials": {
+        "demioApi": "Demio API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "report",
+        "eventId": 382005,
+        "dateId": 1862186,
+        "filters": {}
+      },
+      "name": "Demio3",
+      "type": "n8n-nodes-base.demio",
+      "typeVersion": 1,
+      "position": [
+        650,
+        570
+      ],
+      "credentials": {
+        "demioApi": "Demio API creds"
+      }
+    }
+  ],
+  "connections": {
+    "Demio": {
+      "main": [
+        [
+          {
+            "node": "Demio1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Demio1": {
+      "main": [
+        [
+          {
+            "node": "Demio2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Demio",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Demio3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-04-13T14:55:34.780Z",
+  "updatedAt": "2021-04-14T13:12:21.023Z",
+  "settings": {},
+  "staticData": null
+}
