@@ -1,6 +1,6 @@
 {
   "id": 59,
-  "name": "SendGrid:List:create update get getAll delete:Contact:upsert getAll get delete",
+  "name": "SendGrid:List:create update get getAll delete:Contact:upsert getAll get delete:mail:send",
   "active": false,
   "nodes": [
     {
@@ -15,7 +15,7 @@
     },
     {
       "parameters": {
-        "name": "TestList"
+        "name": "=TestList{{Date.now()}}"
       },
       "name": "SendGrid",
       "type": "n8n-nodes-base.sendGrid",
@@ -96,7 +96,7 @@
     {
       "parameters": {
         "resource": "contact",
-        "email": "fakeemail@gmail.com",
+        "email": "=fakeemail{{Date.now()}}@gmail.com",
         "additionalFields": {
           "firstName": "Fake",
           "lastName": "Email"
@@ -192,6 +192,27 @@
         200
       ],
       "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "resource": "mail",
+        "fromEmail": "node8qa@gmail.com",
+        "fromName": "node,qa",
+        "toEmail": "node8qa@gmail.com",
+        "subject": "SendGrid test workflow",
+        "contentValue": "=Message at {{(new Date).toUTCString()}}",
+        "additionalFields": {}
+      },
+      "name": "SendGrid9",
+      "type": "n8n-nodes-base.sendGrid",
+      "typeVersion": 1,
+      "position": [
+        350,
+        600
+      ],
+      "credentials": {
+        "sendGridApi": "SendGrid creds"
+      }
     }
   ],
   "connections": {
@@ -251,6 +272,11 @@
             "node": "SendGrid5",
             "type": "main",
             "index": 0
+          },
+          {
+            "node": "SendGrid9",
+            "type": "main",
+            "index": 0
           }
         ]
       ]
@@ -288,11 +314,6 @@
         ]
       ]
     },
-    "SendGrid8": {
-      "main": [
-        []
-      ]
-    },
     "FunctionItem": {
       "main": [
         [
@@ -306,7 +327,7 @@
     }
   },
   "createdAt": "2021-02-23T10:02:06.947Z",
-  "updatedAt": "2021-02-23T10:33:31.918Z",
+  "updatedAt": "2021-04-13T10:12:52.388Z",
   "settings": {},
   "staticData": null
 }
