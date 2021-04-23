@@ -1,6 +1,6 @@
 {
   "id": 61,
-  "name": "Spotify:Artist:get getAlbums getRelatedArtists getTopTracks:Album:get getTracks:Track:get getAudioFeatures:Playlist:getUserPlaylists get add getTracks delete:Player:recentylPlayed currentlyPlaying",
+  "name": "Spotify:Artist:get getAlbums getRelatedArtists getTopTracks:Album:get getNewReleases getTracks:Track:get getAudioFeatures:Playlist:create getUserPlaylists get add getTracks delete:Player:recentylPlayed currentlyPlaying:Library:getLikedTracks",
   "active": false,
   "nodes": [
     {
@@ -108,7 +108,7 @@
       "type": "n8n-nodes-base.spotify",
       "typeVersion": 1,
       "position": [
-        950,
+        1100,
         300
       ],
       "credentials": {
@@ -125,7 +125,7 @@
       "type": "n8n-nodes-base.spotify",
       "typeVersion": 1,
       "position": [
-        1100,
+        1250,
         300
       ],
       "credentials": {
@@ -142,7 +142,7 @@
       "type": "n8n-nodes-base.spotify",
       "typeVersion": 1,
       "position": [
-        1250,
+        1400,
         300
       ],
       "credentials": {
@@ -266,6 +266,62 @@
       "credentials": {
         "spotifyOAuth2Api": "Spotify OAuth2 creds"
       }
+    },
+    {
+      "parameters": {
+        "resource": "album",
+        "operation": "getNewReleases",
+        "limit": 1,
+        "filters": {
+          "country": "DE"
+        }
+      },
+      "name": "Spotify13",
+      "type": "n8n-nodes-base.spotify",
+      "typeVersion": 1,
+      "position": [
+        950,
+        300
+      ],
+      "credentials": {
+        "spotifyOAuth2Api": "Spotify OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "playlist",
+        "operation": "create",
+        "name": "=Playlist{{Date.now()}}",
+        "additionalFields": {
+          "public": true
+        }
+      },
+      "name": "Spotify16",
+      "type": "n8n-nodes-base.spotify",
+      "typeVersion": 1,
+      "position": [
+        1200,
+        610
+      ],
+      "credentials": {
+        "spotifyOAuth2Api": "Spotify OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "library",
+        "limit": 1
+      },
+      "name": "Spotify17",
+      "type": "n8n-nodes-base.spotify",
+      "typeVersion": 1,
+      "position": [
+        450,
+        450
+      ],
+      "credentials": {
+        "spotifyOAuth2Api": "Spotify OAuth2 creds"
+      }
     }
   ],
   "connections": {
@@ -284,6 +340,11 @@
           },
           {
             "node": "Spotify14",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Spotify17",
             "type": "main",
             "index": 0
           }
@@ -311,11 +372,6 @@
         ]
       ]
     },
-    "Spotify2": {
-      "main": [
-        []
-      ]
-    },
     "Spotify1": {
       "main": [
         [
@@ -331,7 +387,7 @@
       "main": [
         [
           {
-            "node": "Spotify5",
+            "node": "Spotify13",
             "type": "main",
             "index": 0
           }
@@ -358,11 +414,6 @@
             "index": 0
           }
         ]
-      ]
-    },
-    "Spotify7": {
-      "main": [
-        []
       ]
     },
     "Spotify8": {
@@ -419,10 +470,32 @@
           }
         ]
       ]
+    },
+    "Spotify13": {
+      "main": [
+        [
+          {
+            "node": "Spotify5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Spotify12": {
+      "main": [
+        [
+          {
+            "node": "Spotify16",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "createdAt": "2021-02-23T16:32:02.682Z",
-  "updatedAt": "2021-02-23T16:54:16.325Z",
+  "updatedAt": "2021-04-07T15:22:58.138Z",
   "settings": {},
   "staticData": null
 }
