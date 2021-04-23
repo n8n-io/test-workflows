@@ -1,0 +1,1046 @@
+{
+  "id": 176,
+  "name": "uProc:Audio:*:company:*;",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "group": "audio",
+        "text": "n8n rocks!",
+        "gender": "female",
+        "language": "american",
+        "additionalOptions": {}
+      },
+      "name": "uProc",
+      "type": "n8n-nodes-base.uproc",
+      "typeVersion": 1,
+      "position": [
+        560,
+        200
+      ],
+      "credentials": {
+        "uprocApi": "uProc API creds"
+      }
+    },
+    {
+      "parameters": {
+        "group": "audio",
+        "tool": "getAudioSpeechByText",
+        "text": "n8n rocks!",
+        "gender": "female",
+        "language": "american",
+        "additionalOptions": {}
+      },
+      "name": "uProc1",
+      "type": "n8n-nodes-base.uproc",
+      "typeVersion": 1,
+      "position": [
+        740,
+        200
+      ],
+      "credentials": {
+        "uprocApi": "uProc API creds"
+      }
+    },
+    {
+      "parameters": {
+        "group": "company",
+        "tool": "getCifNormalized",
+        "cif": "B 12345 678",
+        "additionalOptions": {}
+      },
+      "name": "uProc10",
+      "type": "n8n-nodes-base.uproc",
+      "typeVersion": 1,
+      "position": [
+        560,
+        350
+      ],
+      "credentials": {
+        "uprocApi": "uProc API creds"
+      }
+    },
+    {
+      "parameters": {
+        "group": "company",
+        "cif": "B 12345 678",
+        "additionalOptions": {}
+      },
+      "name": "uProc11",
+      "type": "n8n-nodes-base.uproc",
+      "typeVersion": 1,
+      "position": [
+        690,
+        350
+      ],
+      "credentials": {
+        "uprocApi": "uProc API creds"
+      }
+    },
+    {
+      "parameters": {
+        "group": "company",
+        "tool": "checkNumberIsin",
+        "isin": "US0004026250",
+        "additionalOptions": {}
+      },
+      "name": "uProc12",
+      "type": "n8n-nodes-base.uproc",
+      "typeVersion": 1,
+      "position": [
+        820,
+        350
+      ],
+      "credentials": {
+        "uprocApi": "uProc API creds"
+      }
+    },
+    {
+      "parameters": {
+        "group": "company",
+        "tool": "checkNumberSsEs",
+        "number": "998239812282",
+        "additionalOptions": {}
+      },
+      "name": "uProc13",
+      "type": "n8n-nodes-base.uproc",
+      "typeVersion": 1,
+      "position": [
+        950,
+        350
+      ],
+      "credentials": {
+        "uprocApi": "uProc API creds"
+      }
+    },
+    {
+      "parameters": {
+        "group": "company",
+        "tool": "getCompanyByCif",
+        "cif": "B 12345 678",
+        "additionalOptions": {}
+      },
+      "name": "uProc14",
+      "type": "n8n-nodes-base.uproc",
+      "typeVersion": 1,
+      "position": [
+        1080,
+        350
+      ],
+      "credentials": {
+        "uprocApi": "uProc API creds"
+      }
+    },
+    {
+      "parameters": {
+        "group": "company",
+        "tool": "getCompanyByDomain",
+        "domain": "n8n.io",
+        "additionalOptions": {}
+      },
+      "name": "uProc15",
+      "type": "n8n-nodes-base.uproc",
+      "typeVersion": 1,
+      "position": [
+        1210,
+        350
+      ],
+      "credentials": {
+        "uprocApi": "uProc API creds"
+      }
+    },
+    {
+      "parameters": {
+        "group": "company",
+        "tool": "getCompanyByDuns",
+        "duns": "150483782",
+        "additionalOptions": {}
+      },
+      "name": "uProc16",
+      "type": "n8n-nodes-base.uproc",
+      "typeVersion": 1,
+      "position": [
+        1340,
+        350
+      ],
+      "credentials": {
+        "uprocApi": "uProc API creds"
+      }
+    },
+    {
+      "parameters": {
+        "group": "company",
+        "tool": "getCompanyByEmail",
+        "email": "hello@n8n.io",
+        "additionalOptions": {}
+      },
+      "name": "uProc17",
+      "type": "n8n-nodes-base.uproc",
+      "typeVersion": 1,
+      "position": [
+        1470,
+        350
+      ],
+      "credentials": {
+        "uprocApi": "uProc API creds"
+      }
+    },
+    {
+      "parameters": {
+        "group": "company",
+        "tool": "getCompanyByIp",
+        "ip": "104.21.37.3",
+        "additionalOptions": {}
+      },
+      "name": "uProc18",
+      "type": "n8n-nodes-base.uproc",
+      "typeVersion": 1,
+      "position": [
+        1600,
+        350
+      ],
+      "credentials": {
+        "uprocApi": "uProc API creds"
+      }
+    },
+    {
+      "parameters": {
+        "group": "company",
+        "tool": "getCompanyByName",
+        "country": "DE",
+        "name": "n8n",
+        "additionalOptions": {}
+      },
+      "name": "uProc19",
+      "type": "n8n-nodes-base.uproc",
+      "typeVersion": 1,
+      "position": [
+        1730,
+        350
+      ],
+      "credentials": {
+        "uprocApi": "uProc API creds"
+      }
+    },
+    {
+      "parameters": {
+        "group": "company",
+        "tool": "getCompanyByPhone",
+        "phone": "932187670",
+        "additionalOptions": {}
+      },
+      "name": "uProc20",
+      "type": "n8n-nodes-base.uproc",
+      "typeVersion": 1,
+      "position": [
+        1860,
+        350
+      ],
+      "credentials": {
+        "uprocApi": "uProc API creds"
+      }
+    },
+    {
+      "parameters": {
+        "group": "company",
+        "tool": "getCompanyByProfile",
+        "url": "https://twitter.com/n8n_io",
+        "additionalOptions": {}
+      },
+      "name": "uProc21",
+      "type": "n8n-nodes-base.uproc",
+      "typeVersion": 1,
+      "position": [
+        1990,
+        350
+      ],
+      "credentials": {
+        "uprocApi": "uProc API creds"
+      }
+    },
+    {
+      "parameters": {
+        "group": "company",
+        "tool": "getRoleClassified",
+        "role": "Junior web developer",
+        "additionalOptions": {}
+      },
+      "name": "uProc22",
+      "type": "n8n-nodes-base.uproc",
+      "typeVersion": 1,
+      "position": [
+        2120,
+        350
+      ],
+      "credentials": {
+        "uprocApi": "uProc API creds"
+      }
+    },
+    {
+      "parameters": {
+        "group": "company",
+        "tool": "checkCompanyDebtorByTaxid",
+        "taxid": "B12345678",
+        "additionalOptions": {}
+      },
+      "name": "uProc23",
+      "type": "n8n-nodes-base.uproc",
+      "typeVersion": 1,
+      "position": [
+        2250,
+        350
+      ],
+      "credentials": {
+        "uprocApi": "uProc API creds"
+      }
+    },
+    {
+      "parameters": {
+        "group": "company",
+        "tool": "getPersonDecisionMaker",
+        "company": "n8n.io",
+        "area": "Engineering",
+        "additionalOptions": {}
+      },
+      "name": "uProc24",
+      "type": "n8n-nodes-base.uproc",
+      "typeVersion": 1,
+      "position": [
+        2380,
+        350
+      ],
+      "credentials": {
+        "uprocApi": "uProc API creds"
+      }
+    },
+    {
+      "parameters": {
+        "group": "company",
+        "tool": "getPersonDecisionMakerBySearch",
+        "company": "n8n.io",
+        "area": "Product",
+        "clevel": "No",
+        "additionalOptions": {}
+      },
+      "name": "uProc25",
+      "type": "n8n-nodes-base.uproc",
+      "typeVersion": 1,
+      "position": [
+        2510,
+        350
+      ],
+      "credentials": {
+        "uprocApi": "uProc API creds"
+      }
+    },
+    {
+      "parameters": {
+        "group": "company",
+        "tool": "getCompanyDomainByName",
+        "name": "n8n.io",
+        "additionalOptions": {}
+      },
+      "name": "uProc26",
+      "type": "n8n-nodes-base.uproc",
+      "typeVersion": 1,
+      "position": [
+        2640,
+        350
+      ],
+      "credentials": {
+        "uprocApi": "uProc API creds"
+      }
+    },
+    {
+      "parameters": {
+        "group": "company",
+        "tool": "getPersonEmailsByDomainAndArea",
+        "domain": "n8n.io",
+        "area": "Engineering",
+        "additionalOptions": {}
+      },
+      "name": "uProc27",
+      "type": "n8n-nodes-base.uproc",
+      "typeVersion": 1,
+      "position": [
+        2770,
+        350
+      ],
+      "credentials": {
+        "uprocApi": "uProc API creds"
+      }
+    },
+    {
+      "parameters": {
+        "group": "company",
+        "tool": "getCompanyExtendedByDomain",
+        "domain": "n8n.io",
+        "additionalOptions": {}
+      },
+      "name": "uProc28",
+      "type": "n8n-nodes-base.uproc",
+      "typeVersion": 1,
+      "position": [
+        2900,
+        350
+      ],
+      "credentials": {
+        "uprocApi": "uProc API creds"
+      }
+    },
+    {
+      "parameters": {
+        "group": "company",
+        "tool": "getCompanyExtendedByEmail",
+        "email": "hello@n8n.io",
+        "additionalOptions": {}
+      },
+      "name": "uProc29",
+      "type": "n8n-nodes-base.uproc",
+      "typeVersion": 1,
+      "position": [
+        3030,
+        350
+      ],
+      "credentials": {
+        "uprocApi": "uProc API creds"
+      }
+    },
+    {
+      "parameters": {
+        "group": "company",
+        "tool": "getProfileFacebookByCompany",
+        "company": "n8n.io",
+        "additionalOptions": {}
+      },
+      "name": "uProc30",
+      "type": "n8n-nodes-base.uproc",
+      "typeVersion": 1,
+      "position": [
+        3160,
+        350
+      ],
+      "credentials": {
+        "uprocApi": "uProc API creds"
+      }
+    },
+    {
+      "parameters": {
+        "group": "company",
+        "tool": "getCompanyFinancialByDomain",
+        "domain": "n8n.io",
+        "additionalOptions": {}
+      },
+      "name": "uProc31",
+      "type": "n8n-nodes-base.uproc",
+      "typeVersion": 1,
+      "position": [
+        3290,
+        350
+      ],
+      "credentials": {
+        "uprocApi": "uProc API creds"
+      }
+    },
+    {
+      "parameters": {
+        "group": "company",
+        "tool": "getCompanyFinancialByDuns",
+        "duns": "150483782",
+        "additionalOptions": {}
+      },
+      "name": "uProc32",
+      "type": "n8n-nodes-base.uproc",
+      "typeVersion": 1,
+      "position": [
+        3420,
+        350
+      ],
+      "credentials": {
+        "uprocApi": "uProc API creds"
+      }
+    },
+    {
+      "parameters": {
+        "group": "company",
+        "tool": "getCompanyFinancialByName",
+        "name": "n8n.io",
+        "additionalOptions": {}
+      },
+      "name": "uProc33",
+      "type": "n8n-nodes-base.uproc",
+      "typeVersion": 1,
+      "position": [
+        3550,
+        350
+      ],
+      "credentials": {
+        "uprocApi": "uProc API creds"
+      }
+    },
+    {
+      "parameters": {
+        "group": "company",
+        "tool": "getCompanyFinancialByTaxid",
+        "taxid": "B12345678",
+        "additionalOptions": {}
+      },
+      "name": "uProc34",
+      "type": "n8n-nodes-base.uproc",
+      "typeVersion": 1,
+      "position": [
+        3680,
+        350
+      ],
+      "credentials": {
+        "uprocApi": "uProc API creds"
+      }
+    },
+    {
+      "parameters": {
+        "group": "company",
+        "tool": "getCompanyGeocodedByIp",
+        "ip": "104.21.37.3",
+        "additionalOptions": {}
+      },
+      "name": "uProc35",
+      "type": "n8n-nodes-base.uproc",
+      "typeVersion": 1,
+      "position": [
+        3810,
+        350
+      ],
+      "credentials": {
+        "uprocApi": "uProc API creds"
+      }
+    },
+    {
+      "parameters": {
+        "group": "company",
+        "tool": "getProfileLinkedinByCompany",
+        "company": "n8n.io",
+        "additionalOptions": {}
+      },
+      "name": "uProc36",
+      "type": "n8n-nodes-base.uproc",
+      "typeVersion": 1,
+      "position": [
+        3940,
+        350
+      ],
+      "credentials": {
+        "uprocApi": "uProc API creds"
+      }
+    },
+    {
+      "parameters": {
+        "group": "company",
+        "tool": "getPersonListByParams",
+        "country": "DE",
+        "phone": "932187670",
+        "email": "hello@n8n.io",
+        "company": "n8n.io",
+        "area": "Information technology",
+        "seniority": "Intermediate",
+        "additionalOptions": {}
+      },
+      "name": "uProc37",
+      "type": "n8n-nodes-base.uproc",
+      "typeVersion": 1,
+      "position": [
+        4070,
+        350
+      ],
+      "credentials": {
+        "uprocApi": "uProc API creds"
+      }
+    },
+    {
+      "parameters": {
+        "group": "company",
+        "tool": "getPersonMultipleDecisionMakerBySearch",
+        "company": "n8n.io",
+        "area": "Information technology",
+        "clevel": "No",
+        "additionalOptions": {}
+      },
+      "name": "uProc38",
+      "type": "n8n-nodes-base.uproc",
+      "typeVersion": 1,
+      "position": [
+        4200,
+        350
+      ],
+      "credentials": {
+        "uprocApi": "uProc API creds"
+      }
+    },
+    {
+      "parameters": {
+        "group": "company",
+        "tool": "getCompanyNameByDomain",
+        "domain": "n8n.io",
+        "additionalOptions": {}
+      },
+      "name": "uProc39",
+      "type": "n8n-nodes-base.uproc",
+      "typeVersion": 1,
+      "position": [
+        4330,
+        350
+      ],
+      "credentials": {
+        "uprocApi": "uProc API creds"
+      }
+    },
+    {
+      "parameters": {
+        "group": "company",
+        "tool": "getCompanyPhoneByDomain",
+        "domain": "n8n.io",
+        "additionalOptions": {}
+      },
+      "name": "uProc40",
+      "type": "n8n-nodes-base.uproc",
+      "typeVersion": 1,
+      "position": [
+        4460,
+        350
+      ],
+      "credentials": {
+        "uprocApi": "uProc API creds"
+      }
+    },
+    {
+      "parameters": {
+        "group": "company",
+        "tool": "getCompanyPhoneByName",
+        "name": "n8n.io",
+        "additionalOptions": {}
+      },
+      "name": "uProc41",
+      "type": "n8n-nodes-base.uproc",
+      "typeVersion": 1,
+      "position": [
+        4590,
+        350
+      ],
+      "credentials": {
+        "uprocApi": "uProc API creds"
+      }
+    },
+    {
+      "parameters": {
+        "group": "company",
+        "tool": "getProfileTwitterByCompany",
+        "company": "n8n.io",
+        "additionalOptions": {}
+      },
+      "name": "uProc42",
+      "type": "n8n-nodes-base.uproc",
+      "typeVersion": 1,
+      "position": [
+        4720,
+        350
+      ],
+      "credentials": {
+        "uprocApi": "uProc API creds"
+      }
+    }
+  ],
+  "connections": {
+    "uProc": {
+      "main": [
+        [
+          {
+            "node": "uProc1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "uProc10": {
+      "main": [
+        [
+          {
+            "node": "uProc11",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "uProc11": {
+      "main": [
+        [
+          {
+            "node": "uProc12",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "uProc12": {
+      "main": [
+        [
+          {
+            "node": "uProc13",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "uProc13": {
+      "main": [
+        [
+          {
+            "node": "uProc14",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "uProc14": {
+      "main": [
+        [
+          {
+            "node": "uProc15",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "uProc15": {
+      "main": [
+        [
+          {
+            "node": "uProc16",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "uProc16": {
+      "main": [
+        [
+          {
+            "node": "uProc17",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "uProc17": {
+      "main": [
+        [
+          {
+            "node": "uProc18",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "uProc18": {
+      "main": [
+        [
+          {
+            "node": "uProc19",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "uProc19": {
+      "main": [
+        [
+          {
+            "node": "uProc20",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "uProc20": {
+      "main": [
+        [
+          {
+            "node": "uProc21",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "uProc21": {
+      "main": [
+        [
+          {
+            "node": "uProc22",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "uProc22": {
+      "main": [
+        [
+          {
+            "node": "uProc23",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "uProc23": {
+      "main": [
+        [
+          {
+            "node": "uProc24",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "uProc24": {
+      "main": [
+        [
+          {
+            "node": "uProc25",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "uProc25": {
+      "main": [
+        [
+          {
+            "node": "uProc26",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "uProc26": {
+      "main": [
+        [
+          {
+            "node": "uProc27",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "uProc27": {
+      "main": [
+        [
+          {
+            "node": "uProc28",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "uProc28": {
+      "main": [
+        [
+          {
+            "node": "uProc29",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "uProc29": {
+      "main": [
+        [
+          {
+            "node": "uProc30",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "uProc30": {
+      "main": [
+        [
+          {
+            "node": "uProc31",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "uProc31": {
+      "main": [
+        [
+          {
+            "node": "uProc32",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "uProc32": {
+      "main": [
+        [
+          {
+            "node": "uProc33",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "uProc33": {
+      "main": [
+        [
+          {
+            "node": "uProc34",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "uProc34": {
+      "main": [
+        [
+          {
+            "node": "uProc35",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "uProc35": {
+      "main": [
+        [
+          {
+            "node": "uProc36",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "uProc36": {
+      "main": [
+        [
+          {
+            "node": "uProc37",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "uProc37": {
+      "main": [
+        [
+          {
+            "node": "uProc38",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "uProc38": {
+      "main": [
+        [
+          {
+            "node": "uProc39",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "uProc39": {
+      "main": [
+        [
+          {
+            "node": "uProc40",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "uProc40": {
+      "main": [
+        [
+          {
+            "node": "uProc41",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "uProc41": {
+      "main": [
+        [
+          {
+            "node": "uProc42",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "uProc",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "uProc10",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-04-20T13:25:03.086Z",
+  "updatedAt": "2021-04-20T15:03:32.741Z",
+  "settings": {},
+  "staticData": null
+}
