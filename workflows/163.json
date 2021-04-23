@@ -1,0 +1,243 @@
+{
+  "id": 163,
+  "name": "GoogleSlides:Presentation:create get getSlides replaceText:Page:get getThumbnail",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "title": "=Slides{{(new Date()).toUTCString()}}"
+      },
+      "name": "Google Slides",
+      "type": "n8n-nodes-base.googleSlides",
+      "typeVersion": 1,
+      "position": [
+        480,
+        220
+      ],
+      "credentials": {
+        "googleSlidesOAuth2Api": "Google Slides OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "operation": "get",
+        "presentationId": "={{$node[\"Google Slides\"].json[\"presentationId\"]}}"
+      },
+      "name": "Google Slides1",
+      "type": "n8n-nodes-base.googleSlides",
+      "typeVersion": 1,
+      "position": [
+        640,
+        220
+      ],
+      "credentials": {
+        "googleSlidesOAuth2Api": "Google Slides OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "operation": "getSlides",
+        "presentationId": "={{$node[\"Google Slides\"].json[\"presentationId\"]}}"
+      },
+      "name": "Google Slides2",
+      "type": "n8n-nodes-base.googleSlides",
+      "typeVersion": 1,
+      "position": [
+        800,
+        220
+      ],
+      "credentials": {
+        "googleSlidesOAuth2Api": "Google Slides OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "operation": "replaceText",
+        "presentationId": "=1y7glcx_2V4LQoSWXTkBbn-kWRLBEAsn7I27B6RQ3cdo",
+        "textUi": {
+          "textValues": [
+            {
+              "pageObjectIds": [
+                "p"
+              ],
+              "replaceText": "n8n",
+              "text": "Title"
+            }
+          ]
+        },
+        "options": {
+          "revisionId": ""
+        }
+      },
+      "name": "Google Slides3",
+      "type": "n8n-nodes-base.googleSlides",
+      "typeVersion": 1,
+      "position": [
+        500,
+        50
+      ],
+      "credentials": {
+        "googleSlidesOAuth2Api": "Google Slides OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "resource": "page",
+        "operation": "getThumbnail",
+        "presentationId": "={{$node[\"Google Slides\"].json[\"presentationId\"]}}",
+        "pageObjectId": "p",
+        "download": true
+      },
+      "name": "Google Slides4",
+      "type": "n8n-nodes-base.googleSlides",
+      "typeVersion": 1,
+      "position": [
+        640,
+        390
+      ],
+      "credentials": {
+        "googleSlidesOAuth2Api": "Google Slides OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "resource": "page",
+        "presentationId": "={{$node[\"Google Slides\"].json[\"presentationId\"]}}",
+        "pageObjectId": "p"
+      },
+      "name": "Google Slides5",
+      "type": "n8n-nodes-base.googleSlides",
+      "typeVersion": 1,
+      "position": [
+        800,
+        390
+      ],
+      "credentials": {
+        "googleSlidesOAuth2Api": "Google Slides OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "operation": "replaceText",
+        "presentationId": "=1y7glcx_2V4LQoSWXTkBbn-kWRLBEAsn7I27B6RQ3cdo",
+        "textUi": {
+          "textValues": [
+            {
+              "pageObjectIds": [
+                "p"
+              ],
+              "replaceText": "Title",
+              "text": "n8n"
+            }
+          ]
+        },
+        "options": {
+          "revisionId": ""
+        }
+      },
+      "name": "Google Slides6",
+      "type": "n8n-nodes-base.googleSlides",
+      "typeVersion": 1,
+      "position": [
+        650,
+        50
+      ],
+      "credentials": {
+        "googleSlidesOAuth2Api": "Google Slides OAuth2 API creds"
+      }
+    }
+  ],
+  "connections": {
+    "Google Slides": {
+      "main": [
+        [
+          {
+            "node": "Google Slides1",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Google Slides4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Slides1": {
+      "main": [
+        [
+          {
+            "node": "Google Slides2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Slides2": {
+      "main": [
+        []
+      ]
+    },
+    "Google Slides4": {
+      "main": [
+        [
+          {
+            "node": "Google Slides5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Google Slides",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Google Slides3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Slides3": {
+      "main": [
+        [
+          {
+            "node": "Google Slides6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-04-06T10:52:29.924Z",
+  "updatedAt": "2021-04-06T12:05:26.358Z",
+  "settings": {},
+  "staticData": null
+}
