@@ -1,0 +1,439 @@
+{
+  "id": 157,
+  "name": "AWSSES:Template:create geAll get update delete:Email:sendTemplate send:CustomVerificationEmail:create get getAll update delete",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "template",
+        "templateName": "={{$node[\"Set\"].json[\"templateName\"]}}",
+        "subjectPart": "=Subject{{Date.now()}}",
+        "additionalFields": {
+          "textPart": "=Email body example {{Date.now()}}"
+        }
+      },
+      "name": "AWS SES",
+      "type": "n8n-nodes-base.awsSes",
+      "typeVersion": 1,
+      "position": [
+        600,
+        300
+      ],
+      "credentials": {
+        "aws": "AWS creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "template",
+        "operation": "getAll",
+        "limit": 1
+      },
+      "name": "AWS SES1",
+      "type": "n8n-nodes-base.awsSes",
+      "typeVersion": 1,
+      "position": [
+        750,
+        300
+      ],
+      "credentials": {
+        "aws": "AWS creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "template",
+        "operation": "get",
+        "templateName": "={{$node[\"Set\"].json[\"templateName\"]}}"
+      },
+      "name": "AWS SES2",
+      "type": "n8n-nodes-base.awsSes",
+      "typeVersion": 1,
+      "position": [
+        900,
+        300
+      ],
+      "credentials": {
+        "aws": "AWS creds"
+      }
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "templateName",
+              "value": "=Template{{Date.now()}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Set",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        450,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "template",
+        "operation": "update",
+        "templateName": "={{$node[\"Set\"].json[\"templateName\"]}}",
+        "updateFields": {
+          "subjectPart": "={{$node[\"AWS SES2\"].json[\"GetTemplateResult\"][\"Template\"][\"SubjectPart\"]}}",
+          "htmlPart": "=Updated{{$node[\"AWS SES2\"].json[\"GetTemplateResult\"][\"Template\"][\"TextPart\"]}}"
+        }
+      },
+      "name": "AWS SES3",
+      "type": "n8n-nodes-base.awsSes",
+      "typeVersion": 1,
+      "position": [
+        1050,
+        300
+      ],
+      "credentials": {
+        "aws": "AWS creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "template",
+        "operation": "delete",
+        "templateName": "={{$node[\"Set\"].json[\"templateName\"]}}"
+      },
+      "name": "AWS SES4",
+      "type": "n8n-nodes-base.awsSes",
+      "typeVersion": 1,
+      "position": [
+        1500,
+        300
+      ],
+      "credentials": {
+        "aws": "AWS creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "sendTemplate",
+        "templateName": "={{$node[\"Set\"].json[\"templateName\"]}}",
+        "fromEmail": "node8qa@gmail.com",
+        "toAddresses": [
+          "node8qa@gmail.com"
+        ],
+        "templateDataUi": {
+          "templateDataValues": []
+        },
+        "additionalFields": {}
+      },
+      "name": "AWS SES5",
+      "type": "n8n-nodes-base.awsSes",
+      "typeVersion": 1,
+      "position": [
+        1200,
+        450
+      ],
+      "credentials": {
+        "aws": "AWS creds"
+      }
+    },
+    {
+      "parameters": {
+        "subject": "=AWS email {{Date.now()}}",
+        "body": "=Testing AWS SES node {{Date.now()}}",
+        "fromEmail": "node8qa@gmail.com",
+        "toAddresses": [
+          "node8qa@gmail.com"
+        ],
+        "additionalFields": {}
+      },
+      "name": "AWS SES6",
+      "type": "n8n-nodes-base.awsSes",
+      "typeVersion": 1,
+      "position": [
+        1350,
+        450
+      ],
+      "credentials": {
+        "aws": "AWS creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "customVerificationEmail",
+        "fromEmailAddress": "node8qa@gmail.com",
+        "templateName": "={{$node[\"Set1\"].json[\"templateName\"]}}",
+        "templateSubject": "=VerificationSubject{{Date.now()}}",
+        "successRedirectionURL": "http://n8n.io",
+        "failureRedirectionURL": "http://n8n.io"
+      },
+      "name": "AWS SES7",
+      "type": "n8n-nodes-base.awsSes",
+      "typeVersion": 1,
+      "position": [
+        600,
+        100
+      ],
+      "credentials": {
+        "aws": "AWS creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "customVerificationEmail",
+        "operation": "get",
+        "templateName": "={{$node[\"Set1\"].json[\"templateName\"]}}"
+      },
+      "name": "AWS SES8",
+      "type": "n8n-nodes-base.awsSes",
+      "typeVersion": 1,
+      "position": [
+        800,
+        100
+      ],
+      "credentials": {
+        "aws": "AWS creds"
+      }
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "templateName",
+              "value": "=VerificationTemplate{{Date.now()}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Set1",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        450,
+        100
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "customVerificationEmail",
+        "operation": "getAll",
+        "limit": 1
+      },
+      "name": "AWS SES9",
+      "type": "n8n-nodes-base.awsSes",
+      "typeVersion": 1,
+      "position": [
+        1000,
+        100
+      ],
+      "credentials": {
+        "aws": "AWS creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "customVerificationEmail",
+        "operation": "update",
+        "templateName": "={{$node[\"Set1\"].json[\"templateName\"]}}",
+        "updateFields": {
+          "failureRedirectionURL": "https://community.n8n.io/"
+        }
+      },
+      "name": "AWS SES10",
+      "type": "n8n-nodes-base.awsSes",
+      "typeVersion": 1,
+      "position": [
+        1200,
+        100
+      ],
+      "credentials": {
+        "aws": "AWS creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "customVerificationEmail",
+        "operation": "delete",
+        "templateName": "={{$node[\"Set1\"].json[\"templateName\"]}}"
+      },
+      "name": "AWS SES11",
+      "type": "n8n-nodes-base.awsSes",
+      "typeVersion": 1,
+      "position": [
+        1400,
+        100
+      ],
+      "credentials": {
+        "aws": "AWS creds"
+      }
+    }
+  ],
+  "connections": {
+    "AWS SES": {
+      "main": [
+        [
+          {
+            "node": "AWS SES1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AWS SES1": {
+      "main": [
+        [
+          {
+            "node": "AWS SES2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set": {
+      "main": [
+        [
+          {
+            "node": "AWS SES",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AWS SES2": {
+      "main": [
+        [
+          {
+            "node": "AWS SES3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AWS SES3": {
+      "main": [
+        [
+          {
+            "node": "AWS SES5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Set",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Set1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AWS SES5": {
+      "main": [
+        [
+          {
+            "node": "AWS SES6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AWS SES6": {
+      "main": [
+        [
+          {
+            "node": "AWS SES4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AWS SES7": {
+      "main": [
+        [
+          {
+            "node": "AWS SES8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set1": {
+      "main": [
+        [
+          {
+            "node": "AWS SES7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AWS SES8": {
+      "main": [
+        [
+          {
+            "node": "AWS SES9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AWS SES9": {
+      "main": [
+        [
+          {
+            "node": "AWS SES10",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AWS SES10": {
+      "main": [
+        [
+          {
+            "node": "AWS SES11",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-03-25T14:16:35.634Z",
+  "updatedAt": "2021-03-25T14:30:21.247Z",
+  "settings": {},
+  "staticData": null
+}
