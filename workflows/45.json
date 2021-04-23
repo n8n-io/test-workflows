@@ -1,6 +1,6 @@
 {
   "id": 45,
-  "name": "GoogleSheets:SpreadSheet:create:Sheet:add append read lookup update delete clean",
+  "name": "GoogleSheets:SpreadSheet:create:Sheet:create append read lookup update delete clean remove",
   "active": false,
   "nodes": [
     {
@@ -229,6 +229,24 @@
       "credentials": {
         "googleSheetsOAuth2Api": "Google Sheets creds"
       }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "operation": "remove",
+        "sheetId": "={{$node[\"Google Sheets\"].json[\"spreadsheetId\"]}}",
+        "id": "={{$node[\"Google Sheets7\"].json[\"sheetId\"]}}"
+      },
+      "name": "Google Sheets8",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 1,
+      "position": [
+        750,
+        200
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": "Google Sheets creds"
+      }
     }
   ],
   "connections": {
@@ -335,10 +353,21 @@
           }
         ]
       ]
+    },
+    "Google Sheets7": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "createdAt": "2021-02-19T09:08:47.547Z",
-  "updatedAt": "2021-04-23T11:46:16.518Z",
+  "updatedAt": "2021-04-23T11:50:13.603Z",
   "settings": {},
   "staticData": null
 }
