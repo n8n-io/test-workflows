@@ -1,6 +1,6 @@
 {
   "id": 122,
-  "name": "Orbit:Member:upsert get update delete getAll lookup:Note:create update getAll:Activity:create getAll",
+  "name": "Orbit:Member:upsert get update delete getAll lookup:Note:create update getAll:Activity:create getAll:Post:create getAll delete",
   "active": false,
   "nodes": [
     {
@@ -248,7 +248,7 @@
         "resource": "post",
         "workspaceId": "543",
         "memberId": "={{$node[\"Orbit4\"].json[\"id\"]}}",
-        "url": "https://n8n.io/blog/why-business-process-automation-with-n8n-can-change-your-daily-life/",
+        "url": "https://n8n.io/blog/why-i-chose-n8n-over-zapier-in-2020/",
         "additionalFields": {}
       },
       "name": "Orbit11",
@@ -260,14 +260,14 @@
       ],
       "credentials": {
         "orbitApi": "Orbit API creds"
-      },
-      "disabled": true
+      }
     },
     {
       "parameters": {
         "resource": "post",
         "operation": "getAll",
         "workspaceId": "543",
+        "limit": 1,
         "filters": {}
       },
       "name": "Orbit12",
@@ -279,26 +279,26 @@
       ],
       "credentials": {
         "orbitApi": "Orbit API creds"
-      },
-      "disabled": true
+      }
     },
     {
       "parameters": {
         "resource": "post",
         "operation": "delete",
-        "workspaceId": "543"
+        "workspaceId": "543",
+        "memberId": "={{$node[\"Orbit4\"].json[\"id\"]}}",
+        "postId": "={{$node[\"Orbit11\"].json[\"id\"]}}"
       },
       "name": "Orbit13",
       "type": "n8n-nodes-base.orbit",
       "typeVersion": 1,
       "position": [
-        1200,
-        500
+        1050,
+        650
       ],
       "credentials": {
         "orbitApi": "Orbit API creds"
-      },
-      "disabled": true
+      }
     }
   ],
   "connections": {
@@ -423,15 +423,20 @@
             "node": "Orbit12",
             "type": "main",
             "index": 0
+          },
+          {
+            "node": "Orbit13",
+            "type": "main",
+            "index": 0
           }
         ]
       ]
     },
-    "Orbit12": {
+    "Orbit4": {
       "main": [
         [
           {
-            "node": "Orbit13",
+            "node": "Orbit11",
             "type": "main",
             "index": 0
           }
@@ -440,7 +445,7 @@
     }
   },
   "createdAt": "2021-03-11T08:54:28.548Z",
-  "updatedAt": "2021-03-23T14:22:48.079Z",
+  "updatedAt": "2021-04-23T17:51:45.651Z",
   "settings": {},
   "staticData": null
 }
