@@ -1,0 +1,402 @@
+{
+  "id": 159,
+  "name": "Tapfiliate:Affiliate:create getAll get delete:ProgramAffiliate:add disapprove approve get getAll:AffiliateMetaData:add update remove",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "email": "=fake{{Date.now()}}@gmail.com",
+        "firstname": "=Fname{{Date.now()}}",
+        "lastname": "=Lname{{Date.now()}}",
+        "additionalFields": {}
+      },
+      "name": "Tapfiliate",
+      "type": "n8n-nodes-base.tapfiliate",
+      "typeVersion": 1,
+      "position": [
+        500,
+        300
+      ],
+      "credentials": {
+        "tapfiliateApi": "Tapfiliate API creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "limit": 1,
+        "filters": {}
+      },
+      "name": "Tapfiliate1",
+      "type": "n8n-nodes-base.tapfiliate",
+      "typeVersion": 1,
+      "position": [
+        650,
+        300
+      ],
+      "credentials": {
+        "tapfiliateApi": "Tapfiliate API creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "affiliateId": "={{$node[\"Tapfiliate\"].json[\"id\"]}}"
+      },
+      "name": "Tapfiliate2",
+      "type": "n8n-nodes-base.tapfiliate",
+      "typeVersion": 1,
+      "position": [
+        800,
+        300
+      ],
+      "credentials": {
+        "tapfiliateApi": "Tapfiliate API creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "affiliateId": "={{$node[\"Tapfiliate\"].json[\"id\"]}}"
+      },
+      "name": "Tapfiliate3",
+      "type": "n8n-nodes-base.tapfiliate",
+      "typeVersion": 1,
+      "position": [
+        1850,
+        300
+      ],
+      "credentials": {
+        "tapfiliateApi": "Tapfiliate API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "affiliateMetadata",
+        "affiliateId": "={{$node[\"Tapfiliate\"].json[\"id\"]}}",
+        "metadataUi": {
+          "metadataValues": [
+            {
+              "key": "source",
+              "value": "n8n"
+            }
+          ]
+        }
+      },
+      "name": "Tapfiliate4",
+      "type": "n8n-nodes-base.tapfiliate",
+      "typeVersion": 1,
+      "position": [
+        950,
+        400
+      ],
+      "credentials": {
+        "tapfiliateApi": "Tapfiliate API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "affiliateMetadata",
+        "operation": "update",
+        "affiliateId": "={{$node[\"Tapfiliate\"].json[\"id\"]}}",
+        "key": "source",
+        "value": "n8n.io"
+      },
+      "name": "Tapfiliate5",
+      "type": "n8n-nodes-base.tapfiliate",
+      "typeVersion": 1,
+      "position": [
+        1100,
+        400
+      ],
+      "credentials": {
+        "tapfiliateApi": "Tapfiliate API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "affiliateMetadata",
+        "operation": "remove",
+        "affiliateId": "={{$node[\"Tapfiliate\"].json[\"id\"]}}",
+        "key": "source"
+      },
+      "name": "Tapfiliate6",
+      "type": "n8n-nodes-base.tapfiliate",
+      "typeVersion": 1,
+      "position": [
+        1250,
+        400
+      ],
+      "credentials": {
+        "tapfiliateApi": "Tapfiliate API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "programAffiliate",
+        "programId": "nodeqa-affiliate",
+        "affiliateId": "={{$node[\"Tapfiliate\"].json[\"id\"]}}",
+        "additionalFields": {}
+      },
+      "name": "Tapfiliate7",
+      "type": "n8n-nodes-base.tapfiliate",
+      "typeVersion": 1,
+      "position": [
+        950,
+        200
+      ],
+      "credentials": {
+        "tapfiliateApi": "Tapfiliate API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "programAffiliate",
+        "operation": "disapprove",
+        "programId": "nodeqa-affiliate",
+        "affiliateId": "={{$node[\"Tapfiliate\"].json[\"id\"]}}"
+      },
+      "name": "Tapfiliate8",
+      "type": "n8n-nodes-base.tapfiliate",
+      "typeVersion": 1,
+      "position": [
+        1100,
+        200
+      ],
+      "credentials": {
+        "tapfiliateApi": "Tapfiliate API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "programAffiliate",
+        "operation": "approve",
+        "programId": "nodeqa-affiliate",
+        "affiliateId": "={{$node[\"Tapfiliate\"].json[\"id\"]}}"
+      },
+      "name": "Tapfiliate9",
+      "type": "n8n-nodes-base.tapfiliate",
+      "typeVersion": 1,
+      "position": [
+        1250,
+        200
+      ],
+      "credentials": {
+        "tapfiliateApi": "Tapfiliate API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "programAffiliate",
+        "operation": "get",
+        "programId": "nodeqa-affiliate",
+        "affiliateId": "={{$node[\"Tapfiliate\"].json[\"id\"]}}"
+      },
+      "name": "Tapfiliate10",
+      "type": "n8n-nodes-base.tapfiliate",
+      "typeVersion": 1,
+      "position": [
+        1400,
+        200
+      ],
+      "credentials": {
+        "tapfiliateApi": "Tapfiliate API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "programAffiliate",
+        "operation": "getAll",
+        "programId": "nodeqa-affiliate",
+        "limit": 1,
+        "filters": {}
+      },
+      "name": "Tapfiliate11",
+      "type": "n8n-nodes-base.tapfiliate",
+      "typeVersion": 1,
+      "position": [
+        1550,
+        200
+      ],
+      "credentials": {
+        "tapfiliateApi": "Tapfiliate API creds"
+      }
+    },
+    {
+      "parameters": {
+        "mode": "wait"
+      },
+      "name": "Merge",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 1,
+      "position": [
+        1700,
+        300
+      ]
+    }
+  ],
+  "connections": {
+    "Tapfiliate": {
+      "main": [
+        [
+          {
+            "node": "Tapfiliate1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Tapfiliate1": {
+      "main": [
+        [
+          {
+            "node": "Tapfiliate2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Tapfiliate",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Tapfiliate2": {
+      "main": [
+        [
+          {
+            "node": "Tapfiliate4",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Tapfiliate7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Tapfiliate4": {
+      "main": [
+        [
+          {
+            "node": "Tapfiliate5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Tapfiliate5": {
+      "main": [
+        [
+          {
+            "node": "Tapfiliate6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Tapfiliate7": {
+      "main": [
+        [
+          {
+            "node": "Tapfiliate8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Tapfiliate8": {
+      "main": [
+        [
+          {
+            "node": "Tapfiliate9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Tapfiliate9": {
+      "main": [
+        [
+          {
+            "node": "Tapfiliate10",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Tapfiliate10": {
+      "main": [
+        [
+          {
+            "node": "Tapfiliate11",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Tapfiliate11": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Tapfiliate6": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Merge": {
+      "main": [
+        [
+          {
+            "node": "Tapfiliate3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-03-25T16:19:55.787Z",
+  "updatedAt": "2021-03-25T16:30:10.075Z",
+  "settings": {},
+  "staticData": null
+}
