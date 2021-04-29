@@ -1,0 +1,158 @@
+{
+  "id": 189,
+  "name": "Affinity:Organization:create get update delete getAll",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "name": "=TESTCOMPANY{{Date.now()}}",
+        "domain": "test.com",
+        "additionalFields": {}
+      },
+      "name": "Affinity",
+      "type": "n8n-nodes-base.affinity",
+      "typeVersion": 1,
+      "position": [
+        490,
+        300
+      ],
+      "credentials": {
+        "affinityApi": "Affinity API creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "organizationId": "={{$node[\"Affinity\"].json[\"id\"]}}",
+        "options": {}
+      },
+      "name": "Affinity1",
+      "type": "n8n-nodes-base.affinity",
+      "typeVersion": 1,
+      "position": [
+        650,
+        300
+      ],
+      "credentials": {
+        "affinityApi": "Affinity API creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "organizationId": "={{$node[\"Affinity\"].json[\"id\"]}}",
+        "updateFields": {
+          "name": "={{$node[\"Affinity1\"].json[\"name\"]}}-UPDATED"
+        }
+      },
+      "name": "Affinity2",
+      "type": "n8n-nodes-base.affinity",
+      "typeVersion": 1,
+      "position": [
+        800,
+        300
+      ],
+      "credentials": {
+        "affinityApi": "Affinity API creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "organizationId": "={{$node[\"Affinity\"].json[\"id\"]}}"
+      },
+      "name": "Affinity3",
+      "type": "n8n-nodes-base.affinity",
+      "typeVersion": 1,
+      "position": [
+        950,
+        300
+      ],
+      "credentials": {
+        "affinityApi": "Affinity API creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "limit": 1,
+        "options": {}
+      },
+      "name": "Affinity4",
+      "type": "n8n-nodes-base.affinity",
+      "typeVersion": 1,
+      "position": [
+        490,
+        450
+      ],
+      "credentials": {
+        "affinityApi": "Affinity API creds"
+      }
+    }
+  ],
+  "connections": {
+    "Affinity": {
+      "main": [
+        [
+          {
+            "node": "Affinity1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Affinity1": {
+      "main": [
+        [
+          {
+            "node": "Affinity2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Affinity2": {
+      "main": [
+        [
+          {
+            "node": "Affinity3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Affinity",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Affinity4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-04-29T08:53:09.807Z",
+  "updatedAt": "2021-04-29T08:53:09.807Z",
+  "settings": {},
+  "staticData": null
+}
