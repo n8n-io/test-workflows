@@ -1,0 +1,135 @@
+{
+  "id": 191,
+  "name": "Mailerlite:Subscriber:create get update getAll",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "email": "=fake{{Date.now()}}@test.com",
+        "additionalFields": {}
+      },
+      "name": "MailerLite",
+      "type": "n8n-nodes-base.mailerLite",
+      "typeVersion": 1,
+      "position": [
+        450,
+        300
+      ],
+      "credentials": {
+        "mailerLiteApi": "Mailer Lite API creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "subscriberId": "={{$node[\"MailerLite\"].json[\"email\"]}}"
+      },
+      "name": "MailerLite1",
+      "type": "n8n-nodes-base.mailerLite",
+      "typeVersion": 1,
+      "position": [
+        600,
+        300
+      ],
+      "credentials": {
+        "mailerLiteApi": "Mailer Lite API creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "subscriberId": "={{$node[\"MailerLite\"].json[\"email\"]}}",
+        "updateFields": {
+          "name": "=UpdatedName{{Date.now()}}"
+        }
+      },
+      "name": "MailerLite2",
+      "type": "n8n-nodes-base.mailerLite",
+      "typeVersion": 1,
+      "position": [
+        750,
+        300
+      ],
+      "credentials": {
+        "mailerLiteApi": "Mailer Lite API creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "limit": 1,
+        "filters": {}
+      },
+      "name": "MailerLite3",
+      "type": "n8n-nodes-base.mailerLite",
+      "typeVersion": 1,
+      "position": [
+        900,
+        300
+      ],
+      "credentials": {
+        "mailerLiteApi": "Mailer Lite API creds"
+      }
+    }
+  ],
+  "connections": {
+    "MailerLite": {
+      "main": [
+        [
+          {
+            "node": "MailerLite1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "MailerLite1": {
+      "main": [
+        [
+          {
+            "node": "MailerLite2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "MailerLite2": {
+      "main": [
+        [
+          {
+            "node": "MailerLite3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "MailerLite",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-04-30T07:16:09.288Z",
+  "updatedAt": "2021-04-30T07:16:09.288Z",
+  "settings": {},
+  "staticData": null
+}
