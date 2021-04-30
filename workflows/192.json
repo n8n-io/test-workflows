@@ -1,0 +1,568 @@
+{
+  "id": 192,
+  "name": "Mattermost:Channel:create addUser members statistics delete restore:Message:post postEphemeral delete:Reaction:create getAll delete:User:create getById getByEmail getAll invite deactive",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "channel",
+        "teamId": "y1p853gfspdrxre5oextbii7wh",
+        "displayName": "=TestChannel{{Date.now()}}",
+        "channel": "=testchannel{{Date.now()}}"
+      },
+      "name": "Mattermost",
+      "type": "n8n-nodes-base.mattermost",
+      "typeVersion": 1,
+      "position": [
+        430,
+        300
+      ],
+      "credentials": {
+        "mattermostApi": "Mattermost API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "channel",
+        "operation": "addUser",
+        "channelId": "={{$node[\"Mattermost\"].json[\"id\"]}}",
+        "userId": "4yp7tpa3sbgk9qrf38egttbioo"
+      },
+      "name": "Mattermost1",
+      "type": "n8n-nodes-base.mattermost",
+      "typeVersion": 1,
+      "position": [
+        580,
+        300
+      ],
+      "credentials": {
+        "mattermostApi": "Mattermost API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "channel",
+        "operation": "members",
+        "teamId": "y1p853gfspdrxre5oextbii7wh",
+        "channelId": "={{$node[\"Mattermost\"].json[\"id\"]}}",
+        "returnAll": false,
+        "limit": 1
+      },
+      "name": "Mattermost2",
+      "type": "n8n-nodes-base.mattermost",
+      "typeVersion": 1,
+      "position": [
+        1650,
+        300
+      ],
+      "credentials": {
+        "mattermostApi": "Mattermost API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "channel",
+        "operation": "statistics",
+        "channelId": "={{$node[\"Mattermost\"].json[\"id\"]}}"
+      },
+      "name": "Mattermost3",
+      "type": "n8n-nodes-base.mattermost",
+      "typeVersion": 1,
+      "position": [
+        1800,
+        300
+      ],
+      "credentials": {
+        "mattermostApi": "Mattermost API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "channel",
+        "operation": "delete",
+        "channelId": "={{$node[\"Mattermost\"].json[\"id\"]}}"
+      },
+      "name": "Mattermost4",
+      "type": "n8n-nodes-base.mattermost",
+      "typeVersion": 1,
+      "position": [
+        1950,
+        300
+      ],
+      "credentials": {
+        "mattermostApi": "Mattermost API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "channel",
+        "operation": "restore",
+        "channelId": "={{$node[\"Mattermost\"].json[\"id\"]}}"
+      },
+      "name": "Mattermost5",
+      "type": "n8n-nodes-base.mattermost",
+      "typeVersion": 1,
+      "position": [
+        2100,
+        300
+      ],
+      "credentials": {
+        "mattermostApi": "Mattermost API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "channel",
+        "operation": "delete",
+        "channelId": "={{$node[\"Mattermost\"].json[\"id\"]}}"
+      },
+      "name": "Mattermost6",
+      "type": "n8n-nodes-base.mattermost",
+      "typeVersion": 1,
+      "position": [
+        2240,
+        190
+      ],
+      "credentials": {
+        "mattermostApi": "Mattermost API creds"
+      }
+    },
+    {
+      "parameters": {
+        "channelId": "={{$node[\"Mattermost\"].json[\"id\"]}}",
+        "message": "=Message{{Date.now()}}",
+        "attachments": [],
+        "otherOptions": {}
+      },
+      "name": "Mattermost7",
+      "type": "n8n-nodes-base.mattermost",
+      "typeVersion": 1,
+      "position": [
+        730,
+        450
+      ],
+      "credentials": {
+        "mattermostApi": "Mattermost API creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "postEphemeral",
+        "userId": "4yp7tpa3sbgk9qrf38egttbioo",
+        "channelId": "={{$node[\"Mattermost\"].json[\"id\"]}}",
+        "message": "=EpheMessage{{Date.now()}}"
+      },
+      "name": "Mattermost8",
+      "type": "n8n-nodes-base.mattermost",
+      "typeVersion": 1,
+      "position": [
+        900,
+        450
+      ],
+      "credentials": {
+        "mattermostApi": "Mattermost API creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "postId": "={{$node[\"Mattermost7\"].json[\"id\"]}}"
+      },
+      "name": "Mattermost9",
+      "type": "n8n-nodes-base.mattermost",
+      "typeVersion": 1,
+      "position": [
+        1500,
+        450
+      ],
+      "credentials": {
+        "mattermostApi": "Mattermost API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "reaction",
+        "userId": "fo4frgcntiy6jfc63wor76kxpy",
+        "postId": "={{$node[\"Mattermost7\"].json[\"id\"]}}",
+        "emojiName": "rocket"
+      },
+      "name": "Mattermost10",
+      "type": "n8n-nodes-base.mattermost",
+      "typeVersion": 1,
+      "position": [
+        1050,
+        550
+      ],
+      "credentials": {
+        "mattermostApi": "Mattermost API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "reaction",
+        "operation": "getAll",
+        "postId": "={{$node[\"Mattermost7\"].json[\"id\"]}}",
+        "returnAll": false,
+        "limit": 1
+      },
+      "name": "Mattermost11",
+      "type": "n8n-nodes-base.mattermost",
+      "typeVersion": 1,
+      "position": [
+        1200,
+        550
+      ],
+      "credentials": {
+        "mattermostApi": "Mattermost API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "reaction",
+        "operation": "delete",
+        "userId": "fo4frgcntiy6jfc63wor76kxpy",
+        "postId": "={{$node[\"Mattermost7\"].json[\"id\"]}}",
+        "emojiName": "rocket"
+      },
+      "name": "Mattermost12",
+      "type": "n8n-nodes-base.mattermost",
+      "typeVersion": 1,
+      "position": [
+        1350,
+        550
+      ],
+      "credentials": {
+        "mattermostApi": "Mattermost API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "user",
+        "operation": "create",
+        "username": "=Username{{Date.now()}}",
+        "authService": "email",
+        "email": "=fake{{Date.now()}}@test.com",
+        "password": "=a{{Math.round(Math.random()*1000000)}}z",
+        "additionalFields": {}
+      },
+      "name": "Mattermost13",
+      "type": "n8n-nodes-base.mattermost",
+      "typeVersion": 1,
+      "position": [
+        440,
+        150
+      ],
+      "credentials": {
+        "mattermostApi": "Mattermost API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "user",
+        "operation": "getById",
+        "userIds": "={{$node[\"Mattermost13\"].json[\"id\"]}}",
+        "additionalFields": {}
+      },
+      "name": "Mattermost14",
+      "type": "n8n-nodes-base.mattermost",
+      "typeVersion": 1,
+      "position": [
+        600,
+        150
+      ],
+      "credentials": {
+        "mattermostApi": "Mattermost API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "user",
+        "operation": "getByEmail",
+        "email": "={{$node[\"Mattermost13\"].json[\"email\"]}}"
+      },
+      "name": "Mattermost15",
+      "type": "n8n-nodes-base.mattermost",
+      "typeVersion": 1,
+      "position": [
+        750,
+        150
+      ],
+      "credentials": {
+        "mattermostApi": "Mattermost API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "user",
+        "operation": "getAll",
+        "returnAll": false,
+        "limit": 1,
+        "additionalFields": {}
+      },
+      "name": "Mattermost16",
+      "type": "n8n-nodes-base.mattermost",
+      "typeVersion": 1,
+      "position": [
+        900,
+        150
+      ],
+      "credentials": {
+        "mattermostApi": "Mattermost API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "user",
+        "operation": "invite",
+        "teamId": "y1p853gfspdrxre5oextbii7wh",
+        "emails": "={{$node[\"Mattermost13\"].json[\"email\"]}}"
+      },
+      "name": "Mattermost17",
+      "type": "n8n-nodes-base.mattermost",
+      "typeVersion": 1,
+      "position": [
+        1050,
+        150
+      ],
+      "credentials": {
+        "mattermostApi": "Mattermost API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "user",
+        "operation": "deactive",
+        "userId": "={{$node[\"Mattermost13\"].json[\"id\"]}}"
+      },
+      "name": "Mattermost18",
+      "type": "n8n-nodes-base.mattermost",
+      "typeVersion": 1,
+      "position": [
+        1200,
+        150
+      ],
+      "credentials": {
+        "mattermostApi": "Mattermost API creds"
+      }
+    }
+  ],
+  "connections": {
+    "Mattermost": {
+      "main": [
+        [
+          {
+            "node": "Mattermost1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mattermost1": {
+      "main": [
+        [
+          {
+            "node": "Mattermost7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mattermost2": {
+      "main": [
+        [
+          {
+            "node": "Mattermost3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mattermost3": {
+      "main": [
+        [
+          {
+            "node": "Mattermost4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mattermost4": {
+      "main": [
+        [
+          {
+            "node": "Mattermost5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mattermost5": {
+      "main": [
+        [
+          {
+            "node": "Mattermost6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Mattermost",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Mattermost13",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mattermost7": {
+      "main": [
+        [
+          {
+            "node": "Mattermost8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mattermost9": {
+      "main": [
+        [
+          {
+            "node": "Mattermost2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mattermost8": {
+      "main": [
+        [
+          {
+            "node": "Mattermost10",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mattermost10": {
+      "main": [
+        [
+          {
+            "node": "Mattermost11",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mattermost11": {
+      "main": [
+        [
+          {
+            "node": "Mattermost12",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mattermost12": {
+      "main": [
+        [
+          {
+            "node": "Mattermost9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mattermost13": {
+      "main": [
+        [
+          {
+            "node": "Mattermost14",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mattermost14": {
+      "main": [
+        [
+          {
+            "node": "Mattermost15",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mattermost15": {
+      "main": [
+        [
+          {
+            "node": "Mattermost16",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mattermost16": {
+      "main": [
+        [
+          {
+            "node": "Mattermost17",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mattermost17": {
+      "main": [
+        [
+          {
+            "node": "Mattermost18",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-04-30T08:31:10.410Z",
+  "updatedAt": "2021-04-30T08:46:44.441Z",
+  "settings": {},
+  "staticData": null
+}
