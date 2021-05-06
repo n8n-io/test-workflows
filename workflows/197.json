@@ -1,0 +1,125 @@
+{
+  "id": 197,
+  "name": "MQTT:sendMessage",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "topic": "TestTopic",
+        "sendInputData": false,
+        "message": "=MQTT-message{{Date.now()}}",
+        "options": {
+          "qos": 0
+        }
+      },
+      "name": "MQTT qos:1",
+      "type": "n8n-nodes-base.mqtt",
+      "typeVersion": 1,
+      "position": [
+        450,
+        160
+      ],
+      "credentials": {
+        "mqtt": "MQTT creds"
+      }
+    },
+    {
+      "parameters": {
+        "topic": "TestTopic",
+        "sendInputData": false,
+        "message": "=MQTT-message{{Date.now()}}",
+        "options": {
+          "qos": 1
+        }
+      },
+      "name": "MQTT1 qos:0",
+      "type": "n8n-nodes-base.mqtt",
+      "typeVersion": 1,
+      "position": [
+        450,
+        310
+      ],
+      "credentials": {
+        "mqtt": "MQTT creds"
+      }
+    },
+    {
+      "parameters": {
+        "topic": "TestTopic",
+        "options": {
+          "qos": 2
+        }
+      },
+      "name": "MQTT2 qos:2",
+      "type": "n8n-nodes-base.mqtt",
+      "typeVersion": 1,
+      "position": [
+        600,
+        450
+      ],
+      "credentials": {
+        "mqtt": "MQTT creds"
+      }
+    },
+    {
+      "parameters": {
+        "functionCode": "items = [\n  {\n    json:{\n      \"message\":`MQTT-item-message${Date.now()}`\n    }\n  }\n]\nreturn items;"
+      },
+      "name": "Function",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        450,
+        450
+      ]
+    }
+  ],
+  "connections": {
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "MQTT qos:1",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "MQTT1 qos:0",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Function",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Function": {
+      "main": [
+        [
+          {
+            "node": "MQTT2 qos:2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-05-06T09:34:45.652Z",
+  "updatedAt": "2021-05-06T09:39:48.494Z",
+  "settings": {},
+  "staticData": null
+}
