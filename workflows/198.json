@@ -1,0 +1,264 @@
+{
+  "id": 198,
+  "name": "GoogleCloudFirestore:Document:create get upset getAll query:Collection:getAll",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "create",
+        "projectId": "fixedtestproject",
+        "collection": "FixedCollection",
+        "columns": "number,boolean"
+      },
+      "name": "Google Cloud Firestore",
+      "type": "n8n-nodes-base.googleFirebaseCloudFirestore",
+      "typeVersion": 1,
+      "position": [
+        600,
+        250
+      ],
+      "credentials": {
+        "googleFirebaseCloudFirestoreOAuth2Api": "Google Firebase Cloud Firestore OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "values": {
+          "number": [
+            {
+              "name": "number",
+              "value": 3
+            }
+          ],
+          "boolean": [
+            {
+              "name": "boolean",
+              "value": true
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Set",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        450,
+        250
+      ]
+    },
+    {
+      "parameters": {
+        "projectId": "fixedtestproject",
+        "collection": "FixedCollection",
+        "documentId": "={{$node[\"Google Cloud Firestore\"].json[\"_id\"]}}"
+      },
+      "name": "Google Cloud Firestore1",
+      "type": "n8n-nodes-base.googleFirebaseCloudFirestore",
+      "typeVersion": 1,
+      "position": [
+        800,
+        250
+      ],
+      "credentials": {
+        "googleFirebaseCloudFirestoreOAuth2Api": "Google Firebase Cloud Firestore OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "upsert",
+        "projectId": "fixedtestproject",
+        "collection": "FixedCollection",
+        "updateKey": "={{$node[\"Google Cloud Firestore1\"].json[\"_id\"]}}",
+        "columns": "number"
+      },
+      "name": "Google Cloud Firestore2",
+      "type": "n8n-nodes-base.googleFirebaseCloudFirestore",
+      "typeVersion": 1,
+      "position": [
+        1100,
+        250
+      ],
+      "credentials": {
+        "googleFirebaseCloudFirestoreOAuth2Api": "Google Firebase Cloud Firestore OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "number": [
+            {
+              "name": "number",
+              "value": 100
+            }
+          ],
+          "boolean": [
+            {
+              "name": "boolean",
+              "value": true
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Set1",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        950,
+        250
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "projectId": "fixedtestproject",
+        "collection": "FixedCollection",
+        "limit": 1
+      },
+      "name": "Google Cloud Firestore3",
+      "type": "n8n-nodes-base.googleFirebaseCloudFirestore",
+      "typeVersion": 1,
+      "position": [
+        1250,
+        250
+      ],
+      "credentials": {
+        "googleFirebaseCloudFirestoreOAuth2Api": "Google Firebase Cloud Firestore OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "query",
+        "projectId": "fixedtestproject",
+        "query": "{\n    \"structuredQuery\":{\n        \"where\":{\n            \"fieldFilter\":{\n                \"field\":{\n                    \"fieldPath\": \"number\"\n                },\n                \"op\":\"EQUAL\",\n                \"value\":{\n                    \"integerValue\": 100\n                }\n            }\n        },\n        \"from\":[\n            {\n                \"collectionId\":\"FixedCollection\"\n            }\n        ]\n    }\n}"
+      },
+      "name": "Google Cloud Firestore4",
+      "type": "n8n-nodes-base.googleFirebaseCloudFirestore",
+      "typeVersion": 1,
+      "position": [
+        1450,
+        250
+      ],
+      "credentials": {
+        "googleFirebaseCloudFirestoreOAuth2Api": "Google Firebase Cloud Firestore OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "collection",
+        "projectId": "fixedtestproject",
+        "limit": 1
+      },
+      "name": "Google Cloud Firestore5",
+      "type": "n8n-nodes-base.googleFirebaseCloudFirestore",
+      "typeVersion": 1,
+      "position": [
+        450,
+        400
+      ],
+      "credentials": {
+        "googleFirebaseCloudFirestoreOAuth2Api": "Google Firebase Cloud Firestore OAuth2 API creds"
+      }
+    }
+  ],
+  "connections": {
+    "Google Cloud Firestore": {
+      "main": [
+        [
+          {
+            "node": "Google Cloud Firestore1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set": {
+      "main": [
+        [
+          {
+            "node": "Google Cloud Firestore",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Cloud Firestore1": {
+      "main": [
+        [
+          {
+            "node": "Set1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set1": {
+      "main": [
+        [
+          {
+            "node": "Google Cloud Firestore2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Cloud Firestore2": {
+      "main": [
+        [
+          {
+            "node": "Google Cloud Firestore3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Cloud Firestore3": {
+      "main": [
+        [
+          {
+            "node": "Google Cloud Firestore4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Set",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Google Cloud Firestore5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-05-07T14:37:14.511Z",
+  "updatedAt": "2021-05-07T14:37:14.511Z",
+  "settings": {},
+  "staticData": null
+}
