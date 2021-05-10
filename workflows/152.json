@@ -43,6 +43,23 @@
       "credentials": {
         "aws": "AWS creds"
       }
+    },
+    {
+      "parameters": {
+        "operation": "detectEntities",
+        "text": "n8n (pronounced n-eight-n) helps you to interconnect every app with an API in the world with each other to share and manipulate its data without a single line of code. It is an easy to use, user-friendly and highly customizable service, which uses an intuitive user interface for you to design your unique workflows very fast. Hosted on your server and not based in the cloud, it keeps your sensible data very secure in your own trusted database.",
+        "additionalFields": {}
+      },
+      "name": "AWS Comprehend2",
+      "type": "n8n-nodes-base.awsComprehend",
+      "typeVersion": 1,
+      "position": [
+        450,
+        550
+      ],
+      "credentials": {
+        "aws": "AWS creds"
+      }
     }
   ],
   "connections": {
@@ -58,13 +75,18 @@
             "node": "AWS Comprehend1",
             "type": "main",
             "index": 0
+          },
+          {
+            "node": "AWS Comprehend2",
+            "type": "main",
+            "index": 0
           }
         ]
       ]
     }
   },
   "createdAt": "2021-03-25T09:23:15.717Z",
-  "updatedAt": "2021-03-25T09:23:15.717Z",
+  "updatedAt": "2021-05-10T14:20:44.063Z",
   "settings": {},
   "staticData": null
 }
