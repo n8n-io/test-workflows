@@ -1,0 +1,72 @@
+{
+  "id": 188,
+  "name": "Uplead:Company:enrich:Person:enrich",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "company": "amazon"
+      },
+      "name": "Uplead",
+      "type": "n8n-nodes-base.uplead",
+      "typeVersion": 1,
+      "position": [
+        550,
+        200
+      ],
+      "credentials": {
+        "upleadApi": "Uplead API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "person",
+        "firstname": "Werner ",
+        "lastname": "Vogels",
+        "domain": "amazon.com"
+      },
+      "name": "Uplead1",
+      "type": "n8n-nodes-base.uplead",
+      "typeVersion": 1,
+      "position": [
+        550,
+        350
+      ],
+      "credentials": {
+        "upleadApi": "Uplead API creds"
+      }
+    }
+  ],
+  "connections": {
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Uplead",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Uplead1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-04-29T08:16:23.227Z",
+  "updatedAt": "2021-04-29T08:16:23.227Z",
+  "settings": {},
+  "staticData": null
+}
