@@ -1,6 +1,6 @@
 {
   "id": 129,
-  "name": "NextCloud:NextCloud:Folder:create move copy delete list:File:upload move copy download delete",
+  "name": "NextCloud:NextCloud:Folder:create move copy delete list:File:upload move copy download delete:User:create get getAll update delete",
   "active": false,
   "nodes": [
     {
@@ -152,8 +152,8 @@
       "type": "n8n-nodes-base.nextCloud",
       "typeVersion": 1,
       "position": [
-        1500,
-        450
+        1510,
+        350
       ],
       "credentials": {
         "nextCloudOAuth2Api": "NextCloud OAuth2 API creds"
@@ -176,8 +176,8 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 1,
       "position": [
-        1200,
-        450
+        1210,
+        350
       ]
     },
     {
@@ -188,8 +188,8 @@
       "type": "n8n-nodes-base.readBinaryFile",
       "typeVersion": 1,
       "position": [
-        1350,
-        450
+        1360,
+        350
       ]
     },
     {
@@ -203,8 +203,8 @@
       "type": "n8n-nodes-base.nextCloud",
       "typeVersion": 1,
       "position": [
-        1650,
-        450
+        1660,
+        350
       ],
       "credentials": {
         "nextCloudOAuth2Api": "NextCloud OAuth2 API creds"
@@ -221,8 +221,8 @@
       "type": "n8n-nodes-base.nextCloud",
       "typeVersion": 1,
       "position": [
-        1800,
-        450
+        1810,
+        350
       ],
       "credentials": {
         "nextCloudOAuth2Api": "NextCloud OAuth2 API creds"
@@ -238,8 +238,8 @@
       "type": "n8n-nodes-base.nextCloud",
       "typeVersion": 1,
       "position": [
-        1950,
-        450
+        1960,
+        350
       ],
       "credentials": {
         "nextCloudOAuth2Api": "NextCloud OAuth2 API creds"
@@ -255,8 +255,8 @@
       "type": "n8n-nodes-base.nextCloud",
       "typeVersion": 1,
       "position": [
-        2100,
-        450
+        2110,
+        350
       ],
       "credentials": {
         "nextCloudOAuth2Api": "NextCloud OAuth2 API creds"
@@ -264,7 +264,6 @@
     },
     {
       "parameters": {
-        "authentication": "oAuth2",
         "resource": "user",
         "userId": "=Username{{Date.now()}}",
         "email": "=email{{Date.now()}}@fakeemail.com",
@@ -277,12 +276,87 @@
       "typeVersion": 1,
       "position": [
         400,
-        450
+        500
       ],
       "credentials": {
-        "nextCloudOAuth2Api": "NextCloud OAuth2 API creds"
+        "nextCloudApi": "NextCloud API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "user",
+        "operation": "get",
+        "userId": "={{$node[\"Nextcloud11\"].json[\"id\"]}}"
       },
-      "disabled": true
+      "name": "Nextcloud12",
+      "type": "n8n-nodes-base.nextCloud",
+      "typeVersion": 1,
+      "position": [
+        550,
+        500
+      ],
+      "credentials": {
+        "nextCloudApi": "NextCloud API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "user",
+        "operation": "getAll",
+        "options": {
+          "limit": 1
+        }
+      },
+      "name": "Nextcloud13",
+      "type": "n8n-nodes-base.nextCloud",
+      "typeVersion": 1,
+      "position": [
+        700,
+        500
+      ],
+      "credentials": {
+        "nextCloudApi": "NextCloud API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "user",
+        "operation": "update",
+        "userId": "={{$node[\"Nextcloud11\"].json[\"id\"]}}",
+        "options": {
+          "option": {
+            "key": "website",
+            "value": "http://n8n.io"
+          }
+        }
+      },
+      "name": "Nextcloud14",
+      "type": "n8n-nodes-base.nextCloud",
+      "typeVersion": 1,
+      "position": [
+        850,
+        500
+      ],
+      "credentials": {
+        "nextCloudApi": "NextCloud API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "user",
+        "operation": "delete",
+        "userId": "={{$node[\"Nextcloud11\"].json[\"id\"]}}"
+      },
+      "name": "Nextcloud15",
+      "type": "n8n-nodes-base.nextCloud",
+      "typeVersion": 1,
+      "position": [
+        1000,
+        500
+      ],
+      "credentials": {
+        "nextCloudApi": "NextCloud API creds"
+      }
     }
   ],
   "connections": {
@@ -444,10 +518,54 @@
           }
         ]
       ]
+    },
+    "Nextcloud11": {
+      "main": [
+        [
+          {
+            "node": "Nextcloud12",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Nextcloud12": {
+      "main": [
+        [
+          {
+            "node": "Nextcloud13",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Nextcloud13": {
+      "main": [
+        [
+          {
+            "node": "Nextcloud14",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Nextcloud14": {
+      "main": [
+        [
+          {
+            "node": "Nextcloud15",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "createdAt": "2021-03-12T09:33:57.650Z",
-  "updatedAt": "2021-03-12T09:37:48.527Z",
+  "updatedAt": "2021-04-12T08:01:05.275Z",
   "settings": {},
   "staticData": null
 }
