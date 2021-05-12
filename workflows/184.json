@@ -1,0 +1,650 @@
+{
+  "id": 184,
+  "name": "Salesforce:Account:create get addNote getAll getSummary update delete:Case:create get addComment getAll getSummary update delete:Attachment:create get getAll getSummary update delete",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "account",
+        "name": "=Account{{Date.now()}}",
+        "additionalFields": {}
+      },
+      "name": "Salesforce",
+      "type": "n8n-nodes-base.salesforce",
+      "typeVersion": 1,
+      "position": [
+        520,
+        190
+      ],
+      "credentials": {
+        "salesforceOAuth2Api": "Salesforce OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "account",
+        "operation": "get",
+        "accountId": "={{$node[\"Salesforce\"].json[\"id\"]}}"
+      },
+      "name": "Salesforce1",
+      "type": "n8n-nodes-base.salesforce",
+      "typeVersion": 1,
+      "position": [
+        680,
+        190
+      ],
+      "credentials": {
+        "salesforceOAuth2Api": "Salesforce OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "account",
+        "operation": "addNote",
+        "accountId": "={{$node[\"Salesforce\"].json[\"id\"]}}",
+        "title": "=Note{{Date.now()}}",
+        "options": {}
+      },
+      "name": "Salesforce2",
+      "type": "n8n-nodes-base.salesforce",
+      "typeVersion": 1,
+      "position": [
+        840,
+        190
+      ],
+      "credentials": {
+        "salesforceOAuth2Api": "Salesforce OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "account",
+        "operation": "getAll",
+        "limit": 1,
+        "options": {}
+      },
+      "name": "Salesforce3",
+      "type": "n8n-nodes-base.salesforce",
+      "typeVersion": 1,
+      "position": [
+        1000,
+        190
+      ],
+      "credentials": {
+        "salesforceOAuth2Api": "Salesforce OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "account",
+        "operation": "getSummary"
+      },
+      "name": "Salesforce4",
+      "type": "n8n-nodes-base.salesforce",
+      "typeVersion": 1,
+      "position": [
+        1150,
+        190
+      ],
+      "credentials": {
+        "salesforceOAuth2Api": "Salesforce OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "account",
+        "operation": "update",
+        "accountId": "={{$node[\"Salesforce\"].json[\"id\"]}}",
+        "updateFields": {
+          "name": "=Updated{{$node[\"Salesforce1\"].json[\"Name\"]}}"
+        }
+      },
+      "name": "Salesforce5",
+      "type": "n8n-nodes-base.salesforce",
+      "typeVersion": 1,
+      "position": [
+        1300,
+        190
+      ],
+      "credentials": {
+        "salesforceOAuth2Api": "Salesforce OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "account",
+        "operation": "delete",
+        "accountId": "={{$node[\"Salesforce\"].json[\"id\"]}}"
+      },
+      "name": "Salesforce6",
+      "type": "n8n-nodes-base.salesforce",
+      "typeVersion": 1,
+      "position": [
+        1450,
+        190
+      ],
+      "credentials": {
+        "salesforceOAuth2Api": "Salesforce OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "case",
+        "type": "Other",
+        "additionalFields": {
+          "reason": "Installation",
+          "subject": "=Subject{{Date.now()}}"
+        }
+      },
+      "name": "Salesforce7",
+      "type": "n8n-nodes-base.salesforce",
+      "typeVersion": 1,
+      "position": [
+        530,
+        350
+      ],
+      "credentials": {
+        "salesforceOAuth2Api": "Salesforce OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "case",
+        "operation": "get",
+        "caseId": "={{$node[\"Salesforce7\"].json[\"id\"]}}"
+      },
+      "name": "Salesforce8",
+      "type": "n8n-nodes-base.salesforce",
+      "typeVersion": 1,
+      "position": [
+        690,
+        350
+      ],
+      "credentials": {
+        "salesforceOAuth2Api": "Salesforce OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "case",
+        "operation": "addComment",
+        "caseId": "={{$node[\"Salesforce7\"].json[\"id\"]}}",
+        "options": {
+          "commentBody": "=Comment{{Date.now()}}"
+        }
+      },
+      "name": "Salesforce9",
+      "type": "n8n-nodes-base.salesforce",
+      "typeVersion": 1,
+      "position": [
+        2000,
+        350
+      ],
+      "credentials": {
+        "salesforceOAuth2Api": "Salesforce OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "case",
+        "operation": "getSummary"
+      },
+      "name": "Salesforce10",
+      "type": "n8n-nodes-base.salesforce",
+      "typeVersion": 1,
+      "position": [
+        2160,
+        350
+      ],
+      "credentials": {
+        "salesforceOAuth2Api": "Salesforce OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "case",
+        "operation": "getAll",
+        "limit": 1,
+        "options": {}
+      },
+      "name": "Salesforce11",
+      "type": "n8n-nodes-base.salesforce",
+      "typeVersion": 1,
+      "position": [
+        2320,
+        350
+      ],
+      "credentials": {
+        "salesforceOAuth2Api": "Salesforce OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "case",
+        "operation": "update",
+        "caseId": "={{$node[\"Salesforce7\"].json[\"id\"]}}",
+        "updateFields": {
+          "subject": "=Updated{{$node[\"Salesforce8\"].json[\"Subject\"]}}"
+        }
+      },
+      "name": "Salesforce12",
+      "type": "n8n-nodes-base.salesforce",
+      "typeVersion": 1,
+      "position": [
+        2510,
+        350
+      ],
+      "credentials": {
+        "salesforceOAuth2Api": "Salesforce OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "case",
+        "operation": "delete",
+        "caseId": "={{$node[\"Salesforce7\"].json[\"id\"]}}"
+      },
+      "name": "Salesforce13",
+      "type": "n8n-nodes-base.salesforce",
+      "typeVersion": 1,
+      "position": [
+        2670,
+        350
+      ],
+      "credentials": {
+        "salesforceOAuth2Api": "Salesforce OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "attachment",
+        "parentId": "={{$node[\"Salesforce8\"].json[\"Id\"]}}",
+        "name": "=Attachment{{Date.now()}}",
+        "additionalFields": {}
+      },
+      "name": "Salesforce14",
+      "type": "n8n-nodes-base.salesforce",
+      "typeVersion": 1,
+      "position": [
+        1100,
+        500
+      ],
+      "credentials": {
+        "salesforceOAuth2Api": "Salesforce OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "data",
+              "value": "=Attachment example"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Set",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        800,
+        500
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "jsonToBinary",
+        "options": {}
+      },
+      "name": "Move Binary Data",
+      "type": "n8n-nodes-base.moveBinaryData",
+      "typeVersion": 1,
+      "position": [
+        960,
+        500
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "attachment",
+        "operation": "get",
+        "attachmentId": "={{$node[\"Salesforce14\"].json[\"id\"]}}"
+      },
+      "name": "Salesforce15",
+      "type": "n8n-nodes-base.salesforce",
+      "typeVersion": 1,
+      "position": [
+        1250,
+        500
+      ],
+      "credentials": {
+        "salesforceOAuth2Api": "Salesforce OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "attachment",
+        "operation": "getAll",
+        "limit": 1,
+        "options": {}
+      },
+      "name": "Salesforce16",
+      "type": "n8n-nodes-base.salesforce",
+      "typeVersion": 1,
+      "position": [
+        1400,
+        500
+      ],
+      "credentials": {
+        "salesforceOAuth2Api": "Salesforce OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "attachment",
+        "operation": "getSummary"
+      },
+      "name": "Salesforce17",
+      "type": "n8n-nodes-base.salesforce",
+      "typeVersion": 1,
+      "position": [
+        1550,
+        500
+      ],
+      "credentials": {
+        "salesforceOAuth2Api": "Salesforce OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "attachment",
+        "operation": "update",
+        "attachmentId": "={{$node[\"Salesforce14\"].json[\"id\"]}}",
+        "updateFields": {
+          "isPrivate": true
+        }
+      },
+      "name": "Salesforce18",
+      "type": "n8n-nodes-base.salesforce",
+      "typeVersion": 1,
+      "position": [
+        1700,
+        500
+      ],
+      "credentials": {
+        "salesforceOAuth2Api": "Salesforce OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "attachment",
+        "operation": "delete",
+        "attachmentId": "={{$node[\"Salesforce14\"].json[\"id\"]}}"
+      },
+      "name": "Salesforce19",
+      "type": "n8n-nodes-base.salesforce",
+      "typeVersion": 1,
+      "position": [
+        1850,
+        500
+      ],
+      "credentials": {
+        "salesforceOAuth2Api": "Salesforce OAuth2 API creds"
+      }
+    }
+  ],
+  "connections": {
+    "Salesforce": {
+      "main": [
+        [
+          {
+            "node": "Salesforce1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Salesforce1": {
+      "main": [
+        [
+          {
+            "node": "Salesforce2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Salesforce2": {
+      "main": [
+        [
+          {
+            "node": "Salesforce3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Salesforce3": {
+      "main": [
+        [
+          {
+            "node": "Salesforce4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Salesforce4": {
+      "main": [
+        [
+          {
+            "node": "Salesforce5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Salesforce5": {
+      "main": [
+        [
+          {
+            "node": "Salesforce6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Salesforce7": {
+      "main": [
+        [
+          {
+            "node": "Salesforce8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Salesforce8": {
+      "main": [
+        [
+          {
+            "node": "Set",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Salesforce9": {
+      "main": [
+        [
+          {
+            "node": "Salesforce10",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Salesforce10": {
+      "main": [
+        [
+          {
+            "node": "Salesforce11",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Salesforce11": {
+      "main": [
+        [
+          {
+            "node": "Salesforce12",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Salesforce12": {
+      "main": [
+        [
+          {
+            "node": "Salesforce13",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set": {
+      "main": [
+        [
+          {
+            "node": "Move Binary Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Move Binary Data": {
+      "main": [
+        [
+          {
+            "node": "Salesforce14",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Salesforce14": {
+      "main": [
+        [
+          {
+            "node": "Salesforce15",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Salesforce15": {
+      "main": [
+        [
+          {
+            "node": "Salesforce16",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Salesforce16": {
+      "main": [
+        [
+          {
+            "node": "Salesforce17",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Salesforce17": {
+      "main": [
+        [
+          {
+            "node": "Salesforce18",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Salesforce18": {
+      "main": [
+        [
+          {
+            "node": "Salesforce19",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Salesforce19": {
+      "main": [
+        [
+          {
+            "node": "Salesforce9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Salesforce7",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Salesforce",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-04-26T16:15:15.635Z",
+  "updatedAt": "2021-04-26T17:54:35.464Z",
+  "settings": {},
+  "staticData": null
+}
