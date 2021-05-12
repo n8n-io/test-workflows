@@ -1,0 +1,107 @@
+{
+  "id": 194,
+  "name": "Mailjet:Email:send sendTemplate",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "sendTemplate",
+        "subject": "test",
+        "fromEmail": "node8qa@gmail.com",
+        "toEmail": "node8qa@gmail.com",
+        "templateId": "2850185",
+        "additionalFields": {}
+      },
+      "name": "Mailjet",
+      "type": "n8n-nodes-base.mailjet",
+      "typeVersion": 1,
+      "position": [
+        480,
+        240
+      ],
+      "credentials": {
+        "mailjetEmailApi": "Mailjet Email API creds"
+      }
+    },
+    {
+      "parameters": {
+        "fromEmail": "node8qa@gmail.com",
+        "toEmail": "node8qa@gmail.com",
+        "subject": "test",
+        "text": "test",
+        "additionalFields": {}
+      },
+      "name": "Mailjet1",
+      "type": "n8n-nodes-base.mailjet",
+      "typeVersion": 1,
+      "position": [
+        620,
+        240
+      ],
+      "credentials": {
+        "mailjetEmailApi": "Mailjet Email API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "sms",
+        "subject": "test",
+        "text": "test"
+      },
+      "name": "Mailjet2",
+      "type": "n8n-nodes-base.mailjet",
+      "typeVersion": 1,
+      "position": [
+        480,
+        390
+      ],
+      "credentials": {
+        "mailjetSmsApi": "Mailjet SMS API creds"
+      },
+      "disabled": true
+    }
+  ],
+  "connections": {
+    "Mailjet": {
+      "main": [
+        [
+          {
+            "node": "Mailjet1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Mailjet",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Mailjet2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-04-30T10:58:10.188Z",
+  "updatedAt": "2021-04-30T10:58:10.188Z",
+  "settings": {},
+  "staticData": null
+}
