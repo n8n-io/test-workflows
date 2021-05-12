@@ -1,6 +1,6 @@
 {
   "id": 198,
-  "name": "GoogleCloudFirestore:Document:create get upset getAll query:Collection:getAll",
+  "name": "GoogleCloudFirestore:Document:create get upset getAll query delete:Collection:getAll",
   "active": false,
   "nodes": [
     {
@@ -171,6 +171,24 @@
       "credentials": {
         "googleFirebaseCloudFirestoreOAuth2Api": "Google Firebase Cloud Firestore OAuth2 API creds"
       }
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "projectId": "fixedtestproject",
+        "collection": "FixedCollection",
+        "documentId": "={{$node[\"Google Cloud Firestore\"].json[\"_id\"]}}"
+      },
+      "name": "Google Cloud Firestore6",
+      "type": "n8n-nodes-base.googleFirebaseCloudFirestore",
+      "typeVersion": 1,
+      "position": [
+        1650,
+        250
+      ],
+      "credentials": {
+        "googleFirebaseCloudFirestoreOAuth2Api": "Google Firebase Cloud Firestore OAuth2 API creds"
+      }
     }
   ],
   "connections": {
@@ -255,10 +273,21 @@
           }
         ]
       ]
+    },
+    "Google Cloud Firestore4": {
+      "main": [
+        [
+          {
+            "node": "Google Cloud Firestore6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "createdAt": "2021-05-07T14:37:14.511Z",
-  "updatedAt": "2021-05-07T14:37:14.511Z",
+  "updatedAt": "2021-05-12T17:39:44.046Z",
   "settings": {},
   "staticData": null
 }
