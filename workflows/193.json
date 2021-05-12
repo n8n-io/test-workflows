@@ -1,0 +1,133 @@
+{
+  "id": 193,
+  "name": "ChargeBee:Customer:create:Invoice:list pdfUrl",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "customer",
+        "properties": {
+          "id": "=Customer{{Date.now()}}",
+          "first_name": "=FirstName{{Date.now()}}"
+        }
+      },
+      "name": "Chargebee",
+      "type": "n8n-nodes-base.chargebee",
+      "typeVersion": 1,
+      "position": [
+        510,
+        270
+      ],
+      "credentials": {
+        "chargebeeApi": "Chargebee API creds"
+      }
+    },
+    {
+      "parameters": {
+        "maxResults": 1
+      },
+      "name": "Chargebee1",
+      "type": "n8n-nodes-base.chargebee",
+      "typeVersion": 1,
+      "position": [
+        510,
+        420
+      ],
+      "credentials": {
+        "chargebeeApi": "Chargebee API creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "pdfUrl",
+        "invoiceId": "={{$node[\"Chargebee1\"].json[\"id\"]}}"
+      },
+      "name": "Chargebee2",
+      "type": "n8n-nodes-base.chargebee",
+      "typeVersion": 1,
+      "position": [
+        640,
+        420
+      ],
+      "credentials": {
+        "chargebeeApi": "Chargebee API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "subscription",
+        "operation": "cancel"
+      },
+      "name": "Chargebee3",
+      "type": "n8n-nodes-base.chargebee",
+      "typeVersion": 1,
+      "position": [
+        520,
+        120
+      ],
+      "credentials": {
+        "chargebeeApi": "Chargebee API creds"
+      },
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "resource": "subscription"
+      },
+      "name": "Chargebee4",
+      "type": "n8n-nodes-base.chargebee",
+      "typeVersion": 1,
+      "position": [
+        670,
+        120
+      ],
+      "credentials": {
+        "chargebeeApi": "Chargebee API creds"
+      },
+      "disabled": true
+    }
+  ],
+  "connections": {
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Chargebee",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Chargebee1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Chargebee1": {
+      "main": [
+        [
+          {
+            "node": "Chargebee2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-04-30T10:29:23.378Z",
+  "updatedAt": "2021-04-30T10:29:23.378Z",
+  "settings": {},
+  "staticData": null
+}
