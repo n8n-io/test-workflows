@@ -175,7 +175,7 @@
         "resource": "issue",
         "operation": "getAll",
         "organizationSlug": "n8n-iq",
-        "projectSlug": "nodejsproject",
+        "projectSlug": "javascript",
         "limit": 1,
         "additionalFields": {}
       },
@@ -214,7 +214,7 @@
       "parameters": {
         "operation": "getAll",
         "organizationSlug": "n8n-iq",
-        "projectSlug": "nodejsproject",
+        "projectSlug": "javascript",
         "full": false,
         "limit": 1
       },
@@ -232,7 +232,7 @@
     {
       "parameters": {
         "organizationSlug": "n8n-iq",
-        "projectSlug": "nodejsproject",
+        "projectSlug": "javascript",
         "eventId": "={{$json[\"id\"]}}"
       },
       "name": "Sentry.io12",
@@ -309,8 +309,7 @@
         "operation": "update",
         "organizationSlug": "n8n-iq",
         "teamSlug": "={{$node[\"Sentry.io3\"].json[\"slug\"]}}",
-        "name": "=Updated{{$node[\"Sentry.io3\"].json[\"name\"]}}",
-        "additionalFields": {}
+        "updateFields": {}
       },
       "name": "Sentry.io16",
       "type": "n8n-nodes-base.sentryIo",
@@ -346,8 +345,7 @@
         "resource": "organization",
         "operation": "update",
         "organization_slug": "={{$node[\"Sentry.io\"].json[\"slug\"]}}",
-        "name": "=Update{{$node[\"Sentry.io\"].json[\"name\"]}}",
-        "additionalFields": {}
+        "updateFields": {}
       },
       "name": "Sentry.io18",
       "type": "n8n-nodes-base.sentryIo",
@@ -366,9 +364,7 @@
         "operation": "update",
         "organizationSlug": "n8n-iq",
         "projectSlug": "={{$node[\"Sentry.io6\"].json[\"slug\"]}}",
-        "additionalFields": {
-          "name": "=Update{{$node[\"Sentry.io22\"].json[\"name\"]}}{{Date.now()}}"
-        }
+        "updateFields": {}
       },
       "name": "Sentry.io19",
       "type": "n8n-nodes-base.sentryIo",
@@ -387,9 +383,7 @@
         "operation": "update",
         "organizationSlug": "n8n-iq",
         "version": "={{$node[\"Sentry.io13\"].json[\"shortVersion\"]}}",
-        "additionalFields": {
-          "url": "http://community.n8n.io"
-        }
+        "updateFields": {}
       },
       "name": "Sentry.io20",
       "type": "n8n-nodes-base.sentryIo",
@@ -702,7 +696,7 @@
     }
   },
   "createdAt": "2021-02-16T14:22:05.872Z",
-  "updatedAt": "2021-04-12T07:29:32.073Z",
+  "updatedAt": "2021-05-12T18:10:40.000Z",
   "settings": {},
   "staticData": null
 }
