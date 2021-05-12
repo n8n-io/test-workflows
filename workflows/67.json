@@ -1,6 +1,6 @@
 {
   "id": 67,
-  "name": "Twist:Channel:create update get getAll:MessageConversation:create",
+  "name": " Twist:Channel:create update get getAll archive unarchive delete:MessageConversation:create get getAll update delete:Thread:create get update getAll delete:Comment:create get update getAll delete",
   "active": false,
   "nodes": [
     {
@@ -44,7 +44,7 @@
       "type": "n8n-nodes-base.twist",
       "typeVersion": 1,
       "position": [
-        550,
+        1300,
         300
       ],
       "credentials": {
@@ -61,7 +61,7 @@
       "type": "n8n-nodes-base.twist",
       "typeVersion": 1,
       "position": [
-        700,
+        1450,
         300
       ],
       "credentials": {
@@ -80,7 +80,7 @@
       "type": "n8n-nodes-base.twist",
       "typeVersion": 1,
       "position": [
-        850,
+        1600,
         300
       ],
       "credentials": {
@@ -104,6 +104,337 @@
       "credentials": {
         "twistOAuth2Api": "Twist OAuth2 creds"
       }
+    },
+    {
+      "parameters": {
+        "resource": "channel",
+        "operation": "archive",
+        "channelId": "={{$node[\"Twist\"].json[\"id\"]}}"
+      },
+      "name": "Twist5",
+      "type": "n8n-nodes-base.twist",
+      "typeVersion": 1,
+      "position": [
+        1750,
+        300
+      ],
+      "credentials": {
+        "twistOAuth2Api": "Twist OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "channel",
+        "operation": "unarchive",
+        "channelId": "={{$node[\"Twist\"].json[\"id\"]}}"
+      },
+      "name": "Twist6",
+      "type": "n8n-nodes-base.twist",
+      "typeVersion": 1,
+      "position": [
+        1900,
+        300
+      ],
+      "credentials": {
+        "twistOAuth2Api": "Twist OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "channel",
+        "operation": "archive",
+        "channelId": "={{$node[\"Twist\"].json[\"id\"]}}"
+      },
+      "name": "Twist7",
+      "type": "n8n-nodes-base.twist",
+      "typeVersion": 1,
+      "position": [
+        2050,
+        300
+      ],
+      "credentials": {
+        "twistOAuth2Api": "Twist OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "channel",
+        "operation": "delete",
+        "channelId": "={{$node[\"Twist\"].json[\"id\"]}}"
+      },
+      "name": "Twist8",
+      "type": "n8n-nodes-base.twist",
+      "typeVersion": 1,
+      "position": [
+        2200,
+        300
+      ],
+      "credentials": {
+        "twistOAuth2Api": "Twist OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "id": "={{$node[\"Twist4\"].json[\"id\"]}}"
+      },
+      "name": "Twist9",
+      "type": "n8n-nodes-base.twist",
+      "typeVersion": 1,
+      "position": [
+        600,
+        450
+      ],
+      "credentials": {
+        "twistOAuth2Api": "Twist OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "workspaceId": 164330,
+        "conversationId": 1067233,
+        "additionalFields": {
+          "limit": 1
+        }
+      },
+      "name": "Twist10",
+      "type": "n8n-nodes-base.twist",
+      "typeVersion": 1,
+      "position": [
+        800,
+        450
+      ],
+      "credentials": {
+        "twistOAuth2Api": "Twist OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "id": "={{$node[\"Twist4\"].json[\"id\"]}}",
+        "updateFields": {
+          "actionsUi": {
+            "actionValues": [
+              {
+                "action": "open_url",
+                "button_text": "community ?",
+                "type": "action",
+                "url": "http://community.n8n.io"
+              }
+            ]
+          }
+        }
+      },
+      "name": "Twist11",
+      "type": "n8n-nodes-base.twist",
+      "typeVersion": 1,
+      "position": [
+        1000,
+        450
+      ],
+      "credentials": {
+        "twistOAuth2Api": "Twist OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "id": "={{$node[\"Twist4\"].json[\"id\"]}}"
+      },
+      "name": "Twist12",
+      "type": "n8n-nodes-base.twist",
+      "typeVersion": 1,
+      "position": [
+        1200,
+        450
+      ],
+      "credentials": {
+        "twistOAuth2Api": "Twist OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "thread",
+        "channelId": "={{$node[\"Twist\"].json[\"id\"]}}",
+        "title": "=Thread{{Date.now()}}",
+        "content": "test",
+        "additionalFields": {}
+      },
+      "name": "Twist13",
+      "type": "n8n-nodes-base.twist",
+      "typeVersion": 1,
+      "position": [
+        550,
+        150
+      ],
+      "credentials": {
+        "twistOAuth2Api": "Twist OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "thread",
+        "operation": "get",
+        "threadId": "={{$node[\"Twist13\"].json[\"id\"]}}"
+      },
+      "name": "Twist14",
+      "type": "n8n-nodes-base.twist",
+      "typeVersion": 1,
+      "position": [
+        700,
+        150
+      ],
+      "credentials": {
+        "twistOAuth2Api": "Twist OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "thread",
+        "operation": "update",
+        "threadId": "={{$node[\"Twist13\"].json[\"id\"]}}",
+        "updateFields": {
+          "content": "Updated Content"
+        }
+      },
+      "name": "Twist15",
+      "type": "n8n-nodes-base.twist",
+      "typeVersion": 1,
+      "position": [
+        850,
+        150
+      ],
+      "credentials": {
+        "twistOAuth2Api": "Twist OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "thread",
+        "operation": "delete",
+        "threadId": "={{$node[\"Twist13\"].json[\"id\"]}}"
+      },
+      "name": "Twist16",
+      "type": "n8n-nodes-base.twist",
+      "typeVersion": 1,
+      "position": [
+        1150,
+        150
+      ],
+      "credentials": {
+        "twistOAuth2Api": "Twist OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "thread",
+        "operation": "getAll",
+        "channelId": "={{$node[\"Twist\"].json[\"id\"]}}",
+        "limit": 1,
+        "filters": {}
+      },
+      "name": "Twist17",
+      "type": "n8n-nodes-base.twist",
+      "typeVersion": 1,
+      "position": [
+        1000,
+        150
+      ],
+      "credentials": {
+        "twistOAuth2Api": "Twist OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "comment",
+        "threadId": "={{$node[\"Twist13\"].json[\"id\"]}}",
+        "content": "=Comment{{Date.now()}}",
+        "additionalFields": {}
+      },
+      "name": "Twist18",
+      "type": "n8n-nodes-base.twist",
+      "typeVersion": 1,
+      "position": [
+        700,
+        0
+      ],
+      "credentials": {
+        "twistOAuth2Api": "Twist OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "comment",
+        "operation": "get",
+        "commentId": "={{$node[\"Twist18\"].json[\"id\"]}}"
+      },
+      "name": "Twist19",
+      "type": "n8n-nodes-base.twist",
+      "typeVersion": 1,
+      "position": [
+        850,
+        0
+      ],
+      "credentials": {
+        "twistOAuth2Api": "Twist OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "comment",
+        "operation": "update",
+        "commentId": "={{$node[\"Twist18\"].json[\"id\"]}}",
+        "updateFields": {
+          "content": "Updated Content"
+        }
+      },
+      "name": "Twist20",
+      "type": "n8n-nodes-base.twist",
+      "typeVersion": 1,
+      "position": [
+        1000,
+        0
+      ],
+      "credentials": {
+        "twistOAuth2Api": "Twist OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "comment",
+        "operation": "getAll",
+        "threadId": "={{$node[\"Twist13\"].json[\"id\"]}}",
+        "limit": 1,
+        "filters": {}
+      },
+      "name": "Twist21",
+      "type": "n8n-nodes-base.twist",
+      "typeVersion": 1,
+      "position": [
+        1150,
+        0
+      ],
+      "credentials": {
+        "twistOAuth2Api": "Twist OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "comment",
+        "operation": "delete",
+        "commentId": "={{$node[\"Twist18\"].json[\"id\"]}}"
+      },
+      "name": "Twist22",
+      "type": "n8n-nodes-base.twist",
+      "typeVersion": 1,
+      "position": [
+        1300,
+        0
+      ],
+      "credentials": {
+        "twistOAuth2Api": "Twist OAuth2 creds"
+      }
     }
   ],
   "connections": {
@@ -111,7 +442,7 @@
       "main": [
         [
           {
-            "node": "Twist1",
+            "node": "Twist13",
             "type": "main",
             "index": 0
           }
@@ -155,10 +486,208 @@
           }
         ]
       ]
+    },
+    "Twist3": {
+      "main": [
+        [
+          {
+            "node": "Twist5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Twist5": {
+      "main": [
+        [
+          {
+            "node": "Twist6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Twist6": {
+      "main": [
+        [
+          {
+            "node": "Twist7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Twist7": {
+      "main": [
+        [
+          {
+            "node": "Twist8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Twist4": {
+      "main": [
+        [
+          {
+            "node": "Twist9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Twist9": {
+      "main": [
+        [
+          {
+            "node": "Twist10",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Twist10": {
+      "main": [
+        [
+          {
+            "node": "Twist11",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Twist11": {
+      "main": [
+        [
+          {
+            "node": "Twist12",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Twist13": {
+      "main": [
+        [
+          {
+            "node": "Twist18",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Twist14": {
+      "main": [
+        [
+          {
+            "node": "Twist15",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Twist15": {
+      "main": [
+        [
+          {
+            "node": "Twist17",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Twist16": {
+      "main": [
+        [
+          {
+            "node": "Twist1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Twist17": {
+      "main": [
+        [
+          {
+            "node": "Twist16",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Twist18": {
+      "main": [
+        [
+          {
+            "node": "Twist19",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Twist19": {
+      "main": [
+        [
+          {
+            "node": "Twist20",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Twist20": {
+      "main": [
+        [
+          {
+            "node": "Twist21",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Twist21": {
+      "main": [
+        [
+          {
+            "node": "Twist22",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Twist22": {
+      "main": [
+        [
+          {
+            "node": "Twist14",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "createdAt": "2021-02-25T11:13:34.019Z",
-  "updatedAt": "2021-02-25T11:13:34.019Z",
+  "updatedAt": "2021-05-03T07:55:48.432Z",
   "settings": {},
   "staticData": null
 }
