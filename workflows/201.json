@@ -132,8 +132,7 @@
     {
       "parameters": {
         "operation": "delete",
-        "by": "userId",
-        "userId": "={{$node[\"Set\"].json[\"userId\"]}}"
+        "email": "={{$node[\"Iterable1\"].json[\"email\"]}}"
       },
       "name": "Iterable5",
       "type": "n8n-nodes-base.iterable",
@@ -227,7 +226,7 @@
     }
   },
   "createdAt": "2021-05-12T07:38:44.391Z",
-  "updatedAt": "2021-05-12T08:35:02.837Z",
+  "updatedAt": "2021-05-12T17:15:09.251Z",
   "settings": {
     "timezone": "Europe/Berlin",
     "saveExecutionProgress": "DEFAULT"
