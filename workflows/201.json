@@ -1,0 +1,241 @@
+{
+  "id": 201,
+  "name": "Iterable:User:upsert get delete:UserList:add remove:Event:track",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "userId",
+              "value": "=User_{{Date.now()}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Set",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        430,
+        220
+      ]
+    },
+    {
+      "parameters": {
+        "identifier": "userId",
+        "value": "={{$node[\"Set\"].json[\"userId\"]}}",
+        "additionalFields": {
+          "dataFieldsUi": {
+            "dataFieldValues": []
+          }
+        }
+      },
+      "name": "Iterable",
+      "type": "n8n-nodes-base.iterable",
+      "typeVersion": 1,
+      "position": [
+        590,
+        220
+      ],
+      "credentials": {
+        "iterableApi": "Iterable API creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "by": "userId",
+        "userId": "={{$node[\"Set\"].json[\"userId\"]}}"
+      },
+      "name": "Iterable1",
+      "type": "n8n-nodes-base.iterable",
+      "typeVersion": 1,
+      "position": [
+        750,
+        220
+      ],
+      "credentials": {
+        "iterableApi": "Iterable API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "userList",
+        "listId": 798932,
+        "identifier": "userId",
+        "value": "={{$node[\"Set\"].json[\"userId\"]}}"
+      },
+      "name": "Iterable2",
+      "type": "n8n-nodes-base.iterable",
+      "typeVersion": 1,
+      "position": [
+        900,
+        320
+      ],
+      "credentials": {
+        "iterableApi": "Iterable API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "userList",
+        "operation": "remove",
+        "listId": 798932,
+        "identifier": "userId",
+        "value": "={{$node[\"Set\"].json[\"userId\"]}}",
+        "additionalFields": {}
+      },
+      "name": "Iterable3",
+      "type": "n8n-nodes-base.iterable",
+      "typeVersion": 1,
+      "position": [
+        1050,
+        320
+      ],
+      "credentials": {
+        "iterableApi": "Iterable API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "event",
+        "name": "TestEvent",
+        "additionalFields": {
+          "id": "={{$node[\"Set\"].json[\"userId\"]}}",
+          "userId": "={{$node[\"Set\"].json[\"userId\"]}}"
+        }
+      },
+      "name": "Iterable4",
+      "type": "n8n-nodes-base.iterable",
+      "typeVersion": 1,
+      "position": [
+        1200,
+        390
+      ],
+      "credentials": {
+        "iterableApi": "Iterable API creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "by": "userId",
+        "userId": "={{$node[\"Set\"].json[\"userId\"]}}"
+      },
+      "name": "Iterable5",
+      "type": "n8n-nodes-base.iterable",
+      "typeVersion": 1,
+      "position": [
+        1350,
+        210
+      ],
+      "credentials": {
+        "iterableApi": "Iterable API creds"
+      }
+    }
+  ],
+  "connections": {
+    "Set": {
+      "main": [
+        [
+          {
+            "node": "Iterable",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Iterable": {
+      "main": [
+        [
+          {
+            "node": "Iterable1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Iterable1": {
+      "main": [
+        [
+          {
+            "node": "Iterable2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Iterable2": {
+      "main": [
+        [
+          {
+            "node": "Iterable3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Iterable3": {
+      "main": [
+        [
+          {
+            "node": "Iterable4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Iterable4": {
+      "main": [
+        [
+          {
+            "node": "Iterable5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Set",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-05-12T07:38:44.391Z",
+  "updatedAt": "2021-05-12T08:35:02.837Z",
+  "settings": {
+    "timezone": "Europe/Berlin",
+    "saveExecutionProgress": "DEFAULT"
+  },
+  "staticData": {
+    "node:Clockify Trigger": {
+      "userId": "60335ad2f24e660123d7fdeb",
+      "lastTimeChecked": "2021-05-12T10:25:03Z"
+    }
+  }
+}
