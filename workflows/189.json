@@ -1,6 +1,6 @@
 {
   "id": 189,
-  "name": "Affinity:Organization:create get update delete getAll",
+  "name": "Affinity:Organization:create get update delete getAll:List:getAll get:ListEntry:create get getAll delete:Person:create get update getAll delete",
   "active": false,
   "nodes": [
     {
@@ -23,7 +23,7 @@
       "type": "n8n-nodes-base.affinity",
       "typeVersion": 1,
       "position": [
-        490,
+        500,
         300
       ],
       "credentials": {
@@ -92,7 +92,204 @@
       "type": "n8n-nodes-base.affinity",
       "typeVersion": 1,
       "position": [
-        490,
+        500,
+        450
+      ],
+      "credentials": {
+        "affinityApi": "Affinity API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "list",
+        "operation": "getAll",
+        "limit": 1
+      },
+      "name": "Affinity5",
+      "type": "n8n-nodes-base.affinity",
+      "typeVersion": 1,
+      "position": [
+        500,
+        150
+      ],
+      "credentials": {
+        "affinityApi": "Affinity API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "list",
+        "listId": "={{$node[\"Affinity5\"].json[\"id\"]}}"
+      },
+      "name": "Affinity6",
+      "type": "n8n-nodes-base.affinity",
+      "typeVersion": 1,
+      "position": [
+        650,
+        150
+      ],
+      "credentials": {
+        "affinityApi": "Affinity API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "person",
+        "firstName": "=Fname_{{(new Date).toISOString()}}",
+        "lastName": "=Lname_{{(new Date).toISOString()}}",
+        "additionalFields": {}
+      },
+      "name": "Affinity7",
+      "type": "n8n-nodes-base.affinity",
+      "typeVersion": 1,
+      "position": [
+        500,
+        600
+      ],
+      "credentials": {
+        "affinityApi": "Affinity API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "person",
+        "operation": "get",
+        "personId": "={{$node[\"Affinity7\"].json[\"id\"]}}",
+        "options": {}
+      },
+      "name": "Affinity8",
+      "type": "n8n-nodes-base.affinity",
+      "typeVersion": 1,
+      "position": [
+        650,
+        600
+      ],
+      "credentials": {
+        "affinityApi": "Affinity API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "person",
+        "operation": "update",
+        "personId": "={{$node[\"Affinity7\"].json[\"id\"]}}",
+        "updateFields": {},
+        "emails": [
+          "=email_{{Date.now()}}@test.com"
+        ]
+      },
+      "name": "Affinity9",
+      "type": "n8n-nodes-base.affinity",
+      "typeVersion": 1,
+      "position": [
+        800,
+        600
+      ],
+      "credentials": {
+        "affinityApi": "Affinity API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "person",
+        "operation": "getAll",
+        "limit": 1,
+        "options": {}
+      },
+      "name": "Affinity10",
+      "type": "n8n-nodes-base.affinity",
+      "typeVersion": 1,
+      "position": [
+        950,
+        600
+      ],
+      "credentials": {
+        "affinityApi": "Affinity API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "person",
+        "operation": "delete",
+        "personId": "={{$node[\"Affinity7\"].json[\"id\"]}}"
+      },
+      "name": "Affinity11",
+      "type": "n8n-nodes-base.affinity",
+      "typeVersion": 1,
+      "position": [
+        1100,
+        600
+      ],
+      "credentials": {
+        "affinityApi": "Affinity API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "listEntry",
+        "listId": 51365,
+        "entityId": "={{$node[\"Affinity\"].json[\"id\"]}}",
+        "additionalFields": {}
+      },
+      "name": "Affinity12",
+      "type": "n8n-nodes-base.affinity",
+      "typeVersion": 1,
+      "position": [
+        650,
+        450
+      ],
+      "credentials": {
+        "affinityApi": "Affinity API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "listEntry",
+        "operation": "get",
+        "listId": 51365,
+        "listEntryId": "={{$node[\"Affinity12\"].json[\"id\"]}}"
+      },
+      "name": "Affinity13",
+      "type": "n8n-nodes-base.affinity",
+      "typeVersion": 1,
+      "position": [
+        800,
+        450
+      ],
+      "credentials": {
+        "affinityApi": "Affinity API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "listEntry",
+        "operation": "getAll",
+        "listId": 51365,
+        "limit": 1
+      },
+      "name": "Affinity14",
+      "type": "n8n-nodes-base.affinity",
+      "typeVersion": 1,
+      "position": [
+        950,
+        450
+      ],
+      "credentials": {
+        "affinityApi": "Affinity API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "listEntry",
+        "operation": "delete",
+        "listId": 51365,
+        "listEntryId": "={{$node[\"Affinity12\"].json[\"id\"]}}"
+      },
+      "name": "Affinity15",
+      "type": "n8n-nodes-base.affinity",
+      "typeVersion": 1,
+      "position": [
+        1100,
         450
       ],
       "credentials": {
@@ -105,7 +302,7 @@
       "main": [
         [
           {
-            "node": "Affinity1",
+            "node": "Affinity12",
             "type": "main",
             "index": 0
           }
@@ -146,13 +343,122 @@
             "node": "Affinity4",
             "type": "main",
             "index": 0
+          },
+          {
+            "node": "Affinity5",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Affinity7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Affinity5": {
+      "main": [
+        [
+          {
+            "node": "Affinity6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Affinity7": {
+      "main": [
+        [
+          {
+            "node": "Affinity8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Affinity8": {
+      "main": [
+        [
+          {
+            "node": "Affinity9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Affinity9": {
+      "main": [
+        [
+          {
+            "node": "Affinity10",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Affinity10": {
+      "main": [
+        [
+          {
+            "node": "Affinity11",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Affinity12": {
+      "main": [
+        [
+          {
+            "node": "Affinity13",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Affinity13": {
+      "main": [
+        [
+          {
+            "node": "Affinity14",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Affinity14": {
+      "main": [
+        [
+          {
+            "node": "Affinity15",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Affinity15": {
+      "main": [
+        [
+          {
+            "node": "Affinity1",
+            "type": "main",
+            "index": 0
           }
         ]
       ]
     }
   },
   "createdAt": "2021-04-29T08:53:09.807Z",
-  "updatedAt": "2021-04-29T08:53:09.807Z",
+  "updatedAt": "2021-05-12T17:31:21.682Z",
   "settings": {},
   "staticData": null
 }
