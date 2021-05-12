@@ -1,0 +1,487 @@
+{
+  "id": 190,
+  "name": "Discourse:User:create get getAll:Category:create update getAll:Group:create update get getAll:UserGroup:add remove:Post:create update get getAll",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "category",
+        "name": "=Category{{Date.now()}}",
+        "color": "FF6D5A"
+      },
+      "name": "Discourse",
+      "type": "n8n-nodes-base.discourse",
+      "typeVersion": 1,
+      "position": [
+        500,
+        250
+      ],
+      "credentials": {
+        "discourseApi": "Discourse API"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "category",
+        "operation": "update",
+        "categoryId": "={{$node[\"Discourse\"].json[\"id\"]}}",
+        "name": "=Updated{{$node[\"Discourse\"].json[\"name\"]}}",
+        "updateFields": {}
+      },
+      "name": "Discourse1",
+      "type": "n8n-nodes-base.discourse",
+      "typeVersion": 1,
+      "position": [
+        650,
+        250
+      ],
+      "credentials": {
+        "discourseApi": "Discourse API"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "category",
+        "operation": "getAll",
+        "limit": 1
+      },
+      "name": "Discourse2",
+      "type": "n8n-nodes-base.discourse",
+      "typeVersion": 1,
+      "position": [
+        800,
+        250
+      ],
+      "credentials": {
+        "discourseApi": "Discourse API"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "group",
+        "name": "=Group{{Date.now()}}"
+      },
+      "name": "Discourse3",
+      "type": "n8n-nodes-base.discourse",
+      "typeVersion": 1,
+      "position": [
+        500,
+        410
+      ],
+      "credentials": {
+        "discourseApi": "Discourse API"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "group",
+        "operation": "update",
+        "groupId": "={{$node[\"Discourse3\"].json[\"id\"]}}",
+        "name": "=Up{{$node[\"Discourse3\"].json[\"name\"]}}"
+      },
+      "name": "Discourse4",
+      "type": "n8n-nodes-base.discourse",
+      "typeVersion": 1,
+      "position": [
+        650,
+        410
+      ],
+      "credentials": {
+        "discourseApi": "Discourse API"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "group",
+        "operation": "get",
+        "name": "=Up{{$node[\"Discourse3\"].json[\"name\"]}}"
+      },
+      "name": "Discourse5",
+      "type": "n8n-nodes-base.discourse",
+      "typeVersion": 1,
+      "position": [
+        800,
+        410
+      ],
+      "credentials": {
+        "discourseApi": "Discourse API"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "group",
+        "operation": "getAll",
+        "limit": 1
+      },
+      "name": "Discourse6",
+      "type": "n8n-nodes-base.discourse",
+      "typeVersion": 1,
+      "position": [
+        950,
+        410
+      ],
+      "credentials": {
+        "discourseApi": "Discourse API"
+      }
+    },
+    {
+      "parameters": {
+        "title": "=Post {{Date.now()}}",
+        "content": "=Content {{(new Date()).toString()}}",
+        "additionalFields": {}
+      },
+      "name": "Discourse7",
+      "type": "n8n-nodes-base.discourse",
+      "typeVersion": 1,
+      "position": [
+        500,
+        710
+      ],
+      "credentials": {
+        "discourseApi": "Discourse API"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "postId": "={{$node[\"Discourse7\"].json[\"id\"]}}",
+        "content": "=updated{{$node[\"Discourse7\"].json[\"cooked\"]}}",
+        "updateFields": {}
+      },
+      "name": "Discourse8",
+      "type": "n8n-nodes-base.discourse",
+      "typeVersion": 1,
+      "position": [
+        650,
+        710
+      ],
+      "credentials": {
+        "discourseApi": "Discourse API"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "postId": "={{$node[\"Discourse7\"].json[\"id\"]}}"
+      },
+      "name": "Discourse9",
+      "type": "n8n-nodes-base.discourse",
+      "typeVersion": 1,
+      "position": [
+        800,
+        710
+      ],
+      "credentials": {
+        "discourseApi": "Discourse API"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "limit": 1
+      },
+      "name": "Discourse10",
+      "type": "n8n-nodes-base.discourse",
+      "typeVersion": 1,
+      "position": [
+        950,
+        710
+      ],
+      "credentials": {
+        "discourseApi": "Discourse API"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "user",
+        "name": "=User{{Math.round(Math.random()*1000)}}",
+        "email": "=fake{{Date.now()}}@test.com",
+        "username": "={{$node[\"Set\"].json[\"username\"]}}",
+        "password": "=A{{Date.now()}}Z",
+        "additionalFields": {
+          "active": true,
+          "approved": true
+        }
+      },
+      "name": "Discourse11",
+      "type": "n8n-nodes-base.discourse",
+      "typeVersion": 1,
+      "position": [
+        500,
+        100
+      ],
+      "credentials": {
+        "discourseApi": "Discourse API"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "user",
+        "operation": "get",
+        "username": "={{$node[\"Set\"].json[\"username\"]}}"
+      },
+      "name": "Discourse12",
+      "type": "n8n-nodes-base.discourse",
+      "typeVersion": 1,
+      "position": [
+        650,
+        100
+      ],
+      "credentials": {
+        "discourseApi": "Discourse API"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "user",
+        "operation": "getAll",
+        "flag": "active",
+        "limit": 1
+      },
+      "name": "Discourse13",
+      "type": "n8n-nodes-base.discourse",
+      "typeVersion": 1,
+      "position": [
+        800,
+        100
+      ],
+      "credentials": {
+        "discourseApi": "Discourse API"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "userGroup",
+        "usernames": "nodeqa,",
+        "groupId": "={{$node[\"Discourse3\"].json[\"id\"]}}"
+      },
+      "name": "Discourse14",
+      "type": "n8n-nodes-base.discourse",
+      "typeVersion": 1,
+      "position": [
+        650,
+        560
+      ],
+      "credentials": {
+        "discourseApi": "Discourse API"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "userGroup",
+        "operation": "remove",
+        "usernames": "nodeqa,",
+        "groupId": "={{$node[\"Discourse3\"].json[\"id\"]}}"
+      },
+      "name": "Discourse15",
+      "type": "n8n-nodes-base.discourse",
+      "typeVersion": 1,
+      "position": [
+        800,
+        560
+      ],
+      "credentials": {
+        "discourseApi": "Discourse API"
+      }
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "username",
+              "value": "=Username{{Math.round(Math.random()*1000)}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Set",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        360,
+        100
+      ]
+    }
+  ],
+  "connections": {
+    "Discourse": {
+      "main": [
+        [
+          {
+            "node": "Discourse1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Discourse1": {
+      "main": [
+        [
+          {
+            "node": "Discourse2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Discourse",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Discourse3",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Discourse7",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Set",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Discourse3": {
+      "main": [
+        [
+          {
+            "node": "Discourse4",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Discourse14",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Discourse4": {
+      "main": [
+        [
+          {
+            "node": "Discourse5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Discourse5": {
+      "main": [
+        [
+          {
+            "node": "Discourse6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Discourse7": {
+      "main": [
+        [
+          {
+            "node": "Discourse8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Discourse8": {
+      "main": [
+        [
+          {
+            "node": "Discourse9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Discourse9": {
+      "main": [
+        [
+          {
+            "node": "Discourse10",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Discourse14": {
+      "main": [
+        [
+          {
+            "node": "Discourse15",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Discourse11": {
+      "main": [
+        [
+          {
+            "node": "Discourse12",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Discourse12": {
+      "main": [
+        [
+          {
+            "node": "Discourse13",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set": {
+      "main": [
+        [
+          {
+            "node": "Discourse11",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-04-29T10:21:23.768Z",
+  "updatedAt": "2021-04-29T10:21:23.768Z",
+  "settings": {},
+  "staticData": null
+}
