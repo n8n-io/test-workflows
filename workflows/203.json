@@ -1,0 +1,270 @@
+{
+  "id": 203,
+  "name": "Paddle:Payment:getAll reschedule:Plan:getAll get:Product:getAll:Coupon:create update getAll:User:getAll",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "plan",
+        "operation": "getAll",
+        "limit": 1
+      },
+      "name": "Paddle",
+      "type": "n8n-nodes-base.paddle",
+      "typeVersion": 1,
+      "position": [
+        450,
+        230
+      ],
+      "credentials": {
+        "paddleApi": "Paddle API sandbox creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "plan",
+        "planId": "={{$node[\"Paddle\"].json[\"id\"]}}"
+      },
+      "name": "Paddle1",
+      "type": "n8n-nodes-base.paddle",
+      "typeVersion": 1,
+      "position": [
+        600,
+        230
+      ],
+      "credentials": {
+        "paddleApi": "Paddle API sandbox creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "product",
+        "limit": 1
+      },
+      "name": "Paddle2",
+      "type": "n8n-nodes-base.paddle",
+      "typeVersion": 1,
+      "position": [
+        450,
+        380
+      ],
+      "credentials": {
+        "paddleApi": "Paddle API sandbox creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "user",
+        "limit": 1,
+        "additionalFields": {}
+      },
+      "name": "Paddle3",
+      "type": "n8n-nodes-base.paddle",
+      "typeVersion": 1,
+      "position": [
+        450,
+        530
+      ],
+      "credentials": {
+        "paddleApi": "Paddle API sandbox creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "payment",
+        "limit": 1,
+        "additionalFields": {}
+      },
+      "name": "Paddle4",
+      "type": "n8n-nodes-base.paddle",
+      "typeVersion": 1,
+      "position": [
+        450,
+        80
+      ],
+      "credentials": {
+        "paddleApi": "Paddle API sandbox creds"
+      }
+    },
+    {
+      "parameters": {
+        "couponType": "product",
+        "productIds": "={{$node[\"Paddle2\"].json[\"id\"]}}",
+        "discountAmount": 50,
+        "currency": "USD",
+        "additionalFields": {}
+      },
+      "name": "Paddle5",
+      "type": "n8n-nodes-base.paddle",
+      "typeVersion": 1,
+      "position": [
+        600,
+        430
+      ],
+      "credentials": {
+        "paddleApi": "Paddle API sandbox creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "couponCode": "={{$node[\"Paddle5\"].json[\"coupon\"]}}",
+        "additionalFields": {
+          "discount": {
+            "discountProperties": {
+              "currency": "USD",
+              "discountAmount": 5
+            }
+          }
+        }
+      },
+      "name": "Paddle6",
+      "type": "n8n-nodes-base.paddle",
+      "typeVersion": 1,
+      "position": [
+        750,
+        430
+      ],
+      "credentials": {
+        "paddleApi": "Paddle API sandbox creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "productId": "={{$node[\"Paddle2\"].json[\"id\"]}}",
+        "returnAll": true
+      },
+      "name": "Paddle7",
+      "type": "n8n-nodes-base.paddle",
+      "typeVersion": 1,
+      "position": [
+        900,
+        430
+      ],
+      "credentials": {
+        "paddleApi": "Paddle API sandbox creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "payment",
+        "operation": "reschedule",
+        "paymentId": "={{$node[\"Paddle4\"].json[\"id\"]}}",
+        "date": "2021-05-14T08:53:54.000Z"
+      },
+      "name": "Paddle8",
+      "type": "n8n-nodes-base.paddle",
+      "typeVersion": 1,
+      "position": [
+        600,
+        80
+      ],
+      "credentials": {
+        "paddleApi": "Paddle API sandbox creds"
+      }
+    }
+  ],
+  "connections": {
+    "Paddle": {
+      "main": [
+        [
+          {
+            "node": "Paddle1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Paddle2": {
+      "main": [
+        [
+          {
+            "node": "Paddle5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Paddle4": {
+      "main": [
+        [
+          {
+            "node": "Paddle8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Paddle5": {
+      "main": [
+        [
+          {
+            "node": "Paddle6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Paddle6": {
+      "main": [
+        [
+          {
+            "node": "Paddle7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Paddle",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Paddle2",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Paddle3",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Paddle4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-05-12T10:06:38.839Z",
+  "updatedAt": "2021-05-14T08:55:35.145Z",
+  "settings": {},
+  "staticData": {
+    "node:Clockify Trigger": {
+      "userId": "60335ad2f24e660123d7fdeb",
+      "lastTimeChecked": "2021-05-12T08:09:47Z"
+    }
+  }
+}
