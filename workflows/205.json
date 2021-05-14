@@ -1,0 +1,53 @@
+{
+  "id": 205,
+  "name": "Pushover:Message:push",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "userKey": "uwwjqj8g3kbj4mbsmcwi8ov7ocofrx",
+        "message": "=Message_{{(new Date).toISOString()}}",
+        "additionalFields": {
+          "title": "=NodeQa Test_{{(new Date).toISOString()}}"
+        }
+      },
+      "name": "Pushover",
+      "type": "n8n-nodes-base.pushover",
+      "typeVersion": 1,
+      "position": [
+        510,
+        300
+      ],
+      "credentials": {
+        "pushoverApi": "Pushover API creds"
+      }
+    }
+  ],
+  "connections": {
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Pushover",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-05-14T09:46:06.853Z",
+  "updatedAt": "2021-05-14T09:46:06.853Z",
+  "settings": {},
+  "staticData": null
+}
