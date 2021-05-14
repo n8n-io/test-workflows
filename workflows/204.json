@@ -1,0 +1,399 @@
+{
+  "id": 204,
+  "name": "HelpScout:Mailbox:getAll get:Customer:create get update getAll properties:Conversation:create get getAll delete:Thread:create getAll",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "customer",
+        "additionalFields": {
+          "firstName": "=Fname_{{(new Date).toISOString()}}"
+        }
+      },
+      "name": "HelpScout",
+      "type": "n8n-nodes-base.helpScout",
+      "typeVersion": 1,
+      "position": [
+        450,
+        300
+      ],
+      "credentials": {
+        "helpScoutOAuth2Api": "HelpScout OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "customer",
+        "operation": "get",
+        "customerId": "={{$node[\"HelpScout\"].json[\"id\"]}}"
+      },
+      "name": "HelpScout1",
+      "type": "n8n-nodes-base.helpScout",
+      "typeVersion": 1,
+      "position": [
+        600,
+        300
+      ],
+      "credentials": {
+        "helpScoutOAuth2Api": "HelpScout OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "customer",
+        "operation": "update",
+        "customerId": "={{$node[\"HelpScout\"].json[\"id\"]}}",
+        "updateFields": {
+          "jobTitle": "=UpdatedJobTitle"
+        }
+      },
+      "name": "HelpScout2",
+      "type": "n8n-nodes-base.helpScout",
+      "typeVersion": 1,
+      "position": [
+        750,
+        300
+      ],
+      "credentials": {
+        "helpScoutOAuth2Api": "HelpScout OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "customer",
+        "operation": "getAll",
+        "limit": 1,
+        "options": {}
+      },
+      "name": "HelpScout3",
+      "type": "n8n-nodes-base.helpScout",
+      "typeVersion": 1,
+      "position": [
+        900,
+        300
+      ],
+      "credentials": {
+        "helpScoutOAuth2Api": "HelpScout OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "customer",
+        "operation": "properties"
+      },
+      "name": "HelpScout4",
+      "type": "n8n-nodes-base.helpScout",
+      "typeVersion": 1,
+      "position": [
+        1050,
+        300
+      ],
+      "credentials": {
+        "helpScoutOAuth2Api": "HelpScout OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "mailboxId": 224189,
+        "status": "active",
+        "subject": "=Subject_{{(new Date).toISOString()}}",
+        "type": "chat",
+        "additionalFields": {
+          "customerId": "={{$node[\"HelpScout\"].json[\"id\"]}}"
+        },
+        "threadsUi": {
+          "threadsValues": [
+            {
+              "type": "chat",
+              "text": "Initial Thread"
+            }
+          ]
+        }
+      },
+      "name": "HelpScout5",
+      "type": "n8n-nodes-base.helpScout",
+      "typeVersion": 1,
+      "position": [
+        600,
+        450
+      ],
+      "credentials": {
+        "helpScoutOAuth2Api": "HelpScout OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "conversationId": "={{$node[\"HelpScout5\"].json[\"id\"]}}"
+      },
+      "name": "HelpScout6",
+      "type": "n8n-nodes-base.helpScout",
+      "typeVersion": 1,
+      "position": [
+        750,
+        450
+      ],
+      "credentials": {
+        "helpScoutOAuth2Api": "HelpScout OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "limit": 1,
+        "options": {}
+      },
+      "name": "HelpScout7",
+      "type": "n8n-nodes-base.helpScout",
+      "typeVersion": 1,
+      "position": [
+        900,
+        450
+      ],
+      "credentials": {
+        "helpScoutOAuth2Api": "HelpScout OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "conversationId": "={{$node[\"HelpScout5\"].json[\"id\"]}}"
+      },
+      "name": "HelpScout8",
+      "type": "n8n-nodes-base.helpScout",
+      "typeVersion": 1,
+      "position": [
+        1050,
+        450
+      ],
+      "credentials": {
+        "helpScoutOAuth2Api": "HelpScout OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "mailbox",
+        "operation": "getAll",
+        "limit": 1
+      },
+      "name": "HelpScout9",
+      "type": "n8n-nodes-base.helpScout",
+      "typeVersion": 1,
+      "position": [
+        450,
+        150
+      ],
+      "credentials": {
+        "helpScoutOAuth2Api": "HelpScout OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "mailbox",
+        "mailboxId": "={{$node[\"HelpScout9\"].json[\"id\"]}}"
+      },
+      "name": "HelpScout10",
+      "type": "n8n-nodes-base.helpScout",
+      "typeVersion": 1,
+      "position": [
+        600,
+        150
+      ],
+      "credentials": {
+        "helpScoutOAuth2Api": "HelpScout OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "thread",
+        "conversationId": "={{$node[\"HelpScout5\"].json[\"id\"]}}",
+        "type": "chat",
+        "text": "=Thread_{{(new Date).toISOString()}}",
+        "additionalFields": {
+          "customerId": "={{$node[\"HelpScout\"].json[\"id\"]}}"
+        }
+      },
+      "name": "HelpScout11",
+      "type": "n8n-nodes-base.helpScout",
+      "typeVersion": 1,
+      "position": [
+        750,
+        600
+      ],
+      "credentials": {
+        "helpScoutOAuth2Api": "HelpScout OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "thread",
+        "operation": "getAll",
+        "conversationId": "={{$node[\"HelpScout5\"].json[\"id\"]}}",
+        "limit": 1
+      },
+      "name": "HelpScout12",
+      "type": "n8n-nodes-base.helpScout",
+      "typeVersion": 1,
+      "position": [
+        900,
+        600
+      ],
+      "credentials": {
+        "helpScoutOAuth2Api": "HelpScout OAuth2 API creds"
+      }
+    }
+  ],
+  "connections": {
+    "HelpScout": {
+      "main": [
+        [
+          {
+            "node": "HelpScout5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HelpScout1": {
+      "main": [
+        [
+          {
+            "node": "HelpScout2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HelpScout2": {
+      "main": [
+        [
+          {
+            "node": "HelpScout3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HelpScout3": {
+      "main": [
+        [
+          {
+            "node": "HelpScout4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HelpScout5": {
+      "main": [
+        [
+          {
+            "node": "HelpScout11",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HelpScout6": {
+      "main": [
+        [
+          {
+            "node": "HelpScout7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HelpScout7": {
+      "main": [
+        [
+          {
+            "node": "HelpScout8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HelpScout8": {
+      "main": [
+        [
+          {
+            "node": "HelpScout1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HelpScout9": {
+      "main": [
+        [
+          {
+            "node": "HelpScout10",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "HelpScout",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "HelpScout9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HelpScout11": {
+      "main": [
+        [
+          {
+            "node": "HelpScout12",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HelpScout12": {
+      "main": [
+        [
+          {
+            "node": "HelpScout6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-05-14T09:31:14.466Z",
+  "updatedAt": "2021-05-14T09:35:39.499Z",
+  "settings": {},
+  "staticData": null
+}
