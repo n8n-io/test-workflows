@@ -1,0 +1,428 @@
+{
+  "id": 206,
+  "name": "Keap:Company:create getAll:Contact:upsert get getAll delete:ContactNote:create get update getAll delete:ContactTag:create getAll delete",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "companyName": "=Company_{{(new Date).toISOString()}}",
+        "additionalFields": {}
+      },
+      "name": "Keap",
+      "type": "n8n-nodes-base.keap",
+      "typeVersion": 1,
+      "position": [
+        600,
+        200
+      ],
+      "credentials": {
+        "keapOAuth2Api": "Keap OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "limit": 1,
+        "options": {}
+      },
+      "name": "Keap1",
+      "type": "n8n-nodes-base.keap",
+      "typeVersion": 1,
+      "position": [
+        750,
+        200
+      ],
+      "credentials": {
+        "keapOAuth2Api": "Keap OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "contact",
+        "additionalFields": {
+          "companyId": "={{$node[\"Keap\"].json[\"id\"]}}"
+        },
+        "addressesUi": {
+          "addressesValues": []
+        },
+        "emailsUi": {
+          "emailsValues": [
+            {
+              "field": "EMAIL1",
+              "email": "=fakeemail{{Date.now()}}@test.com"
+            }
+          ]
+        }
+      },
+      "name": "Keap2",
+      "type": "n8n-nodes-base.keap",
+      "typeVersion": 1,
+      "position": [
+        750,
+        350
+      ],
+      "credentials": {
+        "keapOAuth2Api": "Keap OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "contact",
+        "operation": "get",
+        "contactId": "={{$node[\"Keap2\"].json[\"id\"]}}",
+        "options": {}
+      },
+      "name": "Keap3",
+      "type": "n8n-nodes-base.keap",
+      "typeVersion": 1,
+      "position": [
+        900,
+        350
+      ],
+      "credentials": {
+        "keapOAuth2Api": "Keap OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "contact",
+        "operation": "getAll",
+        "limit": 1,
+        "options": {}
+      },
+      "name": "Keap4",
+      "type": "n8n-nodes-base.keap",
+      "typeVersion": 1,
+      "position": [
+        1040,
+        350
+      ],
+      "credentials": {
+        "keapOAuth2Api": "Keap OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "contact",
+        "operation": "delete",
+        "contactId": "={{$node[\"Keap2\"].json[\"id\"]}}"
+      },
+      "name": "Keap5",
+      "type": "n8n-nodes-base.keap",
+      "typeVersion": 1,
+      "position": [
+        1200,
+        350
+      ],
+      "credentials": {
+        "keapOAuth2Api": "Keap OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "contactNote",
+        "userId": 1,
+        "contactId": "={{$node[\"Keap2\"].json[\"id\"]}}",
+        "additionalFields": {
+          "body": "",
+          "title": "=Note{Date.now()}}"
+        }
+      },
+      "name": "Keap6",
+      "type": "n8n-nodes-base.keap",
+      "typeVersion": 1,
+      "position": [
+        900,
+        510
+      ],
+      "credentials": {
+        "keapOAuth2Api": "Keap OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "contactNote",
+        "operation": "get",
+        "noteId": "={{$node[\"Keap6\"].json[\"id\"]}}"
+      },
+      "name": "Keap7",
+      "type": "n8n-nodes-base.keap",
+      "typeVersion": 1,
+      "position": [
+        1050,
+        510
+      ],
+      "credentials": {
+        "keapOAuth2Api": "Keap OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "contactNote",
+        "operation": "update",
+        "noteId": "={{$node[\"Keap6\"].json[\"id\"]}}",
+        "additionalFields": {
+          "title": "Updated Title"
+        }
+      },
+      "name": "Keap8",
+      "type": "n8n-nodes-base.keap",
+      "typeVersion": 1,
+      "position": [
+        1200,
+        510
+      ],
+      "credentials": {
+        "keapOAuth2Api": "Keap OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "contactNote",
+        "operation": "getAll",
+        "limit": 1,
+        "filters": {}
+      },
+      "name": "Keap9",
+      "type": "n8n-nodes-base.keap",
+      "typeVersion": 1,
+      "position": [
+        1360,
+        510
+      ],
+      "credentials": {
+        "keapOAuth2Api": "Keap OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "contactNote",
+        "operation": "delete",
+        "noteId": "={{$node[\"Keap6\"].json[\"id\"]}}"
+      },
+      "name": "Keap10",
+      "type": "n8n-nodes-base.keap",
+      "typeVersion": 1,
+      "position": [
+        1500,
+        510
+      ],
+      "credentials": {
+        "keapOAuth2Api": "Keap OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "contactTag",
+        "contactId": "={{$node[\"Keap2\"].json[\"id\"]}}",
+        "tagIds": [
+          93
+        ]
+      },
+      "name": "Keap11",
+      "type": "n8n-nodes-base.keap",
+      "typeVersion": 1,
+      "position": [
+        900,
+        660
+      ],
+      "credentials": {
+        "keapOAuth2Api": "Keap OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "contactTag",
+        "operation": "getAll",
+        "contactId": "={{$node[\"Keap2\"].json[\"id\"]}}",
+        "limit": 1
+      },
+      "name": "Keap12",
+      "type": "n8n-nodes-base.keap",
+      "typeVersion": 1,
+      "position": [
+        1050,
+        660
+      ],
+      "credentials": {
+        "keapOAuth2Api": "Keap OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "contactTag",
+        "operation": "delete",
+        "contactId": "={{$node[\"Keap2\"].json[\"id\"]}}",
+        "tagIds": "93,"
+      },
+      "name": "Keap13",
+      "type": "n8n-nodes-base.keap",
+      "typeVersion": 1,
+      "position": [
+        1190,
+        660
+      ],
+      "credentials": {
+        "keapOAuth2Api": "Keap OAuth2 API creds"
+      }
+    }
+  ],
+  "connections": {
+    "Keap": {
+      "main": [
+        [
+          {
+            "node": "Keap1",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Keap2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Keap2": {
+      "main": [
+        [
+          {
+            "node": "Keap6",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Keap11",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Keap3": {
+      "main": [
+        [
+          {
+            "node": "Keap4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Keap4": {
+      "main": [
+        [
+          {
+            "node": "Keap5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Keap6": {
+      "main": [
+        [
+          {
+            "node": "Keap7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Keap7": {
+      "main": [
+        [
+          {
+            "node": "Keap8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Keap8": {
+      "main": [
+        [
+          {
+            "node": "Keap9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Keap9": {
+      "main": [
+        [
+          {
+            "node": "Keap10",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Keap10": {
+      "main": [
+        [
+          {
+            "node": "Keap3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Keap11": {
+      "main": [
+        [
+          {
+            "node": "Keap12",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Keap12": {
+      "main": [
+        [
+          {
+            "node": "Keap13",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Keap",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-05-17T15:09:40.220Z",
+  "updatedAt": "2021-05-18T07:57:05.962Z",
+  "settings": {},
+  "staticData": null
+}
