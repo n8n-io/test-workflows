@@ -15,7 +15,7 @@
     },
     {
       "parameters": {
-        "text": "n8n (pronounced n-eight-n) helps you to interconnect every app with an API in the world with each other to share and manipulate its data without a single line of code. It is an easy to use, user-friendly and highly customizable service.",
+        "text": "n8n (pronounced n-eight-n).",
         "translateTo": "DE",
         "additionalFields": {
           "splitSentences": "1",
@@ -31,12 +31,12 @@
         300
       ],
       "credentials": {
-        "deepLApi": "DeepL API creds"
+        "deepLApi": "Deepl Free API creds"
       }
     },
     {
       "parameters": {
-        "functionCode": "testData ='n8n (ausgesprochen: n-eight-n) hilft Ihnen, jede App mit einer API auf der Welt miteinander zu verbinden, um ihre Daten ohne eine einzige Zeile Code zu teilen und zu manipulieren. Es ist ein einfach zu bedienender, benutzerfreundlicher und hochgradig anpassbarer Dienst.'\nif(items[0].json['text'] !== testData){\n  throw new Error('Problem in DeepL node')\n}\nreturn items;"
+        "functionCode": "testData ='n8n (ausgesprochen: n-acht-n).'\nif(items[0].json['text'] !== testData){\n  throw new Error('Problem in DeepL node')\n}\nreturn items;"
       },
       "name": "Function",
       "type": "n8n-nodes-base.function",
@@ -72,7 +72,7 @@
     }
   },
   "createdAt": "2021-03-24T09:07:34.933Z",
-  "updatedAt": "2021-03-24T09:07:34.933Z",
+  "updatedAt": "2021-05-20T15:54:39.976Z",
   "settings": {},
   "staticData": null
 }
