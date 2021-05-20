@@ -40,7 +40,7 @@
       "type": "n8n-nodes-base.salesforce",
       "typeVersion": 1,
       "position": [
-        680,
+        770,
         190
       ],
       "credentials": {
@@ -59,7 +59,7 @@
       "type": "n8n-nodes-base.salesforce",
       "typeVersion": 1,
       "position": [
-        840,
+        930,
         190
       ],
       "credentials": {
@@ -77,7 +77,7 @@
       "type": "n8n-nodes-base.salesforce",
       "typeVersion": 1,
       "position": [
-        1000,
+        1210,
         190
       ],
       "credentials": {
@@ -93,7 +93,7 @@
       "type": "n8n-nodes-base.salesforce",
       "typeVersion": 1,
       "position": [
-        1150,
+        1360,
         190
       ],
       "credentials": {
@@ -113,7 +113,7 @@
       "type": "n8n-nodes-base.salesforce",
       "typeVersion": 1,
       "position": [
-        1300,
+        1650,
         190
       ],
       "credentials": {
@@ -130,7 +130,7 @@
       "type": "n8n-nodes-base.salesforce",
       "typeVersion": 1,
       "position": [
-        1450,
+        1800,
         190
       ],
       "credentials": {
@@ -187,7 +187,7 @@
       "type": "n8n-nodes-base.salesforce",
       "typeVersion": 1,
       "position": [
-        2000,
+        2490,
         350
       ],
       "credentials": {
@@ -203,7 +203,7 @@
       "type": "n8n-nodes-base.salesforce",
       "typeVersion": 1,
       "position": [
-        2160,
+        2750,
         350
       ],
       "credentials": {
@@ -221,7 +221,7 @@
       "type": "n8n-nodes-base.salesforce",
       "typeVersion": 1,
       "position": [
-        2320,
+        2910,
         350
       ],
       "credentials": {
@@ -241,7 +241,7 @@
       "type": "n8n-nodes-base.salesforce",
       "typeVersion": 1,
       "position": [
-        2510,
+        3180,
         350
       ],
       "credentials": {
@@ -258,7 +258,7 @@
       "type": "n8n-nodes-base.salesforce",
       "typeVersion": 1,
       "position": [
-        2670,
+        3340,
         350
       ],
       "credentials": {
@@ -276,7 +276,7 @@
       "type": "n8n-nodes-base.salesforce",
       "typeVersion": 1,
       "position": [
-        1100,
+        1260,
         500
       ],
       "credentials": {
@@ -326,7 +326,7 @@
       "type": "n8n-nodes-base.salesforce",
       "typeVersion": 1,
       "position": [
-        1250,
+        1410,
         500
       ],
       "credentials": {
@@ -344,7 +344,7 @@
       "type": "n8n-nodes-base.salesforce",
       "typeVersion": 1,
       "position": [
-        1400,
+        1710,
         500
       ],
       "credentials": {
@@ -360,7 +360,7 @@
       "type": "n8n-nodes-base.salesforce",
       "typeVersion": 1,
       "position": [
-        1550,
+        1860,
         500
       ],
       "credentials": {
@@ -380,7 +380,7 @@
       "type": "n8n-nodes-base.salesforce",
       "typeVersion": 1,
       "position": [
-        1700,
+        2140,
         500
       ],
       "credentials": {
@@ -397,12 +397,108 @@
       "type": "n8n-nodes-base.salesforce",
       "typeVersion": 1,
       "position": [
-        1850,
+        2290,
         500
       ],
       "credentials": {
         "salesforceOAuth2Api": "Salesforce OAuth2 API creds"
       }
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(500);\n\n// Output data\nreturn items;"
+      },
+      "name": "Sleep 0.5 second",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        650,
+        190
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(500);\n\n// Output data\nreturn items;"
+      },
+      "name": "Sleep 0.5 second1",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        1070,
+        190
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(500);\n\n// Output data\nreturn items;"
+      },
+      "name": "Sleep 0.5 second2",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        1510,
+        190
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(500);\n\n// Output data\nreturn items;"
+      },
+      "name": "Sleep 0.5 second3",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        3050,
+        350
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(500);\n\n// Output data\nreturn items;"
+      },
+      "name": "Sleep 0.5 second4",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        2620,
+        350
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(500);\n\n// Output data\nreturn items;"
+      },
+      "name": "Sleep 0.5 second5",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        1990,
+        500
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(500);\n\n// Output data\nreturn items;"
+      },
+      "name": "Sleep 0.5 second6",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        1580,
+        500
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(500);\n\n// Output data\nreturn items;"
+      },
+      "name": "Sleep 0.5 second7",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        1120,
+        500
+      ],
+      "typeVersion": 1
     }
   ],
   "connections": {
@@ -410,7 +506,7 @@
       "main": [
         [
           {
-            "node": "Salesforce1",
+            "node": "Sleep 0.5 second",
             "type": "main",
             "index": 0
           }
@@ -432,7 +528,7 @@
       "main": [
         [
           {
-            "node": "Salesforce3",
+            "node": "Sleep 0.5 second1",
             "type": "main",
             "index": 0
           }
@@ -454,7 +550,7 @@
       "main": [
         [
           {
-            "node": "Salesforce5",
+            "node": "Sleep 0.5 second2",
             "type": "main",
             "index": 0
           }
@@ -498,7 +594,7 @@
       "main": [
         [
           {
-            "node": "Salesforce10",
+            "node": "Sleep 0.5 second4",
             "type": "main",
             "index": 0
           }
@@ -520,7 +616,7 @@
       "main": [
         [
           {
-            "node": "Salesforce12",
+            "node": "Sleep 0.5 second3",
             "type": "main",
             "index": 0
           }
@@ -553,7 +649,7 @@
       "main": [
         [
           {
-            "node": "Salesforce14",
+            "node": "Sleep 0.5 second7",
             "type": "main",
             "index": 0
           }
@@ -575,7 +671,7 @@
       "main": [
         [
           {
-            "node": "Salesforce16",
+            "node": "Sleep 0.5 second6",
             "type": "main",
             "index": 0
           }
@@ -597,7 +693,7 @@
       "main": [
         [
           {
-            "node": "Salesforce18",
+            "node": "Sleep 0.5 second5",
             "type": "main",
             "index": 0
           }
@@ -641,10 +737,98 @@
           }
         ]
       ]
+    },
+    "Sleep 0.5 second": {
+      "main": [
+        [
+          {
+            "node": "Salesforce1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sleep 0.5 second1": {
+      "main": [
+        [
+          {
+            "node": "Salesforce3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sleep 0.5 second2": {
+      "main": [
+        [
+          {
+            "node": "Salesforce5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sleep 0.5 second3": {
+      "main": [
+        [
+          {
+            "node": "Salesforce12",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sleep 0.5 second4": {
+      "main": [
+        [
+          {
+            "node": "Salesforce10",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sleep 0.5 second5": {
+      "main": [
+        [
+          {
+            "node": "Salesforce18",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sleep 0.5 second6": {
+      "main": [
+        [
+          {
+            "node": "Salesforce16",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sleep 0.5 second7": {
+      "main": [
+        [
+          {
+            "node": "Salesforce14",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "createdAt": "2021-04-26T16:15:15.635Z",
-  "updatedAt": "2021-04-26T17:54:35.464Z",
+  "updatedAt": "2021-05-20T16:56:10.192Z",
   "settings": {},
   "staticData": null
 }
