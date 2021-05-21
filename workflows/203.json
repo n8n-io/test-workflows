@@ -161,18 +161,33 @@
         "resource": "payment",
         "operation": "reschedule",
         "paymentId": "={{$node[\"Paddle4\"].json[\"id\"]}}",
-        "date": "2021-05-14T08:53:54.000Z"
+        "date": "={{$node[\"Date & Time\"].json[\"data\"]}}"
       },
       "name": "Paddle8",
       "type": "n8n-nodes-base.paddle",
       "typeVersion": 1,
       "position": [
-        600,
+        760,
         80
       ],
       "credentials": {
         "paddleApi": "Paddle API sandbox creds"
       }
+    },
+    {
+      "parameters": {
+        "action": "calculate",
+        "value": "={{Date.now()}}",
+        "duration": 5,
+        "options": {}
+      },
+      "name": "Date & Time",
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 1,
+      "position": [
+        600,
+        80
+      ]
     }
   ],
   "connections": {
@@ -202,7 +217,7 @@
       "main": [
         [
           {
-            "node": "Paddle8",
+            "node": "Date & Time",
             "type": "main",
             "index": 0
           }
@@ -256,10 +271,21 @@
           }
         ]
       ]
+    },
+    "Date & Time": {
+      "main": [
+        [
+          {
+            "node": "Paddle8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "createdAt": "2021-05-12T10:06:38.839Z",
-  "updatedAt": "2021-05-14T08:55:35.145Z",
+  "updatedAt": "2021-05-21T12:45:16.069Z",
   "settings": {},
   "staticData": {
     "node:Clockify Trigger": {
