@@ -61,7 +61,7 @@
       "type": "n8n-nodes-base.salesforce",
       "typeVersion": 1,
       "position": [
-        930,
+        910,
         250
       ],
       "credentials": {
@@ -356,11 +356,6 @@
         ]
       ]
     },
-    "Salesforce2": {
-      "main": [
-        []
-      ]
-    },
     "Salesforce3": {
       "main": [
         [
@@ -535,10 +530,21 @@
           }
         ]
       ]
+    },
+    "Salesforce2": {
+      "main": [
+        [
+          {
+            "node": "Sleep 0.5 second1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "createdAt": "2021-04-26T17:42:22.794Z",
-  "updatedAt": "2021-05-20T16:32:00.755Z",
+  "updatedAt": "2021-05-21T12:39:59.740Z",
   "settings": {},
   "staticData": null
 }
