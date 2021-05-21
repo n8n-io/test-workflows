@@ -22,7 +22,7 @@
       "type": "n8n-nodes-base.dropbox",
       "typeVersion": 1,
       "position": [
-        600,
+        750,
         300
       ],
       "alwaysOutputData": true,
@@ -33,31 +33,15 @@
     },
     {
       "parameters": {
-        "resource": "folder",
-        "path": "=/uploadTest{{Date.now()}}"
-      },
-      "name": "Dropbox1",
-      "type": "n8n-nodes-base.dropbox",
-      "typeVersion": 1,
-      "position": [
-        300,
-        300
-      ],
-      "credentials": {
-        "dropboxApi": "Dropbox creds"
-      }
-    },
-    {
-      "parameters": {
         "operation": "move",
-        "path": "={{$node[\"Dropbox1\"].json[\"metadata\"][\"path_display\"]}}/testFile",
-        "toPath": "={{$node[\"Dropbox1\"].json[\"metadata\"][\"path_display\"]}}/moveTestFile{{Date.now()}}"
+        "path": "={{$node[\"Dropbox8\"].json[\"metadata\"][\"path_display\"]}}/testFile",
+        "toPath": "={{$node[\"Dropbox8\"].json[\"metadata\"][\"path_display\"]}}/moveTestFile{{Date.now()}}"
       },
       "name": "Dropbox2",
       "type": "n8n-nodes-base.dropbox",
       "typeVersion": 1,
       "position": [
-        760,
+        1050,
         300
       ],
       "alwaysOutputData": true,
@@ -69,13 +53,13 @@
       "parameters": {
         "operation": "copy",
         "path": "={{$json[\"metadata\"][\"path_display\"]}}",
-        "toPath": "={{$node[\"Dropbox1\"].json[\"metadata\"][\"path_display\"]}}/copiedTestFile"
+        "toPath": "={{$node[\"Dropbox8\"].json[\"metadata\"][\"path_display\"]}}/copiedTestFile"
       },
       "name": "Dropbox3",
       "type": "n8n-nodes-base.dropbox",
       "typeVersion": 1,
       "position": [
-        950,
+        1210,
         300
       ],
       "alwaysOutputData": true,
@@ -92,7 +76,7 @@
       "type": "n8n-nodes-base.dropbox",
       "typeVersion": 1,
       "position": [
-        1120,
+        1490,
         300
       ],
       "alwaysOutputData": true,
@@ -109,8 +93,8 @@
       "type": "n8n-nodes-base.dropbox",
       "typeVersion": 1,
       "position": [
-        910,
-        460
+        1210,
+        450
       ],
       "alwaysOutputData": true,
       "credentials": {
@@ -126,27 +110,10 @@
       "type": "n8n-nodes-base.dropbox",
       "typeVersion": 1,
       "position": [
-        1090,
-        460
+        1500,
+        450
       ],
       "alwaysOutputData": true,
-      "credentials": {
-        "dropboxApi": "Dropbox creds"
-      }
-    },
-    {
-      "parameters": {
-        "resource": "folder",
-        "operation": "delete",
-        "path": "={{$node[\"Dropbox1\"].json[\"metadata\"][\"path_display\"]}}"
-      },
-      "name": "Dropbox7",
-      "type": "n8n-nodes-base.dropbox",
-      "typeVersion": 1,
-      "position": [
-        1280,
-        400
-      ],
       "credentials": {
         "dropboxApi": "Dropbox creds"
       }
@@ -162,6 +129,163 @@
         450,
         300
       ]
+    },
+    {
+      "parameters": {
+        "resource": "folder",
+        "path": "=/testFolder{{Date.now()}}"
+      },
+      "name": "Dropbox8",
+      "type": "n8n-nodes-base.dropbox",
+      "typeVersion": 1,
+      "position": [
+        300,
+        130
+      ],
+      "credentials": {
+        "dropboxApi": "Dropbox creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "folder",
+        "operation": "list",
+        "path": "={{$node[\"Dropbox10\"].json[\"metadata\"][\"path_display\"]}}",
+        "limit": 1,
+        "filters": {
+          "include_deleted": true
+        }
+      },
+      "name": "Dropbox9",
+      "type": "n8n-nodes-base.dropbox",
+      "typeVersion": 1,
+      "position": [
+        2070,
+        150
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "dropboxApi": "Dropbox creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "folder",
+        "operation": "move",
+        "path": "={{$node[\"Dropbox8\"].json[\"metadata\"][\"path_display\"]}}",
+        "toPath": "={{$node[\"Dropbox8\"].json[\"metadata\"][\"path_display\"]}}Renamed"
+      },
+      "name": "Dropbox10",
+      "type": "n8n-nodes-base.dropbox",
+      "typeVersion": 1,
+      "position": [
+        1800,
+        150
+      ],
+      "credentials": {
+        "dropboxApi": "Dropbox creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "folder",
+        "operation": "delete",
+        "path": "={{$node[\"Dropbox10\"].json[\"metadata\"][\"path_display\"]}}"
+      },
+      "name": "Dropbox11",
+      "type": "n8n-nodes-base.dropbox",
+      "typeVersion": 1,
+      "position": [
+        2380,
+        150
+      ],
+      "credentials": {
+        "dropboxApi": "Dropbox creds"
+      }
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(800);\n\n// Output data\nreturn items;"
+      },
+      "name": "Sleep 0.8 seconds",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        600,
+        300
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(800);\n\n// Output data\nreturn items;"
+      },
+      "name": "Sleep 0.8 seconds1",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        900,
+        300
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(800);\n\n// Output data\nreturn items;"
+      },
+      "name": "Sleep 0.8 seconds2",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        1350,
+        300
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(800);\n\n// Output data\nreturn items;"
+      },
+      "name": "Sleep 0.8 seconds3",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        1350,
+        450
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(800);\n\n// Output data\nreturn items;"
+      },
+      "name": "Sleep 0.8 seconds4",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        2230,
+        150
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(800);\n\n// Output data\nreturn items;"
+      },
+      "name": "Sleep 0.8 seconds5",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        1930,
+        150
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(800);\n\n// Output data\nreturn items;"
+      },
+      "name": "Sleep 0.8 seconds6",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        1650,
+        450
+      ],
+      "typeVersion": 1
     }
   ],
   "connections": {
@@ -169,18 +293,7 @@
       "main": [
         [
           {
-            "node": "Dropbox1",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Dropbox1": {
-      "main": [
-        [
-          {
-            "node": "Read Binary File",
+            "node": "Dropbox8",
             "type": "main",
             "index": 0
           }
@@ -191,7 +304,7 @@
       "main": [
         [
           {
-            "node": "Dropbox2",
+            "node": "Sleep 0.8 seconds1",
             "type": "main",
             "index": 0
           }
@@ -218,7 +331,7 @@
       "main": [
         [
           {
-            "node": "Dropbox4",
+            "node": "Sleep 0.8 seconds2",
             "type": "main",
             "index": 0
           }
@@ -229,7 +342,7 @@
       "main": [
         [
           {
-            "node": "Dropbox6",
+            "node": "Sleep 0.8 seconds3",
             "type": "main",
             "index": 0
           }
@@ -240,7 +353,7 @@
       "main": [
         [
           {
-            "node": "Dropbox7",
+            "node": "Sleep 0.8 seconds6",
             "type": "main",
             "index": 0
           }
@@ -251,7 +364,117 @@
       "main": [
         [
           {
+            "node": "Sleep 0.8 seconds",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Dropbox8": {
+      "main": [
+        [
+          {
+            "node": "Read Binary File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Dropbox9": {
+      "main": [
+        [
+          {
+            "node": "Sleep 0.8 seconds4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Dropbox10": {
+      "main": [
+        [
+          {
+            "node": "Sleep 0.8 seconds5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sleep 0.8 seconds": {
+      "main": [
+        [
+          {
             "node": "Dropbox",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sleep 0.8 seconds1": {
+      "main": [
+        [
+          {
+            "node": "Dropbox2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sleep 0.8 seconds2": {
+      "main": [
+        [
+          {
+            "node": "Dropbox4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sleep 0.8 seconds3": {
+      "main": [
+        [
+          {
+            "node": "Dropbox6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sleep 0.8 seconds4": {
+      "main": [
+        [
+          {
+            "node": "Dropbox11",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sleep 0.8 seconds5": {
+      "main": [
+        [
+          {
+            "node": "Dropbox9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sleep 0.8 seconds6": {
+      "main": [
+        [
+          {
+            "node": "Dropbox10",
             "type": "main",
             "index": 0
           }
@@ -260,7 +483,7 @@
     }
   },
   "createdAt": "2021-02-16T10:16:46.803Z",
-  "updatedAt": "2021-03-02T09:17:33.943Z",
+  "updatedAt": "2021-05-20T15:21:14.466Z",
   "settings": {},
   "staticData": null
 }
