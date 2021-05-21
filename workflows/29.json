@@ -168,9 +168,9 @@
     },
     {
       "parameters": {
-        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(500);\n\n// Output data\nreturn items;"
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(800);\n\n// Output data\nreturn items;"
       },
-      "name": "Delay",
+      "name": "Sleep 8 Seconds",
       "type": "n8n-nodes-base.function",
       "position": [
         550,
@@ -180,9 +180,9 @@
     },
     {
       "parameters": {
-        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(500);\n\n// Output data\nreturn items;"
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(800);\n\n// Output data\nreturn items;"
       },
-      "name": "Delay1",
+      "name": "Sleep 8 Seconds1",
       "type": "n8n-nodes-base.function",
       "position": [
         810,
@@ -192,9 +192,9 @@
     },
     {
       "parameters": {
-        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(500);\n\n// Output data\nreturn items;"
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(800);\n\n// Output data\nreturn items;"
       },
-      "name": "Delay2",
+      "name": "Sleep 8 Seconds2",
       "type": "n8n-nodes-base.function",
       "position": [
         1100,
@@ -204,9 +204,9 @@
     },
     {
       "parameters": {
-        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(500);\n\n// Output data\nreturn items;"
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(800);\n\n// Output data\nreturn items;"
       },
-      "name": "Delay3",
+      "name": "Sleep 8 Seconds3",
       "type": "n8n-nodes-base.function",
       "position": [
         1370,
@@ -216,9 +216,9 @@
     },
     {
       "parameters": {
-        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(500);\n\n// Output data\nreturn items;"
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(800);\n\n// Output data\nreturn items;"
       },
-      "name": "Delay4",
+      "name": "Sleep 8 Seconds4",
       "type": "n8n-nodes-base.function",
       "position": [
         1670,
@@ -228,9 +228,9 @@
     },
     {
       "parameters": {
-        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(500);\n\n// Output data\nreturn items;"
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(800);\n\n// Output data\nreturn items;"
       },
-      "name": "Delay5",
+      "name": "Sleep 8 Seconds5",
       "type": "n8n-nodes-base.function",
       "position": [
         2000,
@@ -240,9 +240,9 @@
     },
     {
       "parameters": {
-        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(500);\n\n// Output data\nreturn items;"
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(800);\n\n// Output data\nreturn items;"
       },
-      "name": "Delay6",
+      "name": "Sleep 8 Seconds6",
       "type": "n8n-nodes-base.function",
       "position": [
         2270,
@@ -252,17 +252,6 @@
     }
   ],
   "connections": {
-    "ClickUp": {
-      "main": [
-        [
-          {
-            "node": "Delay",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
     "Start": {
       "main": [
         [
@@ -274,11 +263,22 @@
         ]
       ]
     },
+    "ClickUp": {
+      "main": [
+        [
+          {
+            "node": "Sleep 8 Seconds",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
     "ClickUp1": {
       "main": [
         [
           {
-            "node": "Delay1",
+            "node": "Sleep 8 Seconds1",
             "type": "main",
             "index": 0
           }
@@ -289,7 +289,7 @@
       "main": [
         [
           {
-            "node": "Delay2",
+            "node": "Sleep 8 Seconds2",
             "type": "main",
             "index": 0
           }
@@ -300,7 +300,7 @@
       "main": [
         [
           {
-            "node": "Delay3",
+            "node": "Sleep 8 Seconds3",
             "type": "main",
             "index": 0
           }
@@ -311,18 +311,7 @@
       "main": [
         [
           {
-            "node": "Delay4",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "ClickUp6": {
-      "main": [
-        [
-          {
-            "node": "Delay6",
+            "node": "Sleep 8 Seconds4",
             "type": "main",
             "index": 0
           }
@@ -333,14 +322,25 @@
       "main": [
         [
           {
-            "node": "Delay5",
+            "node": "Sleep 8 Seconds5",
             "type": "main",
             "index": 0
           }
         ]
       ]
     },
-    "Delay": {
+    "ClickUp6": {
+      "main": [
+        [
+          {
+            "node": "Sleep 8 Seconds6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sleep 8 Seconds": {
       "main": [
         [
           {
@@ -351,7 +351,7 @@
         ]
       ]
     },
-    "Delay1": {
+    "Sleep 8 Seconds1": {
       "main": [
         [
           {
@@ -362,7 +362,7 @@
         ]
       ]
     },
-    "Delay2": {
+    "Sleep 8 Seconds2": {
       "main": [
         [
           {
@@ -373,7 +373,7 @@
         ]
       ]
     },
-    "Delay3": {
+    "Sleep 8 Seconds3": {
       "main": [
         [
           {
@@ -384,7 +384,7 @@
         ]
       ]
     },
-    "Delay4": {
+    "Sleep 8 Seconds4": {
       "main": [
         [
           {
@@ -395,7 +395,7 @@
         ]
       ]
     },
-    "Delay5": {
+    "Sleep 8 Seconds5": {
       "main": [
         [
           {
@@ -406,7 +406,7 @@
         ]
       ]
     },
-    "Delay6": {
+    "Sleep 8 Seconds6": {
       "main": [
         [
           {
@@ -419,7 +419,7 @@
     }
   },
   "createdAt": "2021-02-17T11:06:49.772Z",
-  "updatedAt": "2021-03-15T15:22:50.638Z",
+  "updatedAt": "2021-05-21T11:22:04.303Z",
   "settings": {},
   "staticData": null
 }
