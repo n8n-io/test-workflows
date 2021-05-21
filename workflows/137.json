@@ -47,7 +47,7 @@
       "type": "n8n-nodes-base.theHive",
       "typeVersion": 1,
       "position": [
-        600,
+        750,
         300
       ],
       "credentials": {
@@ -63,7 +63,7 @@
       "type": "n8n-nodes-base.theHive",
       "typeVersion": 1,
       "position": [
-        750,
+        900,
         300
       ],
       "credentials": {
@@ -81,7 +81,7 @@
       "type": "n8n-nodes-base.theHive",
       "typeVersion": 1,
       "position": [
-        900,
+        1180,
         300
       ],
       "credentials": {
@@ -98,7 +98,7 @@
       "type": "n8n-nodes-base.theHive",
       "typeVersion": 1,
       "position": [
-        1050,
+        1330,
         300
       ],
       "credentials": {
@@ -115,7 +115,7 @@
       "type": "n8n-nodes-base.theHive",
       "typeVersion": 1,
       "position": [
-        750,
+        940,
         150
       ],
       "credentials": {
@@ -174,7 +174,7 @@
       "type": "n8n-nodes-base.theHive",
       "typeVersion": 1,
       "position": [
-        750,
+        910,
         600
       ],
       "credentials": {
@@ -192,7 +192,7 @@
       "type": "n8n-nodes-base.theHive",
       "typeVersion": 1,
       "position": [
-        900,
+        1060,
         600
       ],
       "credentials": {
@@ -210,7 +210,7 @@
       "type": "n8n-nodes-base.theHive",
       "typeVersion": 1,
       "position": [
-        1050,
+        1210,
         600
       ],
       "credentials": {
@@ -266,7 +266,7 @@
       "type": "n8n-nodes-base.theHive",
       "typeVersion": 1,
       "position": [
-        900,
+        1050,
         770
       ],
       "credentials": {
@@ -285,7 +285,7 @@
       "type": "n8n-nodes-base.theHive",
       "typeVersion": 1,
       "position": [
-        1050,
+        1370,
         770
       ],
       "credentials": {
@@ -323,7 +323,7 @@
       "type": "n8n-nodes-base.theHive",
       "typeVersion": 1,
       "position": [
-        900,
+        1050,
         930
       ],
       "credentials": {
@@ -340,7 +340,7 @@
       "type": "n8n-nodes-base.theHive",
       "typeVersion": 1,
       "position": [
-        1050,
+        1200,
         930
       ],
       "credentials": {
@@ -384,7 +384,7 @@
       "type": "n8n-nodes-base.theHive",
       "typeVersion": 1,
       "position": [
-        750,
+        910,
         450
       ],
       "credentials": {
@@ -401,7 +401,7 @@
       "type": "n8n-nodes-base.theHive",
       "typeVersion": 1,
       "position": [
-        900,
+        1060,
         450
       ],
       "credentials": {
@@ -420,7 +420,7 @@
       "type": "n8n-nodes-base.theHive",
       "typeVersion": 1,
       "position": [
-        1050,
+        1360,
         450
       ],
       "credentials": {
@@ -438,7 +438,7 @@
       "type": "n8n-nodes-base.theHive",
       "typeVersion": 1,
       "position": [
-        1200,
+        1540,
         450
       ],
       "credentials": {
@@ -455,7 +455,7 @@
       "type": "n8n-nodes-base.theHive",
       "typeVersion": 1,
       "position": [
-        1240,
+        1510,
         300
       ],
       "credentials": {
@@ -476,7 +476,7 @@
       "type": "n8n-nodes-base.theHive",
       "typeVersion": 1,
       "position": [
-        1350,
+        1720,
         450
       ],
       "credentials": {
@@ -494,7 +494,7 @@
       "type": "n8n-nodes-base.theHive",
       "typeVersion": 1,
       "position": [
-        1540,
+        1880,
         450
       ],
       "credentials": {
@@ -512,7 +512,7 @@
       "type": "n8n-nodes-base.theHive",
       "typeVersion": 1,
       "position": [
-        1200,
+        1520,
         770
       ],
       "credentials": {
@@ -530,7 +530,7 @@
       "type": "n8n-nodes-base.theHive",
       "typeVersion": 1,
       "position": [
-        1350,
+        1690,
         770
       ],
       "credentials": {
@@ -547,7 +547,7 @@
       "type": "n8n-nodes-base.theHive",
       "typeVersion": 1,
       "position": [
-        1200,
+        1350,
         930
       ],
       "credentials": {
@@ -592,12 +592,120 @@
       "type": "n8n-nodes-base.theHive",
       "typeVersion": 1,
       "position": [
-        600,
+        790,
         150
       ],
       "credentials": {
         "theHiveApi": "The Hive API creds"
       }
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(500);\n\n// Output data\nreturn items;"
+      },
+      "name": "Sleep 0.5 second",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        610,
+        150
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(500);\n\n// Output data\nreturn items;"
+      },
+      "name": "Sleep 0.5 second1",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        610,
+        300
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(500);\n\n// Output data\nreturn items;"
+      },
+      "name": "Sleep 0.5 second2",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        1060,
+        300
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(500);\n\n// Output data\nreturn items;"
+      },
+      "name": "Sleep 0.5 second3",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        760,
+        450
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(500);\n\n// Output data\nreturn items;"
+      },
+      "name": "Sleep 0.5 second4",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        1210,
+        450
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(500);\n\n// Output data\nreturn items;"
+      },
+      "name": "Sleep 0.5 second5",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        750,
+        600
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(500);\n\n// Output data\nreturn items;"
+      },
+      "name": "Sleep 0.5 second6",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        900,
+        770
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(500);\n\n// Output data\nreturn items;"
+      },
+      "name": "Sleep 0.5 second7",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        900,
+        930
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(500);\n\n// Output data\nreturn items;"
+      },
+      "name": "Sleep 0.5 second8",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        1200,
+        770
+      ],
+      "typeVersion": 1
     }
   ],
   "connections": {
@@ -605,7 +713,7 @@
       "main": [
         [
           {
-            "node": "TheHive1",
+            "node": "Sleep 0.5 second1",
             "type": "main",
             "index": 0
           }
@@ -627,12 +735,12 @@
       "main": [
         [
           {
-            "node": "TheHive3",
+            "node": "TheHive15",
             "type": "main",
             "index": 0
           },
           {
-            "node": "TheHive15",
+            "node": "Sleep 0.5 second2",
             "type": "main",
             "index": 0
           }
@@ -675,7 +783,7 @@
       "main": [
         [
           {
-            "node": "TheHive8",
+            "node": "Sleep 0.5 second5",
             "type": "main",
             "index": 0
           }
@@ -718,7 +826,7 @@
       "main": [
         [
           {
-            "node": "TheHive13",
+            "node": "Sleep 0.5 second6",
             "type": "main",
             "index": 0
           }
@@ -729,12 +837,12 @@
       "main": [
         [
           {
-            "node": "TheHive14",
+            "node": "TheHive27",
             "type": "main",
             "index": 0
           },
           {
-            "node": "TheHive27",
+            "node": "Sleep 0.5 second8",
             "type": "main",
             "index": 0
           }
@@ -745,7 +853,7 @@
       "main": [
         [
           {
-            "node": "TheHive17",
+            "node": "Sleep 0.5 second7",
             "type": "main",
             "index": 0
           }
@@ -772,7 +880,7 @@
       "main": [
         [
           {
-            "node": "TheHive20",
+            "node": "Sleep 0.5 second3",
             "type": "main",
             "index": 0
           }
@@ -794,17 +902,17 @@
       "main": [
         [
           {
-            "node": "TheHive22",
-            "type": "main",
-            "index": 0
-          },
-          {
             "node": "TheHive24",
             "type": "main",
             "index": 0
           },
           {
             "node": "TheHive25",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Sleep 0.5 second4",
             "type": "main",
             "index": 0
           }
@@ -854,16 +962,6 @@
         ]
       ]
     },
-    "TheHive26": {
-      "main": [
-        []
-      ]
-    },
-    "TheHive18": {
-      "main": [
-        []
-      ]
-    },
     "TheHive30": {
       "main": [
         [
@@ -879,6 +977,17 @@
       "main": [
         [
           {
+            "node": "Sleep 0.5 second",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sleep 0.5 second": {
+      "main": [
+        [
+          {
             "node": "TheHive30",
             "type": "main",
             "index": 0
@@ -886,19 +995,97 @@
         ]
       ]
     },
-    "TheHive23": {
+    "Sleep 0.5 second1": {
       "main": [
-        []
+        [
+          {
+            "node": "TheHive1",
+            "type": "main",
+            "index": 0
+          }
+        ]
       ]
     },
-    "TheHive9": {
+    "Sleep 0.5 second2": {
       "main": [
-        []
+        [
+          {
+            "node": "TheHive3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sleep 0.5 second3": {
+      "main": [
+        [
+          {
+            "node": "TheHive20",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sleep 0.5 second4": {
+      "main": [
+        [
+          {
+            "node": "TheHive22",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sleep 0.5 second5": {
+      "main": [
+        [
+          {
+            "node": "TheHive8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sleep 0.5 second6": {
+      "main": [
+        [
+          {
+            "node": "TheHive13",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sleep 0.5 second7": {
+      "main": [
+        [
+          {
+            "node": "TheHive17",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sleep 0.5 second8": {
+      "main": [
+        [
+          {
+            "node": "TheHive14",
+            "type": "main",
+            "index": 0
+          }
+        ]
       ]
     }
   },
   "createdAt": "2021-03-16T15:47:37.279Z",
-  "updatedAt": "2021-04-08T09:50:44.290Z",
+  "updatedAt": "2021-05-21T09:19:02.974Z",
   "settings": {},
   "staticData": null
 }
