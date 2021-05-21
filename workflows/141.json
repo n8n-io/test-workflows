@@ -42,7 +42,7 @@
       "type": "n8n-nodes-base.microsoftExcel",
       "typeVersion": 1,
       "position": [
-        650,
+        790,
         300
       ],
       "credentials": {
@@ -81,7 +81,7 @@
       "type": "n8n-nodes-base.microsoftExcel",
       "typeVersion": 1,
       "position": [
-        650,
+        790,
         450
       ],
       "credentials": {
@@ -123,7 +123,7 @@
       "type": "n8n-nodes-base.microsoftExcel",
       "typeVersion": 1,
       "position": [
-        650,
+        800,
         150
       ],
       "credentials": {
@@ -143,7 +143,7 @@
       "type": "n8n-nodes-base.microsoftExcel",
       "typeVersion": 1,
       "position": [
-        800,
+        1100,
         150
       ],
       "credentials": {
@@ -162,7 +162,7 @@
       "type": "n8n-nodes-base.microsoftExcel",
       "typeVersion": 1,
       "position": [
-        1100,
+        1400,
         150
       ],
       "credentials": {
@@ -171,8 +171,18 @@
     },
     {
       "parameters": {
+        "keepOnlySet": true,
         "values": {
-          "string": [],
+          "string": [
+            {
+              "name": "Column3",
+              "value": "={{Date.now().toString().substr(6)}}"
+            },
+            {
+              "name": "Column4",
+              "value": "={{Date.now().toString().substr(3)}}"
+            }
+          ],
           "number": [
             {
               "name": "t",
@@ -198,9 +208,57 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 1,
       "position": [
-        950,
+        1250,
         150
       ]
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(800);\n\n// Output data\nreturn items;"
+      },
+      "name": "Sleep 0.8 second",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        650,
+        450
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(800);\n\n// Output data\nreturn items;"
+      },
+      "name": "Sleep 0.8 second1",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        650,
+        300
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(800);\n\n// Output data\nreturn items;"
+      },
+      "name": "Sleep 0.8 second2",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        650,
+        150
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(800);\n\n// Output data\nreturn items;"
+      },
+      "name": "Sleep 0.8 second3",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        950,
+        150
+      ],
+      "typeVersion": 1
     }
   ],
   "connections": {
@@ -208,7 +266,7 @@
       "main": [
         [
           {
-            "node": "Microsoft Excel1",
+            "node": "Sleep 0.8 second1",
             "type": "main",
             "index": 0
           }
@@ -219,7 +277,7 @@
       "main": [
         [
           {
-            "node": "Microsoft Excel3",
+            "node": "Sleep 0.8 second",
             "type": "main",
             "index": 0
           }
@@ -251,7 +309,7 @@
       "main": [
         [
           {
-            "node": "Microsoft Excel5",
+            "node": "Sleep 0.8 second2",
             "type": "main",
             "index": 0
           }
@@ -262,16 +320,11 @@
       "main": [
         [
           {
-            "node": "Microsoft Excel6",
+            "node": "Sleep 0.8 second3",
             "type": "main",
             "index": 0
           }
         ]
-      ]
-    },
-    "Microsoft Excel7": {
-      "main": [
-        []
       ]
     },
     "Microsoft Excel6": {
@@ -295,10 +348,54 @@
           }
         ]
       ]
+    },
+    "Sleep 0.8 second": {
+      "main": [
+        [
+          {
+            "node": "Microsoft Excel3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sleep 0.8 second1": {
+      "main": [
+        [
+          {
+            "node": "Microsoft Excel1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sleep 0.8 second2": {
+      "main": [
+        [
+          {
+            "node": "Microsoft Excel5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sleep 0.8 second3": {
+      "main": [
+        [
+          {
+            "node": "Microsoft Excel6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "createdAt": "2021-03-19T10:44:59.685Z",
-  "updatedAt": "2021-03-19T13:23:03.320Z",
+  "updatedAt": "2021-05-21T10:01:36.962Z",
   "settings": {},
   "staticData": null
 }

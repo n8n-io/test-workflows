@@ -40,7 +40,7 @@
       "type": "n8n-nodes-base.microsoftOneDrive",
       "typeVersion": 1,
       "position": [
-        1710,
+        2410,
         300
       ],
       "alwaysOutputData": true,
@@ -58,7 +58,7 @@
       "type": "n8n-nodes-base.microsoftOneDrive",
       "typeVersion": 1,
       "position": [
-        2000,
+        2850,
         150
       ],
       "alwaysOutputData": true,
@@ -78,7 +78,7 @@
       "type": "n8n-nodes-base.microsoftOneDrive",
       "typeVersion": 1,
       "position": [
-        1860,
+        2560,
         300
       ],
       "alwaysOutputData": true,
@@ -96,7 +96,7 @@
       "type": "n8n-nodes-base.microsoftOneDrive",
       "typeVersion": 1,
       "position": [
-        650,
+        770,
         450
       ],
       "credentials": {
@@ -112,7 +112,7 @@
       "type": "n8n-nodes-base.microsoftOneDrive",
       "typeVersion": 1,
       "position": [
-        800,
+        1070,
         450
       ],
       "credentials": {
@@ -130,7 +130,7 @@
       "type": "n8n-nodes-base.microsoftOneDrive",
       "typeVersion": 1,
       "position": [
-        950,
+        1220,
         450
       ],
       "credentials": {
@@ -146,7 +146,7 @@
       "type": "n8n-nodes-base.microsoftOneDrive",
       "typeVersion": 1,
       "position": [
-        1550,
+        2120,
         450
       ],
       "alwaysOutputData": true,
@@ -163,7 +163,7 @@
       "type": "n8n-nodes-base.microsoftOneDrive",
       "typeVersion": 1,
       "position": [
-        1100,
+        1520,
         450
       ],
       "alwaysOutputData": true,
@@ -187,7 +187,7 @@
       "type": "n8n-nodes-base.microsoftOneDrive",
       "typeVersion": 1,
       "position": [
-        1250,
+        1670,
         450
       ],
       "credentials": {
@@ -203,7 +203,7 @@
       "type": "n8n-nodes-base.microsoftOneDrive",
       "typeVersion": 1,
       "position": [
-        1400,
+        1970,
         450
       ],
       "credentials": {
@@ -220,13 +220,85 @@
       "type": "n8n-nodes-base.microsoftOneDrive",
       "typeVersion": 1,
       "position": [
-        2000,
+        2850,
         300
       ],
       "alwaysOutputData": true,
       "credentials": {
         "microsoftOneDriveOAuth2Api": "Microsoft Drive OAuth2 creds"
       }
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(800);\n\n// Output data\nreturn items;"
+      },
+      "name": "Sleep 0.8 second",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        2700,
+        300
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(800);\n\n// Output data\nreturn items;"
+      },
+      "name": "Sleep 0.8 second1",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        2280,
+        300
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(800);\n\n// Output data\nreturn items;"
+      },
+      "name": "Sleep 0.8 second2",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        1820,
+        450
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(800);\n\n// Output data\nreturn items;"
+      },
+      "name": "Sleep 0.8 second3",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        1370,
+        450
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(800);\n\n// Output data\nreturn items;"
+      },
+      "name": "Sleep 0.8 second4",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        920,
+        450
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(800);\n\n// Output data\nreturn items;"
+      },
+      "name": "Sleep 0.8 second5",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        650,
+        450
+      ],
+      "typeVersion": 1
     }
   ],
   "connections": {
@@ -234,7 +306,7 @@
       "main": [
         [
           {
-            "node": "Microsoft OneDrive4",
+            "node": "Sleep 0.8 second5",
             "type": "main",
             "index": 0
           }
@@ -256,12 +328,7 @@
       "main": [
         [
           {
-            "node": "Microsoft OneDrive11",
-            "type": "main",
-            "index": 0
-          },
-          {
-            "node": "Microsoft OneDrive2",
+            "node": "Sleep 0.8 second",
             "type": "main",
             "index": 0
           }
@@ -272,7 +339,7 @@
       "main": [
         [
           {
-            "node": "Microsoft OneDrive5",
+            "node": "Sleep 0.8 second4",
             "type": "main",
             "index": 0
           }
@@ -294,7 +361,7 @@
       "main": [
         [
           {
-            "node": "Microsoft OneDrive8",
+            "node": "Sleep 0.8 second3",
             "type": "main",
             "index": 0
           }
@@ -305,7 +372,7 @@
       "main": [
         [
           {
-            "node": "Microsoft OneDrive1",
+            "node": "Sleep 0.8 second1",
             "type": "main",
             "index": 0
           }
@@ -327,7 +394,7 @@
       "main": [
         [
           {
-            "node": "Microsoft OneDrive10",
+            "node": "Sleep 0.8 second2",
             "type": "main",
             "index": 0
           }
@@ -356,19 +423,80 @@
         ]
       ]
     },
-    "Microsoft OneDrive2": {
+    "Sleep 0.8 second": {
       "main": [
-        []
+        [
+          {
+            "node": "Microsoft OneDrive11",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Microsoft OneDrive2",
+            "type": "main",
+            "index": 0
+          }
+        ]
       ]
     },
-    "Microsoft OneDrive11": {
+    "Sleep 0.8 second1": {
       "main": [
-        []
+        [
+          {
+            "node": "Microsoft OneDrive1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sleep 0.8 second2": {
+      "main": [
+        [
+          {
+            "node": "Microsoft OneDrive10",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sleep 0.8 second3": {
+      "main": [
+        [
+          {
+            "node": "Microsoft OneDrive8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sleep 0.8 second4": {
+      "main": [
+        [
+          {
+            "node": "Microsoft OneDrive5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sleep 0.8 second5": {
+      "main": [
+        [
+          {
+            "node": "Microsoft OneDrive4",
+            "type": "main",
+            "index": 0
+          }
+        ]
       ]
     }
   },
   "createdAt": "2021-03-01T10:15:48.446Z",
-  "updatedAt": "2021-04-23T13:45:19.671Z",
+  "updatedAt": "2021-05-21T10:01:34.628Z",
   "settings": {},
   "staticData": null
 }
