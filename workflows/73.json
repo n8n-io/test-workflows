@@ -25,7 +25,7 @@
       "type": "n8n-nodes-base.youTube",
       "typeVersion": 1,
       "position": [
-        650,
+        800,
         300
       ],
       "credentials": {
@@ -66,7 +66,7 @@
       "type": "n8n-nodes-base.youTube",
       "typeVersion": 1,
       "position": [
-        800,
+        950,
         300
       ],
       "credentials": {
@@ -82,7 +82,7 @@
       "type": "n8n-nodes-base.youTube",
       "typeVersion": 1,
       "position": [
-        1100,
+        1250,
         300
       ],
       "credentials": {
@@ -120,7 +120,7 @@
       "type": "n8n-nodes-base.youTube",
       "typeVersion": 1,
       "position": [
-        650,
+        800,
         450
       ],
       "credentials": {
@@ -138,45 +138,10 @@
       "type": "n8n-nodes-base.youTube",
       "typeVersion": 1,
       "position": [
-        1410,
+        1860,
         450
       ],
-      "credentials": {
-        "youTubeOAuth2Api": "YouTube OAuth2 creds"
-      }
-    },
-    {
-      "parameters": {
-        "resource": "playlist",
-        "operation": "get",
-        "playlistId": "={{$node[\"YouTube4\"].json[\"id\"]}}",
-        "options": {}
-      },
-      "name": "YouTube7",
-      "type": "n8n-nodes-base.youTube",
-      "typeVersion": 1,
-      "position": [
-        1560,
-        450
-      ],
-      "credentials": {
-        "youTubeOAuth2Api": "YouTube OAuth2 creds"
-      }
-    },
-    {
-      "parameters": {
-        "resource": "playlist",
-        "operation": "delete",
-        "playlistId": "={{$node[\"YouTube4\"].json[\"id\"]}}",
-        "options": {}
-      },
-      "name": "YouTube8",
-      "type": "n8n-nodes-base.youTube",
-      "typeVersion": 1,
-      "position": [
-        1710,
-        450
-      ],
+      "alwaysOutputData": true,
       "credentials": {
         "youTubeOAuth2Api": "YouTube OAuth2 creds"
       }
@@ -192,7 +157,7 @@
       "type": "n8n-nodes-base.youTube",
       "typeVersion": 1,
       "position": [
-        800,
+        950,
         550
       ],
       "credentials": {
@@ -216,7 +181,7 @@
       "type": "n8n-nodes-base.youTube",
       "typeVersion": 1,
       "position": [
-        950,
+        1250,
         550
       ],
       "credentials": {
@@ -239,7 +204,7 @@
       "type": "n8n-nodes-base.youTube",
       "typeVersion": 1,
       "position": [
-        1100,
+        1400,
         550
       ],
       "credentials": {
@@ -257,7 +222,7 @@
       "type": "n8n-nodes-base.youTube",
       "typeVersion": 1,
       "position": [
-        1250,
+        1700,
         550
       ],
       "credentials": {
@@ -298,7 +263,7 @@
       "type": "n8n-nodes-base.youTube",
       "typeVersion": 1,
       "position": [
-        650,
+        800,
         800
       ],
       "credentials": {
@@ -318,7 +283,7 @@
       "type": "n8n-nodes-base.youTube",
       "typeVersion": 1,
       "position": [
-        950,
+        1250,
         800
       ],
       "credentials": {
@@ -335,7 +300,7 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 1,
       "position": [
-        800,
+        950,
         800
       ]
     },
@@ -353,7 +318,7 @@
       "type": "n8n-nodes-base.youTube",
       "typeVersion": 1,
       "position": [
-        1100,
+        1400,
         800
       ],
       "credentials": {
@@ -371,7 +336,7 @@
       "type": "n8n-nodes-base.youTube",
       "typeVersion": 1,
       "position": [
-        1250,
+        1690,
         800
       ],
       "credentials": {
@@ -403,9 +368,112 @@
       "type": "n8n-nodes-base.readBinaryFile",
       "typeVersion": 1,
       "position": [
-        950,
+        1100,
         300
-      ]
+      ],
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(500);\n\n// Output data\nreturn items;"
+      },
+      "name": "Sleep 0.5 second",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        650,
+        300
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(500);\n\n// Output data\nreturn items;"
+      },
+      "name": "Sleep 0.5 second1",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        650,
+        450
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(500);\n\n// Output data\nreturn items;"
+      },
+      "name": "Sleep 0.5 second2",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        1100,
+        550
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(500);\n\n// Output data\nreturn items;"
+      },
+      "name": "Sleep 0.5 second3",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        1550,
+        550
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(500);\n\n// Output data\nreturn items;"
+      },
+      "name": "Sleep 0.5 second4",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        650,
+        800
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(500);\n\n// Output data\nreturn items;"
+      },
+      "name": "Sleep 0.5 second5",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        1110,
+        800
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(500);\n\n// Output data\nreturn items;"
+      },
+      "name": "Sleep 0.5 second6",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        1550,
+        800
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "resource": "playlist",
+        "operation": "delete",
+        "playlistId": "={{$node[\"YouTube4\"].json[\"id\"]}}",
+        "options": {}
+      },
+      "name": "YouTube7",
+      "type": "n8n-nodes-base.youTube",
+      "typeVersion": 1,
+      "position": [
+        2030,
+        450
+      ],
+      "credentials": {
+        "youTubeOAuth2Api": "YouTube OAuth2 creds"
+      }
     }
   ],
   "connections": {
@@ -424,7 +492,7 @@
       "main": [
         [
           {
-            "node": "YouTube",
+            "node": "Sleep 0.5 second",
             "type": "main",
             "index": 0
           }
@@ -435,7 +503,7 @@
       "main": [
         [
           {
-            "node": "YouTube5",
+            "node": "Sleep 0.5 second1",
             "type": "main",
             "index": 0
           }
@@ -458,17 +526,6 @@
         [
           {
             "node": "YouTube7",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "YouTube7": {
-      "main": [
-        [
-          {
-            "node": "YouTube8",
             "type": "main",
             "index": 0
           }
@@ -505,7 +562,7 @@
       "main": [
         [
           {
-            "node": "YouTube10",
+            "node": "Sleep 0.5 second2",
             "type": "main",
             "index": 0
           }
@@ -527,7 +584,7 @@
       "main": [
         [
           {
-            "node": "YouTube12",
+            "node": "Sleep 0.5 second3",
             "type": "main",
             "index": 0
           }
@@ -549,7 +606,7 @@
       "main": [
         [
           {
-            "node": "YouTube14",
+            "node": "Sleep 0.5 second4",
             "type": "main",
             "index": 0
           }
@@ -560,7 +617,7 @@
       "main": [
         [
           {
-            "node": "YouTube15",
+            "node": "Sleep 0.5 second5",
             "type": "main",
             "index": 0
           }
@@ -593,7 +650,7 @@
       "main": [
         [
           {
-            "node": "YouTube17",
+            "node": "Sleep 0.5 second6",
             "type": "main",
             "index": 0
           }
@@ -621,10 +678,87 @@
           }
         ]
       ]
+    },
+    "Sleep 0.5 second": {
+      "main": [
+        [
+          {
+            "node": "YouTube",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sleep 0.5 second1": {
+      "main": [
+        [
+          {
+            "node": "YouTube5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sleep 0.5 second2": {
+      "main": [
+        [
+          {
+            "node": "YouTube10",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sleep 0.5 second3": {
+      "main": [
+        [
+          {
+            "node": "YouTube12",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sleep 0.5 second4": {
+      "main": [
+        [
+          {
+            "node": "YouTube14",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sleep 0.5 second5": {
+      "main": [
+        [
+          {
+            "node": "YouTube15",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sleep 0.5 second6": {
+      "main": [
+        [
+          {
+            "node": "YouTube17",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "createdAt": "2021-02-25T15:49:55.037Z",
-  "updatedAt": "2021-02-25T16:12:39.833Z",
+  "updatedAt": "2021-05-21T11:32:32.770Z",
   "settings": {},
   "staticData": null
 }
