@@ -1,6 +1,6 @@
 {
   "id": 129,
-  "name": "NextCloud:NextCloud:Folder:create move copy delete list:File:upload move copy download delete:User:create get getAll update delete",
+  "name": "NextCloud:NextCloud:Folder:create move copy delete list:File:upload move copy download delete",
   "active": false,
   "nodes": [
     {
@@ -9,8 +9,8 @@
       "type": "n8n-nodes-base.start",
       "typeVersion": 1,
       "position": [
-        250,
-        300
+        1120,
+        250
       ]
     },
     {
@@ -23,9 +23,10 @@
       "type": "n8n-nodes-base.nextCloud",
       "typeVersion": 1,
       "position": [
-        600,
-        300
+        1470,
+        250
       ],
+      "alwaysOutputData": true,
       "credentials": {
         "nextCloudOAuth2Api": "NextCloud OAuth2 API creds"
       }
@@ -42,8 +43,8 @@
       "type": "n8n-nodes-base.nextCloud",
       "typeVersion": 1,
       "position": [
-        750,
-        300
+        1770,
+        250
       ],
       "credentials": {
         "nextCloudOAuth2Api": "NextCloud OAuth2 API creds"
@@ -65,8 +66,8 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 1,
       "position": [
-        400,
-        300
+        1270,
+        250
       ]
     },
     {
@@ -81,8 +82,8 @@
       "type": "n8n-nodes-base.nextCloud",
       "typeVersion": 1,
       "position": [
-        900,
-        300
+        2070,
+        250
       ],
       "credentials": {
         "nextCloudOAuth2Api": "NextCloud OAuth2 API creds"
@@ -99,8 +100,8 @@
       "type": "n8n-nodes-base.nextCloud",
       "typeVersion": 1,
       "position": [
-        1050,
-        300
+        2220,
+        250
       ],
       "credentials": {
         "nextCloudOAuth2Api": "NextCloud OAuth2 API creds"
@@ -117,8 +118,8 @@
       "type": "n8n-nodes-base.nextCloud",
       "typeVersion": 1,
       "position": [
-        2250,
-        290
+        4000,
+        240
       ],
       "credentials": {
         "nextCloudOAuth2Api": "NextCloud OAuth2 API creds"
@@ -135,8 +136,8 @@
       "type": "n8n-nodes-base.nextCloud",
       "typeVersion": 1,
       "position": [
-        2400,
-        290
+        4000,
+        400
       ],
       "credentials": {
         "nextCloudOAuth2Api": "NextCloud OAuth2 API creds"
@@ -152,8 +153,8 @@
       "type": "n8n-nodes-base.nextCloud",
       "typeVersion": 1,
       "position": [
-        1510,
-        350
+        2820,
+        300
       ],
       "credentials": {
         "nextCloudOAuth2Api": "NextCloud OAuth2 API creds"
@@ -176,8 +177,8 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 1,
       "position": [
-        1210,
-        350
+        2520,
+        300
       ]
     },
     {
@@ -188,8 +189,8 @@
       "type": "n8n-nodes-base.readBinaryFile",
       "typeVersion": 1,
       "position": [
-        1360,
-        350
+        2670,
+        300
       ]
     },
     {
@@ -203,8 +204,8 @@
       "type": "n8n-nodes-base.nextCloud",
       "typeVersion": 1,
       "position": [
-        1660,
-        350
+        3120,
+        300
       ],
       "credentials": {
         "nextCloudOAuth2Api": "NextCloud OAuth2 API creds"
@@ -221,8 +222,8 @@
       "type": "n8n-nodes-base.nextCloud",
       "typeVersion": 1,
       "position": [
-        1810,
-        350
+        3270,
+        300
       ],
       "credentials": {
         "nextCloudOAuth2Api": "NextCloud OAuth2 API creds"
@@ -238,8 +239,8 @@
       "type": "n8n-nodes-base.nextCloud",
       "typeVersion": 1,
       "position": [
-        1960,
-        350
+        3570,
+        300
       ],
       "credentials": {
         "nextCloudOAuth2Api": "NextCloud OAuth2 API creds"
@@ -255,8 +256,8 @@
       "type": "n8n-nodes-base.nextCloud",
       "typeVersion": 1,
       "position": [
-        2110,
-        350
+        3720,
+        300
       ],
       "credentials": {
         "nextCloudOAuth2Api": "NextCloud OAuth2 API creds"
@@ -275,8 +276,8 @@
       "type": "n8n-nodes-base.nextCloud",
       "typeVersion": 1,
       "position": [
-        400,
-        500
+        1270,
+        450
       ],
       "credentials": {
         "nextCloudApi": "NextCloud API creds"
@@ -292,8 +293,8 @@
       "type": "n8n-nodes-base.nextCloud",
       "typeVersion": 1,
       "position": [
-        550,
-        500
+        1570,
+        450
       ],
       "credentials": {
         "nextCloudApi": "NextCloud API creds"
@@ -303,16 +304,15 @@
       "parameters": {
         "resource": "user",
         "operation": "getAll",
-        "options": {
-          "limit": 1
-        }
+        "limit": 1,
+        "options": {}
       },
       "name": "Nextcloud13",
       "type": "n8n-nodes-base.nextCloud",
       "typeVersion": 1,
       "position": [
-        700,
-        500
+        1720,
+        450
       ],
       "credentials": {
         "nextCloudApi": "NextCloud API creds"
@@ -323,10 +323,10 @@
         "resource": "user",
         "operation": "update",
         "userId": "={{$node[\"Nextcloud11\"].json[\"id\"]}}",
-        "options": {
-          "option": {
+        "updateFields": {
+          "field": {
             "key": "website",
-            "value": "http://n8n.io"
+            "value": "http://community.n8n.io"
           }
         }
       },
@@ -334,8 +334,8 @@
       "type": "n8n-nodes-base.nextCloud",
       "typeVersion": 1,
       "position": [
-        850,
-        500
+        2020,
+        450
       ],
       "credentials": {
         "nextCloudApi": "NextCloud API creds"
@@ -351,20 +351,132 @@
       "type": "n8n-nodes-base.nextCloud",
       "typeVersion": 1,
       "position": [
-        1000,
-        500
+        2170,
+        450
       ],
       "credentials": {
         "nextCloudApi": "NextCloud API creds"
       }
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(800);\n\n// Output data\nreturn items;"
+      },
+      "name": "Sleep 8 Seconds",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        1420,
+        450
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(800);\n\n// Output data\nreturn items;"
+      },
+      "name": "Sleep 8 Seconds1",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        1870,
+        450
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(800);\n\n// Output data\nreturn [{json:{}}];"
+      },
+      "name": "Sleep 8 Seconds2",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        3860,
+        240
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(800);\n\n// Output data\nreturn [{json:{}}];"
+      },
+      "name": "Sleep 8 Seconds3",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        3420,
+        300
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(800);\n\n// Output data\nreturn [{json:{}}];"
+      },
+      "name": "Sleep 8 Seconds4",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        2960,
+        300
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(800);\n\n// Output data\nreturn [{json:{}}];"
+      },
+      "name": "Sleep 8 Seconds5",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        2370,
+        300
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(800);\n\n// Output data\nreturn [{json:{}}];"
+      },
+      "name": "Sleep 8 Seconds6",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        1920,
+        250
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(800);\n\n// Output data\nreturn [{json:{}}];"
+      },
+      "name": "Sleep 8 Seconds7",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        1620,
+        250
+      ],
+      "typeVersion": 1
     }
   ],
   "connections": {
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Set",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Nextcloud11",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
     "Nextcloud": {
       "main": [
         [
           {
-            "node": "Nextcloud1",
+            "node": "Sleep 8 Seconds7",
             "type": "main",
             "index": 0
           }
@@ -386,7 +498,7 @@
       "main": [
         [
           {
-            "node": "Nextcloud2",
+            "node": "Sleep 8 Seconds6",
             "type": "main",
             "index": 0
           }
@@ -408,7 +520,7 @@
       "main": [
         [
           {
-            "node": "Set1",
+            "node": "Sleep 8 Seconds5",
             "type": "main",
             "index": 0
           }
@@ -417,13 +529,7 @@
     },
     "Nextcloud4": {
       "main": [
-        [
-          {
-            "node": "Nextcloud5",
-            "type": "main",
-            "index": 0
-          }
-        ]
+        []
       ]
     },
     "Set1": {
@@ -441,7 +547,7 @@
       "main": [
         [
           {
-            "node": "Nextcloud7",
+            "node": "Sleep 8 Seconds4",
             "type": "main",
             "index": 0
           }
@@ -474,7 +580,7 @@
       "main": [
         [
           {
-            "node": "Nextcloud9",
+            "node": "Sleep 8 Seconds3",
             "type": "main",
             "index": 0
           }
@@ -496,23 +602,7 @@
       "main": [
         [
           {
-            "node": "Nextcloud4",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Start": {
-      "main": [
-        [
-          {
-            "node": "Set",
-            "type": "main",
-            "index": 0
-          },
-          {
-            "node": "Nextcloud11",
+            "node": "Sleep 8 Seconds2",
             "type": "main",
             "index": 0
           }
@@ -523,7 +613,7 @@
       "main": [
         [
           {
-            "node": "Nextcloud12",
+            "node": "Sleep 8 Seconds",
             "type": "main",
             "index": 0
           }
@@ -545,7 +635,7 @@
       "main": [
         [
           {
-            "node": "Nextcloud14",
+            "node": "Sleep 8 Seconds1",
             "type": "main",
             "index": 0
           }
@@ -562,10 +652,103 @@
           }
         ]
       ]
+    },
+    "Sleep 8 Seconds": {
+      "main": [
+        [
+          {
+            "node": "Nextcloud12",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sleep 8 Seconds1": {
+      "main": [
+        [
+          {
+            "node": "Nextcloud14",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sleep 8 Seconds2": {
+      "main": [
+        [
+          {
+            "node": "Nextcloud4",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Nextcloud5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sleep 8 Seconds3": {
+      "main": [
+        [
+          {
+            "node": "Nextcloud9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sleep 8 Seconds4": {
+      "main": [
+        [
+          {
+            "node": "Nextcloud7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sleep 8 Seconds5": {
+      "main": [
+        [
+          {
+            "node": "Set1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sleep 8 Seconds6": {
+      "main": [
+        [
+          {
+            "node": "Nextcloud2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sleep 8 Seconds7": {
+      "main": [
+        [
+          {
+            "node": "Nextcloud1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "createdAt": "2021-03-12T09:33:57.650Z",
-  "updatedAt": "2021-04-12T08:01:05.275Z",
+  "updatedAt": "2021-05-25T14:06:03.846Z",
   "settings": {},
   "staticData": null
 }
