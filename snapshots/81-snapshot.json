@@ -1,0 +1,287 @@
+{
+  "data": {
+    "startData": {},
+    "resultData": {
+      "runData": {
+        "Start": [
+          {
+            "startTime": 1622541682881,
+            "executionTime": 0,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {}
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Phantombuster": [
+          {
+            "startTime": 1622541682882,
+            "executionTime": 225,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": "8756817235927468",
+                      "name": "Email Extractor",
+                      "scriptOrgName": "phantombuster",
+                      "scriptId": "6774",
+                      "script": "Email Extractor.js",
+                      "branch": "master",
+                      "environment": "release",
+                      "manifest": {
+                        "slug": "email-extractor",
+                        "description": "Automatically extract email addresses on any website with this cloud automation",
+                        "defaultArgumentAllowed": true,
+                        "defaultArgument": {
+                          "websiteUrls": "https://phantombuster.com",
+                          "timeToWait": 5000
+                        },
+                        "argumentForm": {
+                          "enabled": true,
+                          "alpaca": {
+                            "options": {
+                              "fields": {}
+                            }
+                          },
+                          "steps": [
+                            {
+                              "slug": "websites-to-scrape",
+                              "title": "Websites to scrape",
+                              "helper": "Here you must provide a list of websites whose email addresses you want to scrape",
+                              "fields": {
+                                "websiteUrls": {
+                                  "label": "Spreadsheet URL or website URLs",
+                                  "placeholder": "https://docs.google.com/spreadsheets/d/(...)",
+                                  "helpers": [
+                                    "Must be either:",
+                                    "• a Google Spreadsheet URL.",
+                                    "• a CSV URL (make sure your file is publicly available).",
+                                    "• a website URL."
+                                  ]
+                                },
+                                "columnName": {
+                                  "label": "Column name containing website URLs",
+                                  "helper": "If empty, the first column of your spreadsheet will be used",
+                                  "placeholder": "Website Link",
+                                  "collapsibleSection": "Spreadsheet Settings"
+                                }
+                              }
+                            },
+                            {
+                              "slug": "behavior",
+                              "title": "Behavior",
+                              "fields": {
+                                "timeToWait": {
+                                  "label": "Time to wait until the page is fully loaded",
+                                  "placeholder": "5000",
+                                  "helpers": [
+                                    "Time is in Milliseconds",
+                                    "Default value is 5000 ms"
+                                  ]
+                                },
+                                "pagesPerLaunch": {
+                                  "label": "Number of websites to scrape per launch",
+                                  "helper": "All of them if empty"
+                                },
+                                "onlyGetOneEmail": {
+                                  "label": "Only retrieve one email per website",
+                                  "collapsibleSection": "Advanced Settings"
+                                },
+                                "csvName": {
+                                  "label": "Give a name to your result file",
+                                  "placeholder": "result",
+                                  "collapsibleSection": "Result file settings"
+                                }
+                              }
+                            }
+                          ]
+                        },
+                        "argumentTypes": {
+                          "websiteUrls": {
+                            "pipe": true,
+                            "types": [
+                              "domainname"
+                            ]
+                          }
+                        },
+                        "outputTypes": {
+                          "mails": {
+                            "types": [
+                              "email"
+                            ]
+                          }
+                        },
+                        "argumentSchema": {
+                          "type": "object",
+                          "properties": {
+                            "websiteUrls": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "columnName": {
+                              "type": "string"
+                            },
+                            "timeToWait": {
+                              "type": "number",
+                              "minimum": 1,
+                              "default": 5000
+                            },
+                            "pagesPerLaunch": {
+                              "type": "number",
+                              "minimum": 1,
+                              "default": 2
+                            },
+                            "csvName": {
+                              "type": "string"
+                            },
+                            "onlyGetOneEmail": {
+                              "type": "boolean"
+                            }
+                          },
+                          "anyOf": [
+                            {
+                              "required": [
+                                "websiteUrls"
+                              ],
+                              "ui-required": [
+                                "websiteUrls"
+                              ]
+                            },
+                            {
+                              "required": [
+                                "urls"
+                              ],
+                              "ui-required": [
+                                "urls"
+                              ]
+                            },
+                            {
+                              "required": [
+                                "queries"
+                              ],
+                              "ui-required": [
+                                "queries"
+                              ]
+                            }
+                          ]
+                        },
+                        "tags": {
+                          "categories": [
+                            "toolbox",
+                            "mail"
+                          ],
+                          "extractions": [
+                            "emails"
+                          ]
+                        },
+                        "featuredRank": 1,
+                        "inputIcon": "url",
+                        "outputIcon": "email",
+                        "defaultSettings": {
+                          "maxParallelism": 1
+                        }
+                      },
+                      "lastEndType": "finished",
+                      "lastEndedAt": 1622536697451,
+                      "lastExitCode": 0,
+                      "nbContainersRunning": 0,
+                      "runningTime": null,
+                      "launchType": "manually",
+                      "s3Folder": "UKSkFmaigVohTti7pkwW0A"
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Phantombuster1": [
+          {
+            "startTime": 1622541683107,
+            "executionTime": 175,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": "8756817235927468",
+                      "scriptOrgName": "phantombuster",
+                      "scriptId": "6774",
+                      "script": "Email Extractor.js",
+                      "branch": "master",
+                      "environment": "release",
+                      "argument": "{\n\t\"urls\": [\n\t\t\"https://n8n.io/\"\n\t],\n\t\"timeToWait\": 5000,\n\t\"pagesPerLaunch\": 1,\n\t\"onlyGetOneEmail\": false\n}",
+                      "code": null,
+                      "launchType": "manually",
+                      "nbLaunches": 85,
+                      "s3Folder": "UKSkFmaigVohTti7pkwW0A",
+                      "orgS3Folder": "sTTpLenO2iY",
+                      "updatedAt": 1614591972895,
+                      "name": "Email Extractor",
+                      "fileMgmt": "mix"
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Phantombuster2": [
+          {
+            "startTime": 1622541683282,
+            "executionTime": 1591,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "containerId": "3208081432012711"
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Phantombuster3": [
+          {
+            "startTime": 1622541684873,
+            "executionTime": 134,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "containerId": "3208081432012711",
+                      "status": "running",
+                      "output": "",
+                      "outputPos": 0,
+                      "isAgentRunning": true,
+                      "canSoftAbort": false
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      "lastNodeExecuted": "Phantombuster3"
+    },
+    "executionData": {
+      "contextData": {},
+      "nodeExecutionStack": [],
+      "waitingExecution": {}
+    }
+  },
+  "mode": "cli",
+  "startedAt": "2021-06-01T10:01:22.879Z",
+  "stoppedAt": "2021-06-01T10:01:25.007Z",
+  "finished": true
+}

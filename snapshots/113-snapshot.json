@@ -1,0 +1,68 @@
+{
+  "data": {
+    "startData": {},
+    "resultData": {
+      "runData": {
+        "Start": [
+          {
+            "startTime": 1622541698633,
+            "executionTime": 1,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {}
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Set": [
+          {
+            "startTime": 1622541698634,
+            "executionTime": 2,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "message": "AMQPMessage1622541698636"
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "AMQP Sender": [
+          {
+            "startTime": 1622541698636,
+            "executionTime": 250,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      "lastNodeExecuted": "AMQP Sender"
+    },
+    "executionData": {
+      "contextData": {},
+      "nodeExecutionStack": [],
+      "waitingExecution": {}
+    }
+  },
+  "mode": "cli",
+  "startedAt": "2021-06-01T10:01:38.632Z",
+  "stoppedAt": "2021-06-01T10:01:38.887Z",
+  "finished": true
+}

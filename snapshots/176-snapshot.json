@@ -1,0 +1,1391 @@
+{
+  "data": {
+    "startData": {},
+    "resultData": {
+      "runData": {
+        "Start": [
+          {
+            "startTime": 1622541752917,
+            "executionTime": 1,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {}
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "uProc": [
+          {
+            "startTime": 1622541752919,
+            "executionTime": 471,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "result": true,
+                      "message": {
+                        "result": "Sample text"
+                      },
+                      "status": "completed",
+                      "params": {
+                        "text": "n8n rocks!",
+                        "gender": "female",
+                        "language": "american"
+                      },
+                      "normalized": false,
+                      "criteria": "10032",
+                      "time": 3,
+                      "price": 0,
+                      "real_price": 0.05,
+                      "processor": "get-audio-advanced-speech-by-text",
+                      "total_rows": 1,
+                      "balance": 50.49
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "uProc10": [
+          {
+            "startTime": 1622541753391,
+            "executionTime": 180,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "result": true,
+                      "message": {
+                        "result": "Sample text"
+                      },
+                      "status": "completed",
+                      "params": {
+                        "cif": "B 12345 678"
+                      },
+                      "normalized": false,
+                      "criteria": "10032",
+                      "time": 2,
+                      "price": 0,
+                      "real_price": 0.003,
+                      "processor": "get-cif-normalized",
+                      "total_rows": 1,
+                      "balance": 50.49
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "uProc1": [
+          {
+            "startTime": 1622541753572,
+            "executionTime": 621,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "result": true,
+                      "message": {
+                        "result": "Sample text"
+                      },
+                      "status": "completed",
+                      "params": {
+                        "text": "n8n rocks!",
+                        "gender": "female",
+                        "language": "american"
+                      },
+                      "normalized": false,
+                      "criteria": "10032",
+                      "time": 209,
+                      "price": 0,
+                      "real_price": 0.02,
+                      "processor": "get-audio-speech-by-text",
+                      "total_rows": 1,
+                      "balance": 50.49
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "uProc11": [
+          {
+            "startTime": 1622541754193,
+            "executionTime": 151,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "result": false,
+                      "message": {
+                        "result": true
+                      },
+                      "status": "completed",
+                      "params": {
+                        "cif": "B 12345 678"
+                      },
+                      "normalized": false,
+                      "criteria": "10032",
+                      "time": 3,
+                      "price": 0,
+                      "real_price": 0.0015,
+                      "processor": "check-cif-valid",
+                      "total_rows": 1,
+                      "balance": 50.49
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "uProc12": [
+          {
+            "startTime": 1622541754344,
+            "executionTime": 159,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "result": true,
+                      "message": {
+                        "result": true
+                      },
+                      "status": "completed",
+                      "params": {
+                        "isin": "US0004026250"
+                      },
+                      "normalized": false,
+                      "criteria": "10000",
+                      "time": 3,
+                      "price": 0,
+                      "real_price": 0,
+                      "processor": "check-number-isin",
+                      "total_rows": 1,
+                      "balance": 50.49
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "uProc13": [
+          {
+            "startTime": 1622541754503,
+            "executionTime": 156,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "result": true,
+                      "message": {
+                        "result": true
+                      },
+                      "status": "completed",
+                      "params": {
+                        "number": "998239812282"
+                      },
+                      "normalized": false,
+                      "criteria": "10000",
+                      "time": 2,
+                      "price": 0,
+                      "real_price": 0,
+                      "processor": "check-number-ss-es",
+                      "total_rows": 1,
+                      "balance": 50.49
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "uProc14": [
+          {
+            "startTime": 1622541754659,
+            "executionTime": 152,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "result": false,
+                      "message": {
+                        "address": "Sample text",
+                        "cif": "Sample text",
+                        "city": "Sample text",
+                        "country": "Sample text",
+                        "county": "Sample text",
+                        "email": "Sample text",
+                        "latitude": "Sample text",
+                        "longitude": "Sample text",
+                        "name": "Sample text",
+                        "phone": "Sample text",
+                        "state": "Sample text",
+                        "website": "Sample text",
+                        "zipcode": "Sample text"
+                      },
+                      "status": "completed",
+                      "params": {
+                        "cif": "B 12345 678"
+                      },
+                      "normalized": false,
+                      "criteria": "10032",
+                      "time": 3,
+                      "price": 0,
+                      "real_price": 0,
+                      "processor": "get-company-by-cif",
+                      "total_rows": 1,
+                      "balance": 50.49
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "uProc15": [
+          {
+            "startTime": 1622541754811,
+            "executionTime": 163,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "result": false,
+                      "message": {
+                        "address": "Sample text",
+                        "cif": "Sample text",
+                        "city": "Sample text",
+                        "country": "Sample text",
+                        "county": "Sample text",
+                        "email": "Sample text",
+                        "latitude": "Sample text",
+                        "longitude": "Sample text",
+                        "name": "Sample text",
+                        "phone": "Sample text",
+                        "state": "Sample text",
+                        "website": "Sample text",
+                        "zipcode": "Sample text"
+                      },
+                      "status": "scheduled",
+                      "params": {
+                        "domain": "n8n.io"
+                      },
+                      "normalized": false,
+                      "criteria": "10032",
+                      "time": 3,
+                      "price": 0,
+                      "real_price": 0,
+                      "processor": "get-company-by-domain",
+                      "total_rows": 1,
+                      "balance": 50.49
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "uProc16": [
+          {
+            "startTime": 1622541754974,
+            "executionTime": 159,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "result": true,
+                      "message": {
+                        "address": "Sample text",
+                        "cif": "Sample text",
+                        "city": "Sample text",
+                        "country": "Sample text",
+                        "county": "Sample text",
+                        "email": "Sample text",
+                        "latitude": "Sample text",
+                        "longitude": "Sample text",
+                        "name": "Sample text",
+                        "phone": "Sample text",
+                        "state": "Sample text",
+                        "website": "Sample text",
+                        "zipcode": "Sample text"
+                      },
+                      "status": "completed",
+                      "params": {
+                        "duns": "150483782"
+                      },
+                      "normalized": false,
+                      "criteria": "10032",
+                      "time": 3,
+                      "price": 0,
+                      "real_price": 0.02,
+                      "processor": "get-company-by-duns",
+                      "total_rows": 1,
+                      "balance": 50.49
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "uProc17": [
+          {
+            "startTime": 1622541755134,
+            "executionTime": 151,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "result": false,
+                      "message": {
+                        "address": "Sample text",
+                        "cif": "Sample text",
+                        "city": "Sample text",
+                        "country": "Sample text",
+                        "county": "Sample text",
+                        "email": "Sample text",
+                        "latitude": "Sample text",
+                        "longitude": "Sample text",
+                        "name": "Sample text",
+                        "phone": "Sample text",
+                        "state": "Sample text",
+                        "website": "Sample text",
+                        "zipcode": "Sample text"
+                      },
+                      "status": "completed",
+                      "params": {
+                        "email": "hello@n8n.io"
+                      },
+                      "normalized": false,
+                      "criteria": "10032",
+                      "time": 2,
+                      "price": 0,
+                      "real_price": 0,
+                      "processor": "get-company-by-email",
+                      "total_rows": 1,
+                      "balance": 50.49
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "uProc18": [
+          {
+            "startTime": 1622541755285,
+            "executionTime": 154,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "result": true,
+                      "message": {
+                        "address": "Sample text",
+                        "city": "Sample text",
+                        "country": "Sample text",
+                        "email": "Sample text",
+                        "name": "Sample text",
+                        "phone": "Sample text",
+                        "state": "Sample text",
+                        "website": "Sample text",
+                        "zipcode": "77777"
+                      },
+                      "status": "completed",
+                      "params": {
+                        "ip": "104.21.37.3"
+                      },
+                      "normalized": false,
+                      "criteria": "10032",
+                      "time": 2,
+                      "price": 0,
+                      "real_price": 0.0025,
+                      "processor": "get-company-by-ip",
+                      "total_rows": 1,
+                      "balance": 50.49
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "uProc19": [
+          {
+            "startTime": 1622541755439,
+            "executionTime": 153,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "result": false,
+                      "message": {
+                        "address": "Sample text",
+                        "cif": "Sample text",
+                        "city": "Sample text",
+                        "country": "Sample text",
+                        "county": "Sample text",
+                        "email": "Sample text",
+                        "latitude": "Sample text",
+                        "longitude": "Sample text",
+                        "name": "Sample text",
+                        "phone": "Sample text",
+                        "state": "Sample text",
+                        "website": "Sample text",
+                        "zipcode": "Sample text"
+                      },
+                      "status": "completed",
+                      "params": {
+                        "country": "DE",
+                        "name": "n8n"
+                      },
+                      "normalized": false,
+                      "criteria": "10032",
+                      "time": 2,
+                      "price": 0,
+                      "real_price": 0,
+                      "processor": "get-company-by-name",
+                      "total_rows": 1,
+                      "balance": 50.49
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "uProc20": [
+          {
+            "startTime": 1622541755592,
+            "executionTime": 161,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "result": false,
+                      "message": {
+                        "address": "Sample text",
+                        "cif": "Sample text",
+                        "city": "Sample text",
+                        "country": "Sample text",
+                        "county": "Sample text",
+                        "email": "Sample text",
+                        "latitude": "Sample text",
+                        "longitude": "Sample text",
+                        "name": "Sample text",
+                        "phone": "Sample text",
+                        "state": "Sample text",
+                        "website": "Sample text",
+                        "zipcode": "Sample text"
+                      },
+                      "status": "scheduled",
+                      "params": {
+                        "phone": "932187670"
+                      },
+                      "normalized": false,
+                      "criteria": "10032",
+                      "time": 3,
+                      "price": 0,
+                      "real_price": 0,
+                      "processor": "get-company-by-phone",
+                      "total_rows": 1,
+                      "balance": 50.49
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "uProc21": [
+          {
+            "startTime": 1622541755753,
+            "executionTime": 153,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "result": false,
+                      "message": {
+                        "address": "Sample text",
+                        "cif": "Sample text",
+                        "city": "Sample text",
+                        "country": "Sample text",
+                        "county": "Sample text",
+                        "email": "Sample text",
+                        "latitude": "Sample text",
+                        "longitude": "Sample text",
+                        "name": "Sample text",
+                        "phone": "Sample text",
+                        "state": "Sample text",
+                        "website": "Sample text",
+                        "zipcode": "Sample text"
+                      },
+                      "status": "scheduled",
+                      "params": {
+                        "url": "https://twitter.com/n8n_io"
+                      },
+                      "normalized": false,
+                      "criteria": "10032",
+                      "time": 3,
+                      "price": 0,
+                      "real_price": 0,
+                      "processor": "get-company-by-profile",
+                      "total_rows": 1,
+                      "balance": 50.49
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "uProc22": [
+          {
+            "startTime": 1622541755907,
+            "executionTime": 184,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "result": true,
+                      "message": {
+                        "area": "Sample text",
+                        "is_c_level": true,
+                        "is_decision_maker": true,
+                        "seniority": "Sample text"
+                      },
+                      "status": "completed",
+                      "params": {
+                        "role": "Junior web developer"
+                      },
+                      "normalized": false,
+                      "criteria": "10002",
+                      "time": 3,
+                      "price": 0,
+                      "real_price": 0.002,
+                      "processor": "get-role-classified",
+                      "total_rows": 1,
+                      "balance": 50.49
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "uProc23": [
+          {
+            "startTime": 1622541756092,
+            "executionTime": 448,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "result": false,
+                      "message": {
+                        "result": true
+                      },
+                      "status": "completed",
+                      "params": {
+                        "taxid": "B12345678"
+                      },
+                      "normalized": false,
+                      "criteria": "10032",
+                      "time": 18,
+                      "price": 0,
+                      "real_price": 0.005,
+                      "processor": "check-company-debtor-by-taxid",
+                      "total_rows": 1,
+                      "balance": 50.49
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "uProc24": [
+          {
+            "startTime": 1622541756540,
+            "executionTime": 155,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "result": false,
+                      "message": {
+                        "area": "Sample text",
+                        "company": "Sample text",
+                        "email": "Sample text",
+                        "email_confidence": "Sample text",
+                        "email_score": "Sample text",
+                        "gender": "Sample text",
+                        "is_c_level": "Sample text",
+                        "is_decision_maker": "Sample text",
+                        "name": "Sample text",
+                        "phone": "Sample text",
+                        "profile": "Sample text",
+                        "role": "Sample text",
+                        "seniority": "Sample text",
+                        "surname": "Sample text"
+                      },
+                      "status": "completed",
+                      "params": {
+                        "company": "n8n.io",
+                        "area": "Engineering"
+                      },
+                      "normalized": false,
+                      "criteria": "10032",
+                      "time": 3,
+                      "price": 0,
+                      "real_price": 0,
+                      "processor": "get-person-decision-maker",
+                      "total_rows": 1,
+                      "balance": 50.49
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "uProc25": [
+          {
+            "startTime": 1622541756696,
+            "executionTime": 171,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "result": false,
+                      "message": [],
+                      "status": "completed",
+                      "params": {
+                        "company": "n8n.io",
+                        "area": "Product",
+                        "clevel": "No",
+                        "location": "",
+                        "keyword": ""
+                      },
+                      "normalized": false,
+                      "criteria": "10032",
+                      "time": 4,
+                      "price": 0,
+                      "real_price": 0,
+                      "processor": "get-person-decision-maker-by-search",
+                      "total_rows": 0,
+                      "balance": 50.49
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "uProc26": [
+          {
+            "startTime": 1622541756868,
+            "executionTime": 154,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "result": false,
+                      "message": {
+                        "result": "Sample text"
+                      },
+                      "status": "completed",
+                      "params": {
+                        "name": "n8n.io"
+                      },
+                      "normalized": false,
+                      "criteria": "10032",
+                      "time": 3,
+                      "price": 0,
+                      "real_price": 0,
+                      "processor": "get-company-domain-by-name",
+                      "total_rows": 1,
+                      "balance": 50.49
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "uProc27": [
+          {
+            "startTime": 1622541757023,
+            "executionTime": 158,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "result": false,
+                      "message": {
+                        "result": "Sample text"
+                      },
+                      "status": "completed",
+                      "params": {
+                        "domain": "n8n.io",
+                        "area": "Engineering"
+                      },
+                      "normalized": false,
+                      "criteria": "10032",
+                      "time": 2,
+                      "price": 0,
+                      "real_price": 0,
+                      "processor": "get-person-emails-by-domain-and-area",
+                      "total_rows": 1,
+                      "balance": 50.49
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "uProc28": [
+          {
+            "startTime": 1622541757181,
+            "executionTime": 145,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "result": true,
+                      "message": {
+                        "contact": {
+                          "name": "Sample text",
+                          "cif": "Sample text",
+                          "email": "Sample text",
+                          "phone": "Sample text",
+                          "website": "Sample text"
+                        },
+                        "location": {
+                          "address": "Sample text",
+                          "city": "Sample text",
+                          "county": "Sample text",
+                          "country": "Sample text",
+                          "state": "Sample text",
+                          "zipcode": "Sample text"
+                        },
+                        "social": {
+                          "instagram": "Sample text",
+                          "linkedin": "Sample text",
+                          "youtube": "Sample text",
+                          "facebook": "Sample text",
+                          "google": "Sample text",
+                          "twitter": "Sample text",
+                          "slideshare": "Sample text",
+                          "pinterest": "Sample text",
+                          "activity": 77
+                        },
+                        "technology": [
+                          "Sample text",
+                          "Sample text",
+                          "Sample text",
+                          "Sample text",
+                          "Sample text",
+                          "Sample text",
+                          "Sample text",
+                          "Sample text",
+                          "Sample text",
+                          "Sample text",
+                          "Sample text"
+                        ]
+                      },
+                      "status": "completed",
+                      "params": {
+                        "domain": "n8n.io"
+                      },
+                      "normalized": false,
+                      "criteria": "10032",
+                      "time": 3,
+                      "price": 0,
+                      "real_price": 0.025,
+                      "processor": "get-company-extended-by-domain",
+                      "total_rows": 1,
+                      "balance": 50.49
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "uProc29": [
+          {
+            "startTime": 1622541757326,
+            "executionTime": 151,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "result": true,
+                      "message": {
+                        "contact": {
+                          "name": "Sample text",
+                          "cif": "Sample text",
+                          "email": "Sample text",
+                          "phone": "Sample text",
+                          "website": "Sample text"
+                        },
+                        "location": {
+                          "address": "Sample text",
+                          "city": "Sample text",
+                          "county": "Sample text",
+                          "country": "Sample text",
+                          "state": "Sample text",
+                          "zipcode": "Sample text"
+                        },
+                        "social": {
+                          "instagram": "Sample text",
+                          "linkedin": "Sample text",
+                          "youtube": "Sample text",
+                          "facebook": "Sample text",
+                          "google": "Sample text",
+                          "twitter": "Sample text",
+                          "slideshare": "Sample text",
+                          "pinterest": "Sample text",
+                          "activity": 55
+                        },
+                        "technology": [
+                          "Sample text",
+                          "Sample text",
+                          "Sample text",
+                          "Sample text",
+                          "Sample text",
+                          "Sample text",
+                          "Sample text",
+                          "Sample text",
+                          "Sample text",
+                          "Sample text",
+                          "Sample text"
+                        ]
+                      },
+                      "status": "completed",
+                      "params": {
+                        "email": "hello@n8n.io"
+                      },
+                      "normalized": false,
+                      "criteria": "10032",
+                      "time": 2,
+                      "price": 0,
+                      "real_price": 0.025,
+                      "processor": "get-company-extended-by-email",
+                      "total_rows": 1,
+                      "balance": 50.49
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "uProc30": [
+          {
+            "startTime": 1622541757477,
+            "executionTime": 138,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "result": true,
+                      "message": {
+                        "profile": "Sample text",
+                        "score": "333"
+                      },
+                      "status": "completed",
+                      "params": {
+                        "company": "n8n.io"
+                      },
+                      "normalized": false,
+                      "criteria": "10032",
+                      "time": 3,
+                      "price": 0,
+                      "real_price": 0.01,
+                      "processor": "get-profile-facebook-by-company",
+                      "total_rows": 1,
+                      "balance": 50.49
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "uProc31": [
+          {
+            "startTime": 1622541757616,
+            "executionTime": 154,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "result": false,
+                      "message": {
+                        "cif": "Sample text",
+                        "cnae": "Sample text",
+                        "cnae_name": "Sample text",
+                        "debt_amount": "Sample text",
+                        "debt_year": "Sample text",
+                        "name": "Sample text",
+                        "revenue": "Sample text",
+                        "size": "Sample text"
+                      },
+                      "status": "scheduled",
+                      "params": {
+                        "domain": "n8n.io"
+                      },
+                      "normalized": false,
+                      "criteria": "10032",
+                      "time": 3,
+                      "price": 0,
+                      "real_price": 0,
+                      "processor": "get-company-financial-by-domain",
+                      "total_rows": 1,
+                      "balance": 50.49
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "uProc32": [
+          {
+            "startTime": 1622541757770,
+            "executionTime": 143,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "result": false,
+                      "message": {
+                        "cif": "Sample text",
+                        "cnae": "Sample text",
+                        "cnae_name": "Sample text",
+                        "debt_amount": "Sample text",
+                        "debt_year": "Sample text",
+                        "name": "Sample text",
+                        "revenue": "Sample text",
+                        "size": "Sample text"
+                      },
+                      "status": "scheduled",
+                      "params": {
+                        "duns": "150483782"
+                      },
+                      "normalized": false,
+                      "criteria": "10032",
+                      "time": 2,
+                      "price": 0,
+                      "real_price": 0,
+                      "processor": "get-company-financial-by-duns",
+                      "total_rows": 1,
+                      "balance": 50.49
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "uProc33": [
+          {
+            "startTime": 1622541757913,
+            "executionTime": 143,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "result": false,
+                      "message": {
+                        "cif": "Sample text",
+                        "cnae": "Sample text",
+                        "cnae_name": "Sample text",
+                        "debt_amount": "Sample text",
+                        "debt_year": "Sample text",
+                        "name": "Sample text",
+                        "revenue": "Sample text",
+                        "size": "Sample text"
+                      },
+                      "status": "scheduled",
+                      "params": {
+                        "name": "n8n.io"
+                      },
+                      "normalized": false,
+                      "criteria": "10032",
+                      "time": 2,
+                      "price": 0,
+                      "real_price": 0,
+                      "processor": "get-company-financial-by-name",
+                      "total_rows": 1,
+                      "balance": 50.49
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "uProc34": [
+          {
+            "startTime": 1622541758056,
+            "executionTime": 145,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "result": false,
+                      "message": {
+                        "cif": "Sample text",
+                        "cnae": "Sample text",
+                        "cnae_name": "Sample text",
+                        "debt_amount": "Sample text",
+                        "debt_year": "Sample text",
+                        "name": "Sample text",
+                        "revenue": "Sample text",
+                        "size": "Sample text"
+                      },
+                      "status": "scheduled",
+                      "params": {
+                        "taxid": "B12345678"
+                      },
+                      "normalized": false,
+                      "criteria": "10032",
+                      "time": 3,
+                      "price": 0,
+                      "real_price": 0,
+                      "processor": "get-company-financial-by-taxid",
+                      "total_rows": 1,
+                      "balance": 50.49
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "uProc35": [
+          {
+            "startTime": 1622541758201,
+            "executionTime": 143,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "result": true,
+                      "message": {
+                        "address": "Sample text",
+                        "cif": "Sample text",
+                        "city": "Sample text",
+                        "country": "Sample text",
+                        "email": "Sample text",
+                        "latitude": "Sample text",
+                        "longitude": "Sample text",
+                        "name": "Sample text",
+                        "phone": "Sample text",
+                        "state": "Sample text",
+                        "website": "Sample text",
+                        "zipcode": "33333"
+                      },
+                      "status": "completed",
+                      "params": {
+                        "ip": "104.21.37.3"
+                      },
+                      "normalized": false,
+                      "criteria": "10032",
+                      "time": 2,
+                      "price": 0,
+                      "real_price": 0.02,
+                      "processor": "get-company-geocoded-by-ip",
+                      "total_rows": 1,
+                      "balance": 50.49
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "uProc36": [
+          {
+            "startTime": 1622541758344,
+            "executionTime": 167,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "result": false,
+                      "message": {
+                        "profile": "Sample text",
+                        "score": "Sample text"
+                      },
+                      "status": "completed",
+                      "params": {
+                        "company": "n8n.io"
+                      },
+                      "normalized": false,
+                      "criteria": "10032",
+                      "time": 8,
+                      "price": 0,
+                      "real_price": 0,
+                      "processor": "get-profile-linkedin-by-company",
+                      "total_rows": 1,
+                      "balance": 50.49
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "uProc37": [
+          {
+            "startTime": 1622541758511,
+            "executionTime": 152,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "result": false,
+                      "message": [],
+                      "status": "completed",
+                      "params": {
+                        "country": "DE",
+                        "phone": "932187670",
+                        "email": "hello@n8n.io",
+                        "company": "n8n.io",
+                        "area": "Information technology",
+                        "seniority": "Intermediate"
+                      },
+                      "normalized": false,
+                      "criteria": "10032",
+                      "time": 2,
+                      "price": 0,
+                      "real_price": 0,
+                      "processor": "get-person-list-by-params",
+                      "total_rows": 0,
+                      "balance": 50.49
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "uProc38": [
+          {
+            "startTime": 1622541758663,
+            "executionTime": 158,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "result": false,
+                      "message": [],
+                      "status": "completed",
+                      "params": {
+                        "company": "n8n.io",
+                        "area": "Information technology",
+                        "clevel": "No",
+                        "location": "",
+                        "keyword": ""
+                      },
+                      "normalized": false,
+                      "criteria": "10032",
+                      "time": 2,
+                      "price": 0,
+                      "real_price": 0,
+                      "processor": "get-person-multiple-decision-maker-by-search",
+                      "total_rows": 0,
+                      "balance": 50.49
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "uProc39": [
+          {
+            "startTime": 1622541758821,
+            "executionTime": 146,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "message": {},
+                      "status": "completed",
+                      "params": {
+                        "domain": "n8n.io"
+                      },
+                      "normalized": false,
+                      "criteria": "10032",
+                      "time": 2,
+                      "price": 0,
+                      "real_price": 0,
+                      "processor": "get-company-name-by-domain",
+                      "total_rows": 1,
+                      "balance": 50.49
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "uProc40": [
+          {
+            "startTime": 1622541758967,
+            "executionTime": 144,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "result": "",
+                      "message": {
+                        "result": "Sample text"
+                      },
+                      "status": "completed",
+                      "params": {
+                        "domain": "n8n.io"
+                      },
+                      "normalized": false,
+                      "criteria": "10032",
+                      "time": 2,
+                      "price": 0,
+                      "real_price": 0,
+                      "processor": "get-company-phone-by-domain",
+                      "total_rows": 1,
+                      "balance": 50.49
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "uProc41": [
+          {
+            "startTime": 1622541759111,
+            "executionTime": 147,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "result": "",
+                      "message": {
+                        "result": "Sample text"
+                      },
+                      "status": "completed",
+                      "params": {
+                        "name": "n8n.io"
+                      },
+                      "normalized": false,
+                      "criteria": "10032",
+                      "time": 2,
+                      "price": 0,
+                      "real_price": 0,
+                      "processor": "get-company-phone-by-name",
+                      "total_rows": 1,
+                      "balance": 50.49
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "uProc42": [
+          {
+            "startTime": 1622541759259,
+            "executionTime": 177,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "result": true,
+                      "message": {
+                        "profile": "Sample text",
+                        "score": "111"
+                      },
+                      "status": "completed",
+                      "params": {
+                        "company": "n8n.io"
+                      },
+                      "normalized": false,
+                      "criteria": "10032",
+                      "time": 2,
+                      "price": 0,
+                      "real_price": 0.01,
+                      "processor": "get-profile-twitter-by-company",
+                      "total_rows": 1,
+                      "balance": 50.49
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      "lastNodeExecuted": "uProc42"
+    },
+    "executionData": {
+      "contextData": {},
+      "nodeExecutionStack": [],
+      "waitingExecution": {}
+    }
+  },
+  "mode": "cli",
+  "startedAt": "2021-06-01T10:02:32.913Z",
+  "stoppedAt": "2021-06-01T10:02:39.437Z",
+  "finished": true
+}

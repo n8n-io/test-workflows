@@ -1,0 +1,74 @@
+{
+  "data": {
+    "startData": {},
+    "resultData": {
+      "runData": {
+        "Start": [
+          {
+            "startTime": 1622541703575,
+            "executionTime": 1,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {}
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Mandrill": [
+          {
+            "startTime": 1622541703576,
+            "executionTime": 504,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "email": "nodeqa1622541703578@email.test",
+                      "status": "rejected",
+                      "_id": "af1d4b6966d84bb7b17dd5e788043cff",
+                      "reject_reason": "unsigned"
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Mandrill1": [
+          {
+            "startTime": 1622541704081,
+            "executionTime": 544,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "email": "nodeqa1622541704082@email.test",
+                      "status": "rejected",
+                      "_id": "1af6f7c1a9f64f5d81cddeafc0cc4545",
+                      "reject_reason": "unsigned"
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      "lastNodeExecuted": "Mandrill1"
+    },
+    "executionData": {
+      "contextData": {},
+      "nodeExecutionStack": [],
+      "waitingExecution": {}
+    }
+  },
+  "mode": "cli",
+  "startedAt": "2021-06-01T10:01:43.573Z",
+  "stoppedAt": "2021-06-01T10:01:44.625Z",
+  "finished": true
+}

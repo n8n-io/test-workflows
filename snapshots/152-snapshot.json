@@ -1,0 +1,95 @@
+{
+  "data": {
+    "startData": {},
+    "resultData": {
+      "runData": {
+        "Start": [
+          {
+            "startTime": 1622541726181,
+            "executionTime": 0,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {}
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "AWS Comprehend": [
+          {
+            "startTime": 1622541726182,
+            "executionTime": 546,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "en": 0.993780255317688
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "AWS Comprehend1": [
+          {
+            "startTime": 1622541726728,
+            "executionTime": 565,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "Sentiment": "POSITIVE",
+                      "SentimentScore": {
+                        "Mixed": 0.0002852340694516897,
+                        "Negative": 0.00016380382294300944,
+                        "Neutral": 0.2628680467605591,
+                        "Positive": 0.7366829514503479
+                      }
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "AWS Comprehend2": [
+          {
+            "startTime": 1622541727294,
+            "executionTime": 492,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "BeginOffset": 147,
+                      "EndOffset": 158,
+                      "Score": 0.7894728779792786,
+                      "Text": "single line",
+                      "Type": "QUANTITY"
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      "lastNodeExecuted": "AWS Comprehend2"
+    },
+    "executionData": {
+      "contextData": {},
+      "nodeExecutionStack": [],
+      "waitingExecution": {}
+    }
+  },
+  "mode": "cli",
+  "startedAt": "2021-06-01T10:02:06.180Z",
+  "stoppedAt": "2021-06-01T10:02:07.786Z",
+  "finished": true
+}

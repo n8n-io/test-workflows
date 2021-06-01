@@ -1,0 +1,2443 @@
+{
+  "data": {
+    "startData": {},
+    "resultData": {
+      "runData": {
+        "Start": [
+          {
+            "startTime": 1622541919130,
+            "executionTime": 0,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {}
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Mautic": [
+          {
+            "startTime": 1622541919131,
+            "executionTime": 222,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": 73,
+                      "companyaddress1": null,
+                      "companyaddress2": null,
+                      "companyemail": null,
+                      "companyphone": null,
+                      "companycity": null,
+                      "companystate": null,
+                      "companyzipcode": null,
+                      "companycountry": null,
+                      "companyname": "Company1622541919132",
+                      "companywebsite": null,
+                      "companynumber_of_employees": null,
+                      "companyfax": null,
+                      "companyannual_revenue": null,
+                      "companyindustry": null,
+                      "companydescription": null
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Mautic5": [
+          {
+            "startTime": 1622541919354,
+            "executionTime": 217,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "isPublished": true,
+                      "dateAdded": "2021-06-01T10:05:19+00:00",
+                      "dateModified": null,
+                      "createdBy": 1,
+                      "createdByUser": "nodeqa admin",
+                      "modifiedBy": null,
+                      "modifiedByUser": null,
+                      "id": 173,
+                      "points": 0,
+                      "color": null,
+                      "fields": {
+                        "core": {
+                          "title": {
+                            "id": 1,
+                            "group": "core",
+                            "label": "Title",
+                            "alias": "title",
+                            "type": "lookup",
+                            "properties": {
+                              "list": "Mr|Mrs|Miss"
+                            },
+                            "value": "Title1622541919355",
+                            "normalizedValue": "Title1622541919355"
+                          },
+                          "firstname": {
+                            "id": 2,
+                            "group": "core",
+                            "label": "First Name",
+                            "alias": "firstname",
+                            "type": "text",
+                            "properties": [],
+                            "value": "Name1622541919354",
+                            "normalizedValue": "Name1622541919354"
+                          },
+                          "lastname": {
+                            "id": 3,
+                            "group": "core",
+                            "label": "Last Name",
+                            "alias": "lastname",
+                            "type": "text",
+                            "properties": [],
+                            "value": "LasName1622541919355",
+                            "normalizedValue": "LasName1622541919355"
+                          },
+                          "company": {
+                            "id": 4,
+                            "group": "core",
+                            "label": "Primary company",
+                            "alias": "company",
+                            "type": "text",
+                            "properties": [],
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "position": {
+                            "id": 5,
+                            "group": "core",
+                            "label": "Position",
+                            "alias": "position",
+                            "type": "text",
+                            "properties": [],
+                            "value": "Position1622541919355",
+                            "normalizedValue": "Position1622541919355"
+                          },
+                          "email": {
+                            "id": 6,
+                            "group": "core",
+                            "label": "Email",
+                            "alias": "email",
+                            "type": "email",
+                            "properties": [],
+                            "value": "fakeemail1622541919354@gmail.com",
+                            "normalizedValue": "fakeemail1622541919354@gmail.com"
+                          },
+                          "mobile": {
+                            "id": 7,
+                            "group": "core",
+                            "label": "Mobile",
+                            "alias": "mobile",
+                            "type": "tel",
+                            "properties": [],
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "phone": {
+                            "id": 8,
+                            "group": "core",
+                            "label": "Phone",
+                            "alias": "phone",
+                            "type": "tel",
+                            "properties": [],
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "points": {
+                            "id": 9,
+                            "group": "core",
+                            "label": "Points",
+                            "alias": "points",
+                            "type": "number",
+                            "properties": [],
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "fax": {
+                            "id": 10,
+                            "group": "core",
+                            "label": "Fax",
+                            "alias": "fax",
+                            "type": "tel",
+                            "properties": [],
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "address1": {
+                            "id": 11,
+                            "group": "core",
+                            "label": "Address Line 1",
+                            "alias": "address1",
+                            "type": "text",
+                            "properties": [],
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "address2": {
+                            "id": 12,
+                            "group": "core",
+                            "label": "Address Line 2",
+                            "alias": "address2",
+                            "type": "text",
+                            "properties": [],
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "city": {
+                            "id": 13,
+                            "group": "core",
+                            "label": "City",
+                            "alias": "city",
+                            "type": "text",
+                            "properties": [],
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "state": {
+                            "id": 14,
+                            "group": "core",
+                            "label": "State",
+                            "alias": "state",
+                            "type": "region",
+                            "properties": [],
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "zipcode": {
+                            "id": 15,
+                            "group": "core",
+                            "label": "Zip Code",
+                            "alias": "zipcode",
+                            "type": "text",
+                            "properties": [],
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "country": {
+                            "id": 16,
+                            "group": "core",
+                            "label": "Country",
+                            "alias": "country",
+                            "type": "country",
+                            "properties": [],
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "preferred_locale": {
+                            "id": 17,
+                            "group": "core",
+                            "label": "Preferred Locale",
+                            "alias": "preferred_locale",
+                            "type": "locale",
+                            "properties": [],
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "timezone": {
+                            "id": 18,
+                            "group": "core",
+                            "label": "mautic.lead.field.timezone",
+                            "alias": "timezone",
+                            "type": "timezone",
+                            "properties": [],
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "last_active": {
+                            "id": 19,
+                            "group": "core",
+                            "label": "Date Last Active",
+                            "alias": "last_active",
+                            "type": "datetime",
+                            "properties": [],
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "attribution_date": {
+                            "id": 20,
+                            "group": "core",
+                            "label": "Attribution Date",
+                            "alias": "attribution_date",
+                            "type": "datetime",
+                            "properties": [],
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "attribution": {
+                            "id": 21,
+                            "group": "core",
+                            "label": "Attribution",
+                            "alias": "attribution",
+                            "type": "number",
+                            "properties": {
+                              "roundmode": 4,
+                              "precision": 2
+                            },
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "website": {
+                            "id": 22,
+                            "group": "core",
+                            "label": "Website",
+                            "alias": "website",
+                            "type": "url",
+                            "properties": [],
+                            "value": null,
+                            "normalizedValue": null
+                          }
+                        },
+                        "social": {
+                          "facebook": {
+                            "id": 23,
+                            "group": "social",
+                            "label": "Facebook",
+                            "alias": "facebook",
+                            "type": "text",
+                            "properties": [],
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "foursquare": {
+                            "id": 24,
+                            "group": "social",
+                            "label": "Foursquare",
+                            "alias": "foursquare",
+                            "type": "text",
+                            "properties": [],
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "googleplus": {
+                            "id": 25,
+                            "group": "social",
+                            "label": "Google+",
+                            "alias": "googleplus",
+                            "type": "text",
+                            "properties": [],
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "instagram": {
+                            "id": 26,
+                            "group": "social",
+                            "label": "Instagram",
+                            "alias": "instagram",
+                            "type": "text",
+                            "properties": [],
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "linkedin": {
+                            "id": 27,
+                            "group": "social",
+                            "label": "LinkedIn",
+                            "alias": "linkedin",
+                            "type": "text",
+                            "properties": [],
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "skype": {
+                            "id": 28,
+                            "group": "social",
+                            "label": "Skype",
+                            "alias": "skype",
+                            "type": "text",
+                            "properties": [],
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "twitter": {
+                            "id": 29,
+                            "group": "social",
+                            "label": "Twitter",
+                            "alias": "twitter",
+                            "type": "text",
+                            "properties": [],
+                            "value": null,
+                            "normalizedValue": null
+                          }
+                        },
+                        "personal": [],
+                        "professional": [],
+                        "all": {
+                          "id": 173,
+                          "title": "Title1622541919355",
+                          "firstname": "Name1622541919354",
+                          "lastname": "LasName1622541919355",
+                          "company": null,
+                          "position": "Position1622541919355",
+                          "email": "fakeemail1622541919354@gmail.com",
+                          "mobile": null,
+                          "phone": null,
+                          "points": null,
+                          "fax": null,
+                          "address1": null,
+                          "address2": null,
+                          "city": null,
+                          "state": null,
+                          "zipcode": null,
+                          "country": null,
+                          "preferred_locale": null,
+                          "timezone": null,
+                          "last_active": null,
+                          "attribution_date": null,
+                          "attribution": null,
+                          "website": null,
+                          "facebook": null,
+                          "foursquare": null,
+                          "googleplus": null,
+                          "instagram": null,
+                          "linkedin": null,
+                          "skype": null,
+                          "twitter": null
+                        }
+                      },
+                      "lastActive": null,
+                      "owner": null,
+                      "ipAddresses": [],
+                      "tags": [],
+                      "utmtags": null,
+                      "stage": null,
+                      "dateIdentified": "2021-06-01T10:05:19+00:00",
+                      "preferredProfileImage": null,
+                      "doNotContact": [],
+                      "frequencyRules": []
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Mautic1": [
+          {
+            "startTime": 1622541919571,
+            "executionTime": 156,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": 73,
+                      "companyaddress1": null,
+                      "companyaddress2": null,
+                      "companyemail": null,
+                      "companyphone": null,
+                      "companycity": null,
+                      "companystate": null,
+                      "companyzipcode": null,
+                      "companycountry": null,
+                      "companyname": "UpdatedCompany1622541919572",
+                      "companywebsite": null,
+                      "companynumber_of_employees": null,
+                      "companyfax": null,
+                      "companyannual_revenue": null,
+                      "companyindustry": null,
+                      "companydescription": null
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Mautic6": [
+          {
+            "startTime": 1622541919728,
+            "executionTime": 204,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "isPublished": true,
+                      "dateAdded": "2021-06-01T10:05:19+00:00",
+                      "dateModified": "2021-06-01T10:05:19+00:00",
+                      "createdBy": 1,
+                      "createdByUser": "nodeqa admin",
+                      "modifiedBy": 1,
+                      "modifiedByUser": "nodeqa admin",
+                      "id": 173,
+                      "points": 0,
+                      "color": null,
+                      "fields": {
+                        "core": {
+                          "title": {
+                            "id": "1",
+                            "label": "Title",
+                            "alias": "title",
+                            "type": "lookup",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:1:{s:4:\"list\";s:11:\"Mr|Mrs|Miss\";}",
+                            "default_value": null,
+                            "value": "UpdatedTitle1622541919728",
+                            "normalizedValue": "UpdatedTitle1622541919728"
+                          },
+                          "firstname": {
+                            "id": "2",
+                            "label": "First Name",
+                            "alias": "firstname",
+                            "type": "text",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": "Name1622541919354",
+                            "normalizedValue": "Name1622541919354"
+                          },
+                          "lastname": {
+                            "id": "3",
+                            "label": "Last Name",
+                            "alias": "lastname",
+                            "type": "text",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": "LasName1622541919355",
+                            "normalizedValue": "LasName1622541919355"
+                          },
+                          "company": {
+                            "id": "4",
+                            "label": "Primary company",
+                            "alias": "company",
+                            "type": "text",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "position": {
+                            "id": "5",
+                            "label": "Position",
+                            "alias": "position",
+                            "type": "text",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": "Position1622541919355",
+                            "normalizedValue": "Position1622541919355"
+                          },
+                          "email": {
+                            "id": "6",
+                            "label": "Email",
+                            "alias": "email",
+                            "type": "email",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": "fakeemail1622541919354@gmail.com",
+                            "normalizedValue": "fakeemail1622541919354@gmail.com"
+                          },
+                          "mobile": {
+                            "id": "7",
+                            "label": "Mobile",
+                            "alias": "mobile",
+                            "type": "tel",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "phone": {
+                            "id": "8",
+                            "label": "Phone",
+                            "alias": "phone",
+                            "type": "tel",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "points": {
+                            "id": "9",
+                            "label": "Points",
+                            "alias": "points",
+                            "type": "number",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:0:{}",
+                            "default_value": "0",
+                            "value": 0,
+                            "normalizedValue": 0
+                          },
+                          "fax": {
+                            "id": "10",
+                            "label": "Fax",
+                            "alias": "fax",
+                            "type": "tel",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "0",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "address1": {
+                            "id": "11",
+                            "label": "Address Line 1",
+                            "alias": "address1",
+                            "type": "text",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "address2": {
+                            "id": "12",
+                            "label": "Address Line 2",
+                            "alias": "address2",
+                            "type": "text",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "city": {
+                            "id": "13",
+                            "label": "City",
+                            "alias": "city",
+                            "type": "text",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "state": {
+                            "id": "14",
+                            "label": "State",
+                            "alias": "state",
+                            "type": "region",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "zipcode": {
+                            "id": "15",
+                            "label": "Zip Code",
+                            "alias": "zipcode",
+                            "type": "text",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "country": {
+                            "id": "16",
+                            "label": "Country",
+                            "alias": "country",
+                            "type": "country",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "preferred_locale": {
+                            "id": "17",
+                            "label": "Preferred Locale",
+                            "alias": "preferred_locale",
+                            "type": "locale",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "timezone": {
+                            "id": "18",
+                            "label": "mautic.lead.field.timezone",
+                            "alias": "timezone",
+                            "type": "timezone",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "last_active": {
+                            "id": "19",
+                            "label": "Date Last Active",
+                            "alias": "last_active",
+                            "type": "datetime",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "attribution_date": {
+                            "id": "20",
+                            "label": "Attribution Date",
+                            "alias": "attribution_date",
+                            "type": "datetime",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "attribution": {
+                            "id": "21",
+                            "label": "Attribution",
+                            "alias": "attribution",
+                            "type": "number",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:2:{s:9:\"roundmode\";i:4;s:9:\"precision\";i:2;}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "website": {
+                            "id": "22",
+                            "label": "Website",
+                            "alias": "website",
+                            "type": "url",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "0",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          }
+                        },
+                        "social": {
+                          "facebook": {
+                            "id": "23",
+                            "label": "Facebook",
+                            "alias": "facebook",
+                            "type": "text",
+                            "group": "social",
+                            "object": "lead",
+                            "is_fixed": "0",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "foursquare": {
+                            "id": "24",
+                            "label": "Foursquare",
+                            "alias": "foursquare",
+                            "type": "text",
+                            "group": "social",
+                            "object": "lead",
+                            "is_fixed": "0",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "googleplus": {
+                            "id": "25",
+                            "label": "Google+",
+                            "alias": "googleplus",
+                            "type": "text",
+                            "group": "social",
+                            "object": "lead",
+                            "is_fixed": "0",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "instagram": {
+                            "id": "26",
+                            "label": "Instagram",
+                            "alias": "instagram",
+                            "type": "text",
+                            "group": "social",
+                            "object": "lead",
+                            "is_fixed": "0",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "linkedin": {
+                            "id": "27",
+                            "label": "LinkedIn",
+                            "alias": "linkedin",
+                            "type": "text",
+                            "group": "social",
+                            "object": "lead",
+                            "is_fixed": "0",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "skype": {
+                            "id": "28",
+                            "label": "Skype",
+                            "alias": "skype",
+                            "type": "text",
+                            "group": "social",
+                            "object": "lead",
+                            "is_fixed": "0",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "twitter": {
+                            "id": "29",
+                            "label": "Twitter",
+                            "alias": "twitter",
+                            "type": "text",
+                            "group": "social",
+                            "object": "lead",
+                            "is_fixed": "0",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          }
+                        },
+                        "personal": [],
+                        "professional": [],
+                        "all": {
+                          "id": 173,
+                          "title": "UpdatedTitle1622541919728",
+                          "firstname": "Name1622541919354",
+                          "lastname": "LasName1622541919355",
+                          "company": null,
+                          "position": "Position1622541919355",
+                          "email": "fakeemail1622541919354@gmail.com",
+                          "mobile": null,
+                          "phone": null,
+                          "points": 0,
+                          "fax": null,
+                          "address1": null,
+                          "address2": null,
+                          "city": null,
+                          "state": null,
+                          "zipcode": null,
+                          "country": null,
+                          "preferred_locale": null,
+                          "timezone": null,
+                          "last_active": null,
+                          "attribution_date": null,
+                          "attribution": null,
+                          "website": null,
+                          "facebook": null,
+                          "foursquare": null,
+                          "googleplus": null,
+                          "instagram": null,
+                          "linkedin": null,
+                          "skype": null,
+                          "twitter": null
+                        }
+                      },
+                      "lastActive": null,
+                      "owner": null,
+                      "ipAddresses": [],
+                      "tags": [],
+                      "utmtags": [],
+                      "stage": null,
+                      "dateIdentified": "2021-06-01T10:05:19+00:00",
+                      "preferredProfileImage": null,
+                      "doNotContact": [],
+                      "frequencyRules": []
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Merge": [
+          {
+            "startTime": 1622541919932,
+            "executionTime": 1,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {}
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Mautic10": [
+          {
+            "startTime": 1622541919933,
+            "executionTime": 128,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "success": 1
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Mautic11": [
+          {
+            "startTime": 1622541920061,
+            "executionTime": 122,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "success": 1
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Mautic2": [
+          {
+            "startTime": 1622541920183,
+            "executionTime": 123,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": 73,
+                      "companyaddress1": null,
+                      "companyaddress2": null,
+                      "companyemail": null,
+                      "companyphone": null,
+                      "companycity": null,
+                      "companystate": null,
+                      "companyzipcode": null,
+                      "companycountry": null,
+                      "companyname": "UpdatedCompany1622541919572",
+                      "companywebsite": null,
+                      "companynumber_of_employees": null,
+                      "companyfax": null,
+                      "companyannual_revenue": null,
+                      "companyindustry": null,
+                      "companydescription": null
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Mautic7": [
+          {
+            "startTime": 1622541920307,
+            "executionTime": 140,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "isPublished": true,
+                      "dateAdded": "2021-06-01T10:05:19+00:00",
+                      "dateModified": "2021-06-01T10:05:20+00:00",
+                      "createdBy": 1,
+                      "createdByUser": "nodeqa admin",
+                      "modifiedBy": 1,
+                      "modifiedByUser": "nodeqa admin",
+                      "id": 173,
+                      "points": 0,
+                      "color": null,
+                      "fields": {
+                        "core": {
+                          "title": {
+                            "id": "1",
+                            "label": "Title",
+                            "alias": "title",
+                            "type": "lookup",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:1:{s:4:\"list\";s:11:\"Mr|Mrs|Miss\";}",
+                            "default_value": null,
+                            "value": "UpdatedTitle1622541919728",
+                            "normalizedValue": "UpdatedTitle1622541919728"
+                          },
+                          "firstname": {
+                            "id": "2",
+                            "label": "First Name",
+                            "alias": "firstname",
+                            "type": "text",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": "Name1622541919354",
+                            "normalizedValue": "Name1622541919354"
+                          },
+                          "lastname": {
+                            "id": "3",
+                            "label": "Last Name",
+                            "alias": "lastname",
+                            "type": "text",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": "LasName1622541919355",
+                            "normalizedValue": "LasName1622541919355"
+                          },
+                          "company": {
+                            "id": "4",
+                            "label": "Primary company",
+                            "alias": "company",
+                            "type": "text",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": "UpdatedCompany1622541919572",
+                            "normalizedValue": "UpdatedCompany1622541919572"
+                          },
+                          "position": {
+                            "id": "5",
+                            "label": "Position",
+                            "alias": "position",
+                            "type": "text",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": "Position1622541919355",
+                            "normalizedValue": "Position1622541919355"
+                          },
+                          "email": {
+                            "id": "6",
+                            "label": "Email",
+                            "alias": "email",
+                            "type": "email",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": "fakeemail1622541919354@gmail.com",
+                            "normalizedValue": "fakeemail1622541919354@gmail.com"
+                          },
+                          "mobile": {
+                            "id": "7",
+                            "label": "Mobile",
+                            "alias": "mobile",
+                            "type": "tel",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "phone": {
+                            "id": "8",
+                            "label": "Phone",
+                            "alias": "phone",
+                            "type": "tel",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "points": {
+                            "id": "9",
+                            "label": "Points",
+                            "alias": "points",
+                            "type": "number",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:0:{}",
+                            "default_value": "0",
+                            "value": 0,
+                            "normalizedValue": 0
+                          },
+                          "fax": {
+                            "id": "10",
+                            "label": "Fax",
+                            "alias": "fax",
+                            "type": "tel",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "0",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "address1": {
+                            "id": "11",
+                            "label": "Address Line 1",
+                            "alias": "address1",
+                            "type": "text",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "address2": {
+                            "id": "12",
+                            "label": "Address Line 2",
+                            "alias": "address2",
+                            "type": "text",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "city": {
+                            "id": "13",
+                            "label": "City",
+                            "alias": "city",
+                            "type": "text",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "state": {
+                            "id": "14",
+                            "label": "State",
+                            "alias": "state",
+                            "type": "region",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "zipcode": {
+                            "id": "15",
+                            "label": "Zip Code",
+                            "alias": "zipcode",
+                            "type": "text",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "country": {
+                            "id": "16",
+                            "label": "Country",
+                            "alias": "country",
+                            "type": "country",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "preferred_locale": {
+                            "id": "17",
+                            "label": "Preferred Locale",
+                            "alias": "preferred_locale",
+                            "type": "locale",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "timezone": {
+                            "id": "18",
+                            "label": "mautic.lead.field.timezone",
+                            "alias": "timezone",
+                            "type": "timezone",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "last_active": {
+                            "id": "19",
+                            "label": "Date Last Active",
+                            "alias": "last_active",
+                            "type": "datetime",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "attribution_date": {
+                            "id": "20",
+                            "label": "Attribution Date",
+                            "alias": "attribution_date",
+                            "type": "datetime",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "attribution": {
+                            "id": "21",
+                            "label": "Attribution",
+                            "alias": "attribution",
+                            "type": "number",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:2:{s:9:\"roundmode\";i:4;s:9:\"precision\";i:2;}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "website": {
+                            "id": "22",
+                            "label": "Website",
+                            "alias": "website",
+                            "type": "url",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "0",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          }
+                        },
+                        "social": {
+                          "facebook": {
+                            "id": "23",
+                            "label": "Facebook",
+                            "alias": "facebook",
+                            "type": "text",
+                            "group": "social",
+                            "object": "lead",
+                            "is_fixed": "0",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "foursquare": {
+                            "id": "24",
+                            "label": "Foursquare",
+                            "alias": "foursquare",
+                            "type": "text",
+                            "group": "social",
+                            "object": "lead",
+                            "is_fixed": "0",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "googleplus": {
+                            "id": "25",
+                            "label": "Google+",
+                            "alias": "googleplus",
+                            "type": "text",
+                            "group": "social",
+                            "object": "lead",
+                            "is_fixed": "0",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "instagram": {
+                            "id": "26",
+                            "label": "Instagram",
+                            "alias": "instagram",
+                            "type": "text",
+                            "group": "social",
+                            "object": "lead",
+                            "is_fixed": "0",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "linkedin": {
+                            "id": "27",
+                            "label": "LinkedIn",
+                            "alias": "linkedin",
+                            "type": "text",
+                            "group": "social",
+                            "object": "lead",
+                            "is_fixed": "0",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "skype": {
+                            "id": "28",
+                            "label": "Skype",
+                            "alias": "skype",
+                            "type": "text",
+                            "group": "social",
+                            "object": "lead",
+                            "is_fixed": "0",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "twitter": {
+                            "id": "29",
+                            "label": "Twitter",
+                            "alias": "twitter",
+                            "type": "text",
+                            "group": "social",
+                            "object": "lead",
+                            "is_fixed": "0",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          }
+                        },
+                        "personal": [],
+                        "professional": [],
+                        "all": {
+                          "id": 173,
+                          "title": "UpdatedTitle1622541919728",
+                          "firstname": "Name1622541919354",
+                          "lastname": "LasName1622541919355",
+                          "company": "UpdatedCompany1622541919572",
+                          "position": "Position1622541919355",
+                          "email": "fakeemail1622541919354@gmail.com",
+                          "mobile": null,
+                          "phone": null,
+                          "points": 0,
+                          "fax": null,
+                          "address1": null,
+                          "address2": null,
+                          "city": null,
+                          "state": null,
+                          "zipcode": null,
+                          "country": null,
+                          "preferred_locale": null,
+                          "timezone": null,
+                          "last_active": null,
+                          "attribution_date": null,
+                          "attribution": null,
+                          "website": null,
+                          "facebook": null,
+                          "foursquare": null,
+                          "googleplus": null,
+                          "instagram": null,
+                          "linkedin": null,
+                          "skype": null,
+                          "twitter": null
+                        }
+                      },
+                      "lastActive": null,
+                      "owner": null,
+                      "ipAddresses": [],
+                      "tags": [],
+                      "utmtags": [],
+                      "stage": null,
+                      "dateIdentified": "2021-06-01T10:05:19+00:00",
+                      "preferredProfileImage": null,
+                      "doNotContact": [],
+                      "frequencyRules": []
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Mautic3": [
+          {
+            "startTime": 1622541920448,
+            "executionTime": 109,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": 1,
+                      "companyemail": null,
+                      "companyaddress1": null,
+                      "companyaddress2": null,
+                      "companyphone": null,
+                      "companycity": null,
+                      "companystate": null,
+                      "companyzipcode": null,
+                      "companycountry": null,
+                      "companyname": "Company1617277668988",
+                      "companywebsite": null,
+                      "companyindustry": null,
+                      "companydescription": null,
+                      "companynumber_of_employees": null,
+                      "companyfax": null,
+                      "companyannual_revenue": null
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Mautic8": [
+          {
+            "startTime": 1622541920558,
+            "executionTime": 150,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "isPublished": true,
+                      "dateAdded": "2021-05-27T19:13:28+00:00",
+                      "dateModified": null,
+                      "createdBy": null,
+                      "createdByUser": null,
+                      "modifiedBy": null,
+                      "modifiedByUser": " ",
+                      "id": 169,
+                      "points": 0,
+                      "color": null,
+                      "fields": {
+                        "core": {
+                          "points": {
+                            "id": "9",
+                            "label": "Points",
+                            "alias": "points",
+                            "type": "number",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:0:{}",
+                            "default_value": "0",
+                            "value": "0",
+                            "normalizedValue": "0"
+                          },
+                          "last_active": {
+                            "id": "19",
+                            "label": "Date Last Active",
+                            "alias": "last_active",
+                            "type": "datetime",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": "2021-05-27 19:13:28",
+                            "normalizedValue": "2021-05-27 19:13:28"
+                          },
+                          "title": {
+                            "id": "1",
+                            "label": "Title",
+                            "alias": "title",
+                            "type": "lookup",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:1:{s:4:\"list\";s:11:\"Mr|Mrs|Miss\";}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "firstname": {
+                            "id": "2",
+                            "label": "First Name",
+                            "alias": "firstname",
+                            "type": "text",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "lastname": {
+                            "id": "3",
+                            "label": "Last Name",
+                            "alias": "lastname",
+                            "type": "text",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "company": {
+                            "id": "4",
+                            "label": "Primary company",
+                            "alias": "company",
+                            "type": "text",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "position": {
+                            "id": "5",
+                            "label": "Position",
+                            "alias": "position",
+                            "type": "text",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "email": {
+                            "id": "6",
+                            "label": "Email",
+                            "alias": "email",
+                            "type": "email",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "phone": {
+                            "id": "8",
+                            "label": "Phone",
+                            "alias": "phone",
+                            "type": "tel",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "mobile": {
+                            "id": "7",
+                            "label": "Mobile",
+                            "alias": "mobile",
+                            "type": "tel",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "address1": {
+                            "id": "11",
+                            "label": "Address Line 1",
+                            "alias": "address1",
+                            "type": "text",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "address2": {
+                            "id": "12",
+                            "label": "Address Line 2",
+                            "alias": "address2",
+                            "type": "text",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "city": {
+                            "id": "13",
+                            "label": "City",
+                            "alias": "city",
+                            "type": "text",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "state": {
+                            "id": "14",
+                            "label": "State",
+                            "alias": "state",
+                            "type": "region",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "zipcode": {
+                            "id": "15",
+                            "label": "Zip Code",
+                            "alias": "zipcode",
+                            "type": "text",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "timezone": {
+                            "id": "18",
+                            "label": "mautic.lead.field.timezone",
+                            "alias": "timezone",
+                            "type": "timezone",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "country": {
+                            "id": "16",
+                            "label": "Country",
+                            "alias": "country",
+                            "type": "country",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "fax": {
+                            "id": "10",
+                            "label": "Fax",
+                            "alias": "fax",
+                            "type": "tel",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "0",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "preferred_locale": {
+                            "id": "17",
+                            "label": "Preferred Locale",
+                            "alias": "preferred_locale",
+                            "type": "locale",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "attribution_date": {
+                            "id": "20",
+                            "label": "Attribution Date",
+                            "alias": "attribution_date",
+                            "type": "datetime",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "attribution": {
+                            "id": "21",
+                            "label": "Attribution",
+                            "alias": "attribution",
+                            "type": "number",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:2:{s:9:\"roundmode\";i:4;s:9:\"precision\";i:2;}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "website": {
+                            "id": "22",
+                            "label": "Website",
+                            "alias": "website",
+                            "type": "url",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "0",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          }
+                        },
+                        "social": {
+                          "facebook": {
+                            "id": "23",
+                            "label": "Facebook",
+                            "alias": "facebook",
+                            "type": "text",
+                            "group": "social",
+                            "object": "lead",
+                            "is_fixed": "0",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "foursquare": {
+                            "id": "24",
+                            "label": "Foursquare",
+                            "alias": "foursquare",
+                            "type": "text",
+                            "group": "social",
+                            "object": "lead",
+                            "is_fixed": "0",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "googleplus": {
+                            "id": "25",
+                            "label": "Google+",
+                            "alias": "googleplus",
+                            "type": "text",
+                            "group": "social",
+                            "object": "lead",
+                            "is_fixed": "0",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "instagram": {
+                            "id": "26",
+                            "label": "Instagram",
+                            "alias": "instagram",
+                            "type": "text",
+                            "group": "social",
+                            "object": "lead",
+                            "is_fixed": "0",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "linkedin": {
+                            "id": "27",
+                            "label": "LinkedIn",
+                            "alias": "linkedin",
+                            "type": "text",
+                            "group": "social",
+                            "object": "lead",
+                            "is_fixed": "0",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "skype": {
+                            "id": "28",
+                            "label": "Skype",
+                            "alias": "skype",
+                            "type": "text",
+                            "group": "social",
+                            "object": "lead",
+                            "is_fixed": "0",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "twitter": {
+                            "id": "29",
+                            "label": "Twitter",
+                            "alias": "twitter",
+                            "type": "text",
+                            "group": "social",
+                            "object": "lead",
+                            "is_fixed": "0",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          }
+                        },
+                        "personal": [],
+                        "professional": [],
+                        "all": {
+                          "id": 169,
+                          "points": "0",
+                          "last_active": "2021-05-27 19:13:28",
+                          "title": null,
+                          "firstname": null,
+                          "lastname": null,
+                          "company": null,
+                          "position": null,
+                          "email": null,
+                          "phone": null,
+                          "mobile": null,
+                          "address1": null,
+                          "address2": null,
+                          "city": null,
+                          "state": null,
+                          "zipcode": null,
+                          "timezone": null,
+                          "country": null,
+                          "fax": null,
+                          "preferred_locale": null,
+                          "attribution_date": null,
+                          "attribution": null,
+                          "website": null,
+                          "facebook": null,
+                          "foursquare": null,
+                          "googleplus": null,
+                          "instagram": null,
+                          "linkedin": null,
+                          "skype": null,
+                          "twitter": null
+                        }
+                      },
+                      "lastActive": "2021-05-27T19:13:28+00:00",
+                      "owner": null,
+                      "ipAddresses": [
+                        {
+                          "ip": "157.230.33.180",
+                          "id": 28,
+                          "ipDetails": {
+                            "city": "",
+                            "region": "",
+                            "zipcode": "",
+                            "country": "",
+                            "latitude": "",
+                            "longitude": "",
+                            "isp": "",
+                            "organization": "",
+                            "timezone": "",
+                            "extra": ""
+                          }
+                        }
+                      ],
+                      "tags": [],
+                      "utmtags": [],
+                      "stage": null,
+                      "dateIdentified": null,
+                      "preferredProfileImage": "gravatar",
+                      "doNotContact": [],
+                      "frequencyRules": []
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Mautic4": [
+          {
+            "startTime": 1622541920708,
+            "executionTime": 130,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": null,
+                      "companyaddress1": null,
+                      "companyaddress2": null,
+                      "companyemail": null,
+                      "companyphone": null,
+                      "companycity": null,
+                      "companystate": null,
+                      "companyzipcode": null,
+                      "companycountry": null,
+                      "companyname": "UpdatedCompany1622541919572",
+                      "companywebsite": null,
+                      "companynumber_of_employees": null,
+                      "companyfax": null,
+                      "companyannual_revenue": null,
+                      "companyindustry": null,
+                      "companydescription": null
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Mautic9": [
+          {
+            "startTime": 1622541920839,
+            "executionTime": 161,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "isPublished": true,
+                      "dateAdded": "2021-06-01T10:05:19+00:00",
+                      "dateModified": "2021-06-01T10:05:20+00:00",
+                      "createdBy": 1,
+                      "createdByUser": "nodeqa admin",
+                      "modifiedBy": 1,
+                      "modifiedByUser": "nodeqa admin",
+                      "id": null,
+                      "points": 0,
+                      "color": null,
+                      "fields": {
+                        "core": {
+                          "title": {
+                            "id": "1",
+                            "label": "Title",
+                            "alias": "title",
+                            "type": "lookup",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:1:{s:4:\"list\";s:11:\"Mr|Mrs|Miss\";}",
+                            "default_value": null,
+                            "value": "UpdatedTitle1622541919728",
+                            "normalizedValue": "UpdatedTitle1622541919728"
+                          },
+                          "firstname": {
+                            "id": "2",
+                            "label": "First Name",
+                            "alias": "firstname",
+                            "type": "text",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": "Name1622541919354",
+                            "normalizedValue": "Name1622541919354"
+                          },
+                          "lastname": {
+                            "id": "3",
+                            "label": "Last Name",
+                            "alias": "lastname",
+                            "type": "text",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": "LasName1622541919355",
+                            "normalizedValue": "LasName1622541919355"
+                          },
+                          "company": {
+                            "id": "4",
+                            "label": "Primary company",
+                            "alias": "company",
+                            "type": "text",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": "UpdatedCompany1622541919572",
+                            "normalizedValue": "UpdatedCompany1622541919572"
+                          },
+                          "position": {
+                            "id": "5",
+                            "label": "Position",
+                            "alias": "position",
+                            "type": "text",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": "Position1622541919355",
+                            "normalizedValue": "Position1622541919355"
+                          },
+                          "email": {
+                            "id": "6",
+                            "label": "Email",
+                            "alias": "email",
+                            "type": "email",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": "fakeemail1622541919354@gmail.com",
+                            "normalizedValue": "fakeemail1622541919354@gmail.com"
+                          },
+                          "mobile": {
+                            "id": "7",
+                            "label": "Mobile",
+                            "alias": "mobile",
+                            "type": "tel",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "phone": {
+                            "id": "8",
+                            "label": "Phone",
+                            "alias": "phone",
+                            "type": "tel",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "points": {
+                            "id": "9",
+                            "label": "Points",
+                            "alias": "points",
+                            "type": "number",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:0:{}",
+                            "default_value": "0",
+                            "value": 0,
+                            "normalizedValue": 0
+                          },
+                          "fax": {
+                            "id": "10",
+                            "label": "Fax",
+                            "alias": "fax",
+                            "type": "tel",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "0",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "address1": {
+                            "id": "11",
+                            "label": "Address Line 1",
+                            "alias": "address1",
+                            "type": "text",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "address2": {
+                            "id": "12",
+                            "label": "Address Line 2",
+                            "alias": "address2",
+                            "type": "text",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "city": {
+                            "id": "13",
+                            "label": "City",
+                            "alias": "city",
+                            "type": "text",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "state": {
+                            "id": "14",
+                            "label": "State",
+                            "alias": "state",
+                            "type": "region",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "zipcode": {
+                            "id": "15",
+                            "label": "Zip Code",
+                            "alias": "zipcode",
+                            "type": "text",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "country": {
+                            "id": "16",
+                            "label": "Country",
+                            "alias": "country",
+                            "type": "country",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "preferred_locale": {
+                            "id": "17",
+                            "label": "Preferred Locale",
+                            "alias": "preferred_locale",
+                            "type": "locale",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "timezone": {
+                            "id": "18",
+                            "label": "mautic.lead.field.timezone",
+                            "alias": "timezone",
+                            "type": "timezone",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "last_active": {
+                            "id": "19",
+                            "label": "Date Last Active",
+                            "alias": "last_active",
+                            "type": "datetime",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "attribution_date": {
+                            "id": "20",
+                            "label": "Attribution Date",
+                            "alias": "attribution_date",
+                            "type": "datetime",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "attribution": {
+                            "id": "21",
+                            "label": "Attribution",
+                            "alias": "attribution",
+                            "type": "number",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "1",
+                            "properties": "a:2:{s:9:\"roundmode\";i:4;s:9:\"precision\";i:2;}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "website": {
+                            "id": "22",
+                            "label": "Website",
+                            "alias": "website",
+                            "type": "url",
+                            "group": "core",
+                            "object": "lead",
+                            "is_fixed": "0",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          }
+                        },
+                        "social": {
+                          "facebook": {
+                            "id": "23",
+                            "label": "Facebook",
+                            "alias": "facebook",
+                            "type": "text",
+                            "group": "social",
+                            "object": "lead",
+                            "is_fixed": "0",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "foursquare": {
+                            "id": "24",
+                            "label": "Foursquare",
+                            "alias": "foursquare",
+                            "type": "text",
+                            "group": "social",
+                            "object": "lead",
+                            "is_fixed": "0",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "googleplus": {
+                            "id": "25",
+                            "label": "Google+",
+                            "alias": "googleplus",
+                            "type": "text",
+                            "group": "social",
+                            "object": "lead",
+                            "is_fixed": "0",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "instagram": {
+                            "id": "26",
+                            "label": "Instagram",
+                            "alias": "instagram",
+                            "type": "text",
+                            "group": "social",
+                            "object": "lead",
+                            "is_fixed": "0",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "linkedin": {
+                            "id": "27",
+                            "label": "LinkedIn",
+                            "alias": "linkedin",
+                            "type": "text",
+                            "group": "social",
+                            "object": "lead",
+                            "is_fixed": "0",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "skype": {
+                            "id": "28",
+                            "label": "Skype",
+                            "alias": "skype",
+                            "type": "text",
+                            "group": "social",
+                            "object": "lead",
+                            "is_fixed": "0",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          },
+                          "twitter": {
+                            "id": "29",
+                            "label": "Twitter",
+                            "alias": "twitter",
+                            "type": "text",
+                            "group": "social",
+                            "object": "lead",
+                            "is_fixed": "0",
+                            "properties": "a:0:{}",
+                            "default_value": null,
+                            "value": null,
+                            "normalizedValue": null
+                          }
+                        },
+                        "personal": [],
+                        "professional": [],
+                        "all": {
+                          "id": null,
+                          "title": "UpdatedTitle1622541919728",
+                          "firstname": "Name1622541919354",
+                          "lastname": "LasName1622541919355",
+                          "company": "UpdatedCompany1622541919572",
+                          "position": "Position1622541919355",
+                          "email": "fakeemail1622541919354@gmail.com",
+                          "mobile": null,
+                          "phone": null,
+                          "points": 0,
+                          "fax": null,
+                          "address1": null,
+                          "address2": null,
+                          "city": null,
+                          "state": null,
+                          "zipcode": null,
+                          "country": null,
+                          "preferred_locale": null,
+                          "timezone": null,
+                          "last_active": null,
+                          "attribution_date": null,
+                          "attribution": null,
+                          "website": null,
+                          "facebook": null,
+                          "foursquare": null,
+                          "googleplus": null,
+                          "instagram": null,
+                          "linkedin": null,
+                          "skype": null,
+                          "twitter": null
+                        }
+                      },
+                      "lastActive": null,
+                      "owner": null,
+                      "ipAddresses": [],
+                      "tags": [],
+                      "utmtags": [],
+                      "stage": null,
+                      "dateIdentified": "2021-06-01T10:05:19+00:00",
+                      "preferredProfileImage": null,
+                      "doNotContact": [],
+                      "frequencyRules": []
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      "lastNodeExecuted": "Mautic9"
+    },
+    "executionData": {
+      "contextData": {},
+      "nodeExecutionStack": [],
+      "waitingExecution": {}
+    }
+  },
+  "mode": "cli",
+  "startedAt": "2021-06-01T10:05:19.127Z",
+  "stoppedAt": "2021-06-01T10:05:21.000Z",
+  "finished": true
+}

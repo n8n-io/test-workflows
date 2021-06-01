@@ -1,0 +1,368 @@
+{
+  "data": {
+    "startData": {},
+    "resultData": {
+      "runData": {
+        "Start": [
+          {
+            "startTime": 1622541755510,
+            "executionTime": 0,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {}
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "uProc": [
+          {
+            "startTime": 1622541755511,
+            "executionTime": 181,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "result": false,
+                      "message": {
+                        "result": "Sample text"
+                      },
+                      "status": "completed",
+                      "params": {
+                        "text": "n8n rocks!",
+                        "bcid": "auspost"
+                      },
+                      "normalized": false,
+                      "criteria": "10032",
+                      "time": 2,
+                      "price": 0,
+                      "real_price": 0.005,
+                      "processor": "get-barcode-encoded",
+                      "total_rows": 1,
+                      "balance": 50.49
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "uProc1": [
+          {
+            "startTime": 1622541755692,
+            "executionTime": 152,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "result": true,
+                      "message": {
+                        "result": true
+                      },
+                      "status": "completed",
+                      "params": {
+                        "uuid": "0c6a1543-6232-49d2-b50d-c1e70cd015a0"
+                      },
+                      "normalized": false,
+                      "criteria": "10000",
+                      "time": 3,
+                      "price": 0,
+                      "real_price": 0,
+                      "processor": "check-number-uuid",
+                      "total_rows": 1,
+                      "balance": 50.49
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "uProc10": [
+          {
+            "startTime": 1622541755845,
+            "executionTime": 142,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "result": true,
+                      "message": {
+                        "result": "Sample text"
+                      },
+                      "status": "completed",
+                      "params": {
+                        "domain": "n8n.io"
+                      },
+                      "normalized": false,
+                      "criteria": "10032",
+                      "time": 3,
+                      "price": 0,
+                      "real_price": 0.0025,
+                      "processor": "get-domain-logo",
+                      "total_rows": 1,
+                      "balance": 50.49
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "uProc2": [
+          {
+            "startTime": 1622541755988,
+            "executionTime": 148,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "result": true,
+                      "message": {
+                        "result": "Sample text"
+                      },
+                      "status": "completed",
+                      "params": {
+                        "domain": "n8n.io"
+                      },
+                      "normalized": false,
+                      "criteria": "10032",
+                      "time": 3,
+                      "price": 0,
+                      "real_price": 0.001,
+                      "processor": "get-domain-blacklists",
+                      "total_rows": 1,
+                      "balance": 50.49
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "uProc11": [
+          {
+            "startTime": 1622541756136,
+            "executionTime": 167,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "result": false,
+                      "message": {
+                        "result": "Sample text"
+                      },
+                      "status": "completed",
+                      "params": {
+                        "url": "n8n.io",
+                        "useragent": "n8n-agent",
+                        "width": "160",
+                        "fullpage": "no",
+                        "selector": ""
+                      },
+                      "normalized": false,
+                      "criteria": "10032",
+                      "time": 2,
+                      "price": 0,
+                      "real_price": 0,
+                      "processor": "get-url-screenshot",
+                      "total_rows": 1,
+                      "balance": 50.49
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "uProc3": [
+          {
+            "startTime": 1622541756303,
+            "executionTime": 195,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "result": true,
+                      "message": {
+                        "result": "Sample text"
+                      },
+                      "status": "completed",
+                      "params": {
+                        "ip": "104.21.37.3"
+                      },
+                      "normalized": false,
+                      "criteria": "10032",
+                      "time": 3,
+                      "price": 0,
+                      "real_price": 0.002,
+                      "processor": "get-ip-blacklists",
+                      "total_rows": 1,
+                      "balance": 50.49
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "uProc8": [
+          {
+            "startTime": 1622541756498,
+            "executionTime": 358,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "result": false,
+                      "message": {
+                        "altitude": "Sample text",
+                        "date": "Sample text",
+                        "latitude": "Sample text",
+                        "longitude": "Sample text",
+                        "maker": "Sample text",
+                        "model": "Sample text",
+                        "resolution_x": "Sample text",
+                        "resolution_y": "Sample text"
+                      },
+                      "status": "completed",
+                      "params": {
+                        "url": "https://n8n.io/_nuxt/img/df5be1c.png"
+                      },
+                      "normalized": false,
+                      "criteria": "10032",
+                      "time": 195,
+                      "price": 0,
+                      "real_price": 0,
+                      "processor": "get-image-exif",
+                      "total_rows": 1,
+                      "balance": 50.49
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "uProc4": [
+          {
+            "startTime": 1622541756857,
+            "executionTime": 139,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "result": true,
+                      "message": {
+                        "result": true
+                      },
+                      "status": "completed",
+                      "params": {
+                        "luhn": "79927398713"
+                      },
+                      "normalized": false,
+                      "criteria": "10032",
+                      "time": 3,
+                      "price": 0,
+                      "real_price": 0.001,
+                      "processor": "check-number-luhn",
+                      "total_rows": 1,
+                      "balance": 50.49
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "uProc9": [
+          {
+            "startTime": 1622541756996,
+            "executionTime": 305,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "result": false,
+                      "message": {
+                        "result": "Sample text"
+                      },
+                      "status": "completed",
+                      "params": {
+                        "text": "n8n rocks!",
+                        "url": "https://n8n.io/_nuxt/img/df5be1c.png",
+                        "size": "72"
+                      },
+                      "normalized": false,
+                      "criteria": "10032",
+                      "time": 165,
+                      "price": 0,
+                      "real_price": 0,
+                      "processor": "get-image-with-text",
+                      "total_rows": 1,
+                      "balance": 50.49
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "uProc5": [
+          {
+            "startTime": 1622541757301,
+            "executionTime": 345,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "result": false,
+                      "message": {
+                        "result": true
+                      },
+                      "status": "completed",
+                      "params": {
+                        "password": "randompassword"
+                      },
+                      "normalized": false,
+                      "criteria": "10032",
+                      "time": 2,
+                      "price": 0,
+                      "real_price": 0.001,
+                      "processor": "check-password-strong",
+                      "total_rows": 1,
+                      "balance": 50.49
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      "lastNodeExecuted": "uProc5"
+    },
+    "executionData": {
+      "contextData": {},
+      "nodeExecutionStack": [],
+      "waitingExecution": {}
+    }
+  },
+  "mode": "cli",
+  "startedAt": "2021-06-01T10:02:35.506Z",
+  "stoppedAt": "2021-06-01T10:02:37.646Z",
+  "finished": true
+}
