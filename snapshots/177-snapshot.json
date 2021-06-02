@@ -5,8 +5,8 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622541752913,
-            "executionTime": 0,
+            "startTime": 1622630082191,
+            "executionTime": 1,
             "data": {
               "main": [
                 [
@@ -20,8 +20,8 @@
         ],
         "uProc1": [
           {
-            "startTime": 1622541752914,
-            "executionTime": 258,
+            "startTime": 1622630082192,
+            "executionTime": 259,
             "data": {
               "main": [
                 [
@@ -29,15 +29,15 @@
                     "json": {
                       "result": true,
                       "message": {
-                        "result": true
+                        "object": true
                       },
                       "status": "completed",
                       "params": {
-                        "credit_card": "5564456122310619"
+                        "object": true
                       },
                       "normalized": false,
                       "criteria": "10032",
-                      "time": 3,
+                      "time": 2,
                       "price": 0,
                       "real_price": 0.001,
                       "processor": "check-creditcard-checksum",
@@ -52,8 +52,8 @@
         ],
         "uProc2": [
           {
-            "startTime": 1622541753173,
-            "executionTime": 174,
+            "startTime": 1622630082452,
+            "executionTime": 207,
             "data": {
               "main": [
                 [
@@ -61,11 +61,11 @@
                     "json": {
                       "result": true,
                       "message": {
-                        "result": "Sample text"
+                        "object": true
                       },
                       "status": "completed",
                       "params": {
-                        "credit_card": "5564456122310619"
+                        "object": true
                       },
                       "normalized": false,
                       "criteria": "10032",
@@ -84,8 +84,8 @@
         ],
         "uProc3": [
           {
-            "startTime": 1622541753348,
-            "executionTime": 172,
+            "startTime": 1622630082659,
+            "executionTime": 237,
             "data": {
               "main": [
                 [
@@ -93,15 +93,15 @@
                     "json": {
                       "result": false,
                       "message": {
-                        "result": true
+                        "object": true
                       },
                       "status": "completed",
                       "params": {
-                        "account": "5564456122310619"
+                        "object": true
                       },
                       "normalized": false,
                       "criteria": "10032",
-                      "time": 3,
+                      "time": 2,
                       "price": 0,
                       "real_price": 0.0015,
                       "processor": "check-bank-account-valid-es",
@@ -116,8 +116,8 @@
         ],
         "uProc4": [
           {
-            "startTime": 1622541753521,
-            "executionTime": 174,
+            "startTime": 1622630082896,
+            "executionTime": 241,
             "data": {
               "main": [
                 [
@@ -125,15 +125,15 @@
                     "json": {
                       "result": true,
                       "message": {
-                        "result": true
+                        "object": true
                       },
                       "status": "completed",
                       "params": {
-                        "bic": "AYGBESMM"
+                        "object": true
                       },
                       "normalized": false,
                       "criteria": "10032",
-                      "time": 3,
+                      "time": 2,
                       "price": 0,
                       "real_price": 0.0015,
                       "processor": "check-bank-bic-valid",
@@ -148,8 +148,8 @@
         ],
         "uProc5": [
           {
-            "startTime": 1622541753695,
-            "executionTime": 178,
+            "startTime": 1622630083137,
+            "executionTime": 251,
             "data": {
               "main": [
                 [
@@ -157,16 +157,15 @@
                     "json": {
                       "result": false,
                       "message": {
-                        "result": "Sample text"
+                        "object": true
                       },
                       "status": "completed",
                       "params": {
-                        "account": "9121000418450200051332M",
-                        "isocode": "ES"
+                        "object": true
                       },
                       "normalized": false,
                       "criteria": "10032",
-                      "time": 2,
+                      "time": 3,
                       "price": 0,
                       "real_price": 0.003,
                       "processor": "get-bank-iban-by-account",
@@ -181,8 +180,8 @@
         ],
         "uProc6": [
           {
-            "startTime": 1622541753873,
-            "executionTime": 176,
+            "startTime": 1622630083388,
+            "executionTime": 251,
             "data": {
               "main": [
                 [
@@ -190,21 +189,11 @@
                     "json": {
                       "result": false,
                       "message": {
-                        "address": "Sample text",
-                        "bank": "Sample text",
-                        "bban": "Sample text",
-                        "bic": "Sample text",
-                        "branch": "Sample text",
-                        "city": "Sample text",
-                        "country_isocode": "Sample text",
-                        "country_name": "Sample text",
-                        "sepa": "Sample text",
-                        "valid": true,
-                        "zipcode": "Sample text"
+                        "object": true
                       },
                       "status": "completed",
                       "params": {
-                        "iban": "ES9121000418450200051332M"
+                        "object": true
                       },
                       "normalized": false,
                       "criteria": "10032",
@@ -223,8 +212,8 @@
         ],
         "uProc7": [
           {
-            "startTime": 1622541754049,
-            "executionTime": 160,
+            "startTime": 1622630083639,
+            "executionTime": 230,
             "data": {
               "main": [
                 [
@@ -232,11 +221,11 @@
                     "json": {
                       "result": false,
                       "message": {
-                        "result": true
+                        "object": true
                       },
                       "status": "completed",
                       "params": {
-                        "iban": "ES9121000418450200051332M"
+                        "object": true
                       },
                       "normalized": false,
                       "criteria": "10032",
@@ -255,8 +244,8 @@
         ],
         "uProc8": [
           {
-            "startTime": 1622541754210,
-            "executionTime": 158,
+            "startTime": 1622630083869,
+            "executionTime": 241,
             "data": {
               "main": [
                 [
@@ -264,15 +253,15 @@
                     "json": {
                       "result": true,
                       "message": {
-                        "result": "Sample text"
+                        "object": true
                       },
                       "status": "completed",
                       "params": {
-                        "country": "ES"
+                        "object": true
                       },
                       "normalized": false,
                       "criteria": "10040",
-                      "time": 3,
+                      "time": 2,
                       "price": 0,
                       "real_price": 0.001,
                       "processor": "get-currency-by-country",
@@ -287,8 +276,8 @@
         ],
         "uProc9": [
           {
-            "startTime": 1622541754368,
-            "executionTime": 154,
+            "startTime": 1622630084111,
+            "executionTime": 227,
             "data": {
               "main": [
                 [
@@ -296,15 +285,15 @@
                     "json": {
                       "result": true,
                       "message": {
-                        "result": "Sample text"
+                        "object": true
                       },
                       "status": "completed",
                       "params": {
-                        "country_code": "ES"
+                        "object": true
                       },
                       "normalized": false,
                       "criteria": "10040",
-                      "time": 3,
+                      "time": 5,
                       "price": 0,
                       "real_price": 0.001,
                       "processor": "get-currency-by-country-isocode",
@@ -319,8 +308,8 @@
         ],
         "uProc10": [
           {
-            "startTime": 1622541754522,
-            "executionTime": 163,
+            "startTime": 1622630084339,
+            "executionTime": 247,
             "data": {
               "main": [
                 [
@@ -328,11 +317,11 @@
                     "json": {
                       "result": false,
                       "message": {
-                        "result": "Sample text"
+                        "object": true
                       },
                       "status": "completed",
                       "params": {
-                        "ip": "104.21.37.3"
+                        "object": true
                       },
                       "normalized": false,
                       "criteria": "10040",
@@ -351,8 +340,8 @@
         ],
         "uProc11": [
           {
-            "startTime": 1622541754685,
-            "executionTime": 154,
+            "startTime": 1622630084587,
+            "executionTime": 232,
             "data": {
               "main": [
                 [
@@ -360,11 +349,11 @@
                     "json": {
                       "result": false,
                       "message": {
-                        "result": "Sample text"
+                        "object": true
                       },
                       "status": "completed",
                       "params": {
-                        "isocode": "ES"
+                        "object": true
                       },
                       "normalized": false,
                       "criteria": "10040",
@@ -383,8 +372,8 @@
         ],
         "uProc12": [
           {
-            "startTime": 1622541754839,
-            "executionTime": 148,
+            "startTime": 1622630084820,
+            "executionTime": 234,
             "data": {
               "main": [
                 [
@@ -392,18 +381,15 @@
                     "json": {
                       "result": true,
                       "message": {
-                        "result": "Sample text"
+                        "object": true
                       },
                       "status": "completed",
                       "params": {
-                        "date": "104.21.37.3",
-                        "amount": "10",
-                        "isocode1": "EUR",
-                        "isocode2": "JPY"
+                        "object": true
                       },
                       "normalized": false,
                       "criteria": "10040",
-                      "time": 3,
+                      "time": 5,
                       "price": 0.002,
                       "real_price": 0.002,
                       "processor": "get-currency-converted-between-isocode-date",
@@ -418,8 +404,8 @@
         ],
         "uProc13": [
           {
-            "startTime": 1622541754987,
-            "executionTime": 142,
+            "startTime": 1622630085054,
+            "executionTime": 235,
             "data": {
               "main": [
                 [
@@ -427,24 +413,16 @@
                     "json": {
                       "result": false,
                       "message": {
-                        "0": "S",
-                        "1": "a",
-                        "2": "m",
-                        "3": "p",
-                        "4": "l",
-                        "5": "e",
-                        "6": " ",
-                        "7": "t",
-                        "8": "e",
-                        "9": "x",
-                        "10": "t"
+                        "object": true
                       },
                       "params": {
-                        "country": ""
+                        "object": true
                       },
                       "processor": "get-currency-list-by-country",
                       "total_rows": 1,
-                      "balance": null
+                      "balance": {
+                        "object": true
+                      }
                     }
                   }
                 ]
@@ -454,22 +432,24 @@
         ],
         "uProc14": [
           {
-            "startTime": 1622541755130,
-            "executionTime": 151,
+            "startTime": 1622630085290,
+            "executionTime": 241,
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "result": false,
-                      "message": [],
+                      "message": [
+                        "json array"
+                      ],
                       "status": "completed",
                       "params": {
-                        "ip": "104.21.37.3"
+                        "object": true
                       },
                       "normalized": false,
                       "criteria": "10040",
-                      "time": 2,
+                      "time": 3,
                       "price": 0,
                       "real_price": 0,
                       "processor": "get-currency-list-by-ip",
@@ -484,22 +464,24 @@
         ],
         "uProc15": [
           {
-            "startTime": 1622541755281,
-            "executionTime": 142,
+            "startTime": 1622630085532,
+            "executionTime": 245,
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "result": false,
-                      "message": [],
+                      "message": [
+                        "json array"
+                      ],
                       "status": "completed",
                       "params": {
-                        "isocode": "DE"
+                        "object": true
                       },
                       "normalized": false,
                       "criteria": "10040",
-                      "time": 4,
+                      "time": 3,
                       "price": 0,
                       "real_price": 0,
                       "processor": "get-currency-list-by-isocode",
@@ -514,8 +496,8 @@
         ],
         "uProc16": [
           {
-            "startTime": 1622541755423,
-            "executionTime": 140,
+            "startTime": 1622630085778,
+            "executionTime": 227,
             "data": {
               "main": [
                 [
@@ -523,11 +505,11 @@
                     "json": {
                       "result": false,
                       "message": {
-                        "result": true
+                        "object": true
                       },
                       "status": "completed",
                       "params": {
-                        "isocode": "DE"
+                        "object": true
                       },
                       "normalized": false,
                       "criteria": "10040",
@@ -546,8 +528,8 @@
         ],
         "uProc17": [
           {
-            "startTime": 1622541755564,
-            "executionTime": 143,
+            "startTime": 1622630086006,
+            "executionTime": 239,
             "data": {
               "main": [
                 [
@@ -555,13 +537,11 @@
                     "json": {
                       "result": true,
                       "message": {
-                        "country": "Sample text",
-                        "isocode": "Sample text",
-                        "vat": "Sample text"
+                        "object": true
                       },
                       "status": "completed",
                       "params": {
-                        "address": "10115, Berlin, Germany"
+                        "object": true
                       },
                       "normalized": false,
                       "criteria": "10040",
@@ -580,8 +560,8 @@
         ],
         "uProc18": [
           {
-            "startTime": 1622541755707,
-            "executionTime": 150,
+            "startTime": 1622630086246,
+            "executionTime": 235,
             "data": {
               "main": [
                 [
@@ -589,17 +569,15 @@
                     "json": {
                       "result": true,
                       "message": {
-                        "country": "Sample text",
-                        "isocode": "Sample text",
-                        "vat": "Sample text"
+                        "object": true
                       },
                       "status": "completed",
                       "params": {
-                        "coordinates": "52.52986092913615, 13.389315284523297"
+                        "object": true
                       },
                       "normalized": false,
                       "criteria": "10040",
-                      "time": 3,
+                      "time": 2,
                       "price": 0,
                       "real_price": 0.001,
                       "processor": "get-vat-by-coordinates",
@@ -614,8 +592,8 @@
         ],
         "uProc19": [
           {
-            "startTime": 1622541755858,
-            "executionTime": 172,
+            "startTime": 1622630086481,
+            "executionTime": 453,
             "data": {
               "main": [
                 [
@@ -623,17 +601,15 @@
                     "json": {
                       "result": false,
                       "message": {
-                        "country": "Sample text",
-                        "isocode": "Sample text",
-                        "vat": "Sample text"
+                        "object": true
                       },
                       "status": "completed",
                       "params": {
-                        "ip": "104.21.37.3"
+                        "object": true
                       },
                       "normalized": false,
                       "criteria": "10040",
-                      "time": 2,
+                      "time": 3,
                       "price": 0,
                       "real_price": 0,
                       "processor": "get-vat-by-ip",
@@ -648,8 +624,8 @@
         ],
         "uProc20": [
           {
-            "startTime": 1622541756031,
-            "executionTime": 166,
+            "startTime": 1622630086935,
+            "executionTime": 192,
             "data": {
               "main": [
                 [
@@ -657,17 +633,15 @@
                     "json": {
                       "result": true,
                       "message": {
-                        "country": "Sample text",
-                        "isocode": "Sample text",
-                        "vat": "Sample text"
+                        "object": true
                       },
                       "status": "completed",
                       "params": {
-                        "isocode": "DE"
+                        "object": true
                       },
                       "normalized": false,
                       "criteria": "10040",
-                      "time": 3,
+                      "time": 4,
                       "price": 0,
                       "real_price": 0.001,
                       "processor": "get-vat-by-isocode",
@@ -682,8 +656,8 @@
         ],
         "uProc21": [
           {
-            "startTime": 1622541756197,
-            "executionTime": 163,
+            "startTime": 1622630087127,
+            "executionTime": 197,
             "data": {
               "main": [
                 [
@@ -691,13 +665,11 @@
                     "json": {
                       "result": false,
                       "message": {
-                        "isocode": "Sample text",
-                        "valid": true
+                        "object": true
                       },
                       "status": "completed",
                       "params": {
-                        "isocode": "DE",
-                        "tin": "44016116G"
+                        "object": true
                       },
                       "normalized": false,
                       "criteria": "10063",
@@ -716,8 +688,8 @@
         ],
         "uProc22": [
           {
-            "startTime": 1622541756360,
-            "executionTime": 180,
+            "startTime": 1622630087324,
+            "executionTime": 250,
             "data": {
               "main": [
                 [
@@ -725,17 +697,15 @@
                     "json": {
                       "result": true,
                       "message": {
-                        "country": "Sample text",
-                        "isocode": "Sample text",
-                        "vat": "Sample text"
+                        "object": true
                       },
                       "status": "completed",
                       "params": {
-                        "phone": "932187670"
+                        "object": true
                       },
                       "normalized": false,
                       "criteria": "10040",
-                      "time": 3,
+                      "time": 4,
                       "price": 0,
                       "real_price": 0.001,
                       "processor": "get-vat-by-phone",
@@ -750,8 +720,8 @@
         ],
         "uProc23": [
           {
-            "startTime": 1622541756540,
-            "executionTime": 161,
+            "startTime": 1622630087574,
+            "executionTime": 236,
             "data": {
               "main": [
                 [
@@ -759,17 +729,15 @@
                     "json": {
                       "result": false,
                       "message": {
-                        "country": "Sample text",
-                        "isocode": "Sample text",
-                        "vat": "Sample text"
+                        "object": true
                       },
                       "status": "completed",
                       "params": {
-                        "zipcode": "10115"
+                        "object": true
                       },
                       "normalized": false,
                       "criteria": "10040",
-                      "time": 5,
+                      "time": 2,
                       "price": 0,
                       "real_price": 0,
                       "processor": "get-vat-by-zipcode",
@@ -784,8 +752,8 @@
         ],
         "uProc24": [
           {
-            "startTime": 1622541756702,
-            "executionTime": 162,
+            "startTime": 1622630087810,
+            "executionTime": 245,
             "data": {
               "main": [
                 [
@@ -793,16 +761,15 @@
                     "json": {
                       "result": true,
                       "message": {
-                        "result": true
+                        "object": true
                       },
                       "status": "completed",
                       "params": {
-                        "isocode": "ES",
-                        "tin": "44016116G"
+                        "object": true
                       },
                       "normalized": false,
                       "criteria": "10063",
-                      "time": 3,
+                      "time": 2,
                       "price": 0,
                       "real_price": 0.001,
                       "processor": "check-vat-exist",
@@ -825,7 +792,7 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-01T10:02:32.909Z",
-  "stoppedAt": "2021-06-01T10:02:36.864Z",
+  "startedAt": "2021-06-02T10:34:42.188Z",
+  "stoppedAt": "2021-06-02T10:34:48.056Z",
   "finished": true
 }

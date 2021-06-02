@@ -5,7 +5,7 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622541673489,
+            "startTime": 1622629993601,
             "executionTime": 0,
             "data": {
               "main": [
@@ -20,8 +20,8 @@
         ],
         "Contentful1": [
           {
-            "startTime": 1622541673490,
-            "executionTime": 700,
+            "startTime": 1622629993602,
+            "executionTime": 586,
             "data": {
               "main": [
                 [
@@ -114,16 +114,7 @@
                       "disabled": false,
                       "omitted": false,
                       "items": {
-                        "type": "Symbol",
-                        "validations": [
-                          {
-                            "in": [
-                              "general",
-                              "javascript",
-                              "static-sites"
-                            ]
-                          }
-                        ]
+                        "object": true
                       }
                     }
                   }
@@ -134,8 +125,8 @@
         ],
         "Contentful": [
           {
-            "startTime": 1622541674190,
-            "executionTime": 410,
+            "startTime": 1622629994188,
+            "executionTime": 510,
             "data": {
               "main": [
                 [
@@ -144,25 +135,16 @@
                       "title": "Static sites are great",
                       "slug": "static-sites-are-great",
                       "heroImage": {
-                        "sys": {
-                          "type": "Link",
-                          "linkType": "Asset",
-                          "id": "4NzwDSDlGECGIiokKomsyI"
-                        }
+                        "object": true
                       },
                       "description": "Worry less about security, caching, and talking to the server. Static sites are the new thing.",
                       "body": "## The case for the static site generator\n\nMore and more developers are jumping on the \"go static train\", and rightfully so. Static pages are fast, lightweight, they scale well. They are more secure, and simple to maintain and they allow you to focus all your time and effort on the user interface. Often times, this dedication really shows.\n\nIt just so happens that static site generators are mostly loved by developers, but not by the average Joe. They do not offer WYSIWYG, previewing on demo sites may take an update cycle, they are often based on markdown text files, and they require some knowledge of modern day repositories.\n\nMoreover, when teams are collaborating, it can get complicated quickly. Has this article already been proof-read or reviewed? Is this input valid? Are user permissions available, e.g. for administering adding and removing team members? Can this article be published at a future date? How can a large repository of content be categorized, organized, and searched? All these requirements have previously been more or less solved within the admin area of your CMS. But of course with all the baggage that made you leave the appserver-app-database-in-one-big-blob stack in the first place.\n\n## Content APIs to the rescue\n\nAn alternative is decoupling the content management aspect from the system. And then replacing the maintenance prone server with a cloud based web service offering. Effectively, instead of your CMS of old, you move to a [Content Management as a Service (CMaaS)](https://www.contentful.com/r/knowledgebase/content-as-a-service/ \"Content Management as a Service (CMaaS)\") world, with a content API to deliver all your content. That way, you get the all the [benefits of content management features](http://www.digett.com/blog/01/16/2014/pairing-static-websites-cms \"benefits of content management features\") while still being able to embrace the static site generator mantra.\n\nIt so happens that Contentful is offering just that kind of content API. A service that\n\n* from the ground up has been designed to be fast, scalable, secure, and offer high uptime, so that you don’t have to worry about maintenance ever again.\n* offers a powerful editor and lots of flexibility in creating templates for your documents that your editors can reuse and combine, so that no developers resources are required in everyday writing and updating tasks.\n* separates content from presentation, so you can reuse your content repository for any device platform your heart desires. That way, you can COPE (\"create once, publish everywhere\").\n* offers webhooks that you can use to rebuild your static site in a fully automated fashion every time your content is modified.\n\nExtracted from the article [CMS-functionality for static site generators](https://www.contentful.com/r/knowledgebase/contentful-api-cms-static-site-generators/ \"CMS-functionality for static site generators\"). Read more about the [static site generators supported by Contentful](https://www.contentful.com/developers/docs/tools/staticsitegenerators/ \"static site generators supported by Contentful\").",
                       "author": {
-                        "sys": {
-                          "type": "Link",
-                          "linkType": "Entry",
-                          "id": "15jwOBqpxqSAOy2eOO4S0m"
-                        }
+                        "object": true
                       },
                       "publishDate": "2017-05-16T00:00+02:00",
                       "tags": [
-                        "javascript",
-                        "static-sites"
+                        "json array"
                       ]
                     }
                   }
@@ -173,8 +155,8 @@
         ],
         "Contentful5": [
           {
-            "startTime": 1622541674601,
-            "executionTime": 388,
+            "startTime": 1622629994698,
+            "executionTime": 419,
             "data": {
               "main": [
                 [
@@ -183,11 +165,11 @@
                       "code": "en-US",
                       "name": "English (United States)",
                       "default": true,
-                      "fallbackCode": null,
+                      "fallbackCode": {
+                        "object": true
+                      },
                       "sys": {
-                        "id": "6Enpoe2rzvEnwHtB6c2xdL",
-                        "type": "Locale",
-                        "version": 1
+                        "object": true
                       }
                     }
                   }
@@ -198,8 +180,8 @@
         ],
         "Contentful2": [
           {
-            "startTime": 1622541674989,
-            "executionTime": 360,
+            "startTime": 1622629995118,
+            "executionTime": 377,
             "data": {
               "main": [
                 [
@@ -207,12 +189,7 @@
                     "json": {
                       "title": "TestAsset",
                       "file": {
-                        "url": "//assets.ctfassets.net/dlmvly0w2c6n/5UvpPFo279OoVXHLRXqlo9/5e0ef324a69134fba31be32a3535b7dd/testFile.txt",
-                        "details": {
-                          "size": 5
-                        },
-                        "fileName": "testFile.txt",
-                        "contentType": "text/plain"
+                        "object": true
                       }
                     }
                   }
@@ -223,25 +200,19 @@
         ],
         "Contentful6": [
           {
-            "startTime": 1622541675349,
-            "executionTime": 362,
+            "startTime": 1622629995495,
+            "executionTime": 366,
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "sys": {
-                        "type": "Space",
-                        "id": "dlmvly0w2c6n"
+                        "object": true
                       },
                       "name": "n8n",
                       "locales": [
-                        {
-                          "code": "en-US",
-                          "default": true,
-                          "name": "English (United States)",
-                          "fallbackCode": null
-                        }
+                        "json array"
                       ]
                     }
                   }
@@ -252,7 +223,7 @@
         ],
         "Contentful4": [
           {
-            "startTime": 1622541675711,
+            "startTime": 1622629995861,
             "executionTime": 0,
             "data": {
               "main": [
@@ -262,25 +233,16 @@
                       "title": "Static sites are great",
                       "slug": "static-sites-are-great",
                       "heroImage": {
-                        "sys": {
-                          "type": "Link",
-                          "linkType": "Asset",
-                          "id": "4NzwDSDlGECGIiokKomsyI"
-                        }
+                        "object": true
                       },
                       "description": "Worry less about security, caching, and talking to the server. Static sites are the new thing.",
                       "body": "## The case for the static site generator\n\nMore and more developers are jumping on the \"go static train\", and rightfully so. Static pages are fast, lightweight, they scale well. They are more secure, and simple to maintain and they allow you to focus all your time and effort on the user interface. Often times, this dedication really shows.\n\nIt just so happens that static site generators are mostly loved by developers, but not by the average Joe. They do not offer WYSIWYG, previewing on demo sites may take an update cycle, they are often based on markdown text files, and they require some knowledge of modern day repositories.\n\nMoreover, when teams are collaborating, it can get complicated quickly. Has this article already been proof-read or reviewed? Is this input valid? Are user permissions available, e.g. for administering adding and removing team members? Can this article be published at a future date? How can a large repository of content be categorized, organized, and searched? All these requirements have previously been more or less solved within the admin area of your CMS. But of course with all the baggage that made you leave the appserver-app-database-in-one-big-blob stack in the first place.\n\n## Content APIs to the rescue\n\nAn alternative is decoupling the content management aspect from the system. And then replacing the maintenance prone server with a cloud based web service offering. Effectively, instead of your CMS of old, you move to a [Content Management as a Service (CMaaS)](https://www.contentful.com/r/knowledgebase/content-as-a-service/ \"Content Management as a Service (CMaaS)\") world, with a content API to deliver all your content. That way, you get the all the [benefits of content management features](http://www.digett.com/blog/01/16/2014/pairing-static-websites-cms \"benefits of content management features\") while still being able to embrace the static site generator mantra.\n\nIt so happens that Contentful is offering just that kind of content API. A service that\n\n* from the ground up has been designed to be fast, scalable, secure, and offer high uptime, so that you don’t have to worry about maintenance ever again.\n* offers a powerful editor and lots of flexibility in creating templates for your documents that your editors can reuse and combine, so that no developers resources are required in everyday writing and updating tasks.\n* separates content from presentation, so you can reuse your content repository for any device platform your heart desires. That way, you can COPE (\"create once, publish everywhere\").\n* offers webhooks that you can use to rebuild your static site in a fully automated fashion every time your content is modified.\n\nExtracted from the article [CMS-functionality for static site generators](https://www.contentful.com/r/knowledgebase/contentful-api-cms-static-site-generators/ \"CMS-functionality for static site generators\"). Read more about the [static site generators supported by Contentful](https://www.contentful.com/developers/docs/tools/staticsitegenerators/ \"static site generators supported by Contentful\").",
                       "author": {
-                        "sys": {
-                          "type": "Link",
-                          "linkType": "Entry",
-                          "id": "15jwOBqpxqSAOy2eOO4S0m"
-                        }
+                        "object": true
                       },
                       "publishDate": "2017-05-16T00:00+02:00",
                       "tags": [
-                        "javascript",
-                        "static-sites"
+                        "json array"
                       ]
                     }
                   }
@@ -291,7 +253,7 @@
         ],
         "Contentful3": [
           {
-            "startTime": 1622541675712,
+            "startTime": 1622629995861,
             "executionTime": 0,
             "data": {
               "main": [
@@ -300,12 +262,7 @@
                     "json": {
                       "title": "TestAsset",
                       "file": {
-                        "url": "//assets.ctfassets.net/dlmvly0w2c6n/5UvpPFo279OoVXHLRXqlo9/5e0ef324a69134fba31be32a3535b7dd/testFile.txt",
-                        "details": {
-                          "size": 5
-                        },
-                        "fileName": "testFile.txt",
-                        "contentType": "text/plain"
+                        "object": true
                       }
                     }
                   }
@@ -324,7 +281,7 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-01T10:01:13.487Z",
-  "stoppedAt": "2021-06-01T10:01:15.712Z",
+  "startedAt": "2021-06-02T10:33:13.599Z",
+  "stoppedAt": "2021-06-02T10:33:15.861Z",
   "finished": true
 }

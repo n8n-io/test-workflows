@@ -5,8 +5,8 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622541688334,
-            "executionTime": 1,
+            "startTime": 1622630005224,
+            "executionTime": 0,
             "data": {
               "main": [
                 [
@@ -20,29 +20,15 @@
         ],
         "ActiveCampaign": [
           {
-            "startTime": 1622541688335,
-            "executionTime": 540,
+            "startTime": 1622630005225,
+            "executionTime": 815,
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "connection": {
-                        "isInternal": 0,
-                        "service": "n8n",
-                        "externalid": 1622541688337,
-                        "name": "Name1622541688337",
-                        "logoUrl": "https://n8n.io/_nuxt/img/df5be1c.png",
-                        "linkUrl": "https://n8n.io/",
-                        "cdate": "2021-06-01T05:01:28-05:00",
-                        "udate": "2021-06-01T05:01:28-05:00",
-                        "links": {
-                          "options": "https://n8n1612344344.api-us1.com/api/3/connections/177/options",
-                          "customers": "https://n8n1612344344.api-us1.com/api/3/connections/177/customers"
-                        },
-                        "connectionType": "ecommerce",
-                        "id": "177",
-                        "serviceName": "n8n"
+                        "object": true
                       }
                     }
                   }
@@ -53,41 +39,24 @@
         ],
         "ActiveCampaign5": [
           {
-            "startTime": 1622541688875,
-            "executionTime": 469,
+            "startTime": 1622630006041,
+            "executionTime": 524,
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "email": "fake1622541688876@gmail.com",
+                      "email": "fake1622630006042@gmail.com",
                       "email_empty": false,
-                      "cdate": "2021-06-01T05:01:29-05:00",
-                      "udate": "2021-06-01T05:01:29-05:00",
+                      "cdate": "2021-06-02T05:33:26-05:00",
+                      "udate": "2021-06-02T05:33:26-05:00",
                       "orgid": "",
                       "orgname": "",
                       "links": {
-                        "bounceLogs": "https://n8n1612344344.api-us1.com/api/3/contacts/262/bounceLogs",
-                        "contactAutomations": "https://n8n1612344344.api-us1.com/api/3/contacts/262/contactAutomations?limit=1000&orders%5Blastdate%5D=DESC",
-                        "contactData": "https://n8n1612344344.api-us1.com/api/3/contacts/262/contactData",
-                        "contactGoals": "https://n8n1612344344.api-us1.com/api/3/contacts/262/contactGoals",
-                        "contactLists": "https://n8n1612344344.api-us1.com/api/3/contacts/262/contactLists",
-                        "contactLogs": "https://n8n1612344344.api-us1.com/api/3/contacts/262/contactLogs",
-                        "contactTags": "https://n8n1612344344.api-us1.com/api/3/contacts/262/contactTags",
-                        "contactDeals": "https://n8n1612344344.api-us1.com/api/3/contacts/262/contactDeals",
-                        "deals": "https://n8n1612344344.api-us1.com/api/3/contacts/262/deals",
-                        "fieldValues": "https://n8n1612344344.api-us1.com/api/3/contacts/262/fieldValues",
-                        "geoIps": "https://n8n1612344344.api-us1.com/api/3/contacts/262/geoIps",
-                        "notes": "https://n8n1612344344.api-us1.com/api/3/contacts/262/notes",
-                        "organization": "https://n8n1612344344.api-us1.com/api/3/contacts/262/organization",
-                        "plusAppend": "https://n8n1612344344.api-us1.com/api/3/contacts/262/plusAppend",
-                        "trackingLogs": "https://n8n1612344344.api-us1.com/api/3/contacts/262/trackingLogs",
-                        "scoreValues": "https://n8n1612344344.api-us1.com/api/3/contacts/262/scoreValues",
-                        "accountContacts": "https://n8n1612344344.api-us1.com/api/3/contacts/262/accountContacts",
-                        "automationEntryCounts": "https://n8n1612344344.api-us1.com/api/3/contacts/262/automationEntryCounts"
+                        "object": true
                       },
-                      "hash": "6d55ee282f99ed41ea99f9f0eb4a6113",
-                      "id": "262",
+                      "hash": "5141b492bf0506963da697b8bec755d9",
+                      "id": "292",
                       "organization": ""
                     }
                   }
@@ -98,8 +67,8 @@
         ],
         "ActiveCampaign8": [
           {
-            "startTime": 1622541689345,
-            "executionTime": 450,
+            "startTime": 1622630006566,
+            "executionTime": 383,
             "data": {
               "main": [
                 [
@@ -118,15 +87,25 @@
                       "p_use_captcha": "1",
                       "send_last_broadcast": "0",
                       "private": "0",
-                      "analytics_domains": null,
+                      "analytics_domains": {
+                        "object": true
+                      },
                       "analytics_source": "",
                       "analytics_ua": "",
                       "twitter_token": "",
                       "twitter_token_secret": "",
-                      "facebook_session": null,
-                      "carboncopy": null,
-                      "subscription_notify": null,
-                      "unsubscription_notify": null,
+                      "facebook_session": {
+                        "object": true
+                      },
+                      "carboncopy": {
+                        "object": true
+                      },
+                      "subscription_notify": {
+                        "object": true
+                      },
+                      "unsubscription_notify": {
+                        "object": true
+                      },
                       "require_name": "0",
                       "get_unsubscribe_reason": "0",
                       "to_name": "Subscriber",
@@ -144,16 +123,22 @@
                       "fulladdress": "",
                       "optinmessageid": "0",
                       "optoutconf": "0",
-                      "deletestamp": null,
-                      "udate": null,
+                      "deletestamp": {
+                        "object": true
+                      },
+                      "udate": {
+                        "object": true
+                      },
                       "created_timestamp": "2021-03-02 10:30:17",
                       "updated_timestamp": "2021-03-02 10:30:17",
-                      "created_by": null,
-                      "updated_by": null,
+                      "created_by": {
+                        "object": true
+                      },
+                      "updated_by": {
+                        "object": true
+                      },
                       "links": {
-                        "contactGoalLists": "https://n8n1612344344.api-us1.com/api/3/lists/1/contactGoalLists",
-                        "user": "https://n8n1612344344.api-us1.com/api/3/lists/1/user",
-                        "addressLists": "https://n8n1612344344.api-us1.com/api/3/lists/1/addressLists"
+                        "object": true
                       },
                       "id": "1",
                       "user": "1"
@@ -166,20 +151,20 @@
         ],
         "ActiveCampaign9": [
           {
-            "startTime": 1622541689796,
-            "executionTime": 371,
+            "startTime": 1622630006950,
+            "executionTime": 368,
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "tag": "Tag1622541689797",
+                      "tag": "Tag1622630006950",
                       "tagType": "contact",
-                      "cdate": "2021-06-01T05:01:30-05:00",
+                      "cdate": "2021-06-02T05:33:27-05:00",
                       "links": {
-                        "contactGoalTags": "https://n8n1612344344.api-us1.com/api/3/tags/87/contactGoalTags"
+                        "object": true
                       },
-                      "id": "87"
+                      "id": "97"
                     }
                   }
                 ]
@@ -189,33 +174,15 @@
         ],
         "ActiveCampaign1": [
           {
-            "startTime": 1622541690167,
-            "executionTime": 361,
+            "startTime": 1622630007319,
+            "executionTime": 346,
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "connection": {
-                        "service": "n8n",
-                        "externalid": "1622541688337",
-                        "name": "Name1622541688337",
-                        "isInternal": "0",
-                        "connectionType": "ecommerce",
-                        "status": "1",
-                        "syncStatus": 0,
-                        "sync_request_time": null,
-                        "sync_start_time": null,
-                        "logoUrl": "https://n8n.io/_nuxt/img/df5be1c.png",
-                        "linkUrl": "https://n8n.io/",
-                        "cdate": "2021-06-01T05:01:28-05:00",
-                        "udate": "2021-06-01T05:01:30-05:00",
-                        "links": {
-                          "options": "https://n8n1612344344.api-us1.com/api/3/connections/177/options",
-                          "customers": "https://n8n1612344344.api-us1.com/api/3/connections/177/customers"
-                        },
-                        "id": "177",
-                        "serviceName": "n8n"
+                        "object": true
                       }
                     }
                   }
@@ -226,150 +193,24 @@
         ],
         "ActiveCampaign7": [
           {
-            "startTime": 1622541690528,
-            "executionTime": 771,
+            "startTime": 1622630007665,
+            "executionTime": 623,
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "contacts": [
-                        {
-                          "cdate": "2021-06-01T05:01:29-05:00",
-                          "email": "fake1622541688876@gmail.com",
-                          "phone": "",
-                          "firstName": "",
-                          "lastName": "",
-                          "orgid": "0",
-                          "orgname": "",
-                          "segmentio_id": "",
-                          "bounced_hard": "0",
-                          "bounced_soft": "0",
-                          "bounced_date": null,
-                          "ip": "0",
-                          "ua": null,
-                          "hash": "6d55ee282f99ed41ea99f9f0eb4a6113",
-                          "socialdata_lastcheck": null,
-                          "email_local": "",
-                          "email_domain": "",
-                          "sentcnt": "0",
-                          "rating_tstamp": null,
-                          "gravatar": "0",
-                          "deleted": "0",
-                          "anonymized": "0",
-                          "adate": null,
-                          "udate": "2021-06-01T05:01:29-05:00",
-                          "edate": null,
-                          "deleted_at": null,
-                          "created_utc_timestamp": "2021-06-01 05:01:29",
-                          "updated_utc_timestamp": "2021-06-01 05:01:29",
-                          "created_timestamp": "2021-06-01 05:01:29",
-                          "updated_timestamp": "2021-06-01 05:01:29",
-                          "created_by": null,
-                          "updated_by": null,
-                          "email_empty": false,
-                          "links": {
-                            "bounceLogs": "https://n8n1612344344.api-us1.com/api/3/contacts/262/bounceLogs",
-                            "contactAutomations": "https://n8n1612344344.api-us1.com/api/3/contacts/262/contactAutomations?limit=1000&orders%5Blastdate%5D=DESC",
-                            "contactData": "https://n8n1612344344.api-us1.com/api/3/contacts/262/contactData",
-                            "contactGoals": "https://n8n1612344344.api-us1.com/api/3/contacts/262/contactGoals",
-                            "contactLists": "https://n8n1612344344.api-us1.com/api/3/contacts/262/contactLists",
-                            "contactLogs": "https://n8n1612344344.api-us1.com/api/3/contacts/262/contactLogs",
-                            "contactTags": "https://n8n1612344344.api-us1.com/api/3/contacts/262/contactTags",
-                            "contactDeals": "https://n8n1612344344.api-us1.com/api/3/contacts/262/contactDeals",
-                            "deals": "https://n8n1612344344.api-us1.com/api/3/contacts/262/deals",
-                            "fieldValues": "https://n8n1612344344.api-us1.com/api/3/contacts/262/fieldValues",
-                            "geoIps": "https://n8n1612344344.api-us1.com/api/3/contacts/262/geoIps",
-                            "notes": "https://n8n1612344344.api-us1.com/api/3/contacts/262/notes",
-                            "organization": "https://n8n1612344344.api-us1.com/api/3/contacts/262/organization",
-                            "plusAppend": "https://n8n1612344344.api-us1.com/api/3/contacts/262/plusAppend",
-                            "trackingLogs": "https://n8n1612344344.api-us1.com/api/3/contacts/262/trackingLogs",
-                            "scoreValues": "https://n8n1612344344.api-us1.com/api/3/contacts/262/scoreValues",
-                            "accountContacts": "https://n8n1612344344.api-us1.com/api/3/contacts/262/accountContacts",
-                            "automationEntryCounts": "https://n8n1612344344.api-us1.com/api/3/contacts/262/automationEntryCounts"
-                          },
-                          "id": "262",
-                          "organization": null
-                        }
+                        "json array"
                       ],
                       "dealGroups": [
-                        {
-                          "title": "TestPipeLine",
-                          "currency": "usd",
-                          "autoassign": "0",
-                          "allusers": "1",
-                          "allgroups": "1",
-                          "win_probability_initialize_date": null,
-                          "cdate": "2021-03-02T11:14:02-06:00",
-                          "udate": "2021-03-02T11:14:02-06:00",
-                          "links": {
-                            "stages": "https://n8n1612344344.api-us1.com/api/3/dealGroups/1/stages",
-                            "dealGroupUsers": "https://n8n1612344344.api-us1.com/api/3/dealGroups/1/dealGroupUsers",
-                            "dealGroupGroups": "https://n8n1612344344.api-us1.com/api/3/dealGroups/1/dealGroupGroups",
-                            "winProbabilityFeatures": "https://n8n1612344344.api-us1.com/api/3/dealGroups/1/winProbabilityFeatures"
-                          },
-                          "id": "1"
-                        }
+                        "json array"
                       ],
                       "dealStages": [
-                        {
-                          "group": "1",
-                          "title": "To Contact",
-                          "color": "19CCA3",
-                          "order": "1",
-                          "width": "280",
-                          "dealOrder": "next-action DESC",
-                          "cardRegion1": "title",
-                          "cardRegion2": "next-action",
-                          "cardRegion3": "show-avatar",
-                          "cardRegion4": "contact-fullname-acctname",
-                          "cardRegion5": "value",
-                          "cdate": null,
-                          "udate": null,
-                          "links": {
-                            "group": "https://n8n1612344344.api-us1.com/api/3/dealStages/1/group"
-                          },
-                          "id": "1"
-                        }
+                        "json array"
                       ],
                       "deal": {
-                        "title": "Title1622541690528",
-                        "value": 101,
-                        "currency": "usd",
-                        "contact": "262",
-                        "group": "1",
-                        "owner": "1",
-                        "stage": 1,
-                        "cdate": "2021-06-01T05:01:31-05:00",
-                        "mdate": "2021-06-01T05:01:31-05:00",
-                        "description": "",
-                        "organization": "",
-                        "status": 0,
-                        "nextdate": null,
-                        "hash": "f6c3e4aa",
-                        "winProbability": null,
-                        "winProbabilityMdate": null,
-                        "links": {
-                          "dealActivities": "https://n8n1612344344.api-us1.com/api/3/deals/85/dealActivities",
-                          "contact": "https://n8n1612344344.api-us1.com/api/3/deals/85/contact",
-                          "contactDeals": "https://n8n1612344344.api-us1.com/api/3/deals/85/contactDeals",
-                          "group": "https://n8n1612344344.api-us1.com/api/3/deals/85/group",
-                          "nextTask": "https://n8n1612344344.api-us1.com/api/3/deals/85/nextTask",
-                          "notes": "https://n8n1612344344.api-us1.com/api/3/deals/85/notes",
-                          "account": "https://n8n1612344344.api-us1.com/api/3/deals/85/account",
-                          "customerAccount": "https://n8n1612344344.api-us1.com/api/3/deals/85/customerAccount",
-                          "organization": "https://n8n1612344344.api-us1.com/api/3/deals/85/organization",
-                          "owner": "https://n8n1612344344.api-us1.com/api/3/deals/85/owner",
-                          "scoreValues": "https://n8n1612344344.api-us1.com/api/3/deals/85/scoreValues",
-                          "stage": "https://n8n1612344344.api-us1.com/api/3/deals/85/stage",
-                          "tasks": "https://n8n1612344344.api-us1.com/api/3/deals/85/tasks",
-                          "dealCustomFieldData": "https://n8n1612344344.api-us1.com/api/3/deals/85/dealCustomFieldData"
-                        },
-                        "fields": [],
-                        "id": "85",
-                        "isDisabled": false,
-                        "account": "",
-                        "customerAccount": ""
+                        "object": true
                       }
                     }
                   }
@@ -380,26 +221,30 @@
         ],
         "ActiveCampaign10": [
           {
-            "startTime": 1622541691299,
-            "executionTime": 331,
+            "startTime": 1622630008288,
+            "executionTime": 344,
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "tagType": "contact",
-                      "tag": "Tag1622541689797",
+                      "tag": "Tag1622630006950",
                       "description": "",
                       "subscriber_count": "0",
-                      "cdate": "2021-06-01T05:01:30-05:00",
-                      "created_timestamp": "2021-06-01 05:01:30",
-                      "updated_timestamp": "2021-06-01 05:01:30",
-                      "created_by": null,
-                      "updated_by": null,
-                      "links": {
-                        "contactGoalTags": "https://n8n1612344344.api-us1.com/api/3/tags/87/contactGoalTags"
+                      "cdate": "2021-06-02T05:33:27-05:00",
+                      "created_timestamp": "2021-06-02 05:33:27",
+                      "updated_timestamp": "2021-06-02 05:33:27",
+                      "created_by": {
+                        "object": true
                       },
-                      "id": "87"
+                      "updated_by": {
+                        "object": true
+                      },
+                      "links": {
+                        "object": true
+                      },
+                      "id": "97"
                     }
                   }
                 ]
@@ -409,35 +254,15 @@
         ],
         "ActiveCampaign2": [
           {
-            "startTime": 1622541691630,
-            "executionTime": 372,
+            "startTime": 1622630008632,
+            "executionTime": 672,
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "connection": {
-                        "service": "n8n",
-                        "externalid": "1622541688337",
-                        "name": "Name1622541688337",
-                        "isInternal": "0",
-                        "connectionType": "ecommerce",
-                        "status": "1",
-                        "syncStatus": "0",
-                        "sync_request_time": null,
-                        "sync_start_time": null,
-                        "lastSync": null,
-                        "logoUrl": "https://n8n.io/_nuxt/img/df5be1c.png",
-                        "linkUrl": "https://n8n.io/",
-                        "credentialExpiration": null,
-                        "cdate": "2021-06-01T05:01:28-05:00",
-                        "udate": "2021-06-01T05:01:30-05:00",
-                        "links": {
-                          "options": "https://n8n1612344344.api-us1.com/api/3/connections/177/options",
-                          "customers": "https://n8n1612344344.api-us1.com/api/3/connections/177/customers"
-                        },
-                        "id": "177",
-                        "serviceName": "n8n"
+                        "object": true
                       }
                     }
                   }
@@ -448,77 +273,18 @@
         ],
         "ActiveCampaign14": [
           {
-            "startTime": 1622541692002,
-            "executionTime": 430,
+            "startTime": 1622630009304,
+            "executionTime": 441,
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "dealStages": [
-                        {
-                          "group": "1",
-                          "title": "To Contact",
-                          "color": "19CCA3",
-                          "order": "1",
-                          "width": "280",
-                          "dealOrder": "next-action DESC",
-                          "cardRegion1": "title",
-                          "cardRegion2": "next-action",
-                          "cardRegion3": "show-avatar",
-                          "cardRegion4": "contact-fullname-acctname",
-                          "cardRegion5": "value",
-                          "cdate": null,
-                          "udate": null,
-                          "links": {
-                            "group": "https://n8n1612344344.api-us1.com/api/3/dealStages/1/group"
-                          },
-                          "id": "1"
-                        }
+                        "json array"
                       ],
                       "deal": {
-                        "hash": "f6c3e4aa",
-                        "owner": "1",
-                        "contact": "262",
-                        "organization": null,
-                        "group": "1",
-                        "stage": "1",
-                        "title": "Title1622541690528",
-                        "description": "",
-                        "percent": "0",
-                        "cdate": "2021-06-01T05:01:31-05:00",
-                        "mdate": "2021-06-01T05:01:32-05:00",
-                        "nextdate": null,
-                        "nexttaskid": null,
-                        "value": 201,
-                        "currency": "usd",
-                        "status": 0,
-                        "activitycount": "2",
-                        "nextdealid": "85",
-                        "edate": null,
-                        "winProbability": null,
-                        "winProbabilityMdate": null,
-                        "links": {
-                          "dealActivities": "https://n8n1612344344.api-us1.com/api/3/deals/85/dealActivities",
-                          "contact": "https://n8n1612344344.api-us1.com/api/3/deals/85/contact",
-                          "contactDeals": "https://n8n1612344344.api-us1.com/api/3/deals/85/contactDeals",
-                          "group": "https://n8n1612344344.api-us1.com/api/3/deals/85/group",
-                          "nextTask": "https://n8n1612344344.api-us1.com/api/3/deals/85/nextTask",
-                          "notes": "https://n8n1612344344.api-us1.com/api/3/deals/85/notes",
-                          "account": "https://n8n1612344344.api-us1.com/api/3/deals/85/account",
-                          "customerAccount": "https://n8n1612344344.api-us1.com/api/3/deals/85/customerAccount",
-                          "organization": "https://n8n1612344344.api-us1.com/api/3/deals/85/organization",
-                          "owner": "https://n8n1612344344.api-us1.com/api/3/deals/85/owner",
-                          "scoreValues": "https://n8n1612344344.api-us1.com/api/3/deals/85/scoreValues",
-                          "stage": "https://n8n1612344344.api-us1.com/api/3/deals/85/stage",
-                          "tasks": "https://n8n1612344344.api-us1.com/api/3/deals/85/tasks",
-                          "dealCustomFieldData": "https://n8n1612344344.api-us1.com/api/3/deals/85/dealCustomFieldData"
-                        },
-                        "fields": [],
-                        "id": "85",
-                        "isDisabled": false,
-                        "account": null,
-                        "customerAccount": null
+                        "object": true
                       }
                     }
                   }
@@ -529,27 +295,15 @@
         ],
         "ActiveCampaign11": [
           {
-            "startTime": 1622541692432,
-            "executionTime": 353,
+            "startTime": 1622630009745,
+            "executionTime": 405,
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "tag": {
-                        "tagType": "contact",
-                        "tag": "Tag1622541689797",
-                        "description": "",
-                        "subscriber_count": "0",
-                        "cdate": "2021-06-01T05:01:30-05:00",
-                        "created_timestamp": "2021-06-01 05:01:30",
-                        "updated_timestamp": "2021-06-01 05:01:30",
-                        "created_by": null,
-                        "updated_by": null,
-                        "links": {
-                          "contactGoalTags": "https://n8n1612344344.api-us1.com/api/3/tags/87/contactGoalTags"
-                        },
-                        "id": "87"
+                        "object": true
                       }
                     }
                   }
@@ -560,8 +314,8 @@
         ],
         "ActiveCampaign3": [
           {
-            "startTime": 1622541692785,
-            "executionTime": 457,
+            "startTime": 1622630010150,
+            "executionTime": 410,
             "data": {
               "main": [
                 [
@@ -574,17 +328,24 @@
                       "connectionType": "ecommerce",
                       "status": "1",
                       "syncStatus": "0",
-                      "sync_request_time": null,
-                      "sync_start_time": null,
-                      "lastSync": null,
+                      "sync_request_time": {
+                        "object": true
+                      },
+                      "sync_start_time": {
+                        "object": true
+                      },
+                      "lastSync": {
+                        "object": true
+                      },
                       "logoUrl": "https://n8n.io/_nuxt/img/df5be1c.png",
                       "linkUrl": "https://n8n.io/",
-                      "credentialExpiration": null,
+                      "credentialExpiration": {
+                        "object": true
+                      },
                       "cdate": "2021-05-14T09:31:09-05:00",
                       "udate": "2021-05-14T09:31:09-05:00",
                       "links": {
-                        "options": "https://n8n1612344344.api-us1.com/api/3/connections/92/options",
-                        "customers": "https://n8n1612344344.api-us1.com/api/3/connections/92/customers"
+                        "object": true
                       },
                       "id": "92",
                       "serviceName": "n8n"
@@ -597,56 +358,15 @@
         ],
         "ActiveCampaign15": [
           {
-            "startTime": 1622541693242,
-            "executionTime": 688,
+            "startTime": 1622630010560,
+            "executionTime": 410,
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "deal": {
-                        "hash": "f6c3e4aa",
-                        "owner": "1",
-                        "contact": "262",
-                        "organization": null,
-                        "group": "1",
-                        "stage": "1",
-                        "title": "Title1622541690528",
-                        "description": "",
-                        "percent": "0",
-                        "cdate": "2021-06-01T05:01:31-05:00",
-                        "mdate": "2021-06-01T05:01:32-05:00",
-                        "nextdate": null,
-                        "nexttaskid": "0",
-                        "value": "201",
-                        "currency": "usd",
-                        "winProbability": null,
-                        "winProbabilityMdate": null,
-                        "status": "0",
-                        "activitycount": "3",
-                        "nextdealid": "85",
-                        "edate": "0000-00-00 00:00:00",
-                        "links": {
-                          "dealActivities": "https://n8n1612344344.api-us1.com/api/3/deals/85/dealActivities",
-                          "contact": "https://n8n1612344344.api-us1.com/api/3/deals/85/contact",
-                          "contactDeals": "https://n8n1612344344.api-us1.com/api/3/deals/85/contactDeals",
-                          "group": "https://n8n1612344344.api-us1.com/api/3/deals/85/group",
-                          "nextTask": "https://n8n1612344344.api-us1.com/api/3/deals/85/nextTask",
-                          "notes": "https://n8n1612344344.api-us1.com/api/3/deals/85/notes",
-                          "account": "https://n8n1612344344.api-us1.com/api/3/deals/85/account",
-                          "customerAccount": "https://n8n1612344344.api-us1.com/api/3/deals/85/customerAccount",
-                          "organization": "https://n8n1612344344.api-us1.com/api/3/deals/85/organization",
-                          "owner": "https://n8n1612344344.api-us1.com/api/3/deals/85/owner",
-                          "scoreValues": "https://n8n1612344344.api-us1.com/api/3/deals/85/scoreValues",
-                          "stage": "https://n8n1612344344.api-us1.com/api/3/deals/85/stage",
-                          "tasks": "https://n8n1612344344.api-us1.com/api/3/deals/85/tasks",
-                          "dealCustomFieldData": "https://n8n1612344344.api-us1.com/api/3/deals/85/dealCustomFieldData"
-                        },
-                        "id": "85",
-                        "isDisabled": false,
-                        "nextTask": null,
-                        "account": null,
-                        "customerAccount": null
+                        "object": true
                       }
                     }
                   }
@@ -657,8 +377,8 @@
         ],
         "ActiveCampaign12": [
           {
-            "startTime": 1622541693930,
-            "executionTime": 359,
+            "startTime": 1622630010970,
+            "executionTime": 385,
             "data": {
               "main": [
                 [
@@ -670,11 +390,15 @@
                       "subscriber_count": "1",
                       "cdate": "2021-03-02T10:29:14-06:00",
                       "created_timestamp": "2021-03-02 10:29:14",
-                      "updated_timestamp": "2021-06-01 05:01:32",
-                      "created_by": null,
-                      "updated_by": null,
+                      "updated_timestamp": "2021-06-02 05:33:30",
+                      "created_by": {
+                        "object": true
+                      },
+                      "updated_by": {
+                        "object": true
+                      },
                       "links": {
-                        "contactGoalTags": "https://n8n1612344344.api-us1.com/api/3/tags/1/contactGoalTags"
+                        "object": true
                       },
                       "id": "1"
                     }
@@ -686,8 +410,8 @@
         ],
         "ActiveCampaign4": [
           {
-            "startTime": 1622541694289,
-            "executionTime": 471,
+            "startTime": 1622630011356,
+            "executionTime": 633,
             "data": {
               "main": [
                 [
@@ -701,80 +425,18 @@
         ],
         "ActiveCampaign16": [
           {
-            "startTime": 1622541694760,
-            "executionTime": 472,
+            "startTime": 1622630011989,
+            "executionTime": 402,
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "deals": [
-                        {
-                          "hash": "f6c3e4aa",
-                          "owner": "1",
-                          "contact": "262",
-                          "organization": null,
-                          "group": "1",
-                          "stage": "1",
-                          "title": "Title1622541690528",
-                          "description": "",
-                          "percent": "0",
-                          "cdate": "2021-06-01T05:01:31-05:00",
-                          "mdate": "2021-06-01T05:01:32-05:00",
-                          "nextdate": null,
-                          "nexttaskid": "0",
-                          "value": "201",
-                          "currency": "usd",
-                          "winProbability": null,
-                          "winProbabilityMdate": null,
-                          "status": "0",
-                          "activitycount": "3",
-                          "nextdealid": "85",
-                          "edate": "0000-00-00 00:00:00",
-                          "links": {
-                            "dealActivities": "https://n8n1612344344.api-us1.com/api/3/deals/85/dealActivities",
-                            "contact": "https://n8n1612344344.api-us1.com/api/3/deals/85/contact",
-                            "contactDeals": "https://n8n1612344344.api-us1.com/api/3/deals/85/contactDeals",
-                            "group": "https://n8n1612344344.api-us1.com/api/3/deals/85/group",
-                            "nextTask": "https://n8n1612344344.api-us1.com/api/3/deals/85/nextTask",
-                            "notes": "https://n8n1612344344.api-us1.com/api/3/deals/85/notes",
-                            "account": "https://n8n1612344344.api-us1.com/api/3/deals/85/account",
-                            "customerAccount": "https://n8n1612344344.api-us1.com/api/3/deals/85/customerAccount",
-                            "organization": "https://n8n1612344344.api-us1.com/api/3/deals/85/organization",
-                            "owner": "https://n8n1612344344.api-us1.com/api/3/deals/85/owner",
-                            "scoreValues": "https://n8n1612344344.api-us1.com/api/3/deals/85/scoreValues",
-                            "stage": "https://n8n1612344344.api-us1.com/api/3/deals/85/stage",
-                            "tasks": "https://n8n1612344344.api-us1.com/api/3/deals/85/tasks",
-                            "dealCustomFieldData": "https://n8n1612344344.api-us1.com/api/3/deals/85/dealCustomFieldData"
-                          },
-                          "id": "85",
-                          "isDisabled": false,
-                          "nextTask": null,
-                          "account": null,
-                          "customerAccount": null
-                        }
+                        "json array"
                       ],
                       "note": {
-                        "note": "TestNote",
-                        "relid": "85",
-                        "reltype": "Deal",
-                        "cdate": "2021-06-01T05:01:35-05:00",
-                        "mdate": "2021-06-01T05:01:35-05:00",
-                        "userid": "1",
-                        "links": {
-                          "activities": "https://n8n1612344344.api-us1.com/api/3/notes/84/activities",
-                          "user": "https://n8n1612344344.api-us1.com/api/3/notes/84/user",
-                          "mentions": "https://n8n1612344344.api-us1.com/api/3/notes/84/mentions",
-                          "notes": "https://n8n1612344344.api-us1.com/api/3/notes/84/notes",
-                          "owner": "https://n8n1612344344.api-us1.com/api/3/notes/84/owner"
-                        },
-                        "owner": {
-                          "type": "deal",
-                          "id": "85"
-                        },
-                        "is_draft": "",
-                        "id": "84",
-                        "user": "1"
+                        "object": true
                       }
                     }
                   }
@@ -785,8 +447,8 @@
         ],
         "ActiveCampaign13": [
           {
-            "startTime": 1622541695232,
-            "executionTime": 412,
+            "startTime": 1622630012391,
+            "executionTime": 451,
             "data": {
               "main": [
                 [
@@ -800,107 +462,21 @@
         ],
         "ActiveCampaign17": [
           {
-            "startTime": 1622541695644,
-            "executionTime": 423,
+            "startTime": 1622630012842,
+            "executionTime": 454,
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "users": [
-                        {
-                          "username": "admin",
-                          "firstName": "Leoni",
-                          "lastName": "Bruch",
-                          "email": "nodeqa@n8n.io",
-                          "phone": "",
-                          "signature": "",
-                          "lang": "english",
-                          "localZoneid": "Europe/Berlin",
-                          "password_updated_utc_timestamp": "2021-03-02 04:28:49",
-                          "cdate": null,
-                          "udate": null,
-                          "mfaEnabled": "0",
-                          "links": {
-                            "lists": "https://n8n1612344344.api-us1.com/api/3/users/1/lists",
-                            "userGroup": "https://n8n1612344344.api-us1.com/api/3/users/1/userGroup",
-                            "dealGroupTotals": "https://n8n1612344344.api-us1.com/api/3/users/1/dealGroupTotals",
-                            "dealGroupUsers": "https://n8n1612344344.api-us1.com/api/3/users/1/dealGroupUsers",
-                            "configs": "https://n8n1612344344.api-us1.com/api/3/users/1/configs",
-                            "dealConnection": "https://n8n1612344344.api-us1.com/api/3/users/1/dealConnection",
-                            "userConversationsPermission": "https://n8n1612344344.api-us1.com/api/3/users/1/userConversationsPermission",
-                            "seatUser": "https://n8n1612344344.api-us1.com/api/3/users/1/seatUser"
-                          },
-                          "id": "1"
-                        }
+                        "json array"
                       ],
                       "deals": [
-                        {
-                          "hash": "f6c3e4aa",
-                          "owner": "1",
-                          "contact": "262",
-                          "organization": null,
-                          "group": "1",
-                          "stage": "1",
-                          "title": "Title1622541690528",
-                          "description": "",
-                          "percent": "0",
-                          "cdate": "2021-06-01T05:01:31-05:00",
-                          "mdate": "2021-06-01T05:01:35-05:00",
-                          "nextdate": null,
-                          "nexttaskid": "0",
-                          "value": "201",
-                          "currency": "usd",
-                          "winProbability": null,
-                          "winProbabilityMdate": null,
-                          "status": "0",
-                          "activitycount": "4",
-                          "nextdealid": "85",
-                          "edate": "0000-00-00 00:00:00",
-                          "links": {
-                            "dealActivities": "https://n8n1612344344.api-us1.com/api/3/deals/85/dealActivities",
-                            "contact": "https://n8n1612344344.api-us1.com/api/3/deals/85/contact",
-                            "contactDeals": "https://n8n1612344344.api-us1.com/api/3/deals/85/contactDeals",
-                            "group": "https://n8n1612344344.api-us1.com/api/3/deals/85/group",
-                            "nextTask": "https://n8n1612344344.api-us1.com/api/3/deals/85/nextTask",
-                            "notes": "https://n8n1612344344.api-us1.com/api/3/deals/85/notes",
-                            "account": "https://n8n1612344344.api-us1.com/api/3/deals/85/account",
-                            "customerAccount": "https://n8n1612344344.api-us1.com/api/3/deals/85/customerAccount",
-                            "organization": "https://n8n1612344344.api-us1.com/api/3/deals/85/organization",
-                            "owner": "https://n8n1612344344.api-us1.com/api/3/deals/85/owner",
-                            "scoreValues": "https://n8n1612344344.api-us1.com/api/3/deals/85/scoreValues",
-                            "stage": "https://n8n1612344344.api-us1.com/api/3/deals/85/stage",
-                            "tasks": "https://n8n1612344344.api-us1.com/api/3/deals/85/tasks",
-                            "dealCustomFieldData": "https://n8n1612344344.api-us1.com/api/3/deals/85/dealCustomFieldData"
-                          },
-                          "id": "85",
-                          "isDisabled": false,
-                          "nextTask": null,
-                          "account": null,
-                          "customerAccount": null
-                        }
+                        "json array"
                       ],
                       "note": {
-                        "relid": "85",
-                        "reltype": "Deal",
-                        "userid": "1",
-                        "is_draft": "0",
-                        "cdate": "2021-06-01T05:01:35-05:00",
-                        "mdate": "2021-06-01T05:01:35-05:00",
-                        "note": "UpdatedNote",
-                        "user": "1",
-                        "owner": {
-                          "type": "deal",
-                          "id": "85"
-                        },
-                        "links": {
-                          "activities": "https://n8n1612344344.api-us1.com/api/3/notes/84/activities",
-                          "user": "https://n8n1612344344.api-us1.com/api/3/notes/84/user",
-                          "mentions": "https://n8n1612344344.api-us1.com/api/3/notes/84/mentions",
-                          "notes": "https://n8n1612344344.api-us1.com/api/3/notes/84/notes",
-                          "owner": "https://n8n1612344344.api-us1.com/api/3/notes/84/owner"
-                        },
-                        "id": "84"
+                        "object": true
                       }
                     }
                   }
@@ -911,8 +487,8 @@
         ],
         "ActiveCampaign18": [
           {
-            "startTime": 1622541696067,
-            "executionTime": 353,
+            "startTime": 1622630013296,
+            "executionTime": 410,
             "data": {
               "main": [
                 [
@@ -921,7 +497,9 @@
                       "hash": "92900823",
                       "owner": "1",
                       "contact": "254",
-                      "organization": null,
+                      "organization": {
+                        "object": true
+                      },
                       "group": "1",
                       "stage": "1",
                       "title": "Title1622470457097",
@@ -929,37 +507,36 @@
                       "percent": "0",
                       "cdate": "2021-05-31T09:14:17-05:00",
                       "mdate": "2021-05-31T09:14:18-05:00",
-                      "nextdate": null,
+                      "nextdate": {
+                        "object": true
+                      },
                       "nexttaskid": "0",
                       "value": "201",
                       "currency": "usd",
-                      "winProbability": null,
-                      "winProbabilityMdate": null,
+                      "winProbability": {
+                        "object": true
+                      },
+                      "winProbabilityMdate": {
+                        "object": true
+                      },
                       "status": "0",
                       "activitycount": "3",
                       "nextdealid": "82",
                       "edate": "0000-00-00 00:00:00",
                       "links": {
-                        "dealActivities": "https://n8n1612344344.api-us1.com/api/3/deals/82/dealActivities",
-                        "contact": "https://n8n1612344344.api-us1.com/api/3/deals/82/contact",
-                        "contactDeals": "https://n8n1612344344.api-us1.com/api/3/deals/82/contactDeals",
-                        "group": "https://n8n1612344344.api-us1.com/api/3/deals/82/group",
-                        "nextTask": "https://n8n1612344344.api-us1.com/api/3/deals/82/nextTask",
-                        "notes": "https://n8n1612344344.api-us1.com/api/3/deals/82/notes",
-                        "account": "https://n8n1612344344.api-us1.com/api/3/deals/82/account",
-                        "customerAccount": "https://n8n1612344344.api-us1.com/api/3/deals/82/customerAccount",
-                        "organization": "https://n8n1612344344.api-us1.com/api/3/deals/82/organization",
-                        "owner": "https://n8n1612344344.api-us1.com/api/3/deals/82/owner",
-                        "scoreValues": "https://n8n1612344344.api-us1.com/api/3/deals/82/scoreValues",
-                        "stage": "https://n8n1612344344.api-us1.com/api/3/deals/82/stage",
-                        "tasks": "https://n8n1612344344.api-us1.com/api/3/deals/82/tasks",
-                        "dealCustomFieldData": "https://n8n1612344344.api-us1.com/api/3/deals/82/dealCustomFieldData"
+                        "object": true
                       },
                       "id": "82",
                       "isDisabled": false,
-                      "nextTask": null,
-                      "account": null,
-                      "customerAccount": null
+                      "nextTask": {
+                        "object": true
+                      },
+                      "account": {
+                        "object": true
+                      },
+                      "customerAccount": {
+                        "object": true
+                      }
                     }
                   }
                 ]
@@ -969,8 +546,8 @@
         ],
         "ActiveCampaign19": [
           {
-            "startTime": 1622541696420,
-            "executionTime": 855,
+            "startTime": 1622630013706,
+            "executionTime": 579,
             "data": {
               "main": [
                 [
@@ -984,8 +561,8 @@
         ],
         "ActiveCampaign6": [
           {
-            "startTime": 1622541697275,
-            "executionTime": 558,
+            "startTime": 1622630014285,
+            "executionTime": 452,
             "data": {
               "main": [
                 [
@@ -1007,7 +584,7 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-01T10:01:28.330Z",
-  "stoppedAt": "2021-06-01T10:01:37.834Z",
+  "startedAt": "2021-06-02T10:33:25.219Z",
+  "stoppedAt": "2021-06-02T10:33:34.738Z",
   "finished": true
 }

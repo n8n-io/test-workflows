@@ -5,8 +5,8 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622541764869,
-            "executionTime": 0,
+            "startTime": 1622630092074,
+            "executionTime": 1,
             "data": {
               "main": [
                 [
@@ -20,16 +20,18 @@
         ],
         "Salesforce": [
           {
-            "startTime": 1622541764870,
-            "executionTime": 251,
+            "startTime": 1622630092075,
+            "executionTime": 378,
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "00609000009bttDAAQ",
+                      "id": "00609000009bw10AAA",
                       "success": true,
-                      "errors": []
+                      "errors": [
+                        "json array"
+                      ]
                     }
                   }
                 ]
@@ -39,20 +41,21 @@
         ],
         "Salesforce7": [
           {
-            "startTime": 1622541765122,
-            "executionTime": 154,
+            "startTime": 1622630092454,
+            "executionTime": 217,
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "attributes": {
-                        "type": "Account",
-                        "url": "/services/data/v39.0/sobjects/Account/0010900000HRHA6AAP"
+                        "object": true
                       },
                       "Id": "0010900000HRHA6AAP",
                       "Name": "Beispielaccount für Ansprüche",
-                      "BillingCity": null
+                      "BillingCity": {
+                        "object": true
+                      }
                     }
                   }
                 ]
@@ -62,8 +65,8 @@
         ],
         "Sleep 0.5 second4": [
           {
-            "startTime": 1622541765277,
-            "executionTime": 506,
+            "startTime": 1622630092671,
+            "executionTime": 510,
             "data": {
               "main": [
                 [
@@ -77,16 +80,18 @@
         ],
         "Sleep 0.5 second": [
           {
-            "startTime": 1622541765784,
-            "executionTime": 507,
+            "startTime": 1622630093181,
+            "executionTime": 502,
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "00609000009bttDAAQ",
+                      "id": "00609000009bw10AAA",
                       "success": true,
-                      "errors": []
+                      "errors": [
+                        "json array"
+                      ]
                     }
                   }
                 ]
@@ -96,16 +101,18 @@
         ],
         "Salesforce8": [
           {
-            "startTime": 1622541766291,
-            "executionTime": 176,
+            "startTime": 1622630093684,
+            "executionTime": 216,
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "00T0900000PAA42EAH",
+                      "id": "00T0900000PB6QsEAL",
                       "success": true,
-                      "errors": []
+                      "errors": [
+                        "json array"
+                      ]
                     }
                   }
                 ]
@@ -115,58 +122,89 @@
         ],
         "Salesforce1": [
           {
-            "startTime": 1622541766467,
-            "executionTime": 138,
+            "startTime": 1622630093901,
+            "executionTime": 214,
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "attributes": {
-                        "type": "Opportunity",
-                        "url": "/services/data/v39.0/sobjects/Opportunity/00609000009bttDAAQ"
+                        "object": true
                       },
-                      "Id": "00609000009bttDAAQ",
+                      "Id": "00609000009bw10AAA",
                       "IsDeleted": false,
-                      "AccountId": null,
+                      "AccountId": {
+                        "object": true
+                      },
                       "IsPrivate": false,
-                      "Name": "Opp1622541764873",
-                      "Description": null,
+                      "Name": "Opp1622630092078",
+                      "Description": {
+                        "object": true
+                      },
                       "StageName": "Value Proposition",
-                      "Amount": null,
+                      "Amount": {
+                        "object": true
+                      },
                       "Probability": 50,
-                      "ExpectedRevenue": null,
-                      "TotalOpportunityQuantity": null,
+                      "ExpectedRevenue": {
+                        "object": true
+                      },
+                      "TotalOpportunityQuantity": {
+                        "object": true
+                      },
                       "CloseDate": "2021-03-31",
-                      "Type": null,
-                      "NextStep": null,
-                      "LeadSource": null,
+                      "Type": {
+                        "object": true
+                      },
+                      "NextStep": {
+                        "object": true
+                      },
+                      "LeadSource": {
+                        "object": true
+                      },
                       "IsClosed": false,
                       "IsWon": false,
                       "ForecastCategory": "Pipeline",
                       "ForecastCategoryName": "Pipeline",
-                      "CampaignId": null,
+                      "CampaignId": {
+                        "object": true
+                      },
                       "HasOpportunityLineItem": false,
-                      "Pricebook2Id": null,
+                      "Pricebook2Id": {
+                        "object": true
+                      },
                       "OwnerId": "00509000005ntkGAAQ",
-                      "CreatedDate": "2021-06-01T10:02:45.000+0000",
+                      "CreatedDate": "2021-06-02T10:34:52.000+0000",
                       "CreatedById": "00509000005ntkGAAQ",
-                      "LastModifiedDate": "2021-06-01T10:02:45.000+0000",
+                      "LastModifiedDate": "2021-06-02T10:34:52.000+0000",
                       "LastModifiedById": "00509000005ntkGAAQ",
-                      "SystemModstamp": "2021-06-01T10:02:45.000+0000",
-                      "LastActivityDate": null,
+                      "SystemModstamp": "2021-06-02T10:34:52.000+0000",
+                      "LastActivityDate": {
+                        "object": true
+                      },
                       "FiscalQuarter": 1,
                       "FiscalYear": 2021,
                       "Fiscal": "2021 1",
-                      "LastViewedDate": "2021-06-01T10:02:45.000+0000",
-                      "LastReferencedDate": "2021-06-01T10:02:45.000+0000",
+                      "LastViewedDate": "2021-06-02T10:34:52.000+0000",
+                      "LastReferencedDate": "2021-06-02T10:34:52.000+0000",
                       "HasOpenActivity": false,
                       "HasOverdueTask": false,
-                      "DeliveryInstallationStatus__c": null,
-                      "TrackingNumber__c": null,
-                      "OrderNumber__c": null,
-                      "CurrentGenerators__c": null,
-                      "MainCompetitors__c": null
+                      "DeliveryInstallationStatus__c": {
+                        "object": true
+                      },
+                      "TrackingNumber__c": {
+                        "object": true
+                      },
+                      "OrderNumber__c": {
+                        "object": true
+                      },
+                      "CurrentGenerators__c": {
+                        "object": true
+                      },
+                      "MainCompetitors__c": {
+                        "object": true
+                      }
                     }
                   }
                 ]
@@ -176,54 +214,97 @@
         ],
         "Salesforce9": [
           {
-            "startTime": 1622541766605,
-            "executionTime": 144,
+            "startTime": 1622630094116,
+            "executionTime": 184,
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "attributes": {
-                        "type": "Task",
-                        "url": "/services/data/v39.0/sobjects/Task/00T0900000PAA42EAH"
+                        "object": true
                       },
-                      "Id": "00T0900000PAA42EAH",
-                      "WhoId": null,
-                      "WhatId": null,
-                      "Subject": null,
-                      "ActivityDate": null,
+                      "Id": "00T0900000PB6QsEAL",
+                      "WhoId": {
+                        "object": true
+                      },
+                      "WhatId": {
+                        "object": true
+                      },
+                      "Subject": {
+                        "object": true
+                      },
+                      "ActivityDate": {
+                        "object": true
+                      },
                       "Status": "In Progress",
                       "Priority": "Normal",
                       "IsHighPriority": false,
                       "OwnerId": "00509000005ntkGAAQ",
-                      "Description": null,
+                      "Description": {
+                        "object": true
+                      },
                       "IsDeleted": false,
-                      "AccountId": null,
+                      "AccountId": {
+                        "object": true
+                      },
                       "IsClosed": false,
-                      "CreatedDate": "2021-06-01T10:02:46.000+0000",
+                      "CreatedDate": "2021-06-02T10:34:53.000+0000",
                       "CreatedById": "00509000005ntkGAAQ",
-                      "LastModifiedDate": "2021-06-01T10:02:46.000+0000",
+                      "LastModifiedDate": "2021-06-02T10:34:53.000+0000",
                       "LastModifiedById": "00509000005ntkGAAQ",
-                      "SystemModstamp": "2021-06-01T10:02:46.000+0000",
+                      "SystemModstamp": "2021-06-02T10:34:53.000+0000",
                       "IsArchived": false,
-                      "CallDurationInSeconds": null,
-                      "CallType": null,
-                      "CallDisposition": null,
-                      "CallObject": null,
-                      "ReminderDateTime": null,
+                      "CallDurationInSeconds": {
+                        "object": true
+                      },
+                      "CallType": {
+                        "object": true
+                      },
+                      "CallDisposition": {
+                        "object": true
+                      },
+                      "CallObject": {
+                        "object": true
+                      },
+                      "ReminderDateTime": {
+                        "object": true
+                      },
                       "IsReminderSet": false,
-                      "RecurrenceActivityId": null,
+                      "RecurrenceActivityId": {
+                        "object": true
+                      },
                       "IsRecurrence": false,
-                      "RecurrenceStartDateOnly": null,
-                      "RecurrenceEndDateOnly": null,
-                      "RecurrenceTimeZoneSidKey": null,
-                      "RecurrenceType": null,
-                      "RecurrenceInterval": null,
-                      "RecurrenceDayOfWeekMask": null,
-                      "RecurrenceDayOfMonth": null,
-                      "RecurrenceInstance": null,
-                      "RecurrenceMonthOfYear": null,
-                      "RecurrenceRegeneratedType": null,
+                      "RecurrenceStartDateOnly": {
+                        "object": true
+                      },
+                      "RecurrenceEndDateOnly": {
+                        "object": true
+                      },
+                      "RecurrenceTimeZoneSidKey": {
+                        "object": true
+                      },
+                      "RecurrenceType": {
+                        "object": true
+                      },
+                      "RecurrenceInterval": {
+                        "object": true
+                      },
+                      "RecurrenceDayOfWeekMask": {
+                        "object": true
+                      },
+                      "RecurrenceDayOfMonth": {
+                        "object": true
+                      },
+                      "RecurrenceInstance": {
+                        "object": true
+                      },
+                      "RecurrenceMonthOfYear": {
+                        "object": true
+                      },
+                      "RecurrenceRegeneratedType": {
+                        "object": true
+                      },
                       "TaskSubtype": "Task"
                     }
                   }
@@ -234,16 +315,18 @@
         ],
         "Salesforce2": [
           {
-            "startTime": 1622541766750,
-            "executionTime": 239,
+            "startTime": 1622630094301,
+            "executionTime": 177,
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "00209000000PLkUAAW",
+                      "id": "00209000000PMG6AAO",
                       "success": true,
-                      "errors": []
+                      "errors": [
+                        "json array"
+                      ]
                     }
                   }
                 ]
@@ -253,54 +336,97 @@
         ],
         "Sleep 0.5 second3": [
           {
-            "startTime": 1622541766990,
-            "executionTime": 501,
+            "startTime": 1622630094478,
+            "executionTime": 505,
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "attributes": {
-                        "type": "Task",
-                        "url": "/services/data/v39.0/sobjects/Task/00T0900000PAA42EAH"
+                        "object": true
                       },
-                      "Id": "00T0900000PAA42EAH",
-                      "WhoId": null,
-                      "WhatId": null,
-                      "Subject": null,
-                      "ActivityDate": null,
+                      "Id": "00T0900000PB6QsEAL",
+                      "WhoId": {
+                        "object": true
+                      },
+                      "WhatId": {
+                        "object": true
+                      },
+                      "Subject": {
+                        "object": true
+                      },
+                      "ActivityDate": {
+                        "object": true
+                      },
                       "Status": "In Progress",
                       "Priority": "Normal",
                       "IsHighPriority": false,
                       "OwnerId": "00509000005ntkGAAQ",
-                      "Description": null,
+                      "Description": {
+                        "object": true
+                      },
                       "IsDeleted": false,
-                      "AccountId": null,
+                      "AccountId": {
+                        "object": true
+                      },
                       "IsClosed": false,
-                      "CreatedDate": "2021-06-01T10:02:46.000+0000",
+                      "CreatedDate": "2021-06-02T10:34:53.000+0000",
                       "CreatedById": "00509000005ntkGAAQ",
-                      "LastModifiedDate": "2021-06-01T10:02:46.000+0000",
+                      "LastModifiedDate": "2021-06-02T10:34:53.000+0000",
                       "LastModifiedById": "00509000005ntkGAAQ",
-                      "SystemModstamp": "2021-06-01T10:02:46.000+0000",
+                      "SystemModstamp": "2021-06-02T10:34:53.000+0000",
                       "IsArchived": false,
-                      "CallDurationInSeconds": null,
-                      "CallType": null,
-                      "CallDisposition": null,
-                      "CallObject": null,
-                      "ReminderDateTime": null,
+                      "CallDurationInSeconds": {
+                        "object": true
+                      },
+                      "CallType": {
+                        "object": true
+                      },
+                      "CallDisposition": {
+                        "object": true
+                      },
+                      "CallObject": {
+                        "object": true
+                      },
+                      "ReminderDateTime": {
+                        "object": true
+                      },
                       "IsReminderSet": false,
-                      "RecurrenceActivityId": null,
+                      "RecurrenceActivityId": {
+                        "object": true
+                      },
                       "IsRecurrence": false,
-                      "RecurrenceStartDateOnly": null,
-                      "RecurrenceEndDateOnly": null,
-                      "RecurrenceTimeZoneSidKey": null,
-                      "RecurrenceType": null,
-                      "RecurrenceInterval": null,
-                      "RecurrenceDayOfWeekMask": null,
-                      "RecurrenceDayOfMonth": null,
-                      "RecurrenceInstance": null,
-                      "RecurrenceMonthOfYear": null,
-                      "RecurrenceRegeneratedType": null,
+                      "RecurrenceStartDateOnly": {
+                        "object": true
+                      },
+                      "RecurrenceEndDateOnly": {
+                        "object": true
+                      },
+                      "RecurrenceTimeZoneSidKey": {
+                        "object": true
+                      },
+                      "RecurrenceType": {
+                        "object": true
+                      },
+                      "RecurrenceInterval": {
+                        "object": true
+                      },
+                      "RecurrenceDayOfWeekMask": {
+                        "object": true
+                      },
+                      "RecurrenceDayOfMonth": {
+                        "object": true
+                      },
+                      "RecurrenceInstance": {
+                        "object": true
+                      },
+                      "RecurrenceMonthOfYear": {
+                        "object": true
+                      },
+                      "RecurrenceRegeneratedType": {
+                        "object": true
+                      },
                       "TaskSubtype": "Task"
                     }
                   }
@@ -311,16 +437,18 @@
         ],
         "Sleep 0.5 second1": [
           {
-            "startTime": 1622541767491,
-            "executionTime": 502,
+            "startTime": 1622630094983,
+            "executionTime": 503,
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "00209000000PLkUAAW",
+                      "id": "00209000000PMG6AAO",
                       "success": true,
-                      "errors": []
+                      "errors": [
+                        "json array"
+                      ]
                     }
                   }
                 ]
@@ -330,48 +458,19 @@
         ],
         "Salesforce10": [
           {
-            "startTime": 1622541767994,
-            "executionTime": 216,
+            "startTime": 1622630095486,
+            "executionTime": 164,
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "objectDescribe": {
-                        "activateable": false,
-                        "createable": true,
-                        "custom": false,
-                        "customSetting": false,
-                        "deletable": true,
-                        "deprecatedAndHidden": false,
-                        "feedEnabled": false,
-                        "hasSubtypes": false,
-                        "isSubtype": false,
-                        "keyPrefix": "00T",
-                        "label": "Task",
-                        "labelPlural": "Tasks",
-                        "layoutable": true,
-                        "mergeable": false,
-                        "mruEnabled": true,
-                        "name": "Task",
-                        "queryable": true,
-                        "replicateable": true,
-                        "retrieveable": true,
-                        "searchable": true,
-                        "triggerable": true,
-                        "undeletable": true,
-                        "updateable": true,
-                        "urls": {
-                          "compactLayouts": "/services/data/v39.0/sobjects/Task/describe/compactLayouts",
-                          "rowTemplate": "/services/data/v39.0/sobjects/Task/{ID}",
-                          "defaultValues": "/services/data/v39.0/sobjects/Task/defaultValues?recordTypeId&fields",
-                          "describe": "/services/data/v39.0/sobjects/Task/describe",
-                          "quickActions": "/services/data/v39.0/sobjects/Task/quickActions",
-                          "layouts": "/services/data/v39.0/sobjects/Task/describe/layouts",
-                          "sobject": "/services/data/v39.0/sobjects/Task"
-                        }
+                        "object": true
                       },
-                      "recentItems": []
+                      "recentItems": [
+                        "json array"
+                      ]
                     }
                   }
                 ]
@@ -381,186 +480,18 @@
         ],
         "Salesforce3": [
           {
-            "startTime": 1622541768211,
-            "executionTime": 160,
+            "startTime": 1622630095650,
+            "executionTime": 110,
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "objectDescribe": {
-                        "activateable": false,
-                        "createable": true,
-                        "custom": false,
-                        "customSetting": false,
-                        "deletable": true,
-                        "deprecatedAndHidden": false,
-                        "feedEnabled": true,
-                        "hasSubtypes": false,
-                        "isSubtype": false,
-                        "keyPrefix": "006",
-                        "label": "Opportunity",
-                        "labelPlural": "Opportunities",
-                        "layoutable": true,
-                        "mergeable": false,
-                        "mruEnabled": true,
-                        "name": "Opportunity",
-                        "queryable": true,
-                        "replicateable": true,
-                        "retrieveable": true,
-                        "searchable": true,
-                        "triggerable": true,
-                        "undeletable": true,
-                        "updateable": true,
-                        "urls": {
-                          "compactLayouts": "/services/data/v39.0/sobjects/Opportunity/describe/compactLayouts",
-                          "rowTemplate": "/services/data/v39.0/sobjects/Opportunity/{ID}",
-                          "approvalLayouts": "/services/data/v39.0/sobjects/Opportunity/describe/approvalLayouts",
-                          "defaultValues": "/services/data/v39.0/sobjects/Opportunity/defaultValues?recordTypeId&fields",
-                          "listviews": "/services/data/v39.0/sobjects/Opportunity/listviews",
-                          "describe": "/services/data/v39.0/sobjects/Opportunity/describe",
-                          "quickActions": "/services/data/v39.0/sobjects/Opportunity/quickActions",
-                          "layouts": "/services/data/v39.0/sobjects/Opportunity/describe/layouts",
-                          "sobject": "/services/data/v39.0/sobjects/Opportunity"
-                        }
+                        "object": true
                       },
                       "recentItems": [
-                        {
-                          "attributes": {
-                            "type": "Opportunity",
-                            "url": "/services/data/v39.0/sobjects/Opportunity/00609000009bttDAAQ"
-                          },
-                          "Id": "00609000009bttDAAQ",
-                          "Name": "Opp1622541764873"
-                        },
-                        {
-                          "attributes": {
-                            "type": "Opportunity",
-                            "url": "/services/data/v39.0/sobjects/Opportunity/00609000009bsqGAAQ"
-                          },
-                          "Id": "00609000009bsqGAAQ",
-                          "Name": "Opp1622470574312"
-                        },
-                        {
-                          "attributes": {
-                            "type": "Opportunity",
-                            "url": "/services/data/v39.0/sobjects/Opportunity/00609000009bsqBAAQ"
-                          },
-                          "Id": "00609000009bsqBAAQ",
-                          "Name": "Opp1622470438837"
-                        },
-                        {
-                          "attributes": {
-                            "type": "Opportunity",
-                            "url": "/services/data/v39.0/sobjects/Opportunity/00609000009bsq6AAA"
-                          },
-                          "Id": "00609000009bsq6AAA",
-                          "Name": "Opp1622470269258"
-                        },
-                        {
-                          "attributes": {
-                            "type": "Opportunity",
-                            "url": "/services/data/v39.0/sobjects/Opportunity/00609000009bspmAAA"
-                          },
-                          "Id": "00609000009bspmAAA",
-                          "Name": "Opp1622470002044"
-                        },
-                        {
-                          "attributes": {
-                            "type": "Opportunity",
-                            "url": "/services/data/v39.0/sobjects/Opportunity/00609000009be6RAAQ"
-                          },
-                          "Id": "00609000009be6RAAQ",
-                          "Name": "Opp1622126904113"
-                        },
-                        {
-                          "attributes": {
-                            "type": "Opportunity",
-                            "url": "/services/data/v39.0/sobjects/Opportunity/00609000009bbn6AAA"
-                          },
-                          "Id": "00609000009bbn6AAA",
-                          "Name": "Opp1622038813431"
-                        },
-                        {
-                          "attributes": {
-                            "type": "Opportunity",
-                            "url": "/services/data/v39.0/sobjects/Opportunity/00609000009bXzPAAU"
-                          },
-                          "Id": "00609000009bXzPAAU",
-                          "Name": "Opp1621952687436"
-                        },
-                        {
-                          "attributes": {
-                            "type": "Opportunity",
-                            "url": "/services/data/v39.0/sobjects/Opportunity/00609000009bXS5AAM"
-                          },
-                          "Id": "00609000009bXS5AAM",
-                          "Name": "Opp1621938763383"
-                        },
-                        {
-                          "attributes": {
-                            "type": "Opportunity",
-                            "url": "/services/data/v39.0/sobjects/Opportunity/00609000009bXRWAA2"
-                          },
-                          "Id": "00609000009bXRWAA2",
-                          "Name": "Opp1621938283381"
-                        },
-                        {
-                          "attributes": {
-                            "type": "Opportunity",
-                            "url": "/services/data/v39.0/sobjects/Opportunity/00609000009aiIQAAY"
-                          },
-                          "Id": "00609000009aiIQAAY",
-                          "Name": "Opp1621598497698"
-                        },
-                        {
-                          "attributes": {
-                            "type": "Opportunity",
-                            "url": "/services/data/v39.0/sobjects/Opportunity/00609000009ahwQAAQ"
-                          },
-                          "Id": "00609000009ahwQAAQ",
-                          "Name": "Opp1621588178936"
-                        },
-                        {
-                          "attributes": {
-                            "type": "Opportunity",
-                            "url": "/services/data/v39.0/sobjects/Opportunity/00609000009aeAPAAY"
-                          },
-                          "Id": "00609000009aeAPAAY",
-                          "Name": "Opp1621515239756"
-                        },
-                        {
-                          "attributes": {
-                            "type": "Opportunity",
-                            "url": "/services/data/v39.0/sobjects/Opportunity/00609000006wqaRAAQ"
-                          },
-                          "Id": "00609000006wqaRAAQ",
-                          "Name": "Opp1621426072304"
-                        },
-                        {
-                          "attributes": {
-                            "type": "Opportunity",
-                            "url": "/services/data/v39.0/sobjects/Opportunity/00609000006wm2mAAA"
-                          },
-                          "Id": "00609000006wm2mAAA",
-                          "Name": "Opp1621265243076"
-                        },
-                        {
-                          "attributes": {
-                            "type": "Opportunity",
-                            "url": "/services/data/v39.0/sobjects/Opportunity/00609000006wjyGAAQ"
-                          },
-                          "Id": "00609000006wjyGAAQ",
-                          "Name": "Opp1621241502676"
-                        },
-                        {
-                          "attributes": {
-                            "type": "Opportunity",
-                            "url": "/services/data/v39.0/sobjects/Opportunity/00609000006wdbhAAA"
-                          },
-                          "Id": "00609000006wdbhAAA",
-                          "Name": "Opp1620993288392"
-                        }
+                        "json array"
                       ]
                     }
                   }
@@ -571,19 +502,20 @@
         ],
         "Salesforce11": [
           {
-            "startTime": 1622541768371,
-            "executionTime": 194,
+            "startTime": 1622630095760,
+            "executionTime": 141,
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "attributes": {
-                        "type": "Task",
-                        "url": "/services/data/v39.0/sobjects/Task/00T0900000NzAPdEAN"
+                        "object": true
                       },
                       "Id": "00T0900000NzAPdEAN",
-                      "Subject": null,
+                      "Subject": {
+                        "object": true
+                      },
                       "Status": "In Progress",
                       "Priority": "Normal"
                     }
@@ -595,22 +527,27 @@
         ],
         "Salesforce4": [
           {
-            "startTime": 1622541768565,
-            "executionTime": 151,
+            "startTime": 1622630095901,
+            "executionTime": 144,
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "attributes": {
-                        "type": "Opportunity",
-                        "url": "/services/data/v39.0/sobjects/Opportunity/00609000009bXS5AAM"
+                        "object": true
                       },
                       "Id": "00609000009bXS5AAM",
-                      "AccountId": null,
-                      "Amount": null,
+                      "AccountId": {
+                        "object": true
+                      },
+                      "Amount": {
+                        "object": true
+                      },
                       "Probability": 50,
-                      "Type": null
+                      "Type": {
+                        "object": true
+                      }
                     }
                   }
                 ]
@@ -620,19 +557,20 @@
         ],
         "Sleep 0.5 second5": [
           {
-            "startTime": 1622541768717,
-            "executionTime": 505,
+            "startTime": 1622630096045,
+            "executionTime": 502,
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "attributes": {
-                        "type": "Task",
-                        "url": "/services/data/v39.0/sobjects/Task/00T0900000NzAPdEAN"
+                        "object": true
                       },
                       "Id": "00T0900000NzAPdEAN",
-                      "Subject": null,
+                      "Subject": {
+                        "object": true
+                      },
                       "Status": "In Progress",
                       "Priority": "Normal"
                     }
@@ -644,22 +582,27 @@
         ],
         "Sleep 0.5 second2": [
           {
-            "startTime": 1622541769223,
-            "executionTime": 506,
+            "startTime": 1622630096548,
+            "executionTime": 502,
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "attributes": {
-                        "type": "Opportunity",
-                        "url": "/services/data/v39.0/sobjects/Opportunity/00609000009bXS5AAM"
+                        "object": true
                       },
                       "Id": "00609000009bXS5AAM",
-                      "AccountId": null,
-                      "Amount": null,
+                      "AccountId": {
+                        "object": true
+                      },
+                      "Amount": {
+                        "object": true
+                      },
                       "Probability": 50,
-                      "Type": null
+                      "Type": {
+                        "object": true
+                      }
                     }
                   }
                 ]
@@ -669,14 +612,16 @@
         ],
         "Salesforce12": [
           {
-            "startTime": 1622541769729,
-            "executionTime": 146,
+            "startTime": 1622630097050,
+            "executionTime": 194,
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "errors": [],
+                      "errors": [
+                        "json array"
+                      ],
                       "success": true
                     }
                   }
@@ -687,14 +632,16 @@
         ],
         "Salesforce5": [
           {
-            "startTime": 1622541769875,
-            "executionTime": 204,
+            "startTime": 1622630097245,
+            "executionTime": 358,
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "errors": [],
+                      "errors": [
+                        "json array"
+                      ],
                       "success": true
                     }
                   }
@@ -705,14 +652,16 @@
         ],
         "Salesforce13": [
           {
-            "startTime": 1622541770079,
-            "executionTime": 285,
+            "startTime": 1622630097604,
+            "executionTime": 299,
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "errors": [],
+                      "errors": [
+                        "json array"
+                      ],
                       "success": true
                     }
                   }
@@ -723,14 +672,16 @@
         ],
         "Salesforce6": [
           {
-            "startTime": 1622541770365,
-            "executionTime": 287,
+            "startTime": 1622630097904,
+            "executionTime": 290,
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "errors": [],
+                      "errors": [
+                        "json array"
+                      ],
                       "success": true
                     }
                   }
@@ -749,7 +700,7 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-01T10:02:44.862Z",
-  "stoppedAt": "2021-06-01T10:02:50.653Z",
+  "startedAt": "2021-06-02T10:34:52.067Z",
+  "stoppedAt": "2021-06-02T10:34:58.194Z",
   "finished": true
 }

@@ -5,8 +5,8 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622541752917,
-            "executionTime": 1,
+            "startTime": 1622630081933,
+            "executionTime": 0,
             "data": {
               "main": [
                 [
@@ -20,8 +20,8 @@
         ],
         "uProc": [
           {
-            "startTime": 1622541752919,
-            "executionTime": 471,
+            "startTime": 1622630081934,
+            "executionTime": 589,
             "data": {
               "main": [
                 [
@@ -29,13 +29,11 @@
                     "json": {
                       "result": true,
                       "message": {
-                        "result": "Sample text"
+                        "object": true
                       },
                       "status": "completed",
                       "params": {
-                        "text": "n8n rocks!",
-                        "gender": "female",
-                        "language": "american"
+                        "object": true
                       },
                       "normalized": false,
                       "criteria": "10032",
@@ -54,8 +52,8 @@
         ],
         "uProc10": [
           {
-            "startTime": 1622541753391,
-            "executionTime": 180,
+            "startTime": 1622630082524,
+            "executionTime": 254,
             "data": {
               "main": [
                 [
@@ -63,11 +61,11 @@
                     "json": {
                       "result": true,
                       "message": {
-                        "result": "Sample text"
+                        "object": true
                       },
                       "status": "completed",
                       "params": {
-                        "cif": "B 12345 678"
+                        "object": true
                       },
                       "normalized": false,
                       "criteria": "10032",
@@ -86,8 +84,8 @@
         ],
         "uProc1": [
           {
-            "startTime": 1622541753572,
-            "executionTime": 621,
+            "startTime": 1622630082778,
+            "executionTime": 230,
             "data": {
               "main": [
                 [
@@ -95,17 +93,15 @@
                     "json": {
                       "result": true,
                       "message": {
-                        "result": "Sample text"
+                        "object": true
                       },
                       "status": "completed",
                       "params": {
-                        "text": "n8n rocks!",
-                        "gender": "female",
-                        "language": "american"
+                        "object": true
                       },
                       "normalized": false,
                       "criteria": "10032",
-                      "time": 209,
+                      "time": 3,
                       "price": 0,
                       "real_price": 0.02,
                       "processor": "get-audio-speech-by-text",
@@ -120,8 +116,8 @@
         ],
         "uProc11": [
           {
-            "startTime": 1622541754193,
-            "executionTime": 151,
+            "startTime": 1622630083008,
+            "executionTime": 254,
             "data": {
               "main": [
                 [
@@ -129,15 +125,15 @@
                     "json": {
                       "result": false,
                       "message": {
-                        "result": true
+                        "object": true
                       },
                       "status": "completed",
                       "params": {
-                        "cif": "B 12345 678"
+                        "object": true
                       },
                       "normalized": false,
                       "criteria": "10032",
-                      "time": 3,
+                      "time": 2,
                       "price": 0,
                       "real_price": 0.0015,
                       "processor": "check-cif-valid",
@@ -152,8 +148,8 @@
         ],
         "uProc12": [
           {
-            "startTime": 1622541754344,
-            "executionTime": 159,
+            "startTime": 1622630083262,
+            "executionTime": 232,
             "data": {
               "main": [
                 [
@@ -161,11 +157,11 @@
                     "json": {
                       "result": true,
                       "message": {
-                        "result": true
+                        "object": true
                       },
                       "status": "completed",
                       "params": {
-                        "isin": "US0004026250"
+                        "object": true
                       },
                       "normalized": false,
                       "criteria": "10000",
@@ -184,8 +180,8 @@
         ],
         "uProc13": [
           {
-            "startTime": 1622541754503,
-            "executionTime": 156,
+            "startTime": 1622630083494,
+            "executionTime": 249,
             "data": {
               "main": [
                 [
@@ -193,11 +189,11 @@
                     "json": {
                       "result": true,
                       "message": {
-                        "result": true
+                        "object": true
                       },
                       "status": "completed",
                       "params": {
-                        "number": "998239812282"
+                        "object": true
                       },
                       "normalized": false,
                       "criteria": "10000",
@@ -216,8 +212,8 @@
         ],
         "uProc14": [
           {
-            "startTime": 1622541754659,
-            "executionTime": 152,
+            "startTime": 1622630083743,
+            "executionTime": 225,
             "data": {
               "main": [
                 [
@@ -225,27 +221,15 @@
                     "json": {
                       "result": false,
                       "message": {
-                        "address": "Sample text",
-                        "cif": "Sample text",
-                        "city": "Sample text",
-                        "country": "Sample text",
-                        "county": "Sample text",
-                        "email": "Sample text",
-                        "latitude": "Sample text",
-                        "longitude": "Sample text",
-                        "name": "Sample text",
-                        "phone": "Sample text",
-                        "state": "Sample text",
-                        "website": "Sample text",
-                        "zipcode": "Sample text"
+                        "object": true
                       },
                       "status": "completed",
                       "params": {
-                        "cif": "B 12345 678"
+                        "object": true
                       },
                       "normalized": false,
                       "criteria": "10032",
-                      "time": 3,
+                      "time": 2,
                       "price": 0,
                       "real_price": 0,
                       "processor": "get-company-by-cif",
@@ -260,8 +244,8 @@
         ],
         "uProc15": [
           {
-            "startTime": 1622541754811,
-            "executionTime": 163,
+            "startTime": 1622630083968,
+            "executionTime": 245,
             "data": {
               "main": [
                 [
@@ -269,23 +253,11 @@
                     "json": {
                       "result": false,
                       "message": {
-                        "address": "Sample text",
-                        "cif": "Sample text",
-                        "city": "Sample text",
-                        "country": "Sample text",
-                        "county": "Sample text",
-                        "email": "Sample text",
-                        "latitude": "Sample text",
-                        "longitude": "Sample text",
-                        "name": "Sample text",
-                        "phone": "Sample text",
-                        "state": "Sample text",
-                        "website": "Sample text",
-                        "zipcode": "Sample text"
+                        "object": true
                       },
                       "status": "scheduled",
                       "params": {
-                        "domain": "n8n.io"
+                        "object": true
                       },
                       "normalized": false,
                       "criteria": "10032",
@@ -304,8 +276,8 @@
         ],
         "uProc16": [
           {
-            "startTime": 1622541754974,
-            "executionTime": 159,
+            "startTime": 1622630084214,
+            "executionTime": 471,
             "data": {
               "main": [
                 [
@@ -313,27 +285,15 @@
                     "json": {
                       "result": true,
                       "message": {
-                        "address": "Sample text",
-                        "cif": "Sample text",
-                        "city": "Sample text",
-                        "country": "Sample text",
-                        "county": "Sample text",
-                        "email": "Sample text",
-                        "latitude": "Sample text",
-                        "longitude": "Sample text",
-                        "name": "Sample text",
-                        "phone": "Sample text",
-                        "state": "Sample text",
-                        "website": "Sample text",
-                        "zipcode": "Sample text"
+                        "object": true
                       },
                       "status": "completed",
                       "params": {
-                        "duns": "150483782"
+                        "object": true
                       },
                       "normalized": false,
                       "criteria": "10032",
-                      "time": 3,
+                      "time": 235,
                       "price": 0,
                       "real_price": 0.02,
                       "processor": "get-company-by-duns",
@@ -348,8 +308,8 @@
         ],
         "uProc17": [
           {
-            "startTime": 1622541755134,
-            "executionTime": 151,
+            "startTime": 1622630084686,
+            "executionTime": 246,
             "data": {
               "main": [
                 [
@@ -357,27 +317,15 @@
                     "json": {
                       "result": false,
                       "message": {
-                        "address": "Sample text",
-                        "cif": "Sample text",
-                        "city": "Sample text",
-                        "country": "Sample text",
-                        "county": "Sample text",
-                        "email": "Sample text",
-                        "latitude": "Sample text",
-                        "longitude": "Sample text",
-                        "name": "Sample text",
-                        "phone": "Sample text",
-                        "state": "Sample text",
-                        "website": "Sample text",
-                        "zipcode": "Sample text"
+                        "object": true
                       },
                       "status": "completed",
                       "params": {
-                        "email": "hello@n8n.io"
+                        "object": true
                       },
                       "normalized": false,
                       "criteria": "10032",
-                      "time": 2,
+                      "time": 3,
                       "price": 0,
                       "real_price": 0,
                       "processor": "get-company-by-email",
@@ -392,8 +340,8 @@
         ],
         "uProc18": [
           {
-            "startTime": 1622541755285,
-            "executionTime": 154,
+            "startTime": 1622630084933,
+            "executionTime": 231,
             "data": {
               "main": [
                 [
@@ -401,23 +349,15 @@
                     "json": {
                       "result": true,
                       "message": {
-                        "address": "Sample text",
-                        "city": "Sample text",
-                        "country": "Sample text",
-                        "email": "Sample text",
-                        "name": "Sample text",
-                        "phone": "Sample text",
-                        "state": "Sample text",
-                        "website": "Sample text",
-                        "zipcode": "77777"
+                        "object": true
                       },
                       "status": "completed",
                       "params": {
-                        "ip": "104.21.37.3"
+                        "object": true
                       },
                       "normalized": false,
                       "criteria": "10032",
-                      "time": 2,
+                      "time": 1,
                       "price": 0,
                       "real_price": 0.0025,
                       "processor": "get-company-by-ip",
@@ -432,8 +372,8 @@
         ],
         "uProc19": [
           {
-            "startTime": 1622541755439,
-            "executionTime": 153,
+            "startTime": 1622630085164,
+            "executionTime": 250,
             "data": {
               "main": [
                 [
@@ -441,24 +381,11 @@
                     "json": {
                       "result": false,
                       "message": {
-                        "address": "Sample text",
-                        "cif": "Sample text",
-                        "city": "Sample text",
-                        "country": "Sample text",
-                        "county": "Sample text",
-                        "email": "Sample text",
-                        "latitude": "Sample text",
-                        "longitude": "Sample text",
-                        "name": "Sample text",
-                        "phone": "Sample text",
-                        "state": "Sample text",
-                        "website": "Sample text",
-                        "zipcode": "Sample text"
+                        "object": true
                       },
                       "status": "completed",
                       "params": {
-                        "country": "DE",
-                        "name": "n8n"
+                        "object": true
                       },
                       "normalized": false,
                       "criteria": "10032",
@@ -477,8 +404,8 @@
         ],
         "uProc20": [
           {
-            "startTime": 1622541755592,
-            "executionTime": 161,
+            "startTime": 1622630085415,
+            "executionTime": 446,
             "data": {
               "main": [
                 [
@@ -486,23 +413,11 @@
                     "json": {
                       "result": false,
                       "message": {
-                        "address": "Sample text",
-                        "cif": "Sample text",
-                        "city": "Sample text",
-                        "country": "Sample text",
-                        "county": "Sample text",
-                        "email": "Sample text",
-                        "latitude": "Sample text",
-                        "longitude": "Sample text",
-                        "name": "Sample text",
-                        "phone": "Sample text",
-                        "state": "Sample text",
-                        "website": "Sample text",
-                        "zipcode": "Sample text"
+                        "object": true
                       },
                       "status": "scheduled",
                       "params": {
-                        "phone": "932187670"
+                        "object": true
                       },
                       "normalized": false,
                       "criteria": "10032",
@@ -521,8 +436,8 @@
         ],
         "uProc21": [
           {
-            "startTime": 1622541755753,
-            "executionTime": 153,
+            "startTime": 1622630085862,
+            "executionTime": 271,
             "data": {
               "main": [
                 [
@@ -530,27 +445,15 @@
                     "json": {
                       "result": false,
                       "message": {
-                        "address": "Sample text",
-                        "cif": "Sample text",
-                        "city": "Sample text",
-                        "country": "Sample text",
-                        "county": "Sample text",
-                        "email": "Sample text",
-                        "latitude": "Sample text",
-                        "longitude": "Sample text",
-                        "name": "Sample text",
-                        "phone": "Sample text",
-                        "state": "Sample text",
-                        "website": "Sample text",
-                        "zipcode": "Sample text"
+                        "object": true
                       },
                       "status": "scheduled",
                       "params": {
-                        "url": "https://twitter.com/n8n_io"
+                        "object": true
                       },
                       "normalized": false,
                       "criteria": "10032",
-                      "time": 3,
+                      "time": 2,
                       "price": 0,
                       "real_price": 0,
                       "processor": "get-company-by-profile",
@@ -565,8 +468,8 @@
         ],
         "uProc22": [
           {
-            "startTime": 1622541755907,
-            "executionTime": 184,
+            "startTime": 1622630086133,
+            "executionTime": 238,
             "data": {
               "main": [
                 [
@@ -574,14 +477,11 @@
                     "json": {
                       "result": true,
                       "message": {
-                        "area": "Sample text",
-                        "is_c_level": true,
-                        "is_decision_maker": true,
-                        "seniority": "Sample text"
+                        "object": true
                       },
                       "status": "completed",
                       "params": {
-                        "role": "Junior web developer"
+                        "object": true
                       },
                       "normalized": false,
                       "criteria": "10002",
@@ -600,8 +500,8 @@
         ],
         "uProc23": [
           {
-            "startTime": 1622541756092,
-            "executionTime": 448,
+            "startTime": 1622630086372,
+            "executionTime": 222,
             "data": {
               "main": [
                 [
@@ -609,15 +509,15 @@
                     "json": {
                       "result": false,
                       "message": {
-                        "result": true
+                        "object": true
                       },
                       "status": "completed",
                       "params": {
-                        "taxid": "B12345678"
+                        "object": true
                       },
                       "normalized": false,
                       "criteria": "10032",
-                      "time": 18,
+                      "time": 1,
                       "price": 0,
                       "real_price": 0.005,
                       "processor": "check-company-debtor-by-taxid",
@@ -632,8 +532,8 @@
         ],
         "uProc24": [
           {
-            "startTime": 1622541756540,
-            "executionTime": 155,
+            "startTime": 1622630086594,
+            "executionTime": 255,
             "data": {
               "main": [
                 [
@@ -641,29 +541,15 @@
                     "json": {
                       "result": false,
                       "message": {
-                        "area": "Sample text",
-                        "company": "Sample text",
-                        "email": "Sample text",
-                        "email_confidence": "Sample text",
-                        "email_score": "Sample text",
-                        "gender": "Sample text",
-                        "is_c_level": "Sample text",
-                        "is_decision_maker": "Sample text",
-                        "name": "Sample text",
-                        "phone": "Sample text",
-                        "profile": "Sample text",
-                        "role": "Sample text",
-                        "seniority": "Sample text",
-                        "surname": "Sample text"
+                        "object": true
                       },
                       "status": "completed",
                       "params": {
-                        "company": "n8n.io",
-                        "area": "Engineering"
+                        "object": true
                       },
                       "normalized": false,
                       "criteria": "10032",
-                      "time": 3,
+                      "time": 4,
                       "price": 0,
                       "real_price": 0,
                       "processor": "get-person-decision-maker",
@@ -678,26 +564,24 @@
         ],
         "uProc25": [
           {
-            "startTime": 1622541756696,
-            "executionTime": 171,
+            "startTime": 1622630086849,
+            "executionTime": 241,
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "result": false,
-                      "message": [],
+                      "message": [
+                        "json array"
+                      ],
                       "status": "completed",
                       "params": {
-                        "company": "n8n.io",
-                        "area": "Product",
-                        "clevel": "No",
-                        "location": "",
-                        "keyword": ""
+                        "object": true
                       },
                       "normalized": false,
                       "criteria": "10032",
-                      "time": 4,
+                      "time": 3,
                       "price": 0,
                       "real_price": 0,
                       "processor": "get-person-decision-maker-by-search",
@@ -712,8 +596,8 @@
         ],
         "uProc26": [
           {
-            "startTime": 1622541756868,
-            "executionTime": 154,
+            "startTime": 1622630087090,
+            "executionTime": 235,
             "data": {
               "main": [
                 [
@@ -721,11 +605,11 @@
                     "json": {
                       "result": false,
                       "message": {
-                        "result": "Sample text"
+                        "object": true
                       },
                       "status": "completed",
                       "params": {
-                        "name": "n8n.io"
+                        "object": true
                       },
                       "normalized": false,
                       "criteria": "10032",
@@ -744,8 +628,8 @@
         ],
         "uProc27": [
           {
-            "startTime": 1622541757023,
-            "executionTime": 158,
+            "startTime": 1622630087325,
+            "executionTime": 253,
             "data": {
               "main": [
                 [
@@ -753,16 +637,15 @@
                     "json": {
                       "result": false,
                       "message": {
-                        "result": "Sample text"
+                        "object": true
                       },
                       "status": "completed",
                       "params": {
-                        "domain": "n8n.io",
-                        "area": "Engineering"
+                        "object": true
                       },
                       "normalized": false,
                       "criteria": "10032",
-                      "time": 2,
+                      "time": 6,
                       "price": 0,
                       "real_price": 0,
                       "processor": "get-person-emails-by-domain-and-area",
@@ -777,8 +660,8 @@
         ],
         "uProc28": [
           {
-            "startTime": 1622541757181,
-            "executionTime": 145,
+            "startTime": 1622630087579,
+            "executionTime": 238,
             "data": {
               "main": [
                 [
@@ -786,53 +669,15 @@
                     "json": {
                       "result": true,
                       "message": {
-                        "contact": {
-                          "name": "Sample text",
-                          "cif": "Sample text",
-                          "email": "Sample text",
-                          "phone": "Sample text",
-                          "website": "Sample text"
-                        },
-                        "location": {
-                          "address": "Sample text",
-                          "city": "Sample text",
-                          "county": "Sample text",
-                          "country": "Sample text",
-                          "state": "Sample text",
-                          "zipcode": "Sample text"
-                        },
-                        "social": {
-                          "instagram": "Sample text",
-                          "linkedin": "Sample text",
-                          "youtube": "Sample text",
-                          "facebook": "Sample text",
-                          "google": "Sample text",
-                          "twitter": "Sample text",
-                          "slideshare": "Sample text",
-                          "pinterest": "Sample text",
-                          "activity": 77
-                        },
-                        "technology": [
-                          "Sample text",
-                          "Sample text",
-                          "Sample text",
-                          "Sample text",
-                          "Sample text",
-                          "Sample text",
-                          "Sample text",
-                          "Sample text",
-                          "Sample text",
-                          "Sample text",
-                          "Sample text"
-                        ]
+                        "object": true
                       },
                       "status": "completed",
                       "params": {
-                        "domain": "n8n.io"
+                        "object": true
                       },
                       "normalized": false,
                       "criteria": "10032",
-                      "time": 3,
+                      "time": 4,
                       "price": 0,
                       "real_price": 0.025,
                       "processor": "get-company-extended-by-domain",
@@ -847,8 +692,8 @@
         ],
         "uProc29": [
           {
-            "startTime": 1622541757326,
-            "executionTime": 151,
+            "startTime": 1622630087818,
+            "executionTime": 239,
             "data": {
               "main": [
                 [
@@ -856,49 +701,11 @@
                     "json": {
                       "result": true,
                       "message": {
-                        "contact": {
-                          "name": "Sample text",
-                          "cif": "Sample text",
-                          "email": "Sample text",
-                          "phone": "Sample text",
-                          "website": "Sample text"
-                        },
-                        "location": {
-                          "address": "Sample text",
-                          "city": "Sample text",
-                          "county": "Sample text",
-                          "country": "Sample text",
-                          "state": "Sample text",
-                          "zipcode": "Sample text"
-                        },
-                        "social": {
-                          "instagram": "Sample text",
-                          "linkedin": "Sample text",
-                          "youtube": "Sample text",
-                          "facebook": "Sample text",
-                          "google": "Sample text",
-                          "twitter": "Sample text",
-                          "slideshare": "Sample text",
-                          "pinterest": "Sample text",
-                          "activity": 55
-                        },
-                        "technology": [
-                          "Sample text",
-                          "Sample text",
-                          "Sample text",
-                          "Sample text",
-                          "Sample text",
-                          "Sample text",
-                          "Sample text",
-                          "Sample text",
-                          "Sample text",
-                          "Sample text",
-                          "Sample text"
-                        ]
+                        "object": true
                       },
                       "status": "completed",
                       "params": {
-                        "email": "hello@n8n.io"
+                        "object": true
                       },
                       "normalized": false,
                       "criteria": "10032",
@@ -917,8 +724,8 @@
         ],
         "uProc30": [
           {
-            "startTime": 1622541757477,
-            "executionTime": 138,
+            "startTime": 1622630088058,
+            "executionTime": 230,
             "data": {
               "main": [
                 [
@@ -926,16 +733,15 @@
                     "json": {
                       "result": true,
                       "message": {
-                        "profile": "Sample text",
-                        "score": "333"
+                        "object": true
                       },
                       "status": "completed",
                       "params": {
-                        "company": "n8n.io"
+                        "object": true
                       },
                       "normalized": false,
                       "criteria": "10032",
-                      "time": 3,
+                      "time": 2,
                       "price": 0,
                       "real_price": 0.01,
                       "processor": "get-profile-facebook-by-company",
@@ -950,8 +756,8 @@
         ],
         "uProc31": [
           {
-            "startTime": 1622541757616,
-            "executionTime": 154,
+            "startTime": 1622630088289,
+            "executionTime": 231,
             "data": {
               "main": [
                 [
@@ -959,22 +765,15 @@
                     "json": {
                       "result": false,
                       "message": {
-                        "cif": "Sample text",
-                        "cnae": "Sample text",
-                        "cnae_name": "Sample text",
-                        "debt_amount": "Sample text",
-                        "debt_year": "Sample text",
-                        "name": "Sample text",
-                        "revenue": "Sample text",
-                        "size": "Sample text"
+                        "object": true
                       },
                       "status": "scheduled",
                       "params": {
-                        "domain": "n8n.io"
+                        "object": true
                       },
                       "normalized": false,
                       "criteria": "10032",
-                      "time": 3,
+                      "time": 2,
                       "price": 0,
                       "real_price": 0,
                       "processor": "get-company-financial-by-domain",
@@ -989,8 +788,8 @@
         ],
         "uProc32": [
           {
-            "startTime": 1622541757770,
-            "executionTime": 143,
+            "startTime": 1622630088520,
+            "executionTime": 247,
             "data": {
               "main": [
                 [
@@ -998,18 +797,11 @@
                     "json": {
                       "result": false,
                       "message": {
-                        "cif": "Sample text",
-                        "cnae": "Sample text",
-                        "cnae_name": "Sample text",
-                        "debt_amount": "Sample text",
-                        "debt_year": "Sample text",
-                        "name": "Sample text",
-                        "revenue": "Sample text",
-                        "size": "Sample text"
+                        "object": true
                       },
                       "status": "scheduled",
                       "params": {
-                        "duns": "150483782"
+                        "object": true
                       },
                       "normalized": false,
                       "criteria": "10032",
@@ -1028,8 +820,8 @@
         ],
         "uProc33": [
           {
-            "startTime": 1622541757913,
-            "executionTime": 143,
+            "startTime": 1622630088767,
+            "executionTime": 251,
             "data": {
               "main": [
                 [
@@ -1037,22 +829,15 @@
                     "json": {
                       "result": false,
                       "message": {
-                        "cif": "Sample text",
-                        "cnae": "Sample text",
-                        "cnae_name": "Sample text",
-                        "debt_amount": "Sample text",
-                        "debt_year": "Sample text",
-                        "name": "Sample text",
-                        "revenue": "Sample text",
-                        "size": "Sample text"
+                        "object": true
                       },
                       "status": "scheduled",
                       "params": {
-                        "name": "n8n.io"
+                        "object": true
                       },
                       "normalized": false,
                       "criteria": "10032",
-                      "time": 2,
+                      "time": 4,
                       "price": 0,
                       "real_price": 0,
                       "processor": "get-company-financial-by-name",
@@ -1067,8 +852,8 @@
         ],
         "uProc34": [
           {
-            "startTime": 1622541758056,
-            "executionTime": 145,
+            "startTime": 1622630089018,
+            "executionTime": 411,
             "data": {
               "main": [
                 [
@@ -1076,22 +861,15 @@
                     "json": {
                       "result": false,
                       "message": {
-                        "cif": "Sample text",
-                        "cnae": "Sample text",
-                        "cnae_name": "Sample text",
-                        "debt_amount": "Sample text",
-                        "debt_year": "Sample text",
-                        "name": "Sample text",
-                        "revenue": "Sample text",
-                        "size": "Sample text"
+                        "object": true
                       },
                       "status": "scheduled",
                       "params": {
-                        "taxid": "B12345678"
+                        "object": true
                       },
                       "normalized": false,
                       "criteria": "10032",
-                      "time": 3,
+                      "time": 2,
                       "price": 0,
                       "real_price": 0,
                       "processor": "get-company-financial-by-taxid",
@@ -1106,8 +884,8 @@
         ],
         "uProc35": [
           {
-            "startTime": 1622541758201,
-            "executionTime": 143,
+            "startTime": 1622630089430,
+            "executionTime": 214,
             "data": {
               "main": [
                 [
@@ -1115,22 +893,11 @@
                     "json": {
                       "result": true,
                       "message": {
-                        "address": "Sample text",
-                        "cif": "Sample text",
-                        "city": "Sample text",
-                        "country": "Sample text",
-                        "email": "Sample text",
-                        "latitude": "Sample text",
-                        "longitude": "Sample text",
-                        "name": "Sample text",
-                        "phone": "Sample text",
-                        "state": "Sample text",
-                        "website": "Sample text",
-                        "zipcode": "33333"
+                        "object": true
                       },
                       "status": "completed",
                       "params": {
-                        "ip": "104.21.37.3"
+                        "object": true
                       },
                       "normalized": false,
                       "criteria": "10032",
@@ -1149,8 +916,8 @@
         ],
         "uProc36": [
           {
-            "startTime": 1622541758344,
-            "executionTime": 167,
+            "startTime": 1622630089644,
+            "executionTime": 218,
             "data": {
               "main": [
                 [
@@ -1158,12 +925,11 @@
                     "json": {
                       "result": false,
                       "message": {
-                        "profile": "Sample text",
-                        "score": "Sample text"
+                        "object": true
                       },
                       "status": "completed",
                       "params": {
-                        "company": "n8n.io"
+                        "object": true
                       },
                       "normalized": false,
                       "criteria": "10032",
@@ -1182,23 +948,20 @@
         ],
         "uProc37": [
           {
-            "startTime": 1622541758511,
-            "executionTime": 152,
+            "startTime": 1622630089863,
+            "executionTime": 229,
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "result": false,
-                      "message": [],
+                      "message": [
+                        "json array"
+                      ],
                       "status": "completed",
                       "params": {
-                        "country": "DE",
-                        "phone": "932187670",
-                        "email": "hello@n8n.io",
-                        "company": "n8n.io",
-                        "area": "Information technology",
-                        "seniority": "Intermediate"
+                        "object": true
                       },
                       "normalized": false,
                       "criteria": "10032",
@@ -1217,22 +980,20 @@
         ],
         "uProc38": [
           {
-            "startTime": 1622541758663,
-            "executionTime": 158,
+            "startTime": 1622630090093,
+            "executionTime": 234,
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "result": false,
-                      "message": [],
+                      "message": [
+                        "json array"
+                      ],
                       "status": "completed",
                       "params": {
-                        "company": "n8n.io",
-                        "area": "Information technology",
-                        "clevel": "No",
-                        "location": "",
-                        "keyword": ""
+                        "object": true
                       },
                       "normalized": false,
                       "criteria": "10032",
@@ -1251,21 +1012,23 @@
         ],
         "uProc39": [
           {
-            "startTime": 1622541758821,
-            "executionTime": 146,
+            "startTime": 1622630090327,
+            "executionTime": 239,
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "message": {},
+                      "message": {
+                        "object": true
+                      },
                       "status": "completed",
                       "params": {
-                        "domain": "n8n.io"
+                        "object": true
                       },
                       "normalized": false,
                       "criteria": "10032",
-                      "time": 2,
+                      "time": 1,
                       "price": 0,
                       "real_price": 0,
                       "processor": "get-company-name-by-domain",
@@ -1280,8 +1043,8 @@
         ],
         "uProc40": [
           {
-            "startTime": 1622541758967,
-            "executionTime": 144,
+            "startTime": 1622630090567,
+            "executionTime": 254,
             "data": {
               "main": [
                 [
@@ -1289,15 +1052,15 @@
                     "json": {
                       "result": "",
                       "message": {
-                        "result": "Sample text"
+                        "object": true
                       },
                       "status": "completed",
                       "params": {
-                        "domain": "n8n.io"
+                        "object": true
                       },
                       "normalized": false,
                       "criteria": "10032",
-                      "time": 2,
+                      "time": 3,
                       "price": 0,
                       "real_price": 0,
                       "processor": "get-company-phone-by-domain",
@@ -1312,8 +1075,8 @@
         ],
         "uProc41": [
           {
-            "startTime": 1622541759111,
-            "executionTime": 147,
+            "startTime": 1622630090821,
+            "executionTime": 228,
             "data": {
               "main": [
                 [
@@ -1321,11 +1084,11 @@
                     "json": {
                       "result": "",
                       "message": {
-                        "result": "Sample text"
+                        "object": true
                       },
                       "status": "completed",
                       "params": {
-                        "name": "n8n.io"
+                        "object": true
                       },
                       "normalized": false,
                       "criteria": "10032",
@@ -1344,8 +1107,8 @@
         ],
         "uProc42": [
           {
-            "startTime": 1622541759259,
-            "executionTime": 177,
+            "startTime": 1622630091049,
+            "executionTime": 233,
             "data": {
               "main": [
                 [
@@ -1353,12 +1116,11 @@
                     "json": {
                       "result": true,
                       "message": {
-                        "profile": "Sample text",
-                        "score": "111"
+                        "object": true
                       },
                       "status": "completed",
                       "params": {
-                        "company": "n8n.io"
+                        "object": true
                       },
                       "normalized": false,
                       "criteria": "10032",
@@ -1385,7 +1147,7 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-01T10:02:32.913Z",
-  "stoppedAt": "2021-06-01T10:02:39.437Z",
+  "startedAt": "2021-06-02T10:34:41.928Z",
+  "stoppedAt": "2021-06-02T10:34:51.283Z",
   "finished": true
 }

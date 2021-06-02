@@ -5,8 +5,8 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622541771410,
-            "executionTime": 1,
+            "startTime": 1622632852784,
+            "executionTime": 0,
             "data": {
               "main": [
                 [
@@ -20,27 +20,25 @@
         ],
         "Affinity": [
           {
-            "startTime": 1622541771412,
-            "executionTime": 848,
+            "startTime": 1622632852785,
+            "executionTime": 887,
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": 282305773,
-                      "name": "TESTCOMPANY1622541771413",
+                      "id": 282314407,
+                      "name": "TESTCOMPANY1622632852787",
                       "domain": "test.com",
                       "domains": [
-                        "test.com"
+                        "json array"
                       ],
-                      "crunchbase_uuid": null,
+                      "crunchbase_uuid": {
+                        "object": true
+                      },
                       "global": false,
                       "person_ids": [
-                        42887757,
-                        76988774,
-                        77047542,
-                        77058687,
-                        77271831
+                        "json array"
                       ]
                     }
                   }
@@ -51,8 +49,8 @@
         ],
         "Affinity4": [
           {
-            "startTime": 1622541772260,
-            "executionTime": 607,
+            "startTime": 1622632853673,
+            "executionTime": 797,
             "data": {
               "main": [
                 [
@@ -62,9 +60,11 @@
                       "name": "n8n.io",
                       "domain": "n8n.io",
                       "domains": [
-                        "n8n.io"
+                        "json array"
                       ],
-                      "crunchbase_uuid": null,
+                      "crunchbase_uuid": {
+                        "object": true
+                      },
                       "global": true
                     }
                   }
@@ -75,8 +75,8 @@
         ],
         "Affinity5": [
           {
-            "startTime": 1622541772868,
-            "executionTime": 608,
+            "startTime": 1622632854470,
+            "executionTime": 686,
             "data": {
               "main": [
                 [
@@ -87,7 +87,7 @@
                       "name": "Deals",
                       "public": true,
                       "owner_id": 41500021,
-                      "list_size": 5
+                      "list_size": 6
                     }
                   }
                 ]
@@ -97,20 +97,26 @@
         ],
         "Affinity7": [
           {
-            "startTime": 1622541773476,
-            "executionTime": 669,
+            "startTime": 1622632855157,
+            "executionTime": 747,
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": 77707926,
+                      "id": 77788644,
                       "type": 0,
-                      "first_name": "Fname_2021-06-01T10:02:53.476Z",
-                      "last_name": "Lname_2021-06-01T10:02:53.476Z",
-                      "primary_email": null,
-                      "emails": [],
-                      "organization_ids": []
+                      "first_name": "Fname_2021-06-02T11:20:55.159Z",
+                      "last_name": "Lname_2021-06-02T11:20:55.160Z",
+                      "primary_email": {
+                        "object": true
+                      },
+                      "emails": [
+                        "json array"
+                      ],
+                      "organization_ids": [
+                        "json array"
+                      ]
                     }
                   }
                 ]
@@ -120,28 +126,21 @@
         ],
         "Affinity12": [
           {
-            "startTime": 1622541774145,
-            "executionTime": 701,
+            "startTime": 1622632855905,
+            "executionTime": 755,
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": 32936534,
+                      "id": 32960043,
                       "list_id": 51365,
                       "creator_id": 73468989,
-                      "entity_id": 282305773,
+                      "entity_id": 282314407,
                       "entity_type": 1,
-                      "created_at": "2021-06-01T03:02:54.675-07:00",
+                      "created_at": "2021-06-02T04:20:56.511-07:00",
                       "entity": {
-                        "id": 282305773,
-                        "name": "TESTCOMPANY1622541771413",
-                        "domain": "test.com",
-                        "domains": [
-                          "test.com"
-                        ],
-                        "crunchbase_uuid": null,
-                        "global": false
+                        "object": true
                       }
                     }
                   }
@@ -152,8 +151,8 @@
         ],
         "Affinity6": [
           {
-            "startTime": 1622541774847,
-            "executionTime": 664,
+            "startTime": 1622632856660,
+            "executionTime": 661,
             "data": {
               "main": [
                 [
@@ -164,75 +163,9 @@
                       "name": "Deals",
                       "public": true,
                       "owner_id": 41500021,
-                      "list_size": 6,
+                      "list_size": 7,
                       "fields": [
-                        {
-                          "id": 457695,
-                          "name": "Status",
-                          "list_id": 51365,
-                          "value_type": 7,
-                          "allows_multiple": false,
-                          "track_changes": true,
-                          "dropdown_options": [
-                            {
-                              "id": 1682433,
-                              "text": "New",
-                              "rank": 1,
-                              "color": 3
-                            },
-                            {
-                              "id": 1682434,
-                              "text": "In Progress",
-                              "rank": 2,
-                              "color": 3
-                            },
-                            {
-                              "id": 1682435,
-                              "text": "Won",
-                              "rank": 3,
-                              "color": 2
-                            },
-                            {
-                              "id": 1682436,
-                              "text": "Lost",
-                              "rank": 4,
-                              "color": 1
-                            },
-                            {
-                              "id": 1682437,
-                              "text": "On Hold",
-                              "rank": 5,
-                              "color": 5
-                            }
-                          ]
-                        },
-                        {
-                          "id": 457696,
-                          "name": "Owners",
-                          "list_id": 51365,
-                          "value_type": 0,
-                          "allows_multiple": true,
-                          "track_changes": true,
-                          "dropdown_options": []
-                        },
-                        {
-                          "id": 457697,
-                          "name": "Amount",
-                          "list_id": 51365,
-                          "value_type": 3,
-                          "allows_multiple": false,
-                          "track_changes": true,
-                          "dropdown_options": []
-                        },
-                        {
-                          "id": 457698,
-                          "name": "Priority",
-                          "list_id": 51365,
-                          "value_type": 7,
-                          "allows_multiple": false,
-                          "track_changes": true,
-                          "dropdown_options": []
-                        }
+                        "json array"
                       ]
                     }
                   }
@@ -243,21 +176,29 @@
         ],
         "Affinity8": [
           {
-            "startTime": 1622541775511,
-            "executionTime": 639,
+            "startTime": 1622632857322,
+            "executionTime": 727,
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": 77707926,
+                      "id": 77788644,
                       "type": 0,
-                      "first_name": "Fname_2021-06-01T10:02:53.476Z",
-                      "last_name": "Lname_2021-06-01T10:02:53.476Z",
-                      "primary_email": null,
-                      "emails": [],
-                      "organization_ids": [],
-                      "list_entries": []
+                      "first_name": "Fname_2021-06-02T11:20:55.159Z",
+                      "last_name": "Lname_2021-06-02T11:20:55.160Z",
+                      "primary_email": {
+                        "object": true
+                      },
+                      "emails": [
+                        "json array"
+                      ],
+                      "organization_ids": [
+                        "json array"
+                      ],
+                      "list_entries": [
+                        "json array"
+                      ]
                     }
                   }
                 ]
@@ -267,28 +208,21 @@
         ],
         "Affinity13": [
           {
-            "startTime": 1622541776150,
-            "executionTime": 706,
+            "startTime": 1622632858050,
+            "executionTime": 732,
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": 32936534,
+                      "id": 32960043,
                       "list_id": 51365,
                       "creator_id": 73468989,
-                      "entity_id": 282305773,
+                      "entity_id": 282314407,
                       "entity_type": 1,
-                      "created_at": "2021-06-01T03:02:54.675-07:00",
+                      "created_at": "2021-06-02T04:20:56.511-07:00",
                       "entity": {
-                        "id": 282305773,
-                        "name": "TESTCOMPANY1622541771413",
-                        "domain": "test.com",
-                        "domains": [
-                          "test.com"
-                        ],
-                        "crunchbase_uuid": null,
-                        "global": false
+                        "object": true
                       }
                     }
                   }
@@ -299,23 +233,23 @@
         ],
         "Affinity9": [
           {
-            "startTime": 1622541776856,
-            "executionTime": 729,
+            "startTime": 1622632858783,
+            "executionTime": 784,
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": 77707926,
+                      "id": 77788644,
                       "type": 0,
-                      "first_name": "Fname_2021-06-01T10:02:53.476Z",
-                      "last_name": "Lname_2021-06-01T10:02:53.476Z",
-                      "primary_email": "email_1622541776857@test.com",
+                      "first_name": "Fname_2021-06-02T11:20:55.159Z",
+                      "last_name": "Lname_2021-06-02T11:20:55.160Z",
+                      "primary_email": "email_1622632858783@test.com",
                       "emails": [
-                        "email_1622541776857@test.com"
+                        "json array"
                       ],
                       "organization_ids": [
-                        282128763
+                        "json array"
                       ]
                     }
                   }
@@ -326,28 +260,21 @@
         ],
         "Affinity14": [
           {
-            "startTime": 1622541777585,
-            "executionTime": 621,
+            "startTime": 1622632859568,
+            "executionTime": 769,
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": 32936534,
+                      "id": 32960043,
                       "list_id": 51365,
                       "creator_id": 73468989,
-                      "entity_id": 282305773,
+                      "entity_id": 282314407,
                       "entity_type": 1,
-                      "created_at": "2021-06-01T03:02:54.675-07:00",
+                      "created_at": "2021-06-02T04:20:56.511-07:00",
                       "entity": {
-                        "id": 282305773,
-                        "name": "TESTCOMPANY1622541771413",
-                        "domain": "test.com",
-                        "domains": [
-                          "test.com"
-                        ],
-                        "crunchbase_uuid": null,
-                        "global": false
+                        "object": true
                       }
                     }
                   }
@@ -358,20 +285,20 @@
         ],
         "Affinity10": [
           {
-            "startTime": 1622541778207,
-            "executionTime": 605,
+            "startTime": 1622632860337,
+            "executionTime": 726,
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": 77707926,
+                      "id": 77788644,
                       "type": 0,
-                      "first_name": "Fname_2021-06-01T10:02:53.476Z",
-                      "last_name": "Lname_2021-06-01T10:02:53.476Z",
-                      "primary_email": "email_1622541776857@test.com",
+                      "first_name": "Fname_2021-06-02T11:20:55.159Z",
+                      "last_name": "Lname_2021-06-02T11:20:55.160Z",
+                      "primary_email": "email_1622632858783@test.com",
                       "emails": [
-                        "email_1622541776857@test.com"
+                        "json array"
                       ]
                     }
                   }
@@ -382,8 +309,8 @@
         ],
         "Affinity15": [
           {
-            "startTime": 1622541778813,
-            "executionTime": 654,
+            "startTime": 1622632861064,
+            "executionTime": 719,
             "data": {
               "main": [
                 [
@@ -399,8 +326,8 @@
         ],
         "Affinity11": [
           {
-            "startTime": 1622541779468,
-            "executionTime": 758,
+            "startTime": 1622632861784,
+            "executionTime": 828,
             "data": {
               "main": [
                 [
@@ -416,29 +343,29 @@
         ],
         "Affinity1": [
           {
-            "startTime": 1622541780227,
-            "executionTime": 642,
+            "startTime": 1622632862613,
+            "executionTime": 703,
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": 282305773,
-                      "name": "TESTCOMPANY1622541771413",
+                      "id": 282314407,
+                      "name": "TESTCOMPANY1622632852787",
                       "domain": "test.com",
                       "domains": [
-                        "test.com"
+                        "json array"
                       ],
-                      "crunchbase_uuid": null,
+                      "crunchbase_uuid": {
+                        "object": true
+                      },
                       "global": false,
                       "person_ids": [
-                        42887757,
-                        76988774,
-                        77047542,
-                        77058687,
-                        77271831
+                        "json array"
                       ],
-                      "list_entries": []
+                      "list_entries": [
+                        "json array"
+                      ]
                     }
                   }
                 ]
@@ -448,27 +375,25 @@
         ],
         "Affinity2": [
           {
-            "startTime": 1622541780869,
-            "executionTime": 638,
+            "startTime": 1622632863316,
+            "executionTime": 755,
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": 282305773,
-                      "name": "TESTCOMPANY1622541771413-UPDATED",
+                      "id": 282314407,
+                      "name": "TESTCOMPANY1622632852787-UPDATED",
                       "domain": "test.com",
                       "domains": [
-                        "test.com"
+                        "json array"
                       ],
-                      "crunchbase_uuid": null,
+                      "crunchbase_uuid": {
+                        "object": true
+                      },
                       "global": false,
                       "person_ids": [
-                        42887757,
-                        76988774,
-                        77047542,
-                        77058687,
-                        77271831
+                        "json array"
                       ]
                     }
                   }
@@ -479,8 +404,8 @@
         ],
         "Affinity3": [
           {
-            "startTime": 1622541781509,
-            "executionTime": 772,
+            "startTime": 1622632864072,
+            "executionTime": 808,
             "data": {
               "main": [
                 [
@@ -504,7 +429,7 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-01T10:02:51.407Z",
-  "stoppedAt": "2021-06-01T10:03:02.282Z",
+  "startedAt": "2021-06-02T11:20:52.780Z",
+  "stoppedAt": "2021-06-02T11:21:04.881Z",
   "finished": true
 }

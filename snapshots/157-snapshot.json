@@ -5,8 +5,8 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622541730821,
-            "executionTime": 1,
+            "startTime": 1622630056902,
+            "executionTime": 0,
             "data": {
               "main": [
                 [
@@ -20,14 +20,14 @@
         ],
         "Set": [
           {
-            "startTime": 1622541730823,
-            "executionTime": 1,
+            "startTime": 1622630056903,
+            "executionTime": 2,
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "templateName": "Template1622541730824"
+                      "templateName": "Template1622630056904"
                     }
                   }
                 ]
@@ -37,14 +37,14 @@
         ],
         "Set1": [
           {
-            "startTime": 1622541730824,
-            "executionTime": 1,
+            "startTime": 1622630056905,
+            "executionTime": 0,
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "templateName": "VerificationTemplate1622541730825"
+                      "templateName": "VerificationTemplate1622630056905"
                     }
                   }
                 ]
@@ -54,19 +54,19 @@
         ],
         "AWS SES": [
           {
-            "startTime": 1622541730825,
-            "executionTime": 611,
+            "startTime": 1622630056905,
+            "executionTime": 756,
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "$": {
-                        "xmlns": "http://ses.amazonaws.com/doc/2010-12-01/"
+                        "object": true
                       },
                       "CreateTemplateResult": "",
                       "ResponseMetadata": {
-                        "RequestId": "662ca5c7-b706-4f53-86f1-afc2d1ad0a0b"
+                        "object": true
                       }
                     }
                   }
@@ -77,18 +77,18 @@
         ],
         "AWS SES7": [
           {
-            "startTime": 1622541731437,
-            "executionTime": 566,
+            "startTime": 1622630057662,
+            "executionTime": 723,
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "$": {
-                        "xmlns": "http://ses.amazonaws.com/doc/2010-12-01/"
+                        "object": true
                       },
                       "ResponseMetadata": {
-                        "RequestId": "1ba95209-7b70-42f4-8989-914b81facd7e"
+                        "object": true
                       }
                     }
                   }
@@ -99,15 +99,15 @@
         ],
         "AWS SES1": [
           {
-            "startTime": 1622541732004,
-            "executionTime": 508,
+            "startTime": 1622630058385,
+            "executionTime": 459,
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "Name": "Template1622541730824",
-                      "CreatedTimestamp": "2021-06-01T10:02:11.363Z"
+                      "Name": "Template1622630056904",
+                      "CreatedTimestamp": "2021-06-02T10:34:17.578Z"
                     }
                   }
                 ]
@@ -117,26 +117,21 @@
         ],
         "AWS SES8": [
           {
-            "startTime": 1622541732513,
-            "executionTime": 471,
+            "startTime": 1622630058845,
+            "executionTime": 444,
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "$": {
-                        "xmlns": "http://ses.amazonaws.com/doc/2010-12-01/"
+                        "object": true
                       },
                       "GetCustomVerificationEmailTemplateResult": {
-                        "FailureRedirectionURL": "http://n8n.io",
-                        "TemplateName": "VerificationTemplate1622541730825",
-                        "TemplateSubject": "VerificationSubject1622541731437",
-                        "TemplateContent": "",
-                        "SuccessRedirectionURL": "http://n8n.io",
-                        "FromEmailAddress": "node8qa@gmail.com"
+                        "object": true
                       },
                       "ResponseMetadata": {
-                        "RequestId": "1ec021e1-a69a-4898-a9b0-0275ca799396"
+                        "object": true
                       }
                     }
                   }
@@ -147,26 +142,21 @@
         ],
         "AWS SES2": [
           {
-            "startTime": 1622541732985,
-            "executionTime": 495,
+            "startTime": 1622630059290,
+            "executionTime": 505,
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "$": {
-                        "xmlns": "http://ses.amazonaws.com/doc/2010-12-01/"
+                        "object": true
                       },
                       "GetTemplateResult": {
-                        "Template": {
-                          "TextPart": "Email body example 1622541730826",
-                          "HtmlPart": "<h1></h1>",
-                          "TemplateName": "Template1622541730824",
-                          "SubjectPart": "Subject1622541730826"
-                        }
+                        "object": true
                       },
                       "ResponseMetadata": {
-                        "RequestId": "373b1401-1753-4836-9b2e-b1900043ccb7"
+                        "object": true
                       }
                     }
                   }
@@ -177,8 +167,8 @@
         ],
         "AWS SES9": [
           {
-            "startTime": 1622541733481,
-            "executionTime": 410,
+            "startTime": 1622630059796,
+            "executionTime": 380,
             "data": {
               "main": [
                 [
@@ -198,19 +188,19 @@
         ],
         "AWS SES3": [
           {
-            "startTime": 1622541733892,
-            "executionTime": 479,
+            "startTime": 1622630060176,
+            "executionTime": 442,
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "$": {
-                        "xmlns": "http://ses.amazonaws.com/doc/2010-12-01/"
+                        "object": true
                       },
                       "UpdateTemplateResult": "",
                       "ResponseMetadata": {
-                        "RequestId": "9bba66cb-e77e-4a86-8437-4ce2a20b9c74"
+                        "object": true
                       }
                     }
                   }
@@ -221,18 +211,18 @@
         ],
         "AWS SES10": [
           {
-            "startTime": 1622541734371,
-            "executionTime": 432,
+            "startTime": 1622630060619,
+            "executionTime": 470,
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "$": {
-                        "xmlns": "http://ses.amazonaws.com/doc/2010-12-01/"
+                        "object": true
                       },
                       "ResponseMetadata": {
-                        "RequestId": "23afaa3e-6788-45a2-8875-d0d44480e918"
+                        "object": true
                       }
                     }
                   }
@@ -243,21 +233,21 @@
         ],
         "AWS SES5": [
           {
-            "startTime": 1622541734804,
-            "executionTime": 574,
+            "startTime": 1622630061089,
+            "executionTime": 521,
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "$": {
-                        "xmlns": "http://ses.amazonaws.com/doc/2010-12-01/"
+                        "object": true
                       },
                       "SendTemplatedEmailResult": {
-                        "MessageId": "01000179c70614cb-23707b92-eb3b-48e7-89dc-38b7cda9c479-000000"
+                        "object": true
                       },
                       "ResponseMetadata": {
-                        "RequestId": "92ee7240-5f19-4a6c-8c7d-9a6af7dccfa1"
+                        "object": true
                       }
                     }
                   }
@@ -268,18 +258,18 @@
         ],
         "AWS SES11": [
           {
-            "startTime": 1622541735378,
-            "executionTime": 486,
+            "startTime": 1622630061611,
+            "executionTime": 473,
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "$": {
-                        "xmlns": "http://ses.amazonaws.com/doc/2010-12-01/"
+                        "object": true
                       },
                       "ResponseMetadata": {
-                        "RequestId": "bd87f695-baf3-48c2-bc33-3c7fbca2b132"
+                        "object": true
                       }
                     }
                   }
@@ -290,23 +280,15 @@
         ],
         "AWS SES6": [
           {
-            "startTime": 1622541735864,
-            "executionTime": 574,
+            "startTime": 1622630062085,
+            "executionTime": 577,
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "SendEmailResponse": {
-                        "$": {
-                          "xmlns": "http://ses.amazonaws.com/doc/2010-12-01/"
-                        },
-                        "SendEmailResult": {
-                          "MessageId": "01000179c70618e8-ff5e86ac-34a3-4eda-b96e-72e1851731db-000000"
-                        },
-                        "ResponseMetadata": {
-                          "RequestId": "d18c6fe8-5281-459f-bb1f-925f611c2587"
-                        }
+                        "object": true
                       }
                     }
                   }
@@ -317,19 +299,19 @@
         ],
         "AWS SES4": [
           {
-            "startTime": 1622541736438,
-            "executionTime": 468,
+            "startTime": 1622630062662,
+            "executionTime": 436,
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "$": {
-                        "xmlns": "http://ses.amazonaws.com/doc/2010-12-01/"
+                        "object": true
                       },
                       "DeleteTemplateResult": "",
                       "ResponseMetadata": {
-                        "RequestId": "f4fbc65e-a21d-4876-9c13-80b4bc3c8825"
+                        "object": true
                       }
                     }
                   }
@@ -348,7 +330,7 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-01T10:02:10.819Z",
-  "stoppedAt": "2021-06-01T10:02:16.907Z",
+  "startedAt": "2021-06-02T10:34:16.900Z",
+  "stoppedAt": "2021-06-02T10:34:23.099Z",
   "finished": true
 }

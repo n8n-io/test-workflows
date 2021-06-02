@@ -5,8 +5,8 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622541700134,
-            "executionTime": 1,
+            "startTime": 1622630018300,
+            "executionTime": 0,
             "data": {
               "main": [
                 [
@@ -20,15 +20,15 @@
         ],
         "Set": [
           {
-            "startTime": 1622541700135,
-            "executionTime": 2,
+            "startTime": 1622630018301,
+            "executionTime": 1,
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "key": "Key1622541700137",
-                      "value": "Value1622541700137"
+                      "key": "TestKey",
+                      "value": "Value1622630018302"
                     }
                   }
                 ]
@@ -38,8 +38,8 @@
         ],
         "Redis": [
           {
-            "startTime": 1622541700138,
-            "executionTime": 101,
+            "startTime": 1622630018303,
+            "executionTime": 135,
             "data": {
               "main": [
                 [
@@ -59,27 +59,27 @@
                       "process_supervised": "no",
                       "run_id": "696160100fb18cc693bca372dbbe09c1f625f918",
                       "tcp_port": 6379,
-                      "server_time_usec": 1622541700228453,
-                      "uptime_in_seconds": 1280300,
-                      "uptime_in_days": 14,
+                      "server_time_usec": 1622630018433666,
+                      "uptime_in_seconds": 1368618,
+                      "uptime_in_days": 15,
                       "hz": 10,
                       "configured_hz": 10,
-                      "lru_clock": 11928964,
+                      "lru_clock": 12017282,
                       "executable": "/data/redis-server",
                       "config_file": "/usr/local/etc/redis.conf",
                       "io_threads_active": 0,
                       "connected_clients": 1,
                       "cluster_connections": 0,
                       "maxclients": 10000,
-                      "client_recent_max_input_buffer": 32,
+                      "client_recent_max_input_buffer": 16,
                       "client_recent_max_output_buffer": 0,
                       "blocked_clients": 0,
                       "tracking_clients": 0,
                       "clients_in_timeout_table": 0,
                       "used_memory": 881496,
                       "used_memory_human": "860.84K",
-                      "used_memory_rss": 4489216,
-                      "used_memory_rss_human": "4.28M",
+                      "used_memory_rss": 4472832,
+                      "used_memory_rss_human": "4.27M",
                       "used_memory_peak": 919816,
                       "used_memory_peak_human": "898.26K",
                       "used_memory_peak_perc": "95.83%",
@@ -87,7 +87,7 @@
                       "used_memory_startup": 810184,
                       "used_memory_dataset": 70832,
                       "used_memory_dataset_perc": "99.33%",
-                      "allocator_allocated": 910136,
+                      "allocator_allocated": 912096,
                       "allocator_active": 1245184,
                       "allocator_resident": 3764224,
                       "total_system_memory": 16395214848,
@@ -101,13 +101,13 @@
                       "maxmemory_human": "0B",
                       "maxmemory_policy": "noeviction",
                       "allocator_frag_ratio": 1.37,
-                      "allocator_frag_bytes": 335048,
+                      "allocator_frag_bytes": 333088,
                       "allocator_rss_ratio": 3.02,
                       "allocator_rss_bytes": 2519040,
                       "rss_overhead_ratio": 1.19,
-                      "rss_overhead_bytes": 724992,
-                      "mem_fragmentation_ratio": 5.49,
-                      "mem_fragmentation_bytes": 3671432,
+                      "rss_overhead_bytes": 708608,
+                      "mem_fragmentation_ratio": 5.47,
+                      "mem_fragmentation_bytes": 3655048,
                       "mem_not_counted_for_evict": 0,
                       "mem_replication_backlog": 0,
                       "mem_clients_slaves": 0,
@@ -124,7 +124,7 @@
                       "current_save_keys_total": 0,
                       "rdb_changes_since_last_save": 0,
                       "rdb_bgsave_in_progress": 0,
-                      "rdb_last_save_time": 1622539506,
+                      "rdb_last_save_time": 1622626111,
                       "rdb_last_bgsave_status": "ok",
                       "rdb_last_bgsave_time_sec": 0,
                       "rdb_current_bgsave_time_sec": "-1",
@@ -139,11 +139,11 @@
                       "aof_last_cow_size": 0,
                       "module_fork_in_progress": 0,
                       "module_fork_last_cow_size": 0,
-                      "total_connections_received": 1623,
-                      "total_commands_processed": 10392,
+                      "total_connections_received": 1753,
+                      "total_commands_processed": 10608,
                       "instantaneous_ops_per_sec": 0,
-                      "total_net_input_bytes": 319754,
-                      "total_net_output_bytes": 1704307,
+                      "total_net_input_bytes": 328275,
+                      "total_net_output_bytes": 2012871,
                       "instantaneous_input_kbps": 0,
                       "instantaneous_output_kbps": 0,
                       "rejected_connections": 0,
@@ -153,14 +153,14 @@
                       "expired_keys": 0,
                       "expired_stale_perc": 0,
                       "expired_time_cap_reached_count": 0,
-                      "expire_cycle_cpu_milliseconds": 36393,
+                      "expire_cycle_cpu_milliseconds": 39046,
                       "evicted_keys": 0,
-                      "keyspace_hits": 176,
+                      "keyspace_hits": 224,
                       "keyspace_misses": 1,
                       "pubsub_channels": 0,
                       "pubsub_patterns": 0,
-                      "latest_fork_usec": 611,
-                      "total_forks": 43,
+                      "latest_fork_usec": 751,
+                      "total_forks": 52,
                       "migrate_cached_sockets": 0,
                       "slave_expires_tracked_keys": 0,
                       "active_defrag_hits": 0,
@@ -171,10 +171,10 @@
                       "tracking_total_items": 0,
                       "tracking_total_prefixes": 0,
                       "unexpected_error_replies": 0,
-                      "total_error_replies": 11104,
+                      "total_error_replies": 11174,
                       "dump_payload_sanitizations": 0,
-                      "total_reads_processed": 9373,
-                      "total_writes_processed": 7967,
+                      "total_reads_processed": 9749,
+                      "total_writes_processed": 8271,
                       "io_threaded_reads_processed": 0,
                       "io_threaded_writes_processed": 0,
                       "role": "master",
@@ -188,26 +188,24 @@
                       "repl_backlog_size": 1048576,
                       "repl_backlog_first_byte_offset": 0,
                       "repl_backlog_histlen": 0,
-                      "used_cpu_sys": 3112.581141,
-                      "used_cpu_user": 4356.505737,
-                      "used_cpu_sys_children": 0.137033,
-                      "used_cpu_user_children": 0.08038,
-                      "used_cpu_sys_main_thread": 3112.037424,
-                      "used_cpu_user_main_thread": 4356.010269,
+                      "used_cpu_sys": 3328.706569,
+                      "used_cpu_user": 4654.756068,
+                      "used_cpu_sys_children": 0.163898,
+                      "used_cpu_user_children": 0.102952,
+                      "used_cpu_sys_main_thread": 3328.144548,
+                      "used_cpu_user_main_thread": 4654.247889,
                       "errorstat_ERR": {
-                        "count": 106
+                        "object": true
                       },
                       "errorstat_NOAUTH": {
-                        "count": 1350
+                        "object": true
                       },
                       "errorstat_WRONGPASS": {
-                        "count": 9648
+                        "object": true
                       },
                       "cluster_enabled": 0,
                       "db0": {
-                        "keys": 8,
-                        "expires": 0,
-                        "avg_ttl": 0
+                        "object": true
                       }
                     }
                   }
@@ -218,8 +216,8 @@
         ],
         "Redis1": [
           {
-            "startTime": 1622541700240,
-            "executionTime": 89,
+            "startTime": 1622630018439,
+            "executionTime": 208,
             "data": {
               "main": [
                 [
@@ -239,27 +237,27 @@
                       "process_supervised": "no",
                       "run_id": "696160100fb18cc693bca372dbbe09c1f625f918",
                       "tcp_port": 6379,
-                      "server_time_usec": 1622541700228453,
-                      "uptime_in_seconds": 1280300,
-                      "uptime_in_days": 14,
+                      "server_time_usec": 1622630018433666,
+                      "uptime_in_seconds": 1368618,
+                      "uptime_in_days": 15,
                       "hz": 10,
                       "configured_hz": 10,
-                      "lru_clock": 11928964,
+                      "lru_clock": 12017282,
                       "executable": "/data/redis-server",
                       "config_file": "/usr/local/etc/redis.conf",
                       "io_threads_active": 0,
                       "connected_clients": 1,
                       "cluster_connections": 0,
                       "maxclients": 10000,
-                      "client_recent_max_input_buffer": 32,
+                      "client_recent_max_input_buffer": 16,
                       "client_recent_max_output_buffer": 0,
                       "blocked_clients": 0,
                       "tracking_clients": 0,
                       "clients_in_timeout_table": 0,
                       "used_memory": 881496,
                       "used_memory_human": "860.84K",
-                      "used_memory_rss": 4489216,
-                      "used_memory_rss_human": "4.28M",
+                      "used_memory_rss": 4472832,
+                      "used_memory_rss_human": "4.27M",
                       "used_memory_peak": 919816,
                       "used_memory_peak_human": "898.26K",
                       "used_memory_peak_perc": "95.83%",
@@ -267,7 +265,7 @@
                       "used_memory_startup": 810184,
                       "used_memory_dataset": 70832,
                       "used_memory_dataset_perc": "99.33%",
-                      "allocator_allocated": 910136,
+                      "allocator_allocated": 912096,
                       "allocator_active": 1245184,
                       "allocator_resident": 3764224,
                       "total_system_memory": 16395214848,
@@ -281,13 +279,13 @@
                       "maxmemory_human": "0B",
                       "maxmemory_policy": "noeviction",
                       "allocator_frag_ratio": 1.37,
-                      "allocator_frag_bytes": 335048,
+                      "allocator_frag_bytes": 333088,
                       "allocator_rss_ratio": 3.02,
                       "allocator_rss_bytes": 2519040,
                       "rss_overhead_ratio": 1.19,
-                      "rss_overhead_bytes": 724992,
-                      "mem_fragmentation_ratio": 5.49,
-                      "mem_fragmentation_bytes": 3671432,
+                      "rss_overhead_bytes": 708608,
+                      "mem_fragmentation_ratio": 5.47,
+                      "mem_fragmentation_bytes": 3655048,
                       "mem_not_counted_for_evict": 0,
                       "mem_replication_backlog": 0,
                       "mem_clients_slaves": 0,
@@ -304,7 +302,7 @@
                       "current_save_keys_total": 0,
                       "rdb_changes_since_last_save": 0,
                       "rdb_bgsave_in_progress": 0,
-                      "rdb_last_save_time": 1622539506,
+                      "rdb_last_save_time": 1622626111,
                       "rdb_last_bgsave_status": "ok",
                       "rdb_last_bgsave_time_sec": 0,
                       "rdb_current_bgsave_time_sec": "-1",
@@ -319,11 +317,11 @@
                       "aof_last_cow_size": 0,
                       "module_fork_in_progress": 0,
                       "module_fork_last_cow_size": 0,
-                      "total_connections_received": 1623,
-                      "total_commands_processed": 10392,
+                      "total_connections_received": 1753,
+                      "total_commands_processed": 10608,
                       "instantaneous_ops_per_sec": 0,
-                      "total_net_input_bytes": 319754,
-                      "total_net_output_bytes": 1704307,
+                      "total_net_input_bytes": 328275,
+                      "total_net_output_bytes": 2012871,
                       "instantaneous_input_kbps": 0,
                       "instantaneous_output_kbps": 0,
                       "rejected_connections": 0,
@@ -333,14 +331,14 @@
                       "expired_keys": 0,
                       "expired_stale_perc": 0,
                       "expired_time_cap_reached_count": 0,
-                      "expire_cycle_cpu_milliseconds": 36393,
+                      "expire_cycle_cpu_milliseconds": 39046,
                       "evicted_keys": 0,
-                      "keyspace_hits": 176,
+                      "keyspace_hits": 224,
                       "keyspace_misses": 1,
                       "pubsub_channels": 0,
                       "pubsub_patterns": 0,
-                      "latest_fork_usec": 611,
-                      "total_forks": 43,
+                      "latest_fork_usec": 751,
+                      "total_forks": 52,
                       "migrate_cached_sockets": 0,
                       "slave_expires_tracked_keys": 0,
                       "active_defrag_hits": 0,
@@ -351,10 +349,10 @@
                       "tracking_total_items": 0,
                       "tracking_total_prefixes": 0,
                       "unexpected_error_replies": 0,
-                      "total_error_replies": 11104,
+                      "total_error_replies": 11174,
                       "dump_payload_sanitizations": 0,
-                      "total_reads_processed": 9373,
-                      "total_writes_processed": 7967,
+                      "total_reads_processed": 9749,
+                      "total_writes_processed": 8271,
                       "io_threaded_reads_processed": 0,
                       "io_threaded_writes_processed": 0,
                       "role": "master",
@@ -368,26 +366,24 @@
                       "repl_backlog_size": 1048576,
                       "repl_backlog_first_byte_offset": 0,
                       "repl_backlog_histlen": 0,
-                      "used_cpu_sys": 3112.581141,
-                      "used_cpu_user": 4356.505737,
-                      "used_cpu_sys_children": 0.137033,
-                      "used_cpu_user_children": 0.08038,
-                      "used_cpu_sys_main_thread": 3112.037424,
-                      "used_cpu_user_main_thread": 4356.010269,
+                      "used_cpu_sys": 3328.706569,
+                      "used_cpu_user": 4654.756068,
+                      "used_cpu_sys_children": 0.163898,
+                      "used_cpu_user_children": 0.102952,
+                      "used_cpu_sys_main_thread": 3328.144548,
+                      "used_cpu_user_main_thread": 4654.247889,
                       "errorstat_ERR": {
-                        "count": 106
+                        "object": true
                       },
                       "errorstat_NOAUTH": {
-                        "count": 1350
+                        "object": true
                       },
                       "errorstat_WRONGPASS": {
-                        "count": 9648
+                        "object": true
                       },
                       "cluster_enabled": 0,
                       "db0": {
-                        "keys": 8,
-                        "expires": 0,
-                        "avg_ttl": 0
+                        "object": true
                       }
                     }
                   }
@@ -398,14 +394,14 @@
         ],
         "Redis2": [
           {
-            "startTime": 1622541700329,
-            "executionTime": 142,
+            "startTime": 1622630018648,
+            "executionTime": 263,
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "Key1622541700137": "Value1622541700137"
+                      "TestKey": "Value1622630018302"
                     }
                   }
                 ]
@@ -415,14 +411,14 @@
         ],
         "Redis3": [
           {
-            "startTime": 1622541700472,
-            "executionTime": 106,
+            "startTime": 1622630018912,
+            "executionTime": 214,
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "value": "Value1622541700137"
+                      "value": "Value1622630018302"
                     }
                   }
                 ]
@@ -432,14 +428,14 @@
         ],
         "Redis4": [
           {
-            "startTime": 1622541700578,
-            "executionTime": 98,
+            "startTime": 1622630019126,
+            "executionTime": 120,
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "value": "Value1622541700137"
+                      "value": "Value1622630018302"
                     }
                   }
                 ]
@@ -449,14 +445,14 @@
         ],
         "Function": [
           {
-            "startTime": 1622541700676,
-            "executionTime": 15,
+            "startTime": 1622630019246,
+            "executionTime": 5,
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "value": "Value1622541700137"
+                      "value": "Value1622630018302"
                     }
                   }
                 ]
@@ -474,7 +470,7 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-01T10:01:40.132Z",
-  "stoppedAt": "2021-06-01T10:01:40.692Z",
+  "startedAt": "2021-06-02T10:33:38.298Z",
+  "stoppedAt": "2021-06-02T10:33:39.251Z",
   "finished": true
 }

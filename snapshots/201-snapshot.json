@@ -5,8 +5,8 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622541783018,
-            "executionTime": 0,
+            "startTime": 1622630108814,
+            "executionTime": 1,
             "data": {
               "main": [
                 [
@@ -20,14 +20,14 @@
         ],
         "Set": [
           {
-            "startTime": 1622541783019,
-            "executionTime": 1,
+            "startTime": 1622630108815,
+            "executionTime": 2,
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "userId": "User_1622541783020"
+                      "userId": "User_1622630108817"
                     }
                   }
                 ]
@@ -37,8 +37,8 @@
         ],
         "Iterable": [
           {
-            "startTime": 1622541783021,
-            "executionTime": 499,
+            "startTime": 1622630108817,
+            "executionTime": 576,
             "data": {
               "main": [
                 [
@@ -46,7 +46,9 @@
                     "json": {
                       "msg": "",
                       "code": "Success",
-                      "params": null
+                      "params": {
+                        "object": true
+                      }
                     }
                   }
                 ]
@@ -56,15 +58,18 @@
         ],
         "Iterable1": [
           {
-            "startTime": 1622541783520,
-            "executionTime": 474,
+            "startTime": 1622630109393,
+            "executionTime": 463,
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "email": "user_1622541783020+-1293966123@placeholder.email",
-                      "userId": "User_1622541783020"
+                      "email": "user_1622630108817+-1615773761@placeholder.email",
+                      "dataFields": {
+                        "object": true
+                      },
+                      "userId": "User_1622630108817"
                     }
                   }
                 ]
@@ -74,8 +79,8 @@
         ],
         "Iterable2": [
           {
-            "startTime": 1622541783994,
-            "executionTime": 369,
+            "startTime": 1622630109857,
+            "executionTime": 1459,
             "data": {
               "main": [
                 [
@@ -83,8 +88,12 @@
                     "json": {
                       "successCount": 1,
                       "failCount": 0,
-                      "invalidEmails": [],
-                      "invalidUserIds": []
+                      "invalidEmails": [
+                        "json array"
+                      ],
+                      "invalidUserIds": [
+                        "json array"
+                      ]
                     }
                   }
                 ]
@@ -94,8 +103,8 @@
         ],
         "Iterable3": [
           {
-            "startTime": 1622541784363,
-            "executionTime": 339,
+            "startTime": 1622630111317,
+            "executionTime": 430,
             "data": {
               "main": [
                 [
@@ -103,8 +112,12 @@
                     "json": {
                       "successCount": 1,
                       "failCount": 0,
-                      "invalidEmails": [],
-                      "invalidUserIds": []
+                      "invalidEmails": [
+                        "json array"
+                      ],
+                      "invalidUserIds": [
+                        "json array"
+                      ]
                     }
                   }
                 ]
@@ -114,8 +127,8 @@
         ],
         "Iterable4": [
           {
-            "startTime": 1622541784703,
-            "executionTime": 369,
+            "startTime": 1622630111748,
+            "executionTime": 366,
             "data": {
               "main": [
                 [
@@ -123,9 +136,15 @@
                     "json": {
                       "successCount": 1,
                       "failCount": 0,
-                      "invalidEmails": [],
-                      "invalidUserIds": [],
-                      "disallowedEventNames": []
+                      "invalidEmails": [
+                        "json array"
+                      ],
+                      "invalidUserIds": [
+                        "json array"
+                      ],
+                      "disallowedEventNames": [
+                        "json array"
+                      ]
                     }
                   }
                 ]
@@ -135,8 +154,8 @@
         ],
         "Iterable5": [
           {
-            "startTime": 1622541785073,
-            "executionTime": 358,
+            "startTime": 1622630112114,
+            "executionTime": 349,
             "data": {
               "main": [
                 [
@@ -144,7 +163,9 @@
                     "json": {
                       "msg": "",
                       "code": "Success",
-                      "params": null
+                      "params": {
+                        "object": true
+                      }
                     }
                   }
                 ]
@@ -162,7 +183,7 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-01T10:03:03.016Z",
-  "stoppedAt": "2021-06-01T10:03:05.432Z",
+  "startedAt": "2021-06-02T10:35:08.812Z",
+  "stoppedAt": "2021-06-02T10:35:12.463Z",
   "finished": true
 }

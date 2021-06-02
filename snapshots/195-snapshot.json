@@ -5,8 +5,8 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622541775556,
-            "executionTime": 0,
+            "startTime": 1622630102130,
+            "executionTime": 1,
             "data": {
               "main": [
                 [
@@ -20,8 +20,8 @@
         ],
         "Kitemaker1": [
           {
-            "startTime": 1622541775557,
-            "executionTime": 297,
+            "startTime": 1622630102131,
+            "executionTime": 382,
             "data": {
               "main": [
                 [
@@ -30,37 +30,10 @@
                       "id": "0f42cd20b0617400",
                       "name": "n8n-qa",
                       "labels": [
-                        {
-                          "id": "0f42cd20ff617400",
-                          "name": "More details inside",
-                          "color": "2196f3"
-                        }
+                        "json array"
                       ],
                       "statuses": [
-                        {
-                          "id": "0f42cd20f9617400",
-                          "name": "Archived",
-                          "type": "ARCHIVED",
-                          "default": false
-                        },
-                        {
-                          "id": "0f42cd20f9617401",
-                          "name": "Done",
-                          "type": "DONE",
-                          "default": true
-                        },
-                        {
-                          "id": "0f42cd20f9617403",
-                          "name": "In progress",
-                          "type": "IN_PROGRESS",
-                          "default": false
-                        },
-                        {
-                          "id": "0f42cd20f9617405",
-                          "name": "Todo",
-                          "type": "TODO",
-                          "default": true
-                        }
+                        "json array"
                       ]
                     }
                   }
@@ -71,8 +44,8 @@
         ],
         "Kitemaker": [
           {
-            "startTime": 1622541775855,
-            "executionTime": 145,
+            "startTime": 1622630102514,
+            "executionTime": 285,
             "data": {
               "main": [
                 [
@@ -89,8 +62,8 @@
         ],
         "Kitemaker2": [
           {
-            "startTime": 1622541776001,
-            "executionTime": 165,
+            "startTime": 1622630102799,
+            "executionTime": 260,
             "data": {
               "main": [
                 [
@@ -107,28 +80,37 @@
         ],
         "Kitemaker3": [
           {
-            "startTime": 1622541776166,
-            "executionTime": 240,
+            "startTime": 1622630103060,
+            "executionTime": 325,
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "0fd8b5cfe482e400",
-                      "number": "53",
-                      "title": "WorkItem1622541776168",
+                      "id": "0fddf9932c2f6c00",
+                      "number": "63",
+                      "title": "WorkItem1622630103063",
                       "description": "",
                       "status": {
-                        "id": "0f42cd20f9617405",
-                        "name": "Todo"
+                        "object": true
                       },
-                      "members": [],
-                      "watchers": [],
-                      "labels": [],
-                      "effort": null,
-                      "impact": null,
-                      "updatedAt": 1622541776334,
-                      "createdAt": 1622541776334
+                      "members": [
+                        "json array"
+                      ],
+                      "watchers": [
+                        "json array"
+                      ],
+                      "labels": [
+                        "json array"
+                      ],
+                      "effort": {
+                        "object": true
+                      },
+                      "impact": {
+                        "object": true
+                      },
+                      "updatedAt": 1622630103318,
+                      "createdAt": 1622630103318
                     }
                   }
                 ]
@@ -138,30 +120,41 @@
         ],
         "Kitemaker4": [
           {
-            "startTime": 1622541776407,
-            "executionTime": 163,
+            "startTime": 1622630103385,
+            "executionTime": 219,
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "0fd8b5cfe482e400",
-                      "number": "53",
-                      "title": "WorkItem1622541776168",
+                      "id": "0fddf9932c2f6c00",
+                      "number": "63",
+                      "title": "WorkItem1622630103063",
                       "description": "",
                       "status": {
-                        "id": "0f42cd20f9617405",
-                        "name": "Todo"
+                        "object": true
                       },
                       "sort": "b",
-                      "members": [],
-                      "watchers": [],
-                      "labels": [],
-                      "comments": [],
-                      "effort": null,
-                      "impact": null,
-                      "updatedAt": 1622541776334,
-                      "createdAt": 1622541776334
+                      "members": [
+                        "json array"
+                      ],
+                      "watchers": [
+                        "json array"
+                      ],
+                      "labels": [
+                        "json array"
+                      ],
+                      "comments": [
+                        "json array"
+                      ],
+                      "effort": {
+                        "object": true
+                      },
+                      "impact": {
+                        "object": true
+                      },
+                      "updatedAt": 1622630103318,
+                      "createdAt": 1622630103318
                     }
                   }
                 ]
@@ -171,8 +164,8 @@
         ],
         "Kitemaker5": [
           {
-            "startTime": 1622541776571,
-            "executionTime": 272,
+            "startTime": 1622630103604,
+            "executionTime": 355,
             "data": {
               "main": [
                 [
@@ -182,11 +175,11 @@
                       "title": "Use arrow keys to navigate work items",
                       "description": "# Things to explore\n[ ]Press the little + sign to the top right to see different types of meta data you can add to work items\n[ ]Learn some markdown\n  [ ]`#` On an empty line creates a headline (type ## and ### for sub headlines)\n  [ ]Type `**` or `__` before and after a section of text to make it **bold**\n  [ ]Type `*` or `_` before and after a section of text to make it _italic_\n  [ ]Type `´`  before and after a section of text to make it `a code block`\n  [ ]Type `*` followed by space on an empty line to make bullet points\n  [ ]Type `[]` followed by space on an empty line to make todo-lists\n  [ ]Type `1.` followed by space on an empty line to make numbered lists\n  [ ]Type `$$` before and after Tex expression $$\\frac{1}{100}$$\n[ ]Check out our integrations\n[ ]Make comments (they support everything the description field supports)\n[ ]Invite your team\n[ ]Learn hotkeys:\n  [ ]Hovering elements gives you hotkey tips. Hover this sections to see that `D` lets you edit the description\n  [ ]Other times the hotkey hints are in the UI. If you look at the right section of this screen, `R` adds a new comment\n  [ ]Pressing `?` gives you a searchable list of all hotkeys\n  [ ]In the Kitemaker command (open it by pressing `CTRL/CMD+k`) you will also be able to see the hotkeys for the commands\n  [ ]When you have long descriptions use `SPACE` and `SHIFT+SPACE` to scroll up and down\n",
                       "labels": [
-                        {
-                          "id": "0f42cd20ff617400"
-                        }
+                        "json array"
                       ],
-                      "comments": []
+                      "comments": [
+                        "json array"
+                      ]
                     }
                   }
                 ]
@@ -196,28 +189,37 @@
         ],
         "Kitemaker6": [
           {
-            "startTime": 1622541776844,
-            "executionTime": 262,
+            "startTime": 1622630103959,
+            "executionTime": 336,
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "0fd8b5cfe482e400",
-                      "number": "53",
-                      "title": "UpdatedWorkItem1622541776168",
+                      "id": "0fddf9932c2f6c00",
+                      "number": "63",
+                      "title": "UpdatedWorkItem1622630103063",
                       "description": "",
                       "status": {
-                        "id": "0f42cd20f9617401",
-                        "name": "Done"
+                        "object": true
                       },
-                      "members": [],
-                      "watchers": [],
-                      "labels": [],
-                      "effort": null,
-                      "impact": null,
-                      "updatedAt": 1622541777002,
-                      "createdAt": 1622541776334
+                      "members": [
+                        "json array"
+                      ],
+                      "watchers": [
+                        "json array"
+                      ],
+                      "labels": [
+                        "json array"
+                      ],
+                      "effort": {
+                        "object": true
+                      },
+                      "impact": {
+                        "object": true
+                      },
+                      "updatedAt": 1622630104200,
+                      "createdAt": 1622630103318
                     }
                   }
                 ]
@@ -235,7 +237,7 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-01T10:02:55.554Z",
-  "stoppedAt": "2021-06-01T10:02:57.107Z",
+  "startedAt": "2021-06-02T10:35:02.129Z",
+  "stoppedAt": "2021-06-02T10:35:04.296Z",
   "finished": true
 }

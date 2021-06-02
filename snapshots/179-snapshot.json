@@ -5,7 +5,7 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622541755510,
+            "startTime": 1622630083358,
             "executionTime": 0,
             "data": {
               "main": [
@@ -20,8 +20,8 @@
         ],
         "uProc": [
           {
-            "startTime": 1622541755511,
-            "executionTime": 181,
+            "startTime": 1622630083359,
+            "executionTime": 320,
             "data": {
               "main": [
                 [
@@ -29,16 +29,15 @@
                     "json": {
                       "result": false,
                       "message": {
-                        "result": "Sample text"
+                        "object": true
                       },
                       "status": "completed",
                       "params": {
-                        "text": "n8n rocks!",
-                        "bcid": "auspost"
+                        "object": true
                       },
                       "normalized": false,
                       "criteria": "10032",
-                      "time": 2,
+                      "time": 3,
                       "price": 0,
                       "real_price": 0.005,
                       "processor": "get-barcode-encoded",
@@ -53,8 +52,8 @@
         ],
         "uProc1": [
           {
-            "startTime": 1622541755692,
-            "executionTime": 152,
+            "startTime": 1622630083679,
+            "executionTime": 219,
             "data": {
               "main": [
                 [
@@ -62,15 +61,15 @@
                     "json": {
                       "result": true,
                       "message": {
-                        "result": true
+                        "object": true
                       },
                       "status": "completed",
                       "params": {
-                        "uuid": "0c6a1543-6232-49d2-b50d-c1e70cd015a0"
+                        "object": true
                       },
                       "normalized": false,
                       "criteria": "10000",
-                      "time": 3,
+                      "time": 2,
                       "price": 0,
                       "real_price": 0,
                       "processor": "check-number-uuid",
@@ -85,8 +84,8 @@
         ],
         "uProc10": [
           {
-            "startTime": 1622541755845,
-            "executionTime": 142,
+            "startTime": 1622630083898,
+            "executionTime": 197,
             "data": {
               "main": [
                 [
@@ -94,15 +93,15 @@
                     "json": {
                       "result": true,
                       "message": {
-                        "result": "Sample text"
+                        "object": true
                       },
                       "status": "completed",
                       "params": {
-                        "domain": "n8n.io"
+                        "object": true
                       },
                       "normalized": false,
                       "criteria": "10032",
-                      "time": 3,
+                      "time": 2,
                       "price": 0,
                       "real_price": 0.0025,
                       "processor": "get-domain-logo",
@@ -117,8 +116,8 @@
         ],
         "uProc2": [
           {
-            "startTime": 1622541755988,
-            "executionTime": 148,
+            "startTime": 1622630084095,
+            "executionTime": 241,
             "data": {
               "main": [
                 [
@@ -126,11 +125,11 @@
                     "json": {
                       "result": true,
                       "message": {
-                        "result": "Sample text"
+                        "object": true
                       },
                       "status": "completed",
                       "params": {
-                        "domain": "n8n.io"
+                        "object": true
                       },
                       "normalized": false,
                       "criteria": "10032",
@@ -149,8 +148,8 @@
         ],
         "uProc11": [
           {
-            "startTime": 1622541756136,
-            "executionTime": 167,
+            "startTime": 1622630084337,
+            "executionTime": 255,
             "data": {
               "main": [
                 [
@@ -158,19 +157,15 @@
                     "json": {
                       "result": false,
                       "message": {
-                        "result": "Sample text"
+                        "object": true
                       },
                       "status": "completed",
                       "params": {
-                        "url": "n8n.io",
-                        "useragent": "n8n-agent",
-                        "width": "160",
-                        "fullpage": "no",
-                        "selector": ""
+                        "object": true
                       },
                       "normalized": false,
                       "criteria": "10032",
-                      "time": 2,
+                      "time": 3,
                       "price": 0,
                       "real_price": 0,
                       "processor": "get-url-screenshot",
@@ -185,8 +180,8 @@
         ],
         "uProc3": [
           {
-            "startTime": 1622541756303,
-            "executionTime": 195,
+            "startTime": 1622630084593,
+            "executionTime": 220,
             "data": {
               "main": [
                 [
@@ -194,15 +189,15 @@
                     "json": {
                       "result": true,
                       "message": {
-                        "result": "Sample text"
+                        "object": true
                       },
                       "status": "completed",
                       "params": {
-                        "ip": "104.21.37.3"
+                        "object": true
                       },
                       "normalized": false,
                       "criteria": "10032",
-                      "time": 3,
+                      "time": 2,
                       "price": 0,
                       "real_price": 0.002,
                       "processor": "get-ip-blacklists",
@@ -217,8 +212,8 @@
         ],
         "uProc8": [
           {
-            "startTime": 1622541756498,
-            "executionTime": 358,
+            "startTime": 1622630084814,
+            "executionTime": 439,
             "data": {
               "main": [
                 [
@@ -226,22 +221,15 @@
                     "json": {
                       "result": false,
                       "message": {
-                        "altitude": "Sample text",
-                        "date": "Sample text",
-                        "latitude": "Sample text",
-                        "longitude": "Sample text",
-                        "maker": "Sample text",
-                        "model": "Sample text",
-                        "resolution_x": "Sample text",
-                        "resolution_y": "Sample text"
+                        "object": true
                       },
                       "status": "completed",
                       "params": {
-                        "url": "https://n8n.io/_nuxt/img/df5be1c.png"
+                        "object": true
                       },
                       "normalized": false,
                       "criteria": "10032",
-                      "time": 195,
+                      "time": 175,
                       "price": 0,
                       "real_price": 0,
                       "processor": "get-image-exif",
@@ -256,8 +244,8 @@
         ],
         "uProc4": [
           {
-            "startTime": 1622541756857,
-            "executionTime": 139,
+            "startTime": 1622630085253,
+            "executionTime": 279,
             "data": {
               "main": [
                 [
@@ -265,11 +253,11 @@
                     "json": {
                       "result": true,
                       "message": {
-                        "result": true
+                        "object": true
                       },
                       "status": "completed",
                       "params": {
-                        "luhn": "79927398713"
+                        "object": true
                       },
                       "normalized": false,
                       "criteria": "10032",
@@ -288,8 +276,8 @@
         ],
         "uProc9": [
           {
-            "startTime": 1622541756996,
-            "executionTime": 305,
+            "startTime": 1622630085533,
+            "executionTime": 605,
             "data": {
               "main": [
                 [
@@ -297,17 +285,15 @@
                     "json": {
                       "result": false,
                       "message": {
-                        "result": "Sample text"
+                        "object": true
                       },
                       "status": "completed",
                       "params": {
-                        "text": "n8n rocks!",
-                        "url": "https://n8n.io/_nuxt/img/df5be1c.png",
-                        "size": "72"
+                        "object": true
                       },
                       "normalized": false,
                       "criteria": "10032",
-                      "time": 165,
+                      "time": 370,
                       "price": 0,
                       "real_price": 0,
                       "processor": "get-image-with-text",
@@ -322,8 +308,8 @@
         ],
         "uProc5": [
           {
-            "startTime": 1622541757301,
-            "executionTime": 345,
+            "startTime": 1622630086138,
+            "executionTime": 230,
             "data": {
               "main": [
                 [
@@ -331,15 +317,15 @@
                     "json": {
                       "result": false,
                       "message": {
-                        "result": true
+                        "object": true
                       },
                       "status": "completed",
                       "params": {
-                        "password": "randompassword"
+                        "object": true
                       },
                       "normalized": false,
                       "criteria": "10032",
-                      "time": 2,
+                      "time": 3,
                       "price": 0,
                       "real_price": 0.001,
                       "processor": "check-password-strong",
@@ -362,7 +348,7 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-01T10:02:35.506Z",
-  "stoppedAt": "2021-06-01T10:02:37.646Z",
+  "startedAt": "2021-06-02T10:34:43.356Z",
+  "stoppedAt": "2021-06-02T10:34:46.369Z",
   "finished": true
 }

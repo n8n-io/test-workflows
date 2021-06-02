@@ -5,8 +5,8 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622541695058,
-            "executionTime": 0,
+            "startTime": 1622630011947,
+            "executionTime": 1,
             "data": {
               "main": [
                 [
@@ -20,8 +20,8 @@
         ],
         "MessageBird": [
           {
-            "startTime": 1622541695059,
-            "executionTime": 171,
+            "startTime": 1622630011949,
+            "executionTime": 284,
             "data": {
               "main": [
                 [
@@ -39,43 +39,37 @@
         ],
         "MessageBird1": [
           {
-            "startTime": 1622541695231,
-            "executionTime": 120,
+            "startTime": 1622630012233,
+            "executionTime": 214,
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "83c4b3bbab8b47dd805ad9c13ed8910a",
-                      "href": "https://rest.messagebird.com/messages/83c4b3bbab8b47dd805ad9c13ed8910a",
+                      "id": "de71f2b72d3c4fb9896eec5da0377708",
+                      "href": "https://rest.messagebird.com/messages/de71f2b72d3c4fb9896eec5da0377708",
                       "direction": "mt",
                       "type": "sms",
                       "originator": "4930270504079",
                       "body": "TestMessage",
-                      "reference": null,
-                      "validity": null,
-                      "gateway": 10,
-                      "metadata": {
-                        "acceptedAt": "2021-06-01T10:01:35.322352+00:00"
+                      "reference": {
+                        "object": true
                       },
-                      "typeDetails": {},
+                      "validity": {
+                        "object": true
+                      },
+                      "gateway": 10,
+                      "typeDetails": {
+                        "object": true
+                      },
                       "datacoding": "plain",
                       "mclass": 1,
-                      "scheduledDatetime": null,
-                      "createdDatetime": "2021-06-01T10:01:35+00:00",
+                      "scheduledDatetime": {
+                        "object": true
+                      },
+                      "createdDatetime": "2021-06-02T10:33:32+00:00",
                       "recipients": {
-                        "totalCount": 1,
-                        "totalSentCount": 1,
-                        "totalDeliveredCount": 0,
-                        "totalDeliveryFailedCount": 0,
-                        "items": [
-                          {
-                            "recipient": 4930270504079,
-                            "status": "sent",
-                            "statusDatetime": "2021-06-01T10:01:35+00:00",
-                            "messagePartCount": 1
-                          }
-                        ]
+                        "object": true
                       }
                     }
                   }
@@ -94,7 +88,7 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-01T10:01:35.056Z",
-  "stoppedAt": "2021-06-01T10:01:35.351Z",
+  "startedAt": "2021-06-02T10:33:31.946Z",
+  "stoppedAt": "2021-06-02T10:33:32.447Z",
   "finished": true
 }

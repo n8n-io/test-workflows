@@ -5,8 +5,8 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622541746920,
-            "executionTime": 0,
+            "startTime": 1622630076521,
+            "executionTime": 1,
             "data": {
               "main": [
                 [
@@ -20,27 +20,18 @@
         ],
         "PayPal": [
           {
-            "startTime": 1622541746921,
-            "executionTime": 1705,
+            "startTime": 1622630076522,
+            "executionTime": 2213,
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "batch_header": {
-                        "payout_batch_id": "4N8LNLFHJFYAJ",
-                        "batch_status": "PENDING",
-                        "sender_batch_header": {
-                          "sender_batch_id": "1622541746922"
-                        }
+                        "object": true
                       },
                       "links": [
-                        {
-                          "href": "https://api.sandbox.paypal.com/v1/payments/payouts/4N8LNLFHJFYAJ",
-                          "rel": "self",
-                          "method": "GET",
-                          "encType": "application/json"
-                        }
+                        "json array"
                       ]
                     }
                   }
@@ -51,43 +42,27 @@
         ],
         "PayPal1": [
           {
-            "startTime": 1622541748627,
-            "executionTime": 1183,
+            "startTime": 1622630078735,
+            "executionTime": 1290,
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "payout_item_id": "YCQVVFPBJAHAS",
+                      "payout_item_id": "F7WGP4K94PA8C",
                       "transaction_status": "FAILED",
                       "payout_item_fee": {
-                        "currency": "USD",
-                        "value": "0.00"
+                        "object": true
                       },
-                      "payout_batch_id": "4N8LNLFHJFYAJ",
+                      "payout_batch_id": "DLRH9XH3JAELA",
                       "payout_item": {
-                        "recipient_type": "EMAIL",
-                        "amount": {
-                          "currency": "USD",
-                          "value": "20.00"
-                        },
-                        "receiver": "sb-0ci8p5941871@business.example.com",
-                        "recipient_wallet": "PAYPAL"
+                        "object": true
                       },
                       "errors": {
-                        "name": "INTERNAL_ERROR",
-                        "message": "An internal error has occurred. For item level errors, we'll try resending the Payout thrice. If  we are unable to complete the requests, you'll need to resubmit the Payout  after 24 hours. For batch level errors, we'll not retry the Payout.",
-                        "information_link": "https://developer.paypal.com/docs/api/payments.payouts-batch/#errors",
-                        "details": [],
-                        "links": []
+                        "object": true
                       },
                       "links": [
-                        {
-                          "href": "https://api.sandbox.paypal.com/v1/payments/payouts-item/YCQVVFPBJAHAS",
-                          "rel": "item",
-                          "method": "GET",
-                          "encType": "application/json"
-                        }
+                        "json array"
                       ]
                     }
                   }
@@ -98,50 +73,28 @@
         ],
         "PayPal2": [
           {
-            "startTime": 1622541749811,
-            "executionTime": 1183,
+            "startTime": 1622630080025,
+            "executionTime": 1241,
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "payout_item_id": "YCQVVFPBJAHAS",
+                      "payout_item_id": "F7WGP4K94PA8C",
                       "transaction_status": "FAILED",
                       "payout_item_fee": {
-                        "currency": "USD",
-                        "value": "0.00"
+                        "object": true
                       },
-                      "payout_batch_id": "4N8LNLFHJFYAJ",
-                      "sender_batch_id": "1622541746922",
+                      "payout_batch_id": "DLRH9XH3JAELA",
+                      "sender_batch_id": "1622630076524",
                       "payout_item": {
-                        "recipient_type": "EMAIL",
-                        "amount": {
-                          "currency": "USD",
-                          "value": "20.00"
-                        },
-                        "receiver": "sb-0ci8p5941871@business.example.com",
-                        "recipient_wallet": "PAYPAL"
+                        "object": true
                       },
                       "errors": {
-                        "name": "INTERNAL_ERROR",
-                        "message": "An internal error has occurred. For item level errors, we'll try resending the Payout thrice. If  we are unable to complete the requests, you'll need to resubmit the Payout  after 24 hours. For batch level errors, we'll not retry the Payout.",
-                        "information_link": "https://developer.paypal.com/docs/api/payments.payouts-batch/#errors",
-                        "details": [],
-                        "links": []
+                        "object": true
                       },
                       "links": [
-                        {
-                          "href": "https://api.sandbox.paypal.com/v1/payments/payouts-item/YCQVVFPBJAHAS",
-                          "rel": "self",
-                          "method": "GET",
-                          "encType": "application/json"
-                        },
-                        {
-                          "href": "https://api.sandbox.paypal.com/v1/payments/payouts/4N8LNLFHJFYAJ",
-                          "rel": "batch",
-                          "method": "GET",
-                          "encType": "application/json"
-                        }
+                        "json array"
                       ]
                     }
                   }
@@ -152,50 +105,28 @@
         ],
         "PayPal3": [
           {
-            "startTime": 1622541750995,
+            "startTime": 1622630081266,
             "executionTime": 0,
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "payout_item_id": "YCQVVFPBJAHAS",
+                      "payout_item_id": "F7WGP4K94PA8C",
                       "transaction_status": "FAILED",
                       "payout_item_fee": {
-                        "currency": "USD",
-                        "value": "0.00"
+                        "object": true
                       },
-                      "payout_batch_id": "4N8LNLFHJFYAJ",
-                      "sender_batch_id": "1622541746922",
+                      "payout_batch_id": "DLRH9XH3JAELA",
+                      "sender_batch_id": "1622630076524",
                       "payout_item": {
-                        "recipient_type": "EMAIL",
-                        "amount": {
-                          "currency": "USD",
-                          "value": "20.00"
-                        },
-                        "receiver": "sb-0ci8p5941871@business.example.com",
-                        "recipient_wallet": "PAYPAL"
+                        "object": true
                       },
                       "errors": {
-                        "name": "INTERNAL_ERROR",
-                        "message": "An internal error has occurred. For item level errors, we'll try resending the Payout thrice. If  we are unable to complete the requests, you'll need to resubmit the Payout  after 24 hours. For batch level errors, we'll not retry the Payout.",
-                        "information_link": "https://developer.paypal.com/docs/api/payments.payouts-batch/#errors",
-                        "details": [],
-                        "links": []
+                        "object": true
                       },
                       "links": [
-                        {
-                          "href": "https://api.sandbox.paypal.com/v1/payments/payouts-item/YCQVVFPBJAHAS",
-                          "rel": "self",
-                          "method": "GET",
-                          "encType": "application/json"
-                        },
-                        {
-                          "href": "https://api.sandbox.paypal.com/v1/payments/payouts/4N8LNLFHJFYAJ",
-                          "rel": "batch",
-                          "method": "GET",
-                          "encType": "application/json"
-                        }
+                        "json array"
                       ]
                     }
                   }
@@ -214,7 +145,7 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-01T10:02:26.918Z",
-  "stoppedAt": "2021-06-01T10:02:30.996Z",
+  "startedAt": "2021-06-02T10:34:36.519Z",
+  "stoppedAt": "2021-06-02T10:34:41.267Z",
   "finished": true
 }
