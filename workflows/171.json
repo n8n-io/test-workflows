@@ -79,8 +79,6 @@
         "operation": "list",
         "stackId": "stOgji6AOGIluLfusu",
         "table": "TestTable",
-        "returnAll": false,
-        "limit": 1,
         "additionalFields": {
           "view": ""
         }
@@ -94,7 +92,8 @@
       ],
       "credentials": {
         "stackbyApi": "Stackby API creds"
-      }
+      },
+      "notes": "CAP_RESULTS_LENGTH=1"
     },
     {
       "parameters": {
@@ -110,6 +109,7 @@
         1030,
         300
       ],
+      "executeOnce": true,
       "credentials": {
         "stackbyApi": "Stackby API creds"
       }
@@ -173,7 +173,7 @@
     }
   },
   "createdAt": "2021-04-19T10:15:58.189Z",
-  "updatedAt": "2021-06-01T09:55:06.720Z",
+  "updatedAt": "2021-06-04T14:55:29.008Z",
   "settings": {},
   "staticData": null
 }
