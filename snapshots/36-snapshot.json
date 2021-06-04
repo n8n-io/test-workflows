@@ -5,7 +5,7 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622629955612,
+            "startTime": 1622807051618,
             "executionTime": 0,
             "data": {
               "main": [
@@ -20,16 +20,16 @@
         ],
         "Slack10": [
           {
-            "startTime": 1622629955613,
-            "executionTime": 536,
+            "startTime": 1622807051619,
+            "executionTime": 463,
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "F023RSKAB0A",
-                      "created": 1622629955,
-                      "timestamp": 1622629955,
+                      "id": "F024DTA5F97",
+                      "created": 1622807051,
+                      "timestamp": 1622807051,
                       "name": "-.txt",
                       "title": "Untitled",
                       "mimetype": "text/plain",
@@ -45,13 +45,13 @@
                       "public_url_shared": false,
                       "display_as_bot": false,
                       "username": "",
-                      "url_private": "https://files.slack.com/files-pri/T01MZ82R8NB-F023RSKAB0A/-.txt",
-                      "url_private_download": "https://files.slack.com/files-pri/T01MZ82R8NB-F023RSKAB0A/download/-.txt",
-                      "permalink": "https://n8n-qa.slack.com/files/U01NE1E8FFU/F023RSKAB0A/-.txt",
-                      "permalink_public": "https://slack-files.com/T01MZ82R8NB-F023RSKAB0A-4e38d7221f",
-                      "edit_link": "https://n8n-qa.slack.com/files/U01NE1E8FFU/F023RSKAB0A/-.txt/edit",
-                      "preview": "Test file upload Wed Jun 02 2021 12:32:35 GMT+0200 (Central European Summer Time)",
-                      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre>Test file upload Wed Jun 02 2021 12:32:35 GMT+0200 (Central European Summer Time)</pre></div>\n</div>\n</div>\n",
+                      "url_private": "https://files.slack.com/files-pri/T01MZ82R8NB-F024DTA5F97/-.txt",
+                      "url_private_download": "https://files.slack.com/files-pri/T01MZ82R8NB-F024DTA5F97/download/-.txt",
+                      "permalink": "https://n8n-qa.slack.com/files/U01NE1E8FFU/F024DTA5F97/-.txt",
+                      "permalink_public": "https://slack-files.com/T01MZ82R8NB-F024DTA5F97-666a295ff0",
+                      "edit_link": "https://n8n-qa.slack.com/files/U01NE1E8FFU/F024DTA5F97/-.txt/edit",
+                      "preview": "Test file upload Fri Jun 04 2021 13:44:11 GMT+0200 (Central European Summer Time)",
+                      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre>Test file upload Fri Jun 04 2021 13:44:11 GMT+0200 (Central European Summer Time)</pre></div>\n</div>\n</div>\n",
                       "lines": 1,
                       "lines_more": 0,
                       "preview_is_truncated": false,
@@ -77,42 +77,25 @@
             }
           }
         ],
-        "Slack21": [
-          {
-            "startTime": 1622629956150,
-            "executionTime": 351,
-            "data": {
-              "main": [
-                [
-                  {
-                    "json": {
-                      "ok": true
-                    }
-                  }
-                ]
-              ]
-            }
-          }
-        ],
         "Slack2": [
           {
-            "startTime": 1622629956501,
-            "executionTime": 583,
+            "startTime": 1622807052082,
+            "executionTime": 481,
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "C023K3NMH7Y",
-                      "name": "testchanneljjosphso",
+                      "id": "C024DTA6189",
+                      "name": "testchannelwkfexig",
                       "is_channel": true,
                       "is_group": false,
                       "is_im": false,
-                      "created": 1622629956,
+                      "created": 1622807052,
                       "is_archived": false,
                       "is_general": false,
                       "unlinked": 0,
-                      "name_normalized": "testchanneljjosphso",
+                      "name_normalized": "testchannelwkfexig",
                       "is_shared": false,
                       "parent_conversation": {
                         "object": true
@@ -151,18 +134,93 @@
             }
           }
         ],
+        "Slack24": [
+          {
+            "startTime": 1622807052564,
+            "executionTime": 379,
+            "error": {
+              "name": "NodeApiError",
+              "cause": {
+                "name": "NodeOperationError",
+                "cause": {},
+                "node": {
+                  "parameters": {
+                    "authentication": "accessToken",
+                    "resource": "star",
+                    "operation": "delete",
+                    "options": {
+                      "channelId": "C01MZ82T9TR"
+                    }
+                  },
+                  "name": "Slack24",
+                  "type": "n8n-nodes-base.slack",
+                  "typeVersion": 1,
+                  "position": [
+                    400,
+                    560
+                  ],
+                  "alwaysOutputData": true,
+                  "credentials": {
+                    "slackApi": "Slack Token"
+                  },
+                  "continueOnFail": true,
+                  "notes": "IGNORED_PROPERTIES=ok"
+                },
+                "timestamp": 1622807052862,
+                "message": "Slack error response: {\"ok\":false,\"error\":\"not_starred\"}"
+              },
+              "node": {
+                "parameters": {
+                  "authentication": "accessToken",
+                  "resource": "star",
+                  "operation": "delete",
+                  "options": {
+                    "channelId": "C01MZ82T9TR"
+                  }
+                },
+                "name": "Slack24",
+                "type": "n8n-nodes-base.slack",
+                "typeVersion": 1,
+                "position": [
+                  400,
+                  560
+                ],
+                "alwaysOutputData": true,
+                "credentials": {
+                  "slackApi": "Slack Token"
+                },
+                "continueOnFail": true,
+                "notes": "IGNORED_PROPERTIES=ok"
+              },
+              "timestamp": 1622807052863,
+              "message": "UNKNOWN ERROR - check the detailed error for more information",
+              "httpCode": null,
+              "description": "Slack error response: {\"ok\":false,\"error\":\"not_starred\"}",
+              "stack": "NodeApiError: UNKNOWN ERROR - check the detailed error for more information\n    at Object.slackApiRequest (/home/krynble/Workspace/Projects/n8n/packages/nodes-base/nodes/Slack/GenericFunctions.ts:66:9)\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)\n    at Object.execute (/home/krynble/Workspace/Projects/n8n/packages/nodes-base/nodes/Slack/Slack.node.ts:886:21)\n    at /home/krynble/Workspace/Projects/n8n/packages/core/src/WorkflowExecute.ts:675:26"
+            },
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {}
+                  }
+                ]
+              ]
+            }
+          }
+        ],
         "Slack11": [
           {
-            "startTime": 1622629957084,
-            "executionTime": 408,
+            "startTime": 1622807052944,
+            "executionTime": 362,
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "F023RF02BQS",
-                      "created": 1622623176,
-                      "timestamp": 1622623176,
+                      "id": "F024R39SMNU",
+                      "created": 1622807017,
+                      "timestamp": 1622807017,
                       "name": "-.txt",
                       "title": "Untitled",
                       "mimetype": "text/plain",
@@ -178,13 +236,13 @@
                       "public_url_shared": false,
                       "display_as_bot": false,
                       "username": "",
-                      "url_private": "https://files.slack.com/files-pri/T01MZ82R8NB-F023RF02BQS/-.txt",
-                      "url_private_download": "https://files.slack.com/files-pri/T01MZ82R8NB-F023RF02BQS/download/-.txt",
-                      "permalink": "https://n8n-qa.slack.com/files/U01NE1E8FFU/F023RF02BQS/-.txt",
-                      "permalink_public": "https://slack-files.com/T01MZ82R8NB-F023RF02BQS-7c2fc7ba52",
-                      "edit_link": "https://n8n-qa.slack.com/files/U01NE1E8FFU/F023RF02BQS/-.txt/edit",
-                      "preview": "Test file upload Wed Jun 02 2021 10:39:36 GMT+0200 (Central European Summer Time)",
-                      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre>Test file upload Wed Jun 02 2021 10:39:36 GMT+0200 (Central European Summer Time)</pre></div>\n</div>\n</div>\n",
+                      "url_private": "https://files.slack.com/files-pri/T01MZ82R8NB-F024R39SMNU/-.txt",
+                      "url_private_download": "https://files.slack.com/files-pri/T01MZ82R8NB-F024R39SMNU/download/-.txt",
+                      "permalink": "https://n8n-qa.slack.com/files/U01NE1E8FFU/F024R39SMNU/-.txt",
+                      "permalink_public": "https://slack-files.com/T01MZ82R8NB-F024R39SMNU-33c466e68a",
+                      "edit_link": "https://n8n-qa.slack.com/files/U01NE1E8FFU/F024R39SMNU/-.txt/edit",
+                      "preview": "Test file upload Fri Jun 04 2021 13:43:37 GMT+0200 (Central European Summer Time)",
+                      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre>Test file upload Fri Jun 04 2021 13:43:37 GMT+0200 (Central European Summer Time)</pre></div>\n</div>\n</div>\n",
                       "lines": 1,
                       "lines_more": 0,
                       "preview_is_truncated": false,
@@ -205,44 +263,25 @@
             }
           }
         ],
-        "Slack22": [
-          {
-            "startTime": 1622629957492,
-            "executionTime": 404,
-            "data": {
-              "main": [
-                [
-                  {
-                    "json": {
-                      "type": "channel",
-                      "channel": "C01MZ82T9TR",
-                      "date_create": 1622629956
-                    }
-                  }
-                ]
-              ]
-            }
-          }
-        ],
         "Slack9": [
           {
-            "startTime": 1622629957897,
-            "executionTime": 494,
+            "startTime": 1622807053307,
+            "executionTime": 1448,
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "C023K3NMH7Y",
-                      "name": "renamedtestchanneljjosphso",
+                      "id": "C024DTA6189",
+                      "name": "renamedtestchannelwkfexig",
                       "is_channel": true,
                       "is_group": false,
                       "is_im": false,
-                      "created": 1622629956,
+                      "created": 1622807052,
                       "is_archived": false,
                       "is_general": false,
                       "unlinked": 0,
-                      "name_normalized": "renamedtestchanneljjosphso",
+                      "name_normalized": "renamedtestchannelwkfexig",
                       "is_shared": false,
                       "parent_conversation": {
                         "object": true
@@ -280,18 +319,35 @@
             }
           }
         ],
-        "Slack12": [
+        "Slack21": [
           {
-            "startTime": 1622629958392,
-            "executionTime": 360,
+            "startTime": 1622807054756,
+            "executionTime": 325,
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "F023RSKAB0A",
-                      "created": 1622629955,
-                      "timestamp": 1622629955,
+                      "ok": true
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Slack12": [
+          {
+            "startTime": 1622807055081,
+            "executionTime": 332,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": "F024DTA5F97",
+                      "created": 1622807051,
+                      "timestamp": 1622807051,
                       "name": "-.txt",
                       "title": "Untitled",
                       "mimetype": "text/plain",
@@ -307,13 +363,13 @@
                       "public_url_shared": false,
                       "display_as_bot": false,
                       "username": "",
-                      "url_private": "https://files.slack.com/files-pri/T01MZ82R8NB-F023RSKAB0A/-.txt",
-                      "url_private_download": "https://files.slack.com/files-pri/T01MZ82R8NB-F023RSKAB0A/download/-.txt",
-                      "permalink": "https://n8n-qa.slack.com/files/U01NE1E8FFU/F023RSKAB0A/-.txt",
-                      "permalink_public": "https://slack-files.com/T01MZ82R8NB-F023RSKAB0A-4e38d7221f",
-                      "edit_link": "https://n8n-qa.slack.com/files/U01NE1E8FFU/F023RSKAB0A/-.txt/edit",
-                      "preview": "Test file upload Wed Jun 02 2021 12:32:35 GMT+0200 (Central European Summer Time)",
-                      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre>Test file upload Wed Jun 02 2021 12:32:35 GMT+0200 (Central European Summer Time)</pre></div>\n</div>\n</div>\n",
+                      "url_private": "https://files.slack.com/files-pri/T01MZ82R8NB-F024DTA5F97/-.txt",
+                      "url_private_download": "https://files.slack.com/files-pri/T01MZ82R8NB-F024DTA5F97/download/-.txt",
+                      "permalink": "https://n8n-qa.slack.com/files/U01NE1E8FFU/F024DTA5F97/-.txt",
+                      "permalink_public": "https://slack-files.com/T01MZ82R8NB-F024DTA5F97-666a295ff0",
+                      "edit_link": "https://n8n-qa.slack.com/files/U01NE1E8FFU/F024DTA5F97/-.txt/edit",
+                      "preview": "Test file upload Fri Jun 04 2021 13:44:11 GMT+0200 (Central European Summer Time)",
+                      "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\" oncopy=\"if(event.clipboardData){event.clipboardData.setData('text/plain',window.getSelection().toString().replace(/\\u200b/g,''));event.preventDefault();event.stopPropagation();}\">\n<div class=\"CodeMirror-code\">\n<div><pre>Test file upload Fri Jun 04 2021 13:44:11 GMT+0200 (Central European Summer Time)</pre></div>\n</div>\n</div>\n",
                       "lines": 1,
                       "lines_more": 0,
                       "preview_is_truncated": false,
@@ -339,10 +395,141 @@
             }
           }
         ],
+        "Slack3": [
+          {
+            "startTime": 1622807055413,
+            "executionTime": 362,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": "C024DTA6189",
+                      "name": "renamedtestchannelwkfexig",
+                      "is_channel": true,
+                      "is_group": false,
+                      "is_im": false,
+                      "created": 1622807052,
+                      "is_archived": false,
+                      "is_general": false,
+                      "unlinked": 0,
+                      "name_normalized": "renamedtestchannelwkfexig",
+                      "is_shared": false,
+                      "parent_conversation": {
+                        "object": true
+                      },
+                      "creator": "U01NE1E8FFU",
+                      "is_ext_shared": false,
+                      "is_org_shared": false,
+                      "shared_team_ids": [
+                        "json array"
+                      ],
+                      "pending_shared": [
+                        "json array"
+                      ],
+                      "pending_connected_team_ids": [
+                        "json array"
+                      ],
+                      "is_pending_ext_shared": false,
+                      "is_member": true,
+                      "is_private": false,
+                      "is_mpim": false,
+                      "last_read": "0000000000.000000",
+                      "topic": {
+                        "object": true
+                      },
+                      "purpose": {
+                        "object": true
+                      },
+                      "previous_names": [
+                        "json array"
+                      ]
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Slack22": [
+          {
+            "startTime": 1622807055775,
+            "executionTime": 304,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "type": "channel",
+                      "channel": "C01MZ82T9TR",
+                      "date_create": 1622807054
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Slack4": [
+          {
+            "startTime": 1622807056079,
+            "executionTime": 1394,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": "C024DTA6189",
+                      "name": "renamedtestchannelwkfexig",
+                      "is_channel": true,
+                      "is_group": false,
+                      "is_im": false,
+                      "created": 1622807052,
+                      "is_archived": false,
+                      "is_general": false,
+                      "unlinked": 0,
+                      "name_normalized": "renamedtestchannelwkfexig",
+                      "is_shared": false,
+                      "parent_conversation": {
+                        "object": true
+                      },
+                      "creator": "U01NE1E8FFU",
+                      "is_ext_shared": false,
+                      "is_org_shared": false,
+                      "shared_team_ids": [
+                        "json array"
+                      ],
+                      "pending_shared": [
+                        "json array"
+                      ],
+                      "pending_connected_team_ids": [
+                        "json array"
+                      ],
+                      "is_pending_ext_shared": false,
+                      "is_member": true,
+                      "is_private": false,
+                      "is_mpim": false,
+                      "last_read": "0000000000.000000",
+                      "topic": {
+                        "object": true
+                      },
+                      "purpose": {
+                        "object": true
+                      },
+                      "previous_names": [
+                        "json array"
+                      ]
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
         "Slack23": [
           {
-            "startTime": 1622629958753,
-            "executionTime": 356,
+            "startTime": 1622807057473,
+            "executionTime": 330,
             "data": {
               "main": [
                 [
@@ -356,137 +543,25 @@
             }
           }
         ],
-        "Slack3": [
-          {
-            "startTime": 1622629959110,
-            "executionTime": 432,
-            "data": {
-              "main": [
-                [
-                  {
-                    "json": {
-                      "id": "C023K3NMH7Y",
-                      "name": "renamedtestchanneljjosphso",
-                      "is_channel": true,
-                      "is_group": false,
-                      "is_im": false,
-                      "created": 1622629956,
-                      "is_archived": false,
-                      "is_general": false,
-                      "unlinked": 0,
-                      "name_normalized": "renamedtestchanneljjosphso",
-                      "is_shared": false,
-                      "parent_conversation": {
-                        "object": true
-                      },
-                      "creator": "U01NE1E8FFU",
-                      "is_ext_shared": false,
-                      "is_org_shared": false,
-                      "shared_team_ids": [
-                        "json array"
-                      ],
-                      "pending_shared": [
-                        "json array"
-                      ],
-                      "pending_connected_team_ids": [
-                        "json array"
-                      ],
-                      "is_pending_ext_shared": false,
-                      "is_member": true,
-                      "is_private": false,
-                      "is_mpim": false,
-                      "last_read": "0000000000.000000",
-                      "topic": {
-                        "object": true
-                      },
-                      "purpose": {
-                        "object": true
-                      },
-                      "previous_names": [
-                        "json array"
-                      ]
-                    }
-                  }
-                ]
-              ]
-            }
-          }
-        ],
-        "Slack4": [
-          {
-            "startTime": 1622629959542,
-            "executionTime": 392,
-            "data": {
-              "main": [
-                [
-                  {
-                    "json": {
-                      "id": "C023K3NMH7Y",
-                      "name": "renamedtestchanneljjosphso",
-                      "is_channel": true,
-                      "is_group": false,
-                      "is_im": false,
-                      "created": 1622629956,
-                      "is_archived": false,
-                      "is_general": false,
-                      "unlinked": 0,
-                      "name_normalized": "renamedtestchanneljjosphso",
-                      "is_shared": false,
-                      "parent_conversation": {
-                        "object": true
-                      },
-                      "creator": "U01NE1E8FFU",
-                      "is_ext_shared": false,
-                      "is_org_shared": false,
-                      "shared_team_ids": [
-                        "json array"
-                      ],
-                      "pending_shared": [
-                        "json array"
-                      ],
-                      "pending_connected_team_ids": [
-                        "json array"
-                      ],
-                      "is_pending_ext_shared": false,
-                      "is_member": true,
-                      "is_private": false,
-                      "is_mpim": false,
-                      "last_read": "0000000000.000000",
-                      "topic": {
-                        "object": true
-                      },
-                      "purpose": {
-                        "object": true
-                      },
-                      "previous_names": [
-                        "json array"
-                      ]
-                    }
-                  }
-                ]
-              ]
-            }
-          }
-        ],
         "Slack5": [
           {
-            "startTime": 1622629959935,
-            "executionTime": 367,
+            "startTime": 1622807057804,
+            "executionTime": 308,
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "C023K3NMH7Y",
-                      "name": "renamedtestchanneljjosphso",
+                      "id": "C024DTA6189",
+                      "name": "renamedtestchannelwkfexig",
                       "is_channel": true,
                       "is_group": false,
                       "is_im": false,
-                      "created": 1622629956,
+                      "created": 1622807052,
                       "is_archived": false,
                       "is_general": false,
                       "unlinked": 0,
-                      "name_normalized": "renamedtestchanneljjosphso",
+                      "name_normalized": "renamedtestchannelwkfexig",
                       "is_shared": false,
                       "parent_conversation": {
                         "object": true
@@ -526,23 +601,23 @@
         ],
         "Slack13": [
           {
-            "startTime": 1622629960302,
-            "executionTime": 418,
+            "startTime": 1622807058113,
+            "executionTime": 390,
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "C023K3NMH7Y",
-                      "name": "renamedtestchanneljjosphso",
+                      "id": "C024DTA6189",
+                      "name": "renamedtestchannelwkfexig",
                       "is_channel": true,
                       "is_group": false,
                       "is_im": false,
-                      "created": 1622629956,
+                      "created": 1622807052,
                       "is_archived": false,
                       "is_general": false,
                       "unlinked": 0,
-                      "name_normalized": "renamedtestchanneljjosphso",
+                      "name_normalized": "renamedtestchannelwkfexig",
                       "is_shared": false,
                       "parent_conversation": {
                         "object": true
@@ -582,8 +657,8 @@
         ],
         "Slack17": [
           {
-            "startTime": 1622629960721,
-            "executionTime": 473,
+            "startTime": 1622807058503,
+            "executionTime": 404,
             "data": {
               "main": [
                 [
@@ -599,23 +674,23 @@
         ],
         "Slack16": [
           {
-            "startTime": 1622629961194,
-            "executionTime": 466,
+            "startTime": 1622807058907,
+            "executionTime": 366,
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "C023K3NMH7Y",
-                      "name": "renamedtestchanneljjosphso",
+                      "id": "C024DTA6189",
+                      "name": "renamedtestchannelwkfexig",
                       "is_channel": true,
                       "is_group": false,
                       "is_im": false,
-                      "created": 1622629956,
+                      "created": 1622807052,
                       "is_archived": false,
                       "is_general": false,
                       "unlinked": 0,
-                      "name_normalized": "renamedtestchanneljjosphso",
+                      "name_normalized": "renamedtestchannelwkfexig",
                       "is_shared": false,
                       "parent_conversation": {
                         "object": true
@@ -636,7 +711,7 @@
                       "is_member": true,
                       "is_private": false,
                       "is_mpim": false,
-                      "last_read": "1622629959.000500",
+                      "last_read": "1622807057.000500",
                       "topic": {
                         "object": true
                       },
@@ -656,8 +731,8 @@
         ],
         "Slack6": [
           {
-            "startTime": 1622629961660,
-            "executionTime": 1401,
+            "startTime": 1622807059274,
+            "executionTime": 315,
             "data": {
               "main": [
                 [
@@ -712,8 +787,8 @@
         ],
         "Slack7": [
           {
-            "startTime": 1622629963062,
-            "executionTime": 364,
+            "startTime": 1622807059590,
+            "executionTime": 304,
             "data": {
               "main": [
                 [
@@ -721,7 +796,7 @@
                     "json": {
                       "type": "message",
                       "subtype": "channel_join",
-                      "ts": "1622629961.000900",
+                      "ts": "1622807059.000900",
                       "user": "U01NE1E8FFU",
                       "text": "<@U01NE1E8FFU> has joined the channel"
                     }
@@ -733,8 +808,8 @@
         ],
         "Slack18": [
           {
-            "startTime": 1622629963427,
-            "executionTime": 356,
+            "startTime": 1622807059895,
+            "executionTime": 333,
             "data": {
               "main": [
                 [
@@ -742,7 +817,7 @@
                     "json": {
                       "type": "message",
                       "subtype": "channel_join",
-                      "ts": "1622629961.000900",
+                      "ts": "1622807059.000900",
                       "user": "U01NE1E8FFU",
                       "text": "<@U01NE1E8FFU> has joined the channel"
                     }
@@ -754,8 +829,8 @@
         ],
         "Slack8": [
           {
-            "startTime": 1622629963783,
-            "executionTime": 347,
+            "startTime": 1622807060228,
+            "executionTime": 304,
             "data": {
               "main": [
                 [
@@ -771,8 +846,8 @@
         ],
         "Slack": [
           {
-            "startTime": 1622629964130,
-            "executionTime": 382,
+            "startTime": 1622807060533,
+            "executionTime": 404,
             "data": {
               "main": [
                 [
@@ -788,8 +863,8 @@
         ],
         "Slack14": [
           {
-            "startTime": 1622629964512,
-            "executionTime": 477,
+            "startTime": 1622807060937,
+            "executionTime": 1456,
             "data": {
               "main": [
                 [
@@ -805,8 +880,8 @@
         ],
         "Slack1": [
           {
-            "startTime": 1622629964990,
-            "executionTime": 463,
+            "startTime": 1622807062394,
+            "executionTime": 389,
             "data": {
               "main": [
                 [
@@ -830,7 +905,7 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-02T10:32:35.608Z",
-  "stoppedAt": "2021-06-02T10:32:45.454Z",
+  "startedAt": "2021-06-04T11:44:11.614Z",
+  "stoppedAt": "2021-06-04T11:44:22.784Z",
   "finished": true
 }

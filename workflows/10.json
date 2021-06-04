@@ -156,7 +156,7 @@
       "typeVersion": 1,
       "position": [
         400,
-        440
+        540
       ],
       "credentials": {
         "pagerDutyOAuth2Api": "PagerDuty OAuth2 API creds"
@@ -172,12 +172,24 @@
       "type": "n8n-nodes-base.pagerDuty",
       "typeVersion": 1,
       "position": [
-        550,
-        440
+        730,
+        540
       ],
       "credentials": {
         "pagerDutyOAuth2Api": "PagerDuty OAuth2 API creds"
       }
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(500);\n\n// Output data\nreturn items;"
+      },
+      "name": "Sleep 0.5 second1",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        560,
+        540
+      ],
+      "typeVersion": 1
     }
   ],
   "connections": {
@@ -211,7 +223,7 @@
             "index": 0
           },
           {
-            "node": "PagerDuty8",
+            "node": "Sleep 0.5 second1",
             "type": "main",
             "index": 0
           }
@@ -249,10 +261,21 @@
           }
         ]
       ]
+    },
+    "Sleep 0.5 second1": {
+      "main": [
+        [
+          {
+            "node": "PagerDuty8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "createdAt": "2021-02-15T13:56:59.611Z",
-  "updatedAt": "2021-03-25T08:33:56.080Z",
+  "updatedAt": "2021-06-04T10:22:47.268Z",
   "settings": {},
   "staticData": null
 }
