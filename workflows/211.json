@@ -1,0 +1,162 @@
+{
+  "id": 211,
+  "name": "SSH:Command:execute:File:upload",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "command": "whoami"
+      },
+      "name": "SSH",
+      "type": "n8n-nodes-base.ssh",
+      "typeVersion": 1,
+      "position": [
+        480,
+        140
+      ],
+      "credentials": {
+        "sshPassword": "SSH creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "file",
+        "path": "/home/n/nodeqa/.tmp/",
+        "options": {
+          "fileName": "fixedtestingfilename"
+        }
+      },
+      "name": "SSH1",
+      "type": "n8n-nodes-base.ssh",
+      "typeVersion": 1,
+      "position": [
+        770,
+        310
+      ],
+      "credentials": {
+        "sshPassword": "SSH creds"
+      }
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "name",
+              "value": "={{Date()}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Set",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        480,
+        310
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "jsonToBinary",
+        "convertAllData": false,
+        "sourceKey": "name",
+        "options": {
+          "encoding": "utf8",
+          "mimeType": "text"
+        }
+      },
+      "name": "Move Binary Data",
+      "type": "n8n-nodes-base.moveBinaryData",
+      "typeVersion": 1,
+      "position": [
+        620,
+        310
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "file",
+        "operation": "download",
+        "path": "/home/n/nodeqa/.tmp/fixedtestingfilename"
+      },
+      "name": "SSH2",
+      "type": "n8n-nodes-base.ssh",
+      "typeVersion": 1,
+      "position": [
+        940,
+        310
+      ],
+      "credentials": {
+        "sshPassword": "SSH creds"
+      },
+      "disabled": true
+    }
+  ],
+  "connections": {
+    "SSH1": {
+      "main": [
+        [
+          {
+            "node": "SSH2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set": {
+      "main": [
+        [
+          {
+            "node": "Move Binary Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Move Binary Data": {
+      "main": [
+        [
+          {
+            "node": "SSH1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "SSH",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Set",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-05-31T10:52:06.208Z",
+  "updatedAt": "2021-06-07T09:21:43.338Z",
+  "settings": {},
+  "staticData": null
+}
