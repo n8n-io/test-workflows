@@ -109,7 +109,7 @@
       "parameters": {
         "resource": "tag",
         "workspaceId": "60335ad3f24e660123d7fdee",
-        "name": "TestTag"
+        "name": "=TestTag{{$evaluateExpression(Math.random())}}"
       },
       "name": "Clockify5",
       "type": "n8n-nodes-base.clockify",
@@ -129,14 +129,14 @@
         "workspaceId": "60335ad3f24e660123d7fdee",
         "tagId": "={{$node[\"Clockify5\"].json[\"id\"]}}",
         "updateFields": {
-          "name": "UpdatedTag"
+          "name": "=UpdatedTag{{$evaluateExpression(Math.random())}}"
         }
       },
       "name": "Clockify6",
       "type": "n8n-nodes-base.clockify",
       "typeVersion": 1,
       "position": [
-        650,
+        830,
         400
       ],
       "credentials": {
@@ -155,7 +155,7 @@
       "type": "n8n-nodes-base.clockify",
       "typeVersion": 1,
       "position": [
-        800,
+        980,
         400
       ],
       "credentials": {
@@ -173,7 +173,7 @@
       "type": "n8n-nodes-base.clockify",
       "typeVersion": 1,
       "position": [
-        950,
+        1130,
         400
       ],
       "credentials": {
@@ -255,6 +255,18 @@
       "credentials": {
         "clockifyApi": "Clockify creds"
       }
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(500);\n\n// Output data\nreturn items;"
+      },
+      "name": "Sleep 0.5 second",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        660,
+        400
+      ],
+      "typeVersion": 1
     }
   ],
   "connections": {
@@ -306,7 +318,7 @@
       "main": [
         [
           {
-            "node": "Clockify6",
+            "node": "Sleep 0.5 second",
             "type": "main",
             "index": 0
           }
@@ -388,10 +400,21 @@
           }
         ]
       ]
+    },
+    "Sleep 0.5 second": {
+      "main": [
+        [
+          {
+            "node": "Clockify6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "createdAt": "2021-02-22T07:24:58.045Z",
-  "updatedAt": "2021-02-22T08:49:36.716Z",
+  "updatedAt": "2021-06-07T09:03:59.431Z",
   "settings": {},
   "staticData": null
 }
