@@ -32,7 +32,7 @@
       "parameters": {
         "operation": "update",
         "listId": "={{$node[\"SendGrid\"].json[\"id\"]}}",
-        "name": "UpdatedTestList"
+        "name": "=UpdatedTestList{{Date.now()}}"
       },
       "name": "SendGrid1",
       "type": "n8n-nodes-base.sendGrid",
@@ -327,7 +327,7 @@
     }
   },
   "createdAt": "2021-02-23T10:02:06.947Z",
-  "updatedAt": "2021-04-13T10:12:52.388Z",
+  "updatedAt": "2021-06-03T12:24:52.296Z",
   "settings": {},
   "staticData": null
 }

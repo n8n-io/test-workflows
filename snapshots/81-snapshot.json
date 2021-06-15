@@ -1,0 +1,141 @@
+{
+  "data": {
+    "startData": {},
+    "resultData": {
+      "runData": {
+        "Start": [
+          {
+            "startTime": 1622630000226,
+            "executionTime": 0,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {}
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Phantombuster": [
+          {
+            "startTime": 1622630000227,
+            "executionTime": 335,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": "8756817235927468",
+                      "name": "Email Extractor",
+                      "scriptOrgName": "phantombuster",
+                      "scriptId": "6774",
+                      "script": "Email Extractor.js",
+                      "branch": "master",
+                      "environment": "release",
+                      "manifest": {
+                        "object": true
+                      },
+                      "lastEndType": "finished",
+                      "lastEndedAt": 1622623228973,
+                      "lastExitCode": 0,
+                      "nbContainersRunning": 0,
+                      "runningTime": {
+                        "object": true
+                      },
+                      "launchType": "manually",
+                      "s3Folder": "UKSkFmaigVohTti7pkwW0A"
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Phantombuster1": [
+          {
+            "startTime": 1622630000563,
+            "executionTime": 274,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": "8756817235927468",
+                      "scriptOrgName": "phantombuster",
+                      "scriptId": "6774",
+                      "script": "Email Extractor.js",
+                      "branch": "master",
+                      "environment": "release",
+                      "argument": "{\n\t\"urls\": [\n\t\t\"https://n8n.io/\"\n\t],\n\t\"timeToWait\": 5000,\n\t\"pagesPerLaunch\": 1,\n\t\"onlyGetOneEmail\": false\n}",
+                      "code": {
+                        "object": true
+                      },
+                      "launchType": "manually",
+                      "nbLaunches": 95,
+                      "s3Folder": "UKSkFmaigVohTti7pkwW0A",
+                      "orgS3Folder": "sTTpLenO2iY",
+                      "updatedAt": 1614591972895,
+                      "name": "Email Extractor",
+                      "fileMgmt": "mix"
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Phantombuster2": [
+          {
+            "startTime": 1622630000838,
+            "executionTime": 728,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "containerId": "6817026150421890"
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Phantombuster3": [
+          {
+            "startTime": 1622630001566,
+            "executionTime": 177,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "containerId": "6817026150421890",
+                      "status": "running",
+                      "output": "",
+                      "outputPos": 0,
+                      "isAgentRunning": false,
+                      "canSoftAbort": false
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      "lastNodeExecuted": "Phantombuster3"
+    },
+    "executionData": {
+      "contextData": {},
+      "nodeExecutionStack": [],
+      "waitingExecution": {}
+    }
+  },
+  "mode": "cli",
+  "startedAt": "2021-06-02T10:33:20.224Z",
+  "stoppedAt": "2021-06-02T10:33:21.744Z",
+  "finished": true
+}

@@ -1,6 +1,6 @@
 {
   "id": 1,
-  "name": "Twitter:tweet:create:create like retweet delete",
+  "name": "Twitter:tweet:create:create like retweet delete search",
   "active": false,
   "nodes": [
     {
@@ -78,6 +78,25 @@
       "credentials": {
         "twitterOAuth1Api": "Twitter API"
       }
+    },
+    {
+      "parameters": {
+        "operation": "search",
+        "searchText": "@n8n_io",
+        "limit": 1,
+        "additionalFields": {}
+      },
+      "name": "Twitter4",
+      "type": "n8n-nodes-base.twitter",
+      "typeVersion": 1,
+      "position": [
+        450,
+        450
+      ],
+      "credentials": {
+        "twitterOAuth1Api": "Twitter API"
+      },
+      "notes": "IGNORED_PROPERTIES=extended_entities,retweeted_status,quoted_status_id,quoted_status_id_str,quoted_status,possibly_sensitive"
     }
   ],
   "connections": {
@@ -86,6 +105,11 @@
         [
           {
             "node": "Twitter",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Twitter4",
             "type": "main",
             "index": 0
           }
@@ -127,7 +151,7 @@
     }
   },
   "createdAt": "2021-01-21T10:32:07.628Z",
-  "updatedAt": "2021-01-21T13:23:36.884Z",
+  "updatedAt": "2021-06-04T10:25:41.024Z",
   "settings": {},
   "staticData": null
 }

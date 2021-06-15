@@ -1,0 +1,92 @@
+{
+  "data": {
+    "startData": {},
+    "resultData": {
+      "runData": {
+        "Start": [
+          {
+            "startTime": 1622630051043,
+            "executionTime": 1,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {}
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "AWS Comprehend": [
+          {
+            "startTime": 1622630051044,
+            "executionTime": 601,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "en": 0.993780255317688
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "AWS Comprehend1": [
+          {
+            "startTime": 1622630051645,
+            "executionTime": 543,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "Sentiment": "POSITIVE",
+                      "SentimentScore": {
+                        "object": true
+                      }
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "AWS Comprehend2": [
+          {
+            "startTime": 1622630052189,
+            "executionTime": 552,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "BeginOffset": 147,
+                      "EndOffset": 158,
+                      "Score": 0.7894728779792786,
+                      "Text": "single line",
+                      "Type": "QUANTITY"
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      "lastNodeExecuted": "AWS Comprehend2"
+    },
+    "executionData": {
+      "contextData": {},
+      "nodeExecutionStack": [],
+      "waitingExecution": {}
+    }
+  },
+  "mode": "cli",
+  "startedAt": "2021-06-02T10:34:11.042Z",
+  "stoppedAt": "2021-06-02T10:34:12.741Z",
+  "finished": true
+}

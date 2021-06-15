@@ -1,0 +1,94 @@
+{
+  "data": {
+    "startData": {},
+    "resultData": {
+      "runData": {
+        "Start": [
+          {
+            "startTime": 1622630011947,
+            "executionTime": 1,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {}
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "MessageBird": [
+          {
+            "startTime": 1622630011949,
+            "executionTime": 284,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "payment": "prepaid",
+                      "type": "dollars",
+                      "amount": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "MessageBird1": [
+          {
+            "startTime": 1622630012233,
+            "executionTime": 214,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": "de71f2b72d3c4fb9896eec5da0377708",
+                      "href": "https://rest.messagebird.com/messages/de71f2b72d3c4fb9896eec5da0377708",
+                      "direction": "mt",
+                      "type": "sms",
+                      "originator": "4930270504079",
+                      "body": "TestMessage",
+                      "reference": {
+                        "object": true
+                      },
+                      "validity": {
+                        "object": true
+                      },
+                      "gateway": 10,
+                      "typeDetails": {
+                        "object": true
+                      },
+                      "datacoding": "plain",
+                      "mclass": 1,
+                      "scheduledDatetime": {
+                        "object": true
+                      },
+                      "createdDatetime": "2021-06-02T10:33:32+00:00",
+                      "recipients": {
+                        "object": true
+                      }
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      "lastNodeExecuted": "MessageBird1"
+    },
+    "executionData": {
+      "contextData": {},
+      "nodeExecutionStack": [],
+      "waitingExecution": {}
+    }
+  },
+  "mode": "cli",
+  "startedAt": "2021-06-02T10:33:31.946Z",
+  "stoppedAt": "2021-06-02T10:33:32.447Z",
+  "finished": true
+}

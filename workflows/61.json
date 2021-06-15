@@ -62,7 +62,8 @@
       ],
       "credentials": {
         "spotifyOAuth2Api": "Spotify OAuth2 creds"
-      }
+      },
+      "notes": "CAP_RESULTS_LENGTH=1"
     },
     {
       "parameters": {
@@ -187,7 +188,8 @@
       "parameters": {
         "resource": "playlist",
         "id": "={{$node[\"Spotify8\"].json[\"id\"]}}",
-        "trackID": "spotify:track:2ea6bt302Bq8Hiulp8Bn2C"
+        "trackID": "spotify:track:2ea6bt302Bq8Hiulp8Bn2C",
+        "additionalFields": {}
       },
       "name": "Spotify10",
       "type": "n8n-nodes-base.spotify",
@@ -495,7 +497,7 @@
     }
   },
   "createdAt": "2021-02-23T16:32:02.682Z",
-  "updatedAt": "2021-04-07T15:22:58.138Z",
+  "updatedAt": "2021-06-07T09:07:01.975Z",
   "settings": {},
   "staticData": null
 }

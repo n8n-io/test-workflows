@@ -64,12 +64,13 @@
       "type": "n8n-nodes-base.iterable",
       "typeVersion": 1,
       "position": [
-        750,
+        900,
         220
       ],
       "credentials": {
         "iterableApi": "Iterable API creds"
-      }
+      },
+      "notes": "IGNORED_PROPERTIES=dataFields"
     },
     {
       "parameters": {
@@ -82,7 +83,7 @@
       "type": "n8n-nodes-base.iterable",
       "typeVersion": 1,
       "position": [
-        900,
+        1050,
         320
       ],
       "credentials": {
@@ -102,7 +103,7 @@
       "type": "n8n-nodes-base.iterable",
       "typeVersion": 1,
       "position": [
-        1050,
+        1200,
         320
       ],
       "credentials": {
@@ -122,7 +123,7 @@
       "type": "n8n-nodes-base.iterable",
       "typeVersion": 1,
       "position": [
-        1200,
+        1350,
         390
       ],
       "credentials": {
@@ -138,12 +139,24 @@
       "type": "n8n-nodes-base.iterable",
       "typeVersion": 1,
       "position": [
-        1350,
+        1500,
         210
       ],
       "credentials": {
         "iterableApi": "Iterable API creds"
       }
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(500);\n\n// Output data\nreturn items;"
+      },
+      "name": "Sleep 0.5 second",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        740,
+        220
+      ],
+      "typeVersion": 1
     }
   ],
   "connections": {
@@ -162,7 +175,7 @@
       "main": [
         [
           {
-            "node": "Iterable1",
+            "node": "Sleep 0.5 second",
             "type": "main",
             "index": 0
           }
@@ -223,10 +236,21 @@
           }
         ]
       ]
+    },
+    "Sleep 0.5 second": {
+      "main": [
+        [
+          {
+            "node": "Iterable1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "createdAt": "2021-05-12T07:38:44.391Z",
-  "updatedAt": "2021-05-12T17:15:09.251Z",
+  "updatedAt": "2021-06-04T17:24:19.887Z",
   "settings": {
     "timezone": "Europe/Berlin",
     "saveExecutionProgress": "DEFAULT"
