@@ -56,7 +56,7 @@
       "type": "n8n-nodes-base.googleContacts",
       "typeVersion": 1,
       "position": [
-        600,
+        780,
         300
       ],
       "credentials": {
@@ -76,7 +76,7 @@
       "type": "n8n-nodes-base.googleContacts",
       "typeVersion": 1,
       "position": [
-        760,
+        940,
         300
       ],
       "credentials": {
@@ -95,7 +95,7 @@
       "type": "n8n-nodes-base.googleContacts",
       "typeVersion": 1,
       "position": [
-        920,
+        1100,
         300
       ],
       "credentials": {
@@ -111,12 +111,24 @@
       "type": "n8n-nodes-base.googleContacts",
       "typeVersion": 1,
       "position": [
-        1070,
+        1250,
         300
       ],
       "credentials": {
         "googleContactsOAuth2Api": "Google Contacts creds"
       }
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(3000);\n\n// Output data\nreturn items;"
+      },
+      "name": "Sleep 3 seconds",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        610,
+        300
+      ],
+      "typeVersion": 1
     }
   ],
   "connections": {
@@ -124,7 +136,7 @@
       "main": [
         [
           {
-            "node": "Google Contacts1",
+            "node": "Sleep 3 seconds",
             "type": "main",
             "index": 0
           }
@@ -174,10 +186,21 @@
           }
         ]
       ]
+    },
+    "Sleep 3 seconds": {
+      "main": [
+        [
+          {
+            "node": "Google Contacts1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "createdAt": "2021-02-19T07:31:35.734Z",
-  "updatedAt": "2021-02-19T07:31:35.734Z",
+  "updatedAt": "2021-06-08T09:27:55.752Z",
   "settings": {},
   "staticData": null
 }

@@ -1,0 +1,82 @@
+{
+  "data": {
+    "startData": {},
+    "resultData": {
+      "runData": {
+        "Start": [
+          {
+            "startTime": 1622630022822,
+            "executionTime": 0,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {}
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Twilio": [
+          {
+            "startTime": 1622630022823,
+            "executionTime": 555,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "sid": "SM78c123c3226a48afa398f717cf9dc044",
+                      "date_created": "Wed, 02 Jun 2021 10:33:43 +0000",
+                      "date_updated": "Wed, 02 Jun 2021 10:33:43 +0000",
+                      "date_sent": {
+                        "object": true
+                      },
+                      "account_sid": "AC8dd0c6e08b0f196d34adde4f00507d9f",
+                      "to": "+15005550006",
+                      "from": "+15005550006",
+                      "messaging_service_sid": {
+                        "object": true
+                      },
+                      "body": "Message1622630022824",
+                      "status": "queued",
+                      "num_segments": "1",
+                      "num_media": "0",
+                      "direction": "outbound-api",
+                      "api_version": "2010-04-01",
+                      "price": {
+                        "object": true
+                      },
+                      "price_unit": "USD",
+                      "error_code": {
+                        "object": true
+                      },
+                      "error_message": {
+                        "object": true
+                      },
+                      "uri": "/2010-04-01/Accounts/AC8dd0c6e08b0f196d34adde4f00507d9f/Messages/SM78c123c3226a48afa398f717cf9dc044.json",
+                      "subresource_uris": {
+                        "object": true
+                      }
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      "lastNodeExecuted": "Twilio"
+    },
+    "executionData": {
+      "contextData": {},
+      "nodeExecutionStack": [],
+      "waitingExecution": {}
+    }
+  },
+  "mode": "cli",
+  "startedAt": "2021-06-02T10:33:42.821Z",
+  "stoppedAt": "2021-06-02T10:33:43.378Z",
+  "finished": true
+}

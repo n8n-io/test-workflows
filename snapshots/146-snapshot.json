@@ -1,0 +1,140 @@
+{
+  "data": {
+    "startData": {},
+    "resultData": {
+      "runData": {
+        "Start": [
+          {
+            "startTime": 1622630045463,
+            "executionTime": 0,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {}
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Set": [
+          {
+            "startTime": 1622630045464,
+            "executionTime": 2,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "temperature": 18.296104609703654,
+                      "location": "n8n",
+                      "time": "2021-06-02T10:34:05.465Z"
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "TimescaleDB": [
+          {
+            "startTime": 1622630045466,
+            "executionTime": 238,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "time": "2021-06-02T10:34:05.465Z",
+                      "location": "n8n",
+                      "temperature": 18.296104609703654
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "TimescaleDB2": [
+          {
+            "startTime": 1622630045705,
+            "executionTime": 220,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "time": "2021-06-02T10:34:05.465Z",
+                      "location": "n8n",
+                      "temperature": 18.296104609703654
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Set1": [
+          {
+            "startTime": 1622630045926,
+            "executionTime": 1,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "time": "2021-06-02T10:34:05.465Z",
+                      "location": "updatedn8n",
+                      "temperature": 18.296104609703654
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "TimescaleDB1": [
+          {
+            "startTime": 1622630045928,
+            "executionTime": 264,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "time": "2021-06-02T10:34:05.465Z",
+                      "location": "updatedn8n",
+                      "temperature": "18.296104609703654"
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "TimescaleDB3": [
+          {
+            "startTime": 1622630046193,
+            "executionTime": 227,
+            "data": {
+              "main": [
+                []
+              ]
+            }
+          }
+        ]
+      },
+      "lastNodeExecuted": "TimescaleDB3"
+    },
+    "executionData": {
+      "contextData": {},
+      "nodeExecutionStack": [],
+      "waitingExecution": {}
+    }
+  },
+  "mode": "cli",
+  "startedAt": "2021-06-02T10:34:05.461Z",
+  "stoppedAt": "2021-06-02T10:34:06.421Z",
+  "finished": true
+}
