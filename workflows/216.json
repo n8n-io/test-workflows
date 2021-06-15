@@ -1,0 +1,92 @@
+{
+  "id": 216,
+  "name": "FunctionItem:JSON,Binary and Static data",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "functionCode": "// interact with item JSON attributes\n\n// array\nitem.arr = [1,2,3,4,5,6,7,8,9,10]\n// string\nitem.str= \"Testing Function Item node\"\n// number\nitem.num = 1337 \n// object\nitem.obj = {\n  attr1: \"Testing\",\n  attr2: [1,2,3,4,5],\n  attr3: 7331,\n  attr4: {\n    subattr1: \"Test\",\n    subattr2: [1,2,3],\n    subattr3: 8,\n    subattr4: {\n    }\n  }\n};\n\nreturn item;"
+      },
+      "name": "Handle JSON data",
+      "type": "n8n-nodes-base.functionItem",
+      "typeVersion": 1,
+      "position": [
+        450,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "functionCode": "// interact with item Binary data\n\nitem.binaryData = getBinaryData() ?? 'NIL' ;\n\nbinaryData = {\n      data: {\n\t\t\t\tdata: 'SGVsbG8gZnJvbSBuOG4gRnVuY3Rpb24gaXRlbSB0ZXN0aW5nIHdvcmtmbG93', // Base64 encoded binary data (required)\n\t\t\t\tmimeType: 'text', // Optional but should be set if possible (optional)\n\t\t\t\tfileExtension: 'text', // Optional but should be set if possible (optional)\n\t\t\t\tfileName: 'testfile', // Optional but should be set if possible (optional)\n\t\t\t}\n}\nsetBinaryData(binaryData);\n\n\nreturn item;"
+      },
+      "name": "Handle Binary data",
+      "type": "n8n-nodes-base.functionItem",
+      "typeVersion": 1,
+      "position": [
+        650,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "functionCode": "// interact with static data\n\n\n// Global\n\nconst GSD = getWorkflowStaticData('global');\n\nif ( GSD && GSD.message ){\n  console.log(GSD);\n} else {\n  GSD.message = \"Hello, Global Static Data\";\n}\n\n// Local (node)\n\nconst LSD = getWorkflowStaticData('node');\n\nif ( LSD && LSD.message ){\n  console.log(LSD);\n} else {\n  LSD.message = \"Hello, Node Static Data\";\n}\n\nitem.globalStaticMessage = GSD.message;\nitem.nodeStaticMessage = LSD.message;\n\n\nreturn item;"
+      },
+      "name": "Handle Static data",
+      "type": "n8n-nodes-base.functionItem",
+      "typeVersion": 1,
+      "position": [
+        850,
+        300
+      ]
+    }
+  ],
+  "connections": {
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Handle JSON data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Handle JSON data": {
+      "main": [
+        [
+          {
+            "node": "Handle Binary data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Handle Binary data": {
+      "main": [
+        [
+          {
+            "node": "Handle Static data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-06-15T18:29:42.709Z",
+  "updatedAt": "2021-06-15T18:38:55.872Z",
+  "settings": {},
+  "staticData": null
+}
