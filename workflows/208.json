@@ -1,0 +1,59 @@
+{
+  "id": 208,
+  "name": "RocketChat:Chat:postMessage",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "channel": "general",
+        "text": "=Message {{(new Date).toISOString()}}",
+        "options": {
+          "emoji": ":smile:"
+        },
+        "attachments": [
+          {
+            "color": "#ff6d5a",
+            "title": "Attachment title"
+          }
+        ]
+      },
+      "name": "RocketChat",
+      "type": "n8n-nodes-base.rocketchat",
+      "typeVersion": 1,
+      "position": [
+        500,
+        300
+      ],
+      "credentials": {
+        "rocketchatApi": "Rocket API creds"
+      }
+    }
+  ],
+  "connections": {
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "RocketChat",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-05-25T13:01:33.223Z",
+  "updatedAt": "2021-05-26T13:12:05.308Z",
+  "settings": {},
+  "staticData": null
+}
