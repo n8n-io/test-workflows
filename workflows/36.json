@@ -228,7 +228,7 @@
       "type": "n8n-nodes-base.slack",
       "typeVersion": 1,
       "position": [
-        720,
+        840,
         560
       ],
       "alwaysOutputData": true,
@@ -246,7 +246,7 @@
       "type": "n8n-nodes-base.slack",
       "typeVersion": 1,
       "position": [
-        570,
+        690,
         560
       ],
       "alwaysOutputData": true,
@@ -258,14 +258,14 @@
       "parameters": {
         "resource": "star",
         "options": {
-          "channelId": "C01MZ82T9TR"
+          "channelId": "=C01MZ82T9TR"
         }
       },
       "name": "Slack21",
       "type": "n8n-nodes-base.slack",
       "typeVersion": 1,
       "position": [
-        430,
+        550,
         560
       ],
       "alwaysOutputData": true,
@@ -396,6 +396,28 @@
       "credentials": {
         "slackApi": "Slack Token"
       }
+    },
+    {
+      "parameters": {
+        "resource": "star",
+        "operation": "delete",
+        "options": {
+          "channelId": "C01MZ82T9TR"
+        }
+      },
+      "name": "Slack24",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 1,
+      "position": [
+        400,
+        560
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "slackApi": "Slack Token"
+      },
+      "continueOnFail": true,
+      "notes": "IGNORED_PROPERTIES=ok"
     }
   ],
   "connections": {
@@ -529,12 +551,12 @@
             "index": 0
           },
           {
-            "node": "Slack21",
+            "node": "Slack2",
             "type": "main",
             "index": 0
           },
           {
-            "node": "Slack2",
+            "node": "Slack24",
             "type": "main",
             "index": 0
           }
@@ -617,10 +639,21 @@
           }
         ]
       ]
+    },
+    "Slack24": {
+      "main": [
+        [
+          {
+            "node": "Slack21",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "createdAt": "2021-02-17T17:57:34.255Z",
-  "updatedAt": "2021-02-17T18:44:27.280Z",
+  "updatedAt": "2021-06-03T12:24:06.076Z",
   "settings": {},
   "staticData": null
 }

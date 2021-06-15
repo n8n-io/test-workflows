@@ -28,7 +28,8 @@
       ],
       "credentials": {
         "hubspotApi": "hubsport api key"
-      }
+      },
+      "notes": "IGNORED_PROPERTIES=associated-company"
     },
     {
       "parameters": {
@@ -41,7 +42,7 @@
       "type": "n8n-nodes-base.hubspot",
       "typeVersion": 1,
       "position": [
-        1060,
+        1320,
         260
       ],
       "credentials": {
@@ -59,7 +60,7 @@
       "type": "n8n-nodes-base.hubspot",
       "typeVersion": 1,
       "position": [
-        580,
+        710,
         260
       ],
       "credentials": {
@@ -80,12 +81,13 @@
       "type": "n8n-nodes-base.hubspot",
       "typeVersion": 1,
       "position": [
-        740,
+        1000,
         260
       ],
       "credentials": {
         "hubspotApi": "hubsport api key"
-      }
+      },
+      "notes": "CAP_RESULTS_LENGTH=1"
     },
     {
       "parameters": {
@@ -97,7 +99,7 @@
       "type": "n8n-nodes-base.hubspot",
       "typeVersion": 1,
       "position": [
-        1350,
+        1880,
         260
       ],
       "credentials": {
@@ -115,22 +117,23 @@
       "type": "n8n-nodes-base.hubspot",
       "typeVersion": 1,
       "position": [
-        1200,
+        1600,
         260
       ],
       "credentials": {
         "hubspotApi": "hubsport api key"
-      }
+      },
+      "notes": "IGNORED_PROPERTIES=associated-company"
     },
     {
       "parameters": {
-        "functionCode": "items= [items[0]]\nreturn items;"
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(1500);\n\nreturn [items[0]];"
       },
       "name": "Function",
       "type": "n8n-nodes-base.function",
       "typeVersion": 1,
       "position": [
-        880,
+        1140,
         260
       ],
       "notesInFlow": true,
@@ -264,6 +267,56 @@
       "credentials": {
         "hubspotApi": "hubsport api key"
       }
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(500);\n\n// Output data\nreturn items;"
+      },
+      "name": "Sleep 0.5 second",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        550,
+        260
+      ],
+      "typeVersion": 1,
+      "notes": "IGNORED_PROPERTIES=associated-company"
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(500);\n\n// Output data\nreturn items;"
+      },
+      "name": "Sleep 0.5 second1",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        850,
+        260
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(500);\n\n// Output data\nreturn items;"
+      },
+      "name": "Sleep 0.5 second2",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        1480,
+        260
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(500);\n\n// Output data\nreturn items;"
+      },
+      "name": "Sleep 0.5 second3",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        1730,
+        260
+      ],
+      "typeVersion": 1,
+      "notes": "IGNORED_PROPERTIES=associated-company"
     }
   ],
   "connections": {
@@ -271,7 +324,7 @@
       "main": [
         [
           {
-            "node": "Hubspot2",
+            "node": "Sleep 0.5 second",
             "type": "main",
             "index": 0
           }
@@ -282,7 +335,7 @@
       "main": [
         [
           {
-            "node": "Hubspot5",
+            "node": "Sleep 0.5 second2",
             "type": "main",
             "index": 0
           }
@@ -293,7 +346,7 @@
       "main": [
         [
           {
-            "node": "Hubspot3",
+            "node": "Sleep 0.5 second1",
             "type": "main",
             "index": 0
           }
@@ -331,7 +384,7 @@
       "main": [
         [
           {
-            "node": "Hubspot4",
+            "node": "Sleep 0.5 second3",
             "type": "main",
             "index": 0
           }
@@ -414,10 +467,54 @@
           }
         ]
       ]
+    },
+    "Sleep 0.5 second": {
+      "main": [
+        [
+          {
+            "node": "Hubspot2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sleep 0.5 second1": {
+      "main": [
+        [
+          {
+            "node": "Hubspot3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sleep 0.5 second2": {
+      "main": [
+        [
+          {
+            "node": "Hubspot5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sleep 0.5 second3": {
+      "main": [
+        [
+          {
+            "node": "Hubspot4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "createdAt": "2021-02-16T15:33:11.177Z",
-  "updatedAt": "2021-02-16T16:29:15.297Z",
+  "updatedAt": "2021-06-04T17:17:22.109Z",
   "settings": {},
   "staticData": null
 }

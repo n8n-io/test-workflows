@@ -1,0 +1,97 @@
+{
+  "data": {
+    "startData": {},
+    "resultData": {
+      "runData": {
+        "Start": [
+          {
+            "startTime": 1622630021491,
+            "executionTime": 0,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {}
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Rundeck": [
+          {
+            "startTime": 1622630021492,
+            "executionTime": 268,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": 39,
+                      "href": "http://157.90.159.163:4440/api/38/execution/39",
+                      "permalink": "http://157.90.159.163:4440/project/TestProject/execution/show/39",
+                      "status": "running",
+                      "project": "TestProject",
+                      "executionType": "user",
+                      "user": "nodeqarundeckadmin",
+                      "date-started": {
+                        "object": true
+                      },
+                      "job": {
+                        "object": true
+                      },
+                      "description": "echo \"Hello from n8n\"",
+                      "argstring": {
+                        "object": true
+                      },
+                      "serverUUID": "a14bc3e6-75e8-4fe4-a90d-a16dcc976bf6"
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Rundeck1": [
+          {
+            "startTime": 1622630021761,
+            "executionTime": 90,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "href": "http://157.90.159.163:4440/api/38/job/4dc20913-c26f-4060-afe9-6bb26dfd1a10",
+                      "averageDuration": 429,
+                      "id": "4dc20913-c26f-4060-afe9-6bb26dfd1a10",
+                      "scheduleEnabled": true,
+                      "scheduled": false,
+                      "enabled": true,
+                      "permalink": "http://157.90.159.163:4440/project/TestProject/job/show/4dc20913-c26f-4060-afe9-6bb26dfd1a10",
+                      "group": {
+                        "object": true
+                      },
+                      "description": "test n8n job",
+                      "project": "TestProject",
+                      "name": "TestJob"
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      "lastNodeExecuted": "Rundeck1"
+    },
+    "executionData": {
+      "contextData": {},
+      "nodeExecutionStack": [],
+      "waitingExecution": {}
+    }
+  },
+  "mode": "cli",
+  "startedAt": "2021-06-02T10:33:41.489Z",
+  "stoppedAt": "2021-06-02T10:33:41.852Z",
+  "finished": true
+}
