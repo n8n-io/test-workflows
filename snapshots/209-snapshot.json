@@ -1,0 +1,169 @@
+{
+  "data": {
+    "startData": {},
+    "resultData": {
+      "runData": {
+        "Start": [
+          {
+            "startTime": 1623774740831,
+            "executionTime": 1,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {}
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Set job name": [
+          {
+            "startTime": 1623774740833,
+            "executionTime": 2,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "job_name": "nodemation_job_1623774740835"
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "AWS Transcribe": [
+          {
+            "startTime": 1623774740835,
+            "executionTime": 905,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "CreationTime": 1623774741.588,
+                      "LanguageCode": "en-US",
+                      "Media": {
+                        "object": true
+                      },
+                      "Settings": {
+                        "object": true
+                      },
+                      "StartTime": 1623774741.628,
+                      "TranscriptionJobName": "nodemation_job_1623774740835",
+                      "TranscriptionJobStatus": "IN_PROGRESS"
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "AWS Transcribe1": [
+          {
+            "startTime": 1623774741741,
+            "executionTime": 830,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "CreationTime": 1623774741.588,
+                      "LanguageCode": "en-US",
+                      "Media": {
+                        "object": true
+                      },
+                      "Settings": {
+                        "object": true
+                      },
+                      "StartTime": 1623774741.628,
+                      "Transcript": {
+                        "object": true
+                      },
+                      "TranscriptionJobName": "nodemation_job_1623774740835",
+                      "TranscriptionJobStatus": "IN_PROGRESS"
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "AWS Transcribe2": [
+          {
+            "startTime": 1623774742572,
+            "executionTime": 718,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "CreationTime": 1623774741.588,
+                      "LanguageCode": "en-US",
+                      "OutputLocationType": "SERVICE_BUCKET",
+                      "StartTime": 1623774741.628,
+                      "TranscriptionJobName": "nodemation_job_1623774740835",
+                      "TranscriptionJobStatus": "IN_PROGRESS"
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Sleep 30 seconds": [
+          {
+            "startTime": 1623774743292,
+            "executionTime": 30035,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "CreationTime": 1623774741.588,
+                      "LanguageCode": "en-US",
+                      "OutputLocationType": "SERVICE_BUCKET",
+                      "StartTime": 1623774741.628,
+                      "TranscriptionJobName": "nodemation_job_1623774740835",
+                      "TranscriptionJobStatus": "IN_PROGRESS"
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "AWS Transcribe3": [
+          {
+            "startTime": 1623774773328,
+            "executionTime": 810,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "success": true
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      "lastNodeExecuted": "AWS Transcribe3"
+    },
+    "executionData": {
+      "contextData": {},
+      "nodeExecutionStack": [],
+      "waitingExecution": {}
+    }
+  },
+  "mode": "cli",
+  "startedAt": "2021-06-15T16:32:20.829Z",
+  "stoppedAt": "2021-06-15T16:32:54.139Z",
+  "finished": true
+}
