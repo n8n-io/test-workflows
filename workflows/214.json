@@ -1,0 +1,47 @@
+{
+  "id": 214,
+  "name": "Discord:sendMessage",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "webhookUri": "https://discord.com/api/webhooks/853902675845447722/X4lCHHah4k1RNsrt773IzP6MtTGyUGbRaG6_TfqTEtO0acUIvd2iaefsEpGmRwgz1el8",
+        "text": "=Posted At {{(new Date).toUTCString()}}"
+      },
+      "name": "Discord",
+      "type": "n8n-nodes-base.discord",
+      "typeVersion": 1,
+      "position": [
+        490,
+        300
+      ]
+    }
+  ],
+  "connections": {
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Discord",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-06-03T11:22:25.194Z",
+  "updatedAt": "2021-06-14T07:46:26.827Z",
+  "settings": {},
+  "staticData": null
+}
