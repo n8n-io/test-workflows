@@ -1,0 +1,382 @@
+{
+  "id": 215,
+  "name": "EditImage:ALL",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "blur",
+        "blur": 4,
+        "options": {}
+      },
+      "name": "Edit Image",
+      "type": "n8n-nodes-base.editImage",
+      "typeVersion": 1,
+      "position": [
+        650,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "filePath": "/tmp/n8n-logo.png"
+      },
+      "name": "Read Binary File",
+      "type": "n8n-nodes-base.readBinaryFile",
+      "typeVersion": 1,
+      "position": [
+        450,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "name": "Edit Image1",
+      "type": "n8n-nodes-base.editImage",
+      "typeVersion": 1,
+      "position": [
+        850,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "composite",
+        "dataPropertyNameComposite": "data",
+        "positionX": 100,
+        "positionY": 50,
+        "options": {}
+      },
+      "name": "Edit Image2",
+      "type": "n8n-nodes-base.editImage",
+      "typeVersion": 1,
+      "position": [
+        2400,
+        280
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "create",
+        "width": 1000,
+        "height": 1000,
+        "options": {}
+      },
+      "name": "Edit Image3",
+      "type": "n8n-nodes-base.editImage",
+      "typeVersion": 1,
+      "position": [
+        1050,
+        450
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "draw",
+        "options": {}
+      },
+      "name": "Edit Image4",
+      "type": "n8n-nodes-base.editImage",
+      "typeVersion": 1,
+      "position": [
+        1250,
+        450
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "resize",
+        "options": {}
+      },
+      "name": "Edit Image5",
+      "type": "n8n-nodes-base.editImage",
+      "typeVersion": 1,
+      "position": [
+        1450,
+        450
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "information"
+      },
+      "name": "Edit Image6",
+      "type": "n8n-nodes-base.editImage",
+      "typeVersion": 1,
+      "position": [
+        850,
+        450
+      ],
+      "notes": "CAP_RESULTS_LENGTH=1"
+    },
+    {
+      "parameters": {
+        "operation": "rotate",
+        "rotate": 45,
+        "options": {}
+      },
+      "name": "Edit Image7",
+      "type": "n8n-nodes-base.editImage",
+      "typeVersion": 1,
+      "position": [
+        1650,
+        450
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "shear",
+        "degreesX": 15,
+        "degreesY": 30,
+        "options": {}
+      },
+      "name": "Edit Image8",
+      "type": "n8n-nodes-base.editImage",
+      "typeVersion": 1,
+      "position": [
+        1850,
+        450
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "text",
+        "text": "Testing",
+        "options": {}
+      },
+      "name": "Edit Image9",
+      "type": "n8n-nodes-base.editImage",
+      "typeVersion": 1,
+      "position": [
+        2050,
+        450
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "crop",
+        "options": {}
+      },
+      "name": "Edit Image10",
+      "type": "n8n-nodes-base.editImage",
+      "typeVersion": 1,
+      "position": [
+        2250,
+        450
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "multiStep",
+        "operations": {
+          "operations": [
+            {
+              "operation": "blur",
+              "blur": 3
+            },
+            {
+              "operation": "border",
+              "borderWidth": 3,
+              "borderHeight": 3,
+              "borderColor": "#FF7410"
+            },
+            {
+              "operation": "draw",
+              "color": "#4b4b4b00",
+              "cornerRadius": 50
+            },
+            {
+              "operation": "rotate",
+              "rotate": 180
+            },
+            {
+              "operation": "text",
+              "text": "Reversed"
+            },
+            {
+              "operation": "resize"
+            },
+            {
+              "operation": "shear",
+              "degreesX": 5,
+              "degreesY": 10
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Edit Image11",
+      "type": "n8n-nodes-base.editImage",
+      "typeVersion": 1,
+      "position": [
+        650,
+        450
+      ]
+    }
+  ],
+  "connections": {
+    "Edit Image": {
+      "main": [
+        [
+          {
+            "node": "Edit Image1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read Binary File": {
+      "main": [
+        [
+          {
+            "node": "Edit Image",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Edit Image11",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Read Binary File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Image1": {
+      "main": [
+        [
+          {
+            "node": "Edit Image3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Image3": {
+      "main": [
+        [
+          {
+            "node": "Edit Image4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Image4": {
+      "main": [
+        [
+          {
+            "node": "Edit Image5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Image5": {
+      "main": [
+        [
+          {
+            "node": "Edit Image7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Image7": {
+      "main": [
+        [
+          {
+            "node": "Edit Image8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Image8": {
+      "main": [
+        [
+          {
+            "node": "Edit Image9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Image2": {
+      "main": [
+        []
+      ]
+    },
+    "Edit Image9": {
+      "main": [
+        [
+          {
+            "node": "Edit Image10",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Image10": {
+      "main": [
+        [
+          {
+            "node": "Edit Image2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Image6": {
+      "main": [
+        []
+      ]
+    },
+    "Edit Image11": {
+      "main": [
+        [
+          {
+            "node": "Edit Image6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-06-04T11:16:11.926Z",
+  "updatedAt": "2021-06-15T17:43:48.441Z",
+  "settings": {},
+  "staticData": null
+}
