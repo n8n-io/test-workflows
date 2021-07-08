@@ -1,0 +1,137 @@
+{
+  "id": 218,
+  "name": "Bannerbear:Image:create get:Template:get getAll",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "templateId": "0MkzgpZ46zEDyVrmlP",
+        "additionalFields": {
+          "waitForImage": true
+        },
+        "modificationsUi": {
+          "modificationsValues": [
+            {
+              "name": "message",
+              "text": "Testing n8n qa",
+              "color": "#0911A0",
+              "background": "#EEEEEE"
+            }
+          ]
+        }
+      },
+      "name": "Bannerbear",
+      "type": "n8n-nodes-base.bannerbear",
+      "typeVersion": 1,
+      "position": [
+        500,
+        300
+      ],
+      "credentials": {
+        "bannerbearApi": "Bannerbear API creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "imageId": "={{$node[\"Bannerbear\"].json[\"uid\"]}}"
+      },
+      "name": "Bannerbear1",
+      "type": "n8n-nodes-base.bannerbear",
+      "typeVersion": 1,
+      "position": [
+        700,
+        300
+      ],
+      "credentials": {
+        "bannerbearApi": "Bannerbear API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "template",
+        "operation": "getAll"
+      },
+      "name": "Bannerbear2",
+      "type": "n8n-nodes-base.bannerbear",
+      "typeVersion": 1,
+      "position": [
+        900,
+        400
+      ],
+      "credentials": {
+        "bannerbearApi": "Bannerbear API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "template",
+        "templateId": "0MkzgpZ46zEDyVrmlP"
+      },
+      "name": "Bannerbear3",
+      "type": "n8n-nodes-base.bannerbear",
+      "typeVersion": 1,
+      "position": [
+        900,
+        250
+      ],
+      "credentials": {
+        "bannerbearApi": "Bannerbear API creds"
+      }
+    }
+  ],
+  "connections": {
+    "Bannerbear": {
+      "main": [
+        [
+          {
+            "node": "Bannerbear1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Bannerbear1": {
+      "main": [
+        [
+          {
+            "node": "Bannerbear2",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Bannerbear3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Bannerbear",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-07-08T14:10:14.879Z",
+  "updatedAt": "2021-07-08T14:14:36.514Z",
+  "settings": {},
+  "staticData": null
+}
