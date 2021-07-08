@@ -1,0 +1,301 @@
+{
+  "id": 220,
+  "name": "Autopilot:List:create getAll:Contact:upsert get getAll delete:ContactList:add exist getAll remove",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "email": "=Fakeemail{{Date.now()}}@gmail.com",
+        "additionalFields": {}
+      },
+      "name": "Autopilot",
+      "type": "n8n-nodes-base.autopilot",
+      "typeVersion": 1,
+      "position": [
+        500,
+        300
+      ],
+      "credentials": {
+        "autopilotApi": "Autopilot API creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "contactId": "={{$node[\"Autopilot\"].json[\"contact_id\"]}}"
+      },
+      "name": "Autopilot1",
+      "type": "n8n-nodes-base.autopilot",
+      "typeVersion": 1,
+      "position": [
+        650,
+        300
+      ],
+      "credentials": {
+        "autopilotApi": "Autopilot API creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "limit": 1
+      },
+      "name": "Autopilot2",
+      "type": "n8n-nodes-base.autopilot",
+      "typeVersion": 1,
+      "position": [
+        800,
+        300
+      ],
+      "credentials": {
+        "autopilotApi": "Autopilot API creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "contactId": "={{$node[\"Autopilot\"].json[\"contact_id\"]}}"
+      },
+      "name": "Autopilot3",
+      "type": "n8n-nodes-base.autopilot",
+      "typeVersion": 1,
+      "position": [
+        1000,
+        300
+      ],
+      "credentials": {
+        "autopilotApi": "Autopilot API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "list",
+        "name": "=List{{Date.now()}}"
+      },
+      "name": "Autopilot4",
+      "type": "n8n-nodes-base.autopilot",
+      "typeVersion": 1,
+      "position": [
+        500,
+        100
+      ],
+      "credentials": {
+        "autopilotApi": "Autopilot API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "list",
+        "operation": "getAll",
+        "limit": 1
+      },
+      "name": "Autopilot5",
+      "type": "n8n-nodes-base.autopilot",
+      "typeVersion": 1,
+      "position": [
+        650,
+        100
+      ],
+      "credentials": {
+        "autopilotApi": "Autopilot API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "contactList",
+        "listId": "={{$node[\"Autopilot4\"].json[\"list_id\"]}}",
+        "contactId": "={{$node[\"Autopilot\"].json[\"contact_id\"]}}"
+      },
+      "name": "Autopilot6",
+      "type": "n8n-nodes-base.autopilot",
+      "typeVersion": 1,
+      "position": [
+        950,
+        450
+      ],
+      "credentials": {
+        "autopilotApi": "Autopilot API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "contactList",
+        "operation": "exist",
+        "listId": "={{$node[\"Autopilot4\"].json[\"list_id\"]}}",
+        "contactId": "={{$node[\"Autopilot\"].json[\"contact_id\"]}}"
+      },
+      "name": "Autopilot7",
+      "type": "n8n-nodes-base.autopilot",
+      "typeVersion": 1,
+      "position": [
+        1100,
+        450
+      ],
+      "credentials": {
+        "autopilotApi": "Autopilot API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "contactList",
+        "operation": "getAll",
+        "listId": "={{$node[\"Autopilot4\"].json[\"list_id\"]}}",
+        "limit": 1
+      },
+      "name": "Autopilot8",
+      "type": "n8n-nodes-base.autopilot",
+      "typeVersion": 1,
+      "position": [
+        1250,
+        450
+      ],
+      "credentials": {
+        "autopilotApi": "Autopilot API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "contactList",
+        "operation": "remove",
+        "listId": "={{$node[\"Autopilot4\"].json[\"list_id\"]}}",
+        "contactId": "={{$node[\"Autopilot\"].json[\"contact_id\"]}}"
+      },
+      "name": "Autopilot9",
+      "type": "n8n-nodes-base.autopilot",
+      "typeVersion": 1,
+      "position": [
+        1400,
+        450
+      ],
+      "credentials": {
+        "autopilotApi": "Autopilot API creds"
+      }
+    }
+  ],
+  "connections": {
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Autopilot4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Autopilot": {
+      "main": [
+        [
+          {
+            "node": "Autopilot1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Autopilot1": {
+      "main": [
+        [
+          {
+            "node": "Autopilot2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Autopilot2": {
+      "main": [
+        [
+          {
+            "node": "Autopilot6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Autopilot4": {
+      "main": [
+        [
+          {
+            "node": "Autopilot5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Autopilot5": {
+      "main": [
+        [
+          {
+            "node": "Autopilot",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Autopilot6": {
+      "main": [
+        [
+          {
+            "node": "Autopilot7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Autopilot7": {
+      "main": [
+        [
+          {
+            "node": "Autopilot8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Autopilot8": {
+      "main": [
+        [
+          {
+            "node": "Autopilot9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Autopilot9": {
+      "main": [
+        [
+          {
+            "node": "Autopilot3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-06-25T06:40:20.761Z",
+  "updatedAt": "2021-07-08T16:10:50.902Z",
+  "settings": {},
+  "staticData": null
+}
