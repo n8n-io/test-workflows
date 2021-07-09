@@ -1,0 +1,100 @@
+{
+  "id": 226,
+  "name": "UnleashedSoftware:SakesOrder:getAll:StockOnHand:getAll get",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "limit": 1,
+        "filters": {}
+      },
+      "name": "Unleashed Software",
+      "type": "n8n-nodes-base.unleashedSoftware",
+      "typeVersion": 1,
+      "position": [
+        500,
+        230
+      ],
+      "credentials": {
+        "unleashedSoftwareApi": "Unleashed API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "stockOnHand",
+        "limit": 1,
+        "filters": {}
+      },
+      "name": "Unleashed Software1",
+      "type": "n8n-nodes-base.unleashedSoftware",
+      "typeVersion": 1,
+      "position": [
+        500,
+        380
+      ],
+      "credentials": {
+        "unleashedSoftwareApi": "Unleashed API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "stockOnHand",
+        "operation": "get",
+        "productId": "={{$node[\"Unleashed Software1\"].json[\"Guid\"]}}"
+      },
+      "name": "Unleashed Software2",
+      "type": "n8n-nodes-base.unleashedSoftware",
+      "typeVersion": 1,
+      "position": [
+        650,
+        380
+      ],
+      "credentials": {
+        "unleashedSoftwareApi": "Unleashed API creds"
+      }
+    }
+  ],
+  "connections": {
+    "Unleashed Software1": {
+      "main": [
+        [
+          {
+            "node": "Unleashed Software2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Unleashed Software",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Unleashed Software1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-07-07T14:29:45.509Z",
+  "updatedAt": "2021-07-09T13:40:17.209Z",
+  "settings": {},
+  "staticData": null
+}
