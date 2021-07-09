@@ -1,0 +1,480 @@
+{
+  "id": 225,
+  "name": "Salesmate:Company:*:Deal:*:Activity:*",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "company",
+        "name": "=Company{{Date.now()}}",
+        "owner": 1,
+        "additionalFields": {
+          "description": "descrip company"
+        }
+      },
+      "name": "Salesmate",
+      "type": "n8n-nodes-base.salesmate",
+      "typeVersion": 1,
+      "position": [
+        450,
+        150
+      ],
+      "credentials": {
+        "salesmateApi": "Salesmate API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "company",
+        "operation": "get",
+        "id": "={{$node[\"Salesmate\"].json[\"id\"]}}"
+      },
+      "name": "Salesmate1",
+      "type": "n8n-nodes-base.salesmate",
+      "typeVersion": 1,
+      "position": [
+        600,
+        150
+      ],
+      "credentials": {
+        "salesmateApi": "Salesmate API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "company",
+        "operation": "update",
+        "id": "={{$node[\"Salesmate\"].json[\"id\"]}}",
+        "updateFields": {
+          "name": "=Updated{{$node[\"Salesmate\"].json[\"name\"]}}",
+          "description": "=Updated - {{$node[\"Salesmate\"].json[\"description\"]}}"
+        }
+      },
+      "name": "Salesmate2",
+      "type": "n8n-nodes-base.salesmate",
+      "typeVersion": 1,
+      "position": [
+        750,
+        150
+      ],
+      "credentials": {
+        "salesmateApi": "Salesmate API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "company",
+        "operation": "getAll",
+        "limit": 1,
+        "options": {
+          "fields": "id,name,description",
+          "sortBy": ""
+        },
+        "filters": {
+          "filtersUi": {
+            "conditions": {
+              "conditionsUi": [
+                {
+                  "condition": "STARTS_WITH",
+                  "value": "Updated"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "name": "Salesmate3",
+      "type": "n8n-nodes-base.salesmate",
+      "typeVersion": 1,
+      "position": [
+        900,
+        150
+      ],
+      "credentials": {
+        "salesmateApi": "Salesmate API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "company",
+        "operation": "delete",
+        "id": "={{$node[\"Salesmate\"].json[\"id\"]}}"
+      },
+      "name": "Salesmate4",
+      "type": "n8n-nodes-base.salesmate",
+      "typeVersion": 1,
+      "position": [
+        1050,
+        150
+      ],
+      "credentials": {
+        "salesmateApi": "Salesmate API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "deal",
+        "title": "=Deal{{Date.now()}}",
+        "owner": 1,
+        "primaryContact": 2,
+        "pipeline": "Sales",
+        "stage": "New (Untouched)",
+        "currency": "USD",
+        "additionalFields": {
+          "description": "description",
+          "dealValue": 100
+        }
+      },
+      "name": "Salesmate5",
+      "type": "n8n-nodes-base.salesmate",
+      "typeVersion": 1,
+      "position": [
+        450,
+        300
+      ],
+      "credentials": {
+        "salesmateApi": "Salesmate API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "deal",
+        "operation": "get",
+        "id": "={{$node[\"Salesmate5\"].json[\"id\"]}}"
+      },
+      "name": "Salesmate6",
+      "type": "n8n-nodes-base.salesmate",
+      "typeVersion": 1,
+      "position": [
+        600,
+        300
+      ],
+      "credentials": {
+        "salesmateApi": "Salesmate API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "deal",
+        "operation": "update",
+        "id": "={{$node[\"Salesmate5\"].json[\"id\"]}}",
+        "updateFields": {
+          "title": "=Updated{{$node[\"Salesmate6\"].json[\"title\"]}}",
+          "status": "Lost",
+          "stage": "Contacted"
+        }
+      },
+      "name": "Salesmate7",
+      "type": "n8n-nodes-base.salesmate",
+      "typeVersion": 1,
+      "position": [
+        750,
+        300
+      ],
+      "credentials": {
+        "salesmateApi": "Salesmate API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "deal",
+        "operation": "getAll",
+        "limit": 1,
+        "options": {
+          "sortBy": "createdAt",
+          "sortOrder": "desc"
+        }
+      },
+      "name": "Salesmate8",
+      "type": "n8n-nodes-base.salesmate",
+      "typeVersion": 1,
+      "position": [
+        900,
+        300
+      ],
+      "credentials": {
+        "salesmateApi": "Salesmate API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "deal",
+        "operation": "delete",
+        "id": "={{$node[\"Salesmate5\"].json[\"id\"]}}"
+      },
+      "name": "Salesmate9",
+      "type": "n8n-nodes-base.salesmate",
+      "typeVersion": 1,
+      "position": [
+        1050,
+        300
+      ],
+      "credentials": {
+        "salesmateApi": "Salesmate API creds"
+      }
+    },
+    {
+      "parameters": {
+        "title": "=Activity{{Date.now()}}",
+        "owner": 1,
+        "type": "meeting",
+        "additionalFields": {
+          "description": "act descrp",
+          "duration": 30
+        }
+      },
+      "name": "Salesmate10",
+      "type": "n8n-nodes-base.salesmate",
+      "typeVersion": 1,
+      "position": [
+        450,
+        450
+      ],
+      "credentials": {
+        "salesmateApi": "Salesmate API creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "id": "={{$node[\"Salesmate10\"].json[\"id\"]}}"
+      },
+      "name": "Salesmate11",
+      "type": "n8n-nodes-base.salesmate",
+      "typeVersion": 1,
+      "position": [
+        600,
+        450
+      ],
+      "credentials": {
+        "salesmateApi": "Salesmate API creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "id": "={{$node[\"Salesmate10\"].json[\"id\"]}}",
+        "updateFields": {
+          "title": "=Updated{{$node[\"Salesmate11\"].json[\"title\"]}}",
+          "description": "Updated description",
+          "isCompleted": true
+        }
+      },
+      "name": "Salesmate12",
+      "type": "n8n-nodes-base.salesmate",
+      "typeVersion": 1,
+      "position": [
+        750,
+        450
+      ],
+      "credentials": {
+        "salesmateApi": "Salesmate API creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "limit": 1,
+        "options": {
+          "sortBy": "createdAt",
+          "sortOrder": "desc"
+        }
+      },
+      "name": "Salesmate13",
+      "type": "n8n-nodes-base.salesmate",
+      "typeVersion": 1,
+      "position": [
+        900,
+        450
+      ],
+      "credentials": {
+        "salesmateApi": "Salesmate API creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "id": "={{$node[\"Salesmate10\"].json[\"id\"]}}"
+      },
+      "name": "Salesmate14",
+      "type": "n8n-nodes-base.salesmate",
+      "typeVersion": 1,
+      "position": [
+        1050,
+        450
+      ],
+      "credentials": {
+        "salesmateApi": "Salesmate API creds"
+      }
+    }
+  ],
+  "connections": {
+    "Salesmate": {
+      "main": [
+        [
+          {
+            "node": "Salesmate1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Salesmate1": {
+      "main": [
+        [
+          {
+            "node": "Salesmate2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Salesmate2": {
+      "main": [
+        [
+          {
+            "node": "Salesmate3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Salesmate3": {
+      "main": [
+        [
+          {
+            "node": "Salesmate4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Salesmate5": {
+      "main": [
+        [
+          {
+            "node": "Salesmate6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Salesmate6": {
+      "main": [
+        [
+          {
+            "node": "Salesmate7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Salesmate7": {
+      "main": [
+        [
+          {
+            "node": "Salesmate8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Salesmate8": {
+      "main": [
+        [
+          {
+            "node": "Salesmate9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Salesmate10": {
+      "main": [
+        [
+          {
+            "node": "Salesmate11",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Salesmate11": {
+      "main": [
+        [
+          {
+            "node": "Salesmate12",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Salesmate12": {
+      "main": [
+        [
+          {
+            "node": "Salesmate13",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Salesmate13": {
+      "main": [
+        [
+          {
+            "node": "Salesmate14",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Salesmate",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Salesmate5",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Salesmate10",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-07-06T12:49:19.325Z",
+  "updatedAt": "2021-07-09T13:11:16.807Z",
+  "settings": {},
+  "staticData": null
+}
