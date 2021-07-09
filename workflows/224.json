@@ -1,0 +1,363 @@
+{
+  "id": 224,
+  "name": "QuickBase:Record:create update getAll upsert:Report:run get:Field:getAll:File:download",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        250
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "field",
+        "tableId": "brkf6p68v",
+        "limit": 1,
+        "options": {}
+      },
+      "name": "Quick Base",
+      "type": "n8n-nodes-base.quickbase",
+      "typeVersion": 1,
+      "position": [
+        450,
+        90
+      ],
+      "credentials": {
+        "quickbaseApi": "Quick Base API creds"
+      }
+    },
+    {
+      "parameters": {
+        "tableId": "brkf6p68v",
+        "columns": "name",
+        "simple": false,
+        "options": {
+          "fields": [
+            2,
+            1,
+            6,
+            3
+          ]
+        }
+      },
+      "name": "Quick Base1",
+      "type": "n8n-nodes-base.quickbase",
+      "typeVersion": 1,
+      "position": [
+        590,
+        240
+      ],
+      "credentials": {
+        "quickbaseApi": "Quick Base API creds"
+      }
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "name",
+              "value": "=TestRecordName{{Date.now()}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Set",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        450,
+        240
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "tableId": "brkf6p68v",
+        "columns": "name",
+        "updateKey": "=name",
+        "simple": false,
+        "options": {
+          "fields": [
+            2,
+            1,
+            6,
+            3
+          ]
+        }
+      },
+      "name": "Quick Base2",
+      "type": "n8n-nodes-base.quickbase",
+      "typeVersion": 1,
+      "position": [
+        890,
+        240
+      ],
+      "credentials": {
+        "quickbaseApi": "Quick Base API creds"
+      }
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "name",
+              "value": "=UpdatedTestRecordName{{Date.now()}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Set1",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        740,
+        240
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "tableId": "brkf6p68v",
+        "limit": 1,
+        "options": {
+          "select": [
+            6,
+            3
+          ]
+        }
+      },
+      "name": "Quick Base3",
+      "type": "n8n-nodes-base.quickbase",
+      "typeVersion": 1,
+      "position": [
+        1040,
+        240
+      ],
+      "credentials": {
+        "quickbaseApi": "Quick Base API creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "upsert",
+        "tableId": "brkf6p68v",
+        "columns": "name",
+        "updateKey": "name",
+        "options": {
+          "fields": [
+            6,
+            3
+          ]
+        }
+      },
+      "name": "Quick Base4",
+      "type": "n8n-nodes-base.quickbase",
+      "typeVersion": 1,
+      "position": [
+        1340,
+        240
+      ],
+      "credentials": {
+        "quickbaseApi": "Quick Base API creds"
+      }
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "name",
+              "value": "=TestUpsertRecordName{{Date.now()}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Set2",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        1190,
+        240
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "report",
+        "operation": "run",
+        "tableId": "brkf6p68v",
+        "reportId": "1",
+        "returnAll": false,
+        "limit": 1
+      },
+      "name": "Quick Base5",
+      "type": "n8n-nodes-base.quickbase",
+      "typeVersion": 1,
+      "position": [
+        450,
+        390
+      ],
+      "credentials": {
+        "quickbaseApi": "Quick Base API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "report",
+        "tableId": "brkf6p68v",
+        "reportId": "1"
+      },
+      "name": "Quick Base6",
+      "type": "n8n-nodes-base.quickbase",
+      "typeVersion": 1,
+      "position": [
+        600,
+        390
+      ],
+      "credentials": {
+        "quickbaseApi": "Quick Base API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "file",
+        "tableId": "brkf6p68v",
+        "recordId": "1",
+        "fieldId": "9"
+      },
+      "name": "Quick Base7",
+      "type": "n8n-nodes-base.quickbase",
+      "typeVersion": 1,
+      "position": [
+        450,
+        540
+      ],
+      "credentials": {
+        "quickbaseApi": "Quick Base API creds"
+      }
+    }
+  ],
+  "connections": {
+    "Set": {
+      "main": [
+        [
+          {
+            "node": "Quick Base1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Quick Base1": {
+      "main": [
+        [
+          {
+            "node": "Set1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set1": {
+      "main": [
+        [
+          {
+            "node": "Quick Base2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Quick Base2": {
+      "main": [
+        [
+          {
+            "node": "Quick Base3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Quick Base3": {
+      "main": [
+        [
+          {
+            "node": "Set2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set2": {
+      "main": [
+        [
+          {
+            "node": "Quick Base4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Set",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Quick Base",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Quick Base5",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Quick Base7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Quick Base5": {
+      "main": [
+        [
+          {
+            "node": "Quick Base6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Quick Base7": {
+      "main": [
+        []
+      ]
+    }
+  },
+  "createdAt": "2021-07-05T14:32:19.990Z",
+  "updatedAt": "2021-07-09T12:39:46.228Z",
+  "settings": {},
+  "staticData": null
+}
