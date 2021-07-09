@@ -1,0 +1,53 @@
+{
+  "id": 223,
+  "name": "LingvaNex:Translate",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "text": "automation",
+        "translateTo": "de_DE",
+        "options": {
+          "from": "en_US"
+        }
+      },
+      "name": "LingvaNex",
+      "type": "n8n-nodes-base.lingvaNex",
+      "typeVersion": 1,
+      "position": [
+        500,
+        300
+      ],
+      "credentials": {
+        "lingvaNexApi": "LingvaNex API creds"
+      }
+    }
+  ],
+  "connections": {
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "LingvaNex",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-07-02T10:27:33.975Z",
+  "updatedAt": "2021-07-09T11:10:22.318Z",
+  "settings": {},
+  "staticData": null
+}
