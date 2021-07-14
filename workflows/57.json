@@ -30,7 +30,15 @@
       "parameters": {
         "url": "https://upload.wikimedia.org/wikipedia/commons/0/0b/ReceiptSwiss.jpg",
         "responseFormat": "file",
-        "options": {}
+        "options": {},
+        "headerParametersUi": {
+          "parameter": [
+            {
+              "name": "User-agent",
+              "value": "n8n-io app"
+            }
+          ]
+        }
       },
       "name": "HTTP Request",
       "type": "n8n-nodes-base.httpRequest",
@@ -71,11 +79,6 @@
     }
   ],
   "connections": {
-    "Mindee": {
-      "main": [
-        []
-      ]
-    },
     "Start": {
       "main": [
         [
@@ -116,7 +119,7 @@
     }
   },
   "createdAt": "2021-02-22T13:24:15.920Z",
-  "updatedAt": "2021-02-23T09:50:26.791Z",
+  "updatedAt": "2021-07-14T13:33:54.633Z",
   "settings": {},
   "staticData": null
 }

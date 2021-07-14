@@ -207,7 +207,7 @@
     {
       "parameters": {
         "authentication": "oAuth2",
-        "resource": "contactCompany",
+        "resource": "companyContact",
         "operation": "add",
         "contactId": "={{$node[\"Mautic5\"].json[\"id\"]}}",
         "companyId": "={{$node[\"Mautic\"].json[\"id\"]}}"
@@ -226,7 +226,7 @@
     {
       "parameters": {
         "authentication": "oAuth2",
-        "resource": "contactCompany",
+        "resource": "companyContact",
         "operation": "remove",
         "contactId": "={{$node[\"Mautic5\"].json[\"id\"]}}",
         "companyId": "={{$node[\"Mautic\"].json[\"id\"]}}"
@@ -402,7 +402,7 @@
     }
   },
   "createdAt": "2021-03-10T16:41:57.544Z",
-  "updatedAt": "2021-03-10T17:11:01.404Z",
+  "updatedAt": "2021-07-14T14:15:34.356Z",
   "settings": {},
   "staticData": null
 }
