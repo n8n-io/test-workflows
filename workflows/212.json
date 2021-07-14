@@ -1,0 +1,427 @@
+{
+  "id": 212,
+  "name": "Git:*",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        260,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "authentication": "gitPassword",
+        "operation": "clone",
+        "repositoryPath": "/tmp/nodeQA",
+        "sourceRepository": "https://github.com/nodemationqa/nodeQA"
+      },
+      "name": "Git",
+      "type": "n8n-nodes-base.git",
+      "typeVersion": 1,
+      "position": [
+        550,
+        250
+      ],
+      "credentials": {
+        "gitPassword": "Git creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "listConfig",
+        "repositoryPath": "/tmp/nodeQA"
+      },
+      "name": "Git1",
+      "type": "n8n-nodes-base.git",
+      "typeVersion": 1,
+      "position": [
+        700,
+        250
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "addConfig",
+        "repositoryPath": "/tmp/nodeQA",
+        "key": "user.email",
+        "value": "nodeqa@n8n.io",
+        "options": {
+          "mode": "set"
+        }
+      },
+      "name": "Git2",
+      "type": "n8n-nodes-base.git",
+      "typeVersion": 1,
+      "position": [
+        850,
+        250
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "add",
+        "repositoryPath": "/tmp/nodeQA",
+        "pathsToAdd": "/tmp/nodeQA/gitnode_added_file.md"
+      },
+      "name": "Git3",
+      "type": "n8n-nodes-base.git",
+      "typeVersion": 1,
+      "position": [
+        550,
+        450
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "status",
+        "repositoryPath": "/tmp/nodeQA"
+      },
+      "name": "Git4",
+      "type": "n8n-nodes-base.git",
+      "typeVersion": 1,
+      "position": [
+        700,
+        450
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "commit",
+        "repositoryPath": "/tmp/nodeQA",
+        "message": "=GitNode commit {{(new Date).toUTCString()}}",
+        "options": {}
+      },
+      "name": "Git5",
+      "type": "n8n-nodes-base.git",
+      "typeVersion": 1,
+      "position": [
+        850,
+        450
+      ]
+    },
+    {
+      "parameters": {
+        "repositoryPath": "/tmp/nodeQA",
+        "limit": 1,
+        "options": {}
+      },
+      "name": "Git6",
+      "type": "n8n-nodes-base.git",
+      "typeVersion": 1,
+      "position": [
+        1000,
+        450
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "addConfig",
+        "repositoryPath": "/tmp/nodeQA",
+        "key": "user.name",
+        "value": "nodemationqa",
+        "options": {
+          "mode": "set"
+        }
+      },
+      "name": "Git7",
+      "type": "n8n-nodes-base.git",
+      "typeVersion": 1,
+      "position": [
+        1000,
+        250
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "tag",
+        "repositoryPath": "/tmp/nodeQA",
+        "name": "=GitNode-tag-{{Date.now()}}"
+      },
+      "name": "Git8",
+      "type": "n8n-nodes-base.git",
+      "typeVersion": 1,
+      "position": [
+        1150,
+        450
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "pushTags",
+        "repositoryPath": "/tmp/nodeQA"
+      },
+      "name": "Git9",
+      "type": "n8n-nodes-base.git",
+      "typeVersion": 1,
+      "position": [
+        550,
+        650
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "push",
+        "repositoryPath": "/tmp/nodeQA",
+        "options": {}
+      },
+      "name": "Git10",
+      "type": "n8n-nodes-base.git",
+      "typeVersion": 1,
+      "position": [
+        700,
+        650
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "pull",
+        "repositoryPath": "/tmp/nodeQA"
+      },
+      "name": "Git11",
+      "type": "n8n-nodes-base.git",
+      "typeVersion": 1,
+      "position": [
+        850,
+        650
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "fetch",
+        "repositoryPath": "/tmp/nodeQA"
+      },
+      "name": "Git12",
+      "type": "n8n-nodes-base.git",
+      "typeVersion": 1,
+      "position": [
+        1000,
+        650
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "userSetup",
+        "repositoryPath": "/tmp/nodeQA"
+      },
+      "name": "Git13",
+      "type": "n8n-nodes-base.git",
+      "typeVersion": 1,
+      "position": [
+        1150,
+        650
+      ],
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "command": "rm -r /tmp/nodeQA"
+      },
+      "name": "Delete existing dir",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [
+        400,
+        250
+      ]
+    },
+    {
+      "parameters": {
+        "command": "=echo \"File added to repo at {{(new Date).toUTCString()}} using Git node\" > /tmp/nodeQA/gitnode_added_file.md"
+      },
+      "name": "Add file to dir",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [
+        1150,
+        250
+      ]
+    }
+  ],
+  "connections": {
+    "Git": {
+      "main": [
+        [
+          {
+            "node": "Git1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Delete existing dir",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Git1": {
+      "main": [
+        [
+          {
+            "node": "Git2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Git2": {
+      "main": [
+        [
+          {
+            "node": "Git7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Git3": {
+      "main": [
+        [
+          {
+            "node": "Git4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Git4": {
+      "main": [
+        [
+          {
+            "node": "Git5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Git5": {
+      "main": [
+        [
+          {
+            "node": "Git6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Git7": {
+      "main": [
+        [
+          {
+            "node": "Add file to dir",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Git6": {
+      "main": [
+        [
+          {
+            "node": "Git8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Git8": {
+      "main": [
+        [
+          {
+            "node": "Git9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Git9": {
+      "main": [
+        [
+          {
+            "node": "Git10",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Git10": {
+      "main": [
+        [
+          {
+            "node": "Git11",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Git11": {
+      "main": [
+        [
+          {
+            "node": "Git12",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Git12": {
+      "main": [
+        [
+          {
+            "node": "Git13",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Delete existing dir": {
+      "main": [
+        [
+          {
+            "node": "Git",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Add file to dir": {
+      "main": [
+        [
+          {
+            "node": "Git3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-06-01T08:10:39.407Z",
+  "updatedAt": "2021-06-07T09:50:34.256Z",
+  "settings": {},
+  "staticData": null
+}
