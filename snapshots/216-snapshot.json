@@ -1,0 +1,126 @@
+{
+  "data": {
+    "startData": {},
+    "resultData": {
+      "runData": {
+        "Start": [
+          {
+            "startTime": 1623782366031,
+            "executionTime": 1,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {}
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Handle JSON data": [
+          {
+            "startTime": 1623782366034,
+            "executionTime": 5,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "arr": [
+                        "json array"
+                      ],
+                      "str": "Testing Function Item node",
+                      "num": 1337,
+                      "obj": {
+                        "object": true
+                      }
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Handle Binary data": [
+          {
+            "startTime": 1623782366040,
+            "executionTime": 2,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "arr": [
+                        "json array"
+                      ],
+                      "str": "Testing Function Item node",
+                      "num": 1337,
+                      "obj": {
+                        "object": true
+                      },
+                      "binaryData": "NIL"
+                    },
+                    "binary": {
+                      "data": {
+                        "data": "SGVsbG8gZnJvbSBuOG4gRnVuY3Rpb24gaXRlbSB0ZXN0aW5nIHdvcmtmbG93",
+                        "mimeType": "text",
+                        "fileExtension": "text",
+                        "fileName": "testfile"
+                      }
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Handle Static data": [
+          {
+            "startTime": 1623782366042,
+            "executionTime": 3,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "arr": [
+                        "json array"
+                      ],
+                      "str": "Testing Function Item node",
+                      "num": 1337,
+                      "obj": {
+                        "object": true
+                      },
+                      "binaryData": "NIL",
+                      "globalStaticMessage": "Hello, Global Static Data",
+                      "nodeStaticMessage": "Hello, Node Static Data"
+                    },
+                    "binary": {
+                      "data": {
+                        "data": "SGVsbG8gZnJvbSBuOG4gRnVuY3Rpb24gaXRlbSB0ZXN0aW5nIHdvcmtmbG93",
+                        "mimeType": "text",
+                        "fileExtension": "text",
+                        "fileName": "testfile"
+                      }
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      "lastNodeExecuted": "Handle Static data"
+    },
+    "executionData": {
+      "contextData": {},
+      "nodeExecutionStack": [],
+      "waitingExecution": {}
+    }
+  },
+  "mode": "cli",
+  "startedAt": "2021-06-15T18:39:26.030Z",
+  "stoppedAt": "2021-06-15T18:39:26.045Z",
+  "finished": true
+}
