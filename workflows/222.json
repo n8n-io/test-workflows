@@ -1,0 +1,290 @@
+{
+  "id": 222,
+  "name": "Lemlist:Lead:create get unsubscribe delete:Campaign:getAll:Activity:getAll:Team:get:Unsubscribe:add getAll delete",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "limit": 1,
+        "filters": {
+          "campaignId": "={{$node[\"Lemlist1\"].json[\"_id\"]}}"
+        }
+      },
+      "name": "Lemlist",
+      "type": "n8n-nodes-base.lemlist",
+      "typeVersion": 1,
+      "position": [
+        590,
+        300
+      ],
+      "credentials": {
+        "lemlistApi": "Lemlist API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "campaign",
+        "limit": 1
+      },
+      "name": "Lemlist1",
+      "type": "n8n-nodes-base.lemlist",
+      "typeVersion": 1,
+      "position": [
+        450,
+        300
+      ],
+      "credentials": {
+        "lemlistApi": "Lemlist API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "team"
+      },
+      "name": "Lemlist2",
+      "type": "n8n-nodes-base.lemlist",
+      "typeVersion": 1,
+      "position": [
+        450,
+        150
+      ],
+      "credentials": {
+        "lemlistApi": "Lemlist API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "lead",
+        "campaignId": "={{$node[\"Lemlist1\"].json[\"_id\"]}}",
+        "email": "=fake{{Date.now()}}@gmail.com",
+        "additionalFields": {}
+      },
+      "name": "Lemlist3",
+      "type": "n8n-nodes-base.lemlist",
+      "typeVersion": 1,
+      "position": [
+        600,
+        150
+      ],
+      "credentials": {
+        "lemlistApi": "Lemlist API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "lead",
+        "operation": "get",
+        "email": "={{$node[\"Lemlist3\"].json[\"email\"]}}"
+      },
+      "name": "Lemlist4",
+      "type": "n8n-nodes-base.lemlist",
+      "typeVersion": 1,
+      "position": [
+        750,
+        150
+      ],
+      "credentials": {
+        "lemlistApi": "Lemlist API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "lead",
+        "operation": "unsubscribe",
+        "campaignId": "={{$node[\"Lemlist1\"].json[\"_id\"]}}",
+        "email": "={{$node[\"Lemlist3\"].json[\"email\"]}}"
+      },
+      "name": "Lemlist5",
+      "type": "n8n-nodes-base.lemlist",
+      "typeVersion": 1,
+      "position": [
+        900,
+        150
+      ],
+      "credentials": {
+        "lemlistApi": "Lemlist API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "lead",
+        "operation": "delete",
+        "campaignId": "={{$node[\"Lemlist1\"].json[\"_id\"]}}",
+        "email": "={{$node[\"Lemlist3\"].json[\"email\"]}}"
+      },
+      "name": "Lemlist6",
+      "type": "n8n-nodes-base.lemlist",
+      "typeVersion": 1,
+      "position": [
+        1050,
+        150
+      ],
+      "credentials": {
+        "lemlistApi": "Lemlist API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "unsubscribe",
+        "email": "=fakeemail{{Date.now()}}@mail.test"
+      },
+      "name": "Lemlist7",
+      "type": "n8n-nodes-base.lemlist",
+      "typeVersion": 1,
+      "position": [
+        450,
+        450
+      ],
+      "credentials": {
+        "lemlistApi": "Lemlist API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "unsubscribe",
+        "operation": "getAll",
+        "limit": 1
+      },
+      "name": "Lemlist9",
+      "type": "n8n-nodes-base.lemlist",
+      "typeVersion": 1,
+      "position": [
+        600,
+        450
+      ],
+      "credentials": {
+        "lemlistApi": "Lemlist API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "unsubscribe",
+        "operation": "delete",
+        "email": "={{$node[\"Lemlist7\"].json[\"email\"]}}"
+      },
+      "name": "Lemlist10",
+      "type": "n8n-nodes-base.lemlist",
+      "typeVersion": 1,
+      "position": [
+        750,
+        450
+      ],
+      "credentials": {
+        "lemlistApi": "Lemlist API creds"
+      }
+    }
+  ],
+  "connections": {
+    "Lemlist": {
+      "main": [
+        []
+      ]
+    },
+    "Lemlist1": {
+      "main": [
+        [
+          {
+            "node": "Lemlist",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Lemlist3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Lemlist3": {
+      "main": [
+        [
+          {
+            "node": "Lemlist4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Lemlist4": {
+      "main": [
+        [
+          {
+            "node": "Lemlist5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Lemlist5": {
+      "main": [
+        [
+          {
+            "node": "Lemlist6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Lemlist1",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Lemlist2",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Lemlist7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Lemlist7": {
+      "main": [
+        [
+          {
+            "node": "Lemlist9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Lemlist9": {
+      "main": [
+        [
+          {
+            "node": "Lemlist10",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-07-02T07:59:24.159Z",
+  "updatedAt": "2021-07-09T10:56:03.728Z",
+  "settings": {},
+  "staticData": null
+}
