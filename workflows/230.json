@@ -1,0 +1,547 @@
+{
+  "id": 230,
+  "name": "Stripe:Balance:*:Customer:*:Source:*:Coupon:*:Token:*:CustomerCard:*:Charge:get getAll update",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        270,
+        300
+      ]
+    },
+    {
+      "parameters": {},
+      "name": "Stripe",
+      "type": "n8n-nodes-base.stripe",
+      "typeVersion": 1,
+      "position": [
+        500,
+        300
+      ],
+      "credentials": {
+        "stripeApi": "Stripe API Test creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "customer",
+        "operation": "create",
+        "name": "=CustomerName{{Date.now()}}",
+        "additionalFields": {
+          "description": "Customer descr",
+          "email": "=customer{{Date.now()}}@fakeemail.com",
+          "phone": "=22 333 444"
+        },
+        "type": "wechat"
+      },
+      "name": "Stripe1",
+      "type": "n8n-nodes-base.stripe",
+      "typeVersion": 1,
+      "position": [
+        650,
+        350
+      ],
+      "credentials": {
+        "stripeApi": "Stripe API Test creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "customer",
+        "customerId": "={{$node[\"Stripe1\"].json[\"id\"]}}",
+        "type": "wechat"
+      },
+      "name": "Stripe2",
+      "type": "n8n-nodes-base.stripe",
+      "typeVersion": 1,
+      "position": [
+        800,
+        350
+      ],
+      "credentials": {
+        "stripeApi": "Stripe API Test creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "customer",
+        "operation": "update",
+        "customerId": "={{$node[\"Stripe1\"].json[\"id\"]}}",
+        "updateFields": {
+          "description": "Updated descr",
+          "name": "=Updated{{$node[\"Stripe1\"].json[\"name\"]}}"
+        },
+        "type": "wechat"
+      },
+      "name": "Stripe3",
+      "type": "n8n-nodes-base.stripe",
+      "typeVersion": 1,
+      "position": [
+        950,
+        350
+      ],
+      "credentials": {
+        "stripeApi": "Stripe API Test creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "customer",
+        "operation": "getAll",
+        "limit": 1,
+        "filters": {},
+        "type": "wechat"
+      },
+      "name": "Stripe4",
+      "type": "n8n-nodes-base.stripe",
+      "typeVersion": 1,
+      "position": [
+        1110,
+        350
+      ],
+      "credentials": {
+        "stripeApi": "Stripe API Test creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "customer",
+        "operation": "delete",
+        "customerId": "={{$node[\"Stripe1\"].json[\"id\"]}}",
+        "type": "wechat"
+      },
+      "name": "Stripe5",
+      "type": "n8n-nodes-base.stripe",
+      "typeVersion": 1,
+      "position": [
+        1910,
+        350
+      ],
+      "credentials": {
+        "stripeApi": "Stripe API Test creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "source",
+        "operation": "create",
+        "customerId": "={{$node[\"Stripe1\"].json[\"id\"]}}",
+        "amount": 8,
+        "currency": "eur",
+        "additionalFields": {},
+        "type": "wechat"
+      },
+      "name": "Stripe6",
+      "type": "n8n-nodes-base.stripe",
+      "typeVersion": 1,
+      "position": [
+        960,
+        500
+      ],
+      "credentials": {
+        "stripeApi": "Stripe API Test creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "source",
+        "sourceId": "={{$node[\"Stripe6\"].json[\"id\"]}}",
+        "type": "wechat"
+      },
+      "name": "Stripe7",
+      "type": "n8n-nodes-base.stripe",
+      "typeVersion": 1,
+      "position": [
+        1110,
+        500
+      ],
+      "credentials": {
+        "stripeApi": "Stripe API Test creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "coupon",
+        "percentOff": 8,
+        "type": "percent"
+      },
+      "name": "Stripe9",
+      "type": "n8n-nodes-base.stripe",
+      "typeVersion": 1,
+      "position": [
+        1310,
+        250
+      ],
+      "credentials": {
+        "stripeApi": "Stripe API Test creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "coupon",
+        "operation": "getAll",
+        "limit": 1,
+        "type": "percent"
+      },
+      "name": "Stripe10",
+      "type": "n8n-nodes-base.stripe",
+      "typeVersion": 1,
+      "position": [
+        1460,
+        250
+      ],
+      "credentials": {
+        "stripeApi": "Stripe API Test creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "token",
+        "number": "4242424242424242",
+        "cvc": "314",
+        "expirationMonth": "12",
+        "expirationYear": "2025"
+      },
+      "name": "Stripe11",
+      "type": "n8n-nodes-base.stripe",
+      "typeVersion": 1,
+      "position": [
+        1310,
+        400
+      ],
+      "credentials": {
+        "stripeApi": "Stripe API Test creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "customerCard",
+        "operation": "add",
+        "customerId": "={{$node[\"Stripe1\"].json[\"id\"]}}",
+        "token": "={{$node[\"Stripe11\"].json[\"id\"]}}"
+      },
+      "name": "Stripe12",
+      "type": "n8n-nodes-base.stripe",
+      "typeVersion": 1,
+      "position": [
+        1310,
+        550
+      ],
+      "credentials": {
+        "stripeApi": "Stripe API Test creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "customerCard",
+        "customerId": "={{$node[\"Stripe1\"].json[\"id\"]}}",
+        "sourceId": "={{$node[\"Stripe6\"].json[\"id\"]}}"
+      },
+      "name": "Stripe13",
+      "type": "n8n-nodes-base.stripe",
+      "typeVersion": 1,
+      "position": [
+        1470,
+        550
+      ],
+      "credentials": {
+        "stripeApi": "Stripe API Test creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "customerCard",
+        "operation": "remove",
+        "customerId": "={{$node[\"Stripe1\"].json[\"id\"]}}",
+        "cardId": "={{$node[\"Stripe12\"].json[\"id\"]}}"
+      },
+      "name": "Stripe14",
+      "type": "n8n-nodes-base.stripe",
+      "typeVersion": 1,
+      "position": [
+        1620,
+        550
+      ],
+      "credentials": {
+        "stripeApi": "Stripe API Test creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "charge",
+        "operation": "getAll",
+        "limit": 1,
+        "type": "wechat"
+      },
+      "name": "Stripe15",
+      "type": "n8n-nodes-base.stripe",
+      "typeVersion": 1,
+      "position": [
+        500,
+        150
+      ],
+      "credentials": {
+        "stripeApi": "Stripe API Test creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "charge",
+        "chargeId": "={{$node[\"Stripe15\"].json[\"id\"]}}",
+        "type": "wechat"
+      },
+      "name": "Stripe17",
+      "type": "n8n-nodes-base.stripe",
+      "typeVersion": 1,
+      "position": [
+        650,
+        150
+      ],
+      "credentials": {
+        "stripeApi": "Stripe API Test creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "charge",
+        "operation": "update",
+        "chargeId": "={{$node[\"Stripe15\"].json[\"id\"]}}",
+        "updateFields": {
+          "description": "=Update Description {{(new Date()).toString()}}"
+        },
+        "type": "wechat"
+      },
+      "name": "Stripe19",
+      "type": "n8n-nodes-base.stripe",
+      "typeVersion": 1,
+      "position": [
+        800,
+        150
+      ],
+      "credentials": {
+        "stripeApi": "Stripe API Test creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "source",
+        "operation": "delete",
+        "customerId": "={{$node[\"Stripe1\"].json[\"id\"]}}",
+        "sourceId": "={{$node[\"Stripe6\"].json[\"id\"]}}",
+        "type": "wechat"
+      },
+      "name": "Stripe8",
+      "type": "n8n-nodes-base.stripe",
+      "typeVersion": 1,
+      "position": [
+        1760,
+        500
+      ],
+      "credentials": {
+        "stripeApi": "Stripe API Test creds"
+      }
+    }
+  ],
+  "connections": {
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Stripe",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Stripe15",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Stripe": {
+      "main": [
+        [
+          {
+            "node": "Stripe1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Stripe1": {
+      "main": [
+        [
+          {
+            "node": "Stripe2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Stripe2": {
+      "main": [
+        [
+          {
+            "node": "Stripe3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Stripe3": {
+      "main": [
+        [
+          {
+            "node": "Stripe4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Stripe4": {
+      "main": [
+        [
+          {
+            "node": "Stripe6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Stripe6": {
+      "main": [
+        [
+          {
+            "node": "Stripe7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Stripe7": {
+      "main": [
+        [
+          {
+            "node": "Stripe9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Stripe9": {
+      "main": [
+        [
+          {
+            "node": "Stripe10",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Stripe10": {
+      "main": [
+        [
+          {
+            "node": "Stripe11",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Stripe11": {
+      "main": [
+        [
+          {
+            "node": "Stripe12",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Stripe12": {
+      "main": [
+        [
+          {
+            "node": "Stripe13",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Stripe13": {
+      "main": [
+        [
+          {
+            "node": "Stripe14",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Stripe14": {
+      "main": [
+        [
+          {
+            "node": "Stripe8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Stripe15": {
+      "main": [
+        [
+          {
+            "node": "Stripe17",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Stripe17": {
+      "main": [
+        [
+          {
+            "node": "Stripe19",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Stripe8": {
+      "main": [
+        [
+          {
+            "node": "Stripe5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-07-16T13:47:43.034Z",
+  "updatedAt": "2021-07-16T16:00:22.935Z",
+  "settings": {},
+  "staticData": null
+}
