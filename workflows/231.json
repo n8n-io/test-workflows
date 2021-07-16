@@ -1,0 +1,316 @@
+{
+  "id": 231,
+  "name": "Home Assistant:Template:create:Config:get check:Service:getAll call:State:getAll get upsert:Log:getErrorlogs getLogbookEntries",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        270,
+        300
+      ]
+    },
+    {
+      "parameters": {},
+      "name": "Home Assistant",
+      "type": "n8n-nodes-base.homeAssistant",
+      "typeVersion": 1,
+      "position": [
+        590,
+        220
+      ],
+      "credentials": {
+        "homeAssistantApi": "Home Assistant Api creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "service",
+        "limit": 1
+      },
+      "name": "Home Assistant1",
+      "type": "n8n-nodes-base.homeAssistant",
+      "typeVersion": 1,
+      "position": [
+        590,
+        370
+      ],
+      "credentials": {
+        "homeAssistantApi": "Home Assistant Api creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "service",
+        "operation": "call",
+        "domain": "mqtt",
+        "service": "publish",
+        "serviceAttributes": {
+          "attributes": [
+            {
+              "name": "payload",
+              "value": "test"
+            },
+            {
+              "name": "topic",
+              "value": "home-assistant-topic"
+            }
+          ]
+        }
+      },
+      "name": "Home Assistant2",
+      "type": "n8n-nodes-base.homeAssistant",
+      "typeVersion": 1,
+      "position": [
+        770,
+        370
+      ],
+      "credentials": {
+        "homeAssistantApi": "Home Assistant Api creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "state",
+        "operation": "getAll",
+        "limit": 1
+      },
+      "name": "Home Assistant3",
+      "type": "n8n-nodes-base.homeAssistant",
+      "typeVersion": 1,
+      "position": [
+        950,
+        220
+      ],
+      "credentials": {
+        "homeAssistantApi": "Home Assistant Api creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "state",
+        "entityId": "={{$node[\"Home Assistant3\"].json[\"entity_id\"]}}"
+      },
+      "name": "Home Assistant4",
+      "type": "n8n-nodes-base.homeAssistant",
+      "typeVersion": 1,
+      "position": [
+        1110,
+        220
+      ],
+      "credentials": {
+        "homeAssistantApi": "Home Assistant Api creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "state",
+        "operation": "upsert",
+        "entityId": "={{$node[\"Home Assistant3\"].json[\"entity_id\"]}}",
+        "state": "under_horizon",
+        "stateAttributes": {
+          "attributes": [
+            {
+              "name": "testing",
+              "value": "test2"
+            }
+          ]
+        }
+      },
+      "name": "Home Assistant5",
+      "type": "n8n-nodes-base.homeAssistant",
+      "typeVersion": 1,
+      "position": [
+        1270,
+        220
+      ],
+      "credentials": {
+        "homeAssistantApi": "Home Assistant Api creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "check"
+      },
+      "name": "Home Assistant8",
+      "type": "n8n-nodes-base.homeAssistant",
+      "typeVersion": 1,
+      "position": [
+        770,
+        220
+      ],
+      "credentials": {
+        "homeAssistantApi": "Home Assistant Api creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "log"
+      },
+      "name": "Home Assistant9",
+      "type": "n8n-nodes-base.homeAssistant",
+      "typeVersion": 1,
+      "position": [
+        950,
+        370
+      ],
+      "credentials": {
+        "homeAssistantApi": "Home Assistant Api creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "log",
+        "operation": "getLogbookEntries",
+        "additionalFields": {
+          "endTime": "2021-05-12T12:19:00.000Z"
+        }
+      },
+      "name": "Home Assistant10",
+      "type": "n8n-nodes-base.homeAssistant",
+      "typeVersion": 1,
+      "position": [
+        1100,
+        370
+      ],
+      "credentials": {
+        "homeAssistantApi": "Home Assistant Api creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "template",
+        "template": "It is {{ now() }} right now !"
+      },
+      "name": "Home Assistant11",
+      "type": "n8n-nodes-base.homeAssistant",
+      "typeVersion": 1,
+      "position": [
+        420,
+        190
+      ],
+      "credentials": {
+        "homeAssistantApi": "Home Assistant Api creds"
+      }
+    }
+  ],
+  "connections": {
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Home Assistant11",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Home Assistant": {
+      "main": [
+        [
+          {
+            "node": "Home Assistant8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Home Assistant1": {
+      "main": [
+        [
+          {
+            "node": "Home Assistant2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Home Assistant3": {
+      "main": [
+        [
+          {
+            "node": "Home Assistant4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Home Assistant4": {
+      "main": [
+        [
+          {
+            "node": "Home Assistant5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Home Assistant9": {
+      "main": [
+        [
+          {
+            "node": "Home Assistant10",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Home Assistant11": {
+      "main": [
+        [
+          {
+            "node": "Home Assistant",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Home Assistant8": {
+      "main": [
+        [
+          {
+            "node": "Home Assistant1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Home Assistant2": {
+      "main": [
+        [
+          {
+            "node": "Home Assistant3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Home Assistant5": {
+      "main": [
+        [
+          {
+            "node": "Home Assistant9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-07-16T13:48:00.731Z",
+  "updatedAt": "2021-07-16T16:20:04.637Z",
+  "settings": {},
+  "staticData": null
+}
