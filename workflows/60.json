@@ -29,7 +29,7 @@
         350
       ],
       "credentials": {
-        "taigaCloudApi": "Taiga Cloud creds"
+        "taigaApi": "taigaApi"
       }
     },
     {
@@ -49,7 +49,7 @@
         350
       ],
       "credentials": {
-        "taigaCloudApi": "Taiga Cloud creds"
+        "taigaApi": "taigaApi"
       }
     },
     {
@@ -65,14 +65,15 @@
         350
       ],
       "credentials": {
-        "taigaCloudApi": "Taiga Cloud creds"
+        "taigaApi": "taigaApi"
       }
     },
     {
       "parameters": {
         "operation": "getAll",
         "projectId": 399742,
-        "limit": 1
+        "limit": 1,
+        "filters": {}
       },
       "name": "Taiga3",
       "type": "n8n-nodes-base.taiga",
@@ -82,7 +83,7 @@
         350
       ],
       "credentials": {
-        "taigaCloudApi": "Taiga Cloud creds"
+        "taigaApi": "taigaApi"
       }
     },
     {
@@ -98,7 +99,7 @@
         350
       ],
       "credentials": {
-        "taigaCloudApi": "Taiga Cloud creds"
+        "taigaApi": "taigaApi"
       }
     }
   ],
@@ -160,7 +161,7 @@
     }
   },
   "createdAt": "2021-02-23T15:27:09.090Z",
-  "updatedAt": "2021-02-23T15:29:22.526Z",
+  "updatedAt": "2021-07-16T07:21:35.499Z",
   "settings": {},
   "staticData": null
 }

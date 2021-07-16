@@ -91,7 +91,8 @@
       ],
       "credentials": {
         "autopilotApi": "Autopilot API creds"
-      }
+      },
+      "notes": "IGNORED_PROPERTIES=list_id,name,message"
     },
     {
       "parameters": {
@@ -113,7 +114,7 @@
     {
       "parameters": {
         "resource": "contactList",
-        "listId": "={{$node[\"Autopilot4\"].json[\"list_id\"]}}",
+        "listId": "={{$node[\"Autopilot5\"].json[\"list_id\"]}}",
         "contactId": "={{$node[\"Autopilot\"].json[\"contact_id\"]}}"
       },
       "name": "Autopilot6",
@@ -149,7 +150,7 @@
       "parameters": {
         "resource": "contactList",
         "operation": "getAll",
-        "listId": "={{$node[\"Autopilot4\"].json[\"list_id\"]}}",
+        "listId": "={{$node[\"Autopilot5\"].json[\"list_id\"]}}",
         "limit": 1
       },
       "name": "Autopilot8",
@@ -167,7 +168,7 @@
       "parameters": {
         "resource": "contactList",
         "operation": "remove",
-        "listId": "={{$node[\"Autopilot4\"].json[\"list_id\"]}}",
+        "listId": "={{$node[\"Autopilot5\"].json[\"list_id\"]}}",
         "contactId": "={{$node[\"Autopilot\"].json[\"contact_id\"]}}"
       },
       "name": "Autopilot9",
@@ -295,7 +296,7 @@
     }
   },
   "createdAt": "2021-06-25T06:40:20.761Z",
-  "updatedAt": "2021-07-08T16:10:50.902Z",
+  "updatedAt": "2021-07-16T09:01:07.467Z",
   "settings": {},
   "staticData": null
 }
