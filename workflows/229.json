@@ -1,0 +1,725 @@
+{
+  "id": 229,
+  "name": "Google Docs:Document:create get update",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        270,
+        310
+      ]
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "folderId": "default",
+        "title": "=Test{{Date.now()}}"
+      },
+      "name": "Google Docs1",
+      "type": "n8n-nodes-base.googleDocs",
+      "typeVersion": 1,
+      "position": [
+        420,
+        310
+      ],
+      "credentials": {
+        "googleDocsOAuth2Api": "Google Docs OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "operation": "get",
+        "documentURL": "={{$node[\"Google Docs1\"].json[\"id\"]}}"
+      },
+      "name": "Google Docs",
+      "type": "n8n-nodes-base.googleDocs",
+      "typeVersion": 1,
+      "position": [
+        570,
+        310
+      ],
+      "credentials": {
+        "googleDocsOAuth2Api": "Google Docs OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "operation": "update",
+        "documentURL": "={{$node[\"Google Docs\"].json[\"documentId\"]}}",
+        "actionsUi": {
+          "actionFields": [
+            {
+              "object": "header",
+              "action": "create"
+            }
+          ]
+        }
+      },
+      "name": "add header",
+      "type": "n8n-nodes-base.googleDocs",
+      "typeVersion": 1,
+      "position": [
+        750,
+        160
+      ],
+      "credentials": {
+        "googleDocsOAuth2Api": "Google Docs OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "operation": "update",
+        "documentURL": "={{$node[\"Google Docs\"].json[\"documentId\"]}}",
+        "actionsUi": {
+          "actionFields": [
+            {
+              "object": "footer",
+              "action": "create"
+            }
+          ]
+        }
+      },
+      "name": "add footer",
+      "type": "n8n-nodes-base.googleDocs",
+      "typeVersion": 1,
+      "position": [
+        750,
+        310
+      ],
+      "credentials": {
+        "googleDocsOAuth2Api": "Google Docs OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "operation": "update",
+        "documentURL": "={{$node[\"Google Docs\"].json[\"documentId\"]}}",
+        "simple": false,
+        "actionsUi": {
+          "actionFields": [
+            {
+              "object": "footer",
+              "action": "delete",
+              "footerId": "={{$node[\"add footer\"].json[\"footerId\"]}}"
+            }
+          ]
+        }
+      },
+      "name": "delete footer",
+      "type": "n8n-nodes-base.googleDocs",
+      "typeVersion": 1,
+      "position": [
+        900,
+        310
+      ],
+      "credentials": {
+        "googleDocsOAuth2Api": "Google Docs OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "operation": "update",
+        "documentURL": "={{$node[\"Google Docs\"].json[\"documentId\"]}}",
+        "simple": false,
+        "actionsUi": {
+          "actionFields": [
+            {
+              "action": "replaceAll",
+              "text": "lorem",
+              "replaceText": "n8n"
+            }
+          ]
+        }
+      },
+      "name": "replace",
+      "type": "n8n-nodes-base.googleDocs",
+      "typeVersion": 1,
+      "position": [
+        900,
+        460
+      ],
+      "credentials": {
+        "googleDocsOAuth2Api": "Google Docs OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "operation": "update",
+        "documentURL": "={{$node[\"Google Docs\"].json[\"documentId\"]}}",
+        "simple": false,
+        "actionsUi": {
+          "actionFields": [
+            {
+              "object": "paragraphBullets",
+              "action": "create",
+              "startIndex": 1,
+              "endIndex": 5
+            }
+          ]
+        }
+      },
+      "name": "add bullet",
+      "type": "n8n-nodes-base.googleDocs",
+      "typeVersion": 1,
+      "position": [
+        1180,
+        150
+      ],
+      "credentials": {
+        "googleDocsOAuth2Api": "Google Docs OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "operation": "update",
+        "documentURL": "={{$node[\"Google Docs\"].json[\"documentId\"]}}",
+        "simple": false,
+        "actionsUi": {
+          "actionFields": [
+            {
+              "object": "table",
+              "action": "insert",
+              "rows": 3,
+              "columns": 2
+            }
+          ]
+        }
+      },
+      "name": "add table",
+      "type": "n8n-nodes-base.googleDocs",
+      "typeVersion": 1,
+      "position": [
+        1180,
+        290
+      ],
+      "credentials": {
+        "googleDocsOAuth2Api": "Google Docs OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "operation": "update",
+        "documentURL": "={{$node[\"Google Docs\"].json[\"documentId\"]}}",
+        "simple": false,
+        "actionsUi": {
+          "actionFields": [
+            {
+              "object": "tableColumn",
+              "action": "insert",
+              "index": 237,
+              "rowIndex": 1,
+              "columnIndex": 1
+            }
+          ]
+        }
+      },
+      "name": "add column",
+      "type": "n8n-nodes-base.googleDocs",
+      "typeVersion": 1,
+      "position": [
+        1330,
+        290
+      ],
+      "credentials": {
+        "googleDocsOAuth2Api": "Google Docs OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "operation": "update",
+        "documentURL": "={{$node[\"Google Docs\"].json[\"documentId\"]}}",
+        "simple": false,
+        "actionsUi": {
+          "actionFields": [
+            {
+              "object": "tableRow",
+              "action": "insert",
+              "insertPosition": false,
+              "index": 237,
+              "rowIndex": 1,
+              "columnIndex": 1
+            }
+          ]
+        }
+      },
+      "name": "add row",
+      "type": "n8n-nodes-base.googleDocs",
+      "typeVersion": 1,
+      "position": [
+        1480,
+        290
+      ],
+      "credentials": {
+        "googleDocsOAuth2Api": "Google Docs OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "operation": "update",
+        "documentURL": "={{$node[\"Google Docs\"].json[\"documentId\"]}}",
+        "simple": false,
+        "actionsUi": {
+          "actionFields": [
+            {
+              "object": "tableRow",
+              "action": "delete",
+              "index": 237,
+              "rowIndex": 1,
+              "columnIndex": 1
+            }
+          ]
+        }
+      },
+      "name": "delete row",
+      "type": "n8n-nodes-base.googleDocs",
+      "typeVersion": 1,
+      "position": [
+        1630,
+        290
+      ],
+      "credentials": {
+        "googleDocsOAuth2Api": "Google Docs OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "operation": "update",
+        "documentURL": "={{$node[\"Google Docs\"].json[\"documentId\"]}}",
+        "simple": false,
+        "actionsUi": {
+          "actionFields": [
+            {
+              "object": "tableColumn",
+              "action": "delete",
+              "index": 237,
+              "rowIndex": 1,
+              "columnIndex": 1
+            }
+          ]
+        }
+      },
+      "name": "delete column",
+      "type": "n8n-nodes-base.googleDocs",
+      "typeVersion": 1,
+      "position": [
+        1770,
+        290
+      ],
+      "credentials": {
+        "googleDocsOAuth2Api": "Google Docs OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "operation": "update",
+        "documentURL": "={{$node[\"Google Docs\"].json[\"documentId\"]}}",
+        "simple": false,
+        "actionsUi": {
+          "actionFields": [
+            {
+              "object": "paragraphBullets",
+              "action": "delete",
+              "startIndex": 1,
+              "endIndex": 5
+            }
+          ]
+        }
+      },
+      "name": "delete bullet",
+      "type": "n8n-nodes-base.googleDocs",
+      "typeVersion": 1,
+      "position": [
+        1330,
+        150
+      ],
+      "credentials": {
+        "googleDocsOAuth2Api": "Google Docs OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "operation": "update",
+        "documentURL": "={{$node[\"Google Docs\"].json[\"documentId\"]}}",
+        "simple": false,
+        "actionsUi": {
+          "actionFields": [
+            {
+              "object": "header",
+              "action": "delete",
+              "headerId": "={{$node[\"add header\"].json[\"headerId\"]}}"
+            }
+          ]
+        }
+      },
+      "name": "delete header",
+      "type": "n8n-nodes-base.googleDocs",
+      "typeVersion": 1,
+      "position": [
+        900,
+        160
+      ],
+      "credentials": {
+        "googleDocsOAuth2Api": "Google Docs OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "operation": "update",
+        "documentURL": "={{$node[\"Google Docs\"].json[\"documentId\"]}}",
+        "simple": false,
+        "actionsUi": {
+          "actionFields": [
+            {
+              "object": "namedRange",
+              "action": "create",
+              "name": "table_index",
+              "startIndex": 137,
+              "endIndex": 250
+            }
+          ]
+        }
+      },
+      "name": "create namedrange",
+      "type": "n8n-nodes-base.googleDocs",
+      "typeVersion": 1,
+      "position": [
+        1180,
+        440
+      ],
+      "credentials": {
+        "googleDocsOAuth2Api": "Google Docs OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "operation": "update",
+        "documentURL": "={{$node[\"Google Docs\"].json[\"documentId\"]}}",
+        "simple": false,
+        "actionsUi": {
+          "actionFields": [
+            {
+              "object": "namedRange",
+              "action": "delete",
+              "namedRangeReference": "name",
+              "value": "table_index"
+            }
+          ]
+        }
+      },
+      "name": "delete namedrange",
+      "type": "n8n-nodes-base.googleDocs",
+      "typeVersion": 1,
+      "position": [
+        1360,
+        440
+      ],
+      "credentials": {
+        "googleDocsOAuth2Api": "Google Docs OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "operation": "update",
+        "documentURL": "={{$node[\"Google Docs\"].json[\"documentId\"]}}",
+        "simple": false,
+        "actionsUi": {
+          "actionFields": [
+            {
+              "object": "pageBreak",
+              "action": "insert",
+              "locationChoice": "location",
+              "index": 15
+            }
+          ]
+        }
+      },
+      "name": "add page break",
+      "type": "n8n-nodes-base.googleDocs",
+      "typeVersion": 1,
+      "position": [
+        1190,
+        590
+      ],
+      "credentials": {
+        "googleDocsOAuth2Api": "Google Docs OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "operation": "update",
+        "documentURL": "={{$node[\"Google Docs\"].json[\"documentId\"]}}",
+        "actionsUi": {
+          "actionFields": [
+            {
+              "action": "insert",
+              "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque sit doloribus dolorem repellendus eum deserunt numquam ipsa. Minus natus nostrum perferendis illo consectetur sapiente neque, laboriosam ipsum, officiis, necessitatibus beatae?"
+            }
+          ]
+        }
+      },
+      "name": "insert text1",
+      "type": "n8n-nodes-base.googleDocs",
+      "typeVersion": 1,
+      "position": [
+        750,
+        460
+      ],
+      "credentials": {
+        "googleDocsOAuth2Api": "Google Docs OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "operation": "delete",
+        "fileId": "={{$node[\"Google Docs\"].json[\"documentId\"]}}"
+      },
+      "name": "Google Drive",
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 1,
+      "position": [
+        1400,
+        640
+      ],
+      "credentials": {
+        "googleDriveOAuth2Api": "Google Drive creds"
+      }
+    }
+  ],
+  "connections": {
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Google Docs1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Docs1": {
+      "main": [
+        [
+          {
+            "node": "Google Docs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "add header": {
+      "main": [
+        [
+          {
+            "node": "delete header",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "add footer": {
+      "main": [
+        [
+          {
+            "node": "delete footer",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "replace": {
+      "main": [
+        [
+          {
+            "node": "add bullet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "add bullet": {
+      "main": [
+        [
+          {
+            "node": "delete bullet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "add table": {
+      "main": [
+        [
+          {
+            "node": "add column",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "add column": {
+      "main": [
+        [
+          {
+            "node": "add row",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "add row": {
+      "main": [
+        [
+          {
+            "node": "delete row",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "delete row": {
+      "main": [
+        [
+          {
+            "node": "delete column",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "create namedrange": {
+      "main": [
+        [
+          {
+            "node": "delete namedrange",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "insert text1": {
+      "main": [
+        [
+          {
+            "node": "replace",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Docs": {
+      "main": [
+        [
+          {
+            "node": "add header",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "delete header": {
+      "main": [
+        [
+          {
+            "node": "add footer",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "delete footer": {
+      "main": [
+        [
+          {
+            "node": "insert text1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "delete bullet": {
+      "main": [
+        [
+          {
+            "node": "add table",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "delete column": {
+      "main": [
+        [
+          {
+            "node": "create namedrange",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "delete namedrange": {
+      "main": [
+        [
+          {
+            "node": "add page break",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "add page break": {
+      "main": [
+        [
+          {
+            "node": "Google Drive",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-07-13T10:19:23.636Z",
+  "updatedAt": "2021-07-16T13:26:22.232Z",
+  "settings": {},
+  "staticData": null
+}
