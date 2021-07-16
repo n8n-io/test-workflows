@@ -5,7 +5,7 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1626270832629,
+            "startTime": 1626363940947,
             "executionTime": 1,
             "data": {
               "main": [
@@ -20,8 +20,8 @@
         ],
         "Cortex": [
           {
-            "startTime": 1626270832630,
-            "executionTime": 757,
+            "startTime": 1626363940950,
+            "executionTime": 473,
             "data": {
               "main": [
                 [
@@ -37,26 +37,26 @@
                       "parameters": {
                         "object": true
                       },
-                      "createdAt": 1626270832733,
                       "data": "129.178.188.205",
                       "message": "",
                       "createdBy": "nodeqa",
                       "cacheTag": "5953cab2051fcc42ae726fbb5cf121ad",
                       "dataType": "ip",
+                      "createdAt": 1626363941138,
                       "workerName": "Abuse_Finder_3_0",
                       "_type": "job",
-                      "_id": "LQ9LpXoBqTfm9nMOmFpj",
+                      "_id": "wA_YqnoBqTfm9nMOUVoa",
                       "_parent": {
                         "object": true
                       },
-                      "_routing": "LQ9LpXoBqTfm9nMOmFpj",
-                      "_seqNo": 934,
+                      "_routing": "wA_YqnoBqTfm9nMOUVoa",
+                      "_seqNo": 1090,
                       "_primaryTerm": 20,
-                      "id": "LQ9LpXoBqTfm9nMOmFpj",
+                      "id": "wA_YqnoBqTfm9nMOUVoa",
                       "analyzerId": "f4abc1b633b80f45af165970793fd4fd",
                       "analyzerName": "Abuse_Finder_3_0",
                       "analyzerDefinitionId": "Abuse_Finder_3_0",
-                      "date": 1626270832733
+                      "date": 1626363941138
                     }
                   }
                 ]
@@ -66,54 +66,7 @@
         ],
         "Cortex1": [
           {
-            "startTime": 1626270833387,
-            "executionTime": 85,
-            "data": {
-              "main": [
-                [
-                  {
-                    "json": {
-                      "organization": "n8n",
-                      "tlp": 1,
-                      "data": "129.178.188.205",
-                      "workerDefinitionId": "Abuse_Finder_3_0",
-                      "cacheTag": "5953cab2051fcc42ae726fbb5cf121ad",
-                      "pap": 2,
-                      "workerName": "Abuse_Finder_3_0",
-                      "status": "Waiting",
-                      "createdAt": 1626270832733,
-                      "createdBy": "nodeqa",
-                      "workerId": "f4abc1b633b80f45af165970793fd4fd",
-                      "message": "",
-                      "dataType": "ip",
-                      "type": "analyzer",
-                      "parameters": {
-                        "object": true
-                      },
-                      "_type": "job",
-                      "_routing": "LQ9LpXoBqTfm9nMOmFpj",
-                      "_parent": {
-                        "object": true
-                      },
-                      "_id": "LQ9LpXoBqTfm9nMOmFpj",
-                      "_seqNo": 934,
-                      "_primaryTerm": 20,
-                      "id": "LQ9LpXoBqTfm9nMOmFpj",
-                      "analyzerId": "f4abc1b633b80f45af165970793fd4fd",
-                      "analyzerName": "Abuse_Finder_3_0",
-                      "analyzerDefinitionId": "Abuse_Finder_3_0",
-                      "date": 1626270832733,
-                      "report": "Waiting"
-                    }
-                  }
-                ]
-              ]
-            }
-          }
-        ],
-        "Cortex2": [
-          {
-            "startTime": 1626270833472,
+            "startTime": 1626363941423,
             "executionTime": 83,
             "data": {
               "main": [
@@ -128,7 +81,7 @@
                       "pap": 2,
                       "workerName": "Abuse_Finder_3_0",
                       "status": "Waiting",
-                      "createdAt": 1626270832733,
+                      "createdAt": 1626363941138,
                       "createdBy": "nodeqa",
                       "workerId": "f4abc1b633b80f45af165970793fd4fd",
                       "message": "",
@@ -138,18 +91,65 @@
                         "object": true
                       },
                       "_type": "job",
-                      "_routing": "LQ9LpXoBqTfm9nMOmFpj",
+                      "_routing": "wA_YqnoBqTfm9nMOUVoa",
                       "_parent": {
                         "object": true
                       },
-                      "_id": "LQ9LpXoBqTfm9nMOmFpj",
-                      "_seqNo": 934,
+                      "_id": "wA_YqnoBqTfm9nMOUVoa",
+                      "_seqNo": 1090,
                       "_primaryTerm": 20,
-                      "id": "LQ9LpXoBqTfm9nMOmFpj",
+                      "id": "wA_YqnoBqTfm9nMOUVoa",
                       "analyzerId": "f4abc1b633b80f45af165970793fd4fd",
                       "analyzerName": "Abuse_Finder_3_0",
                       "analyzerDefinitionId": "Abuse_Finder_3_0",
-                      "date": 1626270832733
+                      "date": 1626363941138,
+                      "report": "Waiting"
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Cortex2": [
+          {
+            "startTime": 1626363941506,
+            "executionTime": 70,
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "organization": "n8n",
+                      "tlp": 1,
+                      "data": "129.178.188.205",
+                      "workerDefinitionId": "Abuse_Finder_3_0",
+                      "cacheTag": "5953cab2051fcc42ae726fbb5cf121ad",
+                      "pap": 2,
+                      "workerName": "Abuse_Finder_3_0",
+                      "status": "Waiting",
+                      "createdAt": 1626363941138,
+                      "createdBy": "nodeqa",
+                      "workerId": "f4abc1b633b80f45af165970793fd4fd",
+                      "message": "",
+                      "dataType": "ip",
+                      "type": "analyzer",
+                      "parameters": {
+                        "object": true
+                      },
+                      "_type": "job",
+                      "_routing": "wA_YqnoBqTfm9nMOUVoa",
+                      "_parent": {
+                        "object": true
+                      },
+                      "_id": "wA_YqnoBqTfm9nMOUVoa",
+                      "_seqNo": 1090,
+                      "_primaryTerm": 20,
+                      "id": "wA_YqnoBqTfm9nMOUVoa",
+                      "analyzerId": "f4abc1b633b80f45af165970793fd4fd",
+                      "analyzerName": "Abuse_Finder_3_0",
+                      "analyzerDefinitionId": "Abuse_Finder_3_0",
+                      "date": 1626363941138
                     }
                   }
                 ]
@@ -159,8 +159,8 @@
         ],
         "Cortex3": [
           {
-            "startTime": 1626270833555,
-            "executionTime": 869,
+            "startTime": 1626363941576,
+            "executionTime": 826,
             "data": {
               "main": [
                 [
@@ -169,6 +169,7 @@
                       "pap": 2,
                       "status": "Waiting",
                       "workerName": "KnowBe4_1_0",
+                      "createdAt": 1626363941694,
                       "workerDefinitionId": "KnowBe4_1_0",
                       "organization": "n8n",
                       "workerId": "fbe415a38eb649eb7df174aa11a32cfe",
@@ -183,22 +184,21 @@
                       "label": "[ip] 129.178.188.205",
                       "type": "responder",
                       "dataType": "thehive:case_artifact",
-                      "createdAt": 1626270833613,
                       "tlp": 2,
                       "cacheTag": "52ebdc7f241c058bd2268eb8a55eb231",
                       "_type": "job",
-                      "_id": "Lg9LpXoBqTfm9nMOm1rQ",
+                      "_id": "wQ_YqnoBqTfm9nMOU1pB",
                       "_parent": {
                         "object": true
                       },
-                      "_routing": "Lg9LpXoBqTfm9nMOm1rQ",
-                      "_seqNo": 994,
+                      "_routing": "wQ_YqnoBqTfm9nMOU1pB",
+                      "_seqNo": 1038,
                       "_primaryTerm": 20,
-                      "id": "Lg9LpXoBqTfm9nMOm1rQ",
+                      "id": "wQ_YqnoBqTfm9nMOU1pB",
                       "analyzerId": "fbe415a38eb649eb7df174aa11a32cfe",
                       "analyzerName": "KnowBe4_1_0",
                       "analyzerDefinitionId": "KnowBe4_1_0",
-                      "date": 1626270833613
+                      "date": 1626363941694
                     }
                   }
                 ]
@@ -208,8 +208,8 @@
         ],
         "Sleep 4 seconds": [
           {
-            "startTime": 1626270834425,
-            "executionTime": 4009,
+            "startTime": 1626363942402,
+            "executionTime": 10017,
             "data": {
               "main": [
                 [
@@ -218,6 +218,7 @@
                       "pap": 2,
                       "status": "Waiting",
                       "workerName": "KnowBe4_1_0",
+                      "createdAt": 1626363941694,
                       "workerDefinitionId": "KnowBe4_1_0",
                       "organization": "n8n",
                       "workerId": "fbe415a38eb649eb7df174aa11a32cfe",
@@ -232,22 +233,21 @@
                       "label": "[ip] 129.178.188.205",
                       "type": "responder",
                       "dataType": "thehive:case_artifact",
-                      "createdAt": 1626270833613,
                       "tlp": 2,
                       "cacheTag": "52ebdc7f241c058bd2268eb8a55eb231",
                       "_type": "job",
-                      "_id": "Lg9LpXoBqTfm9nMOm1rQ",
+                      "_id": "wQ_YqnoBqTfm9nMOU1pB",
                       "_parent": {
                         "object": true
                       },
-                      "_routing": "Lg9LpXoBqTfm9nMOm1rQ",
-                      "_seqNo": 994,
+                      "_routing": "wQ_YqnoBqTfm9nMOU1pB",
+                      "_seqNo": 1038,
                       "_primaryTerm": 20,
-                      "id": "Lg9LpXoBqTfm9nMOm1rQ",
+                      "id": "wQ_YqnoBqTfm9nMOU1pB",
                       "analyzerId": "fbe415a38eb649eb7df174aa11a32cfe",
                       "analyzerName": "KnowBe4_1_0",
                       "analyzerDefinitionId": "KnowBe4_1_0",
-                      "date": 1626270833613
+                      "date": 1626363941694
                     }
                   }
                 ]
@@ -257,50 +257,46 @@
         ],
         "Cortex4": [
           {
-            "startTime": 1626270838434,
-            "executionTime": 77,
+            "startTime": 1626363952420,
+            "executionTime": 0,
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "organization": "n8n",
-                      "updatedAt": 1626270834402,
-                      "tlp": 2,
-                      "data": {
-                        "object": true
-                      },
-                      "label": "[ip] 129.178.188.205",
-                      "workerDefinitionId": "KnowBe4_1_0",
-                      "cacheTag": "52ebdc7f241c058bd2268eb8a55eb231",
                       "pap": 2,
+                      "status": "Waiting",
                       "workerName": "KnowBe4_1_0",
-                      "status": "InProgress",
-                      "createdAt": 1626270833613,
-                      "createdBy": "nodeqa",
+                      "createdAt": 1626363941694,
+                      "workerDefinitionId": "KnowBe4_1_0",
+                      "organization": "n8n",
                       "workerId": "fbe415a38eb649eb7df174aa11a32cfe",
-                      "message": "",
-                      "dataType": "thehive:case_artifact",
-                      "type": "responder",
-                      "updatedBy": "nodeqa",
-                      "startDate": 1626270834402,
                       "parameters": {
                         "object": true
                       },
+                      "data": {
+                        "object": true
+                      },
+                      "message": "",
+                      "createdBy": "nodeqa",
+                      "label": "[ip] 129.178.188.205",
+                      "type": "responder",
+                      "dataType": "thehive:case_artifact",
+                      "tlp": 2,
+                      "cacheTag": "52ebdc7f241c058bd2268eb8a55eb231",
                       "_type": "job",
-                      "_routing": "Lg9LpXoBqTfm9nMOm1rQ",
+                      "_id": "wQ_YqnoBqTfm9nMOU1pB",
                       "_parent": {
                         "object": true
                       },
-                      "_id": "Lg9LpXoBqTfm9nMOm1rQ",
-                      "_seqNo": 995,
+                      "_routing": "wQ_YqnoBqTfm9nMOU1pB",
+                      "_seqNo": 1038,
                       "_primaryTerm": 20,
-                      "id": "Lg9LpXoBqTfm9nMOm1rQ",
+                      "id": "wQ_YqnoBqTfm9nMOU1pB",
                       "analyzerId": "fbe415a38eb649eb7df174aa11a32cfe",
                       "analyzerName": "KnowBe4_1_0",
                       "analyzerDefinitionId": "KnowBe4_1_0",
-                      "date": 1626270833613,
-                      "report": "Running"
+                      "date": 1626363941694
                     }
                   }
                 ]
@@ -318,7 +314,7 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2021-07-14T13:53:52.627Z",
-  "stoppedAt": "2021-07-14T13:53:58.511Z",
+  "startedAt": "2021-07-15T15:45:40.944Z",
+  "stoppedAt": "2021-07-15T15:45:52.421Z",
   "finished": true
 }

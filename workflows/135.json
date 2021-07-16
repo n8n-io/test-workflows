@@ -107,11 +107,12 @@
       ],
       "credentials": {
         "cortexApi": "Cortex API creds"
-      }
+      },
+      "disabled": true
     },
     {
       "parameters": {
-        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\nawait sleep(4000);\n// Output data\nreturn items;"
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\nawait sleep(10000);\n// Output data\nreturn items;"
       },
       "name": "Sleep 4 seconds",
       "type": "n8n-nodes-base.function",
@@ -191,7 +192,7 @@
     }
   },
   "createdAt": "2021-03-15T11:07:38.626Z",
-  "updatedAt": "2021-04-08T08:50:44.636Z",
+  "updatedAt": "2021-07-15T15:43:31.557Z",
   "settings": {},
   "staticData": null
 }

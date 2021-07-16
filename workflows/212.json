@@ -42,7 +42,8 @@
       "position": [
         700,
         250
-      ]
+      ],
+      "notes": "CAP_RESULTS_LENGTH=1"
     },
     {
       "parameters": {
@@ -219,7 +220,7 @@
     },
     {
       "parameters": {
-        "command": "rm -r /tmp/nodeQA"
+        "command": "if [ -d \"/tmp/nodeQA\" ]; then rm -Rf /tmp/nodeQA; fi"
       },
       "name": "Delete existing dir",
       "type": "n8n-nodes-base.executeCommand",
@@ -421,7 +422,7 @@
     }
   },
   "createdAt": "2021-06-01T08:10:39.407Z",
-  "updatedAt": "2021-06-07T09:50:34.256Z",
+  "updatedAt": "2021-07-15T15:02:11.445Z",
   "settings": {},
   "staticData": null
 }
