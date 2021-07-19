@@ -1,6 +1,6 @@
 {
   "id": 155,
-  "name": "AWSS3:Bucket:create getAll search:File:upload getAll download delete:Folder:create getAll delete",
+  "name": "AWSS3:Bucket:create getAll search delete:File:upload getAll download delete:Folder:create getAll delete",
   "active": false,
   "nodes": [
     {
@@ -263,6 +263,23 @@
         750,
         150
       ]
+    },
+    {
+      "parameters": {
+        "resource": "bucket",
+        "operation": "delete",
+        "name": "={{$node[\"Set\"].json[\"bucketName\"]}}"
+      },
+      "name": "AWS S11",
+      "type": "n8n-nodes-base.awsS3",
+      "typeVersion": 1,
+      "position": [
+        1950,
+        310
+      ],
+      "credentials": {
+        "aws": "AWS creds"
+      }
     }
   ],
   "connections": {
@@ -413,10 +430,21 @@
           }
         ]
       ]
+    },
+    "AWS S7": {
+      "main": [
+        [
+          {
+            "node": "AWS S11",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "createdAt": "2021-03-25T10:06:21.916Z",
-  "updatedAt": "2021-03-25T10:38:29.121Z",
+  "updatedAt": "2021-07-19T10:29:05.371Z",
   "settings": {},
   "staticData": null
 }
