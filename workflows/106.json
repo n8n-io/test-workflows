@@ -1,6 +1,6 @@
 {
   "id": 106,
-  "name": "Box:Folder:create search get delete:File:upload get download copy search delete",
+  "name": "Box:Folder:create search get update share delete:File:upload get download copy search share delete",
   "active": false,
   "nodes": [
     {
@@ -42,7 +42,7 @@
       "type": "n8n-nodes-base.box",
       "typeVersion": 1,
       "position": [
-        1850,
+        1980,
         300
       ],
       "alwaysOutputData": true,
@@ -60,7 +60,7 @@
       "type": "n8n-nodes-base.box",
       "typeVersion": 1,
       "position": [
-        2140,
+        2580,
         300
       ],
       "credentials": {
@@ -142,7 +142,7 @@
       "type": "n8n-nodes-base.box",
       "typeVersion": 1,
       "position": [
-        1250,
+        1380,
         400
       ],
       "credentials": {
@@ -162,7 +162,7 @@
       "type": "n8n-nodes-base.box",
       "typeVersion": 1,
       "position": [
-        1400,
+        1530,
         400
       ],
       "alwaysOutputData": true,
@@ -179,7 +179,7 @@
       "type": "n8n-nodes-base.box",
       "typeVersion": 1,
       "position": [
-        1550,
+        1680,
         400
       ],
       "credentials": {
@@ -195,7 +195,7 @@
       "type": "n8n-nodes-base.box",
       "typeVersion": 1,
       "position": [
-        1700,
+        1830,
         400
       ],
       "credentials": {
@@ -212,7 +212,66 @@
       "type": "n8n-nodes-base.box",
       "typeVersion": 1,
       "position": [
-        2000,
+        2130,
+        300
+      ],
+      "credentials": {
+        "boxOAuth2Api": "Box OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "share",
+        "fileId": "={{$node[\"Box3\"].json[\"id\"]}}",
+        "accessibleBy": "user",
+        "email": "node8qa@gmail.com",
+        "options": {}
+      },
+      "name": "Box11",
+      "type": "n8n-nodes-base.box",
+      "typeVersion": 1,
+      "position": [
+        1240,
+        400
+      ],
+      "credentials": {
+        "boxOAuth2Api": "Box OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "folder",
+        "operation": "update",
+        "folderId": "={{$node[\"Box\"].json[\"id\"]}}",
+        "updateFields": {
+          "description": "Updated description",
+          "name": "=Updated{{$node[\"Box\"].json[\"name\"]}}"
+        }
+      },
+      "name": "Box12",
+      "type": "n8n-nodes-base.box",
+      "typeVersion": 1,
+      "position": [
+        2280,
+        300
+      ],
+      "credentials": {
+        "boxOAuth2Api": "Box OAuth2 creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "folder",
+        "operation": "share",
+        "folderId": "={{$node[\"Box\"].json[\"id\"]}}",
+        "email": "node8qa@gmail.com",
+        "options": {}
+      },
+      "name": "Box13",
+      "type": "n8n-nodes-base.box",
+      "typeVersion": 1,
+      "position": [
+        2430,
         300
       ],
       "credentials": {
@@ -280,7 +339,7 @@
       "main": [
         [
           {
-            "node": "Box6",
+            "node": "Box11",
             "type": "main",
             "index": 0
           }
@@ -346,6 +405,39 @@
       "main": [
         [
           {
+            "node": "Box12",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Box11": {
+      "main": [
+        [
+          {
+            "node": "Box6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Box12": {
+      "main": [
+        [
+          {
+            "node": "Box13",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Box13": {
+      "main": [
+        [
+          {
             "node": "Box2",
             "type": "main",
             "index": 0
@@ -355,7 +447,7 @@
     }
   },
   "createdAt": "2021-03-04T14:19:59.064Z",
-  "updatedAt": "2021-03-09T08:07:08.936Z",
+  "updatedAt": "2021-07-19T10:13:52.101Z",
   "settings": {},
   "staticData": null
 }
