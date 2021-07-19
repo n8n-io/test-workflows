@@ -1,6 +1,6 @@
 {
   "id": 121,
-  "name": "Mautic:Company:create update get getAll delete:Contact:create update get getAll delete:ContactCompany:add remove",
+  "name": "Mautic:Company:create update get getAll delete:Contact:create update get getAll delete:ContactCompany:*:ContactSegment:*",
   "active": false,
   "nodes": [
     {
@@ -161,7 +161,7 @@
       "type": "n8n-nodes-base.mautic",
       "typeVersion": 1,
       "position": [
-        1300,
+        1450,
         400
       ],
       "credentials": {
@@ -179,7 +179,7 @@
       "type": "n8n-nodes-base.mautic",
       "typeVersion": 1,
       "position": [
-        1450,
+        1600,
         400
       ],
       "credentials": {
@@ -197,7 +197,7 @@
       "type": "n8n-nodes-base.mautic",
       "typeVersion": 1,
       "position": [
-        1600,
+        1750,
         400
       ],
       "credentials": {
@@ -255,6 +255,55 @@
       ],
       "notesInFlow": true,
       "notes": "Keep single execution"
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "resource": "contactSegment",
+        "contactId": "={{$node[\"Mautic5\"].json[\"id\"]}}",
+        "segmentId": 1
+      },
+      "name": "Mautic12",
+      "type": "n8n-nodes-base.mautic",
+      "typeVersion": 1,
+      "position": [
+        1000,
+        500
+      ],
+      "credentials": {
+        "mauticOAuth2Api": "Mautic OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "resource": "contactSegment",
+        "operation": "remove",
+        "contactId": "={{$node[\"Mautic5\"].json[\"id\"]}}",
+        "segmentId": 1
+      },
+      "name": "Mautic13",
+      "type": "n8n-nodes-base.mautic",
+      "typeVersion": 1,
+      "position": [
+        1150,
+        500
+      ],
+      "credentials": {
+        "mauticOAuth2Api": "Mautic OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "mode": "wait"
+      },
+      "name": "Merge1",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 1,
+      "position": [
+        1300,
+        400
+      ]
     }
   ],
   "connections": {
@@ -382,7 +431,7 @@
             "index": 0
           },
           {
-            "node": "Mautic7",
+            "node": "Merge1",
             "type": "main",
             "index": 0
           }
@@ -396,13 +445,51 @@
             "node": "Mautic10",
             "type": "main",
             "index": 0
+          },
+          {
+            "node": "Mautic12",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mautic12": {
+      "main": [
+        [
+          {
+            "node": "Mautic13",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mautic13": {
+      "main": [
+        [
+          {
+            "node": "Merge1",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Merge1": {
+      "main": [
+        [
+          {
+            "node": "Mautic7",
+            "type": "main",
+            "index": 0
           }
         ]
       ]
     }
   },
   "createdAt": "2021-03-10T16:41:57.544Z",
-  "updatedAt": "2021-07-14T14:15:34.356Z",
+  "updatedAt": "2021-07-19T09:30:10.582Z",
   "settings": {},
   "staticData": null
 }
