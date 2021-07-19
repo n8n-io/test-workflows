@@ -1,0 +1,187 @@
+{
+  "id": 232,
+  "name": "Baserow:Row:create get getAll update delete",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "create",
+        "databaseId": 12699,
+        "tableId": 24794,
+        "fieldsUi": {
+          "fieldValues": [
+            {
+              "fieldId": 130595,
+              "fieldValue": "=Test{{Date.now()}}"
+            }
+          ]
+        }
+      },
+      "name": "Baserow",
+      "type": "n8n-nodes-base.baserow",
+      "typeVersion": 1,
+      "position": [
+        600,
+        300
+      ],
+      "credentials": {
+        "baserowApi": "Baserow API  creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "databaseId": 12699,
+        "tableId": 24794,
+        "rowId": "={{$node[\"Baserow\"].json[\"id\"]}}"
+      },
+      "name": "Baserow1",
+      "type": "n8n-nodes-base.baserow",
+      "typeVersion": 1,
+      "position": [
+        800,
+        300
+      ],
+      "credentials": {
+        "baserowApi": "Baserow API  creds"
+      }
+    },
+    {
+      "parameters": {
+        "databaseId": 12699,
+        "tableId": 24794,
+        "limit": 1,
+        "additionalOptions": {}
+      },
+      "name": "Baserow2",
+      "type": "n8n-nodes-base.baserow",
+      "typeVersion": 1,
+      "position": [
+        1000,
+        300
+      ],
+      "credentials": {
+        "baserowApi": "Baserow API  creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "databaseId": 12699,
+        "tableId": 24794,
+        "rowId": "={{$node[\"Baserow\"].json[\"id\"]}}",
+        "fieldsUi": {
+          "fieldValues": [
+            {
+              "fieldId": 130595,
+              "fieldValue": "=Updated{{$node[\"Baserow\"].json[\"Name\"]}}"
+            },
+            {
+              "fieldId": 130597,
+              "fieldValue": "true"
+            }
+          ]
+        }
+      },
+      "name": "Baserow3",
+      "type": "n8n-nodes-base.baserow",
+      "typeVersion": 1,
+      "position": [
+        1200,
+        300
+      ],
+      "credentials": {
+        "baserowApi": "Baserow API  creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "databaseId": 12699,
+        "tableId": 24794,
+        "rowId": "={{$node[\"Baserow\"].json[\"id\"]}}"
+      },
+      "name": "Baserow4",
+      "type": "n8n-nodes-base.baserow",
+      "typeVersion": 1,
+      "position": [
+        1400,
+        300
+      ],
+      "credentials": {
+        "baserowApi": "Baserow API  creds"
+      }
+    }
+  ],
+  "connections": {
+    "Baserow": {
+      "main": [
+        [
+          {
+            "node": "Baserow1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Baserow",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Baserow1": {
+      "main": [
+        [
+          {
+            "node": "Baserow2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Baserow2": {
+      "main": [
+        [
+          {
+            "node": "Baserow3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Baserow3": {
+      "main": [
+        [
+          {
+            "node": "Baserow4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-07-19T08:27:14.668Z",
+  "updatedAt": "2021-07-19T08:57:46.860Z",
+  "settings": {},
+  "staticData": null
+}
