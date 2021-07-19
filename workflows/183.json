@@ -1,6 +1,6 @@
 {
   "id": 183,
-  "name": "Telegram:Chat:get setDescription setTitle member:Message: sendMessage editMessageText pinChatMessage unpinChatMessage sendPhoto sendSticker sendMediaGroup sendChatAction sendLocation sendDocument sendAudio sendAnimation sendVideo:File:get",
+  "name": "Telegram:Chat:get setDescription setTitle member:Message:*:File:get",
   "active": false,
   "nodes": [
     {
@@ -342,6 +342,40 @@
       "credentials": {
         "telegramApi": "Telegram API creds"
       }
+    },
+    {
+      "parameters": {
+        "operation": "deleteMessage",
+        "chatId": "@FixedChannel123",
+        "messageId": "={{$json[\"result\"][\"message_id\"]}}"
+      },
+      "name": "Telegram18",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "position": [
+        2430,
+        200
+      ],
+      "credentials": {
+        "telegramApi": "Telegram API creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "deleteMessage",
+        "chatId": "@FixedChannel123",
+        "messageId": "={{$node[\"Telegram4\"].json[\"result\"][\"message_id\"]}}"
+      },
+      "name": "Telegram19",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "position": [
+        1070,
+        600
+      ],
+      "credentials": {
+        "telegramApi": "Telegram API creds"
+      }
     }
   ],
   "connections": {
@@ -423,6 +457,11 @@
             "node": "Telegram9",
             "type": "main",
             "index": 0
+          },
+          {
+            "node": "Telegram18",
+            "type": "main",
+            "index": 0
           }
         ]
       ]
@@ -434,6 +473,11 @@
             "node": "Telegram8",
             "type": "main",
             "index": 0
+          },
+          {
+            "node": "Telegram19",
+            "type": "main",
+            "index": 0
           }
         ]
       ]
@@ -443,6 +487,11 @@
         [
           {
             "node": "Telegram11",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Telegram18",
             "type": "main",
             "index": 0
           }
@@ -494,6 +543,11 @@
             "node": "Telegram14",
             "type": "main",
             "index": 0
+          },
+          {
+            "node": "Telegram18",
+            "type": "main",
+            "index": 0
           }
         ]
       ]
@@ -503,6 +557,11 @@
         [
           {
             "node": "Telegram15",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Telegram18",
             "type": "main",
             "index": 0
           }
@@ -516,6 +575,11 @@
             "node": "Telegram16",
             "type": "main",
             "index": 0
+          },
+          {
+            "node": "Telegram18",
+            "type": "main",
+            "index": 0
           }
         ]
       ]
@@ -527,13 +591,29 @@
             "node": "Telegram17",
             "type": "main",
             "index": 0
+          },
+          {
+            "node": "Telegram18",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Telegram17": {
+      "main": [
+        [
+          {
+            "node": "Telegram18",
+            "type": "main",
+            "index": 0
           }
         ]
       ]
     }
   },
   "createdAt": "2021-04-23T11:00:16.427Z",
-  "updatedAt": "2021-04-23T16:04:29.271Z",
+  "updatedAt": "2021-07-19T10:03:48.154Z",
   "settings": {},
   "staticData": null
 }
