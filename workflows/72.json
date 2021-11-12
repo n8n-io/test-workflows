@@ -28,7 +28,10 @@
         300
       ],
       "credentials": {
-        "zulipApi": "Zulip creds"
+        "zulipApi": {
+          "id": "60",
+          "name": "Zulip creds"
+        }
       }
     },
     {
@@ -47,7 +50,10 @@
         300
       ],
       "credentials": {
-        "zulipApi": "Zulip creds"
+        "zulipApi": {
+          "id": "60",
+          "name": "Zulip creds"
+        }
       }
     },
     {
@@ -65,7 +71,10 @@
         300
       ],
       "credentials": {
-        "zulipApi": "Zulip creds"
+        "zulipApi": {
+          "id": "60",
+          "name": "Zulip creds"
+        }
       }
     },
     {
@@ -81,7 +90,10 @@
         300
       ],
       "credentials": {
-        "zulipApi": "Zulip creds"
+        "zulipApi": {
+          "id": "60",
+          "name": "Zulip creds"
+        }
       }
     },
     {
@@ -97,7 +109,10 @@
         300
       ],
       "credentials": {
-        "zulipApi": "Zulip creds"
+        "zulipApi": {
+          "id": "60",
+          "name": "Zulip creds"
+        }
       }
     },
     {
@@ -113,7 +128,10 @@
         300
       ],
       "credentials": {
-        "zulipApi": "Zulip creds"
+        "zulipApi": {
+          "id": "60",
+          "name": "Zulip creds"
+        }
       }
     },
     {
@@ -128,7 +146,10 @@
         470
       ],
       "credentials": {
-        "zulipApi": "Zulip creds"
+        "zulipApi": {
+          "id": "60",
+          "name": "Zulip creds"
+        }
       }
     },
     {
@@ -164,7 +185,10 @@
         620
       ],
       "credentials": {
-        "zulipApi": "Zulip creds"
+        "zulipApi": {
+          "id": "60",
+          "name": "Zulip creds"
+        }
       }
     },
     {
@@ -185,7 +209,10 @@
         620
       ],
       "credentials": {
-        "zulipApi": "Zulip creds"
+        "zulipApi": {
+          "id": "60",
+          "name": "Zulip creds"
+        }
       }
     },
     {
@@ -205,7 +232,10 @@
         620
       ],
       "credentials": {
-        "zulipApi": "Zulip creds"
+        "zulipApi": {
+          "id": "60",
+          "name": "Zulip creds"
+        }
       }
     },
     {
@@ -236,7 +266,10 @@
         760
       ],
       "credentials": {
-        "zulipApi": "Zulip creds"
+        "zulipApi": {
+          "id": "60",
+          "name": "Zulip creds"
+        }
       }
     },
     {
@@ -253,7 +286,10 @@
         620
       ],
       "credentials": {
-        "zulipApi": "Zulip creds"
+        "zulipApi": {
+          "id": "60",
+          "name": "Zulip creds"
+        }
       }
     },
     {
@@ -270,7 +306,10 @@
         910
       ],
       "credentials": {
-        "zulipApi": "Zulip creds"
+        "zulipApi": {
+          "id": "60",
+          "name": "Zulip creds"
+        }
       }
     },
     {
@@ -288,7 +327,10 @@
         910
       ],
       "credentials": {
-        "zulipApi": "Zulip creds"
+        "zulipApi": {
+          "id": "60",
+          "name": "Zulip creds"
+        }
       }
     },
     {
@@ -297,7 +339,7 @@
         "operation": "update",
         "userId": "={{$node[\"Zulip12\"].json[\"user_id\"]}}",
         "additionalFields": {
-          "fullName": "nodequpdated"
+          "fullName": "mario"
         }
       },
       "name": "Zulip14",
@@ -308,8 +350,12 @@
         910
       ],
       "credentials": {
-        "zulipApi": "Zulip creds"
-      }
+        "zulipApi": {
+          "id": "60",
+          "name": "Zulip creds"
+        }
+      },
+      "disabled": true
     },
     {
       "parameters": {
@@ -328,8 +374,12 @@
         910
       ],
       "credentials": {
-        "zulipApi": "Zulip creds"
-      }
+        "zulipApi": {
+          "id": "60",
+          "name": "Zulip creds"
+        }
+      },
+      "disabled": true
     }
   ],
   "connections": {
@@ -386,11 +436,6 @@
             "index": 0
           }
         ]
-      ]
-    },
-    "Zulip6": {
-      "main": [
-        []
       ]
     },
     "Read Binary File": {
@@ -511,15 +556,10 @@
           }
         ]
       ]
-    },
-    "Zulip15": {
-      "main": [
-        []
-      ]
     }
   },
   "createdAt": "2021-02-25T14:32:07.257Z",
-  "updatedAt": "2021-02-25T14:33:34.642Z",
+  "updatedAt": "2021-11-12T13:03:17.136Z",
   "settings": {},
   "staticData": null
 }

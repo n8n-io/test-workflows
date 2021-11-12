@@ -16,7 +16,8 @@
     {
       "parameters": {
         "table": "testtable",
-        "columns": "id,name"
+        "columns": "id,name",
+        "additionalFields": {}
       },
       "name": "Postgres",
       "type": "n8n-nodes-base.postgres",
@@ -26,7 +27,10 @@
         300
       ],
       "credentials": {
-        "postgres": "Postgres creds"
+        "postgres": {
+          "id": "92",
+          "name": "Postgres creds"
+        }
       }
     },
     {
@@ -59,7 +63,8 @@
       "parameters": {
         "operation": "update",
         "table": "testtable",
-        "columns": "id,name"
+        "columns": "id,name",
+        "additionalFields": {}
       },
       "name": "Postgres1",
       "type": "n8n-nodes-base.postgres",
@@ -69,7 +74,10 @@
         300
       ],
       "credentials": {
-        "postgres": "Postgres creds"
+        "postgres": {
+          "id": "92",
+          "name": "Postgres creds"
+        }
       }
     },
     {
@@ -96,7 +104,8 @@
     {
       "parameters": {
         "operation": "executeQuery",
-        "query": "SELECT * FROM public.testtable;"
+        "query": "SELECT * FROM public.testtable;",
+        "additionalFields": {}
       },
       "name": "Postgres2",
       "type": "n8n-nodes-base.postgres",
@@ -106,13 +115,19 @@
         300
       ],
       "credentials": {
-        "postgres": "Postgres creds"
+        "postgres": {
+          "id": "92",
+          "name": "Postgres creds"
+        }
       }
     },
     {
       "parameters": {
         "operation": "executeQuery",
-        "query": "=DELETE FROM public.testtable WHERE id={{$node[\"Set\"].json[\"id\"]}};"
+        "query": "=DELETE FROM public.testtable where id = $1;",
+        "additionalFields": {
+          "queryParams": "id"
+        }
       },
       "name": "Postgres3",
       "type": "n8n-nodes-base.postgres",
@@ -122,7 +137,10 @@
         300
       ],
       "credentials": {
-        "postgres": "Postgres creds"
+        "postgres": {
+          "id": "92",
+          "name": "Postgres creds"
+        }
       }
     }
   ],
@@ -195,7 +213,7 @@
     }
   },
   "createdAt": "2021-03-11T13:25:33.615Z",
-  "updatedAt": "2021-03-11T13:25:33.615Z",
+  "updatedAt": "2021-11-12T13:06:28.032Z",
   "settings": {},
   "staticData": null
 }
