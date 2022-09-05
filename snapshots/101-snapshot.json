@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622630013146,
+            "startTime": 1662368783440,
             "executionTime": 1,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,8 +24,13 @@
         ],
         "Set": [
           {
-            "startTime": 1622630013147,
-            "executionTime": 1,
+            "startTime": 1662368783443,
+            "executionTime": 2,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -29,6 +38,9 @@
                     "json": {
                       "name": "test",
                       "toBeRenamed": "name"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -38,8 +50,13 @@
         ],
         "Rename Keys": [
           {
-            "startTime": 1622630013148,
-            "executionTime": 0,
+            "startTime": 1662368783446,
+            "executionTime": 1,
+            "source": [
+              {
+                "previousNode": "Set"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -47,6 +64,9 @@
                     "json": {
                       "name": "test",
                       "Renamed": "name"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -56,8 +76,13 @@
         ],
         "Function": [
           {
-            "startTime": 1622630013149,
-            "executionTime": 4,
+            "startTime": 1662368783448,
+            "executionTime": 45,
+            "source": [
+              {
+                "previousNode": "Rename Keys"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -65,6 +90,9 @@
                     "json": {
                       "name": "test",
                       "Renamed": "name"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -78,11 +106,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-02T10:33:33.144Z",
-  "stoppedAt": "2021-06-02T10:33:33.153Z",
+  "startedAt": "2022-09-05T09:06:23.435Z",
+  "stoppedAt": "2022-09-05T09:06:23.494Z",
   "finished": true
 }

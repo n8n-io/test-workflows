@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622630011007,
-            "executionTime": 0,
+            "startTime": 1662368783871,
+            "executionTime": 1,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,8 +24,13 @@
         ],
         "FunctionItem": [
           {
-            "startTime": 1622630011008,
-            "executionTime": 4,
+            "startTime": 1662368783873,
+            "executionTime": 41,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -34,6 +43,9 @@
                       "subobj": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -43,13 +55,21 @@
         ],
         "Move Binary Data": [
           {
-            "startTime": 1622630011013,
-            "executionTime": 0,
+            "startTime": 1662368783915,
+            "executionTime": 2,
+            "source": [
+              {
+                "previousNode": "FunctionItem"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    },
                     "binary": {
                       "data": {
                         "data": "eyJuYW1lIjoidGVzdCIsImluZGV4ZXMiOlsxLDIsM10sInN1Ym9iaiI6eyJuYW1lIjoic3VidGVzdCJ9fQ==",
@@ -64,8 +84,13 @@
         ],
         "Move Binary Data1": [
           {
-            "startTime": 1622630011013,
+            "startTime": 1662368783918,
             "executionTime": 1,
+            "source": [
+              {
+                "previousNode": "Move Binary Data"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -79,6 +104,9 @@
                         "object": true
                       }
                     },
+                    "pairedItem": {
+                      "item": 0
+                    },
                     "binary": {}
                   }
                 ]
@@ -88,8 +116,13 @@
         ],
         "Function": [
           {
-            "startTime": 1622630011014,
-            "executionTime": 2,
+            "startTime": 1662368783920,
+            "executionTime": 6,
+            "source": [
+              {
+                "previousNode": "Move Binary Data1"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -102,6 +135,9 @@
                       "subobj": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     },
                     "binary": {}
                   }
@@ -116,11 +152,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-02T10:33:31.005Z",
-  "stoppedAt": "2021-06-02T10:33:31.016Z",
+  "startedAt": "2022-09-05T09:06:23.867Z",
+  "stoppedAt": "2022-09-05T09:06:23.926Z",
   "finished": true
 }

@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622630013846,
+            "startTime": 1662368784145,
             "executionTime": 1,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,14 +24,22 @@
         ],
         "Set": [
           {
-            "startTime": 1622630013847,
-            "executionTime": 2,
+            "startTime": 1662368784147,
+            "executionTime": 17,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "filename": "filename1622630013849"
+                      "filename": "filename1662368784163"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -37,8 +49,13 @@
         ],
         "Execute Command": [
           {
-            "startTime": 1622630013849,
-            "executionTime": 7,
+            "startTime": 1662368784164,
+            "executionTime": 19,
+            "source": [
+              {
+                "previousNode": "Set"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -47,6 +64,9 @@
                       "exitCode": 0,
                       "stderr": "",
                       "stdout": ""
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -56,8 +76,13 @@
         ],
         "Read Binary File": [
           {
-            "startTime": 1622630013857,
-            "executionTime": 3,
+            "startTime": 1662368784183,
+            "executionTime": 4,
+            "source": [
+              {
+                "previousNode": "Execute Command"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -72,8 +97,11 @@
                         "mimeType": "text/plain",
                         "data": "dGVzdAo=",
                         "directory": "/tmp",
-                        "fileName": "filename1622630013849"
+                        "fileName": "filename1662368784163"
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -83,8 +111,13 @@
         ],
         "Function": [
           {
-            "startTime": 1622630013860,
-            "executionTime": 4,
+            "startTime": 1662368784187,
+            "executionTime": 13,
+            "source": [
+              {
+                "previousNode": "Read Binary File"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -99,8 +132,11 @@
                         "mimeType": "text/plain",
                         "data": "dGVzdAo=",
                         "directory": "/tmp",
-                        "fileName": "filename1622630013849"
+                        "fileName": "filename1662368784163"
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -110,8 +146,13 @@
         ],
         "Execute Command1": [
           {
-            "startTime": 1622630013864,
-            "executionTime": 5,
+            "startTime": 1662368784200,
+            "executionTime": 13,
+            "source": [
+              {
+                "previousNode": "Function"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -120,6 +161,9 @@
                       "exitCode": 0,
                       "stderr": "",
                       "stdout": ""
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -133,11 +177,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-02T10:33:33.845Z",
-  "stoppedAt": "2021-06-02T10:33:33.869Z",
+  "startedAt": "2022-09-05T09:06:24.143Z",
+  "stoppedAt": "2022-09-05T09:06:24.213Z",
   "finished": true
 }

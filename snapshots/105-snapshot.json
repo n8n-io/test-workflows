@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622630014568,
-            "executionTime": 1,
+            "startTime": 1662368782941,
+            "executionTime": 3,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,8 +24,13 @@
         ],
         "Function": [
           {
-            "startTime": 1622630014570,
-            "executionTime": 4,
+            "startTime": 1662368782948,
+            "executionTime": 77,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -33,6 +42,9 @@
                         "fileExtension": "txt",
                         "fileName": "file.txt"
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -42,14 +54,22 @@
         ],
         "Write Binary File": [
           {
-            "startTime": 1622630014575,
-            "executionTime": 1,
+            "startTime": 1662368783032,
+            "executionTime": 2,
+            "source": [
+              {
+                "previousNode": "Function"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "fileName": "/tmp/test_write_binary_file.txt"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     },
                     "binary": {
                       "data": {
@@ -66,8 +86,13 @@
         ],
         "Read Binary File": [
           {
-            "startTime": 1622630014576,
+            "startTime": 1662368783035,
             "executionTime": 1,
+            "source": [
+              {
+                "previousNode": "Write Binary File"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -78,11 +103,14 @@
                     "binary": {
                       "data": {
                         "mimeType": "text/plain",
+                        "fileExtension": "txt",
                         "data": "VGVzdCBXcml0ZSBCaW5hcnkgRmlsZSBub2Rl",
                         "directory": "/tmp",
-                        "fileName": "test_write_binary_file.txt",
-                        "fileExtension": "txt"
+                        "fileName": "test_write_binary_file.txt"
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -92,8 +120,13 @@
         ],
         "Function1": [
           {
-            "startTime": 1622630014577,
-            "executionTime": 2,
+            "startTime": 1662368783043,
+            "executionTime": 8,
+            "source": [
+              {
+                "previousNode": "Read Binary File"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -104,11 +137,14 @@
                     "binary": {
                       "data": {
                         "mimeType": "text/plain",
+                        "fileExtension": "txt",
                         "data": "VGVzdCBXcml0ZSBCaW5hcnkgRmlsZSBub2Rl",
                         "directory": "/tmp",
-                        "fileName": "test_write_binary_file.txt",
-                        "fileExtension": "txt"
+                        "fileName": "test_write_binary_file.txt"
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -122,11 +158,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-02T10:33:34.567Z",
-  "stoppedAt": "2021-06-02T10:33:34.579Z",
+  "startedAt": "2022-09-05T09:06:22.933Z",
+  "stoppedAt": "2022-09-05T09:06:23.052Z",
   "finished": true
 }

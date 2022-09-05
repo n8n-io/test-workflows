@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622630009029,
+            "startTime": 1662368781645,
             "executionTime": 1,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,14 +24,22 @@
         ],
         "Date & Time": [
           {
-            "startTime": 1622630009030,
-            "executionTime": 3,
+            "startTime": 1662368781678,
+            "executionTime": 5,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "data": "03/03/2021"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -37,14 +49,22 @@
         ],
         "Date & Time1": [
           {
-            "startTime": 1622630009033,
-            "executionTime": 0,
+            "startTime": 1662368781716,
+            "executionTime": 1,
+            "source": [
+              {
+                "previousNode": "Date & Time"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "data": "2021/03/03"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -54,14 +74,22 @@
         ],
         "Date & Time2": [
           {
-            "startTime": 1622630009033,
-            "executionTime": 1,
+            "startTime": 1662368781724,
+            "executionTime": 0,
+            "source": [
+              {
+                "previousNode": "Date & Time1"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "data": "March 03 2021"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -71,14 +99,22 @@
         ],
         "Date & Time3": [
           {
-            "startTime": 1622630009034,
-            "executionTime": 0,
+            "startTime": 1662368781726,
+            "executionTime": 1,
+            "source": [
+              {
+                "previousNode": "Date & Time2"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "data": "03-03-2021"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -88,14 +124,22 @@
         ],
         "Date & Time4": [
           {
-            "startTime": 1622630009034,
-            "executionTime": 0,
+            "startTime": 1662368781734,
+            "executionTime": 1,
+            "source": [
+              {
+                "previousNode": "Date & Time3"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "data": "2021-03-03"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -105,14 +149,22 @@
         ],
         "Date & Time5": [
           {
-            "startTime": 1622630009035,
-            "executionTime": 0,
+            "startTime": 1662368781736,
+            "executionTime": 1,
+            "source": [
+              {
+                "previousNode": "Date & Time4"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "data": "1614764492"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -122,14 +174,22 @@
         ],
         "Function": [
           {
-            "startTime": 1622630009035,
-            "executionTime": 4,
+            "startTime": 1662368781751,
+            "executionTime": 181,
+            "source": [
+              {
+                "previousNode": "Date & Time5"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "data": "1614764492"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -143,11 +203,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-02T10:33:29.028Z",
-  "stoppedAt": "2021-06-02T10:33:29.040Z",
+  "startedAt": "2022-09-05T09:06:21.624Z",
+  "stoppedAt": "2022-09-05T09:06:21.946Z",
   "finished": true
 }

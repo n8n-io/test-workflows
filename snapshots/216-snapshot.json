@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1623782366031,
+            "startTime": 1662368784037,
             "executionTime": 1,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,8 +24,13 @@
         ],
         "Handle JSON data": [
           {
-            "startTime": 1623782366034,
-            "executionTime": 5,
+            "startTime": 1662368784039,
+            "executionTime": 33,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -35,6 +44,9 @@
                       "obj": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -44,8 +56,13 @@
         ],
         "Handle Binary data": [
           {
-            "startTime": 1623782366040,
-            "executionTime": 2,
+            "startTime": 1662368784073,
+            "executionTime": 6,
+            "source": [
+              {
+                "previousNode": "Handle JSON data"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -60,6 +77,9 @@
                         "object": true
                       },
                       "binaryData": "NIL"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     },
                     "binary": {
                       "data": {
@@ -77,8 +97,13 @@
         ],
         "Handle Static data": [
           {
-            "startTime": 1623782366042,
-            "executionTime": 3,
+            "startTime": 1662368784080,
+            "executionTime": 11,
+            "source": [
+              {
+                "previousNode": "Handle Binary data"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -95,6 +120,9 @@
                       "binaryData": "NIL",
                       "globalStaticMessage": "Hello, Global Static Data",
                       "nodeStaticMessage": "Hello, Node Static Data"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     },
                     "binary": {
                       "data": {
@@ -116,11 +144,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-15T18:39:26.030Z",
-  "stoppedAt": "2021-06-15T18:39:26.045Z",
+  "startedAt": "2022-09-05T09:06:24.035Z",
+  "stoppedAt": "2022-09-05T09:06:24.091Z",
   "finished": true
 }

@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622630011717,
-            "executionTime": 0,
+            "startTime": 1662368784030,
+            "executionTime": 1,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,14 +24,22 @@
         ],
         "Set": [
           {
-            "startTime": 1622630011718,
+            "startTime": 1662368784033,
             "executionTime": 1,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "name": "test"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -37,14 +49,22 @@
         ],
         "Function": [
           {
-            "startTime": 1622630011719,
-            "executionTime": 4,
+            "startTime": 1662368784035,
+            "executionTime": 34,
+            "source": [
+              {
+                "previousNode": "Set"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "name": "test"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -58,11 +78,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-02T10:33:31.715Z",
-  "stoppedAt": "2021-06-02T10:33:31.724Z",
+  "startedAt": "2022-09-05T09:06:24.027Z",
+  "stoppedAt": "2022-09-05T09:06:24.069Z",
   "finished": true
 }

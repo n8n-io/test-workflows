@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1636722396603,
-            "executionTime": 1,
+            "startTime": 1662368784432,
+            "executionTime": 0,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,15 +24,23 @@
         ],
         "Set": [
           {
-            "startTime": 1636722396605,
-            "executionTime": 2,
+            "startTime": 1662368784433,
+            "executionTime": 16,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": 44,
-                      "name": "Name1636722396607"
+                      "id": 35,
+                      "name": "Name1662368784449"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -38,15 +50,23 @@
         ],
         "Postgres": [
           {
-            "startTime": 1636722396607,
-            "executionTime": 186,
+            "startTime": 1662368784450,
+            "executionTime": 153,
+            "source": [
+              {
+                "previousNode": "Set"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": 44,
-                      "name": "Name1636722396607"
+                      "id": 35,
+                      "name": "Name1662368784449"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -56,15 +76,23 @@
         ],
         "Set1": [
           {
-            "startTime": 1636722396795,
-            "executionTime": 2,
+            "startTime": 1662368784605,
+            "executionTime": 3,
+            "source": [
+              {
+                "previousNode": "Postgres"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": 44,
-                      "name": "UpdatedName1636722396796"
+                      "id": 35,
+                      "name": "UpdatedName1662368784607"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -74,15 +102,23 @@
         ],
         "Postgres1": [
           {
-            "startTime": 1636722396798,
-            "executionTime": 161,
+            "startTime": 1662368784610,
+            "executionTime": 142,
+            "source": [
+              {
+                "previousNode": "Set1"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": 44,
-                      "name": "UpdatedName1636722396796"
+                      "id": 35,
+                      "name": "UpdatedName1662368784607"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -92,15 +128,168 @@
         ],
         "Postgres2": [
           {
-            "startTime": 1636722396960,
-            "executionTime": 182,
+            "startTime": 1662368784753,
+            "executionTime": 133,
+            "source": [
+              {
+                "previousNode": "Postgres1"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": 44,
-                      "name": "UpdatedName1636722396796"
+                      "id": {
+                        "object": true
+                      },
+                      "name": "omar456"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  },
+                  {
+                    "json": {
+                      "id": {
+                        "object": true
+                      },
+                      "name": "omar123"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  },
+                  {
+                    "json": {
+                      "id": {
+                        "object": true
+                      },
+                      "name": "omar456"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  },
+                  {
+                    "json": {
+                      "id": {
+                        "object": true
+                      },
+                      "name": "omar123"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  },
+                  {
+                    "json": {
+                      "id": {
+                        "object": true
+                      },
+                      "name": "omar456"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  },
+                  {
+                    "json": {
+                      "id": {
+                        "object": true
+                      },
+                      "name": "omar123"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  },
+                  {
+                    "json": {
+                      "id": {
+                        "object": true
+                      },
+                      "name": "omar456"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  },
+                  {
+                    "json": {
+                      "id": {
+                        "object": true
+                      },
+                      "name": "omar123"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  },
+                  {
+                    "json": {
+                      "id": {
+                        "object": true
+                      },
+                      "name": "omar456"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  },
+                  {
+                    "json": {
+                      "id": {
+                        "object": true
+                      },
+                      "name": "omar123"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  },
+                  {
+                    "json": {
+                      "id": {
+                        "object": true
+                      },
+                      "name": "omar456"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  },
+                  {
+                    "json": {
+                      "id": {
+                        "object": true
+                      },
+                      "name": "omar123"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  },
+                  {
+                    "json": {
+                      "id": 35,
+                      "name": "UpdatedName1662368784607"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  },
+                  {
+                    "json": {
+                      "id": {
+                        "object": true
+                      },
+                      "name": {
+                        "object": true
+                      }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -110,8 +299,13 @@
         ],
         "Postgres3": [
           {
-            "startTime": 1636722397143,
-            "executionTime": 161,
+            "startTime": 1662368784887,
+            "executionTime": 149,
+            "source": [
+              {
+                "previousNode": "Postgres2"
+              }
+            ],
             "data": {
               "main": [
                 []
@@ -125,11 +319,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-11-12T13:06:36.601Z",
-  "stoppedAt": "2021-11-12T13:06:37.305Z",
+  "startedAt": "2022-09-05T09:06:24.429Z",
+  "stoppedAt": "2022-09-05T09:06:25.038Z",
   "finished": true
 }

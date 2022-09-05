@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622630014838,
-            "executionTime": 0,
+            "startTime": 1662368783215,
+            "executionTime": 1,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,8 +24,13 @@
         ],
         "Read Binary Files": [
           {
-            "startTime": 1622630014839,
-            "executionTime": 3,
+            "startTime": 1662368783218,
+            "executionTime": 20,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 []
@@ -35,11 +44,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-02T10:33:34.837Z",
-  "stoppedAt": "2021-06-02T10:33:34.842Z",
+  "startedAt": "2022-09-05T09:06:23.194Z",
+  "stoppedAt": "2022-09-05T09:06:23.238Z",
   "finished": true
 }
