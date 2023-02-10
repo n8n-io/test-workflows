@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622630016839,
+            "startTime": 1676027876636,
             "executionTime": 1,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,14 +24,22 @@
         ],
         "Set": [
           {
-            "startTime": 1622630016841,
-            "executionTime": 1,
+            "startTime": 1676027876637,
+            "executionTime": 112,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "message": "AMQPMessage1622630016842"
+                      "message": "AMQPMessage1676027876749"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -37,14 +49,22 @@
         ],
         "AMQP Sender": [
           {
-            "startTime": 1622630016842,
-            "executionTime": 493,
+            "startTime": 1676027876749,
+            "executionTime": 217,
+            "source": [
+              {
+                "previousNode": "Set"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "id": 0
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -58,11 +78,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-02T10:33:36.838Z",
-  "stoppedAt": "2021-06-02T10:33:37.336Z",
+  "startedAt": "2023-02-10T11:17:56.634Z",
+  "stoppedAt": "2023-02-10T11:17:56.966Z",
   "finished": true
 }

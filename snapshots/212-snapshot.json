@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1636722544724,
-            "executionTime": 1,
+            "startTime": 1676027901302,
+            "executionTime": 0,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,8 +24,13 @@
         ],
         "Delete existing dir": [
           {
-            "startTime": 1636722544726,
-            "executionTime": 8,
+            "startTime": 1676027901303,
+            "executionTime": 23,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -30,6 +39,9 @@
                       "exitCode": 0,
                       "stderr": "",
                       "stdout": ""
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -39,14 +51,22 @@
         ],
         "Git": [
           {
-            "startTime": 1636722544735,
-            "executionTime": 876,
+            "startTime": 1676027901327,
+            "executionTime": 923,
+            "source": [
+              {
+                "previousNode": "Delete existing dir"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "success": true
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -56,14 +76,22 @@
         ],
         "Git1": [
           {
-            "startTime": 1636722545612,
-            "executionTime": 7,
+            "startTime": 1676027902250,
+            "executionTime": 22,
+            "source": [
+              {
+                "previousNode": "Git"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "_file": ".git/config"
+                      "_file": "/Applications/Xcode.app/Contents/Developer/usr/share/git-core/gitconfig"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -73,14 +101,30 @@
         ],
         "Git2": [
           {
-            "startTime": 1636722545619,
-            "executionTime": 58,
+            "startTime": 1676027902272,
+            "executionTime": 147,
+            "source": [
+              {
+                "previousNode": "Git1"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "success": true
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  },
+                  {
+                    "json": {
+                      "success": true
+                    },
+                    "pairedItem": {
+                      "item": 1
                     }
                   }
                 ]
@@ -90,14 +134,30 @@
         ],
         "Git7": [
           {
-            "startTime": 1636722545678,
-            "executionTime": 68,
+            "startTime": 1676027902420,
+            "executionTime": 141,
+            "source": [
+              {
+                "previousNode": "Git2"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "success": true
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  },
+                  {
+                    "json": {
+                      "success": true
+                    },
+                    "pairedItem": {
+                      "item": 1
                     }
                   }
                 ]
@@ -107,8 +167,13 @@
         ],
         "Add file to dir": [
           {
-            "startTime": 1636722545747,
-            "executionTime": 22,
+            "startTime": 1676027902561,
+            "executionTime": 28,
+            "source": [
+              {
+                "previousNode": "Git7"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -117,6 +182,9 @@
                       "exitCode": 0,
                       "stderr": "",
                       "stdout": ""
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -126,14 +194,22 @@
         ],
         "Git3": [
           {
-            "startTime": 1636722545770,
-            "executionTime": 68,
+            "startTime": 1676027902591,
+            "executionTime": 81,
+            "source": [
+              {
+                "previousNode": "Add file to dir"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "success": true
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -143,8 +219,13 @@
         ],
         "Git4": [
           {
-            "startTime": 1636722545839,
-            "executionTime": 8,
+            "startTime": 1676027902673,
+            "executionTime": 16,
+            "source": [
+              {
+                "previousNode": "Git3"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -177,7 +258,11 @@
                       "ahead": 0,
                       "behind": 0,
                       "current": "main",
-                      "tracking": "origin/main"
+                      "tracking": "origin/main",
+                      "detached": false
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -187,14 +272,22 @@
         ],
         "Git5": [
           {
-            "startTime": 1636722545847,
-            "executionTime": 12,
+            "startTime": 1676027902689,
+            "executionTime": 38,
+            "source": [
+              {
+                "previousNode": "Git4"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "success": true
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -204,20 +297,28 @@
         ],
         "Git6": [
           {
-            "startTime": 1636722545859,
-            "executionTime": 9,
+            "startTime": 1676027902727,
+            "executionTime": 19,
+            "source": [
+              {
+                "previousNode": "Git5"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "hash": "7fbab1c96e73c552331154fabcebbacf616c1b78",
-                      "date": "2021-11-12T14:09:05+01:00",
-                      "message": "GitNode commit Fri, 12 Nov 2021 13:09:05 GMT",
+                      "hash": "70dc12946625b08cdda1b2dbb3b0d3e20451263e",
+                      "date": "2023-02-10T12:18:22+01:00",
+                      "message": "GitNode commit Fri, 10 Feb 2023 11:18:22 GMT",
                       "refs": "HEAD -> main",
                       "body": "",
                       "author_name": "nodemationqa",
                       "author_email": "nodeqa@n8n.io"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -227,14 +328,22 @@
         ],
         "Git8": [
           {
-            "startTime": 1636722545868,
-            "executionTime": 60,
+            "startTime": 1676027902746,
+            "executionTime": 76,
+            "source": [
+              {
+                "previousNode": "Git6"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "success": true
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -244,14 +353,22 @@
         ],
         "Git9": [
           {
-            "startTime": 1636722545929,
+            "startTime": 1676027902822,
             "executionTime": 0,
+            "source": [
+              {
+                "previousNode": "Git8"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "success": true
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -261,14 +378,22 @@
         ],
         "Git10": [
           {
-            "startTime": 1636722545930,
-            "executionTime": 1,
+            "startTime": 1676027902822,
+            "executionTime": 0,
+            "source": [
+              {
+                "previousNode": "Git9"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "success": true
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -278,14 +403,22 @@
         ],
         "Git11": [
           {
-            "startTime": 1636722545931,
-            "executionTime": 1,
+            "startTime": 1676027902823,
+            "executionTime": 0,
+            "source": [
+              {
+                "previousNode": "Git10"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "success": true
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -295,14 +428,22 @@
         ],
         "Git12": [
           {
-            "startTime": 1636722545933,
-            "executionTime": 2352,
+            "startTime": 1676027902823,
+            "executionTime": 590,
+            "source": [
+              {
+                "previousNode": "Git11"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "success": true
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -312,14 +453,22 @@
         ],
         "Git13": [
           {
-            "startTime": 1636722548286,
-            "executionTime": 1,
+            "startTime": 1676027903414,
+            "executionTime": 0,
+            "source": [
+              {
+                "previousNode": "Git12"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "success": true
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -333,11 +482,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-11-12T13:09:04.722Z",
-  "stoppedAt": "2021-11-12T13:09:08.287Z",
+  "startedAt": "2023-02-10T11:18:21.299Z",
+  "stoppedAt": "2023-02-10T11:18:23.414Z",
   "finished": true
 }

@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1635416509570,
+            "startTime": 1676027855097,
             "executionTime": 1,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,8 +24,13 @@
         ],
         "Gitlab": [
           {
-            "startTime": 1635416509572,
-            "executionTime": 453,
+            "startTime": 1676027855098,
+            "executionTime": 380,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -44,12 +53,12 @@
                       "http_url_to_repo": "https://gitlab.com/nodeqa/nodemationqa.git",
                       "web_url": "https://gitlab.com/nodeqa/nodemationqa",
                       "readme_url": "https://gitlab.com/nodeqa/nodemationqa/-/blob/master/README.md",
+                      "forks_count": 0,
                       "avatar_url": {
                         "object": true
                       },
-                      "forks_count": 0,
                       "star_count": 0,
-                      "last_activity_at": "2021-10-28T10:17:46.367Z",
+                      "last_activity_at": "2023-02-10T10:35:48.434Z",
                       "namespace": {
                         "object": true
                       },
@@ -85,28 +94,41 @@
                       "operations_access_level": "enabled",
                       "analytics_access_level": "enabled",
                       "container_registry_access_level": "enabled",
+                      "security_and_compliance_access_level": "private",
+                      "releases_access_level": "enabled",
+                      "environments_access_level": "enabled",
+                      "feature_flags_access_level": "enabled",
+                      "infrastructure_access_level": "enabled",
+                      "monitor_access_level": "enabled",
                       "emails_disabled": {
                         "object": true
                       },
                       "shared_runners_enabled": true,
+                      "group_runners_enabled": true,
                       "lfs_enabled": true,
                       "creator_id": 8226562,
+                      "import_url": {
+                        "object": true
+                      },
+                      "import_type": {
+                        "object": true
+                      },
                       "import_status": "none",
                       "import_error": {
                         "object": true
                       },
-                      "open_issues_count": 297,
-                      "runners_token": "QaNE8g9NB98JBzbq-8Vs",
+                      "open_issues_count": 581,
+                      "runners_token": "GR1348941HozyweFJqkmjJ_xmYWiS",
                       "ci_default_git_depth": 50,
                       "ci_forward_deployment_enabled": true,
                       "ci_job_token_scope_enabled": false,
+                      "ci_separated_caches": true,
+                      "ci_opt_in_jwt": false,
+                      "ci_allow_fork_pipelines_to_run_in_parent_project": true,
                       "public_jobs": true,
                       "build_git_strategy": "fetch",
                       "build_timeout": 3600,
                       "auto_cancel_pending_pipelines": "enabled",
-                      "build_coverage_regex": {
-                        "object": true
-                      },
                       "ci_config_path": "",
                       "shared_with_groups": [
                         "json array"
@@ -122,15 +144,29 @@
                       "printing_merge_request_link_enabled": true,
                       "merge_method": "merge",
                       "squash_option": "default_off",
+                      "enforce_auth_checks_on_uploads": true,
                       "suggestion_commit_message": {
+                        "object": true
+                      },
+                      "merge_commit_template": {
+                        "object": true
+                      },
+                      "squash_commit_template": {
+                        "object": true
+                      },
+                      "issue_branch_template": {
                         "object": true
                       },
                       "auto_devops_enabled": false,
                       "auto_devops_deploy_strategy": "continuous",
                       "autoclose_referenced_issues": true,
                       "keep_latest_artifact": true,
+                      "runner_token_expiration_interval": {
+                        "object": true
+                      },
                       "external_authorization_classification_label": "",
                       "requirements_enabled": false,
+                      "requirements_access_level": "enabled",
                       "security_and_compliance_enabled": true,
                       "compliance_frameworks": [
                         "json array"
@@ -138,6 +174,9 @@
                       "permissions": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -147,21 +186,26 @@
         ],
         "Gitlab2": [
           {
-            "startTime": 1635416510026,
-            "executionTime": 480,
+            "startTime": 1676027855478,
+            "executionTime": 460,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": 96314519,
-                      "iid": 298,
+                      "id": 123462347,
+                      "iid": 582,
                       "project_id": 24497029,
-                      "title": "Issue - Thu Oct 28 2021",
-                      "description": "QA Test on Thu Oct 28 2021",
+                      "title": "Issue - Fri Feb 10 2023",
+                      "description": "QA Test on Fri Feb 10 2023",
                       "state": "opened",
-                      "created_at": "2021-10-28T10:21:50.303Z",
-                      "updated_at": "2021-10-28T10:21:50.303Z",
+                      "created_at": "2023-02-10T11:17:35.818Z",
+                      "updated_at": "2023-02-10T11:17:35.818Z",
                       "closed_at": {
                         "object": true
                       },
@@ -196,7 +240,7 @@
                         "object": true
                       },
                       "issue_type": "issue",
-                      "web_url": "https://gitlab.com/nodeqa/nodemationqa/-/issues/298",
+                      "web_url": "https://gitlab.com/nodeqa/nodemationqa/-/issues/582",
                       "time_stats": {
                         "object": true
                       },
@@ -204,13 +248,15 @@
                         "object": true
                       },
                       "blocking_issues_count": 0,
-                      "has_tasks": false,
+                      "has_tasks": true,
+                      "task_status": "0 of 0 checklist items completed",
                       "_links": {
                         "object": true
                       },
                       "references": {
                         "object": true
                       },
+                      "severity": "UNKNOWN",
                       "subscribed": true,
                       "moved_to_id": {
                         "object": true
@@ -218,6 +264,9 @@
                       "service_desk_reply_to": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -227,29 +276,34 @@
         ],
         "Gitlab7": [
           {
-            "startTime": 1635416510507,
-            "executionTime": 740,
+            "startTime": 1676027855938,
+            "executionTime": 913,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "name": "Release1635416510510",
-                      "tag_name": "Release-tag-test1635416510510",
+                      "name": "Release1676027855939",
+                      "tag_name": "Release-tag-test1676027855940",
                       "description": {
                         "object": true
                       },
-                      "created_at": "2021-10-28T10:21:51.049Z",
-                      "released_at": "2021-10-28T10:21:51.049Z",
+                      "created_at": "2023-02-10T11:17:36.730Z",
+                      "released_at": "2023-02-10T11:17:36.730Z",
+                      "upcoming_release": false,
                       "author": {
                         "object": true
                       },
                       "commit": {
                         "object": true
                       },
-                      "upcoming_release": false,
                       "commit_path": "/nodeqa/nodemationqa/-/commit/dd2f13c1cc94dfd37e0c3063841860c5d0ae7252",
-                      "tag_path": "/nodeqa/nodemationqa/-/tags/Release-tag-test1635416510510",
+                      "tag_path": "/nodeqa/nodemationqa/-/tags/Release-tag-test1676027855940",
                       "assets": {
                         "object": true
                       },
@@ -259,6 +313,9 @@
                       "_links": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -268,8 +325,13 @@
         ],
         "Gitlab8": [
           {
-            "startTime": 1635416511249,
-            "executionTime": 376,
+            "startTime": 1676027856851,
+            "executionTime": 653,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -292,10 +354,10 @@
                       "readme_url": {
                         "object": true
                       },
+                      "forks_count": 0,
                       "avatar_url": {
                         "object": true
                       },
-                      "forks_count": 0,
                       "star_count": 0,
                       "last_activity_at": "2021-02-18T08:40:49.130Z",
                       "namespace": {
@@ -336,23 +398,36 @@
                       "operations_access_level": "enabled",
                       "analytics_access_level": "enabled",
                       "container_registry_access_level": "enabled",
+                      "security_and_compliance_access_level": "private",
+                      "releases_access_level": "enabled",
+                      "environments_access_level": "enabled",
+                      "feature_flags_access_level": "enabled",
+                      "infrastructure_access_level": "enabled",
+                      "monitor_access_level": "enabled",
                       "emails_disabled": {
                         "object": true
                       },
                       "shared_runners_enabled": true,
+                      "group_runners_enabled": true,
                       "lfs_enabled": true,
                       "creator_id": 8226562,
+                      "import_url": {
+                        "object": true
+                      },
+                      "import_type": {
+                        "object": true
+                      },
                       "import_status": "none",
                       "open_issues_count": 0,
                       "ci_default_git_depth": 50,
                       "ci_forward_deployment_enabled": true,
                       "ci_job_token_scope_enabled": false,
+                      "ci_separated_caches": true,
+                      "ci_opt_in_jwt": false,
+                      "ci_allow_fork_pipelines_to_run_in_parent_project": true,
                       "public_jobs": true,
                       "build_timeout": 3600,
                       "auto_cancel_pending_pipelines": "enabled",
-                      "build_coverage_regex": {
-                        "object": true
-                      },
                       "ci_config_path": "",
                       "shared_with_groups": [
                         "json array"
@@ -368,15 +443,29 @@
                       "printing_merge_request_link_enabled": true,
                       "merge_method": "merge",
                       "squash_option": "default_off",
+                      "enforce_auth_checks_on_uploads": true,
                       "suggestion_commit_message": {
+                        "object": true
+                      },
+                      "merge_commit_template": {
+                        "object": true
+                      },
+                      "squash_commit_template": {
+                        "object": true
+                      },
+                      "issue_branch_template": {
                         "object": true
                       },
                       "auto_devops_enabled": false,
                       "auto_devops_deploy_strategy": "continuous",
                       "autoclose_referenced_issues": true,
                       "keep_latest_artifact": true,
+                      "runner_token_expiration_interval": {
+                        "object": true
+                      },
                       "external_authorization_classification_label": "",
                       "requirements_enabled": false,
+                      "requirements_access_level": "enabled",
                       "security_and_compliance_enabled": true,
                       "compliance_frameworks": [
                         "json array"
@@ -384,6 +473,9 @@
                       "permissions": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -393,21 +485,26 @@
         ],
         "Gitlab1": [
           {
-            "startTime": 1635416511625,
-            "executionTime": 524,
+            "startTime": 1676027857504,
+            "executionTime": 781,
+            "source": [
+              {
+                "previousNode": "Gitlab"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": 96314519,
-                      "iid": 298,
+                      "id": 123462347,
+                      "iid": 582,
                       "project_id": 24497029,
-                      "title": "Issue - Thu Oct 28 2021",
-                      "description": "QA Test on Thu Oct 28 2021",
+                      "title": "Issue - Fri Feb 10 2023",
+                      "description": "QA Test on Fri Feb 10 2023",
                       "state": "opened",
-                      "created_at": "2021-10-28T10:21:50.303Z",
-                      "updated_at": "2021-10-28T10:21:50.303Z",
+                      "created_at": "2023-02-10T11:17:35.818Z",
+                      "updated_at": "2023-02-10T11:17:35.818Z",
                       "closed_at": {
                         "object": true
                       },
@@ -442,7 +539,7 @@
                         "object": true
                       },
                       "issue_type": "issue",
-                      "web_url": "https://gitlab.com/nodeqa/nodemationqa/-/issues/298",
+                      "web_url": "https://gitlab.com/nodeqa/nodemationqa/-/issues/582",
                       "time_stats": {
                         "object": true
                       },
@@ -450,19 +547,24 @@
                         "object": true
                       },
                       "blocking_issues_count": 0,
-                      "has_tasks": false,
+                      "has_tasks": true,
+                      "task_status": "0 of 0 checklist items completed",
                       "_links": {
                         "object": true
                       },
                       "references": {
                         "object": true
                       },
+                      "severity": "UNKNOWN",
                       "moved_to_id": {
                         "object": true
                       },
                       "service_desk_reply_to": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -472,35 +574,44 @@
         ],
         "Gitlab3": [
           {
-            "startTime": 1635416512150,
-            "executionTime": 453,
+            "startTime": 1676027858287,
+            "executionTime": 389,
+            "source": [
+              {
+                "previousNode": "Gitlab2"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": 717103613,
+                      "id": 1274089294,
                       "type": {
                         "object": true
                       },
-                      "body": "Comment on issue - Thu Oct 28 2021 12:21:52 GMT+0200 (Central European Summer Time)",
+                      "body": "Comment on issue - Fri Feb 10 2023 11:17:38 GMT+0000 (Coordinated Universal Time)",
                       "attachment": {
                         "object": true
                       },
                       "author": {
                         "object": true
                       },
-                      "created_at": "2021-10-28T10:21:52.455Z",
-                      "updated_at": "2021-10-28T10:21:52.455Z",
+                      "created_at": "2023-02-10T11:17:38.604Z",
+                      "updated_at": "2023-02-10T11:17:38.604Z",
                       "system": false,
-                      "noteable_id": 96314519,
+                      "noteable_id": 123462347,
                       "noteable_type": "Issue",
                       "resolvable": false,
                       "confidential": false,
-                      "noteable_iid": 298,
+                      "internal": false,
+                      "noteable_iid": 582,
                       "commands_changes": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -510,29 +621,34 @@
         ],
         "Gitlab9": [
           {
-            "startTime": 1635416512604,
-            "executionTime": 346,
+            "startTime": 1676027858677,
+            "executionTime": 316,
+            "source": [
+              {
+                "previousNode": "Gitlab7"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "name": "Release1635416510510",
-                      "tag_name": "Release-tag-test1635416510510",
+                      "name": "Release1676027855939",
+                      "tag_name": "Release-tag-test1676027855940",
                       "description": {
                         "object": true
                       },
-                      "created_at": "2021-10-28T10:21:51.049Z",
-                      "released_at": "2021-10-28T10:21:51.049Z",
+                      "created_at": "2023-02-10T11:17:36.730Z",
+                      "released_at": "2023-02-10T11:17:36.730Z",
+                      "upcoming_release": false,
                       "author": {
                         "object": true
                       },
                       "commit": {
                         "object": true
                       },
-                      "upcoming_release": false,
                       "commit_path": "/nodeqa/nodemationqa/-/commit/dd2f13c1cc94dfd37e0c3063841860c5d0ae7252",
-                      "tag_path": "/nodeqa/nodemationqa/-/tags/Release-tag-test1635416510510",
+                      "tag_path": "/nodeqa/nodemationqa/-/tags/Release-tag-test1676027855940",
                       "assets": {
                         "object": true
                       },
@@ -542,6 +658,9 @@
                       "_links": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -551,21 +670,26 @@
         ],
         "Gitlab4": [
           {
-            "startTime": 1635416512951,
-            "executionTime": 707,
+            "startTime": 1676027858993,
+            "executionTime": 563,
+            "source": [
+              {
+                "previousNode": "Gitlab3"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": 96314519,
-                      "iid": 298,
+                      "id": 123462347,
+                      "iid": 582,
                       "project_id": 24497029,
-                      "title": "Issue - Thu Oct 28 2021",
-                      "description": "Edited QA Test on Thu Oct 28 2021",
+                      "title": "Issue - Fri Feb 10 2023",
+                      "description": "Edited QA Test on Fri Feb 10 2023",
                       "state": "opened",
-                      "created_at": "2021-10-28T10:21:50.303Z",
-                      "updated_at": "2021-10-28T10:21:53.440Z",
+                      "created_at": "2023-02-10T11:17:35.818Z",
+                      "updated_at": "2023-02-10T11:17:39.328Z",
                       "closed_at": {
                         "object": true
                       },
@@ -600,7 +724,7 @@
                         "object": true
                       },
                       "issue_type": "issue",
-                      "web_url": "https://gitlab.com/nodeqa/nodemationqa/-/issues/298",
+                      "web_url": "https://gitlab.com/nodeqa/nodemationqa/-/issues/582",
                       "time_stats": {
                         "object": true
                       },
@@ -608,13 +732,15 @@
                         "object": true
                       },
                       "blocking_issues_count": 0,
-                      "has_tasks": false,
+                      "has_tasks": true,
+                      "task_status": "0 of 0 checklist items completed",
                       "_links": {
                         "object": true
                       },
                       "references": {
                         "object": true
                       },
+                      "severity": "UNKNOWN",
                       "subscribed": true,
                       "moved_to_id": {
                         "object": true
@@ -622,6 +748,9 @@
                       "service_desk_reply_to": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -631,29 +760,34 @@
         ],
         "Gitlab10": [
           {
-            "startTime": 1635416513659,
-            "executionTime": 345,
+            "startTime": 1676027859556,
+            "executionTime": 342,
+            "source": [
+              {
+                "previousNode": "Gitlab9"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "name": "Release1635416510510",
-                      "tag_name": "Release-tag-test1635416510510",
+                      "name": "Release1676027855939",
+                      "tag_name": "Release-tag-test1676027855940",
                       "description": {
                         "object": true
                       },
-                      "created_at": "2021-10-28T10:21:51.049Z",
-                      "released_at": "2021-10-28T10:21:51.049Z",
+                      "created_at": "2023-02-10T11:17:36.730Z",
+                      "released_at": "2023-02-10T11:17:36.730Z",
+                      "upcoming_release": false,
                       "author": {
                         "object": true
                       },
                       "commit": {
                         "object": true
                       },
-                      "upcoming_release": false,
                       "commit_path": "/nodeqa/nodemationqa/-/commit/dd2f13c1cc94dfd37e0c3063841860c5d0ae7252",
-                      "tag_path": "/nodeqa/nodemationqa/-/tags/Release-tag-test1635416510510",
+                      "tag_path": "/nodeqa/nodemationqa/-/tags/Release-tag-test1676027855940",
                       "assets": {
                         "object": true
                       },
@@ -663,6 +797,9 @@
                       "_links": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -672,21 +809,26 @@
         ],
         "Gitlab5": [
           {
-            "startTime": 1635416514004,
-            "executionTime": 337,
+            "startTime": 1676027859898,
+            "executionTime": 326,
+            "source": [
+              {
+                "previousNode": "Gitlab4"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": 96314519,
-                      "iid": 298,
+                      "id": 123462347,
+                      "iid": 582,
                       "project_id": 24497029,
-                      "title": "Issue - Thu Oct 28 2021",
-                      "description": "Edited QA Test on Thu Oct 28 2021",
+                      "title": "Issue - Fri Feb 10 2023",
+                      "description": "Edited QA Test on Fri Feb 10 2023",
                       "state": "opened",
-                      "created_at": "2021-10-28T10:21:50.303Z",
-                      "updated_at": "2021-10-28T10:21:53.440Z",
+                      "created_at": "2023-02-10T11:17:35.818Z",
+                      "updated_at": "2023-02-10T11:17:39.328Z",
                       "closed_at": {
                         "object": true
                       },
@@ -721,7 +863,7 @@
                         "object": true
                       },
                       "issue_type": "issue",
-                      "web_url": "https://gitlab.com/nodeqa/nodemationqa/-/issues/298",
+                      "web_url": "https://gitlab.com/nodeqa/nodemationqa/-/issues/582",
                       "time_stats": {
                         "object": true
                       },
@@ -729,13 +871,15 @@
                         "object": true
                       },
                       "blocking_issues_count": 0,
-                      "has_tasks": false,
+                      "has_tasks": true,
+                      "task_status": "0 of 0 checklist items completed",
                       "_links": {
                         "object": true
                       },
                       "references": {
                         "object": true
                       },
+                      "severity": "UNKNOWN",
                       "subscribed": true,
                       "moved_to_id": {
                         "object": true
@@ -743,6 +887,9 @@
                       "service_desk_reply_to": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -752,29 +899,34 @@
         ],
         "Gitlab11": [
           {
-            "startTime": 1635416514341,
-            "executionTime": 457,
+            "startTime": 1676027860224,
+            "executionTime": 426,
+            "source": [
+              {
+                "previousNode": "Gitlab10"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "name": "UpdatedRelease1635416510510",
-                      "tag_name": "Release-tag-test1635416510510",
+                      "name": "UpdatedRelease1676027855939",
+                      "tag_name": "Release-tag-test1676027855940",
                       "description": {
                         "object": true
                       },
-                      "created_at": "2021-10-28T10:21:51.049Z",
-                      "released_at": "2021-10-28T10:21:51.049Z",
+                      "created_at": "2023-02-10T11:17:36.730Z",
+                      "released_at": "2023-02-10T11:17:36.730Z",
+                      "upcoming_release": false,
                       "author": {
                         "object": true
                       },
                       "commit": {
                         "object": true
                       },
-                      "upcoming_release": false,
                       "commit_path": "/nodeqa/nodemationqa/-/commit/dd2f13c1cc94dfd37e0c3063841860c5d0ae7252",
-                      "tag_path": "/nodeqa/nodemationqa/-/tags/Release-tag-test1635416510510",
+                      "tag_path": "/nodeqa/nodemationqa/-/tags/Release-tag-test1676027855940",
                       "assets": {
                         "object": true
                       },
@@ -784,6 +936,9 @@
                       "_links": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -793,21 +948,26 @@
         ],
         "Gitlab6": [
           {
-            "startTime": 1635416514798,
-            "executionTime": 403,
+            "startTime": 1676027860650,
+            "executionTime": 562,
+            "source": [
+              {
+                "previousNode": "Gitlab5"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": 96314519,
-                      "iid": 298,
+                      "id": 123462347,
+                      "iid": 582,
                       "project_id": 24497029,
-                      "title": "Issue - Thu Oct 28 2021",
-                      "description": "Edited QA Test on Thu Oct 28 2021",
+                      "title": "Issue - Fri Feb 10 2023",
+                      "description": "Edited QA Test on Fri Feb 10 2023",
                       "state": "opened",
-                      "created_at": "2021-10-28T10:21:50.303Z",
-                      "updated_at": "2021-10-28T10:21:53.440Z",
+                      "created_at": "2023-02-10T11:17:35.818Z",
+                      "updated_at": "2023-02-10T11:17:39.328Z",
                       "closed_at": {
                         "object": true
                       },
@@ -842,7 +1002,7 @@
                         "object": true
                       },
                       "issue_type": "issue",
-                      "web_url": "https://gitlab.com/nodeqa/nodemationqa/-/issues/298",
+                      "web_url": "https://gitlab.com/nodeqa/nodemationqa/-/issues/582",
                       "time_stats": {
                         "object": true
                       },
@@ -850,13 +1010,15 @@
                         "object": true
                       },
                       "blocking_issues_count": 0,
-                      "has_tasks": false,
+                      "has_tasks": true,
+                      "task_status": "0 of 0 checklist items completed",
                       "_links": {
                         "object": true
                       },
                       "references": {
                         "object": true
                       },
+                      "severity": "UNKNOWN",
                       "subscribed": true,
                       "moved_to_id": {
                         "object": true
@@ -864,6 +1026,9 @@
                       "service_desk_reply_to": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -873,29 +1038,34 @@
         ],
         "Gitlab12": [
           {
-            "startTime": 1635416515201,
-            "executionTime": 334,
+            "startTime": 1676027861213,
+            "executionTime": 368,
+            "source": [
+              {
+                "previousNode": "Gitlab11"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "name": "UpdatedRelease1635416510510",
-                      "tag_name": "Release-tag-test1635416510510",
+                      "name": "UpdatedRelease1676027855939",
+                      "tag_name": "Release-tag-test1676027855940",
                       "description": {
                         "object": true
                       },
-                      "created_at": "2021-10-28T10:21:51.049Z",
-                      "released_at": "2021-10-28T10:21:51.049Z",
+                      "created_at": "2023-02-10T11:17:36.730Z",
+                      "released_at": "2023-02-10T11:17:36.730Z",
+                      "upcoming_release": false,
                       "author": {
                         "object": true
                       },
                       "commit": {
                         "object": true
                       },
-                      "upcoming_release": false,
                       "commit_path": "/nodeqa/nodemationqa/-/commit/dd2f13c1cc94dfd37e0c3063841860c5d0ae7252",
-                      "tag_path": "/nodeqa/nodemationqa/-/tags/Release-tag-test1635416510510",
+                      "tag_path": "/nodeqa/nodemationqa/-/tags/Release-tag-test1676027855940",
                       "assets": {
                         "object": true
                       },
@@ -905,6 +1075,9 @@
                       "_links": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -918,11 +1091,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-10-28T10:21:49.567Z",
-  "stoppedAt": "2021-10-28T10:21:55.536Z",
+  "startedAt": "2023-02-10T11:17:35.095Z",
+  "stoppedAt": "2023-02-10T11:17:41.582Z",
   "finished": true
 }

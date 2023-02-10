@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622630096252,
-            "executionTime": 1,
+            "startTime": 1676027894501,
+            "executionTime": 0,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,15 +24,23 @@
         ],
         "Set": [
           {
-            "startTime": 1622630096253,
-            "executionTime": 2,
+            "startTime": 1676027894502,
+            "executionTime": 29,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "random": 283,
-                      "test": "Entry1622630096255"
+                      "random": 549,
+                      "test": "Entry1676027894531"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -38,19 +50,27 @@
         ],
         "Strapi": [
           {
-            "startTime": 1622630096255,
-            "executionTime": 354,
+            "startTime": 1676027894531,
+            "executionTime": 429,
+            "source": [
+              {
+                "previousNode": "Set"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": 62,
-                      "test": "Entry1622630096255",
-                      "random": 283,
-                      "published_at": "2021-06-02T10:34:56.583Z",
-                      "created_at": "2021-06-02T10:34:56.587Z",
-                      "updated_at": "2021-06-02T10:34:56.587Z"
+                      "id": 346,
+                      "test": "Entry1676027894531",
+                      "random": 549,
+                      "published_at": "2023-02-10T11:18:14.985Z",
+                      "created_at": "2023-02-10T11:18:14.991Z",
+                      "updated_at": "2023-02-10T11:18:14.991Z"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -60,19 +80,27 @@
         ],
         "Strapi1": [
           {
-            "startTime": 1622630096609,
-            "executionTime": 337,
+            "startTime": 1676027894961,
+            "executionTime": 360,
+            "source": [
+              {
+                "previousNode": "Strapi"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": 62,
-                      "test": "Entry1622630096255",
-                      "random": 283,
-                      "published_at": "2021-06-02T10:34:56.583Z",
-                      "created_at": "2021-06-02T10:34:56.587Z",
-                      "updated_at": "2021-06-02T10:34:56.587Z"
+                      "id": 346,
+                      "test": "Entry1676027894531",
+                      "random": 549,
+                      "published_at": "2023-02-10T11:18:14.985Z",
+                      "created_at": "2023-02-10T11:18:14.991Z",
+                      "updated_at": "2023-02-10T11:18:14.991Z"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -82,8 +110,13 @@
         ],
         "Strapi2": [
           {
-            "startTime": 1622630096947,
-            "executionTime": 385,
+            "startTime": 1676027895322,
+            "executionTime": 387,
+            "source": [
+              {
+                "previousNode": "Strapi1"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -97,6 +130,9 @@
                       "published_at": "2021-04-29T07:56:29.555Z",
                       "created_at": "2021-04-29T07:56:29.563Z",
                       "updated_at": "2021-04-29T07:56:29.563Z"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -106,15 +142,23 @@
         ],
         "Set1": [
           {
-            "startTime": 1622630097332,
-            "executionTime": 3,
+            "startTime": 1676027895709,
+            "executionTime": 1,
+            "source": [
+              {
+                "previousNode": "Strapi2"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": 62,
-                      "test": "UpdatedEntry1622630096255"
+                      "id": 346,
+                      "test": "UpdatedEntry1676027894531"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -124,19 +168,27 @@
         ],
         "Strapi3": [
           {
-            "startTime": 1622630097335,
-            "executionTime": 382,
+            "startTime": 1676027895711,
+            "executionTime": 404,
+            "source": [
+              {
+                "previousNode": "Set1"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": 62,
-                      "test": "UpdatedEntry1622630096255",
-                      "random": 283,
-                      "published_at": "2021-06-02T10:34:56.583Z",
-                      "created_at": "2021-06-02T10:34:56.587Z",
-                      "updated_at": "2021-06-02T10:34:57.683Z"
+                      "id": 346,
+                      "test": "UpdatedEntry1676027894531",
+                      "random": 549,
+                      "published_at": "2023-02-10T11:18:14.985Z",
+                      "created_at": "2023-02-10T11:18:14.991Z",
+                      "updated_at": "2023-02-10T11:18:16.150Z"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -146,19 +198,27 @@
         ],
         "Strapi4": [
           {
-            "startTime": 1622630097718,
-            "executionTime": 339,
+            "startTime": 1676027896115,
+            "executionTime": 411,
+            "source": [
+              {
+                "previousNode": "Strapi3"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": 62,
-                      "test": "UpdatedEntry1622630096255",
-                      "random": 283,
-                      "published_at": "2021-06-02T10:34:56.583Z",
-                      "created_at": "2021-06-02T10:34:56.587Z",
-                      "updated_at": "2021-06-02T10:34:57.683Z"
+                      "id": 346,
+                      "test": "UpdatedEntry1676027894531",
+                      "random": 549,
+                      "published_at": "2023-02-10T11:18:14.985Z",
+                      "created_at": "2023-02-10T11:18:14.991Z",
+                      "updated_at": "2023-02-10T11:18:16.150Z"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -172,11 +232,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-02T10:34:56.250Z",
-  "stoppedAt": "2021-06-02T10:34:58.058Z",
+  "startedAt": "2023-02-10T11:18:14.499Z",
+  "stoppedAt": "2023-02-10T11:18:16.526Z",
   "finished": true
 }

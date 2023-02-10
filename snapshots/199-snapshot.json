@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622630104259,
+            "startTime": 1676027898431,
             "executionTime": 0,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,8 +24,13 @@
         ],
         "Mailcheck": [
           {
-            "startTime": 1622630104260,
-            "executionTime": 25881,
+            "startTime": 1676027898432,
+            "executionTime": 15433,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -37,6 +46,9 @@
                         "object": true
                       },
                       "githubUsername": ""
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -50,11 +62,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-02T10:35:04.258Z",
-  "stoppedAt": "2021-06-02T10:35:30.142Z",
+  "startedAt": "2023-02-10T11:18:18.430Z",
+  "stoppedAt": "2023-02-10T11:18:33.865Z",
   "finished": true
 }

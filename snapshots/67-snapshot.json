@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1635333197858,
-            "executionTime": 1,
+            "startTime": 1676027865911,
+            "executionTime": 0,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,8 +24,13 @@
         ],
         "Twist": [
           {
-            "startTime": 1635333197860,
-            "executionTime": 618,
+            "startTime": 1676027865912,
+            "executionTime": 424,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -29,7 +38,7 @@
                     "json": {
                       "archived": false,
                       "color": 1,
-                      "created_ts": 1635333198,
+                      "created_ts": 1676027866,
                       "creator": 511904,
                       "default_groups": [
                         "json array"
@@ -39,9 +48,9 @@
                       ],
                       "description": "",
                       "icon": 0,
-                      "id": 509364,
+                      "id": 642591,
                       "is_favorited": false,
-                      "name": "TestChannel1635333197862",
+                      "name": "TestChannel1676027865924",
                       "public": false,
                       "use_default_recipients": false,
                       "user_ids": [
@@ -49,6 +58,9 @@
                       ],
                       "version": 0,
                       "workspace_id": 164330
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -58,8 +70,13 @@
         ],
         "Twist4": [
           {
-            "startTime": 1635333198480,
-            "executionTime": 501,
+            "startTime": 1676027866336,
+            "executionTime": 391,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -71,9 +88,10 @@
                       "attachments": [
                         "json array"
                       ],
-                      "content": "Message 1635333198481",
+                      "content": "Message 1676027866336",
                       "conversation_id": 1067233,
                       "creator": 511904,
+                      "creator_name": "nodeqa",
                       "deleted": false,
                       "direct_group_mentions": [
                         "json array"
@@ -81,12 +99,12 @@
                       "direct_mentions": [
                         "json array"
                       ],
-                      "id": 58802161,
+                      "id": 79063641,
                       "last_edited_ts": {
                         "object": true
                       },
-                      "obj_index": 271,
-                      "posted_ts": 1635333199,
+                      "obj_index": 543,
+                      "posted_ts": 1676027867,
                       "reactions": {
                         "object": true
                       },
@@ -95,6 +113,9 @@
                       },
                       "version": 0,
                       "workspace_id": 164330
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -104,8 +125,13 @@
         ],
         "Twist13": [
           {
-            "startTime": 1635333198982,
-            "executionTime": 311,
+            "startTime": 1676027866728,
+            "executionTime": 222,
+            "source": [
+              {
+                "previousNode": "Twist"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -117,11 +143,12 @@
                       "attachments": [
                         "json array"
                       ],
-                      "channel_id": 509364,
+                      "channel_id": 642591,
                       "closed": false,
                       "comment_count": 0,
                       "content": "test",
                       "creator": 511904,
+                      "creator_name": "nodeqa",
                       "direct_group_mentions": [
                         "json array"
                       ],
@@ -131,7 +158,7 @@
                       "groups": [
                         "json array"
                       ],
-                      "id": 2884946,
+                      "id": 4139063,
                       "in_inbox": false,
                       "is_archived": true,
                       "is_saved": false,
@@ -142,7 +169,7 @@
                         "object": true
                       },
                       "last_obj_index": -1,
-                      "last_updated_ts": 1635333199,
+                      "last_updated_ts": 1676027867,
                       "muted_until_ts": {
                         "object": true
                       },
@@ -153,7 +180,7 @@
                       "pinned_ts": {
                         "object": true
                       },
-                      "posted_ts": 1635333199,
+                      "posted_ts": 1676027867,
                       "reactions": {
                         "object": true
                       },
@@ -175,12 +202,15 @@
                       "system_message": {
                         "object": true
                       },
-                      "title": "Thread1635333198987",
+                      "title": "Thread1676027866732",
                       "to_emails": [
                         "json array"
                       ],
                       "version": 0,
                       "workspace_id": 164330
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -190,8 +220,13 @@
         ],
         "Twist9": [
           {
-            "startTime": 1635333199295,
-            "executionTime": 404,
+            "startTime": 1676027866950,
+            "executionTime": 330,
+            "source": [
+              {
+                "previousNode": "Twist4"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -203,9 +238,10 @@
                       "attachments": [
                         "json array"
                       ],
-                      "content": "Message 1635333198481",
+                      "content": "Message 1676027866336",
                       "conversation_id": 1067233,
                       "creator": 511904,
+                      "creator_name": "nodeqa",
                       "deleted": false,
                       "direct_group_mentions": [
                         "json array"
@@ -213,12 +249,12 @@
                       "direct_mentions": [
                         "json array"
                       ],
-                      "id": 58802161,
+                      "id": 79063641,
                       "last_edited_ts": {
                         "object": true
                       },
-                      "obj_index": 271,
-                      "posted_ts": 1635333199,
+                      "obj_index": 543,
+                      "posted_ts": 1676027867,
                       "reactions": {
                         "object": true
                       },
@@ -227,6 +263,9 @@
                       },
                       "version": 0,
                       "workspace_id": 164330
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -236,8 +275,13 @@
         ],
         "Twist18": [
           {
-            "startTime": 1635333199700,
-            "executionTime": 274,
+            "startTime": 1676027867280,
+            "executionTime": 1231,
+            "source": [
+              {
+                "previousNode": "Twist13"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -249,9 +293,10 @@
                       "attachments": [
                         "json array"
                       ],
-                      "channel_id": 509364,
-                      "content": "Comment1635333199702",
+                      "channel_id": 642591,
+                      "content": "Comment1676027867281",
                       "creator": 511904,
+                      "creator_name": "nodeqa",
                       "deleted": false,
                       "deleted_by": {
                         "object": true
@@ -265,12 +310,12 @@
                       "groups": [
                         "json array"
                       ],
-                      "id": 71196711,
+                      "id": 81780442,
                       "last_edited_ts": {
                         "object": true
                       },
                       "obj_index": 0,
-                      "posted_ts": 1635333200,
+                      "posted_ts": 1676027868,
                       "reactions": {
                         "object": true
                       },
@@ -280,12 +325,15 @@
                       "system_message": {
                         "object": true
                       },
-                      "thread_id": 2884946,
+                      "thread_id": 4139063,
                       "to_emails": [
                         "json array"
                       ],
                       "version": 0,
                       "workspace_id": 164330
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -295,8 +343,13 @@
         ],
         "Twist10": [
           {
-            "startTime": 1635333199975,
-            "executionTime": 439,
+            "startTime": 1676027868511,
+            "executionTime": 324,
+            "source": [
+              {
+                "previousNode": "Twist9"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -308,9 +361,10 @@
                       "attachments": [
                         "json array"
                       ],
-                      "content": "Message 1635333198481",
+                      "content": "Message 1676027866336",
                       "conversation_id": 1067233,
                       "creator": 511904,
+                      "creator_name": "nodeqa",
                       "deleted": false,
                       "direct_group_mentions": [
                         "json array"
@@ -318,12 +372,12 @@
                       "direct_mentions": [
                         "json array"
                       ],
-                      "id": 58802161,
+                      "id": 79063641,
                       "last_edited_ts": {
                         "object": true
                       },
-                      "obj_index": 271,
-                      "posted_ts": 1635333199,
+                      "obj_index": 543,
+                      "posted_ts": 1676027867,
                       "reactions": {
                         "object": true
                       },
@@ -332,6 +386,9 @@
                       },
                       "version": 0,
                       "workspace_id": 164330
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -341,8 +398,13 @@
         ],
         "Twist19": [
           {
-            "startTime": 1635333200415,
-            "executionTime": 412,
+            "startTime": 1676027868835,
+            "executionTime": 167,
+            "source": [
+              {
+                "previousNode": "Twist18"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -354,9 +416,10 @@
                       "attachments": [
                         "json array"
                       ],
-                      "channel_id": 509364,
-                      "content": "Comment1635333199702",
+                      "channel_id": 642591,
+                      "content": "Comment1676027867281",
                       "creator": 511904,
+                      "creator_name": "nodeqa",
                       "deleted": false,
                       "deleted_by": {
                         "object": true
@@ -370,12 +433,12 @@
                       "groups": [
                         "json array"
                       ],
-                      "id": 71196711,
+                      "id": 81780442,
                       "last_edited_ts": {
                         "object": true
                       },
                       "obj_index": 0,
-                      "posted_ts": 1635333200,
+                      "posted_ts": 1676027868,
                       "reactions": {
                         "object": true
                       },
@@ -385,12 +448,15 @@
                       "system_message": {
                         "object": true
                       },
-                      "thread_id": 2884946,
+                      "thread_id": 4139063,
                       "to_emails": [
                         "json array"
                       ],
                       "version": 0,
                       "workspace_id": 164330
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -400,8 +466,13 @@
         ],
         "Twist11": [
           {
-            "startTime": 1635333200828,
-            "executionTime": 508,
+            "startTime": 1676027869002,
+            "executionTime": 183,
+            "source": [
+              {
+                "previousNode": "Twist10"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -413,9 +484,10 @@
                       "attachments": [
                         "json array"
                       ],
-                      "content": "Message 1635333198481",
+                      "content": "Message 1676027866336",
                       "conversation_id": 1067233,
                       "creator": 511904,
+                      "creator_name": "nodeqa",
                       "deleted": false,
                       "direct_group_mentions": [
                         "json array"
@@ -423,12 +495,12 @@
                       "direct_mentions": [
                         "json array"
                       ],
-                      "id": 58802161,
+                      "id": 79063641,
                       "last_edited_ts": {
                         "object": true
                       },
-                      "obj_index": 271,
-                      "posted_ts": 1635333199,
+                      "obj_index": 543,
+                      "posted_ts": 1676027867,
                       "reactions": {
                         "object": true
                       },
@@ -437,6 +509,9 @@
                       },
                       "version": 1,
                       "workspace_id": 164330
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -446,8 +521,13 @@
         ],
         "Twist20": [
           {
-            "startTime": 1635333201337,
-            "executionTime": 512,
+            "startTime": 1676027869186,
+            "executionTime": 207,
+            "source": [
+              {
+                "previousNode": "Twist19"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -459,9 +539,10 @@
                       "attachments": [
                         "json array"
                       ],
-                      "channel_id": 509364,
+                      "channel_id": 642591,
                       "content": "Updated Content",
                       "creator": 511904,
+                      "creator_name": "nodeqa",
                       "deleted": false,
                       "deleted_by": {
                         "object": true
@@ -475,10 +556,10 @@
                       "groups": [
                         "json array"
                       ],
-                      "id": 71196711,
-                      "last_edited_ts": 1635333201,
+                      "id": 81780442,
+                      "last_edited_ts": 1676027869,
                       "obj_index": 0,
-                      "posted_ts": 1635333200,
+                      "posted_ts": 1676027868,
                       "reactions": {
                         "object": true
                       },
@@ -488,12 +569,15 @@
                       "system_message": {
                         "object": true
                       },
-                      "thread_id": 2884946,
+                      "thread_id": 4139063,
                       "to_emails": [
                         "json array"
                       ],
                       "version": 1,
                       "workspace_id": 164330
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -503,14 +587,22 @@
         ],
         "Twist12": [
           {
-            "startTime": 1635333201850,
-            "executionTime": 510,
+            "startTime": 1676027869393,
+            "executionTime": 187,
+            "source": [
+              {
+                "previousNode": "Twist11"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "status": "ok"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -520,8 +612,13 @@
         ],
         "Twist21": [
           {
-            "startTime": 1635333202361,
-            "executionTime": 416,
+            "startTime": 1676027869581,
+            "executionTime": 202,
+            "source": [
+              {
+                "previousNode": "Twist20"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -533,9 +630,10 @@
                       "attachments": [
                         "json array"
                       ],
-                      "channel_id": 509364,
+                      "channel_id": 642591,
                       "content": "Updated Content",
                       "creator": 511904,
+                      "creator_name": "nodeqa",
                       "deleted": false,
                       "deleted_by": {
                         "object": true
@@ -549,10 +647,10 @@
                       "groups": [
                         "json array"
                       ],
-                      "id": 71196711,
-                      "last_edited_ts": 1635333202,
+                      "id": 81780442,
+                      "last_edited_ts": 1676027869,
                       "obj_index": 0,
-                      "posted_ts": 1635333200,
+                      "posted_ts": 1676027868,
                       "reactions": {
                         "object": true
                       },
@@ -562,12 +660,15 @@
                       "system_message": {
                         "object": true
                       },
-                      "thread_id": 2884946,
+                      "thread_id": 4139063,
                       "to_emails": [
                         "json array"
                       ],
                       "version": 1,
                       "workspace_id": 164330
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -577,14 +678,22 @@
         ],
         "Twist22": [
           {
-            "startTime": 1635333202778,
-            "executionTime": 305,
+            "startTime": 1676027869783,
+            "executionTime": 230,
+            "source": [
+              {
+                "previousNode": "Twist21"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "status": "ok"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -594,8 +703,13 @@
         ],
         "Twist14": [
           {
-            "startTime": 1635333203083,
-            "executionTime": 507,
+            "startTime": 1676027870013,
+            "executionTime": 322,
+            "source": [
+              {
+                "previousNode": "Twist22"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -607,11 +721,12 @@
                       "attachments": [
                         "json array"
                       ],
-                      "channel_id": 509364,
+                      "channel_id": 642591,
                       "closed": false,
                       "comment_count": 1,
                       "content": "test",
                       "creator": 511904,
+                      "creator_name": "nodeqa",
                       "direct_group_mentions": [
                         "json array"
                       ],
@@ -621,7 +736,7 @@
                       "groups": [
                         "json array"
                       ],
-                      "id": 2884946,
+                      "id": 4139063,
                       "in_inbox": false,
                       "is_archived": true,
                       "is_saved": false,
@@ -632,7 +747,7 @@
                         "object": true
                       },
                       "last_obj_index": 0,
-                      "last_updated_ts": 1635333200,
+                      "last_updated_ts": 1676027869,
                       "muted_until_ts": {
                         "object": true
                       },
@@ -643,7 +758,7 @@
                       "pinned_ts": {
                         "object": true
                       },
-                      "posted_ts": 1635333199,
+                      "posted_ts": 1676027867,
                       "reactions": {
                         "object": true
                       },
@@ -665,12 +780,15 @@
                       "system_message": {
                         "object": true
                       },
-                      "title": "Thread1635333198987",
+                      "title": "Thread1676027866732",
                       "to_emails": [
                         "json array"
                       ],
                       "version": 3,
                       "workspace_id": 164330
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -680,8 +798,13 @@
         ],
         "Twist15": [
           {
-            "startTime": 1635333203591,
-            "executionTime": 457,
+            "startTime": 1676027870336,
+            "executionTime": 201,
+            "source": [
+              {
+                "previousNode": "Twist14"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -693,11 +816,12 @@
                       "attachments": [
                         "json array"
                       ],
-                      "channel_id": 509364,
+                      "channel_id": 642591,
                       "closed": false,
                       "comment_count": 1,
                       "content": "Updated Content",
                       "creator": 511904,
+                      "creator_name": "nodeqa",
                       "direct_group_mentions": [
                         "json array"
                       ],
@@ -707,16 +831,16 @@
                       "groups": [
                         "json array"
                       ],
-                      "id": 2884946,
+                      "id": 4139063,
                       "in_inbox": false,
                       "is_archived": true,
                       "is_saved": false,
                       "last_comment": {
                         "object": true
                       },
-                      "last_edited_ts": 1635333203,
+                      "last_edited_ts": 1676027870,
                       "last_obj_index": 0,
-                      "last_updated_ts": 1635333200,
+                      "last_updated_ts": 1676027869,
                       "muted_until_ts": {
                         "object": true
                       },
@@ -727,7 +851,7 @@
                       "pinned_ts": {
                         "object": true
                       },
-                      "posted_ts": 1635333199,
+                      "posted_ts": 1676027867,
                       "reactions": {
                         "object": true
                       },
@@ -749,12 +873,15 @@
                       "system_message": {
                         "object": true
                       },
-                      "title": "Thread1635333198987",
+                      "title": "Thread1676027866732",
                       "to_emails": [
                         "json array"
                       ],
                       "version": 4,
                       "workspace_id": 164330
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -764,8 +891,13 @@
         ],
         "Twist17": [
           {
-            "startTime": 1635333204049,
-            "executionTime": 400,
+            "startTime": 1676027870537,
+            "executionTime": 195,
+            "source": [
+              {
+                "previousNode": "Twist15"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -777,11 +909,12 @@
                       "attachments": [
                         "json array"
                       ],
-                      "channel_id": 509364,
+                      "channel_id": 642591,
                       "closed": false,
                       "comment_count": 1,
                       "content": "Updated Content",
                       "creator": 511904,
+                      "creator_name": "nodeqa",
                       "direct_group_mentions": [
                         "json array"
                       ],
@@ -791,16 +924,16 @@
                       "groups": [
                         "json array"
                       ],
-                      "id": 2884946,
+                      "id": 4139063,
                       "in_inbox": false,
                       "is_archived": true,
                       "is_saved": false,
                       "last_comment": {
                         "object": true
                       },
-                      "last_edited_ts": 1635333204,
+                      "last_edited_ts": 1676027871,
                       "last_obj_index": 0,
-                      "last_updated_ts": 1635333200,
+                      "last_updated_ts": 1676027869,
                       "muted_until_ts": {
                         "object": true
                       },
@@ -811,7 +944,7 @@
                       "pinned_ts": {
                         "object": true
                       },
-                      "posted_ts": 1635333199,
+                      "posted_ts": 1676027867,
                       "reactions": {
                         "object": true
                       },
@@ -833,12 +966,15 @@
                       "system_message": {
                         "object": true
                       },
-                      "title": "Thread1635333198987",
+                      "title": "Thread1676027866732",
                       "to_emails": [
                         "json array"
                       ],
                       "version": 4,
                       "workspace_id": 164330
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -848,14 +984,22 @@
         ],
         "Twist16": [
           {
-            "startTime": 1635333204451,
-            "executionTime": 442,
+            "startTime": 1676027870733,
+            "executionTime": 180,
+            "source": [
+              {
+                "previousNode": "Twist17"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "status": "ok"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -865,8 +1009,13 @@
         ],
         "Twist1": [
           {
-            "startTime": 1635333204894,
-            "executionTime": 333,
+            "startTime": 1676027870913,
+            "executionTime": 202,
+            "source": [
+              {
+                "previousNode": "Twist16"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -874,7 +1023,7 @@
                     "json": {
                       "archived": false,
                       "color": 1,
-                      "created_ts": 1635333198,
+                      "created_ts": 1676027866,
                       "creator": 511904,
                       "default_groups": [
                         "json array"
@@ -884,9 +1033,9 @@
                       ],
                       "description": "",
                       "icon": 0,
-                      "id": 509364,
+                      "id": 642591,
                       "is_favorited": false,
-                      "name": "UpdatedChannel1635333204896",
+                      "name": "UpdatedChannel1676027870915",
                       "public": false,
                       "use_default_recipients": false,
                       "user_ids": [
@@ -894,6 +1043,9 @@
                       ],
                       "version": 1,
                       "workspace_id": 164330
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -903,8 +1055,13 @@
         ],
         "Twist2": [
           {
-            "startTime": 1635333205229,
-            "executionTime": 510,
+            "startTime": 1676027871115,
+            "executionTime": 324,
+            "source": [
+              {
+                "previousNode": "Twist1"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -912,7 +1069,7 @@
                     "json": {
                       "archived": false,
                       "color": 1,
-                      "created_ts": 1635333198,
+                      "created_ts": 1676027866,
                       "creator": 511904,
                       "default_groups": [
                         "json array"
@@ -922,9 +1079,9 @@
                       ],
                       "description": "",
                       "icon": 0,
-                      "id": 509364,
+                      "id": 642591,
                       "is_favorited": false,
-                      "name": "UpdatedChannel1635333204896",
+                      "name": "UpdatedChannel1676027870915",
                       "public": false,
                       "use_default_recipients": false,
                       "user_ids": [
@@ -932,6 +1089,9 @@
                       ],
                       "version": 1,
                       "workspace_id": 164330
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -941,8 +1101,13 @@
         ],
         "Twist3": [
           {
-            "startTime": 1635333205740,
-            "executionTime": 427,
+            "startTime": 1676027871439,
+            "executionTime": 195,
+            "source": [
+              {
+                "previousNode": "Twist2"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -970,6 +1135,9 @@
                       ],
                       "version": 0,
                       "workspace_id": 164330
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -979,14 +1147,22 @@
         ],
         "Twist5": [
           {
-            "startTime": 1635333206168,
-            "executionTime": 312,
+            "startTime": 1676027871634,
+            "executionTime": 203,
+            "source": [
+              {
+                "previousNode": "Twist3"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "status": "ok"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -996,14 +1172,22 @@
         ],
         "Twist6": [
           {
-            "startTime": 1635333206481,
-            "executionTime": 832,
+            "startTime": 1676027871837,
+            "executionTime": 346,
+            "source": [
+              {
+                "previousNode": "Twist5"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "status": "ok"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -1013,14 +1197,22 @@
         ],
         "Twist7": [
           {
-            "startTime": 1635333207314,
-            "executionTime": 1833,
+            "startTime": 1676027872183,
+            "executionTime": 347,
+            "source": [
+              {
+                "previousNode": "Twist6"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "status": "ok"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -1030,14 +1222,22 @@
         ],
         "Twist8": [
           {
-            "startTime": 1635333209148,
-            "executionTime": 690,
+            "startTime": 1676027872530,
+            "executionTime": 191,
+            "source": [
+              {
+                "previousNode": "Twist7"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "status": "ok"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -1051,11 +1251,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-10-27T11:13:17.852Z",
-  "stoppedAt": "2021-10-27T11:13:29.839Z",
+  "startedAt": "2023-02-10T11:17:45.908Z",
+  "stoppedAt": "2023-02-10T11:17:52.722Z",
   "finished": true
 }

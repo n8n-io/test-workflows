@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622630055403,
+            "startTime": 1676027886162,
             "executionTime": 1,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,14 +24,22 @@
         ],
         "Set": [
           {
-            "startTime": 1622630055405,
-            "executionTime": 1,
+            "startTime": 1676027886163,
+            "executionTime": 17,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "bucketName": "Bucket1622630055406"
+                      "bucketName": "Bucket1676027886180"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -37,14 +49,22 @@
         ],
         "AWS S3": [
           {
-            "startTime": 1622630055406,
-            "executionTime": 815,
+            "startTime": 1676027886180,
+            "executionTime": 654,
+            "source": [
+              {
+                "previousNode": "Set"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "success": true
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -54,15 +74,23 @@
         ],
         "AWS S": [
           {
-            "startTime": 1622630056222,
-            "executionTime": 588,
+            "startTime": 1676027886835,
+            "executionTime": 455,
+            "source": [
+              {
+                "previousNode": "AWS S3"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "Name": "bucket1616668166780",
-                      "CreationDate": "2021-03-25T10:29:28.000Z"
+                      "Name": "bucket1639362188957",
+                      "CreationDate": "2021-12-13T02:23:10.000Z"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -72,14 +100,22 @@
         ],
         "Set1": [
           {
-            "startTime": 1622630056810,
+            "startTime": 1676027887291,
             "executionTime": 1,
+            "source": [
+              {
+                "previousNode": "AWS S3"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "folderName": "Folder1622630056811"
+                      "folderName": "Folder1676027887292"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -89,8 +125,13 @@
         ],
         "Function": [
           {
-            "startTime": 1622630056811,
-            "executionTime": 4,
+            "startTime": 1676027887293,
+            "executionTime": 11,
+            "source": [
+              {
+                "previousNode": "AWS S"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -103,6 +144,9 @@
                         "fileExtension": "png",
                         "fileName": "n8n-logo.png"
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -112,14 +156,22 @@
         ],
         "AWS S8": [
           {
-            "startTime": 1622630056815,
-            "executionTime": 974,
+            "startTime": 1676027887304,
+            "executionTime": 831,
+            "source": [
+              {
+                "previousNode": "Set1"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "success": true
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -129,14 +181,22 @@
         ],
         "AWS S2": [
           {
-            "startTime": 1622630057789,
-            "executionTime": 1043,
+            "startTime": 1676027888136,
+            "executionTime": 924,
+            "source": [
+              {
+                "previousNode": "Function"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "success": true
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -146,18 +206,26 @@
         ],
         "AWS S9": [
           {
-            "startTime": 1622630058833,
-            "executionTime": 978,
+            "startTime": 1676027889060,
+            "executionTime": 829,
+            "source": [
+              {
+                "previousNode": "AWS S8"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "Key": "Folder1622630056811/",
-                      "LastModified": "2021-06-02T10:34:18.000Z",
+                      "Key": "Folder1676027887292/",
+                      "LastModified": "2023-02-10T11:18:09.000Z",
                       "ETag": "\"d41d8cd98f00b204e9800998ecf8427e\"",
                       "Size": "0",
                       "StorageClass": "STANDARD"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -167,26 +235,26 @@
         ],
         "AWS S4": [
           {
-            "startTime": 1622630059811,
-            "executionTime": 953,
+            "startTime": 1676027889889,
+            "executionTime": 847,
+            "source": [
+              {
+                "previousNode": "AWS S2"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "Key": "n8n-logo.png",
-                      "LastModified": "2021-06-02T10:34:19.000Z",
+                      "LastModified": "2023-02-10T11:18:10.000Z",
                       "ETag": "\"174dbbfbcabb9dc0c2e82002e5ce289e\"",
                       "Size": "2675",
                       "StorageClass": "STANDARD"
                     },
-                    "binary": {
-                      "data": {
-                        "mimeType": "image/png",
-                        "data": "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",
-                        "fileName": "n8n-logo.png",
-                        "fileExtension": "png"
-                      }
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -196,8 +264,13 @@
         ],
         "AWS S10": [
           {
-            "startTime": 1622630060765,
-            "executionTime": 1460,
+            "startTime": 1676027890736,
+            "executionTime": 1290,
+            "source": [
+              {
+                "previousNode": "AWS S9"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -206,6 +279,9 @@
                       "deleted": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -215,15 +291,20 @@
         ],
         "AWS S5": [
           {
-            "startTime": 1622630062226,
-            "executionTime": 945,
+            "startTime": 1676027892026,
+            "executionTime": 827,
+            "source": [
+              {
+                "previousNode": "AWS S4"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "Key": "n8n-logo.png",
-                      "LastModified": "2021-06-02T10:34:19.000Z",
+                      "LastModified": "2023-02-10T11:18:10.000Z",
                       "ETag": "\"174dbbfbcabb9dc0c2e82002e5ce289e\"",
                       "Size": "2675",
                       "StorageClass": "STANDARD"
@@ -231,10 +312,15 @@
                     "binary": {
                       "data": {
                         "mimeType": "image/png",
+                        "fileType": "image",
+                        "fileExtension": "png",
                         "data": "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",
                         "fileName": "n8n-logo.png",
-                        "fileExtension": "png"
+                        "fileSize": "2.67 kB"
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -244,15 +330,20 @@
         ],
         "AWS S6": [
           {
-            "startTime": 1622630063172,
-            "executionTime": 1,
+            "startTime": 1676027892854,
+            "executionTime": 0,
+            "source": [
+              {
+                "previousNode": "AWS S5"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "Key": "n8n-logo.png",
-                      "LastModified": "2021-06-02T10:34:19.000Z",
+                      "LastModified": "2023-02-10T11:18:10.000Z",
                       "ETag": "\"174dbbfbcabb9dc0c2e82002e5ce289e\"",
                       "Size": "2675",
                       "StorageClass": "STANDARD"
@@ -260,10 +351,15 @@
                     "binary": {
                       "data": {
                         "mimeType": "image/png",
+                        "fileType": "image",
+                        "fileExtension": "png",
                         "data": "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",
                         "fileName": "n8n-logo.png",
-                        "fileExtension": "png"
+                        "fileSize": "2.67 kB"
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -273,18 +369,26 @@
         ],
         "AWS S1": [
           {
-            "startTime": 1622630063173,
-            "executionTime": 950,
+            "startTime": 1676027892854,
+            "executionTime": 825,
+            "source": [
+              {
+                "previousNode": "AWS S6"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "Key": "n8n-logo.png",
-                      "LastModified": "2021-06-02T10:34:19.000Z",
+                      "LastModified": "2023-02-10T11:18:10.000Z",
                       "ETag": "\"174dbbfbcabb9dc0c2e82002e5ce289e\"",
                       "Size": "2675",
                       "StorageClass": "STANDARD"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -294,14 +398,22 @@
         ],
         "AWS S7": [
           {
-            "startTime": 1622630064123,
-            "executionTime": 977,
+            "startTime": 1676027893679,
+            "executionTime": 826,
+            "source": [
+              {
+                "previousNode": "AWS S1"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "success": true
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -315,11 +427,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-02T10:34:15.401Z",
-  "stoppedAt": "2021-06-02T10:34:25.101Z",
+  "startedAt": "2023-02-10T11:18:06.160Z",
+  "stoppedAt": "2023-02-10T11:18:14.505Z",
   "finished": true
 }

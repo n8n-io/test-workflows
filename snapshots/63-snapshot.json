@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622629988272,
+            "startTime": 1676027864080,
             "executionTime": 0,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,14 +24,22 @@
         ],
         "Segment": [
           {
-            "startTime": 1622629988273,
-            "executionTime": 901,
+            "startTime": 1676027864080,
+            "executionTime": 958,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "success": true
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -37,14 +49,22 @@
         ],
         "Segment1": [
           {
-            "startTime": 1622629989174,
-            "executionTime": 962,
+            "startTime": 1676027865038,
+            "executionTime": 525,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "success": true
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -54,14 +74,22 @@
         ],
         "Segment3": [
           {
-            "startTime": 1622629990136,
-            "executionTime": 719,
+            "startTime": 1676027865563,
+            "executionTime": 1145,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "success": true
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -71,14 +99,22 @@
         ],
         "Segment2": [
           {
-            "startTime": 1622629990856,
-            "executionTime": 716,
+            "startTime": 1676027866709,
+            "executionTime": 696,
+            "source": [
+              {
+                "previousNode": "Segment1"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "success": true
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -92,11 +128,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-02T10:33:08.270Z",
-  "stoppedAt": "2021-06-02T10:33:11.572Z",
+  "startedAt": "2023-02-10T11:17:44.078Z",
+  "stoppedAt": "2023-02-10T11:17:47.405Z",
   "finished": true
 }

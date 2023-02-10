@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1636722211421,
-            "executionTime": 1,
+            "startTime": 1676027867565,
+            "executionTime": 0,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,8 +24,13 @@
         ],
         "Read Binary File": [
           {
-            "startTime": 1636722211422,
-            "executionTime": 2,
+            "startTime": 1676027867566,
+            "executionTime": 6,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -30,11 +39,16 @@
                     "binary": {
                       "data": {
                         "mimeType": "image/png",
+                        "fileType": "image",
+                        "fileExtension": "png",
                         "data": "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",
                         "directory": "/tmp",
                         "fileName": "n8n-logo.png",
-                        "fileExtension": "png"
+                        "fileSize": "2.67 kB"
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -44,8 +58,13 @@
         ],
         "Zulip": [
           {
-            "startTime": 1636722211424,
-            "executionTime": 598,
+            "startTime": 1676027867573,
+            "executionTime": 474,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -53,7 +72,10 @@
                     "json": {
                       "result": "success",
                       "msg": "",
-                      "id": 261248494
+                      "id": 327022527
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -63,8 +85,13 @@
         ],
         "Zulip7": [
           {
-            "startTime": 1636722212023,
-            "executionTime": 662,
+            "startTime": 1676027868048,
+            "executionTime": 464,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -78,6 +105,9 @@
                       "already_subscribed": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -87,8 +117,13 @@
         ],
         "Zulip12": [
           {
-            "startTime": 1636722212686,
-            "executionTime": 489,
+            "startTime": 1676027868512,
+            "executionTime": 416,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -109,7 +144,11 @@
                       "date_joined": "2021-02-25T14:05:26.897277+00:00",
                       "avatar_url": {
                         "object": true
-                      }
+                      },
+                      "delivery_email": "nodeqa@n8n.io"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -119,8 +158,13 @@
         ],
         "Zulip6": [
           {
-            "startTime": 1636722213176,
-            "executionTime": 718,
+            "startTime": 1676027868928,
+            "executionTime": 533,
+            "source": [
+              {
+                "previousNode": "Read Binary File"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -128,7 +172,10 @@
                     "json": {
                       "result": "success",
                       "msg": "",
-                      "uri": "https://nodeqa.zulipchat.com//user_uploads/33385/6sRW7vo7lDavIT7KTd9Yt9v-/n8n-logo.png"
+                      "uri": "https://nodeqa.zulipchat.com//user_uploads/33385/E2qDYWjDgInUD0ILYrsDX8bf/n8n-logo.png"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -138,8 +185,13 @@
         ],
         "Zulip1": [
           {
-            "startTime": 1636722213895,
-            "executionTime": 681,
+            "startTime": 1676027869462,
+            "executionTime": 437,
+            "source": [
+              {
+                "previousNode": "Zulip"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -147,6 +199,9 @@
                     "json": {
                       "result": "success",
                       "msg": ""
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -156,99 +211,124 @@
         ],
         "Zulip8": [
           {
-            "startTime": 1636722214577,
-            "executionTime": 511,
+            "startTime": 1676027869899,
+            "executionTime": 423,
+            "source": [
+              {
+                "previousNode": "Zulip7"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
+                      "can_remove_subscribers_group_id": 35057,
+                      "date_created": 1676027868,
+                      "description": "testing stream from n8n",
+                      "first_message_id": 327022529,
+                      "history_public_to_subscribers": true,
+                      "invite_only": false,
+                      "is_web_public": false,
+                      "message_retention_days": {
+                        "object": true
+                      },
                       "name": "StreamTest",
-                      "stream_id": 306705,
-                      "description": "testing stream from n8n",
                       "rendered_description": "<p>testing stream from n8n</p>",
-                      "invite_only": false,
-                      "is_web_public": false,
+                      "stream_id": 369731,
                       "stream_post_policy": 1,
-                      "history_public_to_subscribers": true,
-                      "first_message_id": 261248432,
-                      "message_retention_days": {
-                        "object": true
-                      },
-                      "date_created": 1636722158,
                       "is_announcement_only": false
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   },
                   {
                     "json": {
-                      "name": "UpdateStream1614934177572",
-                      "stream_id": 279988,
-                      "description": "testing stream from n8n",
-                      "rendered_description": "<p>testing stream from n8n</p>",
-                      "invite_only": false,
-                      "is_web_public": false,
-                      "stream_post_policy": 1,
-                      "history_public_to_subscribers": true,
-                      "first_message_id": 228916381,
-                      "message_retention_days": {
-                        "object": true
-                      },
+                      "can_remove_subscribers_group_id": 35057,
                       "date_created": 1614934173,
-                      "is_announcement_only": false
-                    }
-                  },
-                  {
-                    "json": {
-                      "name": "UpdateStream1614934202284",
-                      "stream_id": 280046,
                       "description": "testing stream from n8n",
+                      "first_message_id": 228916381,
+                      "history_public_to_subscribers": true,
+                      "invite_only": false,
+                      "is_web_public": false,
+                      "message_retention_days": {
+                        "object": true
+                      },
+                      "name": "UpdateStream1614934177572",
                       "rendered_description": "<p>testing stream from n8n</p>",
-                      "invite_only": false,
-                      "is_web_public": false,
+                      "stream_id": 279988,
                       "stream_post_policy": 1,
-                      "history_public_to_subscribers": true,
-                      "first_message_id": 228916526,
-                      "message_retention_days": {
-                        "object": true
-                      },
+                      "is_announcement_only": false
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  },
+                  {
+                    "json": {
+                      "can_remove_subscribers_group_id": 35057,
                       "date_created": 1614934197,
-                      "is_announcement_only": false
-                    }
-                  },
-                  {
-                    "json": {
-                      "name": "general",
-                      "stream_id": 278952,
-                      "description": "Everyone is added to this stream by default. Welcome! :octopus:",
-                      "rendered_description": "<p>Everyone is added to this stream by default. Welcome! <span aria-label=\"octopus\" class=\"emoji emoji-1f419\" role=\"img\" title=\"octopus\">:octopus:</span></p>",
+                      "description": "testing stream from n8n",
+                      "first_message_id": 228916526,
+                      "history_public_to_subscribers": true,
                       "invite_only": false,
                       "is_web_public": false,
-                      "stream_post_policy": 1,
-                      "history_public_to_subscribers": true,
-                      "first_message_id": 227771367,
                       "message_retention_days": {
                         "object": true
                       },
-                      "date_created": 1614261926,
+                      "name": "UpdateStream1614934202284",
+                      "rendered_description": "<p>testing stream from n8n</p>",
+                      "stream_id": 280046,
+                      "stream_post_policy": 1,
                       "is_announcement_only": false
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   },
                   {
                     "json": {
-                      "name": "test",
-                      "stream_id": 278954,
+                      "can_remove_subscribers_group_id": 35057,
+                      "date_created": 1614261926,
+                      "description": "Everyone is added to this stream by default. Welcome! :octopus:",
+                      "first_message_id": 227771365,
+                      "history_public_to_subscribers": true,
+                      "invite_only": false,
+                      "is_web_public": false,
+                      "message_retention_days": {
+                        "object": true
+                      },
+                      "name": "general",
+                      "rendered_description": "<p>Everyone is added to this stream by default. Welcome! <span aria-label=\"octopus\" class=\"emoji emoji-1f419\" role=\"img\" title=\"octopus\">:octopus:</span></p>",
+                      "stream_id": 278952,
+                      "stream_post_policy": 1,
+                      "is_announcement_only": false
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  },
+                  {
+                    "json": {
+                      "can_remove_subscribers_group_id": 35057,
+                      "date_created": 1614262281,
                       "description": "testing stream",
-                      "rendered_description": "<p>testing stream</p>",
+                      "first_message_id": 227772218,
+                      "history_public_to_subscribers": true,
                       "invite_only": true,
                       "is_web_public": false,
-                      "stream_post_policy": 1,
-                      "history_public_to_subscribers": true,
-                      "first_message_id": 227772218,
                       "message_retention_days": {
                         "object": true
                       },
-                      "date_created": 1614262281,
+                      "name": "test",
+                      "rendered_description": "<p>testing stream</p>",
+                      "stream_id": 278954,
+                      "stream_post_policy": 1,
                       "is_announcement_only": false
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -258,171 +338,188 @@
         ],
         "Zulip10": [
           {
-            "startTime": 1636722215089,
-            "executionTime": 11006,
+            "startTime": 1676027870322,
+            "executionTime": 421,
+            "source": [
+              {
+                "previousNode": "Zulip7"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "name": "StreamTest",
-                      "stream_id": 306705,
-                      "description": "testing stream from n8n",
-                      "rendered_description": "<p>testing stream from n8n</p>",
-                      "invite_only": false,
-                      "is_web_public": false,
-                      "stream_post_policy": 1,
-                      "history_public_to_subscribers": true,
-                      "first_message_id": 261248432,
-                      "message_retention_days": {
-                        "object": true
-                      },
-                      "date_created": 1636722158,
-                      "color": "#76ce90",
-                      "is_muted": false,
-                      "pin_to_top": false,
                       "audible_notifications": {
                         "object": true
                       },
+                      "can_remove_subscribers_group_id": 35057,
+                      "color": "#f4ae55",
+                      "date_created": 1676027868,
+                      "description": "testing stream from n8n",
                       "desktop_notifications": {
                         "object": true
                       },
+                      "email_address": "streamtest.ae79af91e14abd55eddacb19d5e20dbc.show-sender@streams.zulipchat.com",
                       "email_notifications": {
                         "object": true
                       },
+                      "first_message_id": 327022529,
+                      "history_public_to_subscribers": true,
+                      "in_home_view": true,
+                      "invite_only": false,
+                      "is_announcement_only": false,
+                      "is_muted": false,
+                      "is_web_public": false,
+                      "message_retention_days": {
+                        "object": true
+                      },
+                      "name": "StreamTest",
+                      "pin_to_top": false,
                       "push_notifications": {
                         "object": true
                       },
-                      "wildcard_mentions_notify": {
-                        "object": true
-                      },
-                      "role": 50,
-                      "in_home_view": true,
-                      "is_announcement_only": false,
+                      "rendered_description": "<p>testing stream from n8n</p>",
+                      "stream_id": 369731,
+                      "stream_post_policy": 1,
                       "stream_weekly_traffic": {
                         "object": true
                       },
-                      "email_address": "streamtest.7a72e97fbfb8d5a0b23239ce40926d52.show-sender@streams.zulipchat.com"
+                      "wildcard_mentions_notify": {
+                        "object": true
+                      }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   },
                   {
                     "json": {
-                      "name": "UpdateStream1614934177572",
-                      "stream_id": 279988,
-                      "description": "testing stream from n8n",
-                      "rendered_description": "<p>testing stream from n8n</p>",
-                      "invite_only": false,
-                      "is_web_public": false,
-                      "stream_post_policy": 1,
-                      "history_public_to_subscribers": true,
-                      "first_message_id": 228916381,
-                      "message_retention_days": {
+                      "audible_notifications": {
                         "object": true
                       },
-                      "date_created": 1614934173,
+                      "can_remove_subscribers_group_id": 35057,
                       "color": "#b0a5fd",
-                      "is_muted": false,
-                      "pin_to_top": false,
-                      "audible_notifications": {
-                        "object": true
-                      },
-                      "desktop_notifications": {
-                        "object": true
-                      },
-                      "email_notifications": {
-                        "object": true
-                      },
-                      "push_notifications": {
-                        "object": true
-                      },
-                      "wildcard_mentions_notify": {
-                        "object": true
-                      },
-                      "role": 50,
-                      "in_home_view": true,
-                      "is_announcement_only": false,
-                      "stream_weekly_traffic": 0,
-                      "email_address": "updatestream1614934177572.0a60ffc95fcff95cdd638cbdb200b767.show-sender@streams.zulipchat.com"
-                    }
-                  },
-                  {
-                    "json": {
-                      "name": "UpdateStream1614934202284",
-                      "stream_id": 280046,
+                      "date_created": 1614934173,
                       "description": "testing stream from n8n",
-                      "rendered_description": "<p>testing stream from n8n</p>",
-                      "invite_only": false,
-                      "is_web_public": false,
-                      "stream_post_policy": 1,
-                      "history_public_to_subscribers": true,
-                      "first_message_id": 228916526,
-                      "message_retention_days": {
-                        "object": true
-                      },
-                      "date_created": 1614934197,
-                      "color": "#addfe5",
-                      "is_muted": false,
-                      "pin_to_top": false,
-                      "audible_notifications": {
-                        "object": true
-                      },
                       "desktop_notifications": {
                         "object": true
                       },
+                      "email_address": "updatestream1614934177572.0a60ffc95fcff95cdd638cbdb200b767.show-sender@streams.zulipchat.com",
                       "email_notifications": {
                         "object": true
                       },
+                      "first_message_id": 228916381,
+                      "history_public_to_subscribers": true,
+                      "in_home_view": true,
+                      "invite_only": false,
+                      "is_announcement_only": false,
+                      "is_muted": false,
+                      "is_web_public": false,
+                      "message_retention_days": {
+                        "object": true
+                      },
+                      "name": "UpdateStream1614934177572",
+                      "pin_to_top": false,
                       "push_notifications": {
                         "object": true
                       },
+                      "rendered_description": "<p>testing stream from n8n</p>",
+                      "stream_id": 279988,
+                      "stream_post_policy": 1,
+                      "stream_weekly_traffic": 0,
                       "wildcard_mentions_notify": {
                         "object": true
-                      },
-                      "role": 50,
-                      "in_home_view": true,
-                      "is_announcement_only": false,
-                      "stream_weekly_traffic": 0,
-                      "email_address": "updatestream1614934202284.62a670187b37f80ce229645999a1a786.show-sender@streams.zulipchat.com"
+                      }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   },
                   {
                     "json": {
-                      "name": "test",
-                      "stream_id": 278954,
-                      "description": "testing stream",
-                      "rendered_description": "<p>testing stream</p>",
-                      "invite_only": true,
-                      "is_web_public": false,
-                      "stream_post_policy": 1,
-                      "history_public_to_subscribers": true,
-                      "first_message_id": 227772218,
-                      "message_retention_days": {
-                        "object": true
-                      },
-                      "date_created": 1614262281,
-                      "color": "#a6c7e5",
-                      "is_muted": false,
-                      "pin_to_top": false,
                       "audible_notifications": {
                         "object": true
                       },
+                      "can_remove_subscribers_group_id": 35057,
+                      "color": "#addfe5",
+                      "date_created": 1614934197,
+                      "description": "testing stream from n8n",
                       "desktop_notifications": {
                         "object": true
                       },
+                      "email_address": "updatestream1614934202284.62a670187b37f80ce229645999a1a786.show-sender@streams.zulipchat.com",
                       "email_notifications": {
                         "object": true
                       },
+                      "first_message_id": 228916526,
+                      "history_public_to_subscribers": true,
+                      "in_home_view": true,
+                      "invite_only": false,
+                      "is_announcement_only": false,
+                      "is_muted": false,
+                      "is_web_public": false,
+                      "message_retention_days": {
+                        "object": true
+                      },
+                      "name": "UpdateStream1614934202284",
+                      "pin_to_top": false,
                       "push_notifications": {
                         "object": true
                       },
+                      "rendered_description": "<p>testing stream from n8n</p>",
+                      "stream_id": 280046,
+                      "stream_post_policy": 1,
+                      "stream_weekly_traffic": 0,
                       "wildcard_mentions_notify": {
                         "object": true
+                      }
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  },
+                  {
+                    "json": {
+                      "audible_notifications": {
+                        "object": true
                       },
-                      "role": 50,
+                      "can_remove_subscribers_group_id": 35057,
+                      "color": "#a6c7e5",
+                      "date_created": 1614262281,
+                      "description": "testing stream",
+                      "desktop_notifications": {
+                        "object": true
+                      },
+                      "email_address": "test.fce82544c99d40f13a35dc8706e86faa.show-sender@streams.zulipchat.com",
+                      "email_notifications": {
+                        "object": true
+                      },
+                      "first_message_id": 227772218,
+                      "history_public_to_subscribers": true,
                       "in_home_view": true,
+                      "invite_only": true,
                       "is_announcement_only": false,
+                      "is_muted": false,
+                      "is_web_public": false,
+                      "message_retention_days": {
+                        "object": true
+                      },
+                      "name": "test",
+                      "pin_to_top": false,
+                      "push_notifications": {
+                        "object": true
+                      },
+                      "rendered_description": "<p>testing stream</p>",
+                      "stream_id": 278954,
+                      "stream_post_policy": 1,
                       "stream_weekly_traffic": 0,
-                      "email_address": "test.fce82544c99d40f13a35dc8706e86faa.show-sender@streams.zulipchat.com"
+                      "wildcard_mentions_notify": {
+                        "object": true
+                      }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -432,8 +529,13 @@
         ],
         "Zulip13": [
           {
-            "startTime": 1636722226097,
-            "executionTime": 575,
+            "startTime": 1676027870744,
+            "executionTime": 420,
+            "source": [
+              {
+                "previousNode": "Zulip12"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -444,6 +546,9 @@
                       "user": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -453,8 +558,13 @@
         ],
         "Zulip2": [
           {
-            "startTime": 1636722226674,
-            "executionTime": 738,
+            "startTime": 1676027871165,
+            "executionTime": 422,
+            "source": [
+              {
+                "previousNode": "Zulip1"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -462,7 +572,10 @@
                     "json": {
                       "result": "success",
                       "msg": "",
-                      "id": 261248509
+                      "id": 327022540
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -472,28 +585,38 @@
         ],
         "Function": [
           {
-            "startTime": 1636722227412,
-            "executionTime": 25,
+            "startTime": 1676027871587,
+            "executionTime": 7,
+            "source": [
+              {
+                "previousNode": "Zulip8"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "name": "StreamTest",
-                      "stream_id": 306705,
+                      "can_remove_subscribers_group_id": 35057,
+                      "date_created": 1676027868,
                       "description": "testing stream from n8n",
-                      "rendered_description": "<p>testing stream from n8n</p>",
+                      "first_message_id": 327022529,
+                      "history_public_to_subscribers": true,
                       "invite_only": false,
                       "is_web_public": false,
-                      "stream_post_policy": 1,
-                      "history_public_to_subscribers": true,
-                      "first_message_id": 261248432,
                       "message_retention_days": {
                         "object": true
                       },
-                      "date_created": 1636722158,
+                      "name": "StreamTest",
+                      "rendered_description": "<p>testing stream from n8n</p>",
+                      "stream_id": 369731,
+                      "stream_post_policy": 1,
                       "is_announcement_only": false
-                    }
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    },
+                    "index": 0
                   }
                 ]
               ]
@@ -502,8 +625,13 @@
         ],
         "Zulip14": [
           {
-            "startTime": 1636722227438,
+            "startTime": 1676027871594,
             "executionTime": 1,
+            "source": [
+              {
+                "previousNode": "Zulip13"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -514,6 +642,9 @@
                       "user": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -523,8 +654,13 @@
         ],
         "Zulip3": [
           {
-            "startTime": 1636722227439,
-            "executionTime": 726,
+            "startTime": 1676027871595,
+            "executionTime": 437,
+            "source": [
+              {
+                "previousNode": "Zulip2"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -532,7 +668,13 @@
                     "json": {
                       "result": "success",
                       "msg": "",
-                      "raw_content": "Update content 1636722213900"
+                      "message": {
+                        "object": true
+                      },
+                      "raw_content": "Update content 1676027869463"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -542,8 +684,13 @@
         ],
         "Zulip9": [
           {
-            "startTime": 1636722228166,
-            "executionTime": 655,
+            "startTime": 1676027872032,
+            "executionTime": 457,
+            "source": [
+              {
+                "previousNode": "Function"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -551,6 +698,9 @@
                     "json": {
                       "result": "success",
                       "msg": ""
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -560,8 +710,13 @@
         ],
         "Zulip15": [
           {
-            "startTime": 1636722228822,
-            "executionTime": 1,
+            "startTime": 1676027872490,
+            "executionTime": 0,
+            "source": [
+              {
+                "previousNode": "Zulip14"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -572,6 +727,9 @@
                       "user": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -581,8 +739,13 @@
         ],
         "Zulip4": [
           {
-            "startTime": 1636722228824,
-            "executionTime": 664,
+            "startTime": 1676027872490,
+            "executionTime": 446,
+            "source": [
+              {
+                "previousNode": "Zulip3"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -590,6 +753,9 @@
                     "json": {
                       "result": "success",
                       "msg": ""
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -599,8 +765,13 @@
         ],
         "Zulip11": [
           {
-            "startTime": 1636722229489,
-            "executionTime": 612,
+            "startTime": 1676027872936,
+            "executionTime": 454,
+            "source": [
+              {
+                "previousNode": "Zulip9"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -608,6 +779,9 @@
                     "json": {
                       "result": "success",
                       "msg": ""
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -617,8 +791,13 @@
         ],
         "Zulip5": [
           {
-            "startTime": 1636722230102,
-            "executionTime": 768,
+            "startTime": 1676027873390,
+            "executionTime": 444,
+            "source": [
+              {
+                "previousNode": "Zulip4"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -626,6 +805,9 @@
                     "json": {
                       "result": "success",
                       "msg": ""
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -639,11 +821,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-11-12T13:03:31.418Z",
-  "stoppedAt": "2021-11-12T13:03:50.871Z",
+  "startedAt": "2023-02-10T11:17:47.562Z",
+  "stoppedAt": "2023-02-10T11:17:53.834Z",
   "finished": true
 }

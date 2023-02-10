@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622630067441,
-            "executionTime": 1,
+            "startTime": 1676027888621,
+            "executionTime": 0,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,25 +24,30 @@
         ],
         "Intercom5": [
           {
-            "startTime": 1622630067442,
-            "executionTime": 758,
+            "startTime": 1676027888622,
+            "executionTime": 986,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "type": "contact",
-                      "id": "60b75eb39484ac894f12b75e",
-                      "user_id": "5fe007c5-ecf0-4a18-a604-21f1d6f3c13e",
+                      "id": "63e627f14a820c8986a912a7",
+                      "user_id": "679c8fd0-595a-434c-8878-11a454b5c16b",
                       "anonymous": true,
-                      "email": "fake1622630067444@email.com",
+                      "email": "fake1676027888635@email.com",
                       "phone": {
                         "object": true
                       },
                       "name": {
                         "object": true
                       },
-                      "pseudonym": "Violet Van",
+                      "pseudonym": "Violet Sunshine",
                       "avatar": {
                         "object": true
                       },
@@ -52,14 +61,14 @@
                       "last_request_at": {
                         "object": true
                       },
-                      "created_at": 1622630068,
+                      "created_at": 1676027889,
                       "remote_created_at": {
                         "object": true
                       },
                       "signed_up_at": {
                         "object": true
                       },
-                      "updated_at": 1622630068,
+                      "updated_at": 1676027889,
                       "session_count": 0,
                       "social_profiles": {
                         "object": true
@@ -100,6 +109,9 @@
                       "do_not_track": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -109,16 +121,21 @@
         ],
         "Intercom10": [
           {
-            "startTime": 1622630068200,
-            "executionTime": 648,
+            "startTime": 1676027889609,
+            "executionTime": 620,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "type": "user",
-                      "id": "60b75eb46cba0cc0ca2f99d0",
-                      "user_id": "User1622630068200",
+                      "id": "63e627f23ec23f94dc8eeb7e",
+                      "user_id": "User1676027889611",
                       "anonymous": false,
                       "email": "",
                       "phone": {
@@ -143,14 +160,14 @@
                       "last_request_at": {
                         "object": true
                       },
-                      "created_at": 1622630068,
+                      "created_at": 1676027890,
                       "remote_created_at": {
                         "object": true
                       },
                       "signed_up_at": {
                         "object": true
                       },
-                      "updated_at": 1622630068,
+                      "updated_at": 1676027890,
                       "session_count": 0,
                       "social_profiles": {
                         "object": true
@@ -191,6 +208,9 @@
                       "do_not_track": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -200,20 +220,25 @@
         ],
         "Intercom1": [
           {
-            "startTime": 1622630068849,
-            "executionTime": 597,
+            "startTime": 1676027890230,
+            "executionTime": 605,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "type": "company",
-                      "company_id": "Company1622630068850",
-                      "id": "60b75eb54cb31765e3b124de",
+                      "company_id": "Company1676027890230",
+                      "id": "63e627f2b980ddcad5e25f77",
                       "app_id": "t5y9d4d1",
-                      "name": "TestingCompany2021-06-02T10:34:28.850Z",
-                      "created_at": 1622630069,
-                      "updated_at": 1622630069,
+                      "name": "TestingCompany2023-02-10T11:18:10.231Z",
+                      "created_at": 1676027890,
+                      "updated_at": 1676027890,
                       "monthly_spend": 0,
                       "session_count": 0,
                       "user_count": 0,
@@ -229,6 +254,9 @@
                       "custom_attributes": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -238,25 +266,30 @@
         ],
         "Intercom6": [
           {
-            "startTime": 1622630069447,
-            "executionTime": 573,
+            "startTime": 1676027890835,
+            "executionTime": 485,
+            "source": [
+              {
+                "previousNode": "Intercom5"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "type": "contact",
-                      "id": "60b75eb39484ac894f12b75e",
-                      "user_id": "5fe007c5-ecf0-4a18-a604-21f1d6f3c13e",
+                      "id": "63e627f14a820c8986a912a7",
+                      "user_id": "679c8fd0-595a-434c-8878-11a454b5c16b",
                       "anonymous": true,
-                      "email": "fake1622630067444@email.com",
+                      "email": "fake1676027888635@email.com",
                       "phone": {
                         "object": true
                       },
                       "name": {
                         "object": true
                       },
-                      "pseudonym": "Violet Van",
+                      "pseudonym": "Violet Sunshine",
                       "avatar": {
                         "object": true
                       },
@@ -270,14 +303,14 @@
                       "last_request_at": {
                         "object": true
                       },
-                      "created_at": 1622630068,
+                      "created_at": 1676027889,
                       "remote_created_at": {
                         "object": true
                       },
                       "signed_up_at": {
                         "object": true
                       },
-                      "updated_at": 1622630068,
+                      "updated_at": 1676027889,
                       "session_count": 0,
                       "social_profiles": {
                         "object": true
@@ -318,6 +351,9 @@
                       "do_not_track": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -327,16 +363,21 @@
         ],
         "Intercom11": [
           {
-            "startTime": 1622630070021,
-            "executionTime": 443,
+            "startTime": 1676027891321,
+            "executionTime": 498,
+            "source": [
+              {
+                "previousNode": "Intercom10"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "type": "user",
-                      "id": "60b75eb46cba0cc0ca2f99d0",
-                      "user_id": "User1622630068200",
+                      "id": "63e627f23ec23f94dc8eeb7e",
+                      "user_id": "User1676027889611",
                       "anonymous": false,
                       "email": "",
                       "phone": {
@@ -361,14 +402,14 @@
                       "last_request_at": {
                         "object": true
                       },
-                      "created_at": 1622630068,
+                      "created_at": 1676027890,
                       "remote_created_at": {
                         "object": true
                       },
                       "signed_up_at": {
                         "object": true
                       },
-                      "updated_at": 1622630068,
+                      "updated_at": 1676027890,
                       "session_count": 0,
                       "social_profiles": {
                         "object": true
@@ -409,6 +450,9 @@
                       "do_not_track": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -418,20 +462,25 @@
         ],
         "Intercom": [
           {
-            "startTime": 1622630070464,
-            "executionTime": 420,
+            "startTime": 1676027891819,
+            "executionTime": 400,
+            "source": [
+              {
+                "previousNode": "Intercom1"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "type": "company",
-                      "company_id": "Company1622630068850",
-                      "id": "60b75eb54cb31765e3b124de",
+                      "company_id": "Company1676027890230",
+                      "id": "63e627f2b980ddcad5e25f77",
                       "app_id": "t5y9d4d1",
-                      "name": "TestingCompany2021-06-02T10:34:28.850Z",
-                      "created_at": 1622630069,
-                      "updated_at": 1622630069,
+                      "name": "TestingCompany2023-02-10T11:18:10.231Z",
+                      "created_at": 1676027890,
+                      "updated_at": 1676027890,
                       "monthly_spend": 0,
                       "session_count": 0,
                       "user_count": 0,
@@ -447,6 +496,9 @@
                       "custom_attributes": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -456,8 +508,13 @@
         ],
         "Intercom7": [
           {
-            "startTime": 1622630070884,
-            "executionTime": 509,
+            "startTime": 1676027892219,
+            "executionTime": 864,
+            "source": [
+              {
+                "previousNode": "Intercom6"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -471,8 +528,13 @@
         ],
         "Intercom12": [
           {
-            "startTime": 1622630071394,
-            "executionTime": 517,
+            "startTime": 1676027893084,
+            "executionTime": 1093,
+            "source": [
+              {
+                "previousNode": "Intercom11"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -510,7 +572,7 @@
                       "signed_up_at": {
                         "object": true
                       },
-                      "updated_at": 1618911881,
+                      "updated_at": 1636915062,
                       "session_count": 0,
                       "social_profiles": {
                         "object": true
@@ -551,6 +613,9 @@
                       "do_not_track": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -560,8 +625,13 @@
         ],
         "Intercom2": [
           {
-            "startTime": 1622630071911,
-            "executionTime": 630,
+            "startTime": 1676027894178,
+            "executionTime": 550,
+            "source": [
+              {
+                "previousNode": "Intercom"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -589,6 +659,9 @@
                       "custom_attributes": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -598,23 +671,28 @@
         ],
         "Intercom8": [
           {
-            "startTime": 1622630072542,
-            "executionTime": 456,
+            "startTime": 1676027894728,
+            "executionTime": 418,
+            "source": [
+              {
+                "previousNode": "Intercom7"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "type": "contact",
-                      "id": "60b75eb39484ac894f12b75e",
-                      "user_id": "5fe007c5-ecf0-4a18-a604-21f1d6f3c13e",
+                      "id": "63e627f14a820c8986a912a7",
+                      "user_id": "679c8fd0-595a-434c-8878-11a454b5c16b",
                       "anonymous": true,
-                      "email": "fake1622630067444@email.com",
+                      "email": "fake1676027888635@email.com",
                       "phone": {
                         "object": true
                       },
                       "name": "UpdatedLead",
-                      "pseudonym": "Violet Van",
+                      "pseudonym": "Violet Sunshine",
                       "avatar": {
                         "object": true
                       },
@@ -628,14 +706,14 @@
                       "last_request_at": {
                         "object": true
                       },
-                      "created_at": 1622630068,
+                      "created_at": 1676027889,
                       "remote_created_at": {
                         "object": true
                       },
                       "signed_up_at": {
                         "object": true
                       },
-                      "updated_at": 1622630072,
+                      "updated_at": 1676027895,
                       "session_count": 0,
                       "social_profiles": {
                         "object": true
@@ -676,6 +754,9 @@
                       "do_not_track": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -685,16 +766,21 @@
         ],
         "Intercom13": [
           {
-            "startTime": 1622630072999,
-            "executionTime": 434,
+            "startTime": 1676027895146,
+            "executionTime": 413,
+            "source": [
+              {
+                "previousNode": "Intercom12"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "type": "user",
-                      "id": "60b75eb46cba0cc0ca2f99d0",
-                      "user_id": "User1622630068200",
+                      "id": "63e627f23ec23f94dc8eeb7e",
+                      "user_id": "User1676027889611",
                       "anonymous": false,
                       "email": "",
                       "phone": {
@@ -717,14 +803,14 @@
                       "last_request_at": {
                         "object": true
                       },
-                      "created_at": 1622630068,
+                      "created_at": 1676027890,
                       "remote_created_at": {
                         "object": true
                       },
                       "signed_up_at": {
                         "object": true
                       },
-                      "updated_at": 1622630073,
+                      "updated_at": 1676027895,
                       "session_count": 0,
                       "social_profiles": {
                         "object": true
@@ -765,6 +851,9 @@
                       "do_not_track": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -774,20 +863,25 @@
         ],
         "Intercom3": [
           {
-            "startTime": 1622630073433,
-            "executionTime": 482,
+            "startTime": 1676027895559,
+            "executionTime": 546,
+            "source": [
+              {
+                "previousNode": "Intercom2"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "type": "company",
-                      "company_id": "Company1622630068850",
-                      "id": "60b75eb54cb31765e3b124de",
+                      "company_id": "Company1676027890230",
+                      "id": "63e627f2b980ddcad5e25f77",
                       "app_id": "t5y9d4d1",
-                      "name": "UpdatedTestingCompany2021-06-02T10:34:28.850Z",
-                      "created_at": 1622630069,
-                      "updated_at": 1622630073,
+                      "name": "UpdatedTestingCompany2023-02-10T11:18:10.231Z",
+                      "created_at": 1676027890,
+                      "updated_at": 1676027896,
                       "monthly_spend": 0,
                       "session_count": 0,
                       "user_count": 0,
@@ -803,6 +897,9 @@
                       "custom_attributes": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -812,23 +909,28 @@
         ],
         "Intercom9": [
           {
-            "startTime": 1622630073915,
-            "executionTime": 608,
+            "startTime": 1676027896106,
+            "executionTime": 610,
+            "source": [
+              {
+                "previousNode": "Intercom8"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "type": "contact",
-                      "id": "60b75eb39484ac894f12b75e",
-                      "user_id": "5fe007c5-ecf0-4a18-a604-21f1d6f3c13e",
+                      "id": "63e627f14a820c8986a912a7",
+                      "user_id": "679c8fd0-595a-434c-8878-11a454b5c16b",
                       "anonymous": true,
-                      "email": "fake1622630067444@email.com",
+                      "email": "fake1676027888635@email.com",
                       "phone": {
                         "object": true
                       },
                       "name": "UpdatedLead",
-                      "pseudonym": "Violet Van",
+                      "pseudonym": "Violet Sunshine",
                       "avatar": {
                         "object": true
                       },
@@ -842,14 +944,14 @@
                       "last_request_at": {
                         "object": true
                       },
-                      "created_at": 1622630068,
+                      "created_at": 1676027889,
                       "remote_created_at": {
                         "object": true
                       },
                       "signed_up_at": {
                         "object": true
                       },
-                      "updated_at": 1622630074,
+                      "updated_at": 1676027896,
                       "session_count": 0,
                       "social_profiles": {
                         "object": true
@@ -890,6 +992,9 @@
                       "do_not_track": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -899,16 +1004,21 @@
         ],
         "Intercom14": [
           {
-            "startTime": 1622630074523,
-            "executionTime": 553,
+            "startTime": 1676027896717,
+            "executionTime": 613,
+            "source": [
+              {
+                "previousNode": "Intercom13"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "type": "user",
-                      "id": "60b75eb46cba0cc0ca2f99d0",
-                      "user_id": "User1622630068200",
+                      "id": "63e627f23ec23f94dc8eeb7e",
+                      "user_id": "User1676027889611",
                       "anonymous": false,
                       "email": "",
                       "phone": {
@@ -931,14 +1041,14 @@
                       "last_request_at": {
                         "object": true
                       },
-                      "created_at": 1622630068,
+                      "created_at": 1676027890,
                       "remote_created_at": {
                         "object": true
                       },
                       "signed_up_at": {
                         "object": true
                       },
-                      "updated_at": 1622630074,
+                      "updated_at": 1676027897,
                       "session_count": 0,
                       "social_profiles": {
                         "object": true
@@ -979,6 +1089,9 @@
                       "do_not_track": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -988,8 +1101,13 @@
         ],
         "Intercom4": [
           {
-            "startTime": 1622630075077,
-            "executionTime": 710,
+            "startTime": 1676027897331,
+            "executionTime": 1071,
+            "source": [
+              {
+                "previousNode": "Intercom3"
+              }
+            ],
             "data": {
               "main": [
                 []
@@ -1003,11 +1121,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-02T10:34:27.439Z",
-  "stoppedAt": "2021-06-02T10:34:35.788Z",
+  "startedAt": "2023-02-10T11:18:08.619Z",
+  "stoppedAt": "2023-02-10T11:18:18.403Z",
   "finished": true
 }

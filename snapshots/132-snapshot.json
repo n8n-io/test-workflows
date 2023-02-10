@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622630022710,
-            "executionTime": 0,
+            "startTime": 1676027880985,
+            "executionTime": 1,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,17 +24,28 @@
         ],
         "Mandrill": [
           {
-            "startTime": 1622630022711,
-            "executionTime": 546,
+            "startTime": 1676027880987,
+            "executionTime": 497,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "email": "nodeqa1622630022713@email.test",
+                      "email": "nodeqa1676027881016@email.test",
                       "status": "rejected",
-                      "_id": "b0cfd6c938c14d5b9e6b792bf21dc013",
-                      "reject_reason": "unsigned"
+                      "_id": "54fadddfb7ae451f9ad5f6c606bc61c7",
+                      "reject_reason": "unsigned",
+                      "queued_reason": {
+                        "object": true
+                      }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -40,17 +55,28 @@
         ],
         "Mandrill1": [
           {
-            "startTime": 1622630023257,
-            "executionTime": 472,
+            "startTime": 1676027881484,
+            "executionTime": 487,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "email": "nodeqa1622630023258@email.test",
+                      "email": "nodeqa1676027881486@email.test",
                       "status": "rejected",
-                      "_id": "860b4e626fdf43c8a1895f3b1b5775df",
-                      "reject_reason": "unsigned"
+                      "_id": "3148a1e411604585aa93cd5ef2385fd1",
+                      "reject_reason": "unsigned",
+                      "queued_reason": {
+                        "object": true
+                      }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -64,11 +90,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-02T10:33:42.708Z",
-  "stoppedAt": "2021-06-02T10:33:43.729Z",
+  "startedAt": "2023-02-10T11:18:00.983Z",
+  "stoppedAt": "2023-02-10T11:18:01.971Z",
   "finished": true
 }

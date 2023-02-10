@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622630116625,
+            "startTime": 1676027899411,
             "executionTime": 0,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,8 +24,13 @@
         ],
         "Paddle": [
           {
-            "startTime": 1622630116626,
-            "executionTime": 477,
+            "startTime": 1676027899412,
+            "executionTime": 388,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -38,6 +47,9 @@
                         "object": true
                       },
                       "trial_days": 14
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -47,8 +59,13 @@
         ],
         "Paddle2": [
           {
-            "startTime": 1622630117104,
-            "executionTime": 296,
+            "startTime": 1676027899800,
+            "executionTime": 185,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -68,6 +85,9 @@
                         "json array"
                       ],
                       "icon": "https://sandbox-static.paddle.com/assets/images/checkout/default_product_icon.png"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -77,8 +97,13 @@
         ],
         "Paddle3": [
           {
-            "startTime": 1622630117401,
-            "executionTime": 370,
+            "startTime": 1676027899986,
+            "executionTime": 524,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -89,9 +114,9 @@
                       "user_id": 3076,
                       "user_email": "name@example.com",
                       "marketing_consent": false,
-                      "update_url": "https://sandbox-checkout.paddle.com/subscription/update?user=3076&subscription=101066&hash=250b0346bbd6fb46bebbd6f9c989ffb7333d628b082fe54658658bacf5311bf3",
-                      "cancel_url": "https://sandbox-checkout.paddle.com/subscription/cancel?user=3076&subscription=101066&hash=460ebd6715a740d08bf6cde668af8cbf2c5655dd4d8264429cd260d875a048b1",
-                      "state": "active",
+                      "update_url": "https://sandbox-subscription-management.paddle.com/subscription/101066/hash/250b0346bbd6fb46bebbd6f9c989ffb7333d628b082fe54658658bacf5311bf3/update",
+                      "cancel_url": "https://sandbox-subscription-management.paddle.com/subscription/101066/hash/250b0346bbd6fb46bebbd6f9c989ffb7333d628b082fe54658658bacf5311bf3/cancel",
+                      "state": "paused",
                       "signup_date": "2021-05-14 08:52:59",
                       "last_payment": {
                         "object": true
@@ -99,12 +124,18 @@
                       "linked_subscriptions": [
                         "json array"
                       ],
+                      "custom_data": {
+                        "object": true
+                      },
                       "payment_information": {
                         "object": true
                       },
-                      "next_payment": {
-                        "object": true
-                      }
+                      "paused_at": "2022-04-08 00:02:35",
+                      "paused_from": "2022-03-24 00:00:00",
+                      "paused_reason": "delinquent"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -114,31 +145,29 @@
         ],
         "Paddle4": [
           {
-            "startTime": 1622630117771,
-            "executionTime": 878,
+            "startTime": 1676027900510,
+            "executionTime": 191,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
-                [
-                  {
-                    "json": {
-                      "id": 510538,
-                      "subscription_id": 101066,
-                      "amount": 99,
-                      "currency": "USD",
-                      "payout_date": "2021-06-07",
-                      "is_paid": 0,
-                      "is_one_off_charge": false
-                    }
-                  }
-                ]
+                []
               ]
             }
           }
         ],
         "Paddle1": [
           {
-            "startTime": 1622630118650,
-            "executionTime": 438,
+            "startTime": 1676027900701,
+            "executionTime": 251,
+            "source": [
+              {
+                "previousNode": "Paddle"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -155,6 +184,9 @@
                         "object": true
                       },
                       "trial_days": 14
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -164,38 +196,22 @@
         ],
         "Paddle5": [
           {
-            "startTime": 1622630119089,
-            "executionTime": 399,
+            "startTime": 1676027900952,
+            "executionTime": 200,
+            "source": [
+              {
+                "previousNode": "Paddle2"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "coupon": "C059B178"
-                    }
-                  }
-                ]
-              ]
-            }
-          }
-        ],
-        "Date & Time": [
-          {
-            "startTime": 1622630119489,
-            "executionTime": 6,
-            "data": {
-              "main": [
-                [
-                  {
-                    "json": {
-                      "id": 510538,
-                      "subscription_id": 101066,
-                      "amount": 99,
-                      "currency": "USD",
-                      "payout_date": "2021-06-07",
-                      "is_paid": 0,
-                      "is_one_off_charge": false,
-                      "data": "2021-06-07T10:35:19.491Z"
+                      "coupon": "420210BD"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -205,34 +221,22 @@
         ],
         "Paddle6": [
           {
-            "startTime": 1622630119495,
-            "executionTime": 340,
+            "startTime": 1676027901153,
+            "executionTime": 228,
+            "source": [
+              {
+                "previousNode": "Paddle5"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "updated": 1
-                    }
-                  }
-                ]
-              ]
-            }
-          }
-        ],
-        "Paddle8": [
-          {
-            "startTime": 1622630119836,
-            "executionTime": 671,
-            "data": {
-              "main": [
-                [
-                  {
-                    "json": {
-                      "success": true,
-                      "response": {
-                        "object": true
-                      }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -242,8 +246,13 @@
         ],
         "Paddle7": [
           {
-            "startTime": 1622630120507,
-            "executionTime": 388,
+            "startTime": 1676027901382,
+            "executionTime": 285,
+            "source": [
+              {
+                "previousNode": "Paddle6"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -262,6 +271,9 @@
                       "expires": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -275,11 +287,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-02T10:35:16.623Z",
-  "stoppedAt": "2021-06-02T10:35:20.896Z",
+  "startedAt": "2023-02-10T11:18:19.409Z",
+  "stoppedAt": "2023-02-10T11:18:21.722Z",
   "finished": true
 }

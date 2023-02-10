@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622630019434,
+            "startTime": 1676027878473,
             "executionTime": 0,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,15 +24,23 @@
         ],
         "Set": [
           {
-            "startTime": 1622630019435,
-            "executionTime": 2,
+            "startTime": 1676027878474,
+            "executionTime": 40,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": 30817,
-                      "name": "Name1622630019437"
+                      "id": 28055,
+                      "name": "Name1676027878514"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -38,8 +50,13 @@
         ],
         "MySQL": [
           {
-            "startTime": 1622630019437,
-            "executionTime": 299,
+            "startTime": 1676027878514,
+            "executionTime": 179,
+            "source": [
+              {
+                "previousNode": "Set"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -51,6 +68,9 @@
                       "info": "",
                       "serverStatus": 2,
                       "warningStatus": 0
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -60,8 +80,13 @@
         ],
         "Set1": [
           {
-            "startTime": 1622630019736,
-            "executionTime": 2,
+            "startTime": 1676027878693,
+            "executionTime": 5,
+            "source": [
+              {
+                "previousNode": "MySQL"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -73,8 +98,11 @@
                       "info": "",
                       "serverStatus": 2,
                       "warningStatus": 0,
-                      "id": 30817,
-                      "name": "UpdatedName1622630019738"
+                      "id": 28055,
+                      "name": "UpdatedName1676027878698"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -84,8 +112,13 @@
         ],
         "MySQL1": [
           {
-            "startTime": 1622630019738,
-            "executionTime": 232,
+            "startTime": 1676027878702,
+            "executionTime": 174,
+            "source": [
+              {
+                "previousNode": "Set1"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -98,6 +131,9 @@
                       "serverStatus": 34,
                       "warningStatus": 0,
                       "changedRows": 1
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -107,15 +143,23 @@
         ],
         "MySQL2": [
           {
-            "startTime": 1622630019971,
-            "executionTime": 263,
+            "startTime": 1676027878876,
+            "executionTime": 145,
+            "source": [
+              {
+                "previousNode": "MySQL1"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": 30817,
-                      "name": "UpdatedName1622630019738"
+                      "id": 21457,
+                      "name": "Name1627394768518"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -125,8 +169,13 @@
         ],
         "MySQL3": [
           {
-            "startTime": 1622630020235,
-            "executionTime": 332,
+            "startTime": 1676027879022,
+            "executionTime": 159,
+            "source": [
+              {
+                "previousNode": "MySQL2"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -138,6 +187,9 @@
                       "info": "",
                       "serverStatus": 34,
                       "warningStatus": 0
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -151,11 +203,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-02T10:33:39.432Z",
-  "stoppedAt": "2021-06-02T10:33:40.567Z",
+  "startedAt": "2023-02-10T11:17:58.471Z",
+  "stoppedAt": "2023-02-10T11:17:59.181Z",
   "finished": true
 }

@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622630055582,
+            "startTime": 1676027886547,
             "executionTime": 0,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,14 +24,22 @@
         ],
         "AWS SNS": [
           {
-            "startTime": 1622630055583,
-            "executionTime": 537,
+            "startTime": 1676027886547,
+            "executionTime": 506,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "MessageId": "0255b5a8-3579-5966-8aaa-ec99559161b8"
+                      "MessageId": "365214b3-8e35-5656-8210-48d3a41aa8b6"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -41,11 +53,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-02T10:34:15.581Z",
-  "stoppedAt": "2021-06-02T10:34:16.121Z",
+  "startedAt": "2023-02-10T11:18:06.545Z",
+  "stoppedAt": "2023-02-10T11:18:07.053Z",
   "finished": true
 }

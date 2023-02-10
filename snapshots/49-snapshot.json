@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622629974268,
+            "startTime": 1676027860460,
             "executionTime": 1,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,8 +24,13 @@
         ],
         "Bitly": [
           {
-            "startTime": 1622629974270,
-            "executionTime": 346,
+            "startTime": 1676027860461,
+            "executionTime": 190,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -45,6 +54,9 @@
                       "references": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -54,8 +66,13 @@
         ],
         "Bitly1": [
           {
-            "startTime": 1622629974617,
-            "executionTime": 262,
+            "startTime": 1676027860651,
+            "executionTime": 203,
+            "source": [
+              {
+                "previousNode": "Bitly"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -81,6 +98,9 @@
                       "references": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -90,8 +110,13 @@
         ],
         "Bitly2": [
           {
-            "startTime": 1622629974879,
-            "executionTime": 316,
+            "startTime": 1676027860854,
+            "executionTime": 155,
+            "source": [
+              {
+                "previousNode": "Bitly1"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -116,6 +141,9 @@
                       "references": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -129,11 +157,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-02T10:32:54.267Z",
-  "stoppedAt": "2021-06-02T10:32:55.195Z",
+  "startedAt": "2023-02-10T11:17:40.459Z",
+  "stoppedAt": "2023-02-10T11:17:41.009Z",
   "finished": true
 }

@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622630051043,
-            "executionTime": 1,
+            "startTime": 1676027884987,
+            "executionTime": 0,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,14 +24,22 @@
         ],
         "AWS Comprehend": [
           {
-            "startTime": 1622630051044,
-            "executionTime": 601,
+            "startTime": 1676027884988,
+            "executionTime": 465,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "en": 0.993780255317688
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -37,8 +49,13 @@
         ],
         "AWS Comprehend1": [
           {
-            "startTime": 1622630051645,
-            "executionTime": 543,
+            "startTime": 1676027885453,
+            "executionTime": 464,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -48,6 +65,9 @@
                       "SentimentScore": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -57,18 +77,50 @@
         ],
         "AWS Comprehend2": [
           {
-            "startTime": 1622630052189,
-            "executionTime": 552,
+            "startTime": 1676027885917,
+            "executionTime": 437,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
+                      "BeginOffset": 0,
+                      "EndOffset": 3,
+                      "Score": 0.4930450916290283,
+                      "Text": "n8n",
+                      "Type": "OTHER"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  },
+                  {
+                    "json": {
+                      "BeginOffset": 53,
+                      "EndOffset": 62,
+                      "Score": 0.814785897731781,
+                      "Text": "every app",
+                      "Type": "QUANTITY"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  },
+                  {
+                    "json": {
                       "BeginOffset": 147,
                       "EndOffset": 158,
-                      "Score": 0.7894728779792786,
+                      "Score": 0.9504634737968445,
                       "Text": "single line",
                       "Type": "QUANTITY"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -82,11 +134,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-02T10:34:11.042Z",
-  "stoppedAt": "2021-06-02T10:34:12.741Z",
+  "startedAt": "2023-02-10T11:18:04.986Z",
+  "stoppedAt": "2023-02-10T11:18:06.355Z",
   "finished": true
 }

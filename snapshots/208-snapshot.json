@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1635416598961,
-            "executionTime": 1,
+            "startTime": 1676027901091,
+            "executionTime": 0,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,19 +24,27 @@
         ],
         "RocketChat": [
           {
-            "startTime": 1635416598963,
-            "executionTime": 127,
+            "startTime": 1676027901092,
+            "executionTime": 134,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "ts": 1635416599073,
+                      "ts": 1676027901278,
                       "channel": "general",
                       "message": {
                         "object": true
                       },
                       "success": true
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -46,11 +58,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-10-28T10:23:18.958Z",
-  "stoppedAt": "2021-10-28T10:23:19.090Z",
+  "startedAt": "2023-02-10T11:18:21.089Z",
+  "stoppedAt": "2023-02-10T11:18:21.226Z",
   "finished": true
 }

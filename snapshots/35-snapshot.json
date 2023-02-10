@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1635324656596,
-            "executionTime": 1,
+            "startTime": 1676027855036,
+            "executionTime": 0,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,8 +24,13 @@
         ],
         "Slack": [
           {
-            "startTime": 1635324656598,
-            "executionTime": 277,
+            "startTime": 1676027855037,
+            "executionTime": 246,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -52,6 +61,9 @@
                       "image_192": "https://secure.gravatar.com/avatar/c81277605b129fdafaacede5ae34e07c.jpg?s=192&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0015-192.png",
                       "image_512": "https://secure.gravatar.com/avatar/c81277605b129fdafaacede5ae34e07c.jpg?s=512&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0015-512.png",
                       "status_text_canonical": ""
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -61,8 +73,13 @@
         ],
         "Slack13": [
           {
-            "startTime": 1635324656876,
-            "executionTime": 398,
+            "startTime": 1676027855283,
+            "executionTime": 249,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -70,10 +87,13 @@
                     "json": {
                       "ok": true,
                       "channel": "C01MZ82T9TR",
-                      "ts": "1635324657.000100",
+                      "ts": "1676027855.497109",
                       "message": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -83,8 +103,13 @@
         ],
         "Slack1": [
           {
-            "startTime": 1635324657275,
-            "executionTime": 237,
+            "startTime": 1676027855532,
+            "executionTime": 224,
+            "source": [
+              {
+                "previousNode": "Slack"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -115,6 +140,9 @@
                       "image_192": "https://secure.gravatar.com/avatar/c81277605b129fdafaacede5ae34e07c.jpg?s=192&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0015-192.png",
                       "image_512": "https://secure.gravatar.com/avatar/c81277605b129fdafaacede5ae34e07c.jpg?s=512&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0015-512.png",
                       "status_text_canonical": ""
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -124,14 +152,22 @@
         ],
         "Slack18": [
           {
-            "startTime": 1635324657513,
-            "executionTime": 246,
+            "startTime": 1676027855756,
+            "executionTime": 215,
+            "source": [
+              {
+                "previousNode": "Slack13"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "ok": true
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -141,8 +177,13 @@
         ],
         "Slack24": [
           {
-            "startTime": 1635324657760,
-            "executionTime": 211,
+            "startTime": 1676027855971,
+            "executionTime": 193,
+            "source": [
+              {
+                "previousNode": "Slack13"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -154,6 +195,9 @@
                       "auto_away": false,
                       "manual_away": false,
                       "connection_count": 0
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -163,8 +207,13 @@
         ],
         "Slack19": [
           {
-            "startTime": 1635324657973,
-            "executionTime": 247,
+            "startTime": 1676027856164,
+            "executionTime": 195,
+            "source": [
+              {
+                "previousNode": "Slack18"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -176,6 +225,9 @@
                         "object": true
                       },
                       "channel": "C01MZ82T9TR"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -185,8 +237,13 @@
         ],
         "Slack25": [
           {
-            "startTime": 1635324658221,
-            "executionTime": 282,
+            "startTime": 1676027856359,
+            "executionTime": 184,
+            "source": [
+              {
+                "previousNode": "Slack24"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -198,9 +255,9 @@
                       "deleted": false,
                       "color": "9f69e7",
                       "real_name": "nodeqa",
-                      "tz": "Europe/Brussels",
-                      "tz_label": "Central European Summer Time",
-                      "tz_offset": 7200,
+                      "tz": "Europe/Amsterdam",
+                      "tz_label": "Central European Time",
+                      "tz_offset": 3600,
                       "profile": {
                         "object": true
                       },
@@ -211,10 +268,13 @@
                       "is_ultra_restricted": false,
                       "is_bot": false,
                       "is_app_user": false,
-                      "updated": 1635324657,
+                      "updated": 1676027855,
                       "is_email_confirmed": true,
                       "has_2fa": false,
                       "who_can_share_contact_card": "EVERYONE"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -224,14 +284,22 @@
         ],
         "Slack20": [
           {
-            "startTime": 1635324658504,
-            "executionTime": 305,
+            "startTime": 1676027856543,
+            "executionTime": 308,
+            "source": [
+              {
+                "previousNode": "Slack19"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "ok": true
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -241,16 +309,24 @@
         ],
         "Slack14": [
           {
-            "startTime": 1635324658810,
-            "executionTime": 210,
+            "startTime": 1676027856851,
+            "executionTime": 188,
+            "source": [
+              {
+                "previousNode": "Slack20"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "ok": true,
-                      "permalink": "https://n8n-qa.slack.com/archives/C01MZ82T9TR/p1635324657000100",
+                      "permalink": "https://n8n-qa.slack.com/archives/C01MZ82T9TR/p1676027855497109",
                       "channel": "C01MZ82T9TR"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -260,8 +336,13 @@
         ],
         "Slack15": [
           {
-            "startTime": 1635324659021,
-            "executionTime": 303,
+            "startTime": 1676027857039,
+            "executionTime": 321,
+            "source": [
+              {
+                "previousNode": "Slack14"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -269,11 +350,14 @@
                     "json": {
                       "ok": true,
                       "channel": "C01MZ82T9TR",
-                      "ts": "1635324657.000100",
+                      "ts": "1676027855.497109",
                       "text": "Message Updated ",
                       "message": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -283,15 +367,23 @@
         ],
         "Slack16": [
           {
-            "startTime": 1635324659325,
-            "executionTime": 307,
+            "startTime": 1676027857360,
+            "executionTime": 206,
+            "source": [
+              {
+                "previousNode": "Slack15"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "ok": true,
-                      "message_ts": "1635324659.000500"
+                      "message_ts": "1676027857.000900"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -301,8 +393,13 @@
         ],
         "Slack17": [
           {
-            "startTime": 1635324659633,
-            "executionTime": 303,
+            "startTime": 1676027857567,
+            "executionTime": 286,
+            "source": [
+              {
+                "previousNode": "Slack16"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -310,7 +407,10 @@
                     "json": {
                       "ok": true,
                       "channel": "C01MZ82T9TR",
-                      "ts": "1635324657.000100"
+                      "ts": "1676027855.497109"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -324,11 +424,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-10-27T08:50:56.591Z",
-  "stoppedAt": "2021-10-27T08:50:59.937Z",
+  "startedAt": "2023-02-10T11:17:35.033Z",
+  "stoppedAt": "2023-02-10T11:17:37.854Z",
   "finished": true
 }

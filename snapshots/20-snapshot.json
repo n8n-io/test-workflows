@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622815665826,
+            "startTime": 1676027850508,
             "executionTime": 0,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,15 +24,20 @@
         ],
         "Hubspot6": [
           {
-            "startTime": 1622815665827,
-            "executionTime": 709,
+            "startTime": 1676027850509,
+            "executionTime": 389,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "portalId": 9435114,
-                      "companyId": 6191377490,
+                      "companyId": 12453013858,
                       "isDeleted": false,
                       "properties": {
                         "object": true
@@ -42,6 +51,9 @@
                       "mergeAudits": [
                         "json array"
                       ]
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -51,15 +63,20 @@
         ],
         "Hubspot": [
           {
-            "startTime": 1622815666536,
-            "executionTime": 1398,
+            "startTime": 1676027850898,
+            "executionTime": 492,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "vid": 10801,
-                      "canonical-vid": 10801,
+                      "vid": 19501,
+                      "canonical-vid": 19501,
                       "merged-vids": [
                         "json array"
                       ],
@@ -80,7 +97,10 @@
                       "merge-audits": [
                         "json array"
                       ],
-                      "isNew": true
+                      "isNew": false
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -90,8 +110,13 @@
         ],
         "Hubspot7": [
           {
-            "startTime": 1622815667935,
-            "executionTime": 579,
+            "startTime": 1676027851390,
+            "executionTime": 227,
+            "source": [
+              {
+                "previousNode": "Hubspot6"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -112,6 +137,9 @@
                       "mergeAudits": [
                         "json array"
                       ]
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -121,15 +149,20 @@
         ],
         "Sleep 0.5 second": [
           {
-            "startTime": 1622815668515,
+            "startTime": 1676027851618,
             "executionTime": 508,
+            "source": [
+              {
+                "previousNode": "Hubspot"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "vid": 10801,
-                      "canonical-vid": 10801,
+                      "vid": 19501,
+                      "canonical-vid": 19501,
                       "merged-vids": [
                         "json array"
                       ],
@@ -150,8 +183,12 @@
                       "merge-audits": [
                         "json array"
                       ],
-                      "isNew": true
-                    }
+                      "isNew": false
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    },
+                    "index": 0
                   }
                 ]
               ]
@@ -160,8 +197,13 @@
         ],
         "Hubspot9": [
           {
-            "startTime": 1622815669024,
-            "executionTime": 571,
+            "startTime": 1676027852127,
+            "executionTime": 200,
+            "source": [
+              {
+                "previousNode": "Hubspot7"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -182,6 +224,9 @@
                       "mergeAudits": [
                         "json array"
                       ]
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -191,16 +236,20 @@
         ],
         "Hubspot2": [
           {
-            "startTime": 1622815669596,
-            "executionTime": 313,
+            "startTime": 1676027852327,
+            "executionTime": 297,
+            "source": [
+              {
+                "previousNode": "Sleep 0.5 second"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "addedAt": 1613502000930,
-                      "vid": 251,
-                      "canonical-vid": 251,
+                      "vid": 19501,
+                      "canonical-vid": 19501,
                       "merged-vids": [
                         "json array"
                       ],
@@ -217,7 +266,11 @@
                       ],
                       "merge-audits": [
                         "json array"
-                      ]
+                      ],
+                      "addedAt": 1641349488565
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -227,15 +280,20 @@
         ],
         "Hubspot8": [
           {
-            "startTime": 1622815669910,
-            "executionTime": 622,
+            "startTime": 1676027852626,
+            "executionTime": 254,
+            "source": [
+              {
+                "previousNode": "Hubspot9"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "portalId": 9435114,
-                      "companyId": 6191377490,
+                      "companyId": 12067739738,
                       "isDeleted": false,
                       "properties": {
                         "object": true
@@ -249,6 +307,9 @@
                       "mergeAudits": [
                         "json array"
                       ]
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -258,16 +319,20 @@
         ],
         "Sleep 0.5 second1": [
           {
-            "startTime": 1622815670533,
-            "executionTime": 503,
+            "startTime": 1676027852881,
+            "executionTime": 505,
+            "source": [
+              {
+                "previousNode": "Hubspot2"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "addedAt": 1613502000930,
-                      "vid": 251,
-                      "canonical-vid": 251,
+                      "vid": 19501,
+                      "canonical-vid": 19501,
                       "merged-vids": [
                         "json array"
                       ],
@@ -284,8 +349,13 @@
                       ],
                       "merge-audits": [
                         "json array"
-                      ]
-                    }
+                      ],
+                      "addedAt": 1641349488565
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    },
+                    "index": 0
                   }
                 ]
               ]
@@ -294,15 +364,20 @@
         ],
         "Hubspot10": [
           {
-            "startTime": 1622815671037,
-            "executionTime": 627,
+            "startTime": 1676027853387,
+            "executionTime": 249,
+            "source": [
+              {
+                "previousNode": "Hubspot8"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "portalId": 9435114,
-                      "companyId": 6191377490,
+                      "companyId": 12453013858,
                       "isDeleted": false,
                       "properties": {
                         "object": true
@@ -316,6 +391,9 @@
                       "mergeAudits": [
                         "json array"
                       ]
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -325,20 +403,28 @@
         ],
         "Hubspot3": [
           {
-            "startTime": 1622815671664,
-            "executionTime": 662,
+            "startTime": 1676027853637,
+            "executionTime": 511,
+            "source": [
+              {
+                "previousNode": "Sleep 0.5 second1"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "251",
+                      "id": "19901",
                       "properties": {
                         "object": true
                       },
-                      "createdAt": "2021-02-16T19:00:00.764Z",
-                      "updatedAt": "2021-02-16T19:00:02.964Z",
+                      "createdAt": "2022-12-13T09:38:40.693Z",
+                      "updatedAt": "2022-12-13T09:38:55.035Z",
                       "archived": false
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -348,15 +434,20 @@
         ],
         "Hubspot11": [
           {
-            "startTime": 1622815672327,
-            "executionTime": 819,
+            "startTime": 1676027854148,
+            "executionTime": 252,
+            "source": [
+              {
+                "previousNode": "Hubspot10"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "portalId": 9435114,
-                      "companyId": 6191377490,
+                      "companyId": 12453013858,
                       "isDeleted": false,
                       "properties": {
                         "object": true
@@ -370,6 +461,9 @@
                       "mergeAudits": [
                         "json array"
                       ]
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -379,21 +473,30 @@
         ],
         "Function": [
           {
-            "startTime": 1622815673146,
-            "executionTime": 1506,
+            "startTime": 1676027854401,
+            "executionTime": 1507,
+            "source": [
+              {
+                "previousNode": "Hubspot3"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "251",
+                      "id": "19901",
                       "properties": {
                         "object": true
                       },
-                      "createdAt": "2021-02-16T19:00:00.764Z",
-                      "updatedAt": "2021-02-16T19:00:02.964Z",
+                      "createdAt": "2022-12-13T09:38:40.693Z",
+                      "updatedAt": "2022-12-13T09:38:55.035Z",
                       "archived": false
-                    }
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    },
+                    "index": 0
                   }
                 ]
               ]
@@ -402,15 +505,23 @@
         ],
         "Hubspot12": [
           {
-            "startTime": 1622815674653,
-            "executionTime": 661,
+            "startTime": 1676027855908,
+            "executionTime": 238,
+            "source": [
+              {
+                "previousNode": "Hubspot11"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "companyId": 6191377490,
+                      "companyId": 12453013858,
                       "deleted": true
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -420,182 +531,32 @@
         ],
         "Hubspot1": [
           {
-            "startTime": 1622815675315,
-            "executionTime": 789,
+            "startTime": 1676027856146,
+            "executionTime": 224,
+            "source": [
+              {
+                "previousNode": "Function"
+              }
+            ],
             "data": {
               "main": [
-                [
-                  {
-                    "json": {
-                      "addedAt": 1622815669691,
-                      "vid": 10801,
-                      "canonical-vid": 10801,
-                      "merged-vids": [
-                        "json array"
-                      ],
-                      "portal-id": 9435114,
-                      "is-contact": true,
-                      "properties": {
-                        "object": true
-                      },
-                      "form-submissions": [
-                        "json array"
-                      ],
-                      "identity-profiles": [
-                        "json array"
-                      ],
-                      "merge-audits": [
-                        "json array"
-                      ]
-                    }
-                  }
-                ]
-              ]
-            }
-          }
-        ],
-        "Sleep 0.5 second2": [
-          {
-            "startTime": 1622815676105,
-            "executionTime": 505,
-            "data": {
-              "main": [
-                [
-                  {
-                    "json": {
-                      "addedAt": 1622815669691,
-                      "vid": 10801,
-                      "canonical-vid": 10801,
-                      "merged-vids": [
-                        "json array"
-                      ],
-                      "portal-id": 9435114,
-                      "is-contact": true,
-                      "properties": {
-                        "object": true
-                      },
-                      "form-submissions": [
-                        "json array"
-                      ],
-                      "identity-profiles": [
-                        "json array"
-                      ],
-                      "merge-audits": [
-                        "json array"
-                      ]
-                    }
-                  }
-                ]
-              ]
-            }
-          }
-        ],
-        "Hubspot5": [
-          {
-            "startTime": 1622815676611,
-            "executionTime": 645,
-            "data": {
-              "main": [
-                [
-                  {
-                    "json": {
-                      "vid": 10801,
-                      "canonical-vid": 10801,
-                      "merged-vids": [
-                        "json array"
-                      ],
-                      "portal-id": 9435114,
-                      "is-contact": true,
-                      "properties": {
-                        "object": true
-                      },
-                      "form-submissions": [
-                        "json array"
-                      ],
-                      "list-memberships": [
-                        "json array"
-                      ],
-                      "identity-profiles": [
-                        "json array"
-                      ],
-                      "merge-audits": [
-                        "json array"
-                      ]
-                    }
-                  }
-                ]
-              ]
-            }
-          }
-        ],
-        "Sleep 0.5 second3": [
-          {
-            "startTime": 1622815677257,
-            "executionTime": 503,
-            "data": {
-              "main": [
-                [
-                  {
-                    "json": {
-                      "vid": 10801,
-                      "canonical-vid": 10801,
-                      "merged-vids": [
-                        "json array"
-                      ],
-                      "portal-id": 9435114,
-                      "is-contact": true,
-                      "properties": {
-                        "object": true
-                      },
-                      "form-submissions": [
-                        "json array"
-                      ],
-                      "list-memberships": [
-                        "json array"
-                      ],
-                      "identity-profiles": [
-                        "json array"
-                      ],
-                      "merge-audits": [
-                        "json array"
-                      ]
-                    }
-                  }
-                ]
-              ]
-            }
-          }
-        ],
-        "Hubspot4": [
-          {
-            "startTime": 1622815677761,
-            "executionTime": 664,
-            "data": {
-              "main": [
-                [
-                  {
-                    "json": {
-                      "vid": 10801,
-                      "deleted": true,
-                      "reason": "OK"
-                    }
-                  }
-                ]
+                []
               ]
             }
           }
         ]
       },
-      "lastNodeExecuted": "Hubspot4"
+      "lastNodeExecuted": "Hubspot1"
     },
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-04T14:07:45.821Z",
-  "stoppedAt": "2021-06-04T14:07:58.425Z",
+  "startedAt": "2023-02-10T11:17:30.503Z",
+  "stoppedAt": "2023-02-10T11:17:36.370Z",
   "finished": true
 }

@@ -5,8 +5,8 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1662368784432,
-            "executionTime": 0,
+            "startTime": 1676027879037,
+            "executionTime": 1,
             "source": [],
             "data": {
               "main": [
@@ -24,8 +24,8 @@
         ],
         "Set": [
           {
-            "startTime": 1662368784433,
-            "executionTime": 16,
+            "startTime": 1676027879038,
+            "executionTime": 31,
             "source": [
               {
                 "previousNode": "Start"
@@ -36,8 +36,8 @@
                 [
                   {
                     "json": {
-                      "id": 35,
-                      "name": "Name1662368784449"
+                      "id": 530,
+                      "name": "Name1676027879069"
                     },
                     "pairedItem": {
                       "item": 0
@@ -50,8 +50,8 @@
         ],
         "Postgres": [
           {
-            "startTime": 1662368784450,
-            "executionTime": 153,
+            "startTime": 1676027879070,
+            "executionTime": 141,
             "source": [
               {
                 "previousNode": "Set"
@@ -62,8 +62,8 @@
                 [
                   {
                     "json": {
-                      "id": 35,
-                      "name": "Name1662368784449"
+                      "id": 530,
+                      "name": "Name1676027879069"
                     },
                     "pairedItem": {
                       "item": 0
@@ -76,8 +76,8 @@
         ],
         "Set1": [
           {
-            "startTime": 1662368784605,
-            "executionTime": 3,
+            "startTime": 1676027879212,
+            "executionTime": 0,
             "source": [
               {
                 "previousNode": "Postgres"
@@ -88,8 +88,8 @@
                 [
                   {
                     "json": {
-                      "id": 35,
-                      "name": "UpdatedName1662368784607"
+                      "id": 530,
+                      "name": "UpdatedName1676027879212"
                     },
                     "pairedItem": {
                       "item": 0
@@ -102,8 +102,8 @@
         ],
         "Postgres1": [
           {
-            "startTime": 1662368784610,
-            "executionTime": 142,
+            "startTime": 1676027879213,
+            "executionTime": 138,
             "source": [
               {
                 "previousNode": "Set1"
@@ -114,8 +114,8 @@
                 [
                   {
                     "json": {
-                      "id": 35,
-                      "name": "UpdatedName1662368784607"
+                      "id": 530,
+                      "name": "UpdatedName1676027879212"
                     },
                     "pairedItem": {
                       "item": 0
@@ -128,8 +128,8 @@
         ],
         "Postgres2": [
           {
-            "startTime": 1662368784753,
-            "executionTime": 133,
+            "startTime": 1676027879352,
+            "executionTime": 136,
             "source": [
               {
                 "previousNode": "Postgres1"
@@ -272,8 +272,8 @@
                   },
                   {
                     "json": {
-                      "id": 35,
-                      "name": "UpdatedName1662368784607"
+                      "id": 530,
+                      "name": "UpdatedName1676027879212"
                     },
                     "pairedItem": {
                       "item": 0
@@ -299,8 +299,8 @@
         ],
         "Postgres3": [
           {
-            "startTime": 1662368784887,
-            "executionTime": 149,
+            "startTime": 1676027879494,
+            "executionTime": 161,
             "source": [
               {
                 "previousNode": "Postgres2"
@@ -324,7 +324,7 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2022-09-05T09:06:24.429Z",
-  "stoppedAt": "2022-09-05T09:06:25.038Z",
+  "startedAt": "2023-02-10T11:17:59.035Z",
+  "stoppedAt": "2023-02-10T11:17:59.655Z",
   "finished": true
 }
