@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622629940421,
+            "startTime": 1676026052371,
             "executionTime": 0,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,8 +24,13 @@
         ],
         "OpenWeatherMap": [
           {
-            "startTime": 1622629940422,
-            "executionTime": 292,
+            "startTime": 1676026052372,
+            "executionTime": 205,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -44,14 +53,17 @@
                       "clouds": {
                         "object": true
                       },
-                      "dt": 1622629750,
+                      "dt": 1676025844,
                       "sys": {
                         "object": true
                       },
-                      "timezone": 7200,
+                      "timezone": 3600,
                       "id": 2950159,
                       "name": "Berlin",
                       "cod": 200
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -61,8 +73,13 @@
         ],
         "OpenWeatherMap1": [
           {
-            "startTime": 1622629940715,
-            "executionTime": 302,
+            "startTime": 1676026052577,
+            "executionTime": 80,
+            "source": [
+              {
+                "previousNode": "OpenWeatherMap"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -77,6 +94,9 @@
                       "city": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -90,11 +110,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-02T10:32:20.420Z",
-  "stoppedAt": "2021-06-02T10:32:21.017Z",
+  "startedAt": "2023-02-10T10:47:32.370Z",
+  "stoppedAt": "2023-02-10T10:47:32.658Z",
   "finished": true
 }

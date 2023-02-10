@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622630016906,
+            "startTime": 1676026069075,
             "executionTime": 0,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,18 +24,26 @@
         ],
         "Cockpit": [
           {
-            "startTime": 1622630016907,
-            "executionTime": 113,
+            "startTime": 1676026069076,
+            "executionTime": 138,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "Name": "entry1622630016908",
+                      "Name": "entry1676026069129",
                       "_by": "604887bce94fea0ea177c951",
-                      "_modified": 1622630017,
-                      "_created": 1622630017,
-                      "_id": "60b75e813666bb6c292d5f3b"
+                      "_modified": 1676026069,
+                      "_created": 1676026069,
+                      "_id": "63e620d593a7623f4276e8a2"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -41,8 +53,13 @@
         ],
         "Cockpit3": [
           {
-            "startTime": 1622630017020,
-            "executionTime": 112,
+            "startTime": 1676026069214,
+            "executionTime": 75,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -51,6 +68,9 @@
                       "name": "FixedName",
                       "_mby": "604887bce94fea0ea177c951",
                       "_by": "604887bce94fea0ea177c951"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -60,15 +80,23 @@
         ],
         "Cockpit4": [
           {
-            "startTime": 1622630017133,
-            "executionTime": 121,
+            "startTime": 1676026069290,
+            "executionTime": 85,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "name": "name1622630017134",
-                      "tag": "tag1622630017135"
+                      "name": "name1676026069300",
+                      "tag": "tag1676026069303"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -78,17 +106,25 @@
         ],
         "Cockpit1": [
           {
-            "startTime": 1622630017255,
-            "executionTime": 123,
+            "startTime": 1676026069375,
+            "executionTime": 72,
+            "source": [
+              {
+                "previousNode": "Cockpit"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "_id": "60b75e813666bb6c292d5f3b",
-                      "Name": "UpdatedEntry1622630017260",
+                      "_id": "63e620d593a7623f4276e8a2",
+                      "Name": "UpdatedEntry1676026069377",
                       "_by": "604887bce94fea0ea177c951",
-                      "_modified": 1622630017
+                      "_modified": 1676026069
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -98,8 +134,13 @@
         ],
         "Cockpit2": [
           {
-            "startTime": 1622630017379,
-            "executionTime": 101,
+            "startTime": 1676026069448,
+            "executionTime": 71,
+            "source": [
+              {
+                "previousNode": "Cockpit1"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -110,6 +151,9 @@
                       "_modified": 1615366572,
                       "_created": 1615366532,
                       "_id": "6048898478f13b61a46fc881"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -123,11 +167,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-02T10:33:36.904Z",
-  "stoppedAt": "2021-06-02T10:33:37.480Z",
+  "startedAt": "2023-02-10T10:47:49.072Z",
+  "stoppedAt": "2023-02-10T10:47:49.519Z",
   "finished": true
 }

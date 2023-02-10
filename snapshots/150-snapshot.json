@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622630047197,
+            "startTime": 1676026076242,
             "executionTime": 1,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,14 +24,22 @@
         ],
         "PostHog": [
           {
-            "startTime": 1622630047199,
-            "executionTime": 198,
+            "startTime": 1676026076243,
+            "executionTime": 210,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "status": 1
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -37,14 +49,22 @@
         ],
         "PostHog1": [
           {
-            "startTime": 1622630047398,
-            "executionTime": 112,
+            "startTime": 1676026076453,
+            "executionTime": 118,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "status": 1
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -54,14 +74,22 @@
         ],
         "PostHog2": [
           {
-            "startTime": 1622630047511,
-            "executionTime": 123,
+            "startTime": 1676026076571,
+            "executionTime": 169,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "status": 1
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -71,14 +99,22 @@
         ],
         "PostHog3": [
           {
-            "startTime": 1622630047635,
-            "executionTime": 155,
+            "startTime": 1676026076740,
+            "executionTime": 146,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "status": 1
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -88,14 +124,22 @@
         ],
         "PostHog4": [
           {
-            "startTime": 1622630047791,
-            "executionTime": 111,
+            "startTime": 1676026076886,
+            "executionTime": 126,
+            "source": [
+              {
+                "previousNode": "PostHog3"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "status": 1
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -109,11 +153,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-02T10:34:07.196Z",
-  "stoppedAt": "2021-06-02T10:34:07.903Z",
+  "startedAt": "2023-02-10T10:47:56.239Z",
+  "stoppedAt": "2023-02-10T10:47:57.013Z",
   "finished": true
 }

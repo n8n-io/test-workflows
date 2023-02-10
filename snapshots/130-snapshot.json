@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622630022481,
-            "executionTime": 0,
+            "startTime": 1676026073145,
+            "executionTime": 1,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,15 +24,23 @@
         ],
         "Wekan": [
           {
-            "startTime": 1622630022482,
-            "executionTime": 478,
+            "startTime": 1676026073146,
+            "executionTime": 189,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "_id": "iXazPG7H3PGxB7pgR",
-                      "defaultSwimlaneId": "tRgGF3snX8wFmQZTh"
+                      "_id": "3K6anEQe6ZoSdCQZS",
+                      "defaultSwimlaneId": "apw8Sx5WcBW6b9i7e"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -38,24 +50,29 @@
         ],
         "Wekan1": [
           {
-            "startTime": 1622630022961,
-            "executionTime": 416,
+            "startTime": 1676026073336,
+            "executionTime": 81,
+            "source": [
+              {
+                "previousNode": "Wekan"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "_id": "iXazPG7H3PGxB7pgR",
-                      "title": "Board1622630022484",
+                      "_id": "3K6anEQe6ZoSdCQZS",
+                      "title": "Board1676026073168",
                       "members": [
                         "json array"
                       ],
                       "permission": "private",
                       "color": "belize",
-                      "slug": "board1622630022484",
+                      "slug": "board1676026073168",
                       "archived": false,
-                      "createdAt": "2021-06-02T10:33:42.911Z",
-                      "modifiedAt": "2021-06-02T10:33:42.911Z",
+                      "createdAt": "2023-02-10T10:47:53.302Z",
+                      "modifiedAt": "2023-02-10T10:47:53.302Z",
                       "stars": 0,
                       "labels": [
                         "json array"
@@ -91,7 +108,10 @@
                       "presentParentTask": "no-parent",
                       "isOvertime": false,
                       "type": "board",
-                      "sort": 3
+                      "sort": 4
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -101,8 +121,13 @@
         ],
         "Wekan2": [
           {
-            "startTime": 1622630023378,
-            "executionTime": 360,
+            "startTime": 1676026073418,
+            "executionTime": 85,
+            "source": [
+              {
+                "previousNode": "Wekan1"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -110,6 +135,9 @@
                     "json": {
                       "_id": "P2rsgwsk7pdqeLvgs",
                       "title": "Templates"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -119,14 +147,22 @@
         ],
         "Wekan4": [
           {
-            "startTime": 1622630023738,
-            "executionTime": 384,
+            "startTime": 1676026073503,
+            "executionTime": 104,
+            "source": [
+              {
+                "previousNode": "Wekan2"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "_id": "tKPeRAW7M5qb3QyLf"
+                      "_id": "y3DwnoFBA9yTemRxE"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -136,27 +172,35 @@
         ],
         "Wekan5": [
           {
-            "startTime": 1622630024122,
-            "executionTime": 333,
+            "startTime": 1676026073607,
+            "executionTime": 82,
+            "source": [
+              {
+                "previousNode": "Wekan4"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "_id": "tKPeRAW7M5qb3QyLf",
-                      "title": "List1622630023739",
-                      "boardId": "iXazPG7H3PGxB7pgR",
+                      "_id": "y3DwnoFBA9yTemRxE",
+                      "title": "List1676026073503",
+                      "boardId": "3K6anEQe6ZoSdCQZS",
                       "sort": 0,
                       "starred": false,
                       "archived": false,
                       "swimlaneId": "",
-                      "createdAt": "2021-06-02T10:33:44.105Z",
-                      "updatedAt": "2021-06-02T10:33:44.105Z",
-                      "modifiedAt": "2021-06-02T10:33:44.105Z",
+                      "createdAt": "2023-02-10T10:47:53.620Z",
+                      "updatedAt": "2023-02-10T10:47:53.620Z",
+                      "modifiedAt": "2023-02-10T10:47:53.621Z",
                       "wipLimit": {
                         "object": true
                       },
                       "type": "list"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -166,15 +210,23 @@
         ],
         "Wekan6": [
           {
-            "startTime": 1622630024455,
-            "executionTime": 379,
+            "startTime": 1676026073689,
+            "executionTime": 95,
+            "source": [
+              {
+                "previousNode": "Wekan5"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "_id": "tKPeRAW7M5qb3QyLf",
-                      "title": "List1622630023739"
+                      "_id": "y3DwnoFBA9yTemRxE",
+                      "title": "List1676026073503"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -184,14 +236,22 @@
         ],
         "Wekan8": [
           {
-            "startTime": 1622630024835,
-            "executionTime": 345,
+            "startTime": 1676026073784,
+            "executionTime": 117,
+            "source": [
+              {
+                "previousNode": "Wekan6"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "_id": "hL4ZnEkKxbiAaN5sg"
+                      "_id": "FvAf8DJbEtdvFPY4C"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -201,14 +261,22 @@
         ],
         "Wekan9": [
           {
-            "startTime": 1622630025181,
-            "executionTime": 379,
+            "startTime": 1676026073901,
+            "executionTime": 86,
+            "source": [
+              {
+                "previousNode": "Wekan8"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "_id": "hL4ZnEkKxbiAaN5sg"
+                      "_id": "FvAf8DJbEtdvFPY4C"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -218,29 +286,34 @@
         ],
         "Wekan10": [
           {
-            "startTime": 1622630025561,
-            "executionTime": 333,
+            "startTime": 1676026073987,
+            "executionTime": 83,
+            "source": [
+              {
+                "previousNode": "Wekan9"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "_id": "hL4ZnEkKxbiAaN5sg",
-                      "title": "UpdatedCard1622630025182",
-                      "boardId": "iXazPG7H3PGxB7pgR",
-                      "listId": "tKPeRAW7M5qb3QyLf",
+                      "_id": "FvAf8DJbEtdvFPY4C",
+                      "title": "UpdatedCard1676026073902",
+                      "boardId": "3K6anEQe6ZoSdCQZS",
+                      "listId": "y3DwnoFBA9yTemRxE",
                       "userId": "E27bvzwJ5A26xfAPG",
                       "swimlaneId": "CJ44cd7gPRf8qT3Xb",
                       "sort": 0,
                       "archived": false,
                       "parentId": "",
                       "coverId": "",
-                      "createdAt": "2021-06-02T10:33:45.170Z",
-                      "modifiedAt": "2021-06-02T10:33:45.543Z",
+                      "createdAt": "2023-02-10T10:47:53.917Z",
+                      "modifiedAt": "2023-02-10T10:47:54.012Z",
                       "customFields": [
                         "json array"
                       ],
-                      "dateLastActivity": "2021-06-02T10:33:45.549Z",
+                      "dateLastActivity": "2023-02-10T10:47:54.012Z",
                       "description": "",
                       "requestedBy": "",
                       "assignedBy": "",
@@ -261,6 +334,9 @@
                       "vote": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -270,19 +346,27 @@
         ],
         "Wekan11": [
           {
-            "startTime": 1622630025895,
-            "executionTime": 367,
+            "startTime": 1676026074071,
+            "executionTime": 85,
+            "source": [
+              {
+                "previousNode": "Wekan10"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "_id": "hL4ZnEkKxbiAaN5sg",
-                      "title": "UpdatedCard1622630025182",
+                      "_id": "FvAf8DJbEtdvFPY4C",
+                      "title": "UpdatedCard1676026073902",
                       "description": "",
                       "assignees": [
                         "json array"
                       ]
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -292,14 +376,22 @@
         ],
         "Wekan13": [
           {
-            "startTime": 1622630026262,
-            "executionTime": 370,
+            "startTime": 1676026074156,
+            "executionTime": 91,
+            "source": [
+              {
+                "previousNode": "Wekan11"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "_id": "6tSz9YG2EWXPTNWMe"
+                      "_id": "9t7qiGmiZwgFC844P"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -309,14 +401,22 @@
         ],
         "Wekan17": [
           {
-            "startTime": 1622630026632,
-            "executionTime": 409,
+            "startTime": 1676026074247,
+            "executionTime": 155,
+            "source": [
+              {
+                "previousNode": "Wekan11"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "_id": "SznDwSGe7qzho6A7H"
+                      "_id": "xLYHnQn7vZHhx8zDe"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -326,20 +426,28 @@
         ],
         "Wekan14": [
           {
-            "startTime": 1622630027042,
-            "executionTime": 426,
+            "startTime": 1676026074402,
+            "executionTime": 75,
+            "source": [
+              {
+                "previousNode": "Wekan13"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "_id": "6tSz9YG2EWXPTNWMe",
+                      "_id": "9t7qiGmiZwgFC844P",
                       "userId": "E27bvzwJ5A26xfAPG",
-                      "text": "CardComment1622630026263",
-                      "cardId": "hL4ZnEkKxbiAaN5sg",
-                      "boardId": "iXazPG7H3PGxB7pgR",
-                      "createdAt": "2021-06-02T10:33:46.626Z",
-                      "modifiedAt": "2021-06-02T10:33:46.626Z"
+                      "text": "CardComment1676026074158",
+                      "cardId": "FvAf8DJbEtdvFPY4C",
+                      "boardId": "3K6anEQe6ZoSdCQZS",
+                      "createdAt": "2023-02-10T10:47:54.279Z",
+                      "modifiedAt": "2023-02-10T10:47:54.279Z"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -349,22 +457,30 @@
         ],
         "Wekan18": [
           {
-            "startTime": 1622630027469,
-            "executionTime": 359,
+            "startTime": 1676026074477,
+            "executionTime": 84,
+            "source": [
+              {
+                "previousNode": "Wekan17"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "_id": "SznDwSGe7qzho6A7H",
-                      "title": "Checklist1622630026633",
-                      "cardId": "hL4ZnEkKxbiAaN5sg",
+                      "_id": "xLYHnQn7vZHhx8zDe",
+                      "title": "Checklist1676026074248",
+                      "cardId": "FvAf8DJbEtdvFPY4C",
                       "sort": 0,
-                      "createdAt": "2021-06-02T10:33:46.983Z",
-                      "modifiedAt": "2021-06-02T10:33:46.982Z",
+                      "createdAt": "2023-02-10T10:47:54.359Z",
+                      "modifiedAt": "2023-02-10T10:47:54.358Z",
                       "items": [
                         "json array"
                       ]
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -374,16 +490,24 @@
         ],
         "Wekan15": [
           {
-            "startTime": 1622630027828,
-            "executionTime": 343,
+            "startTime": 1676026074563,
+            "executionTime": 79,
+            "source": [
+              {
+                "previousNode": "Wekan14"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "_id": "6tSz9YG2EWXPTNWMe",
-                      "comment": "CardComment1622630026263",
+                      "_id": "9t7qiGmiZwgFC844P",
+                      "comment": "CardComment1676026074158",
                       "authorId": "E27bvzwJ5A26xfAPG"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -393,15 +517,23 @@
         ],
         "Wekan19": [
           {
-            "startTime": 1622630028172,
-            "executionTime": 346,
+            "startTime": 1676026074642,
+            "executionTime": 90,
+            "source": [
+              {
+                "previousNode": "Wekan18"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "_id": "SznDwSGe7qzho6A7H",
-                      "title": "Checklist1622630026633"
+                      "_id": "xLYHnQn7vZHhx8zDe",
+                      "title": "Checklist1676026074248"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -411,14 +543,22 @@
         ],
         "Wekan16": [
           {
-            "startTime": 1622630028519,
-            "executionTime": 422,
+            "startTime": 1676026074732,
+            "executionTime": 123,
+            "source": [
+              {
+                "previousNode": "Wekan15"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "_id": "hL4ZnEkKxbiAaN5sg"
+                      "_id": "FvAf8DJbEtdvFPY4C"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -428,21 +568,29 @@
         ],
         "Wekan21": [
           {
-            "startTime": 1622630028943,
-            "executionTime": 330,
+            "startTime": 1676026074855,
+            "executionTime": 86,
+            "source": [
+              {
+                "previousNode": "Wekan19"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "_id": "KPYEDzgkhZ2zq36sR",
-                      "cardId": "hL4ZnEkKxbiAaN5sg",
-                      "checklistId": "SznDwSGe7qzho6A7H",
-                      "title": "ChecklistItem1622630026633",
+                      "_id": "GJi6S3QJvguRGixpL",
+                      "cardId": "FvAf8DJbEtdvFPY4C",
+                      "checklistId": "xLYHnQn7vZHhx8zDe",
+                      "title": "ChecklistItem1676026074249",
                       "sort": 0,
                       "isFinished": false,
-                      "createdAt": "2021-06-02T10:33:47.007Z",
-                      "modifiedAt": "2021-06-02T10:33:47.007Z"
+                      "createdAt": "2023-02-10T10:47:54.395Z",
+                      "modifiedAt": "2023-02-10T10:47:54.396Z"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -452,14 +600,22 @@
         ],
         "Wekan22": [
           {
-            "startTime": 1622630029274,
-            "executionTime": 357,
+            "startTime": 1676026074941,
+            "executionTime": 85,
+            "source": [
+              {
+                "previousNode": "Wekan21"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "_id": "KPYEDzgkhZ2zq36sR"
+                      "_id": "GJi6S3QJvguRGixpL"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -469,14 +625,22 @@
         ],
         "Wekan23": [
           {
-            "startTime": 1622630029631,
-            "executionTime": 340,
+            "startTime": 1676026075026,
+            "executionTime": 83,
+            "source": [
+              {
+                "previousNode": "Wekan22"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "_id": "KPYEDzgkhZ2zq36sR"
+                      "_id": "GJi6S3QJvguRGixpL"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -486,14 +650,22 @@
         ],
         "Wekan20": [
           {
-            "startTime": 1622630029972,
-            "executionTime": 385,
+            "startTime": 1676026075109,
+            "executionTime": 138,
+            "source": [
+              {
+                "previousNode": "Wekan23"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "_id": "SznDwSGe7qzho6A7H"
+                      "_id": "xLYHnQn7vZHhx8zDe"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -503,8 +675,16 @@
         ],
         "Merge": [
           {
-            "startTime": 1622630030358,
-            "executionTime": 0,
+            "startTime": 1676026075247,
+            "executionTime": 1,
+            "source": [
+              {
+                "previousNode": "Wekan20"
+              },
+              {
+                "previousNode": "Wekan16"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -518,14 +698,22 @@
         ],
         "Wekan12": [
           {
-            "startTime": 1622630030358,
-            "executionTime": 356,
+            "startTime": 1676026075248,
+            "executionTime": 104,
+            "source": [
+              {
+                "previousNode": "Merge"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "_id": "hL4ZnEkKxbiAaN5sg"
+                      "_id": "FvAf8DJbEtdvFPY4C"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -535,14 +723,22 @@
         ],
         "Wekan7": [
           {
-            "startTime": 1622630030714,
-            "executionTime": 360,
+            "startTime": 1676026075352,
+            "executionTime": 95,
+            "source": [
+              {
+                "previousNode": "Wekan12"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "_id": "tKPeRAW7M5qb3QyLf"
+                      "_id": "y3DwnoFBA9yTemRxE"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -552,14 +748,22 @@
         ],
         "Wekan3": [
           {
-            "startTime": 1622630031075,
-            "executionTime": 391,
+            "startTime": 1676026075447,
+            "executionTime": 125,
+            "source": [
+              {
+                "previousNode": "Wekan7"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "_id": "iXazPG7H3PGxB7pgR"
+                      "_id": "3K6anEQe6ZoSdCQZS"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -573,11 +777,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-02T10:33:42.477Z",
-  "stoppedAt": "2021-06-02T10:33:51.467Z",
+  "startedAt": "2023-02-10T10:47:53.143Z",
+  "stoppedAt": "2023-02-10T10:47:55.573Z",
   "finished": true
 }

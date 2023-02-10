@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622630018301,
+            "startTime": 1676026070088,
             "executionTime": 1,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,19 +24,27 @@
         ],
         "Gotify": [
           {
-            "startTime": 1622630018302,
-            "executionTime": 116,
+            "startTime": 1676026070091,
+            "executionTime": 147,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": 69,
+                      "id": 358,
                       "appid": 1,
-                      "message": "Message content 1622630018304",
-                      "title": "Title1622630018304",
+                      "message": "Message content 1676026070138",
+                      "title": "Title1676026070139",
                       "priority": 0,
-                      "date": "2021-06-02T10:33:38.406550437Z"
+                      "date": "2023-02-10T10:47:50.255247553Z"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -42,19 +54,27 @@
         ],
         "Gotify1": [
           {
-            "startTime": 1622630018419,
-            "executionTime": 112,
+            "startTime": 1676026070239,
+            "executionTime": 82,
+            "source": [
+              {
+                "previousNode": "Gotify"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": 69,
+                      "id": 358,
                       "appid": 1,
-                      "message": "Message content 1622630018304",
-                      "title": "Title1622630018304",
+                      "message": "Message content 1676026070138",
+                      "title": "Title1676026070139",
                       "priority": 0,
-                      "date": "2021-06-02T10:33:38.406550437Z"
+                      "date": "2023-02-10T10:47:50.255247553Z"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -64,14 +84,22 @@
         ],
         "Gotify2": [
           {
-            "startTime": 1622630018531,
-            "executionTime": 124,
+            "startTime": 1676026070321,
+            "executionTime": 99,
+            "source": [
+              {
+                "previousNode": "Gotify1"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "success": true
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -85,11 +113,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-02T10:33:38.300Z",
-  "stoppedAt": "2021-06-02T10:33:38.655Z",
+  "startedAt": "2023-02-10T10:47:50.085Z",
+  "stoppedAt": "2023-02-10T10:47:50.421Z",
   "finished": true
 }

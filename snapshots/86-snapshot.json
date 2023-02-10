@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1635334068635,
+            "startTime": 1676026064091,
             "executionTime": 1,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,25 +24,33 @@
         ],
         "ActiveCampaign": [
           {
-            "startTime": 1635334068636,
-            "executionTime": 2040,
+            "startTime": 1676026064092,
+            "executionTime": 571,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "email": "fake1635334068638@gmail.com",
+                      "email": "fake1676026064136@gmail.com",
                       "email_empty": false,
-                      "cdate": "2021-10-27T06:27:50-05:00",
-                      "udate": "2021-10-27T06:27:50-05:00",
+                      "cdate": "2023-02-10T04:47:44-06:00",
+                      "udate": "2023-02-10T04:47:44-06:00",
                       "orgid": "",
                       "orgname": "",
                       "links": {
                         "object": true
                       },
-                      "hash": "cfe0c21d84eac28c157742b8e18ab25f",
-                      "id": "772",
+                      "hash": "da58e3aef430901ee0ba776cea9ff889",
+                      "id": "1184",
                       "organization": ""
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -48,16 +60,21 @@
         ],
         "ActiveCampaign9": [
           {
-            "startTime": 1635334070678,
-            "executionTime": 557,
+            "startTime": 1676026064663,
+            "executionTime": 474,
+            "source": [
+              {
+                "previousNode": "ActiveCampaign"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "name": "Name1635334070679",
-                      "createdTimestamp": "2021-10-27T06:27:51-05:00",
-                      "updatedTimestamp": "2021-10-27T06:27:51-05:00",
+                      "name": "Name1676026064663",
+                      "createdTimestamp": "2023-02-10T04:47:44-06:00",
+                      "updatedTimestamp": "2023-02-10T04:47:44-06:00",
                       "owner": "1",
                       "links": {
                         "object": true
@@ -65,7 +82,10 @@
                       "fields": [
                         "json array"
                       ],
-                      "id": "246"
+                      "id": "373"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -75,21 +95,29 @@
         ],
         "ActiveCampaign14": [
           {
-            "startTime": 1635334071236,
-            "executionTime": 612,
+            "startTime": 1676026065137,
+            "executionTime": 471,
+            "source": [
+              {
+                "previousNode": "ActiveCampaign9"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "contact": "772",
-                      "account": "246",
-                      "createdTimestamp": "2021-10-27T06:27:51-05:00",
-                      "updatedTimestamp": "2021-10-27T06:27:51-05:00",
+                      "contact": "1184",
+                      "account": "373",
+                      "createdTimestamp": "2023-02-10T04:47:45-06:00",
+                      "updatedTimestamp": "2023-02-10T04:47:45-06:00",
                       "links": {
                         "object": true
                       },
-                      "id": "3"
+                      "id": "129"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -99,22 +127,30 @@
         ],
         "ActiveCampaign15": [
           {
-            "startTime": 1635334071849,
-            "executionTime": 596,
+            "startTime": 1676026065608,
+            "executionTime": 332,
+            "source": [
+              {
+                "previousNode": "ActiveCampaign14"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "account": "246",
-                      "contact": "772",
+                      "account": "373",
+                      "contact": "1184",
                       "jobTitle": "TestJobTitle",
-                      "createdTimestamp": "2021-10-27T06:27:51-05:00",
-                      "updatedTimestamp": "2021-10-27T06:27:52-05:00",
+                      "createdTimestamp": "2023-02-10T04:47:45-06:00",
+                      "updatedTimestamp": "2023-02-10T04:47:45-06:00",
                       "links": {
                         "object": true
                       },
-                      "id": "3"
+                      "id": "129"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -124,13 +160,21 @@
         ],
         "ActiveCampaign16": [
           {
-            "startTime": 1635334072446,
-            "executionTime": 464,
+            "startTime": 1676026065941,
+            "executionTime": 351,
+            "source": [
+              {
+                "previousNode": "ActiveCampaign15"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -139,17 +183,22 @@
         ],
         "ActiveCampaign10": [
           {
-            "startTime": 1635334072912,
-            "executionTime": 647,
+            "startTime": 1676026066293,
+            "executionTime": 344,
+            "source": [
+              {
+                "previousNode": "ActiveCampaign16"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "name": "updatedName1635334072913",
+                      "name": "updatedName1676026066294",
                       "accountUrl": "",
-                      "createdTimestamp": "2021-10-27T06:27:51-05:00",
-                      "updatedTimestamp": "2021-10-27T06:27:53-05:00",
+                      "createdTimestamp": "2023-02-10T04:47:44-06:00",
+                      "updatedTimestamp": "2023-02-10T04:47:46-06:00",
                       "owner": "1",
                       "links": {
                         "object": true
@@ -157,7 +206,10 @@
                       "fields": [
                         "json array"
                       ],
-                      "id": "246"
+                      "id": "373"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -167,8 +219,13 @@
         ],
         "ActiveCampaign11": [
           {
-            "startTime": 1635334073560,
-            "executionTime": 689,
+            "startTime": 1676026066637,
+            "executionTime": 304,
+            "source": [
+              {
+                "previousNode": "ActiveCampaign10"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -177,6 +234,9 @@
                       "account": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -186,8 +246,13 @@
         ],
         "ActiveCampaign12": [
           {
-            "startTime": 1635334074250,
-            "executionTime": 868,
+            "startTime": 1676026066941,
+            "executionTime": 380,
+            "source": [
+              {
+                "previousNode": "ActiveCampaign11"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -206,6 +271,9 @@
                         "object": true
                       },
                       "id": "48"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -215,13 +283,21 @@
         ],
         "ActiveCampaign13": [
           {
-            "startTime": 1635334075120,
-            "executionTime": 629,
+            "startTime": 1676026067322,
+            "executionTime": 320,
+            "source": [
+              {
+                "previousNode": "ActiveCampaign12"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -230,14 +306,22 @@
         ],
         "ActiveCampaign5": [
           {
-            "startTime": 1635334075750,
-            "executionTime": 772,
+            "startTime": 1676026067642,
+            "executionTime": 362,
+            "source": [
+              {
+                "previousNode": "ActiveCampaign13"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "success": true
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -247,20 +331,28 @@
         ],
         "ActiveCampaign7": [
           {
-            "startTime": 1635334076523,
-            "executionTime": 470,
+            "startTime": 1676026068004,
+            "executionTime": 626,
+            "source": [
+              {
+                "previousNode": "ActiveCampaign13"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "contact": "772",
+                      "contact": "1184",
                       "tag": "1",
-                      "cdate": "2021-10-27T06:27:56-05:00",
+                      "cdate": "2023-02-10T04:47:48-06:00",
                       "links": {
                         "object": true
                       },
-                      "id": "173"
+                      "id": "437"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -270,15 +362,20 @@
         ],
         "ActiveCampaign6": [
           {
-            "startTime": 1635334076994,
-            "executionTime": 692,
+            "startTime": 1676026068630,
+            "executionTime": 386,
+            "source": [
+              {
+                "previousNode": "ActiveCampaign5"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "cdate": "2021-10-27T06:27:50-05:00",
-                      "email": "fake1635334068638@gmail.com",
+                      "cdate": "2023-02-10T04:47:44-06:00",
+                      "email": "fake1676026064136@gmail.com",
                       "phone": "",
                       "firstName": "",
                       "lastName": "",
@@ -290,7 +387,7 @@
                       "bounced_date": "0000-00-00",
                       "ip": "0",
                       "ua": "",
-                      "hash": "cfe0c21d84eac28c157742b8e18ab25f",
+                      "hash": "da58e3aef430901ee0ba776cea9ff889",
                       "socialdata_lastcheck": "0000-00-00 00:00:00",
                       "email_local": "",
                       "email_domain": "gmail.com",
@@ -302,15 +399,15 @@
                       "adate": {
                         "object": true
                       },
-                      "udate": "2021-10-27T06:27:57-05:00",
+                      "udate": "2023-02-10T04:47:48-06:00",
                       "edate": {
                         "object": true
                       },
                       "deleted_at": "0000-00-00 00:00:00",
-                      "created_utc_timestamp": "2021-10-27 06:27:50",
-                      "updated_utc_timestamp": "2021-10-27 06:27:57",
-                      "created_timestamp": "2021-10-27 06:27:50",
-                      "updated_timestamp": "2021-10-27 06:27:57",
+                      "created_utc_timestamp": "2023-02-10 04:47:44",
+                      "updated_utc_timestamp": "2023-02-10 04:47:48",
+                      "created_timestamp": "2023-02-10 04:47:44",
+                      "updated_timestamp": "2023-02-10 04:47:48",
                       "created_by": "0",
                       "updated_by": "0",
                       "email_empty": false,
@@ -318,10 +415,13 @@
                       "links": {
                         "object": true
                       },
-                      "id": "772",
+                      "id": "1184",
                       "organization": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -331,13 +431,21 @@
         ],
         "ActiveCampaign8": [
           {
-            "startTime": 1635334077687,
-            "executionTime": 412,
+            "startTime": 1676026069016,
+            "executionTime": 331,
+            "source": [
+              {
+                "previousNode": "ActiveCampaign7"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -346,15 +454,20 @@
         ],
         "ActiveCampaign1": [
           {
-            "startTime": 1635334078100,
-            "executionTime": 626,
+            "startTime": 1676026069347,
+            "executionTime": 430,
+            "source": [
+              {
+                "previousNode": "ActiveCampaign8"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "cdate": "2021-10-27T06:27:50-05:00",
-                      "email": "updatedFake1635334078102@gmail.com",
+                      "cdate": "2023-02-10T04:47:44-06:00",
+                      "email": "updatedFake1676026069348@gmail.com",
                       "phone": "",
                       "firstName": "",
                       "lastName": "",
@@ -366,7 +479,7 @@
                       "bounced_date": "0000-00-00",
                       "ip": "0",
                       "ua": "",
-                      "hash": "db36cc602332cec3c53f9d55ff054f7d",
+                      "hash": "c4fbe583bc570b7b277487e818c4fb3a",
                       "socialdata_lastcheck": "0000-00-00 00:00:00",
                       "email_local": "",
                       "email_domain": "gmail.com",
@@ -378,15 +491,15 @@
                       "adate": {
                         "object": true
                       },
-                      "udate": "2021-10-27T06:27:58-05:00",
+                      "udate": "2023-02-10T04:47:49-06:00",
                       "edate": {
                         "object": true
                       },
                       "deleted_at": "0000-00-00 00:00:00",
-                      "created_utc_timestamp": "2021-10-27 06:27:50",
-                      "updated_utc_timestamp": "2021-10-27 06:27:57",
-                      "created_timestamp": "2021-10-27 06:27:50",
-                      "updated_timestamp": "2021-10-27 06:27:57",
+                      "created_utc_timestamp": "2023-02-10 04:47:44",
+                      "updated_utc_timestamp": "2023-02-10 04:47:49",
+                      "created_timestamp": "2023-02-10 04:47:44",
+                      "updated_timestamp": "2023-02-10 04:47:49",
                       "created_by": "0",
                       "updated_by": "0",
                       "email_empty": false,
@@ -394,10 +507,13 @@
                       "links": {
                         "object": true
                       },
-                      "id": "772",
+                      "id": "1184",
                       "organization": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -407,8 +523,13 @@
         ],
         "ActiveCampaign2": [
           {
-            "startTime": 1635334078727,
-            "executionTime": 728,
+            "startTime": 1676026069777,
+            "executionTime": 295,
+            "source": [
+              {
+                "previousNode": "ActiveCampaign1"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -435,6 +556,9 @@
                       "contact": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -444,8 +568,13 @@
         ],
         "ActiveCampaign3": [
           {
-            "startTime": 1635334079455,
-            "executionTime": 797,
+            "startTime": 1676026070072,
+            "executionTime": 305,
+            "source": [
+              {
+                "previousNode": "ActiveCampaign2"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -492,9 +621,9 @@
                         "object": true
                       },
                       "created_utc_timestamp": "2021-04-14 05:59:52",
-                      "updated_utc_timestamp": "2021-09-22 06:01:40",
+                      "updated_utc_timestamp": "2022-06-02 20:44:36",
                       "created_timestamp": "2021-04-14 05:59:52",
-                      "updated_timestamp": "2021-09-22 06:01:40",
+                      "updated_timestamp": "2022-06-02 20:44:36",
                       "created_by": {
                         "object": true
                       },
@@ -516,6 +645,9 @@
                       "organization": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -525,13 +657,21 @@
         ],
         "ActiveCampaign4": [
           {
-            "startTime": 1635334080252,
-            "executionTime": 967,
+            "startTime": 1676026070378,
+            "executionTime": 369,
+            "source": [
+              {
+                "previousNode": "ActiveCampaign3"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -544,11 +684,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-10-27T11:27:48.629Z",
-  "stoppedAt": "2021-10-27T11:28:01.220Z",
+  "startedAt": "2023-02-10T10:47:44.088Z",
+  "stoppedAt": "2023-02-10T10:47:50.747Z",
   "finished": true
 }

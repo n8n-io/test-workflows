@@ -5,8 +5,8 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1662368782941,
-            "executionTime": 3,
+            "startTime": 1676026066905,
+            "executionTime": 1,
             "source": [],
             "data": {
               "main": [
@@ -24,8 +24,8 @@
         ],
         "Function": [
           {
-            "startTime": 1662368782948,
-            "executionTime": 77,
+            "startTime": 1676026066906,
+            "executionTime": 25,
             "source": [
               {
                 "previousNode": "Start"
@@ -54,7 +54,7 @@
         ],
         "Write Binary File": [
           {
-            "startTime": 1662368783032,
+            "startTime": 1676026066931,
             "executionTime": 2,
             "source": [
               {
@@ -86,8 +86,8 @@
         ],
         "Read Binary File": [
           {
-            "startTime": 1662368783035,
-            "executionTime": 1,
+            "startTime": 1676026066936,
+            "executionTime": 4,
             "source": [
               {
                 "previousNode": "Write Binary File"
@@ -103,10 +103,12 @@
                     "binary": {
                       "data": {
                         "mimeType": "text/plain",
+                        "fileType": "text",
                         "fileExtension": "txt",
                         "data": "VGVzdCBXcml0ZSBCaW5hcnkgRmlsZSBub2Rl",
                         "directory": "/tmp",
-                        "fileName": "test_write_binary_file.txt"
+                        "fileName": "test_write_binary_file.txt",
+                        "fileSize": "27 B"
                       }
                     },
                     "pairedItem": {
@@ -120,8 +122,8 @@
         ],
         "Function1": [
           {
-            "startTime": 1662368783043,
-            "executionTime": 8,
+            "startTime": 1676026066941,
+            "executionTime": 10,
             "source": [
               {
                 "previousNode": "Read Binary File"
@@ -137,15 +139,18 @@
                     "binary": {
                       "data": {
                         "mimeType": "text/plain",
+                        "fileType": "text",
                         "fileExtension": "txt",
                         "data": "VGVzdCBXcml0ZSBCaW5hcnkgRmlsZSBub2Rl",
                         "directory": "/tmp",
-                        "fileName": "test_write_binary_file.txt"
+                        "fileName": "test_write_binary_file.txt",
+                        "fileSize": "27 B"
                       }
                     },
                     "pairedItem": {
                       "item": 0
-                    }
+                    },
+                    "index": 0
                   }
                 ]
               ]
@@ -163,7 +168,7 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2022-09-05T09:06:22.933Z",
-  "stoppedAt": "2022-09-05T09:06:23.052Z",
+  "startedAt": "2023-02-10T10:47:46.903Z",
+  "stoppedAt": "2023-02-10T10:47:46.951Z",
   "finished": true
 }

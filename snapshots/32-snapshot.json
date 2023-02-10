@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622629952108,
+            "startTime": 1676026052545,
             "executionTime": 0,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,18 +24,26 @@
         ],
         "Drift ": [
           {
-            "startTime": 1622629952109,
-            "executionTime": 712,
+            "startTime": 1676026052546,
+            "executionTime": 663,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": 9854319286,
-                      "createdAt": 1622629952606,
+                      "id": 17239651645,
+                      "createdAt": 1676026053046,
                       "attributes": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -41,18 +53,26 @@
         ],
         "Drift 1": [
           {
-            "startTime": 1622629952822,
-            "executionTime": 752,
+            "startTime": 1676026053211,
+            "executionTime": 558,
+            "source": [
+              {
+                "previousNode": "Drift "
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": 9854319286,
-                      "createdAt": 1622629952606,
+                      "id": 17239651645,
+                      "createdAt": 1676026053046,
                       "attributes": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -62,18 +82,26 @@
         ],
         "Drift 2": [
           {
-            "startTime": 1622629953575,
-            "executionTime": 557,
+            "startTime": 1676026053769,
+            "executionTime": 476,
+            "source": [
+              {
+                "previousNode": "Drift 1"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": 9854319286,
-                      "createdAt": 1622629952606,
+                      "id": 17239651645,
+                      "createdAt": 1676026053046,
                       "attributes": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -83,14 +111,22 @@
         ],
         "Drift 3": [
           {
-            "startTime": 1622629954132,
-            "executionTime": 537,
+            "startTime": 1676026054245,
+            "executionTime": 410,
+            "source": [
+              {
+                "previousNode": "Drift 2"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "success": true
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -104,11 +140,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-02T10:32:32.106Z",
-  "stoppedAt": "2021-06-02T10:32:34.669Z",
+  "startedAt": "2023-02-10T10:47:32.544Z",
+  "stoppedAt": "2023-02-10T10:47:34.655Z",
   "finished": true
 }

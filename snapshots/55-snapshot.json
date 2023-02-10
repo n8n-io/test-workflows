@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622629978649,
+            "startTime": 1676026058324,
             "executionTime": 1,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,46 +24,44 @@
         ],
         "Hunter": [
           {
-            "startTime": 1622629978650,
-            "executionTime": 394,
+            "startTime": 1676026058325,
+            "executionTime": 301,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "value": "hosting@n8n.io",
-                      "type": "generic",
+                      "value": "ricardo@n8n.io",
+                      "type": "personal",
                       "confidence": 99,
                       "sources": [
                         "json array"
                       ],
-                      "first_name": {
-                        "object": true
-                      },
-                      "last_name": {
-                        "object": true
-                      },
-                      "position": {
-                        "object": true
-                      },
+                      "first_name": "Ricardo",
+                      "last_name": "Espinoza",
+                      "position": "Software Engineer",
                       "seniority": {
                         "object": true
                       },
-                      "department": {
-                        "object": true
-                      },
+                      "department": "it",
                       "linkedin": {
                         "object": true
                       },
-                      "twitter": {
-                        "object": true
-                      },
+                      "twitter": "ricardo_e105",
                       "phone_number": {
                         "object": true
                       },
                       "verification": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -69,19 +71,34 @@
         ],
         "Hunter1": [
           {
-            "startTime": 1622629979045,
-            "executionTime": 292,
+            "startTime": 1676026058626,
+            "executionTime": 1212,
+            "source": [
+              {
+                "previousNode": "Hunter"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "first_name": "Hosting",
-                      "last_name": "Test",
-                      "email": "hosting@n8n.io",
-                      "score": 96,
+                      "first_name": {
+                        "object": true
+                      },
+                      "last_name": {
+                        "object": true
+                      },
+                      "email": {
+                        "object": true
+                      },
+                      "score": {
+                        "object": true
+                      },
                       "domain": "n8n.io",
-                      "accept_all": false,
+                      "accept_all": {
+                        "object": true
+                      },
                       "position": {
                         "object": true
                       },
@@ -103,6 +120,9 @@
                       "verification": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -112,8 +132,13 @@
         ],
         "Hunter2": [
           {
-            "startTime": 1622629979337,
-            "executionTime": 870,
+            "startTime": 1676026059838,
+            "executionTime": 692,
+            "source": [
+              {
+                "previousNode": "Hunter1"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -122,10 +147,10 @@
                       "status": "valid",
                       "result": "deliverable",
                       "_deprecation_notice": "Using result is deprecated, use status instead",
-                      "score": 54,
+                      "score": 90,
                       "email": "nodeqa@n8n.io",
                       "regexp": true,
-                      "gibberish": true,
+                      "gibberish": false,
                       "disposable": false,
                       "webmail": false,
                       "mx_records": true,
@@ -136,6 +161,9 @@
                       "sources": [
                         "json array"
                       ]
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -149,11 +177,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-02T10:32:58.648Z",
-  "stoppedAt": "2021-06-02T10:33:00.208Z",
+  "startedAt": "2023-02-10T10:47:38.323Z",
+  "stoppedAt": "2023-02-10T10:47:40.530Z",
   "finished": true
 }

@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622630032212,
-            "executionTime": 0,
+            "startTime": 1676026074121,
+            "executionTime": 1,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,15 +24,23 @@
         ],
         "Mailgun": [
           {
-            "startTime": 1622630032213,
-            "executionTime": 1493,
+            "startTime": 1676026074122,
+            "executionTime": 933,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "<20210602103353.1.CDD01BE373DD0B88@sandbox9d3ed7f14628495f83c01d31dbc98ce4.mailgun.org>",
+                      "id": "<20230210104755.e7d51a575af1c26b@sandbox9d3ed7f14628495f83c01d31dbc98ce4.mailgun.org>",
                       "message": "Queued. Thank you."
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -42,11 +54,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-02T10:33:52.210Z",
-  "stoppedAt": "2021-06-02T10:33:53.706Z",
+  "startedAt": "2023-02-10T10:47:54.119Z",
+  "stoppedAt": "2023-02-10T10:47:55.056Z",
   "finished": true
 }

@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622630011947,
-            "executionTime": 1,
+            "startTime": 1676026065897,
+            "executionTime": 0,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,8 +24,13 @@
         ],
         "MessageBird": [
           {
-            "startTime": 1622630011949,
-            "executionTime": 284,
+            "startTime": 1676026065898,
+            "executionTime": 193,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -30,6 +39,9 @@
                       "payment": "prepaid",
                       "type": "dollars",
                       "amount": 0
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -39,15 +51,20 @@
         ],
         "MessageBird1": [
           {
-            "startTime": 1622630012233,
-            "executionTime": 214,
+            "startTime": 1676026066092,
+            "executionTime": 164,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "de71f2b72d3c4fb9896eec5da0377708",
-                      "href": "https://rest.messagebird.com/messages/de71f2b72d3c4fb9896eec5da0377708",
+                      "id": "9f83fa842b054d6b9bb3c21d0d6b8b54",
+                      "href": "https://rest.messagebird.com/messages/9f83fa842b054d6b9bb3c21d0d6b8b54",
                       "direction": "mt",
                       "type": "sms",
                       "originator": "4930270504079",
@@ -67,10 +84,13 @@
                       "scheduledDatetime": {
                         "object": true
                       },
-                      "createdDatetime": "2021-06-02T10:33:32+00:00",
+                      "createdDatetime": "2023-02-10T10:47:46+00:00",
                       "recipients": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -84,11 +104,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-02T10:33:31.946Z",
-  "stoppedAt": "2021-06-02T10:33:32.447Z",
+  "startedAt": "2023-02-10T10:47:45.896Z",
+  "stoppedAt": "2023-02-10T10:47:46.257Z",
   "finished": true
 }

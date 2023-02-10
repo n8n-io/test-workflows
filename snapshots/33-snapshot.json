@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1627556118838,
+            "startTime": 1676026052686,
             "executionTime": 1,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,34 +24,42 @@
         ],
         "Zoom": [
           {
-            "startTime": 1627556118841,
-            "executionTime": 774,
+            "startTime": 1676026052687,
+            "executionTime": 528,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "uuid": "b31i6YbYSqqcI4FIgq1OZw==",
-                      "id": 99037786619,
+                      "uuid": "ssDGK4wyT2yKVR92NDWPdQ==",
+                      "id": 77147920479,
                       "host_id": "nRgFaftbSnmu0V5MWWIDAA",
                       "host_email": "nodeqa@n8n.io",
                       "topic": "test",
                       "type": 2,
                       "status": "waiting",
-                      "start_time": "2021-07-29T10:55:19Z",
+                      "start_time": "2023-02-10T10:47:33Z",
                       "duration": 60,
                       "timezone": "Europe/Paris",
-                      "created_at": "2021-07-29T10:55:19Z",
-                      "start_url": "https://zoom.us/s/99037786619?zak=eyJ0eXAiOiJKV1QiLCJzdiI6IjAwMDAwMSIsInptX3NrbSI6InptX28ybSIsImFsZyI6IkhTMjU2In0.eyJhdWQiOiJjbGllbnRzbSIsInVpZCI6Im5SZ0ZhZnRiU25tdTBWNU1XV0lEQUEiLCJpc3MiOiJ3ZWIiLCJzdHkiOjEwMCwid2NkIjoiYXcxIiwiY2x0IjowLCJzdGsiOiJybzVjRFFncVpRM1FwTkR2UUlfTVdCZ3RCX2gtZUhMOExNelJGc1hNRHBzLkJnWVlVME5XWkRkVk5XSjJWVVJVU0dJd2NsQjBTRUY1ZHowOVFEVmxObVk0WXpneE9UY3pZek0wTlRKa01EVTVOamM1WWpWaFlqaGhZbUprTWpnMllUUmlPV0UyWWpneFpUZGpOamd5WTJRM1l6azFObVZpWkdKaE1EVUFERE5EUWtGMWIybFpVek56UFFBRFlYY3hBQUFCZXZIbmdfb0FFblVBQUFBIiwiZXhwIjoxNjI3NTYzMzE5LCJpYXQiOjE2Mjc1NTYxMTksImFpZCI6IjFHdXNnSGsxVFAyVVFvUDRNVkU1UlEiLCJjaWQiOiIifQ.euP7mehCB4ELjP13ueUxUD3LyOd6Bl4e6tbhpr9T0CQ",
-                      "join_url": "https://zoom.us/j/99037786619?pwd=bFhSQ29oMWhjZTlzUkFRdTVrRDM4dz09",
-                      "password": "J31x3Q",
-                      "h323_password": "132872",
-                      "pstn_password": "132872",
-                      "encrypted_password": "bFhSQ29oMWhjZTlzUkFRdTVrRDM4dz09",
+                      "created_at": "2023-02-10T10:47:33Z",
+                      "start_url": "https://us04web.zoom.us/s/77147920479?zak=eyJ0eXAiOiJKV1QiLCJzdiI6IjAwMDAwMSIsInptX3NrbSI6InptX28ybSIsImFsZyI6IkhTMjU2In0.eyJhdWQiOiJjbGllbnRzbSIsInVpZCI6Im5SZ0ZhZnRiU25tdTBWNU1XV0lEQUEiLCJpc3MiOiJ3ZWIiLCJzayI6IjAiLCJzdHkiOjEwMCwid2NkIjoidXMwNCIsImNsdCI6MCwibW51bSI6Ijc3MTQ3OTIwNDc5IiwiZXhwIjoxNjc2MDMzMjUzLCJpYXQiOjE2NzYwMjYwNTMsImFpZCI6IjFHdXNnSGsxVFAyVVFvUDRNVkU1UlEiLCJjaWQiOiIifQ.nPOclJPeBnEFIq8MEK7eYKyLvqfcSlN7TTCQ9sqvm9Y",
+                      "join_url": "https://us04web.zoom.us/j/77147920479?pwd=0GNC33FxPsNhFcszwAIQzqKfUvyaUl.1",
+                      "password": "93ekVU",
+                      "h323_password": "850951",
+                      "pstn_password": "850951",
+                      "encrypted_password": "0GNC33FxPsNhFcszwAIQzqKfUvyaUl.1",
                       "settings": {
                         "object": true
                       },
                       "pre_schedule": false
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -57,14 +69,22 @@
         ],
         "Zoom1": [
           {
-            "startTime": 1627556119616,
-            "executionTime": 600,
+            "startTime": 1676026053216,
+            "executionTime": 350,
+            "source": [
+              {
+                "previousNode": "Zoom"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "success": true
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -74,23 +94,31 @@
         ],
         "Zoom2": [
           {
-            "startTime": 1627556120217,
-            "executionTime": 511,
+            "startTime": 1676026053566,
+            "executionTime": 230,
+            "source": [
+              {
+                "previousNode": "Zoom1"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "uuid": "AoL7WfhbR2qgpX4/XJFdQg==",
-                      "id": 99919711022,
+                      "uuid": "ssDGK4wyT2yKVR92NDWPdQ==",
+                      "id": 77147920479,
                       "host_id": "nRgFaftbSnmu0V5MWWIDAA",
                       "topic": "test",
                       "type": 2,
-                      "start_time": "2021-07-14T14:16:22Z",
-                      "duration": 60,
+                      "start_time": "2023-02-10T10:47:33Z",
+                      "duration": 30,
                       "timezone": "Europe/Paris",
-                      "created_at": "2021-07-14T14:16:21Z",
-                      "join_url": "https://zoom.us/j/99919711022?pwd=dmdzczZKbG9GV3BGQnNuWnBxNVR5QT09"
+                      "created_at": "2023-02-10T10:47:33Z",
+                      "join_url": "https://us04web.zoom.us/j/77147920479?pwd=0GNC33FxPsNhFcszwAIQzqKfUvyaUl.1"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -100,34 +128,42 @@
         ],
         "Zoom3": [
           {
-            "startTime": 1627556120729,
-            "executionTime": 511,
+            "startTime": 1676026053796,
+            "executionTime": 225,
+            "source": [
+              {
+                "previousNode": "Zoom2"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "uuid": "b31i6YbYSqqcI4FIgq1OZw==",
-                      "id": 99037786619,
+                      "uuid": "ssDGK4wyT2yKVR92NDWPdQ==",
+                      "id": 77147920479,
                       "host_id": "nRgFaftbSnmu0V5MWWIDAA",
                       "host_email": "nodeqa@n8n.io",
                       "topic": "test",
                       "type": 2,
                       "status": "waiting",
-                      "start_time": "2021-07-29T10:55:19Z",
+                      "start_time": "2023-02-10T10:47:33Z",
                       "duration": 30,
                       "timezone": "Europe/Paris",
-                      "created_at": "2021-07-29T10:55:19Z",
-                      "start_url": "https://zoom.us/s/99037786619?zak=eyJ0eXAiOiJKV1QiLCJzdiI6IjAwMDAwMSIsInptX3NrbSI6InptX28ybSIsImFsZyI6IkhTMjU2In0.eyJhdWQiOiJjbGllbnRzbSIsInVpZCI6Im5SZ0ZhZnRiU25tdTBWNU1XV0lEQUEiLCJpc3MiOiJ3ZWIiLCJzdHkiOjEwMCwid2NkIjoiYXcxIiwiY2x0IjowLCJzdGsiOiJjcVItLTFtaktkdkdZYmJHOEJ5dEVnNTY0cWU3c0VENzZ2b3h6cmxDbWU4LkJnWVlVME5XWkRkVk5XSjJWVVJVU0dJd2NsQjBTRUY1ZHowOVFEVmxObVk0WXpneE9UY3pZek0wTlRKa01EVTVOamM1WWpWaFlqaGhZbUprTWpnMllUUmlPV0UyWWpneFpUZGpOamd5WTJRM1l6azFObVZpWkdKaE1EVUFERE5EUWtGMWIybFpVek56UFFBRFlYY3hBQUFCZXZIbmllNEFFblVBQUFBIiwiZXhwIjoxNjI3NTYzMzIxLCJpYXQiOjE2Mjc1NTYxMjEsImFpZCI6IjFHdXNnSGsxVFAyVVFvUDRNVkU1UlEiLCJjaWQiOiIifQ.7rXaFnUuyraPoq-tr-6CPEBurfDDHZ7o63Uj9Z-LM5M",
-                      "join_url": "https://zoom.us/j/99037786619?pwd=bFhSQ29oMWhjZTlzUkFRdTVrRDM4dz09",
-                      "password": "J31x3Q",
-                      "h323_password": "132872",
-                      "pstn_password": "132872",
-                      "encrypted_password": "bFhSQ29oMWhjZTlzUkFRdTVrRDM4dz09",
+                      "created_at": "2023-02-10T10:47:33Z",
+                      "start_url": "https://us04web.zoom.us/s/77147920479?zak=eyJ0eXAiOiJKV1QiLCJzdiI6IjAwMDAwMSIsInptX3NrbSI6InptX28ybSIsImFsZyI6IkhTMjU2In0.eyJhdWQiOiJjbGllbnRzbSIsInVpZCI6Im5SZ0ZhZnRiU25tdTBWNU1XV0lEQUEiLCJpc3MiOiJ3ZWIiLCJzayI6IjAiLCJzdHkiOjEwMCwid2NkIjoidXMwNCIsImNsdCI6MCwibW51bSI6Ijc3MTQ3OTIwNDc5IiwiZXhwIjoxNjc2MDMzMjU0LCJpYXQiOjE2NzYwMjYwNTQsImFpZCI6IjFHdXNnSGsxVFAyVVFvUDRNVkU1UlEiLCJjaWQiOiIifQ.P_ZlJoYDDKv0a6Lka6z9HF8krdK4tDufnEo3EtWQR_g",
+                      "join_url": "https://us04web.zoom.us/j/77147920479?pwd=0GNC33FxPsNhFcszwAIQzqKfUvyaUl.1",
+                      "password": "93ekVU",
+                      "h323_password": "850951",
+                      "pstn_password": "850951",
+                      "encrypted_password": "0GNC33FxPsNhFcszwAIQzqKfUvyaUl.1",
                       "settings": {
                         "object": true
                       },
                       "pre_schedule": false
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -137,14 +173,22 @@
         ],
         "Zoom4": [
           {
-            "startTime": 1627556121240,
-            "executionTime": 513,
+            "startTime": 1676026054021,
+            "executionTime": 614,
+            "source": [
+              {
+                "previousNode": "Zoom3"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "success": true
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -158,11 +202,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-07-29T10:55:18.831Z",
-  "stoppedAt": "2021-07-29T10:55:21.754Z",
+  "startedAt": "2023-02-10T10:47:32.685Z",
+  "stoppedAt": "2023-02-10T10:47:34.636Z",
   "finished": true
 }

@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622630043762,
+            "startTime": 1676026075537,
             "executionTime": 1,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,8 +24,13 @@
         ],
         "Peekalink1": [
           {
-            "startTime": 1622630043763,
-            "executionTime": 635,
+            "startTime": 1676026075538,
+            "executionTime": 283,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -29,8 +38,8 @@
                     "json": {
                       "url": "https://n8n.io/",
                       "domain": "n8n.io",
-                      "lastUpdated": "2021-06-01T14:53:14.283581Z",
-                      "nextUpdate": "2021-06-02T14:53:14.280545Z",
+                      "lastUpdated": "2021-12-20T21:37:17.427941Z",
+                      "nextUpdate": "2021-12-21T21:37:17.421519Z",
                       "contentType": "html",
                       "mimeType": "text/html",
                       "redirected": false,
@@ -41,6 +50,9 @@
                       "image": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -50,14 +62,22 @@
         ],
         "Peekalink": [
           {
-            "startTime": 1622630044398,
-            "executionTime": 289,
+            "startTime": 1676026075822,
+            "executionTime": 181,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "isAvailable": true
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -71,11 +91,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-02T10:34:03.761Z",
-  "stoppedAt": "2021-06-02T10:34:04.687Z",
+  "startedAt": "2023-02-10T10:47:55.536Z",
+  "stoppedAt": "2023-02-10T10:47:56.003Z",
   "finished": true
 }

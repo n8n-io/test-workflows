@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1623056658234,
-            "executionTime": 0,
+            "startTime": 1676026057757,
+            "executionTime": 1,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,15 +24,20 @@
         ],
         "Clockify": [
           {
-            "startTime": 1623056658235,
-            "executionTime": 2454,
+            "startTime": 1676026057758,
+            "executionTime": 240,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "60bde1126c24294f3e5f8003",
-                      "name": "TestProject created Mon, 07 Jun 2021 09:04:18 GMT",
+                      "id": "63e620ca57a0694b3d4f9e7d",
+                      "name": "TestProject created Fri, 10 Feb 2023 10:47:37 GMT",
                       "hourlyRate": {
                         "object": true
                       },
@@ -38,7 +47,7 @@
                       "memberships": [
                         "json array"
                       ],
-                      "color": "#E91E63",
+                      "color": "#FFC107",
                       "estimate": {
                         "object": true
                       },
@@ -55,8 +64,11 @@
                       "budgetEstimate": {
                         "object": true
                       },
-                      "public": false,
-                      "template": false
+                      "template": false,
+                      "public": false
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -66,17 +78,25 @@
         ],
         "Clockify5": [
           {
-            "startTime": 1623056660690,
-            "executionTime": 594,
+            "startTime": 1676026057998,
+            "executionTime": 90,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "60bde1146c24294f3e5f8008",
-                      "name": "TestTag0.9518057007873126",
+                      "id": "63e620ca57a0694b3d4f9e7f",
+                      "name": "TestTag0.38250717941632795",
                       "workspaceId": "60335ad3f24e660123d7fdee",
                       "archived": false
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -86,14 +106,19 @@
         ],
         "Clockify9": [
           {
-            "startTime": 1623056661285,
-            "executionTime": 606,
+            "startTime": 1676026058089,
+            "executionTime": 102,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "60bde1156c24294f3e5f800b",
+                      "id": "63e620ca89cf166878c4eeb5",
                       "description": {
                         "object": true
                       },
@@ -115,7 +140,14 @@
                       "isLocked": false,
                       "customFieldValues": [
                         "json array"
-                      ]
+                      ],
+                      "type": "REGULAR",
+                      "kioskId": {
+                        "object": true
+                      }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -125,15 +157,20 @@
         ],
         "Clockify1": [
           {
-            "startTime": 1623056661892,
-            "executionTime": 1054,
+            "startTime": 1676026058192,
+            "executionTime": 110,
+            "source": [
+              {
+                "previousNode": "Clockify"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "60bde1126c24294f3e5f8003",
-                      "name": "Updated TestProject created Mon, 07 Jun 2021 09:04:18 GMT",
+                      "id": "63e620ca57a0694b3d4f9e7d",
+                      "name": "Updated TestProject created Fri, 10 Feb 2023 10:47:37 GMT",
                       "hourlyRate": {
                         "object": true
                       },
@@ -143,7 +180,7 @@
                       "memberships": [
                         "json array"
                       ],
-                      "color": "#E91E63",
+                      "color": "#FFC107",
                       "estimate": {
                         "object": true
                       },
@@ -160,8 +197,11 @@
                       "budgetEstimate": {
                         "object": true
                       },
-                      "public": false,
-                      "template": false
+                      "template": false,
+                      "public": false
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -171,18 +211,27 @@
         ],
         "Sleep 0.5 second": [
           {
-            "startTime": 1623056662947,
-            "executionTime": 520,
+            "startTime": 1676026058302,
+            "executionTime": 510,
+            "source": [
+              {
+                "previousNode": "Clockify5"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "60bde1146c24294f3e5f8008",
-                      "name": "TestTag0.9518057007873126",
+                      "id": "63e620ca57a0694b3d4f9e7f",
+                      "name": "TestTag0.38250717941632795",
                       "workspaceId": "60335ad3f24e660123d7fdee",
                       "archived": false
-                    }
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    },
+                    "index": 0
                   }
                 ]
               ]
@@ -191,14 +240,19 @@
         ],
         "Clockify10": [
           {
-            "startTime": 1623056663467,
-            "executionTime": 766,
+            "startTime": 1676026058812,
+            "executionTime": 216,
+            "source": [
+              {
+                "previousNode": "Clockify9"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "60bde1156c24294f3e5f800b",
+                      "id": "63e620ca89cf166878c4eeb5",
                       "description": "Updated time entry",
                       "tagIds": {
                         "object": true
@@ -218,7 +272,14 @@
                       "isLocked": false,
                       "customFieldValues": [
                         "json array"
-                      ]
+                      ],
+                      "type": "REGULAR",
+                      "kioskId": {
+                        "object": true
+                      }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -228,15 +289,20 @@
         ],
         "Clockify2": [
           {
-            "startTime": 1623056664234,
-            "executionTime": 132,
+            "startTime": 1676026059028,
+            "executionTime": 91,
+            "source": [
+              {
+                "previousNode": "Clockify1"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "60bde1126c24294f3e5f8003",
-                      "name": "Updated TestProject created Mon, 07 Jun 2021 09:04:18 GMT",
+                      "id": "63e620ca57a0694b3d4f9e7d",
+                      "name": "Updated TestProject created Fri, 10 Feb 2023 10:47:37 GMT",
                       "hourlyRate": {
                         "object": true
                       },
@@ -246,7 +312,7 @@
                       "memberships": [
                         "json array"
                       ],
-                      "color": "#E91E63",
+                      "color": "#FFC107",
                       "estimate": {
                         "object": true
                       },
@@ -263,8 +329,11 @@
                       "budgetEstimate": {
                         "object": true
                       },
-                      "public": false,
-                      "template": false
+                      "template": false,
+                      "public": false
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -274,17 +343,25 @@
         ],
         "Clockify6": [
           {
-            "startTime": 1623056664367,
-            "executionTime": 543,
+            "startTime": 1676026059119,
+            "executionTime": 89,
+            "source": [
+              {
+                "previousNode": "Sleep 0.5 second"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "60bde1146c24294f3e5f8008",
-                      "name": "UpdatedTag0.17091484571440274",
+                      "id": "63e620ca57a0694b3d4f9e7f",
+                      "name": "UpdatedTag0.7437468286190274",
                       "workspaceId": "60335ad3f24e660123d7fdee",
                       "archived": false
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -294,14 +371,19 @@
         ],
         "Clockify11": [
           {
-            "startTime": 1623056664910,
-            "executionTime": 147,
+            "startTime": 1676026059208,
+            "executionTime": 95,
+            "source": [
+              {
+                "previousNode": "Clockify10"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "60bde1156c24294f3e5f800b",
+                      "id": "63e620ca89cf166878c4eeb5",
                       "description": "Updated time entry",
                       "tagIds": {
                         "object": true
@@ -321,7 +403,14 @@
                       "isLocked": false,
                       "customFieldValues": [
                         "json array"
-                      ]
+                      ],
+                      "type": "REGULAR",
+                      "kioskId": {
+                        "object": true
+                      }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -331,8 +420,13 @@
         ],
         "Clockify3": [
           {
-            "startTime": 1623056665057,
-            "executionTime": 209,
+            "startTime": 1676026059303,
+            "executionTime": 156,
+            "source": [
+              {
+                "previousNode": "Clockify2"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -366,8 +460,11 @@
                       "budgetEstimate": {
                         "object": true
                       },
-                      "public": false,
-                      "template": false
+                      "template": false,
+                      "public": false
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -377,8 +474,13 @@
         ],
         "Clockify7": [
           {
-            "startTime": 1623056665266,
-            "executionTime": 145,
+            "startTime": 1676026059459,
+            "executionTime": 81,
+            "source": [
+              {
+                "previousNode": "Clockify6"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -388,6 +490,9 @@
                       "name": "TestTag",
                       "workspaceId": "60335ad3f24e660123d7fdee",
                       "archived": false
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -397,14 +502,22 @@
         ],
         "Clockify12": [
           {
-            "startTime": 1623056665412,
-            "executionTime": 968,
+            "startTime": 1676026059540,
+            "executionTime": 93,
+            "source": [
+              {
+                "previousNode": "Clockify11"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "success": true
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -414,8 +527,13 @@
         ],
         "Clockify4": [
           {
-            "startTime": 1623056666380,
+            "startTime": 1676026059633,
             "executionTime": 0,
+            "source": [
+              {
+                "previousNode": "Clockify3"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -449,8 +567,11 @@
                       "budgetEstimate": {
                         "object": true
                       },
-                      "public": false,
-                      "template": false
+                      "template": false,
+                      "public": false
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -460,14 +581,22 @@
         ],
         "Clockify8": [
           {
-            "startTime": 1623056666380,
-            "executionTime": 568,
+            "startTime": 1676026059633,
+            "executionTime": 91,
+            "source": [
+              {
+                "previousNode": "Clockify7"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "success": true
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -481,11 +610,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-07T09:04:18.231Z",
-  "stoppedAt": "2021-06-07T09:04:26.949Z",
+  "startedAt": "2023-02-10T10:47:37.755Z",
+  "stoppedAt": "2023-02-10T10:47:39.725Z",
   "finished": true
 }

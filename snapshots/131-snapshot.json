@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622630022632,
-            "executionTime": 0,
+            "startTime": 1676026073334,
+            "executionTime": 1,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,8 +24,13 @@
         ],
         "Line": [
           {
-            "startTime": 1622630022633,
-            "executionTime": 1433,
+            "startTime": 1676026073336,
+            "executionTime": 885,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -29,6 +38,9 @@
                     "json": {
                       "status": 200,
                       "message": "ok"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -42,11 +54,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-02T10:33:42.630Z",
-  "stoppedAt": "2021-06-02T10:33:44.066Z",
+  "startedAt": "2023-02-10T10:47:53.333Z",
+  "stoppedAt": "2023-02-10T10:47:54.221Z",
   "finished": true
 }

@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1626269454776,
-            "executionTime": 0,
+            "startTime": 1676026052588,
+            "executionTime": 1,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,19 +24,24 @@
         ],
         "PagerDuty": [
           {
-            "startTime": 1626269454777,
-            "executionTime": 1156,
+            "startTime": 1676026052591,
+            "executionTime": 1045,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "incident_number": 278,
+                      "incident_number": 486,
                       "title": "Test",
                       "description": "Test",
-                      "created_at": "2021-07-14T13:30:55Z",
+                      "created_at": "2023-02-10T10:47:33Z",
                       "status": "triggered",
-                      "incident_key": "4e6c0e10ad164b6d8697ea9945a6cf3c",
+                      "incident_key": "3aba1ba7f17743208d1b9eb2193d3f56",
                       "service": {
                         "object": true
                       },
@@ -40,7 +49,7 @@
                         "json array"
                       ],
                       "assigned_via": "escalation_policy",
-                      "last_status_change_at": "2021-07-14T13:30:55Z",
+                      "last_status_change_at": "2023-02-10T10:47:33Z",
                       "first_trigger_log_entry": {
                         "object": true
                       },
@@ -82,11 +91,14 @@
                         "json array"
                       ],
                       "urgency": "high",
-                      "id": "PD535RP",
+                      "id": "Q3DN3PH64VFSHX",
                       "type": "incident",
-                      "summary": "[#278] Test",
-                      "self": "https://api.pagerduty.com/incidents/PD535RP",
-                      "html_url": "https://dev-nodeqan8n.pagerduty.com/incidents/PD535RP"
+                      "summary": "[#486] Test",
+                      "self": "https://api.pagerduty.com/incidents/Q3DN3PH64VFSHX",
+                      "html_url": "https://dev-nodeqan8n.pagerduty.com/incidents/Q3DN3PH64VFSHX"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -96,21 +108,26 @@
         ],
         "PagerDuty7": [
           {
-            "startTime": 1626269455934,
-            "executionTime": 873,
+            "startTime": 1676026053637,
+            "executionTime": 805,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "R62B3URF1UNDUQXU5N43DZIOJ9",
+                      "id": "R1X1WNMC0ET8255I5SU2QJE236",
                       "type": "assign_log_entry",
-                      "summary": "Assigned to Node Qa",
-                      "self": "https://api.pagerduty.com/log_entries/R62B3URF1UNDUQXU5N43DZIOJ9",
+                      "summary": "Assigned to Node Qa.",
+                      "self": "https://api.pagerduty.com/log_entries/R1X1WNMC0ET8255I5SU2QJE236",
                       "html_url": {
                         "object": true
                       },
-                      "created_at": "2021-07-14T13:30:55Z",
+                      "created_at": "2023-02-10T10:47:33Z",
                       "agent": {
                         "object": true
                       },
@@ -129,6 +146,9 @@
                       "contexts": [
                         "json array"
                       ]
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -138,8 +158,13 @@
         ],
         "PagerDuty6": [
           {
-            "startTime": 1626269456808,
-            "executionTime": 841,
+            "startTime": 1676026054442,
+            "executionTime": 786,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -178,6 +203,9 @@
                       "summary": "Node Qa",
                       "self": "https://api.pagerduty.com/users/PT0VVWO",
                       "html_url": "https://dev-nodeqan8n.pagerduty.com/users/PT0VVWO"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -187,19 +215,24 @@
         ],
         "PagerDuty1": [
           {
-            "startTime": 1626269457649,
-            "executionTime": 893,
+            "startTime": 1676026055230,
+            "executionTime": 837,
+            "source": [
+              {
+                "previousNode": "PagerDuty"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "incident_number": 278,
+                      "incident_number": 486,
                       "title": "Test",
                       "description": "Test",
-                      "created_at": "2021-07-14T13:30:55Z",
+                      "created_at": "2023-02-10T10:47:33Z",
                       "status": "triggered",
-                      "incident_key": "4e6c0e10ad164b6d8697ea9945a6cf3c",
+                      "incident_key": "3aba1ba7f17743208d1b9eb2193d3f56",
                       "service": {
                         "object": true
                       },
@@ -207,7 +240,7 @@
                         "json array"
                       ],
                       "assigned_via": "escalation_policy",
-                      "last_status_change_at": "2021-07-14T13:30:55Z",
+                      "last_status_change_at": "2023-02-10T10:47:33Z",
                       "first_trigger_log_entry": {
                         "object": true
                       },
@@ -249,11 +282,14 @@
                         "json array"
                       ],
                       "urgency": "high",
-                      "id": "PD535RP",
+                      "id": "Q3DN3PH64VFSHX",
                       "type": "incident",
-                      "summary": "[#278] Test",
-                      "self": "https://api.pagerduty.com/incidents/PD535RP",
-                      "html_url": "https://dev-nodeqan8n.pagerduty.com/incidents/PD535RP"
+                      "summary": "[#486] Test",
+                      "self": "https://api.pagerduty.com/incidents/Q3DN3PH64VFSHX",
+                      "html_url": "https://dev-nodeqan8n.pagerduty.com/incidents/Q3DN3PH64VFSHX"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -263,19 +299,24 @@
         ],
         "Sleep 0.5 second1": [
           {
-            "startTime": 1626269458542,
-            "executionTime": 506,
+            "startTime": 1676026056068,
+            "executionTime": 510,
+            "source": [
+              {
+                "previousNode": "PagerDuty"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "incident_number": 278,
+                      "incident_number": 486,
                       "title": "Test",
                       "description": "Test",
-                      "created_at": "2021-07-14T13:30:55Z",
+                      "created_at": "2023-02-10T10:47:33Z",
                       "status": "triggered",
-                      "incident_key": "4e6c0e10ad164b6d8697ea9945a6cf3c",
+                      "incident_key": "3aba1ba7f17743208d1b9eb2193d3f56",
                       "service": {
                         "object": true
                       },
@@ -283,7 +324,7 @@
                         "json array"
                       ],
                       "assigned_via": "escalation_policy",
-                      "last_status_change_at": "2021-07-14T13:30:55Z",
+                      "last_status_change_at": "2023-02-10T10:47:33Z",
                       "first_trigger_log_entry": {
                         "object": true
                       },
@@ -325,12 +366,16 @@
                         "json array"
                       ],
                       "urgency": "high",
-                      "id": "PD535RP",
+                      "id": "Q3DN3PH64VFSHX",
                       "type": "incident",
-                      "summary": "[#278] Test",
-                      "self": "https://api.pagerduty.com/incidents/PD535RP",
-                      "html_url": "https://dev-nodeqan8n.pagerduty.com/incidents/PD535RP"
-                    }
+                      "summary": "[#486] Test",
+                      "self": "https://api.pagerduty.com/incidents/Q3DN3PH64VFSHX",
+                      "html_url": "https://dev-nodeqan8n.pagerduty.com/incidents/Q3DN3PH64VFSHX"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    },
+                    "index": 0
                   }
                 ]
               ]
@@ -339,8 +384,13 @@
         ],
         "PagerDuty4": [
           {
-            "startTime": 1626269459048,
-            "executionTime": 882,
+            "startTime": 1676026056578,
+            "executionTime": 818,
+            "source": [
+              {
+                "previousNode": "PagerDuty1"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -349,6 +399,9 @@
                       "note": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -358,22 +411,30 @@
         ],
         "PagerDuty5": [
           {
-            "startTime": 1626269459930,
-            "executionTime": 831,
+            "startTime": 1676026057396,
+            "executionTime": 785,
+            "source": [
+              {
+                "previousNode": "PagerDuty1"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "P7LLB47",
+                      "id": "P29Q5U5",
                       "user": {
                         "object": true
                       },
                       "content": "Simple note for an incident",
-                      "created_at": "2021-07-14T15:30:59+02:00",
+                      "created_at": "2023-02-10T11:47:37+01:00",
                       "channel": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -383,19 +444,24 @@
         ],
         "PagerDuty2": [
           {
-            "startTime": 1626269460761,
-            "executionTime": 877,
+            "startTime": 1676026058181,
+            "executionTime": 878,
+            "source": [
+              {
+                "previousNode": "PagerDuty1"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "incident_number": 278,
+                      "incident_number": 486,
                       "title": "Test",
                       "description": "Test",
-                      "created_at": "2021-07-14T13:30:55Z",
+                      "created_at": "2023-02-10T10:47:33Z",
                       "status": "acknowledged",
-                      "incident_key": "4e6c0e10ad164b6d8697ea9945a6cf3c",
+                      "incident_key": "3aba1ba7f17743208d1b9eb2193d3f56",
                       "service": {
                         "object": true
                       },
@@ -403,7 +469,7 @@
                         "json array"
                       ],
                       "assigned_via": "escalation_policy",
-                      "last_status_change_at": "2021-07-14T13:31:01Z",
+                      "last_status_change_at": "2023-02-10T10:47:38Z",
                       "first_trigger_log_entry": {
                         "object": true
                       },
@@ -445,11 +511,14 @@
                         "json array"
                       ],
                       "urgency": "high",
-                      "id": "PD535RP",
+                      "id": "Q3DN3PH64VFSHX",
                       "type": "incident",
-                      "summary": "[#278] Test",
-                      "self": "https://api.pagerduty.com/incidents/PD535RP",
-                      "html_url": "https://dev-nodeqan8n.pagerduty.com/incidents/PD535RP"
+                      "summary": "[#486] Test",
+                      "self": "https://api.pagerduty.com/incidents/Q3DN3PH64VFSHX",
+                      "html_url": "https://dev-nodeqan8n.pagerduty.com/incidents/Q3DN3PH64VFSHX"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -459,19 +528,24 @@
         ],
         "PagerDuty8": [
           {
-            "startTime": 1626269461639,
-            "executionTime": 872,
+            "startTime": 1676026059059,
+            "executionTime": 785,
+            "source": [
+              {
+                "previousNode": "Sleep 0.5 second1"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "RPO4J3EREUCXMM73QG5TOBFIAW",
+                      "id": "R3YNGN6MKSQE5AUV6LMN2TA378",
                       "type": "trigger_log_entry",
-                      "summary": "Triggered through the website",
-                      "self": "https://api.pagerduty.com/log_entries/RPO4J3EREUCXMM73QG5TOBFIAW",
-                      "html_url": "https://dev-nodeqan8n.pagerduty.com/incidents/PD535RP/log_entries/RPO4J3EREUCXMM73QG5TOBFIAW",
-                      "created_at": "2021-07-14T13:30:55Z",
+                      "summary": "Triggered through the website.",
+                      "self": "https://api.pagerduty.com/log_entries/R3YNGN6MKSQE5AUV6LMN2TA378",
+                      "html_url": "https://dev-nodeqan8n.pagerduty.com/incidents/Q3DN3PH64VFSHX/log_entries/R3YNGN6MKSQE5AUV6LMN2TA378",
+                      "created_at": "2023-02-10T10:47:33Z",
                       "agent": {
                         "object": true
                       },
@@ -493,6 +567,9 @@
                       "event_details": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -502,19 +579,24 @@
         ],
         "PagerDuty3": [
           {
-            "startTime": 1626269462512,
-            "executionTime": 1134,
+            "startTime": 1676026059844,
+            "executionTime": 645,
+            "source": [
+              {
+                "previousNode": "PagerDuty2"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "incident_number": 222,
+                      "incident_number": 460,
                       "title": "Test",
                       "description": "Test",
-                      "created_at": "2021-06-15T10:15:10Z",
+                      "created_at": "2023-02-07T11:39:16Z",
                       "status": "acknowledged",
-                      "incident_key": "06fdf3f0bccf4261a3d5da2d6046810b",
+                      "incident_key": "a4990c2a4f92433ba94b26b67bf8a981",
                       "service": {
                         "object": true
                       },
@@ -522,7 +604,7 @@
                         "json array"
                       ],
                       "assigned_via": "escalation_policy",
-                      "last_status_change_at": "2021-06-15T10:15:15Z",
+                      "last_status_change_at": "2023-02-07T11:39:22Z",
                       "first_trigger_log_entry": {
                         "object": true
                       },
@@ -561,11 +643,14 @@
                         "json array"
                       ],
                       "urgency": "high",
-                      "id": "PJ877AT",
+                      "id": "Q19FHBV47URBGK",
                       "type": "incident",
-                      "summary": "[#222] Test",
-                      "self": "https://api.pagerduty.com/incidents/PJ877AT",
-                      "html_url": "https://dev-nodeqan8n.pagerduty.com/incidents/PJ877AT"
+                      "summary": "[#460] Test",
+                      "self": "https://api.pagerduty.com/incidents/Q19FHBV47URBGK",
+                      "html_url": "https://dev-nodeqan8n.pagerduty.com/incidents/Q19FHBV47URBGK"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -579,11 +664,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-07-14T13:30:54.773Z",
-  "stoppedAt": "2021-07-14T13:31:03.647Z",
+  "startedAt": "2023-02-10T10:47:32.571Z",
+  "stoppedAt": "2023-02-10T10:47:40.489Z",
   "finished": true
 }

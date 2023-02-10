@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622630022822,
-            "executionTime": 0,
+            "startTime": 1676026073665,
+            "executionTime": 1,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,45 +24,53 @@
         ],
         "Twilio": [
           {
-            "startTime": 1622630022823,
-            "executionTime": 555,
+            "startTime": 1676026073666,
+            "executionTime": 580,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "sid": "SM78c123c3226a48afa398f717cf9dc044",
-                      "date_created": "Wed, 02 Jun 2021 10:33:43 +0000",
-                      "date_updated": "Wed, 02 Jun 2021 10:33:43 +0000",
-                      "date_sent": {
-                        "object": true
-                      },
-                      "account_sid": "AC8dd0c6e08b0f196d34adde4f00507d9f",
-                      "to": "+15005550006",
-                      "from": "+15005550006",
-                      "messaging_service_sid": {
-                        "object": true
-                      },
-                      "body": "Message1622630022824",
-                      "status": "queued",
+                      "body": "Message1676026073687",
                       "num_segments": "1",
-                      "num_media": "0",
                       "direction": "outbound-api",
-                      "api_version": "2010-04-01",
+                      "from": "+15005550006",
+                      "date_updated": "Fri, 10 Feb 2023 10:47:54 +0000",
                       "price": {
-                        "object": true
-                      },
-                      "price_unit": "USD",
-                      "error_code": {
                         "object": true
                       },
                       "error_message": {
                         "object": true
                       },
-                      "uri": "/2010-04-01/Accounts/AC8dd0c6e08b0f196d34adde4f00507d9f/Messages/SM78c123c3226a48afa398f717cf9dc044.json",
+                      "uri": "/2010-04-01/Accounts/AC8dd0c6e08b0f196d34adde4f00507d9f/Messages/SM44e333122de4acb928522e20f6c53413.json",
+                      "account_sid": "AC8dd0c6e08b0f196d34adde4f00507d9f",
+                      "num_media": "0",
+                      "to": "+15005550006",
+                      "date_created": "Fri, 10 Feb 2023 10:47:54 +0000",
+                      "status": "queued",
+                      "sid": "SM44e333122de4acb928522e20f6c53413",
+                      "date_sent": {
+                        "object": true
+                      },
+                      "messaging_service_sid": {
+                        "object": true
+                      },
+                      "error_code": {
+                        "object": true
+                      },
+                      "price_unit": "USD",
+                      "api_version": "2010-04-01",
                       "subresource_uris": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -72,11 +84,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-02T10:33:42.821Z",
-  "stoppedAt": "2021-06-02T10:33:43.378Z",
+  "startedAt": "2023-02-10T10:47:53.664Z",
+  "stoppedAt": "2023-02-10T10:47:54.246Z",
   "finished": true
 }

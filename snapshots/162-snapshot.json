@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622630066307,
+            "startTime": 1676026077866,
             "executionTime": 1,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,17 +24,25 @@
         ],
         "AWS SQS1": [
           {
-            "startTime": 1622630066308,
-            "executionTime": 567,
+            "startTime": 1676026077867,
+            "executionTime": 507,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "MessageId": "c2a86273-047c-47af-83fa-27b5d597da04",
-                      "MD5OfMessageBody": "dfc63634361d62ba831646c79d1ebbc1",
+                      "MessageId": "0969ba1b-04a9-491d-ac0d-68940e007c2a",
+                      "MD5OfMessageBody": "15803e3578537d0e3cda288d8b7aacd3",
                       "MD5OfMessageAttributes": "563c033205d4d7ddc71dceef55cae220",
-                      "SequenceNumber": "37308881444526303232"
+                      "SequenceNumber": "166449759339445101312"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -40,16 +52,24 @@
         ],
         "AWS SQS": [
           {
-            "startTime": 1622630066875,
-            "executionTime": 471,
+            "startTime": 1676026078374,
+            "executionTime": 440,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "MessageId": "2c5d72dd-078d-4ad9-95a9-4780689183b8",
-                      "MD5OfMessageBody": "e823a57fdf4f6daff36ffb12314c831c",
+                      "MessageId": "a6a1f394-aac7-4720-adac-68a81593be88",
+                      "MD5OfMessageBody": "e7f83b09db90e9e52fcfb2dd895ae0ef",
                       "MD5OfMessageAttributes": "563c033205d4d7ddc71dceef55cae220"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -63,11 +83,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-02T10:34:26.306Z",
-  "stoppedAt": "2021-06-02T10:34:27.347Z",
+  "startedAt": "2023-02-10T10:47:57.865Z",
+  "stoppedAt": "2023-02-10T10:47:58.814Z",
   "finished": true
 }

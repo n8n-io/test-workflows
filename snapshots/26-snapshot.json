@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622629946851,
-            "executionTime": 0,
+            "startTime": 1676026052551,
+            "executionTime": 2,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,16 +24,21 @@
         ],
         "ClickUp": [
           {
-            "startTime": 1622629946852,
-            "executionTime": 309,
+            "startTime": 1676026052553,
+            "executionTime": 588,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "29946230",
-                      "name": "testFolder1622629946854",
-                      "orderindex": 436,
+                      "id": "90100369237",
+                      "name": "testFolder1676026052575",
+                      "orderindex": 141,
                       "override_statuses": false,
                       "hidden": false,
                       "space": {
@@ -44,6 +53,9 @@
                         "json array"
                       ],
                       "permission_level": "create"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -53,16 +65,21 @@
         ],
         "Sleep 8 Seconds": [
           {
-            "startTime": 1622629947163,
-            "executionTime": 815,
+            "startTime": 1676026053142,
+            "executionTime": 817,
+            "source": [
+              {
+                "previousNode": "ClickUp"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "29946230",
-                      "name": "testFolder1622629946854",
-                      "orderindex": 436,
+                      "id": "90100369237",
+                      "name": "testFolder1676026052575",
+                      "orderindex": 141,
                       "override_statuses": false,
                       "hidden": false,
                       "space": {
@@ -77,7 +94,11 @@
                         "json array"
                       ],
                       "permission_level": "create"
-                    }
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    },
+                    "index": 0
                   }
                 ]
               ]
@@ -86,16 +107,21 @@
         ],
         "ClickUp1": [
           {
-            "startTime": 1622629947978,
-            "executionTime": 327,
+            "startTime": 1676026053960,
+            "executionTime": 502,
+            "source": [
+              {
+                "previousNode": "Sleep 8 Seconds"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "29946230",
-                      "name": "testFolderUpdated1622629947979",
-                      "orderindex": 436,
+                      "id": "90100369237",
+                      "name": "testFolderUpdated1676026053961",
+                      "orderindex": 141,
                       "override_statuses": false,
                       "hidden": false,
                       "space": {
@@ -110,6 +136,9 @@
                         "json array"
                       ],
                       "permission_level": "create"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -119,16 +148,21 @@
         ],
         "Sleep 8 Seconds1": [
           {
-            "startTime": 1622629948305,
-            "executionTime": 802,
+            "startTime": 1676026054462,
+            "executionTime": 804,
+            "source": [
+              {
+                "previousNode": "ClickUp1"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "29946230",
-                      "name": "testFolderUpdated1622629947979",
-                      "orderindex": 436,
+                      "id": "90100369237",
+                      "name": "testFolderUpdated1676026053961",
+                      "orderindex": 141,
                       "override_statuses": false,
                       "hidden": false,
                       "space": {
@@ -143,7 +177,11 @@
                         "json array"
                       ],
                       "permission_level": "create"
-                    }
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    },
+                    "index": 0
                   }
                 ]
               ]
@@ -152,22 +190,27 @@
         ],
         "ClickUp2": [
           {
-            "startTime": 1622629949108,
-            "executionTime": 538,
+            "startTime": 1676026055267,
+            "executionTime": 1460,
+            "source": [
+              {
+                "previousNode": "Sleep 8 Seconds1"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "27620153",
-                      "name": "TestFolder1617881334831",
-                      "orderindex": 0,
+                      "id": "38002200",
+                      "name": "n8n folder",
+                      "orderindex": 1,
                       "override_statuses": false,
                       "hidden": false,
                       "space": {
                         "object": true
                       },
-                      "task_count": "0",
+                      "task_count": "5",
                       "archived": false,
                       "statuses": [
                         "json array"
@@ -176,6 +219,9 @@
                         "json array"
                       ],
                       "permission_level": "create"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -185,22 +231,27 @@
         ],
         "Sleep 8 Seconds2": [
           {
-            "startTime": 1622629949646,
-            "executionTime": 801,
+            "startTime": 1676026056728,
+            "executionTime": 810,
+            "source": [
+              {
+                "previousNode": "ClickUp2"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "27620153",
-                      "name": "TestFolder1617881334831",
-                      "orderindex": 0,
+                      "id": "38002200",
+                      "name": "n8n folder",
+                      "orderindex": 1,
                       "override_statuses": false,
                       "hidden": false,
                       "space": {
                         "object": true
                       },
-                      "task_count": "0",
+                      "task_count": "5",
                       "archived": false,
                       "statuses": [
                         "json array"
@@ -209,7 +260,11 @@
                         "json array"
                       ],
                       "permission_level": "create"
-                    }
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    },
+                    "index": 0
                   }
                 ]
               ]
@@ -218,16 +273,21 @@
         ],
         "ClickUp3": [
           {
-            "startTime": 1622629950447,
-            "executionTime": 124,
+            "startTime": 1676026057538,
+            "executionTime": 465,
+            "source": [
+              {
+                "previousNode": "Sleep 8 Seconds2"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "29946230",
-                      "name": "testFolderUpdated1622629947979",
-                      "orderindex": 166,
+                      "id": "90100369237",
+                      "name": "testFolderUpdated1676026053961",
+                      "orderindex": 141,
                       "override_statuses": false,
                       "hidden": false,
                       "space": {
@@ -242,6 +302,9 @@
                         "json array"
                       ],
                       "permission_level": "create"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -251,16 +314,21 @@
         ],
         "Sleep 8 Seconds3": [
           {
-            "startTime": 1622629950572,
-            "executionTime": 803,
+            "startTime": 1676026058003,
+            "executionTime": 802,
+            "source": [
+              {
+                "previousNode": "ClickUp3"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "29946230",
-                      "name": "testFolderUpdated1622629947979",
-                      "orderindex": 166,
+                      "id": "90100369237",
+                      "name": "testFolderUpdated1676026053961",
+                      "orderindex": 141,
                       "override_statuses": false,
                       "hidden": false,
                       "space": {
@@ -275,7 +343,11 @@
                         "json array"
                       ],
                       "permission_level": "create"
-                    }
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    },
+                    "index": 0
                   }
                 ]
               ]
@@ -284,14 +356,22 @@
         ],
         "ClickUp4": [
           {
-            "startTime": 1622629951375,
-            "executionTime": 310,
+            "startTime": 1676026058806,
+            "executionTime": 424,
+            "source": [
+              {
+                "previousNode": "Sleep 8 Seconds3"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "success": true
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -305,11 +385,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-02T10:32:26.848Z",
-  "stoppedAt": "2021-06-02T10:32:31.685Z",
+  "startedAt": "2023-02-10T10:47:32.548Z",
+  "stoppedAt": "2023-02-10T10:47:39.230Z",
   "finished": true
 }

@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622630101618,
-            "executionTime": 1,
+            "startTime": 1676026084737,
+            "executionTime": 0,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,8 +24,13 @@
         ],
         "Mailjet": [
           {
-            "startTime": 1622630101619,
-            "executionTime": 233,
+            "startTime": 1676026084738,
+            "executionTime": 111,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -38,6 +47,9 @@
                       "Bcc": [
                         "json array"
                       ]
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -47,13 +59,21 @@
         ],
         "Mailjet2": [
           {
-            "startTime": 1622630101853,
+            "startTime": 1676026084849,
             "executionTime": 0,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -62,8 +82,13 @@
         ],
         "Mailjet1": [
           {
-            "startTime": 1622630101853,
-            "executionTime": 205,
+            "startTime": 1676026084850,
+            "executionTime": 80,
+            "source": [
+              {
+                "previousNode": "Mailjet"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -80,6 +105,9 @@
                       "Bcc": [
                         "json array"
                       ]
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -93,11 +121,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-02T10:35:01.616Z",
-  "stoppedAt": "2021-06-02T10:35:02.058Z",
+  "startedAt": "2023-02-10T10:48:04.735Z",
+  "stoppedAt": "2023-02-10T10:48:04.930Z",
   "finished": true
 }

@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622629982596,
-            "executionTime": 1,
+            "startTime": 1676026058463,
+            "executionTime": 0,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,29 +24,50 @@
         ],
         "Todoist": [
           {
-            "startTime": 1622629982597,
-            "executionTime": 431,
+            "startTime": 1676026058464,
+            "executionTime": 737,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": 4877099142,
-                      "assigner": 0,
-                      "project_id": 2259097055,
-                      "section_id": 0,
-                      "order": 3,
+                      "id": "6605843443",
+                      "assigner_id": {
+                        "object": true
+                      },
+                      "assignee_id": {
+                        "object": true
+                      },
+                      "project_id": "2259097055",
+                      "section_id": {
+                        "object": true
+                      },
+                      "parent_id": {
+                        "object": true
+                      },
+                      "order": 15,
                       "content": "Test Task",
                       "description": "",
-                      "completed": false,
-                      "label_ids": [
+                      "is_completed": false,
+                      "labels": [
                         "json array"
                       ],
                       "priority": 1,
                       "comment_count": 0,
-                      "creator": 32694069,
-                      "created": "2021-06-02T10:33:02Z",
-                      "url": "https://todoist.com/showTask?id=4877099142"
+                      "creator_id": "32694069",
+                      "created_at": "2023-02-10T10:47:39.059920Z",
+                      "due": {
+                        "object": true
+                      },
+                      "url": "https://todoist.com/showTask?id=6605843443"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -52,29 +77,50 @@
         ],
         "Todoist1": [
           {
-            "startTime": 1622629983029,
-            "executionTime": 413,
+            "startTime": 1676026059201,
+            "executionTime": 176,
+            "source": [
+              {
+                "previousNode": "Todoist"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": 4877099142,
-                      "assigner": 0,
-                      "project_id": 2259097055,
-                      "section_id": 0,
-                      "order": 3,
+                      "id": "6605843443",
+                      "assigner_id": {
+                        "object": true
+                      },
+                      "assignee_id": {
+                        "object": true
+                      },
+                      "project_id": "2259097055",
+                      "section_id": {
+                        "object": true
+                      },
+                      "parent_id": {
+                        "object": true
+                      },
+                      "order": 15,
                       "content": "Test Task",
                       "description": "",
-                      "completed": false,
-                      "label_ids": [
+                      "is_completed": false,
+                      "labels": [
                         "json array"
                       ],
                       "priority": 1,
                       "comment_count": 0,
-                      "creator": 32694069,
-                      "created": "2021-06-02T10:33:02Z",
-                      "url": "https://todoist.com/showTask?id=4877099142"
+                      "creator_id": "32694069",
+                      "created_at": "2023-02-10T10:47:39.059920Z",
+                      "due": {
+                        "object": true
+                      },
+                      "url": "https://todoist.com/showTask?id=6605843443"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -84,14 +130,22 @@
         ],
         "Todoist2": [
           {
-            "startTime": 1622629983443,
-            "executionTime": 358,
+            "startTime": 1676026059378,
+            "executionTime": 401,
+            "source": [
+              {
+                "previousNode": "Todoist1"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "success": true
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -101,14 +155,22 @@
         ],
         "Todoist3": [
           {
-            "startTime": 1622629983801,
-            "executionTime": 1692,
+            "startTime": 1676026059779,
+            "executionTime": 367,
+            "source": [
+              {
+                "previousNode": "Todoist2"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "success": true
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -118,29 +180,48 @@
         ],
         "Todoist5": [
           {
-            "startTime": 1622629985493,
-            "executionTime": 1408,
+            "startTime": 1676026060146,
+            "executionTime": 264,
+            "source": [
+              {
+                "previousNode": "Todoist3"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": 4603488029,
-                      "assigner": 0,
-                      "project_id": 2259097058,
-                      "section_id": 38720481,
+                      "id": "4603488029",
+                      "assigner_id": {
+                        "object": true
+                      },
+                      "assignee_id": {
+                        "object": true
+                      },
+                      "project_id": "2259097058",
+                      "section_id": "38720481",
+                      "parent_id": {
+                        "object": true
+                      },
                       "order": 1,
                       "content": "Click this task to see more details",
                       "description": "",
-                      "completed": false,
-                      "label_ids": [
+                      "is_completed": false,
+                      "labels": [
                         "json array"
                       ],
                       "priority": 1,
                       "comment_count": 1,
-                      "creator": 32694069,
-                      "created": "2021-02-23T09:24:40Z",
+                      "creator_id": "32694069",
+                      "created_at": "2021-02-23T09:24:40.694459Z",
+                      "due": {
+                        "object": true
+                      },
                       "url": "https://todoist.com/showTask?id=4603488029"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -150,14 +231,22 @@
         ],
         "Todoist4": [
           {
-            "startTime": 1622629986901,
-            "executionTime": 588,
+            "startTime": 1676026060414,
+            "executionTime": 300,
+            "source": [
+              {
+                "previousNode": "Todoist5"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "success": true
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -171,11 +260,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-02T10:33:02.595Z",
-  "stoppedAt": "2021-06-02T10:33:07.489Z",
+  "startedAt": "2023-02-10T10:47:38.461Z",
+  "stoppedAt": "2023-02-10T10:47:40.714Z",
   "finished": true
 }

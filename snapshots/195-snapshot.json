@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622630102130,
-            "executionTime": 1,
+            "startTime": 1676026085711,
+            "executionTime": 0,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,8 +24,13 @@
         ],
         "Kitemaker1": [
           {
-            "startTime": 1622630102131,
-            "executionTime": 382,
+            "startTime": 1676026085712,
+            "executionTime": 292,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -35,6 +44,9 @@
                       "statuses": [
                         "json array"
                       ]
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -44,8 +56,13 @@
         ],
         "Kitemaker": [
           {
-            "startTime": 1622630102514,
-            "executionTime": 285,
+            "startTime": 1676026086004,
+            "executionTime": 215,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -53,6 +70,9 @@
                     "json": {
                       "id": "0f42cd2088617400",
                       "name": "n8n-qa"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -62,8 +82,13 @@
         ],
         "Kitemaker2": [
           {
-            "startTime": 1622630102799,
-            "executionTime": 260,
+            "startTime": 1676026086219,
+            "executionTime": 238,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -71,6 +96,9 @@
                     "json": {
                       "id": "0f42ccbcb93d4000",
                       "username": "node8qa"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -80,16 +108,21 @@
         ],
         "Kitemaker3": [
           {
-            "startTime": 1622630103060,
-            "executionTime": 325,
+            "startTime": 1676026086458,
+            "executionTime": 395,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "0fddf9932c2f6c00",
-                      "number": "63",
-                      "title": "WorkItem1622630103063",
+                      "id": "1c4c9f9fe2e9f800",
+                      "number": "355",
+                      "title": "WorkItem1676026086470",
                       "description": "",
                       "status": {
                         "object": true
@@ -109,8 +142,11 @@
                       "impact": {
                         "object": true
                       },
-                      "updatedAt": 1622630103318,
-                      "createdAt": 1622630103318
+                      "updatedAt": 1676026086858,
+                      "createdAt": 1676026086858
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -120,21 +156,26 @@
         ],
         "Kitemaker4": [
           {
-            "startTime": 1622630103385,
-            "executionTime": 219,
+            "startTime": 1676026086853,
+            "executionTime": 238,
+            "source": [
+              {
+                "previousNode": "Kitemaker3"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "0fddf9932c2f6c00",
-                      "number": "63",
-                      "title": "WorkItem1622630103063",
+                      "id": "1c4c9f9fe2e9f800",
+                      "number": "355",
+                      "title": "WorkItem1676026086470",
                       "description": "",
                       "status": {
                         "object": true
                       },
-                      "sort": "b",
+                      "sort": "s",
                       "members": [
                         "json array"
                       ],
@@ -153,8 +194,11 @@
                       "impact": {
                         "object": true
                       },
-                      "updatedAt": 1622630103318,
-                      "createdAt": 1622630103318
+                      "updatedAt": 1676026086858,
+                      "createdAt": 1676026086858
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -164,8 +208,13 @@
         ],
         "Kitemaker5": [
           {
-            "startTime": 1622630103604,
-            "executionTime": 355,
+            "startTime": 1676026087092,
+            "executionTime": 305,
+            "source": [
+              {
+                "previousNode": "Kitemaker4"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -173,13 +222,16 @@
                     "json": {
                       "id": "0f42cd2103617400",
                       "title": "Use arrow keys to navigate work items",
-                      "description": "# Things to explore\n[ ]Press the little + sign to the top right to see different types of meta data you can add to work items\n[ ]Learn some markdown\n  [ ]`#` On an empty line creates a headline (type ## and ### for sub headlines)\n  [ ]Type `**` or `__` before and after a section of text to make it **bold**\n  [ ]Type `*` or `_` before and after a section of text to make it _italic_\n  [ ]Type `´`  before and after a section of text to make it `a code block`\n  [ ]Type `*` followed by space on an empty line to make bullet points\n  [ ]Type `[]` followed by space on an empty line to make todo-lists\n  [ ]Type `1.` followed by space on an empty line to make numbered lists\n  [ ]Type `$$` before and after Tex expression $$\\frac{1}{100}$$\n[ ]Check out our integrations\n[ ]Make comments (they support everything the description field supports)\n[ ]Invite your team\n[ ]Learn hotkeys:\n  [ ]Hovering elements gives you hotkey tips. Hover this sections to see that `D` lets you edit the description\n  [ ]Other times the hotkey hints are in the UI. If you look at the right section of this screen, `R` adds a new comment\n  [ ]Pressing `?` gives you a searchable list of all hotkeys\n  [ ]In the Kitemaker command (open it by pressing `CTRL/CMD+k`) you will also be able to see the hotkeys for the commands\n  [ ]When you have long descriptions use `SPACE` and `SHIFT+SPACE` to scroll up and down\n",
+                      "description": "# Things to explore\n\n[ ] Press the little + sign to the top right to see different types of meta data you can add to work items\n[ ] Learn some markdown\n  [ ] `#` On an empty line creates a headline (type ## and ### for sub headlines)\n  [ ] Type `**` or `__` before and after a section of text to make it **bold**\n  [ ] Type `*` or `_` before and after a section of text to make it _italic_\n  [ ] Type `´`  before and after a section of text to make it `a code block`\n  [ ] Type `*` followed by space on an empty line to make bullet points\n  [ ] Type `[]` followed by space on an empty line to make todo-lists\n  [ ] Type `1.` followed by space on an empty line to make numbered lists\n  [ ] Type `$$` before and after Tex expression $$\\frac{1}{100}$$\n[ ] Check out our integrations\n[ ] Make comments (they support everything the description field supports)\n[ ] Invite your team\n[ ] Learn hotkeys:\n  [ ] Hovering elements gives you hotkey tips. Hover this sections to see that `D` lets you edit the description\n  [ ] Other times the hotkey hints are in the UI. If you look at the right section of this screen, `R` adds a new comment\n  [ ] Pressing `?` gives you a searchable list of all hotkeys\n  [ ] In the Kitemaker command (open it by pressing `CTRL/CMD+k`) you will also be able to see the hotkeys for the commands\n  [ ] When you have long descriptions use `SPACE` and `SHIFT+SPACE` to scroll up and down\n\n\n",
                       "labels": [
                         "json array"
                       ],
                       "comments": [
                         "json array"
                       ]
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -189,16 +241,21 @@
         ],
         "Kitemaker6": [
           {
-            "startTime": 1622630103959,
-            "executionTime": 336,
+            "startTime": 1676026087397,
+            "executionTime": 369,
+            "source": [
+              {
+                "previousNode": "Kitemaker5"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "0fddf9932c2f6c00",
-                      "number": "63",
-                      "title": "UpdatedWorkItem1622630103063",
+                      "id": "1c4c9f9fe2e9f800",
+                      "number": "355",
+                      "title": "UpdatedWorkItem1676026086470",
                       "description": "",
                       "status": {
                         "object": true
@@ -218,8 +275,11 @@
                       "impact": {
                         "object": true
                       },
-                      "updatedAt": 1622630104200,
-                      "createdAt": 1622630103318
+                      "updatedAt": 1676026087775,
+                      "createdAt": 1676026086858
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -233,11 +293,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-02T10:35:02.129Z",
-  "stoppedAt": "2021-06-02T10:35:04.296Z",
+  "startedAt": "2023-02-10T10:48:05.709Z",
+  "stoppedAt": "2023-02-10T10:48:07.766Z",
   "finished": true
 }

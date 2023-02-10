@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622802362627,
-            "executionTime": 0,
+            "startTime": 1676026052220,
+            "executionTime": 1,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,17 +24,22 @@
         ],
         "Twitter": [
           {
-            "startTime": 1622802362628,
-            "executionTime": 300,
+            "startTime": 1676026052221,
+            "executionTime": 394,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "created_at": "Fri Jun 04 10:26:02 +0000 2021",
-                      "id": 1400760752022208500,
-                      "id_str": "1400760752022208515",
-                      "text": "Hello from n8n testing framework 0.5530367052371468",
+                      "created_at": "Fri Feb 10 10:47:32 +0000 2023",
+                      "id": 1623997086659145700,
+                      "id_str": "1623997086659145728",
+                      "text": "Hello from n8n testing framework 0.021533086008000746",
                       "truncated": false,
                       "entities": {
                         "object": true
@@ -72,6 +81,9 @@
                       "favorited": false,
                       "retweeted": false,
                       "lang": "en"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -81,17 +93,22 @@
         ],
         "Twitter4": [
           {
-            "startTime": 1622802362929,
-            "executionTime": 251,
+            "startTime": 1676026052615,
+            "executionTime": 223,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "created_at": "Fri Jun 04 09:11:24 +0000 2021",
-                      "id": 1400741967454212000,
-                      "id_str": "1400741967454212098",
-                      "text": "This is an interesting use case!\nI am interested to know what kind of automation you use?\n\nEven if you're not using… https://t.co/U0OnJbKAkh",
+                      "created_at": "Fri Feb 10 10:33:57 +0000 2023",
+                      "id": 1623993666229670000,
+                      "id_str": "1623993666229669888",
+                      "text": "Inviting everyone for the 3rd edition of #DevDays\n\nWorkshops on\n- Workflow automation w/ @n8n_io\n- Build Native Add… https://t.co/ae7wD15PpL",
                       "truncated": true,
                       "entities": {
                         "object": true
@@ -99,22 +116,12 @@
                       "metadata": {
                         "object": true
                       },
-                      "source": "<a href=\"https://mobile.twitter.com\" rel=\"nofollow\">Twitter Web App</a>",
-                      "in_reply_to_status_id": {
-                        "object": true
-                      },
-                      "in_reply_to_status_id_str": {
-                        "object": true
-                      },
-                      "in_reply_to_user_id": {
-                        "object": true
-                      },
-                      "in_reply_to_user_id_str": {
-                        "object": true
-                      },
-                      "in_reply_to_screen_name": {
-                        "object": true
-                      },
+                      "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
+                      "in_reply_to_status_id": 1618816571077722000,
+                      "in_reply_to_status_id_str": "1618816571077722115",
+                      "in_reply_to_user_id": 2887383391,
+                      "in_reply_to_user_id_str": "2887383391",
+                      "in_reply_to_screen_name": "SwechaFSMI",
                       "user": {
                         "object": true
                       },
@@ -130,12 +137,15 @@
                       "contributors": {
                         "object": true
                       },
-                      "is_quote_status": true,
+                      "is_quote_status": false,
                       "retweet_count": 0,
                       "favorite_count": 0,
                       "favorited": false,
                       "retweeted": false,
                       "lang": "en"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -145,17 +155,22 @@
         ],
         "Twitter1": [
           {
-            "startTime": 1622802363181,
-            "executionTime": 277,
+            "startTime": 1676026052838,
+            "executionTime": 250,
+            "source": [
+              {
+                "previousNode": "Twitter"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "created_at": "Fri Jun 04 10:26:02 +0000 2021",
-                      "id": 1400760752022208500,
-                      "id_str": "1400760752022208515",
-                      "text": "Hello from n8n testing framework 0.5530367052371468",
+                      "created_at": "Fri Feb 10 10:47:32 +0000 2023",
+                      "id": 1623997086659145700,
+                      "id_str": "1623997086659145728",
+                      "text": "Hello from n8n testing framework 0.021533086008000746",
                       "truncated": false,
                       "entities": {
                         "object": true
@@ -197,6 +212,9 @@
                       "favorited": true,
                       "retweeted": false,
                       "lang": "en"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -206,17 +224,22 @@
         ],
         "Twitter2": [
           {
-            "startTime": 1622802363458,
-            "executionTime": 305,
+            "startTime": 1676026053089,
+            "executionTime": 313,
+            "source": [
+              {
+                "previousNode": "Twitter1"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "created_at": "Fri Jun 04 10:26:03 +0000 2021",
-                      "id": 1400760755448844300,
-                      "id_str": "1400760755448844288",
-                      "text": "RT @nodeqa1: Hello from n8n testing framework 0.5530367052371468",
+                      "created_at": "Fri Feb 10 10:47:33 +0000 2023",
+                      "id": 1623997089935134700,
+                      "id_str": "1623997089935134720",
+                      "text": "RT @nodeqa1: Hello from n8n testing framework 0.021533086008000746",
                       "truncated": false,
                       "entities": {
                         "object": true
@@ -261,6 +284,9 @@
                       "favorited": true,
                       "retweeted": true,
                       "lang": "en"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -270,17 +296,22 @@
         ],
         "Twitter3": [
           {
-            "startTime": 1622802363764,
-            "executionTime": 3324,
+            "startTime": 1676026053403,
+            "executionTime": 224,
+            "source": [
+              {
+                "previousNode": "Twitter2"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "created_at": "Fri Jun 04 10:26:02 +0000 2021",
-                      "id": 1400760752022208500,
-                      "id_str": "1400760752022208515",
-                      "text": "Hello from n8n testing framework 0.5530367052371468",
+                      "created_at": "Fri Feb 10 10:47:32 +0000 2023",
+                      "id": 1623997086659145700,
+                      "id_str": "1623997086659145728",
+                      "text": "Hello from n8n testing framework 0.021533086008000746",
                       "truncated": false,
                       "entities": {
                         "object": true
@@ -322,6 +353,9 @@
                       "favorited": true,
                       "retweeted": true,
                       "lang": "en"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -335,11 +369,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-04T10:26:02.625Z",
-  "stoppedAt": "2021-06-04T10:26:07.089Z",
+  "startedAt": "2023-02-10T10:47:32.219Z",
+  "stoppedAt": "2023-02-10T10:47:33.627Z",
   "finished": true
 }

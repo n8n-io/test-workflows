@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622630102817,
-            "executionTime": 1,
+            "startTime": 1676026086406,
+            "executionTime": 0,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,13 +24,21 @@
         ],
         "MQTT qos:1": [
           {
-            "startTime": 1622630102819,
-            "executionTime": 203,
+            "startTime": 1676026086407,
+            "executionTime": 130,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -35,13 +47,21 @@
         ],
         "MQTT1 qos:0": [
           {
-            "startTime": 1622630103023,
-            "executionTime": 230,
+            "startTime": 1676026086537,
+            "executionTime": 137,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -50,14 +70,22 @@
         ],
         "Function": [
           {
-            "startTime": 1622630103254,
-            "executionTime": 21,
+            "startTime": 1676026086675,
+            "executionTime": 8,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "message": "MQTT-item-message1622630103272"
+                      "message": "MQTT-item-message1676026086682"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -67,14 +95,22 @@
         ],
         "MQTT2 qos:2": [
           {
-            "startTime": 1622630103277,
-            "executionTime": 255,
+            "startTime": 1676026086683,
+            "executionTime": 167,
+            "source": [
+              {
+                "previousNode": "Function"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "message": "MQTT-item-message1622630103272"
+                      "message": "MQTT-item-message1676026086682"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -88,11 +124,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-02T10:35:02.816Z",
-  "stoppedAt": "2021-06-02T10:35:03.532Z",
+  "startedAt": "2023-02-10T10:48:06.405Z",
+  "stoppedAt": "2023-02-10T10:48:06.850Z",
   "finished": true
 }

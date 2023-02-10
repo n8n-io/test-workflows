@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622630018372,
-            "executionTime": 0,
+            "startTime": 1676026070618,
+            "executionTime": 1,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,15 +24,23 @@
         ],
         "Set": [
           {
-            "startTime": 1622630018373,
-            "executionTime": 2,
+            "startTime": 1676026070621,
+            "executionTime": 27,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": 7338,
-                      "name": "Name1622630018375"
+                      "id": 38275,
+                      "name": "Name1676026070647"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -38,15 +50,23 @@
         ],
         "CrateDB": [
           {
-            "startTime": 1622630018375,
-            "executionTime": 326,
+            "startTime": 1676026070648,
+            "executionTime": 366,
+            "source": [
+              {
+                "previousNode": "Set"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": 7338,
-                      "name": "Name1622630018375"
+                      "id": 38275,
+                      "name": "Name1676026070647"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -56,15 +76,23 @@
         ],
         "Set1": [
           {
-            "startTime": 1622630018701,
-            "executionTime": 1,
+            "startTime": 1676026071015,
+            "executionTime": 4,
+            "source": [
+              {
+                "previousNode": "CrateDB"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": 7338,
-                      "name": "UpdatedName1622630018702"
+                      "id": 38275,
+                      "name": "UpdatedName1676026071018"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -74,15 +102,23 @@
         ],
         "CrateDB1": [
           {
-            "startTime": 1622630018702,
-            "executionTime": 226,
+            "startTime": 1676026071019,
+            "executionTime": 290,
+            "source": [
+              {
+                "previousNode": "Set1"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": 7338,
-                      "name": "UpdatedName1622630018702"
+                      "id": 38275,
+                      "name": "UpdatedName1676026071018"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -92,8 +128,13 @@
         ],
         "CrateDB2": [
           {
-            "startTime": 1622630018929,
-            "executionTime": 334,
+            "startTime": 1676026071310,
+            "executionTime": 283,
+            "source": [
+              {
+                "previousNode": "CrateDB1"
+              }
+            ],
             "data": {
               "main": [
                 []
@@ -107,11 +148,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-02T10:33:38.370Z",
-  "stoppedAt": "2021-06-02T10:33:39.263Z",
+  "startedAt": "2023-02-10T10:47:50.613Z",
+  "stoppedAt": "2023-02-10T10:47:51.593Z",
   "finished": true
 }

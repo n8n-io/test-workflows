@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622630099133,
+            "startTime": 1676026084319,
             "executionTime": 1,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,21 +24,26 @@
         ],
         "Mattermost": [
           {
-            "startTime": 1622630099134,
-            "executionTime": 168,
+            "startTime": 1676026084320,
+            "executionTime": 175,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "7wchxrptg38udm6tp5acntcksc",
-                      "create_at": 1622630099246,
-                      "update_at": 1622630099246,
+                      "id": "fcgymdh4aib38mjfsyf6yuza5a",
+                      "create_at": 1676026084457,
+                      "update_at": 1676026084457,
                       "delete_at": 0,
                       "team_id": "y1p853gfspdrxre5oextbii7wh",
                       "type": "O",
-                      "display_name": "TestChannel1622630099144",
-                      "name": "testchannel1622630099144",
+                      "display_name": "TestChannel1676026084332",
+                      "name": "testchannel1676026084333",
                       "header": "",
                       "purpose": "",
                       "last_post_at": 0,
@@ -50,6 +59,9 @@
                       "group_constrained": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -59,21 +71,26 @@
         ],
         "Mattermost13": [
           {
-            "startTime": 1622630099303,
-            "executionTime": 250,
+            "startTime": 1676026084495,
+            "executionTime": 207,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "96gzzzwiej87xbzy9f4kowm9wh",
-                      "create_at": 1622630099449,
-                      "update_at": 1622630099449,
+                      "id": "bdmjroconjnfipoxqo7hx4hdoe",
+                      "create_at": 1676026084603,
+                      "update_at": 1676026084603,
                       "delete_at": 0,
-                      "username": "username1622630099313",
+                      "username": "username1676026084495",
                       "auth_data": "",
                       "auth_service": "email",
-                      "email": "fake1622630099313@test.com",
+                      "email": "fake1676026084495@test.com",
                       "nickname": "",
                       "first_name": "",
                       "last_name": "",
@@ -82,11 +99,14 @@
                       "notify_props": {
                         "object": true
                       },
-                      "last_password_update": 1622630099449,
+                      "last_password_update": 1676026084603,
                       "locale": "en",
                       "timezone": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -96,14 +116,19 @@
         ],
         "Mattermost1": [
           {
-            "startTime": 1622630099554,
-            "executionTime": 160,
+            "startTime": 1676026084703,
+            "executionTime": 117,
+            "source": [
+              {
+                "previousNode": "Mattermost"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "channel_id": "7wchxrptg38udm6tp5acntcksc",
+                      "channel_id": "fcgymdh4aib38mjfsyf6yuza5a",
                       "user_id": "4yp7tpa3sbgk9qrf38egttbioo",
                       "roles": "channel_user",
                       "last_viewed_at": 0,
@@ -112,11 +137,14 @@
                       "notify_props": {
                         "object": true
                       },
-                      "last_update_at": 1622630099697,
+                      "last_update_at": 1676026084838,
                       "scheme_guest": false,
                       "scheme_user": true,
                       "scheme_admin": false,
                       "explicit_roles": ""
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -126,21 +154,26 @@
         ],
         "Mattermost14": [
           {
-            "startTime": 1622630099715,
-            "executionTime": 88,
+            "startTime": 1676026084820,
+            "executionTime": 91,
+            "source": [
+              {
+                "previousNode": "Mattermost13"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "96gzzzwiej87xbzy9f4kowm9wh",
-                      "create_at": 1622630099449,
-                      "update_at": 1622630099449,
+                      "id": "bdmjroconjnfipoxqo7hx4hdoe",
+                      "create_at": 1676026084603,
+                      "update_at": 1676026084603,
                       "delete_at": 0,
-                      "username": "username1622630099313",
+                      "username": "username1676026084495",
                       "auth_data": "",
                       "auth_service": "email",
-                      "email": "fake1622630099313@test.com",
+                      "email": "fake1676026084495@test.com",
                       "nickname": "",
                       "first_name": "",
                       "last_name": "",
@@ -150,6 +183,9 @@
                       "timezone": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -159,25 +195,30 @@
         ],
         "Mattermost7": [
           {
-            "startTime": 1622630099804,
-            "executionTime": 136,
+            "startTime": 1676026084911,
+            "executionTime": 124,
+            "source": [
+              {
+                "previousNode": "Mattermost1"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "8qofb17h7tb9mg84dhtjwdi7kr",
-                      "create_at": 1622630099913,
-                      "update_at": 1622630099913,
+                      "id": "d6gqeo97epfm3e9cb9dgmjxx8o",
+                      "create_at": 1676026085019,
+                      "update_at": 1676026085019,
                       "edit_at": 0,
                       "delete_at": 0,
                       "is_pinned": false,
                       "user_id": "fo4frgcntiy6jfc63wor76kxpy",
-                      "channel_id": "7wchxrptg38udm6tp5acntcksc",
+                      "channel_id": "fcgymdh4aib38mjfsyf6yuza5a",
                       "root_id": "",
                       "parent_id": "",
                       "original_id": "",
-                      "message": "Message1622630099814",
+                      "message": "Message1676026084913",
                       "type": "",
                       "props": {
                         "object": true
@@ -188,6 +229,9 @@
                       "metadata": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -197,21 +241,26 @@
         ],
         "Mattermost15": [
           {
-            "startTime": 1622630099940,
-            "executionTime": 103,
+            "startTime": 1676026085035,
+            "executionTime": 70,
+            "source": [
+              {
+                "previousNode": "Mattermost14"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "96gzzzwiej87xbzy9f4kowm9wh",
-                      "create_at": 1622630099449,
-                      "update_at": 1622630099449,
+                      "id": "bdmjroconjnfipoxqo7hx4hdoe",
+                      "create_at": 1676026084603,
+                      "update_at": 1676026084603,
                       "delete_at": 0,
-                      "username": "username1622630099313",
+                      "username": "username1676026084495",
                       "auth_data": "",
                       "auth_service": "email",
-                      "email": "fake1622630099313@test.com",
+                      "email": "fake1676026084495@test.com",
                       "nickname": "",
                       "first_name": "",
                       "last_name": "",
@@ -221,6 +270,9 @@
                       "timezone": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -230,25 +282,30 @@
         ],
         "Mattermost8": [
           {
-            "startTime": 1622630100043,
-            "executionTime": 120,
+            "startTime": 1676026085105,
+            "executionTime": 58,
+            "source": [
+              {
+                "previousNode": "Mattermost7"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "cgs6zzsf17dc8j3r3j9xtss8uw",
-                      "create_at": 1622630100157,
+                      "id": "jjnq9w7zkibhzew47efyr9fekh",
+                      "create_at": 1676026085200,
                       "update_at": 0,
                       "edit_at": 0,
                       "delete_at": 0,
                       "is_pinned": false,
                       "user_id": "fo4frgcntiy6jfc63wor76kxpy",
-                      "channel_id": "7wchxrptg38udm6tp5acntcksc",
+                      "channel_id": "fcgymdh4aib38mjfsyf6yuza5a",
                       "root_id": "",
                       "parent_id": "",
                       "original_id": "",
-                      "message": "EpheMessage1622630100045",
+                      "message": "EpheMessage1676026085105",
                       "type": "system_ephemeral",
                       "props": {
                         "object": true
@@ -259,6 +316,9 @@
                       "metadata": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -268,8 +328,13 @@
         ],
         "Mattermost16": [
           {
-            "startTime": 1622630100164,
-            "executionTime": 238,
+            "startTime": 1676026085163,
+            "executionTime": 129,
+            "source": [
+              {
+                "previousNode": "Mattermost15"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -294,6 +359,9 @@
                       },
                       "is_bot": true,
                       "bot_description": "A bot account created by the channel export plugin."
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -303,17 +371,25 @@
         ],
         "Mattermost10": [
           {
-            "startTime": 1622630100402,
-            "executionTime": 139,
+            "startTime": 1676026085292,
+            "executionTime": 70,
+            "source": [
+              {
+                "previousNode": "Mattermost8"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "user_id": "fo4frgcntiy6jfc63wor76kxpy",
-                      "post_id": "8qofb17h7tb9mg84dhtjwdi7kr",
+                      "post_id": "d6gqeo97epfm3e9cb9dgmjxx8o",
                       "emoji_name": "rocket",
-                      "create_at": 1622630100404
+                      "create_at": 1676026085292
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -323,14 +399,22 @@
         ],
         "Mattermost17": [
           {
-            "startTime": 1622630100542,
-            "executionTime": 116,
+            "startTime": 1676026085362,
+            "executionTime": 73,
+            "source": [
+              {
+                "previousNode": "Mattermost16"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "status": "OK"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -340,17 +424,25 @@
         ],
         "Mattermost11": [
           {
-            "startTime": 1622630100658,
-            "executionTime": 102,
+            "startTime": 1676026085435,
+            "executionTime": 73,
+            "source": [
+              {
+                "previousNode": "Mattermost10"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "user_id": "fo4frgcntiy6jfc63wor76kxpy",
-                      "post_id": "8qofb17h7tb9mg84dhtjwdi7kr",
+                      "post_id": "d6gqeo97epfm3e9cb9dgmjxx8o",
                       "emoji_name": "rocket",
-                      "create_at": 1622630100404
+                      "create_at": 1676026085292
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -360,14 +452,22 @@
         ],
         "Mattermost18": [
           {
-            "startTime": 1622630100760,
-            "executionTime": 142,
+            "startTime": 1676026085508,
+            "executionTime": 82,
+            "source": [
+              {
+                "previousNode": "Mattermost17"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "status": "OK"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -377,14 +477,22 @@
         ],
         "Mattermost12": [
           {
-            "startTime": 1622630100903,
-            "executionTime": 116,
+            "startTime": 1676026085590,
+            "executionTime": 75,
+            "source": [
+              {
+                "previousNode": "Mattermost11"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "status": "OK"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -394,14 +502,22 @@
         ],
         "Mattermost9": [
           {
-            "startTime": 1622630101019,
-            "executionTime": 108,
+            "startTime": 1676026085665,
+            "executionTime": 80,
+            "source": [
+              {
+                "previousNode": "Mattermost12"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "status": "OK"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -411,30 +527,38 @@
         ],
         "Mattermost2": [
           {
-            "startTime": 1622630101127,
-            "executionTime": 237,
+            "startTime": 1676026085745,
+            "executionTime": 127,
+            "source": [
+              {
+                "previousNode": "Mattermost9"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "fo4frgcntiy6jfc63wor76kxpy",
-                      "create_at": 1619770719466,
-                      "update_at": 1619770793759,
+                      "id": "4yp7tpa3sbgk9qrf38egttbioo",
+                      "create_at": 1619771361034,
+                      "update_at": 1619771362666,
                       "delete_at": 0,
-                      "username": "nodeqa",
+                      "username": "fixedaccount",
                       "auth_data": "",
                       "auth_service": "",
-                      "email": "nodeqa@test.com",
+                      "email": "fixedaccount@test.com",
                       "nickname": "",
                       "first_name": "",
                       "last_name": "",
                       "position": "",
-                      "roles": "system_admin system_user",
+                      "roles": "system_user",
                       "locale": "en",
                       "timezone": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -444,17 +568,25 @@
         ],
         "Mattermost3": [
           {
-            "startTime": 1622630101364,
-            "executionTime": 118,
+            "startTime": 1676026085873,
+            "executionTime": 70,
+            "source": [
+              {
+                "previousNode": "Mattermost2"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "channel_id": "7wchxrptg38udm6tp5acntcksc",
+                      "channel_id": "fcgymdh4aib38mjfsyf6yuza5a",
                       "member_count": 2,
                       "guest_count": 0,
                       "pinnedpost_count": 0
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -464,14 +596,22 @@
         ],
         "Mattermost4": [
           {
-            "startTime": 1622630101482,
-            "executionTime": 132,
+            "startTime": 1676026085944,
+            "executionTime": 92,
+            "source": [
+              {
+                "previousNode": "Mattermost3"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "status": "OK"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -481,24 +621,29 @@
         ],
         "Mattermost5": [
           {
-            "startTime": 1622630101614,
-            "executionTime": 118,
+            "startTime": 1676026086037,
+            "executionTime": 83,
+            "source": [
+              {
+                "previousNode": "Mattermost4"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "7wchxrptg38udm6tp5acntcksc",
-                      "create_at": 1622630099246,
-                      "update_at": 1622630101603,
+                      "id": "fcgymdh4aib38mjfsyf6yuza5a",
+                      "create_at": 1676026084457,
+                      "update_at": 1676026086066,
                       "delete_at": 0,
                       "team_id": "y1p853gfspdrxre5oextbii7wh",
                       "type": "O",
-                      "display_name": "TestChannel1622630099144",
-                      "name": "testchannel1622630099144",
+                      "display_name": "TestChannel1676026084332",
+                      "name": "testchannel1676026084333",
                       "header": "",
                       "purpose": "",
-                      "last_post_at": 1622630101594,
+                      "last_post_at": 1676026086048,
                       "total_msg_count": 2,
                       "extra_update_at": 0,
                       "creator_id": "fo4frgcntiy6jfc63wor76kxpy",
@@ -511,6 +656,9 @@
                       "group_constrained": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -520,14 +668,22 @@
         ],
         "Mattermost6": [
           {
-            "startTime": 1622630101733,
-            "executionTime": 119,
+            "startTime": 1676026086120,
+            "executionTime": 91,
+            "source": [
+              {
+                "previousNode": "Mattermost5"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "status": "OK"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -541,11 +697,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-02T10:34:59.129Z",
-  "stoppedAt": "2021-06-02T10:35:01.852Z",
+  "startedAt": "2023-02-10T10:48:04.317Z",
+  "stoppedAt": "2023-02-10T10:48:06.211Z",
   "finished": true
 }

@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622630015551,
+            "startTime": 1676026068452,
             "executionTime": 0,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,8 +24,13 @@
         ],
         "GraphQL": [
           {
-            "startTime": 1622630015552,
-            "executionTime": 545,
+            "startTime": 1676026068453,
+            "executionTime": 292,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -30,6 +39,9 @@
                       "data": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -39,8 +51,13 @@
         ],
         "Function": [
           {
-            "startTime": 1622630016097,
-            "executionTime": 5,
+            "startTime": 1676026068745,
+            "executionTime": 38,
+            "source": [
+              {
+                "previousNode": "GraphQL"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -49,7 +66,11 @@
                       "data": {
                         "object": true
                       }
-                    }
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    },
+                    "index": 0
                   }
                 ]
               ]
@@ -62,11 +83,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-02T10:33:35.549Z",
-  "stoppedAt": "2021-06-02T10:33:36.102Z",
+  "startedAt": "2023-02-10T10:47:48.450Z",
+  "stoppedAt": "2023-02-10T10:47:48.783Z",
   "finished": true
 }

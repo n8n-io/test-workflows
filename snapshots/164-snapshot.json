@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622720917640,
+            "startTime": 1676026078990,
             "executionTime": 1,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,14 +24,22 @@
         ],
         "Set": [
           {
-            "startTime": 1622720917641,
-            "executionTime": 2,
+            "startTime": 1676026078991,
+            "executionTime": 20,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "name": "SpaceTag1622720917643"
+                      "name": "SpaceTag1676026079010"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -37,15 +49,20 @@
         ],
         "ClickUp1": [
           {
-            "startTime": 1622720917643,
-            "executionTime": 501,
+            "startTime": 1676026079011,
+            "executionTime": 646,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "61470963",
-                      "name": "TestList1622720917645",
+                      "id": "901000661291",
+                      "name": "TestList1676026079012",
                       "deleted": false,
                       "orderindex": 0,
                       "priority": {
@@ -66,13 +83,16 @@
                       "space": {
                         "object": true
                       },
-                      "inbound_address": "a.t.61470963.u-8779387.a0b5f30a-fe94-417a-9785-e86d404aab01@tasks.clickup.com",
+                      "inbound_address": "a.t.901000661291.u-8779387.8b631868-dce8-4fbe-bd2e-b39a3ef97ca9@tasks.clickup.com",
                       "archived": false,
                       "override_statuses": false,
                       "statuses": [
                         "json array"
                       ],
                       "permission_level": "create"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -82,14 +102,22 @@
         ],
         "ClickUp": [
           {
-            "startTime": 1622720918144,
-            "executionTime": 204,
+            "startTime": 1676026079658,
+            "executionTime": 354,
+            "source": [
+              {
+                "previousNode": "Set"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "success": true
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -99,15 +127,20 @@
         ],
         "Sleep 0.8 second": [
           {
-            "startTime": 1622720918348,
-            "executionTime": 806,
+            "startTime": 1676026080012,
+            "executionTime": 808,
+            "source": [
+              {
+                "previousNode": "ClickUp1"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "61470963",
-                      "name": "TestList1622720917645",
+                      "id": "901000661291",
+                      "name": "TestList1676026079012",
                       "deleted": false,
                       "orderindex": 0,
                       "priority": {
@@ -128,14 +161,18 @@
                       "space": {
                         "object": true
                       },
-                      "inbound_address": "a.t.61470963.u-8779387.a0b5f30a-fe94-417a-9785-e86d404aab01@tasks.clickup.com",
+                      "inbound_address": "a.t.901000661291.u-8779387.8b631868-dce8-4fbe-bd2e-b39a3ef97ca9@tasks.clickup.com",
                       "archived": false,
                       "override_statuses": false,
                       "statuses": [
                         "json array"
                       ],
                       "permission_level": "create"
-                    }
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    },
+                    "index": 0
                   }
                 ]
               ]
@@ -144,15 +181,24 @@
         ],
         "Sleep 0.8 second1": [
           {
-            "startTime": 1622720919154,
+            "startTime": 1676026080820,
             "executionTime": 804,
+            "source": [
+              {
+                "previousNode": "ClickUp"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "success": true
-                    }
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    },
+                    "index": 0
                   }
                 ]
               ]
@@ -161,15 +207,20 @@
         ],
         "ClickUp7": [
           {
-            "startTime": 1622720919958,
-            "executionTime": 421,
+            "startTime": 1676026081625,
+            "executionTime": 581,
+            "source": [
+              {
+                "previousNode": "Sleep 0.8 second"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "61470965",
-                      "name": "TestList1622720919959",
+                      "id": "901000661292",
+                      "name": "TestList1676026081625",
                       "deleted": false,
                       "orderindex": 0,
                       "priority": {
@@ -190,13 +241,16 @@
                       "space": {
                         "object": true
                       },
-                      "inbound_address": "a.t.61470965.u-8779387.84db8cbf-9d7b-4db6-aea0-37a84086d992@tasks.clickup.com",
+                      "inbound_address": "a.t.901000661292.u-8779387.33ba1bab-1b70-432d-be9e-1db440980de8@tasks.clickup.com",
                       "archived": false,
                       "override_statuses": false,
                       "statuses": [
                         "json array"
                       ],
                       "permission_level": "create"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -206,17 +260,25 @@
         ],
         "ClickUp2": [
           {
-            "startTime": 1622720920380,
-            "executionTime": 173,
+            "startTime": 1676026082207,
+            "executionTime": 391,
+            "source": [
+              {
+                "previousNode": "Sleep 0.8 second1"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "name": "updatedspacetag1621349128287",
-                      "tag_fg": "#FF6D5A",
-                      "tag_bg": "#000000",
+                      "name": "spacetag1626268329609",
+                      "tag_fg": "#fff",
+                      "tag_bg": "#FF6D5A",
                       "creator": 8779387
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -226,15 +288,20 @@
         ],
         "Sleep 0.8 second5": [
           {
-            "startTime": 1622720920553,
-            "executionTime": 809,
+            "startTime": 1676026082598,
+            "executionTime": 804,
+            "source": [
+              {
+                "previousNode": "ClickUp7"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "61470965",
-                      "name": "TestList1622720919959",
+                      "id": "901000661292",
+                      "name": "TestList1676026081625",
                       "deleted": false,
                       "orderindex": 0,
                       "priority": {
@@ -255,14 +322,18 @@
                       "space": {
                         "object": true
                       },
-                      "inbound_address": "a.t.61470965.u-8779387.84db8cbf-9d7b-4db6-aea0-37a84086d992@tasks.clickup.com",
+                      "inbound_address": "a.t.901000661292.u-8779387.33ba1bab-1b70-432d-be9e-1db440980de8@tasks.clickup.com",
                       "archived": false,
                       "override_statuses": false,
                       "statuses": [
                         "json array"
                       ],
                       "permission_level": "create"
-                    }
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    },
+                    "index": 0
                   }
                 ]
               ]
@@ -271,18 +342,26 @@
         ],
         "Set1": [
           {
-            "startTime": 1622720921363,
+            "startTime": 1676026083402,
             "executionTime": 1,
+            "source": [
+              {
+                "previousNode": "ClickUp2"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "name": "updatedspacetag1621349128287",
-                      "tag_fg": "#FF6D5A",
-                      "tag_bg": "#000000",
+                      "name": "spacetag1626268329609",
+                      "tag_fg": "#fff",
+                      "tag_bg": "#FF6D5A",
                       "creator": 8779387,
-                      "updatedname": "UpdatedSpaceTag1622720921364"
+                      "updatedname": "UpdatedSpaceTag1676026083403"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -292,18 +371,23 @@
         ],
         "ClickUp5": [
           {
-            "startTime": 1622720921365,
-            "executionTime": 503,
+            "startTime": 1676026083403,
+            "executionTime": 857,
+            "source": [
+              {
+                "previousNode": "Sleep 0.8 second5"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "kx9nn8",
+                      "id": "8677cqtm4",
                       "custom_id": {
                         "object": true
                       },
-                      "name": "testTask1622720921366",
+                      "name": "testTask1676026083404",
                       "text_content": {
                         "object": true
                       },
@@ -313,10 +397,13 @@
                       "status": {
                         "object": true
                       },
-                      "orderindex": "1135.72407326736570000000000000000000",
-                      "date_created": "1622720921664",
-                      "date_updated": "1622720921664",
+                      "orderindex": "2883.00000000000000000000000000000000",
+                      "date_created": "1676026083908",
+                      "date_updated": "1676026083908",
                       "date_closed": {
+                        "object": true
+                      },
+                      "date_done": {
                         "object": true
                       },
                       "archived": false,
@@ -364,7 +451,7 @@
                         "json array"
                       ],
                       "team_id": "4651110",
-                      "url": "https://app.clickup.com/t/kx9nn8",
+                      "url": "https://app.clickup.com/t/8677cqtm4",
                       "permission_level": "create",
                       "list": {
                         "object": true
@@ -378,6 +465,9 @@
                       "space": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -387,19 +477,28 @@
         ],
         "Sleep 0.8 second2": [
           {
-            "startTime": 1622720921869,
-            "executionTime": 807,
+            "startTime": 1676026084260,
+            "executionTime": 803,
+            "source": [
+              {
+                "previousNode": "Set1"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "name": "updatedspacetag1621349128287",
-                      "tag_fg": "#FF6D5A",
-                      "tag_bg": "#000000",
+                      "name": "spacetag1626268329609",
+                      "tag_fg": "#fff",
+                      "tag_bg": "#FF6D5A",
                       "creator": 8779387,
-                      "updatedname": "UpdatedSpaceTag1622720921364"
-                    }
+                      "updatedname": "UpdatedSpaceTag1676026083403"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    },
+                    "index": 0
                   }
                 ]
               ]
@@ -408,18 +507,23 @@
         ],
         "Sleep 0.8 second4": [
           {
-            "startTime": 1622720922676,
-            "executionTime": 802,
+            "startTime": 1676026085064,
+            "executionTime": 803,
+            "source": [
+              {
+                "previousNode": "ClickUp5"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "kx9nn8",
+                      "id": "8677cqtm4",
                       "custom_id": {
                         "object": true
                       },
-                      "name": "testTask1622720921366",
+                      "name": "testTask1676026083404",
                       "text_content": {
                         "object": true
                       },
@@ -429,10 +533,13 @@
                       "status": {
                         "object": true
                       },
-                      "orderindex": "1135.72407326736570000000000000000000",
-                      "date_created": "1622720921664",
-                      "date_updated": "1622720921664",
+                      "orderindex": "2883.00000000000000000000000000000000",
+                      "date_created": "1676026083908",
+                      "date_updated": "1676026083908",
                       "date_closed": {
+                        "object": true
+                      },
+                      "date_done": {
                         "object": true
                       },
                       "archived": false,
@@ -480,7 +587,7 @@
                         "json array"
                       ],
                       "team_id": "4651110",
-                      "url": "https://app.clickup.com/t/kx9nn8",
+                      "url": "https://app.clickup.com/t/8677cqtm4",
                       "permission_level": "create",
                       "list": {
                         "object": true
@@ -494,7 +601,11 @@
                       "space": {
                         "object": true
                       }
-                    }
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    },
+                    "index": 0
                   }
                 ]
               ]
@@ -503,14 +614,22 @@
         ],
         "ClickUp3": [
           {
-            "startTime": 1622720923479,
-            "executionTime": 280,
+            "startTime": 1676026085867,
+            "executionTime": 524,
+            "source": [
+              {
+                "previousNode": "Sleep 0.8 second2"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "success": true
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -520,14 +639,22 @@
         ],
         "Set2": [
           {
-            "startTime": 1622720923759,
-            "executionTime": 2,
+            "startTime": 1676026086391,
+            "executionTime": 1,
+            "source": [
+              {
+                "previousNode": "Sleep 0.8 second4"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "name": "TaskTag1622720923760"
+                      "name": "TaskTag1676026086392"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -537,15 +664,24 @@
         ],
         "Sleep 0.8 second3": [
           {
-            "startTime": 1622720923761,
-            "executionTime": 807,
+            "startTime": 1676026086392,
+            "executionTime": 806,
+            "source": [
+              {
+                "previousNode": "ClickUp3"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "success": true
-                    }
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    },
+                    "index": 0
                   }
                 ]
               ]
@@ -554,14 +690,22 @@
         ],
         "ClickUp8": [
           {
-            "startTime": 1622720924569,
-            "executionTime": 376,
+            "startTime": 1676026087199,
+            "executionTime": 416,
+            "source": [
+              {
+                "previousNode": "Set2"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "success": true
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -571,14 +715,22 @@
         ],
         "ClickUp4": [
           {
-            "startTime": 1622720924945,
-            "executionTime": 222,
+            "startTime": 1676026087615,
+            "executionTime": 371,
+            "source": [
+              {
+                "previousNode": "Sleep 0.8 second3"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "success": true
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -588,15 +740,24 @@
         ],
         "Sleep 0.8 second6": [
           {
-            "startTime": 1622720925168,
-            "executionTime": 806,
+            "startTime": 1676026087986,
+            "executionTime": 804,
+            "source": [
+              {
+                "previousNode": "ClickUp8"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "success": true
-                    }
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    },
+                    "index": 0
                   }
                 ]
               ]
@@ -605,14 +766,22 @@
         ],
         "ClickUp9": [
           {
-            "startTime": 1622720925975,
-            "executionTime": 363,
+            "startTime": 1676026088790,
+            "executionTime": 1464,
+            "source": [
+              {
+                "previousNode": "Sleep 0.8 second6"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "success": true
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -622,15 +791,24 @@
         ],
         "Sleep 0.8 second7": [
           {
-            "startTime": 1622720926339,
-            "executionTime": 804,
+            "startTime": 1676026090254,
+            "executionTime": 803,
+            "source": [
+              {
+                "previousNode": "ClickUp9"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "success": true
-                    }
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    },
+                    "index": 0
                   }
                 ]
               ]
@@ -639,14 +817,22 @@
         ],
         "ClickUp6": [
           {
-            "startTime": 1622720927144,
-            "executionTime": 288,
+            "startTime": 1676026091058,
+            "executionTime": 507,
+            "source": [
+              {
+                "previousNode": "Sleep 0.8 second7"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "success": true
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -656,15 +842,24 @@
         ],
         "Sleep 0.8 second8": [
           {
-            "startTime": 1622720927433,
-            "executionTime": 803,
+            "startTime": 1676026091566,
+            "executionTime": 809,
+            "source": [
+              {
+                "previousNode": "ClickUp6"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "success": true
-                    }
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    },
+                    "index": 0
                   }
                 ]
               ]
@@ -673,14 +868,22 @@
         ],
         "ClickUp10": [
           {
-            "startTime": 1622720928236,
-            "executionTime": 177,
+            "startTime": 1676026092375,
+            "executionTime": 428,
+            "source": [
+              {
+                "previousNode": "Sleep 0.8 second8"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "success": true
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -690,14 +893,22 @@
         ],
         "ClickUp11": [
           {
-            "startTime": 1622720928413,
-            "executionTime": 195,
+            "startTime": 1676026092803,
+            "executionTime": 937,
+            "source": [
+              {
+                "previousNode": "ClickUp10"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "success": true
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -707,14 +918,22 @@
         ],
         "ClickUp12": [
           {
-            "startTime": 1622720928608,
-            "executionTime": 196,
+            "startTime": 1676026093740,
+            "executionTime": 596,
+            "source": [
+              {
+                "previousNode": "ClickUp11"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "success": true
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -724,14 +943,22 @@
         ],
         "ClickUp13": [
           {
-            "startTime": 1622720928805,
-            "executionTime": 273,
+            "startTime": 1676026094336,
+            "executionTime": 1825,
+            "source": [
+              {
+                "previousNode": "ClickUp12"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "success": true
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -745,11 +972,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-03T11:48:37.635Z",
-  "stoppedAt": "2021-06-03T11:48:49.079Z",
+  "startedAt": "2023-02-10T10:47:58.987Z",
+  "stoppedAt": "2023-02-10T10:48:16.161Z",
   "finished": true
 }

@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622629975923,
+            "startTime": 1676026057772,
             "executionTime": 1,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,8 +24,13 @@
         ],
         "Coda11": [
           {
-            "startTime": 1622629975924,
-            "executionTime": 1250,
+            "startTime": 1676026057773,
+            "executionTime": 343,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -36,6 +45,9 @@
                       "parent": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -45,8 +57,13 @@
         ],
         "Coda4": [
           {
-            "startTime": 1622629977174,
-            "executionTime": 1607,
+            "startTime": 1676026058116,
+            "executionTime": 279,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -60,6 +77,9 @@
                       "format": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -69,8 +89,13 @@
         ],
         "Coda2": [
           {
-            "startTime": 1622629978782,
-            "executionTime": 729,
+            "startTime": 1676026058396,
+            "executionTime": 246,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -83,6 +108,9 @@
                       "parent": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -92,8 +120,13 @@
         ],
         "Coda": [
           {
-            "startTime": 1622629979511,
-            "executionTime": 1038,
+            "startTime": 1676026058642,
+            "executionTime": 267,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 []
@@ -103,8 +136,13 @@
         ],
         "Coda12": [
           {
-            "startTime": 1622629980550,
-            "executionTime": 2240,
+            "startTime": 1676026058909,
+            "executionTime": 273,
+            "source": [
+              {
+                "previousNode": "Coda11"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -132,6 +170,9 @@
                         "json array"
                       ],
                       "layout": "masterDetail"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -141,8 +182,13 @@
         ],
         "Coda5": [
           {
-            "startTime": 1622629982790,
-            "executionTime": 992,
+            "startTime": 1676026059182,
+            "executionTime": 282,
+            "source": [
+              {
+                "previousNode": "Coda4"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -159,6 +205,9 @@
                       "parent": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -168,8 +217,13 @@
         ],
         "Coda3": [
           {
-            "startTime": 1622629983783,
-            "executionTime": 1778,
+            "startTime": 1676026059464,
+            "executionTime": 285,
+            "source": [
+              {
+                "previousNode": "Coda2"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -180,6 +234,9 @@
                       "href": "https://coda.io/apis/v1/docs/2-5DWWeFZp/formulas/f-nyztATalRJ",
                       "name": "Test",
                       "value": ""
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -189,8 +246,13 @@
         ],
         "Coda13": [
           {
-            "startTime": 1622629985561,
-            "executionTime": 1272,
+            "startTime": 1676026059749,
+            "executionTime": 269,
+            "source": [
+              {
+                "previousNode": "Coda12"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -204,6 +266,9 @@
                       "format": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -213,17 +278,25 @@
         ],
         "Coda6": [
           {
-            "startTime": 1622629986833,
-            "executionTime": 788,
+            "startTime": 1676026060018,
+            "executionTime": 276,
+            "source": [
+              {
+                "previousNode": "Coda5"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "i-IE-efOVA5r",
+                      "id": "i-JbVwVgQHgq",
                       "number": 101,
                       "sum": 0,
                       "Column 3": ""
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -233,17 +306,25 @@
         ],
         "Coda14": [
           {
-            "startTime": 1622629987621,
-            "executionTime": 866,
+            "startTime": 1676026060294,
+            "executionTime": 261,
+            "source": [
+              {
+                "previousNode": "Coda13"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "i-IE-efOVA5r",
+                      "id": "i-JbVwVgQHgq",
                       "number": 101,
                       "sum": 0,
                       "Column 3": ""
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -253,17 +334,25 @@
         ],
         "Coda7": [
           {
-            "startTime": 1622629988487,
-            "executionTime": 793,
+            "startTime": 1676026060556,
+            "executionTime": 277,
+            "source": [
+              {
+                "previousNode": "Coda6"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "i-IE-efOVA5r",
+                      "id": "i-JbVwVgQHgq",
                       "number": 101,
                       "sum": 0,
                       "Column 3": ""
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -273,8 +362,13 @@
         ],
         "Set1": [
           {
-            "startTime": 1622629989281,
-            "executionTime": 0,
+            "startTime": 1676026060833,
+            "executionTime": 1,
+            "source": [
+              {
+                "previousNode": "Coda14"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -282,6 +376,9 @@
                     "json": {
                       "number": 102,
                       "sum": 0
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -291,8 +388,13 @@
         ],
         "Set": [
           {
-            "startTime": 1622629989281,
-            "executionTime": 1,
+            "startTime": 1676026060834,
+            "executionTime": 0,
+            "source": [
+              {
+                "previousNode": "Coda7"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -300,6 +402,9 @@
                     "json": {
                       "number": 101,
                       "sum": 0
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -309,8 +414,13 @@
         ],
         "Coda15": [
           {
-            "startTime": 1622629989282,
-            "executionTime": 958,
+            "startTime": 1676026060834,
+            "executionTime": 429,
+            "source": [
+              {
+                "previousNode": "Set1"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -318,6 +428,9 @@
                     "json": {
                       "number": 102,
                       "sum": 0
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -327,8 +440,13 @@
         ],
         "Coda8": [
           {
-            "startTime": 1622629990241,
-            "executionTime": 942,
+            "startTime": 1676026061263,
+            "executionTime": 303,
+            "source": [
+              {
+                "previousNode": "Set"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -336,6 +454,9 @@
                     "json": {
                       "number": 101,
                       "sum": 0
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -345,27 +466,51 @@
         ],
         "Coda16": [
           {
-            "startTime": 1622629991183,
-            "executionTime": 848,
+            "startTime": 1676026061567,
+            "executionTime": 345,
+            "source": [
+              {
+                "previousNode": "Coda15"
+              }
+            ],
             "data": {
               "main": [
-                []
+                [
+                  {
+                    "json": {
+                      "rowId": "i-JbVwVgQHgq",
+                      "columnId": "c-hTB8QwFtUS",
+                      "requestId": "mutate:889d95b2-a8a0-414d-8122-1ee78f70f657"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
               ]
             }
           }
         ],
         "Coda10": [
           {
-            "startTime": 1622629992031,
-            "executionTime": 1220,
+            "startTime": 1676026061912,
+            "executionTime": 437,
+            "source": [
+              {
+                "previousNode": "Coda8"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "rowId": "i-IE-efOVA5r",
+                      "rowId": "i-JbVwVgQHgq",
                       "columnId": "c-hTB8QwFtUS",
-                      "requestId": "mutate:e974ad85-6b91-4e11-886d-754fec508446"
+                      "requestId": "mutate:07c4dc9a-aae3-4911-9e1e-14848b8ccf2f"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -375,16 +520,24 @@
         ],
         "Coda9": [
           {
-            "startTime": 1622629993251,
-            "executionTime": 911,
+            "startTime": 1676026062349,
+            "executionTime": 388,
+            "source": [
+              {
+                "previousNode": "Coda10"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "rowId": "i-IE-efOVA5r",
+                      "rowId": "i-JbVwVgQHgq",
                       "columnId": "c-hTB8QwFtUS",
-                      "requestId": "mutate:e974ad85-6b91-4e11-886d-754fec508446"
+                      "requestId": "mutate:07c4dc9a-aae3-4911-9e1e-14848b8ccf2f"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -398,11 +551,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-02T10:32:55.921Z",
-  "stoppedAt": "2021-06-02T10:33:14.162Z",
+  "startedAt": "2023-02-10T10:47:37.770Z",
+  "stoppedAt": "2023-02-10T10:47:42.737Z",
   "finished": true
 }

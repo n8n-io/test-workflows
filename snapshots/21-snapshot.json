@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1636723026446,
+            "startTime": 1676026052538,
             "executionTime": 1,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,8 +24,13 @@
         ],
         "Hubspot8": [
           {
-            "startTime": 1636723026447,
-            "executionTime": 406,
+            "startTime": 1676026052539,
+            "executionTime": 455,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -29,11 +38,14 @@
                     "json": {
                       "portalId": 9435114,
                       "objectType": "TICKET",
-                      "objectId": 656223049,
+                      "objectId": 1428193632,
                       "properties": {
                         "object": true
                       },
                       "isDeleted": false
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -43,15 +55,20 @@
         ],
         "Hubspot": [
           {
-            "startTime": 1636723026854,
-            "executionTime": 382,
+            "startTime": 1676026052994,
+            "executionTime": 325,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "portalId": 9435114,
-                      "dealId": 6906396939,
+                      "dealId": 12097349171,
                       "isDeleted": false,
                       "associations": {
                         "object": true
@@ -62,6 +79,9 @@
                       "stateChanges": [
                         "json array"
                       ]
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -71,8 +91,13 @@
         ],
         "Hubspot9": [
           {
-            "startTime": 1636723027236,
-            "executionTime": 585,
+            "startTime": 1676026053319,
+            "executionTime": 255,
+            "source": [
+              {
+                "previousNode": "Hubspot8"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -80,12 +105,15 @@
                     "json": {
                       "portalId": 9435114,
                       "objectType": "TICKET",
-                      "objectId": 656223049,
+                      "objectId": 1428193632,
                       "properties": {
                         "object": true
                       },
                       "version": 1,
                       "isDeleted": false
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -95,15 +123,20 @@
         ],
         "Hubspot4": [
           {
-            "startTime": 1636723027822,
-            "executionTime": 437,
+            "startTime": 1676026053574,
+            "executionTime": 256,
+            "source": [
+              {
+                "previousNode": "Hubspot"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "portalId": 9435114,
-                      "dealId": 6906396939,
+                      "dealId": 12097349171,
                       "isDeleted": false,
                       "associations": {
                         "object": true
@@ -114,6 +147,9 @@
                       "stateChanges": [
                         "json array"
                       ]
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -123,8 +159,13 @@
         ],
         "Hubspot10": [
           {
-            "startTime": 1636723028261,
-            "executionTime": 412,
+            "startTime": 1676026053830,
+            "executionTime": 217,
+            "source": [
+              {
+                "previousNode": "Hubspot9"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -132,11 +173,14 @@
                     "json": {
                       "portalId": 9435114,
                       "objectType": "TICKET",
-                      "objectId": 633360001,
+                      "objectId": 855323460,
                       "properties": {
                         "object": true
                       },
                       "isDeleted": false
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -146,8 +190,13 @@
         ],
         "Hubspot1": [
           {
-            "startTime": 1636723028674,
-            "executionTime": 505,
+            "startTime": 1676026054047,
+            "executionTime": 276,
+            "source": [
+              {
+                "previousNode": "Hubspot4"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -165,6 +214,9 @@
                       "stateChanges": [
                         "json array"
                       ]
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -174,8 +226,13 @@
         ],
         "Hubspot11": [
           {
-            "startTime": 1636723029180,
-            "executionTime": 511,
+            "startTime": 1676026054323,
+            "executionTime": 203,
+            "source": [
+              {
+                "previousNode": "Hubspot10"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -183,11 +240,14 @@
                     "json": {
                       "portalId": 9435114,
                       "objectType": "TICKET",
-                      "objectId": 633360001,
+                      "objectId": 855323460,
                       "properties": {
                         "object": true
                       },
                       "isDeleted": false
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -197,20 +257,28 @@
         ],
         "Hubspot3": [
           {
-            "startTime": 1636723029691,
-            "executionTime": 312,
+            "startTime": 1676026054526,
+            "executionTime": 248,
+            "source": [
+              {
+                "previousNode": "Hubspot1"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "6906396939",
+                      "id": "12097406897",
                       "properties": {
                         "object": true
                       },
-                      "createdAt": "2021-11-12T13:17:07.049Z",
-                      "updatedAt": "2021-11-12T13:17:08.006Z",
+                      "createdAt": "2023-02-10T10:37:11.510Z",
+                      "updatedAt": "2023-02-10T10:37:12.560Z",
                       "archived": false
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -220,14 +288,22 @@
         ],
         "Hubspot12": [
           {
-            "startTime": 1636723030004,
-            "executionTime": 307,
+            "startTime": 1676026054774,
+            "executionTime": 240,
+            "source": [
+              {
+                "previousNode": "Hubspot11"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "success": true
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -237,15 +313,20 @@
         ],
         "Hubspot5": [
           {
-            "startTime": 1636723030312,
-            "executionTime": 309,
+            "startTime": 1676026055014,
+            "executionTime": 249,
+            "source": [
+              {
+                "previousNode": "Hubspot3"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "portalId": 9435114,
-                      "dealId": 6906396939,
+                      "dealId": 12097349171,
                       "isDeleted": false,
                       "associations": {
                         "object": true
@@ -256,6 +337,9 @@
                       "stateChanges": [
                         "json array"
                       ]
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -265,15 +349,20 @@
         ],
         "Hubspot7": [
           {
-            "startTime": 1636723030622,
-            "executionTime": 305,
+            "startTime": 1676026055263,
+            "executionTime": 290,
+            "source": [
+              {
+                "previousNode": "Hubspot5"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "portalId": 9435114,
-                      "dealId": 6906396939,
+                      "dealId": 12097349171,
                       "isDeleted": false,
                       "associations": {
                         "object": true
@@ -284,6 +373,9 @@
                       "stateChanges": [
                         "json array"
                       ]
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -293,15 +385,20 @@
         ],
         "Hubspot2": [
           {
-            "startTime": 1636723030928,
-            "executionTime": 306,
+            "startTime": 1676026055554,
+            "executionTime": 425,
+            "source": [
+              {
+                "previousNode": "Hubspot7"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "portalId": 9435114,
-                      "dealId": 6906396939,
+                      "dealId": 12097349171,
                       "isDeleted": false,
                       "associations": {
                         "object": true
@@ -312,6 +409,9 @@
                       "stateChanges": [
                         "json array"
                       ]
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -321,12 +421,21 @@
         ],
         "Hubspot6": [
           {
-            "startTime": 1636723031235,
-            "executionTime": 311,
+            "startTime": 1676026055980,
+            "executionTime": 245,
+            "source": [
+              {
+                "previousNode": "Hubspot2"
+              }
+            ],
             "data": {
               "main": [
                 [
-                  {}
+                  {
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
                 ]
               ]
             }
@@ -338,11 +447,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-11-12T13:17:06.440Z",
-  "stoppedAt": "2021-11-12T13:17:11.547Z",
+  "startedAt": "2023-02-10T10:47:32.534Z",
+  "stoppedAt": "2023-02-10T10:47:36.225Z",
   "finished": true
 }

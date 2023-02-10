@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622630072090,
+            "startTime": 1676026079245,
             "executionTime": 0,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,8 +24,13 @@
         ],
         "Mocean": [
           {
-            "startTime": 1622630072091,
-            "executionTime": 2033,
+            "startTime": 1676026079246,
+            "executionTime": 1013,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -29,8 +38,11 @@
                     "json": {
                       "status": 0,
                       "receiver": "21624827732",
-                      "msgid": "Nodeqa0602183433472368.0003",
+                      "msgid": "Nodeqa0210184800472410.0002",
                       "type": "sms"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -40,13 +52,21 @@
         ],
         "Mocean1": [
           {
-            "startTime": 1622630074124,
-            "executionTime": 1,
+            "startTime": 1676026080259,
+            "executionTime": 0,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -59,11 +79,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-02T10:34:32.088Z",
-  "stoppedAt": "2021-06-02T10:34:34.125Z",
+  "startedAt": "2023-02-10T10:47:59.244Z",
+  "stoppedAt": "2023-02-10T10:48:00.259Z",
   "finished": true
 }

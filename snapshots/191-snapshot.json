@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622630098931,
+            "startTime": 1676026084103,
             "executionTime": 0,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,18 +24,23 @@
         ],
         "MailerLite": [
           {
-            "startTime": 1622630098932,
-            "executionTime": 732,
+            "startTime": 1676026084104,
+            "executionTime": 310,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": 1038289043542092200,
+                      "id": 1486207031663765500,
                       "name": {
                         "object": true
                       },
-                      "email": "fake1622630098933@test.com",
+                      "email": "fake1676026084117@test.com",
                       "sent": 0,
                       "opened": 0,
                       "opened_rate": 0,
@@ -48,14 +57,23 @@
                       "fields": [
                         "json array"
                       ],
+                      "webform_subscribe_date": {
+                        "object": true
+                      },
                       "date_subscribe": {
                         "object": true
                       },
                       "date_unsubscribe": {
                         "object": true
                       },
-                      "date_created": "2021-06-02 10:34:59",
-                      "date_updated": "2021-06-02 10:34:59"
+                      "date_created": "2023-02-10 10:48:04",
+                      "date_updated": "2023-02-10 10:48:04",
+                      "user_agent": {
+                        "object": true
+                      }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -65,16 +83,21 @@
         ],
         "MailerLite1": [
           {
-            "startTime": 1622630099664,
-            "executionTime": 867,
+            "startTime": 1676026084414,
+            "executionTime": 149,
+            "source": [
+              {
+                "previousNode": "MailerLite"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": 1038289043542092200,
+                      "id": 1486207031663765500,
                       "name": "",
-                      "email": "fake1622630098933@test.com",
+                      "email": "fake1676026084117@test.com",
                       "sent": 0,
                       "opened": 0,
                       "opened_rate": 0,
@@ -91,14 +114,23 @@
                       "fields": [
                         "json array"
                       ],
+                      "webform_subscribe_date": {
+                        "object": true
+                      },
                       "date_subscribe": {
                         "object": true
                       },
                       "date_unsubscribe": {
                         "object": true
                       },
-                      "date_created": "2021-06-02 10:34:59",
-                      "date_updated": "2021-06-02 10:34:59"
+                      "date_created": "2023-02-10 10:48:04",
+                      "date_updated": "2023-02-10 10:48:04",
+                      "user_agent": {
+                        "object": true
+                      }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -108,16 +140,21 @@
         ],
         "MailerLite2": [
           {
-            "startTime": 1622630100532,
-            "executionTime": 588,
+            "startTime": 1676026084563,
+            "executionTime": 207,
+            "source": [
+              {
+                "previousNode": "MailerLite1"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": 1038289043542092200,
-                      "name": "UpdatedName1622630100534",
-                      "email": "fake1622630098933@test.com",
+                      "id": 1486207031663765500,
+                      "name": "UpdatedName1676026084564",
+                      "email": "fake1676026084117@test.com",
                       "sent": 0,
                       "opened": 0,
                       "opened_rate": 0,
@@ -134,14 +171,23 @@
                       "fields": [
                         "json array"
                       ],
+                      "webform_subscribe_date": {
+                        "object": true
+                      },
                       "date_subscribe": {
                         "object": true
                       },
                       "date_unsubscribe": {
                         "object": true
                       },
-                      "date_created": "2021-06-02 10:34:59",
-                      "date_updated": "2021-06-02 10:35:00"
+                      "date_created": "2023-02-10 10:48:04",
+                      "date_updated": "2023-02-10 10:48:04",
+                      "user_agent": {
+                        "object": true
+                      }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -151,8 +197,13 @@
         ],
         "MailerLite3": [
           {
-            "startTime": 1622630101121,
-            "executionTime": 267,
+            "startTime": 1676026084770,
+            "executionTime": 148,
+            "source": [
+              {
+                "previousNode": "MailerLite2"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -185,6 +236,9 @@
                       "fields": [
                         "json array"
                       ],
+                      "webform_subscribe_date": {
+                        "object": true
+                      },
                       "date_subscribe": {
                         "object": true
                       },
@@ -192,7 +246,13 @@
                         "object": true
                       },
                       "date_created": "2021-02-26 16:35:57",
-                      "date_updated": "2021-02-26 16:35:57"
+                      "date_updated": "2021-02-26 16:35:57",
+                      "user_agent": {
+                        "object": true
+                      }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -206,11 +266,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-02T10:34:58.929Z",
-  "stoppedAt": "2021-06-02T10:35:01.388Z",
+  "startedAt": "2023-02-10T10:48:04.101Z",
+  "stoppedAt": "2023-02-10T10:48:04.919Z",
   "finished": true
 }

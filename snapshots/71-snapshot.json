@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622629993601,
+            "startTime": 1676026061601,
             "executionTime": 0,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,8 +24,13 @@
         ],
         "Contentful1": [
           {
-            "startTime": 1622629993602,
-            "executionTime": 586,
+            "startTime": 1676026061601,
+            "executionTime": 255,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -34,6 +43,9 @@
                       "required": true,
                       "disabled": false,
                       "omitted": false
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   },
                   {
@@ -45,6 +57,9 @@
                       "required": true,
                       "disabled": false,
                       "omitted": false
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   },
                   {
@@ -57,6 +72,9 @@
                       "disabled": false,
                       "omitted": false,
                       "linkType": "Asset"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   },
                   {
@@ -68,6 +86,9 @@
                       "required": true,
                       "disabled": false,
                       "omitted": false
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   },
                   {
@@ -79,6 +100,9 @@
                       "required": true,
                       "disabled": false,
                       "omitted": false
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   },
                   {
@@ -91,6 +115,9 @@
                       "disabled": false,
                       "omitted": false,
                       "linkType": "Entry"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   },
                   {
@@ -102,6 +129,9 @@
                       "required": true,
                       "disabled": false,
                       "omitted": false
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   },
                   {
@@ -116,6 +146,9 @@
                       "items": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -125,8 +158,13 @@
         ],
         "Contentful": [
           {
-            "startTime": 1622629994188,
-            "executionTime": 510,
+            "startTime": 1676026061857,
+            "executionTime": 231,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -146,6 +184,9 @@
                       "tags": [
                         "json array"
                       ]
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -155,8 +196,13 @@
         ],
         "Contentful5": [
           {
-            "startTime": 1622629994698,
-            "executionTime": 419,
+            "startTime": 1676026062089,
+            "executionTime": 197,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -171,6 +217,9 @@
                       "sys": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -180,8 +229,13 @@
         ],
         "Contentful2": [
           {
-            "startTime": 1622629995118,
-            "executionTime": 377,
+            "startTime": 1676026062286,
+            "executionTime": 222,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -191,6 +245,9 @@
                       "file": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -200,8 +257,13 @@
         ],
         "Contentful6": [
           {
-            "startTime": 1622629995495,
-            "executionTime": 366,
+            "startTime": 1676026062509,
+            "executionTime": 211,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -214,6 +276,9 @@
                       "locales": [
                         "json array"
                       ]
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -223,8 +288,13 @@
         ],
         "Contentful4": [
           {
-            "startTime": 1622629995861,
+            "startTime": 1676026062721,
             "executionTime": 0,
+            "source": [
+              {
+                "previousNode": "Contentful"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -244,6 +314,9 @@
                       "tags": [
                         "json array"
                       ]
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -253,8 +326,13 @@
         ],
         "Contentful3": [
           {
-            "startTime": 1622629995861,
+            "startTime": 1676026062721,
             "executionTime": 0,
+            "source": [
+              {
+                "previousNode": "Contentful2"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -264,6 +342,9 @@
                       "file": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -277,11 +358,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-02T10:33:13.599Z",
-  "stoppedAt": "2021-06-02T10:33:15.861Z",
+  "startedAt": "2023-02-10T10:47:41.599Z",
+  "stoppedAt": "2023-02-10T10:47:42.721Z",
   "finished": true
 }

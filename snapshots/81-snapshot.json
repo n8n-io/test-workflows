@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622630000226,
+            "startTime": 1676026062999,
             "executionTime": 0,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,8 +24,13 @@
         ],
         "Phantombuster": [
           {
-            "startTime": 1622630000227,
-            "executionTime": 335,
+            "startTime": 1676026063000,
+            "executionTime": 240,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -29,6 +38,7 @@
                     "json": {
                       "id": "8756817235927468",
                       "name": "Email Extractor",
+                      "createdAt": 1614591862755,
                       "scriptOrgName": "phantombuster",
                       "scriptId": "6774",
                       "script": "Email Extractor.js",
@@ -38,7 +48,7 @@
                         "object": true
                       },
                       "lastEndType": "finished",
-                      "lastEndedAt": 1622623228973,
+                      "lastEndedAt": 1676025694585,
                       "lastExitCode": 0,
                       "nbContainersRunning": 0,
                       "runningTime": {
@@ -46,6 +56,9 @@
                       },
                       "launchType": "manually",
                       "s3Folder": "UKSkFmaigVohTti7pkwW0A"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -55,8 +68,13 @@
         ],
         "Phantombuster1": [
           {
-            "startTime": 1622630000563,
-            "executionTime": 274,
+            "startTime": 1676026063240,
+            "executionTime": 281,
+            "source": [
+              {
+                "previousNode": "Phantombuster"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -73,12 +91,15 @@
                         "object": true
                       },
                       "launchType": "manually",
-                      "nbLaunches": 95,
+                      "nbLaunches": 423,
                       "s3Folder": "UKSkFmaigVohTti7pkwW0A",
                       "orgS3Folder": "sTTpLenO2iY",
                       "updatedAt": 1614591972895,
                       "name": "Email Extractor",
                       "fileMgmt": "mix"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -88,14 +109,22 @@
         ],
         "Phantombuster2": [
           {
-            "startTime": 1622630000838,
-            "executionTime": 728,
+            "startTime": 1676026063522,
+            "executionTime": 1346,
+            "source": [
+              {
+                "previousNode": "Phantombuster1"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "containerId": "6817026150421890"
+                      "containerId": "5323290507708682"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -105,19 +134,27 @@
         ],
         "Phantombuster3": [
           {
-            "startTime": 1622630001566,
-            "executionTime": 177,
+            "startTime": 1676026064868,
+            "executionTime": 162,
+            "source": [
+              {
+                "previousNode": "Phantombuster2"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "containerId": "6817026150421890",
+                      "containerId": "5323290507708682",
                       "status": "running",
                       "output": "",
                       "outputPos": 0,
                       "isAgentRunning": false,
                       "canSoftAbort": false
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -131,11 +168,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-02T10:33:20.224Z",
-  "stoppedAt": "2021-06-02T10:33:21.744Z",
+  "startedAt": "2023-02-10T10:47:42.997Z",
+  "stoppedAt": "2023-02-10T10:47:45.030Z",
   "finished": true
 }

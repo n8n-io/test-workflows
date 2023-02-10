@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622630020091,
-            "executionTime": 0,
+            "startTime": 1676026071312,
+            "executionTime": 1,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,15 +24,23 @@
         ],
         "Set": [
           {
-            "startTime": 1622630020092,
-            "executionTime": 2,
+            "startTime": 1676026071313,
+            "executionTime": 46,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": 971,
-                      "name": "Name1622630020094"
+                      "id": 253,
+                      "name": "Name1676026071359"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -38,15 +50,23 @@
         ],
         "QuestDB": [
           {
-            "startTime": 1622630020094,
-            "executionTime": 278,
+            "startTime": 1676026071359,
+            "executionTime": 190,
+            "source": [
+              {
+                "previousNode": "Set"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": 971,
-                      "name": "Name1622630020094"
+                      "id": 253,
+                      "name": "Name1676026071359"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -56,15 +76,23 @@
         ],
         "QuestDB1": [
           {
-            "startTime": 1622630020373,
-            "executionTime": 226,
+            "startTime": 1676026071550,
+            "executionTime": 134,
+            "source": [
+              {
+                "previousNode": "QuestDB"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": 971,
-                      "name": "Name1622630020094"
+                      "id": 253,
+                      "name": "Name1676026071359"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -74,8 +102,13 @@
         ],
         "QuestDB2": [
           {
-            "startTime": 1622630020599,
-            "executionTime": 209,
+            "startTime": 1676026071686,
+            "executionTime": 145,
+            "source": [
+              {
+                "previousNode": "QuestDB1"
+              }
+            ],
             "data": {
               "main": [
                 []
@@ -89,11 +122,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-02T10:33:40.089Z",
-  "stoppedAt": "2021-06-02T10:33:40.808Z",
+  "startedAt": "2023-02-10T10:47:51.311Z",
+  "stoppedAt": "2023-02-10T10:47:51.831Z",
   "finished": true
 }

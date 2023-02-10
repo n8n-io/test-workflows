@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1635334052381,
-            "executionTime": 1,
+            "startTime": 1676026064541,
+            "executionTime": 0,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,8 +24,13 @@
         ],
         "ActiveCampaign": [
           {
-            "startTime": 1635334052383,
-            "executionTime": 892,
+            "startTime": 1676026064542,
+            "executionTime": 732,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -30,6 +39,9 @@
                       "connection": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -39,8 +51,13 @@
         ],
         "ActiveCampaign1": [
           {
-            "startTime": 1635334053277,
-            "executionTime": 910,
+            "startTime": 1676026065274,
+            "executionTime": 423,
+            "source": [
+              {
+                "previousNode": "ActiveCampaign"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -52,6 +69,9 @@
                       "ecomCustomer": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -61,8 +81,13 @@
         ],
         "ActiveCampaign7": [
           {
-            "startTime": 1635334054189,
-            "executionTime": 983,
+            "startTime": 1676026065697,
+            "executionTime": 311,
+            "source": [
+              {
+                "previousNode": "ActiveCampaign1"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -77,6 +102,9 @@
                       "ecomOrder": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -86,8 +114,13 @@
         ],
         "ActiveCampaign12": [
           {
-            "startTime": 1635334055173,
-            "executionTime": 617,
+            "startTime": 1676026066008,
+            "executionTime": 540,
+            "source": [
+              {
+                "previousNode": "ActiveCampaign7"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -96,6 +129,9 @@
                       "ecomOrderProduct": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -105,8 +141,13 @@
         ],
         "ActiveCampaign13": [
           {
-            "startTime": 1635334055791,
-            "executionTime": 619,
+            "startTime": 1676026066548,
+            "executionTime": 278,
+            "source": [
+              {
+                "previousNode": "ActiveCampaign12"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -115,6 +156,9 @@
                       "ecomOrderProducts": [
                         "json array"
                       ]
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -124,18 +168,23 @@
         ],
         "ActiveCampaign14": [
           {
-            "startTime": 1635334056410,
-            "executionTime": 413,
+            "startTime": 1676026066826,
+            "executionTime": 273,
+            "source": [
+              {
+                "previousNode": "ActiveCampaign13"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "orderid": "5",
-                      "connectionid": "469",
-                      "externalid": "ProductId1635334054194",
+                      "orderid": "112",
+                      "connectionid": "636",
+                      "externalid": "ProductId1644891804797",
                       "sku": "",
-                      "name": "Product1635334054193",
+                      "name": "Product1644891804797",
                       "description": {
                         "object": true
                       },
@@ -144,14 +193,17 @@
                       "category": "Test",
                       "imageUrl": "",
                       "productUrl": "",
-                      "createdDate": "2021-10-27T06:27:34-05:00",
-                      "updatedDate": "2021-10-27T06:27:34-05:00",
-                      "tstamp": "2021-10-27T06:27:34-05:00",
+                      "createdDate": "2022-02-14T20:23:25-06:00",
+                      "updatedDate": "2022-02-14T20:23:25-06:00",
+                      "tstamp": "2022-02-14T20:23:25-06:00",
                       "links": {
                         "object": true
                       },
-                      "id": "3",
-                      "ecomOrder": "5"
+                      "id": "110",
+                      "ecomOrder": "112"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -161,8 +213,13 @@
         ],
         "ActiveCampaign8": [
           {
-            "startTime": 1635334056824,
-            "executionTime": 894,
+            "startTime": 1676026067099,
+            "executionTime": 303,
+            "source": [
+              {
+                "previousNode": "ActiveCampaign14"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -177,6 +234,9 @@
                       "ecomOrder": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -186,8 +246,13 @@
         ],
         "ActiveCampaign9": [
           {
-            "startTime": 1635334057719,
-            "executionTime": 495,
+            "startTime": 1676026067402,
+            "executionTime": 316,
+            "source": [
+              {
+                "previousNode": "ActiveCampaign8"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -196,6 +261,9 @@
                       "ecomOrder": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -205,8 +273,13 @@
         ],
         "ActiveCampaign10": [
           {
-            "startTime": 1635334058216,
-            "executionTime": 397,
+            "startTime": 1676026067719,
+            "executionTime": 285,
+            "source": [
+              {
+                "previousNode": "ActiveCampaign9"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -253,6 +326,9 @@
                       "id": "2",
                       "connection": "6",
                       "customer": "3"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -262,13 +338,21 @@
         ],
         "ActiveCampaign11": [
           {
-            "startTime": 1635334058614,
-            "executionTime": 405,
+            "startTime": 1676026068004,
+            "executionTime": 368,
+            "source": [
+              {
+                "previousNode": "ActiveCampaign10"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -277,8 +361,13 @@
         ],
         "ActiveCampaign2": [
           {
-            "startTime": 1635334059020,
-            "executionTime": 665,
+            "startTime": 1676026068372,
+            "executionTime": 307,
+            "source": [
+              {
+                "previousNode": "ActiveCampaign11"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -287,6 +376,9 @@
                       "ecomCustomer": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -296,8 +388,13 @@
         ],
         "ActiveCampaign3": [
           {
-            "startTime": 1635334059686,
-            "executionTime": 349,
+            "startTime": 1676026068679,
+            "executionTime": 339,
+            "source": [
+              {
+                "previousNode": "ActiveCampaign2"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -306,6 +403,9 @@
                       "ecomCustomer": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -315,8 +415,13 @@
         ],
         "ActiveCampaign4": [
           {
-            "startTime": 1635334060036,
-            "executionTime": 306,
+            "startTime": 1676026069019,
+            "executionTime": 252,
+            "source": [
+              {
+                "previousNode": "ActiveCampaign3"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -332,11 +437,23 @@
                       "avgProductCategory": "",
                       "tstamp": "2021-05-14T20:06:40-05:00",
                       "acceptsMarketing": "0",
+                      "sms_marketing_state": {
+                        "object": true
+                      },
+                      "sms_opt_in_level": {
+                        "object": true
+                      },
+                      "sms_consent_updated_at": {
+                        "object": true
+                      },
                       "links": {
                         "object": true
                       },
                       "id": "3",
                       "connection": "6"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -346,15 +463,20 @@
         ],
         "ActiveCampaign15": [
           {
-            "startTime": 1635334060342,
-            "executionTime": 652,
+            "startTime": 1676026069271,
+            "executionTime": 288,
+            "source": [
+              {
+                "previousNode": "ActiveCampaign4"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "cdate": "2021-10-27T06:27:33-05:00",
-                      "email": "fake1635334053283@gmail.com",
+                      "cdate": "2023-02-10T04:47:45-06:00",
+                      "email": "fake1676026065276@gmail.com",
                       "phone": "",
                       "firstName": "",
                       "lastName": "",
@@ -370,7 +492,7 @@
                       "ua": {
                         "object": true
                       },
-                      "hash": "7126ce199d193820f868bd2d808e72ea",
+                      "hash": "d2760604ee73c68e6fc5352fecc4cf37",
                       "socialdata_lastcheck": {
                         "object": true
                       },
@@ -386,17 +508,17 @@
                       "adate": {
                         "object": true
                       },
-                      "udate": "2021-10-27T06:27:34-05:00",
+                      "udate": "2023-02-10T04:47:45-06:00",
                       "edate": {
                         "object": true
                       },
                       "deleted_at": {
                         "object": true
                       },
-                      "created_utc_timestamp": "2021-10-27 06:27:33",
-                      "updated_utc_timestamp": "2021-10-27 06:27:34",
-                      "created_timestamp": "2021-10-27 06:27:33",
-                      "updated_timestamp": "2021-10-27 06:27:34",
+                      "created_utc_timestamp": "2023-02-10 04:47:45",
+                      "updated_utc_timestamp": "2023-02-10 04:47:45",
+                      "created_timestamp": "2023-02-10 04:47:45",
+                      "updated_timestamp": "2023-02-10 04:47:45",
                       "created_by": {
                         "object": true
                       },
@@ -414,10 +536,13 @@
                       "links": {
                         "object": true
                       },
-                      "id": "771",
+                      "id": "1186",
                       "organization": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -427,13 +552,21 @@
         ],
         "ActiveCampaign16": [
           {
-            "startTime": 1635334060995,
-            "executionTime": 520,
+            "startTime": 1676026069559,
+            "executionTime": 790,
+            "source": [
+              {
+                "previousNode": "ActiveCampaign15"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -442,13 +575,21 @@
         ],
         "ActiveCampaign5": [
           {
-            "startTime": 1635334061516,
-            "executionTime": 448,
+            "startTime": 1676026070351,
+            "executionTime": 299,
+            "source": [
+              {
+                "previousNode": "ActiveCampaign16"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -457,13 +598,21 @@
         ],
         "ActiveCampaign6": [
           {
-            "startTime": 1635334061965,
-            "executionTime": 766,
+            "startTime": 1676026070651,
+            "executionTime": 388,
+            "source": [
+              {
+                "previousNode": "ActiveCampaign5"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -476,11 +625,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-10-27T11:27:32.375Z",
-  "stoppedAt": "2021-10-27T11:27:42.733Z",
+  "startedAt": "2023-02-10T10:47:44.533Z",
+  "stoppedAt": "2023-02-10T10:47:51.039Z",
   "finished": true
 }

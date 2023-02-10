@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622630016912,
+            "startTime": 1676026069116,
             "executionTime": 0,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,14 +24,22 @@
         ],
         "Monday.com": [
           {
-            "startTime": 1622630016913,
-            "executionTime": 628,
+            "startTime": 1676026069117,
+            "executionTime": 721,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "1352234262"
+                      "id": "3964390591"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -37,15 +49,20 @@
         ],
         "Monday.com1": [
           {
-            "startTime": 1622630017541,
-            "executionTime": 253,
+            "startTime": 1676026069838,
+            "executionTime": 296,
+            "source": [
+              {
+                "previousNode": "Monday.com"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "1352234262",
-                      "name": "Board1622630016915",
+                      "id": "3964390591",
+                      "name": "Board1676026069206",
                       "description": {
                         "object": true
                       },
@@ -57,6 +74,9 @@
                       "owner": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -66,15 +86,20 @@
         ],
         "Monday.com2": [
           {
-            "startTime": 1622630017794,
-            "executionTime": 234,
+            "startTime": 1676026070134,
+            "executionTime": 266,
+            "source": [
+              {
+                "previousNode": "Monday.com1"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "1352234262",
-                      "name": "Board1622630016915",
+                      "id": "3964390591",
+                      "name": "Board1676026069206",
                       "description": {
                         "object": true
                       },
@@ -86,6 +111,9 @@
                       "owner": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -95,14 +123,22 @@
         ],
         "Monday.com4": [
           {
-            "startTime": 1622630018028,
-            "executionTime": 315,
+            "startTime": 1676026070401,
+            "executionTime": 354,
+            "source": [
+              {
+                "previousNode": "Monday.com2"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "column1622630018028"
+                      "id": "boolean"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -112,14 +148,22 @@
         ],
         "Monday.com6": [
           {
-            "startTime": 1622630018343,
-            "executionTime": 649,
+            "startTime": 1676026070755,
+            "executionTime": 662,
+            "source": [
+              {
+                "previousNode": "Monday.com4"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "group1622630018343"
+                      "id": "group1676026070757"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -129,14 +173,22 @@
         ],
         "Monday.com9": [
           {
-            "startTime": 1622630018992,
-            "executionTime": 351,
+            "startTime": 1676026071418,
+            "executionTime": 384,
+            "source": [
+              {
+                "previousNode": "Monday.com6"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "1352234313"
+                      "id": "3964390840"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -146,14 +198,22 @@
         ],
         "Monday.com10": [
           {
-            "startTime": 1622630019344,
-            "executionTime": 399,
+            "startTime": 1676026071802,
+            "executionTime": 430,
+            "source": [
+              {
+                "previousNode": "Monday.com9"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "1036286612"
+                      "id": "1971136188"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -163,14 +223,22 @@
         ],
         "Monday.com11": [
           {
-            "startTime": 1622630019744,
-            "executionTime": 362,
+            "startTime": 1676026072233,
+            "executionTime": 468,
+            "source": [
+              {
+                "previousNode": "Monday.com10"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "1352234313"
+                      "id": "3964390840"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -180,20 +248,28 @@
         ],
         "Monday.com12": [
           {
-            "startTime": 1622630020106,
-            "executionTime": 321,
+            "startTime": 1676026072701,
+            "executionTime": 254,
+            "source": [
+              {
+                "previousNode": "Monday.com11"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "1352234313",
-                      "name": "Item1622630018992",
-                      "created_at": "2021-06-02T10:33:39Z",
+                      "id": "3964390840",
+                      "name": "Item1676026071421",
+                      "created_at": "2023-02-10T10:47:51Z",
                       "state": "active",
                       "column_values": [
                         "json array"
                       ]
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -203,20 +279,28 @@
         ],
         "Monday.com13": [
           {
-            "startTime": 1622630020427,
-            "executionTime": 276,
+            "startTime": 1676026072955,
+            "executionTime": 253,
+            "source": [
+              {
+                "previousNode": "Monday.com12"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "1352234313",
-                      "name": "Item1622630018992",
-                      "created_at": "2021-06-02T10:33:39Z",
+                      "id": "3964390840",
+                      "name": "Item1676026071421",
+                      "created_at": "2023-02-10T10:47:51Z",
                       "state": "active",
                       "column_values": [
                         "json array"
                       ]
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -226,8 +310,13 @@
         ],
         "Monday.com14": [
           {
-            "startTime": 1622630020703,
-            "executionTime": 336,
+            "startTime": 1676026073209,
+            "executionTime": 263,
+            "source": [
+              {
+                "previousNode": "Monday.com13"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -241,14 +330,22 @@
         ],
         "Monday.com15": [
           {
-            "startTime": 1622630021039,
-            "executionTime": 273,
+            "startTime": 1676026073472,
+            "executionTime": 414,
+            "source": [
+              {
+                "previousNode": "Monday.com14"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "1352234313"
+                      "id": "3964390840"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -258,14 +355,22 @@
         ],
         "Monday.com16": [
           {
-            "startTime": 1622630021312,
-            "executionTime": 361,
+            "startTime": 1676026073887,
+            "executionTime": 764,
+            "source": [
+              {
+                "previousNode": "Monday.com15"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "1352234313"
+                      "id": "3964390840"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -275,14 +380,22 @@
         ],
         "Monday.com7": [
           {
-            "startTime": 1622630021674,
-            "executionTime": 378,
+            "startTime": 1676026074652,
+            "executionTime": 552,
+            "source": [
+              {
+                "previousNode": "Monday.com16"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "group1622630018343"
+                      "id": "group1676026070757"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -292,8 +405,13 @@
         ],
         "Monday.com8": [
           {
-            "startTime": 1622630022052,
-            "executionTime": 320,
+            "startTime": 1676026075204,
+            "executionTime": 504,
+            "source": [
+              {
+                "previousNode": "Monday.com7"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -306,6 +424,9 @@
                       "archived": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -315,8 +436,13 @@
         ],
         "Monday.com5": [
           {
-            "startTime": 1622630022372,
-            "executionTime": 450,
+            "startTime": 1676026075709,
+            "executionTime": 240,
+            "source": [
+              {
+                "previousNode": "Monday.com8"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -327,15 +453,21 @@
                       "type": "name",
                       "settings_str": "{}",
                       "archived": false
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   },
                   {
                     "json": {
-                      "id": "column1622630018028",
-                      "title": "Column1622630018028",
+                      "id": "boolean",
+                      "title": "Column1676026070402",
                       "type": "boolean",
                       "settings_str": "{}",
                       "archived": false
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -345,8 +477,16 @@
         ],
         "Merge": [
           {
-            "startTime": 1622630022822,
-            "executionTime": 0,
+            "startTime": 1676026075949,
+            "executionTime": 1,
+            "source": [
+              {
+                "previousNode": "Monday.com5"
+              },
+              {
+                "previousNode": "Monday.com5"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -360,14 +500,22 @@
         ],
         "Monday.com3": [
           {
-            "startTime": 1622630022822,
-            "executionTime": 642,
+            "startTime": 1676026075950,
+            "executionTime": 391,
+            "source": [
+              {
+                "previousNode": "Merge"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "1352234262"
+                      "id": "3964390591"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -381,11 +529,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-02T10:33:36.910Z",
-  "stoppedAt": "2021-06-02T10:33:43.464Z",
+  "startedAt": "2023-02-10T10:47:49.112Z",
+  "stoppedAt": "2023-02-10T10:47:56.341Z",
   "finished": true
 }

@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622630021608,
-            "executionTime": 0,
+            "startTime": 1676026072435,
+            "executionTime": 1,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,8 +24,13 @@
         ],
         "Yourls": [
           {
-            "startTime": 1622630021609,
-            "executionTime": 103,
+            "startTime": 1676026072436,
+            "executionTime": 122,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -31,10 +40,13 @@
                         "object": true
                       },
                       "status": "success",
-                      "message": "https://n8n.io/1622630021610 added to database",
+                      "message": "https://n8n.io/1676026072449 added to database",
                       "title": "n8n-ulr with random suffix",
-                      "shorturl": "http://157.90.159.163:8095/2a",
+                      "shorturl": "http://157.90.159.163:8095/ac",
                       "statusCode": 200
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -44,19 +56,27 @@
         ],
         "Yourls1": [
           {
-            "startTime": 1622630021712,
-            "executionTime": 89,
+            "startTime": 1676026072558,
+            "executionTime": 76,
+            "source": [
+              {
+                "previousNode": "Yourls"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "shorturl": "http://157.90.159.163:8095/2a",
-                      "url": "https://n8n.io/1622630021610",
+                      "shorturl": "http://157.90.159.163:8095/ac",
+                      "url": "https://n8n.io/1676026072449",
                       "title": "n8n-ulr with random suffix",
-                      "timestamp": "2021-06-02 10:33:41",
-                      "ip": "95.90.244.31",
+                      "timestamp": "2023-02-10 10:47:52",
+                      "ip": "85.146.179.24",
                       "clicks": "0"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -66,19 +86,27 @@
         ],
         "Yourls2": [
           {
-            "startTime": 1622630021801,
-            "executionTime": 127,
+            "startTime": 1676026072634,
+            "executionTime": 67,
+            "source": [
+              {
+                "previousNode": "Yourls1"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "keyword": "2a",
-                      "shorturl": "http://157.90.159.163:8095/2a",
-                      "longurl": "https://n8n.io/1622630021610",
+                      "keyword": "ac",
+                      "shorturl": "http://157.90.159.163:8095/ac",
+                      "longurl": "https://n8n.io/1676026072449",
                       "title": "n8n-ulr with random suffix",
                       "message": "success",
                       "statusCode": 200
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -92,11 +120,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-02T10:33:41.606Z",
-  "stoppedAt": "2021-06-02T10:33:41.928Z",
+  "startedAt": "2023-02-10T10:47:52.434Z",
+  "stoppedAt": "2023-02-10T10:47:52.701Z",
   "finished": true
 }

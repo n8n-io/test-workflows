@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622630065915,
+            "startTime": 1676026077575,
             "executionTime": 1,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,19 +24,25 @@
         ],
         "Vonage": [
           {
-            "startTime": 1622630065917,
-            "executionTime": 581,
+            "startTime": 1676026077576,
+            "executionTime": 160,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "to": "21624827732",
-                      "message-id": "13000001B51F2BCA",
-                      "status": "0",
-                      "remaining-balance": "6.18670000",
-                      "message-price": "0.09250000",
-                      "network": "60503"
+                      "status": "9",
+                      "error-text": "Quota Exceeded - rejected",
+                      "to": "010",
+                      "messagePrice": "0.05000000"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -46,11 +56,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-02T10:34:25.914Z",
-  "stoppedAt": "2021-06-02T10:34:26.498Z",
+  "startedAt": "2023-02-10T10:47:57.574Z",
+  "stoppedAt": "2023-02-10T10:47:57.736Z",
   "finished": true
 }
