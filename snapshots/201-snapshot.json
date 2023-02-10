@@ -5,8 +5,8 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1676027890792,
-            "executionTime": 1,
+            "startTime": 1676027948775,
+            "executionTime": 0,
             "source": [],
             "data": {
               "main": [
@@ -22,10 +22,10 @@
             }
           }
         ],
-        "Set id & email": [
+        "Set": [
           {
-            "startTime": 1676027890793,
-            "executionTime": 43,
+            "startTime": 1676027948776,
+            "executionTime": 27,
             "source": [
               {
                 "previousNode": "Start"
@@ -36,8 +36,7 @@
                 [
                   {
                     "json": {
-                      "id": 274,
-                      "email": "fake1676027890836@email.com"
+                      "userId": "User_1676027948803"
                     },
                     "pairedItem": {
                       "item": 0
@@ -48,13 +47,13 @@
             }
           }
         ],
-        "Vero": [
+        "Iterable": [
           {
-            "startTime": 1676027890836,
-            "executionTime": 463,
+            "startTime": 1676027948803,
+            "executionTime": 453,
             "source": [
               {
-                "previousNode": "Set id & email"
+                "previousNode": "Set"
               }
             ],
             "data": {
@@ -62,8 +61,11 @@
                 [
                   {
                     "json": {
-                      "status": 200,
-                      "message": "Success."
+                      "msg": "User successfully created/updated.",
+                      "code": "Success",
+                      "params": {
+                        "object": true
+                      }
                     },
                     "pairedItem": {
                       "item": 0
@@ -74,13 +76,13 @@
             }
           }
         ],
-        "Vero1": [
+        "Sleep 0.5 second": [
           {
-            "startTime": 1676027891299,
-            "executionTime": 293,
+            "startTime": 1676027949257,
+            "executionTime": 514,
             "source": [
               {
-                "previousNode": "Vero"
+                "previousNode": "Iterable"
               }
             ],
             "data": {
@@ -88,8 +90,38 @@
                 [
                   {
                     "json": {
-                      "status": 200,
-                      "message": "Success."
+                      "msg": "User successfully created/updated.",
+                      "code": "Success",
+                      "params": {
+                        "object": true
+                      }
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    },
+                    "index": 0
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Iterable1": [
+          {
+            "startTime": 1676027949772,
+            "executionTime": 305,
+            "source": [
+              {
+                "previousNode": "Sleep 0.5 second"
+              }
+            ],
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "email": "user_1676027948803+-134382405@placeholder.email",
+                      "userId": "User_1676027948803"
                     },
                     "pairedItem": {
                       "item": 0
@@ -100,13 +132,13 @@
             }
           }
         ],
-        "Vero2": [
+        "Iterable2": [
           {
-            "startTime": 1676027891592,
-            "executionTime": 291,
+            "startTime": 1676027950078,
+            "executionTime": 439,
             "source": [
               {
-                "previousNode": "Vero1"
+                "previousNode": "Iterable1"
               }
             ],
             "data": {
@@ -114,8 +146,20 @@
                 [
                   {
                     "json": {
-                      "status": 200,
-                      "message": "Success."
+                      "successCount": 1,
+                      "failCount": 0,
+                      "invalidEmails": [
+                        "json array"
+                      ],
+                      "invalidUserIds": [
+                        "json array"
+                      ],
+                      "filteredOutFields": [
+                        "json array"
+                      ],
+                      "createdFields": [
+                        "json array"
+                      ]
                     },
                     "pairedItem": {
                       "item": 0
@@ -126,13 +170,13 @@
             }
           }
         ],
-        "Vero3": [
+        "Iterable3": [
           {
-            "startTime": 1676027891883,
-            "executionTime": 293,
+            "startTime": 1676027950518,
+            "executionTime": 311,
             "source": [
               {
-                "previousNode": "Vero2"
+                "previousNode": "Iterable2"
               }
             ],
             "data": {
@@ -140,8 +184,20 @@
                 [
                   {
                     "json": {
-                      "status": 200,
-                      "message": "Success."
+                      "successCount": 1,
+                      "failCount": 0,
+                      "invalidEmails": [
+                        "json array"
+                      ],
+                      "invalidUserIds": [
+                        "json array"
+                      ],
+                      "filteredOutFields": [
+                        "json array"
+                      ],
+                      "createdFields": [
+                        "json array"
+                      ]
                     },
                     "pairedItem": {
                       "item": 0
@@ -152,13 +208,13 @@
             }
           }
         ],
-        "Vero4": [
+        "Iterable4": [
           {
-            "startTime": 1676027892177,
-            "executionTime": 394,
+            "startTime": 1676027950830,
+            "executionTime": 346,
             "source": [
               {
-                "previousNode": "Vero3"
+                "previousNode": "Iterable3"
               }
             ],
             "data": {
@@ -166,8 +222,23 @@
                 [
                   {
                     "json": {
-                      "status": 200,
-                      "message": "Success."
+                      "successCount": 1,
+                      "failCount": 0,
+                      "invalidEmails": [
+                        "json array"
+                      ],
+                      "invalidUserIds": [
+                        "json array"
+                      ],
+                      "disallowedEventNames": [
+                        "json array"
+                      ],
+                      "filteredOutFields": [
+                        "json array"
+                      ],
+                      "createdFields": [
+                        "json array"
+                      ]
                     },
                     "pairedItem": {
                       "item": 0
@@ -178,13 +249,13 @@
             }
           }
         ],
-        "Vero5": [
+        "Iterable5": [
           {
-            "startTime": 1676027892572,
-            "executionTime": 300,
+            "startTime": 1676027951176,
+            "executionTime": 417,
             "source": [
               {
-                "previousNode": "Vero4"
+                "previousNode": "Iterable4"
               }
             ],
             "data": {
@@ -192,60 +263,11 @@
                 [
                   {
                     "json": {
-                      "status": 200,
-                      "message": "Success."
-                    },
-                    "pairedItem": {
-                      "item": 0
-                    }
-                  }
-                ]
-              ]
-            }
-          }
-        ],
-        "Vero7": [
-          {
-            "startTime": 1676027892872,
-            "executionTime": 297,
-            "source": [
-              {
-                "previousNode": "Vero5"
-              }
-            ],
-            "data": {
-              "main": [
-                [
-                  {
-                    "json": {
-                      "status": 200,
-                      "message": "Success."
-                    },
-                    "pairedItem": {
-                      "item": 0
-                    }
-                  }
-                ]
-              ]
-            }
-          }
-        ],
-        "Vero6": [
-          {
-            "startTime": 1676027893169,
-            "executionTime": 425,
-            "source": [
-              {
-                "previousNode": "Vero7"
-              }
-            ],
-            "data": {
-              "main": [
-                [
-                  {
-                    "json": {
-                      "status": 200,
-                      "message": "Success."
+                      "msg": "",
+                      "code": "Success",
+                      "params": {
+                        "object": true
+                      }
                     },
                     "pairedItem": {
                       "item": 0
@@ -257,7 +279,7 @@
           }
         ]
       },
-      "lastNodeExecuted": "Vero6"
+      "lastNodeExecuted": "Iterable5"
     },
     "executionData": {
       "contextData": {},
@@ -267,7 +289,7 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2023-02-10T11:18:10.786Z",
-  "stoppedAt": "2023-02-10T11:18:13.595Z",
+  "startedAt": "2023-02-10T11:19:08.772Z",
+  "stoppedAt": "2023-02-10T11:19:11.593Z",
   "finished": true
 }

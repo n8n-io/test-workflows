@@ -5,7 +5,7 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1676026071272,
+            "startTime": 1676027879037,
             "executionTime": 1,
             "source": [],
             "data": {
@@ -24,8 +24,8 @@
         ],
         "Set": [
           {
-            "startTime": 1676026071274,
-            "executionTime": 26,
+            "startTime": 1676027879038,
+            "executionTime": 31,
             "source": [
               {
                 "previousNode": "Start"
@@ -36,8 +36,8 @@
                 [
                   {
                     "json": {
-                      "id": 488,
-                      "name": "Name1676026071300"
+                      "id": 530,
+                      "name": "Name1676027879069"
                     },
                     "pairedItem": {
                       "item": 0
@@ -50,8 +50,8 @@
         ],
         "Postgres": [
           {
-            "startTime": 1676026071300,
-            "executionTime": 158,
+            "startTime": 1676027879070,
+            "executionTime": 141,
             "source": [
               {
                 "previousNode": "Set"
@@ -62,8 +62,8 @@
                 [
                   {
                     "json": {
-                      "id": 488,
-                      "name": "Name1676026071300"
+                      "id": 530,
+                      "name": "Name1676027879069"
                     },
                     "pairedItem": {
                       "item": 0
@@ -76,8 +76,8 @@
         ],
         "Set1": [
           {
-            "startTime": 1676026071459,
-            "executionTime": 10,
+            "startTime": 1676027879212,
+            "executionTime": 0,
             "source": [
               {
                 "previousNode": "Postgres"
@@ -88,8 +88,8 @@
                 [
                   {
                     "json": {
-                      "id": 488,
-                      "name": "UpdatedName1676026071468"
+                      "id": 530,
+                      "name": "UpdatedName1676027879212"
                     },
                     "pairedItem": {
                       "item": 0
@@ -102,8 +102,8 @@
         ],
         "Postgres1": [
           {
-            "startTime": 1676026071470,
-            "executionTime": 128,
+            "startTime": 1676027879213,
+            "executionTime": 138,
             "source": [
               {
                 "previousNode": "Set1"
@@ -114,8 +114,8 @@
                 [
                   {
                     "json": {
-                      "id": 488,
-                      "name": "UpdatedName1676026071468"
+                      "id": 530,
+                      "name": "UpdatedName1676027879212"
                     },
                     "pairedItem": {
                       "item": 0
@@ -128,8 +128,8 @@
         ],
         "Postgres2": [
           {
-            "startTime": 1676026071599,
-            "executionTime": 147,
+            "startTime": 1676027879352,
+            "executionTime": 136,
             "source": [
               {
                 "previousNode": "Postgres1"
@@ -272,8 +272,8 @@
                   },
                   {
                     "json": {
-                      "id": 488,
-                      "name": "UpdatedName1676026071468"
+                      "id": 530,
+                      "name": "UpdatedName1676027879212"
                     },
                     "pairedItem": {
                       "item": 0
@@ -299,8 +299,8 @@
         ],
         "Postgres3": [
           {
-            "startTime": 1676026071746,
-            "executionTime": 135,
+            "startTime": 1676027879494,
+            "executionTime": 161,
             "source": [
               {
                 "previousNode": "Postgres2"
@@ -324,7 +324,7 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2023-02-10T10:47:51.267Z",
-  "stoppedAt": "2023-02-10T10:47:51.882Z",
+  "startedAt": "2023-02-10T11:17:59.035Z",
+  "stoppedAt": "2023-02-10T11:17:59.655Z",
   "finished": true
 }

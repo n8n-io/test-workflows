@@ -5,8 +5,8 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1676026075549,
-            "executionTime": 0,
+            "startTime": 1676027883340,
+            "executionTime": 1,
             "source": [],
             "data": {
               "main": [
@@ -24,7 +24,7 @@
         ],
         "Set": [
           {
-            "startTime": 1676026075550,
+            "startTime": 1676027883341,
             "executionTime": 14,
             "source": [
               {
@@ -36,9 +36,9 @@
                 [
                   {
                     "json": {
-                      "temperature": 24.77599023041337,
+                      "temperature": 74.07633713552002,
                       "location": "n8n",
-                      "time": "2023-02-10T10:47:55.564Z"
+                      "time": "2023-02-10T11:18:03.355Z"
                     },
                     "pairedItem": {
                       "item": 0
@@ -51,8 +51,8 @@
         ],
         "TimescaleDB": [
           {
-            "startTime": 1676026075565,
-            "executionTime": 173,
+            "startTime": 1676027883355,
+            "executionTime": 139,
             "source": [
               {
                 "previousNode": "Set"
@@ -63,9 +63,9 @@
                 [
                   {
                     "json": {
-                      "time": "2023-02-10T10:47:55.564Z",
+                      "time": "2023-02-10T11:18:03.355Z",
                       "location": "n8n",
-                      "temperature": 24.77599023041337
+                      "temperature": 74.07633713552002
                     },
                     "pairedItem": {
                       "item": 0
@@ -78,8 +78,8 @@
         ],
         "TimescaleDB2": [
           {
-            "startTime": 1676026075739,
-            "executionTime": 154,
+            "startTime": 1676027883495,
+            "executionTime": 136,
             "source": [
               {
                 "previousNode": "TimescaleDB"
@@ -90,9 +90,9 @@
                 [
                   {
                     "json": {
-                      "time": "2023-02-10T10:47:55.564Z",
+                      "time": "2023-02-10T11:18:03.355Z",
                       "location": "n8n",
-                      "temperature": 24.77599023041337
+                      "temperature": 74.07633713552002
                     },
                     "pairedItem": {
                       "item": 0
@@ -105,7 +105,7 @@
         ],
         "Set1": [
           {
-            "startTime": 1676026075894,
+            "startTime": 1676027883632,
             "executionTime": 0,
             "source": [
               {
@@ -117,9 +117,9 @@
                 [
                   {
                     "json": {
-                      "time": "2023-02-10T10:47:55.564Z",
+                      "time": "2023-02-10T11:18:03.355Z",
                       "location": "updatedn8n",
-                      "temperature": 24.77599023041337
+                      "temperature": 74.07633713552002
                     },
                     "pairedItem": {
                       "item": 0
@@ -132,8 +132,8 @@
         ],
         "TimescaleDB1": [
           {
-            "startTime": 1676026075894,
-            "executionTime": 204,
+            "startTime": 1676027883632,
+            "executionTime": 197,
             "source": [
               {
                 "previousNode": "Set1"
@@ -144,9 +144,9 @@
                 [
                   {
                     "json": {
-                      "time": "2023-02-10T10:47:55.564Z",
+                      "time": "2023-02-10T11:18:03.355Z",
                       "location": "updatedn8n",
-                      "temperature": "24.77599023041337"
+                      "temperature": "74.07633713552002"
                     },
                     "pairedItem": {
                       "item": 0
@@ -159,8 +159,8 @@
         ],
         "TimescaleDB3": [
           {
-            "startTime": 1676026076098,
-            "executionTime": 183,
+            "startTime": 1676027883830,
+            "executionTime": 148,
             "source": [
               {
                 "previousNode": "TimescaleDB1"
@@ -184,7 +184,7 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2023-02-10T10:47:55.547Z",
-  "stoppedAt": "2023-02-10T10:47:56.281Z",
+  "startedAt": "2023-02-10T11:18:03.339Z",
+  "stoppedAt": "2023-02-10T11:18:03.978Z",
   "finished": true
 }

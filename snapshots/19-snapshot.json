@@ -1,0 +1,1232 @@
+{
+  "data": {
+    "startData": {},
+    "resultData": {
+      "runData": {
+        "Start": [
+          {
+            "startTime": 1676027850481,
+            "executionTime": 0,
+            "source": [],
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Sentry.io": [
+          {
+            "startTime": 1676027850482,
+            "executionTime": 1079,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": "4504655481208832",
+                      "slug": "org1676027850547",
+                      "status": {
+                        "object": true
+                      },
+                      "name": "Org1676027850547",
+                      "dateCreated": "2023-02-10T11:17:31.061866Z",
+                      "isEarlyAdopter": false,
+                      "require2FA": false,
+                      "requireEmailVerification": false,
+                      "avatar": {
+                        "object": true
+                      },
+                      "features": [
+                        "json array"
+                      ],
+                      "links": {
+                        "object": true
+                      },
+                      "hasAuthProvider": false
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Sentry.io3": [
+          {
+            "startTime": 1676027851561,
+            "executionTime": 524,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": "2190853",
+                      "slug": "team1676027851561",
+                      "name": "Team1676027851561",
+                      "dateCreated": "2023-02-10T11:17:32.059241Z",
+                      "isMember": true,
+                      "teamRole": "admin",
+                      "flags": {
+                        "object": true
+                      },
+                      "hasAccess": true,
+                      "isPending": false,
+                      "memberCount": 1,
+                      "avatar": {
+                        "object": true
+                      },
+                      "orgRole": {
+                        "object": true
+                      }
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Sentry.io22": [
+          {
+            "startTime": 1676027852085,
+            "executionTime": 702,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": "4504655481274368",
+                      "slug": "projecttest1676027852085",
+                      "name": "ProjectTest1676027852085",
+                      "isPublic": false,
+                      "isBookmarked": false,
+                      "color": "#3f57bf",
+                      "dateCreated": "2023-02-10T11:17:32.624994Z",
+                      "firstEvent": {
+                        "object": true
+                      },
+                      "firstTransactionEvent": false,
+                      "hasSessions": false,
+                      "hasProfiles": false,
+                      "hasReplays": false,
+                      "hasMinifiedStackTrace": false,
+                      "features": [
+                        "json array"
+                      ],
+                      "status": "active",
+                      "platform": {
+                        "object": true
+                      },
+                      "isInternal": false,
+                      "isMember": true,
+                      "hasAccess": true,
+                      "avatar": {
+                        "object": true
+                      }
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Sentry.io1": [
+          {
+            "startTime": 1676027852788,
+            "executionTime": 463,
+            "source": [
+              {
+                "previousNode": "Sentry.io"
+              }
+            ],
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": "4504655481208832",
+                      "slug": "org1676027850547",
+                      "status": {
+                        "object": true
+                      },
+                      "name": "Org1676027850547",
+                      "dateCreated": "2023-02-10T11:17:31.061866Z",
+                      "isEarlyAdopter": false,
+                      "require2FA": false,
+                      "requireEmailVerification": false,
+                      "avatar": {
+                        "object": true
+                      },
+                      "features": [
+                        "json array"
+                      ],
+                      "links": {
+                        "object": true
+                      },
+                      "hasAuthProvider": false,
+                      "experiments": {
+                        "object": true
+                      },
+                      "quota": {
+                        "object": true
+                      },
+                      "isDefault": false,
+                      "defaultRole": "member",
+                      "availableRoles": [
+                        "json array"
+                      ],
+                      "orgRoleList": [
+                        "json array"
+                      ],
+                      "teamRoleList": [
+                        "json array"
+                      ],
+                      "openMembership": true,
+                      "allowSharedIssues": true,
+                      "enhancedPrivacy": false,
+                      "dataScrubber": false,
+                      "dataScrubberDefaults": false,
+                      "sensitiveFields": [
+                        "json array"
+                      ],
+                      "safeFields": [
+                        "json array"
+                      ],
+                      "storeCrashReports": 0,
+                      "attachmentsRole": "member",
+                      "debugFilesRole": "admin",
+                      "eventsMemberAdmin": true,
+                      "alertsMemberWrite": true,
+                      "scrubIPAddresses": false,
+                      "scrapeJavaScript": true,
+                      "allowJoinRequests": true,
+                      "relayPiiConfig": {
+                        "object": true
+                      },
+                      "codecovAccess": false,
+                      "trustedRelays": [
+                        "json array"
+                      ],
+                      "access": [
+                        "json array"
+                      ],
+                      "role": "owner",
+                      "orgRole": "owner",
+                      "pendingAccessRequests": 0,
+                      "onboardingTasks": [
+                        "json array"
+                      ],
+                      "teams": [
+                        "json array"
+                      ],
+                      "projects": [
+                        "json array"
+                      ]
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Sentry.io4": [
+          {
+            "startTime": 1676027853251,
+            "executionTime": 556,
+            "source": [
+              {
+                "previousNode": "Sentry.io3"
+              }
+            ],
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": "2190853",
+                      "slug": "team1676027851561",
+                      "name": "Team1676027851561",
+                      "dateCreated": "2023-02-10T11:17:32.059241Z",
+                      "isMember": true,
+                      "teamRole": "admin",
+                      "flags": {
+                        "object": true
+                      },
+                      "hasAccess": true,
+                      "isPending": false,
+                      "memberCount": 1,
+                      "avatar": {
+                        "object": true
+                      },
+                      "orgRole": {
+                        "object": true
+                      },
+                      "organization": {
+                        "object": true
+                      }
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Sentry.io6": [
+          {
+            "startTime": 1676027853808,
+            "executionTime": 887,
+            "source": [
+              {
+                "previousNode": "Sentry.io22"
+              }
+            ],
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": "4504655481274368",
+                      "slug": "projecttest1676027852085",
+                      "name": "ProjectTest1676027852085",
+                      "isPublic": false,
+                      "isBookmarked": false,
+                      "color": "#3f57bf",
+                      "dateCreated": "2023-02-10T11:17:32.624994Z",
+                      "firstEvent": {
+                        "object": true
+                      },
+                      "firstTransactionEvent": false,
+                      "hasSessions": false,
+                      "hasProfiles": false,
+                      "hasReplays": false,
+                      "hasMinifiedStackTrace": false,
+                      "features": [
+                        "json array"
+                      ],
+                      "status": "active",
+                      "platform": {
+                        "object": true
+                      },
+                      "isInternal": false,
+                      "isMember": true,
+                      "hasAccess": true,
+                      "avatar": {
+                        "object": true
+                      },
+                      "organization": {
+                        "object": true
+                      }
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Sentry.io18": [
+          {
+            "startTime": 1676027854696,
+            "executionTime": 449,
+            "source": [
+              {
+                "previousNode": "Sentry.io1"
+              }
+            ],
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": "4504655481208832",
+                      "slug": "org1676027850547",
+                      "status": {
+                        "object": true
+                      },
+                      "name": "Org1676027850547",
+                      "dateCreated": "2023-02-10T11:17:31.061866Z",
+                      "isEarlyAdopter": false,
+                      "require2FA": false,
+                      "requireEmailVerification": false,
+                      "avatar": {
+                        "object": true
+                      },
+                      "features": [
+                        "json array"
+                      ],
+                      "links": {
+                        "object": true
+                      },
+                      "hasAuthProvider": false,
+                      "experiments": {
+                        "object": true
+                      },
+                      "quota": {
+                        "object": true
+                      },
+                      "isDefault": false,
+                      "defaultRole": "member",
+                      "availableRoles": [
+                        "json array"
+                      ],
+                      "orgRoleList": [
+                        "json array"
+                      ],
+                      "teamRoleList": [
+                        "json array"
+                      ],
+                      "openMembership": true,
+                      "allowSharedIssues": true,
+                      "enhancedPrivacy": false,
+                      "dataScrubber": false,
+                      "dataScrubberDefaults": false,
+                      "sensitiveFields": [
+                        "json array"
+                      ],
+                      "safeFields": [
+                        "json array"
+                      ],
+                      "storeCrashReports": 0,
+                      "attachmentsRole": "member",
+                      "debugFilesRole": "admin",
+                      "eventsMemberAdmin": true,
+                      "alertsMemberWrite": true,
+                      "scrubIPAddresses": false,
+                      "scrapeJavaScript": true,
+                      "allowJoinRequests": true,
+                      "relayPiiConfig": {
+                        "object": true
+                      },
+                      "codecovAccess": false,
+                      "trustedRelays": [
+                        "json array"
+                      ],
+                      "access": [
+                        "json array"
+                      ],
+                      "role": "owner",
+                      "orgRole": "owner",
+                      "pendingAccessRequests": 0,
+                      "onboardingTasks": [
+                        "json array"
+                      ],
+                      "teams": [
+                        "json array"
+                      ],
+                      "projects": [
+                        "json array"
+                      ]
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Sentry.io16": [
+          {
+            "startTime": 1676027855145,
+            "executionTime": 660,
+            "source": [
+              {
+                "previousNode": "Sentry.io4"
+              }
+            ],
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": "2190853",
+                      "slug": "team1676027851561",
+                      "name": "Team1676027851561",
+                      "dateCreated": "2023-02-10T11:17:32.059241Z",
+                      "isMember": true,
+                      "teamRole": "admin",
+                      "flags": {
+                        "object": true
+                      },
+                      "hasAccess": true,
+                      "isPending": false,
+                      "memberCount": 1,
+                      "avatar": {
+                        "object": true
+                      },
+                      "orgRole": {
+                        "object": true
+                      }
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Sentry.io7": [
+          {
+            "startTime": 1676027855805,
+            "executionTime": 824,
+            "source": [
+              {
+                "previousNode": "Sentry.io6"
+              }
+            ],
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": "4504655481274368",
+                      "slug": "projecttest1676027852085",
+                      "name": "ProjectTest1676027852085",
+                      "isPublic": false,
+                      "isBookmarked": false,
+                      "color": "#3f57bf",
+                      "dateCreated": "2023-02-10T11:17:32.624994Z",
+                      "firstEvent": {
+                        "object": true
+                      },
+                      "firstTransactionEvent": false,
+                      "hasSessions": false,
+                      "hasProfiles": false,
+                      "hasReplays": false,
+                      "hasMinifiedStackTrace": false,
+                      "features": [
+                        "json array"
+                      ],
+                      "status": "active",
+                      "platform": {
+                        "object": true
+                      },
+                      "isInternal": false,
+                      "isMember": true,
+                      "hasAccess": true,
+                      "avatar": {
+                        "object": true
+                      },
+                      "team": {
+                        "object": true
+                      },
+                      "teams": [
+                        "json array"
+                      ],
+                      "latestRelease": {
+                        "object": true
+                      },
+                      "options": {
+                        "object": true
+                      },
+                      "digestsMinDelay": 300,
+                      "digestsMaxDelay": 1800,
+                      "subjectPrefix": "",
+                      "allowedDomains": [
+                        "json array"
+                      ],
+                      "resolveAge": 0,
+                      "dataScrubber": true,
+                      "dataScrubberDefaults": true,
+                      "safeFields": [
+                        "json array"
+                      ],
+                      "storeCrashReports": {
+                        "object": true
+                      },
+                      "sensitiveFields": [
+                        "json array"
+                      ],
+                      "subjectTemplate": "$shortID - $title",
+                      "securityToken": "85a9548ca93411ed91e6c63b5b579e29",
+                      "securityTokenHeader": {
+                        "object": true
+                      },
+                      "verifySSL": false,
+                      "scrubIPAddresses": false,
+                      "scrapeJavaScript": true,
+                      "groupingConfig": "newstyle:2019-10-29",
+                      "groupingEnhancements": "",
+                      "groupingEnhancementsBase": {
+                        "object": true
+                      },
+                      "secondaryGroupingExpiry": 0,
+                      "secondaryGroupingConfig": {
+                        "object": true
+                      },
+                      "groupingAutoUpdate": true,
+                      "fingerprintingRules": "",
+                      "organization": {
+                        "object": true
+                      },
+                      "plugins": [
+                        "json array"
+                      ],
+                      "platforms": [
+                        "json array"
+                      ],
+                      "processingIssues": 0,
+                      "defaultEnvironment": {
+                        "object": true
+                      },
+                      "relayPiiConfig": {
+                        "object": true
+                      },
+                      "builtinSymbolSources": [
+                        "json array"
+                      ],
+                      "dynamicSampling": {
+                        "object": true
+                      },
+                      "dynamicSamplingBiases": [
+                        "json array"
+                      ],
+                      "performanceIssueCreationRate": 1,
+                      "eventProcessing": {
+                        "object": true
+                      },
+                      "symbolSources": "[]"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Sentry.io2": [
+          {
+            "startTime": 1676027856630,
+            "executionTime": 21717,
+            "source": [
+              {
+                "previousNode": "Sentry.io18"
+              }
+            ],
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": "4504655481208832",
+                      "slug": "org1676027850547",
+                      "status": {
+                        "object": true
+                      },
+                      "name": "Org1676027850547",
+                      "dateCreated": "2023-02-10T11:17:31.061866Z",
+                      "isEarlyAdopter": false,
+                      "require2FA": false,
+                      "requireEmailVerification": false,
+                      "avatar": {
+                        "object": true
+                      },
+                      "features": [
+                        "json array"
+                      ],
+                      "links": {
+                        "object": true
+                      },
+                      "hasAuthProvider": false
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Sentry.io5": [
+          {
+            "startTime": 1676027878347,
+            "executionTime": 801,
+            "source": [
+              {
+                "previousNode": "Sentry.io16"
+              }
+            ],
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": "712183",
+                      "slug": "n8nteam",
+                      "name": "n8nteam",
+                      "dateCreated": "2021-04-08T08:23:12.773086Z",
+                      "isMember": true,
+                      "teamRole": "admin",
+                      "flags": {
+                        "object": true
+                      },
+                      "hasAccess": true,
+                      "isPending": false,
+                      "memberCount": 1,
+                      "avatar": {
+                        "object": true
+                      },
+                      "orgRole": {
+                        "object": true
+                      },
+                      "externalTeams": [
+                        "json array"
+                      ],
+                      "projects": [
+                        "json array"
+                      ]
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Sentry.io19": [
+          {
+            "startTime": 1676027879150,
+            "executionTime": 849,
+            "source": [
+              {
+                "previousNode": "Sentry.io7"
+              }
+            ],
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": "4504655481274368",
+                      "slug": "projecttest1676027852085",
+                      "name": "ProjectTest1676027852085",
+                      "isPublic": false,
+                      "isBookmarked": false,
+                      "color": "#3f57bf",
+                      "dateCreated": "2023-02-10T11:17:32.624994Z",
+                      "firstEvent": {
+                        "object": true
+                      },
+                      "firstTransactionEvent": false,
+                      "hasSessions": false,
+                      "hasProfiles": false,
+                      "hasReplays": false,
+                      "hasMinifiedStackTrace": false,
+                      "features": [
+                        "json array"
+                      ],
+                      "status": "active",
+                      "platform": {
+                        "object": true
+                      },
+                      "isInternal": false,
+                      "isMember": true,
+                      "hasAccess": true,
+                      "avatar": {
+                        "object": true
+                      },
+                      "team": {
+                        "object": true
+                      },
+                      "teams": [
+                        "json array"
+                      ],
+                      "latestRelease": {
+                        "object": true
+                      },
+                      "options": {
+                        "object": true
+                      },
+                      "digestsMinDelay": 300,
+                      "digestsMaxDelay": 1800,
+                      "subjectPrefix": "",
+                      "allowedDomains": [
+                        "json array"
+                      ],
+                      "resolveAge": 0,
+                      "dataScrubber": true,
+                      "dataScrubberDefaults": true,
+                      "safeFields": [
+                        "json array"
+                      ],
+                      "storeCrashReports": {
+                        "object": true
+                      },
+                      "sensitiveFields": [
+                        "json array"
+                      ],
+                      "subjectTemplate": "$shortID - $title",
+                      "securityToken": "85a9548ca93411ed91e6c63b5b579e29",
+                      "securityTokenHeader": {
+                        "object": true
+                      },
+                      "verifySSL": false,
+                      "scrubIPAddresses": false,
+                      "scrapeJavaScript": true,
+                      "groupingConfig": "newstyle:2019-10-29",
+                      "groupingEnhancements": "",
+                      "groupingEnhancementsBase": {
+                        "object": true
+                      },
+                      "secondaryGroupingExpiry": 0,
+                      "secondaryGroupingConfig": {
+                        "object": true
+                      },
+                      "groupingAutoUpdate": true,
+                      "fingerprintingRules": "",
+                      "organization": {
+                        "object": true
+                      },
+                      "plugins": [
+                        "json array"
+                      ],
+                      "platforms": [
+                        "json array"
+                      ],
+                      "processingIssues": 0,
+                      "defaultEnvironment": {
+                        "object": true
+                      },
+                      "relayPiiConfig": {
+                        "object": true
+                      },
+                      "builtinSymbolSources": [
+                        "json array"
+                      ],
+                      "dynamicSampling": {
+                        "object": true
+                      },
+                      "dynamicSamplingBiases": {
+                        "object": true
+                      },
+                      "performanceIssueCreationRate": 1,
+                      "eventProcessing": {
+                        "object": true
+                      },
+                      "symbolSources": "[]"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Sentry.io17": [
+          {
+            "startTime": 1676027880001,
+            "executionTime": 557,
+            "source": [
+              {
+                "previousNode": "Sentry.io5"
+              }
+            ],
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "success": true
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Sentry.io13": [
+          {
+            "startTime": 1676027880558,
+            "executionTime": 799,
+            "source": [
+              {
+                "previousNode": "Sentry.io19"
+              }
+            ],
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": 635697500,
+                      "version": "1676027880560",
+                      "status": "open",
+                      "shortVersion": "1676027880560",
+                      "versionInfo": {
+                        "object": true
+                      },
+                      "ref": {
+                        "object": true
+                      },
+                      "url": "http://n8n.io",
+                      "dateReleased": {
+                        "object": true
+                      },
+                      "dateCreated": "2023-02-10T11:18:01.189320Z",
+                      "data": {
+                        "object": true
+                      },
+                      "newGroups": 0,
+                      "owner": {
+                        "object": true
+                      },
+                      "commitCount": 0,
+                      "lastCommit": {
+                        "object": true
+                      },
+                      "deployCount": 0,
+                      "lastDeploy": {
+                        "object": true
+                      },
+                      "authors": [
+                        "json array"
+                      ],
+                      "projects": [
+                        "json array"
+                      ],
+                      "firstEvent": {
+                        "object": true
+                      },
+                      "lastEvent": {
+                        "object": true
+                      },
+                      "currentProjectMeta": {
+                        "object": true
+                      },
+                      "userAgent": "axios/0.21.4"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Sentry.io14": [
+          {
+            "startTime": 1676027881357,
+            "executionTime": 636,
+            "source": [
+              {
+                "previousNode": "Sentry.io13"
+              }
+            ],
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": 635697500,
+                      "version": "1676027880560",
+                      "status": "open",
+                      "shortVersion": "1676027880560",
+                      "versionInfo": {
+                        "object": true
+                      },
+                      "ref": {
+                        "object": true
+                      },
+                      "url": "http://n8n.io",
+                      "dateReleased": {
+                        "object": true
+                      },
+                      "dateCreated": "2023-02-10T11:18:01.189320Z",
+                      "data": {
+                        "object": true
+                      },
+                      "newGroups": 0,
+                      "owner": {
+                        "object": true
+                      },
+                      "commitCount": 0,
+                      "lastCommit": {
+                        "object": true
+                      },
+                      "deployCount": 0,
+                      "lastDeploy": {
+                        "object": true
+                      },
+                      "authors": [
+                        "json array"
+                      ],
+                      "projects": [
+                        "json array"
+                      ],
+                      "firstEvent": {
+                        "object": true
+                      },
+                      "lastEvent": {
+                        "object": true
+                      },
+                      "currentProjectMeta": {
+                        "object": true
+                      },
+                      "userAgent": "axios/0.21.4"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Sentry.io15": [
+          {
+            "startTime": 1676027881993,
+            "executionTime": 1017,
+            "source": [
+              {
+                "previousNode": "Sentry.io14"
+              }
+            ],
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": 635697500,
+                      "version": "1676027880560",
+                      "status": "open",
+                      "shortVersion": "1676027880560",
+                      "versionInfo": {
+                        "object": true
+                      },
+                      "ref": {
+                        "object": true
+                      },
+                      "url": "http://n8n.io",
+                      "dateReleased": {
+                        "object": true
+                      },
+                      "dateCreated": "2023-02-10T11:18:01.189320Z",
+                      "data": {
+                        "object": true
+                      },
+                      "newGroups": 0,
+                      "owner": {
+                        "object": true
+                      },
+                      "commitCount": 0,
+                      "lastCommit": {
+                        "object": true
+                      },
+                      "deployCount": 0,
+                      "lastDeploy": {
+                        "object": true
+                      },
+                      "authors": [
+                        "json array"
+                      ],
+                      "projects": [
+                        "json array"
+                      ],
+                      "firstEvent": {
+                        "object": true
+                      },
+                      "lastEvent": {
+                        "object": true
+                      },
+                      "currentProjectMeta": {
+                        "object": true
+                      },
+                      "userAgent": "axios/0.21.4"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Sentry.io20": [
+          {
+            "startTime": 1676027883010,
+            "executionTime": 1284,
+            "source": [
+              {
+                "previousNode": "Sentry.io15"
+              }
+            ],
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "id": 635697500,
+                      "version": "1676027880560",
+                      "status": "open",
+                      "shortVersion": "1676027880560",
+                      "versionInfo": {
+                        "object": true
+                      },
+                      "ref": {
+                        "object": true
+                      },
+                      "url": "http://n8n.io",
+                      "dateReleased": {
+                        "object": true
+                      },
+                      "dateCreated": "2023-02-10T11:18:01.189320Z",
+                      "data": {
+                        "object": true
+                      },
+                      "newGroups": 0,
+                      "owner": {
+                        "object": true
+                      },
+                      "commitCount": 0,
+                      "lastCommit": {
+                        "object": true
+                      },
+                      "deployCount": 0,
+                      "lastDeploy": {
+                        "object": true
+                      },
+                      "authors": [
+                        "json array"
+                      ],
+                      "projects": [
+                        "json array"
+                      ],
+                      "firstEvent": {
+                        "object": true
+                      },
+                      "lastEvent": {
+                        "object": true
+                      },
+                      "currentProjectMeta": {
+                        "object": true
+                      },
+                      "userAgent": "axios/0.21.4"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Sentry.io21": [
+          {
+            "startTime": 1676027884295,
+            "executionTime": 671,
+            "source": [
+              {
+                "previousNode": "Sentry.io20"
+              }
+            ],
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "success": true
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Sentry.io23": [
+          {
+            "startTime": 1676027884966,
+            "executionTime": 632,
+            "source": [
+              {
+                "previousNode": "Sentry.io21"
+              }
+            ],
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "success": true
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      "lastNodeExecuted": "Sentry.io23"
+    },
+    "executionData": {
+      "contextData": {},
+      "nodeExecutionStack": [],
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
+    }
+  },
+  "mode": "cli",
+  "startedAt": "2023-02-10T11:17:30.478Z",
+  "stoppedAt": "2023-02-10T11:18:05.598Z",
+  "finished": true
+}

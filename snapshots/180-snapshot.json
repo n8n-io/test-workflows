@@ -5,7 +5,7 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1676026081057,
+            "startTime": 1676027891640,
             "executionTime": 1,
             "source": [],
             "data": {
@@ -24,8 +24,8 @@
         ],
         "uProc1": [
           {
-            "startTime": 1676026081059,
-            "executionTime": 152,
+            "startTime": 1676027891641,
+            "executionTime": 184,
             "source": [
               {
                 "previousNode": "Start"
@@ -46,7 +46,7 @@
                       },
                       "normalized": false,
                       "criteria": "10032",
-                      "time": 3,
+                      "time": 8,
                       "price": 0,
                       "real_price": 0.001,
                       "processor": "get-device-by-ua",
@@ -64,8 +64,8 @@
         ],
         "uProc22": [
           {
-            "startTime": 1676026081211,
-            "executionTime": 133,
+            "startTime": 1676027891825,
+            "executionTime": 135,
             "source": [
               {
                 "previousNode": "Start"
@@ -86,7 +86,7 @@
                       },
                       "normalized": false,
                       "criteria": "10061",
-                      "time": 4,
+                      "time": 9,
                       "price": 0,
                       "real_price": 0.005,
                       "processor": "get-ip-whois",
@@ -104,8 +104,8 @@
         ],
         "uProc2": [
           {
-            "startTime": 1676026081345,
-            "executionTime": 129,
+            "startTime": 1676027891960,
+            "executionTime": 124,
             "source": [
               {
                 "previousNode": "uProc1"
@@ -126,7 +126,7 @@
                       },
                       "normalized": false,
                       "criteria": "10032",
-                      "time": 2,
+                      "time": 3,
                       "price": 0,
                       "real_price": 0.001,
                       "processor": "get-url-by-domain",
@@ -144,8 +144,8 @@
         ],
         "uProc23": [
           {
-            "startTime": 1676026081474,
-            "executionTime": 141,
+            "startTime": 1676027892085,
+            "executionTime": 130,
             "source": [
               {
                 "previousNode": "uProc22"
@@ -166,7 +166,7 @@
                       },
                       "normalized": false,
                       "criteria": "10000",
-                      "time": 3,
+                      "time": 4,
                       "price": 0,
                       "real_price": 0,
                       "processor": "get-file-copied-between-urls",
@@ -184,8 +184,8 @@
         ],
         "uProc3": [
           {
-            "startTime": 1676026081615,
-            "executionTime": 135,
+            "startTime": 1676027892215,
+            "executionTime": 124,
             "source": [
               {
                 "previousNode": "uProc2"
@@ -224,8 +224,8 @@
         ],
         "uProc24": [
           {
-            "startTime": 1676026081750,
-            "executionTime": 136,
+            "startTime": 1676027892339,
+            "executionTime": 124,
             "source": [
               {
                 "previousNode": "uProc23"
@@ -246,7 +246,7 @@
                       },
                       "normalized": false,
                       "criteria": "10032",
-                      "time": 5,
+                      "time": 7,
                       "price": 0,
                       "real_price": 0.05,
                       "processor": "get-url-analysis",
@@ -264,8 +264,8 @@
         ],
         "uProc4": [
           {
-            "startTime": 1676026081886,
-            "executionTime": 140,
+            "startTime": 1676027892464,
+            "executionTime": 121,
             "source": [
               {
                 "previousNode": "uProc3"
@@ -304,8 +304,8 @@
         ],
         "uProc25": [
           {
-            "startTime": 1676026082026,
-            "executionTime": 128,
+            "startTime": 1676027892586,
+            "executionTime": 119,
             "source": [
               {
                 "previousNode": "uProc24"
@@ -344,8 +344,8 @@
         ],
         "uProc5": [
           {
-            "startTime": 1676026082155,
-            "executionTime": 636,
+            "startTime": 1676027892705,
+            "executionTime": 655,
             "source": [
               {
                 "previousNode": "uProc4"
@@ -366,7 +366,7 @@
                       },
                       "normalized": false,
                       "criteria": "10061",
-                      "time": 500,
+                      "time": 503,
                       "price": 0.001,
                       "real_price": 0.001,
                       "processor": "check-domain-certificate",
@@ -384,8 +384,8 @@
         ],
         "uProc26": [
           {
-            "startTime": 1676026082791,
-            "executionTime": 105,
+            "startTime": 1676027893360,
+            "executionTime": 113,
             "source": [
               {
                 "previousNode": "uProc25"
@@ -406,7 +406,7 @@
                       },
                       "normalized": false,
                       "criteria": "10063",
-                      "time": 4,
+                      "time": 6,
                       "price": 0,
                       "real_price": 0.001,
                       "processor": "check-url-contains",
@@ -424,8 +424,8 @@
         ],
         "uProc6": [
           {
-            "startTime": 1676026082896,
-            "executionTime": 665,
+            "startTime": 1676027893473,
+            "executionTime": 640,
             "source": [
               {
                 "previousNode": "uProc5"
@@ -446,7 +446,7 @@
                       },
                       "normalized": false,
                       "criteria": "10061",
-                      "time": 552,
+                      "time": 526,
                       "price": 0.005,
                       "real_price": 0.005,
                       "processor": "get-domain-certificate",
@@ -464,8 +464,8 @@
         ],
         "uProc27": [
           {
-            "startTime": 1676026083561,
-            "executionTime": 108,
+            "startTime": 1676027894113,
+            "executionTime": 134,
             "source": [
               {
                 "previousNode": "uProc26"
@@ -486,7 +486,7 @@
                       },
                       "normalized": false,
                       "criteria": "10032",
-                      "time": 2,
+                      "time": 3,
                       "price": 0,
                       "real_price": 0.001,
                       "processor": "get-url-contents",
@@ -504,8 +504,8 @@
         ],
         "uProc7": [
           {
-            "startTime": 1676026083669,
-            "executionTime": 106,
+            "startTime": 1676027894247,
+            "executionTime": 116,
             "source": [
               {
                 "previousNode": "uProc6"
@@ -526,7 +526,7 @@
                       },
                       "normalized": false,
                       "criteria": "10061",
-                      "time": 4,
+                      "time": 3,
                       "price": 0,
                       "real_price": 0.001,
                       "processor": "check-domain-exist",
@@ -544,8 +544,8 @@
         ],
         "uProc28": [
           {
-            "startTime": 1676026083775,
-            "executionTime": 109,
+            "startTime": 1676027894363,
+            "executionTime": 103,
             "source": [
               {
                 "previousNode": "uProc27"
@@ -566,7 +566,7 @@
                       },
                       "normalized": false,
                       "criteria": "10032",
-                      "time": 2,
+                      "time": 3,
                       "price": 0,
                       "real_price": 0.01,
                       "processor": "get-url-contents-parsed",
@@ -584,8 +584,8 @@
         ],
         "uProc8": [
           {
-            "startTime": 1676026083885,
-            "executionTime": 116,
+            "startTime": 1676027894467,
+            "executionTime": 98,
             "source": [
               {
                 "previousNode": "uProc7"
@@ -606,7 +606,7 @@
                       },
                       "normalized": false,
                       "criteria": "10061",
-                      "time": 2,
+                      "time": 3,
                       "price": 0,
                       "real_price": 0.001,
                       "processor": "check-domain-format",
@@ -624,8 +624,8 @@
         ],
         "uProc29": [
           {
-            "startTime": 1676026084001,
-            "executionTime": 110,
+            "startTime": 1676027894565,
+            "executionTime": 101,
             "source": [
               {
                 "previousNode": "uProc28"
@@ -664,8 +664,8 @@
         ],
         "uProc9": [
           {
-            "startTime": 1676026084111,
-            "executionTime": 100,
+            "startTime": 1676027894666,
+            "executionTime": 127,
             "source": [
               {
                 "previousNode": "uProc8"
@@ -686,7 +686,7 @@
                       },
                       "normalized": false,
                       "criteria": "10061",
-                      "time": 2,
+                      "time": 3,
                       "price": 0,
                       "real_price": 0.001,
                       "processor": "get-domain-isp",
@@ -704,8 +704,8 @@
         ],
         "uProc30": [
           {
-            "startTime": 1676026084212,
-            "executionTime": 102,
+            "startTime": 1676027894794,
+            "executionTime": 111,
             "source": [
               {
                 "previousNode": "uProc29"
@@ -726,7 +726,7 @@
                       },
                       "normalized": false,
                       "criteria": "10032",
-                      "time": 2,
+                      "time": 5,
                       "price": 0,
                       "real_price": 0.001,
                       "processor": "get-url-encode",
@@ -744,8 +744,8 @@
         ],
         "uProc10": [
           {
-            "startTime": 1676026084314,
-            "executionTime": 109,
+            "startTime": 1676027894905,
+            "executionTime": 106,
             "source": [
               {
                 "previousNode": "uProc9"
@@ -766,7 +766,7 @@
                       },
                       "normalized": false,
                       "criteria": "10061",
-                      "time": 2,
+                      "time": 5,
                       "price": 0,
                       "real_price": 0.001,
                       "processor": "check-domain-mx",
@@ -784,8 +784,8 @@
         ],
         "uProc31": [
           {
-            "startTime": 1676026084423,
-            "executionTime": 118,
+            "startTime": 1676027895011,
+            "executionTime": 115,
             "source": [
               {
                 "previousNode": "uProc30"
@@ -806,7 +806,7 @@
                       },
                       "normalized": false,
                       "criteria": "10063",
-                      "time": 2,
+                      "time": 3,
                       "price": 0,
                       "real_price": 0.001,
                       "processor": "check-url-exist",
@@ -824,8 +824,8 @@
         ],
         "uProc11": [
           {
-            "startTime": 1676026084541,
-            "executionTime": 102,
+            "startTime": 1676027895126,
+            "executionTime": 141,
             "source": [
               {
                 "previousNode": "uProc10"
@@ -846,7 +846,7 @@
                       },
                       "normalized": false,
                       "criteria": "10032",
-                      "time": 2,
+                      "time": 6,
                       "price": 0,
                       "real_price": 0,
                       "processor": "get-url-pdf",
@@ -864,8 +864,8 @@
         ],
         "uProc32": [
           {
-            "startTime": 1676026084643,
-            "executionTime": 99,
+            "startTime": 1676027895267,
+            "executionTime": 97,
             "source": [
               {
                 "previousNode": "uProc31"
@@ -904,8 +904,8 @@
         ],
         "uProc12": [
           {
-            "startTime": 1676026084742,
-            "executionTime": 105,
+            "startTime": 1676027895365,
+            "executionTime": 158,
             "source": [
               {
                 "previousNode": "uProc11"
@@ -926,7 +926,7 @@
                       },
                       "normalized": false,
                       "criteria": "10061",
-                      "time": 2,
+                      "time": 12,
                       "price": 0,
                       "real_price": 0.001,
                       "processor": "check-domain-record",
@@ -944,8 +944,8 @@
         ],
         "uProc33": [
           {
-            "startTime": 1676026084847,
-            "executionTime": 100,
+            "startTime": 1676027895523,
+            "executionTime": 388,
             "source": [
               {
                 "previousNode": "uProc32"
@@ -966,7 +966,7 @@
                       },
                       "normalized": false,
                       "criteria": "10063",
-                      "time": 3,
+                      "time": 4,
                       "price": 0,
                       "real_price": 0.001,
                       "processor": "check-net-host-alive",
@@ -984,8 +984,8 @@
         ],
         "uProc13": [
           {
-            "startTime": 1676026084947,
-            "executionTime": 105,
+            "startTime": 1676027895911,
+            "executionTime": 94,
             "source": [
               {
                 "previousNode": "uProc12"
@@ -1006,7 +1006,7 @@
                       },
                       "normalized": false,
                       "criteria": "10061",
-                      "time": 2,
+                      "time": 4,
                       "price": 0,
                       "real_price": 0.001,
                       "processor": "get-domain-record",
@@ -1024,8 +1024,8 @@
         ],
         "uProc34": [
           {
-            "startTime": 1676026085052,
-            "executionTime": 104,
+            "startTime": 1676027896005,
+            "executionTime": 109,
             "source": [
               {
                 "previousNode": "uProc33"
@@ -1046,7 +1046,7 @@
                       },
                       "normalized": false,
                       "criteria": "10032",
-                      "time": 1,
+                      "time": 3,
                       "price": 0,
                       "real_price": 0.01,
                       "processor": "get-url-list-contents-parsed",
@@ -1064,8 +1064,8 @@
         ],
         "uProc14": [
           {
-            "startTime": 1676026085156,
-            "executionTime": 104,
+            "startTime": 1676027896114,
+            "executionTime": 95,
             "source": [
               {
                 "previousNode": "uProc13"
@@ -1086,7 +1086,7 @@
                       },
                       "normalized": false,
                       "criteria": "10061",
-                      "time": 2,
+                      "time": 5,
                       "price": 0,
                       "real_price": 0.005,
                       "processor": "get-domain-records",
@@ -1104,8 +1104,8 @@
         ],
         "uProc35": [
           {
-            "startTime": 1676026085260,
-            "executionTime": 104,
+            "startTime": 1676027896209,
+            "executionTime": 105,
             "source": [
               {
                 "previousNode": "uProc34"
@@ -1126,7 +1126,7 @@
                       },
                       "normalized": false,
                       "criteria": "10032",
-                      "time": 4,
+                      "time": 2,
                       "price": 0,
                       "real_price": 0.001,
                       "processor": "get-net-ntoa",
@@ -1144,8 +1144,8 @@
         ],
         "uProc15": [
           {
-            "startTime": 1676026085365,
-            "executionTime": 103,
+            "startTime": 1676027896314,
+            "executionTime": 97,
             "source": [
               {
                 "previousNode": "uProc14"
@@ -1166,7 +1166,7 @@
                       },
                       "normalized": false,
                       "criteria": "10061",
-                      "time": 2,
+                      "time": 3,
                       "price": 0,
                       "real_price": 0.001,
                       "processor": "check-domain-reverse",
@@ -1184,8 +1184,8 @@
         ],
         "uProc36": [
           {
-            "startTime": 1676026085468,
-            "executionTime": 109,
+            "startTime": 1676027896412,
+            "executionTime": 107,
             "source": [
               {
                 "previousNode": "uProc35"
@@ -1206,7 +1206,7 @@
                       },
                       "normalized": false,
                       "criteria": "10032",
-                      "time": 2,
+                      "time": 5,
                       "price": 0,
                       "real_price": 0.001,
                       "processor": "get-url-parsed",
@@ -1224,8 +1224,8 @@
         ],
         "uProc16": [
           {
-            "startTime": 1676026085577,
-            "executionTime": 117,
+            "startTime": 1676027896519,
+            "executionTime": 116,
             "source": [
               {
                 "previousNode": "uProc15"
@@ -1246,7 +1246,7 @@
                       },
                       "normalized": false,
                       "criteria": "10061",
-                      "time": 3,
+                      "time": 2,
                       "price": 0,
                       "real_price": 0.001,
                       "processor": "get-domain-reverse-ip",
@@ -1264,8 +1264,8 @@
         ],
         "uProc37": [
           {
-            "startTime": 1676026085694,
-            "executionTime": 112,
+            "startTime": 1676027896636,
+            "executionTime": 133,
             "source": [
               {
                 "previousNode": "uProc36"
@@ -1286,7 +1286,7 @@
                       },
                       "normalized": false,
                       "criteria": "10032",
-                      "time": 2,
+                      "time": 3,
                       "price": 0,
                       "real_price": 0,
                       "processor": "get-net-scan",
@@ -1304,8 +1304,8 @@
         ],
         "uProc17": [
           {
-            "startTime": 1676026085806,
-            "executionTime": 107,
+            "startTime": 1676027896769,
+            "executionTime": 110,
             "source": [
               {
                 "previousNode": "uProc16"
@@ -1326,7 +1326,7 @@
                       },
                       "normalized": false,
                       "criteria": "10032",
-                      "time": 3,
+                      "time": 2,
                       "price": 0,
                       "real_price": 0.001,
                       "processor": "get-url-shareable-links",
@@ -1344,8 +1344,8 @@
         ],
         "uProc38": [
           {
-            "startTime": 1676026085913,
-            "executionTime": 108,
+            "startTime": 1676027896879,
+            "executionTime": 99,
             "source": [
               {
                 "previousNode": "uProc37"
@@ -1384,8 +1384,8 @@
         ],
         "uProc18": [
           {
-            "startTime": 1676026086022,
-            "executionTime": 103,
+            "startTime": 1676027896979,
+            "executionTime": 104,
             "source": [
               {
                 "previousNode": "uProc17"
@@ -1406,7 +1406,7 @@
                       },
                       "normalized": false,
                       "criteria": "10032",
-                      "time": 2,
+                      "time": 11,
                       "price": 0,
                       "real_price": 0.005,
                       "processor": "get-domain-technologies",
@@ -1424,8 +1424,8 @@
         ],
         "uProc39": [
           {
-            "startTime": 1676026086126,
-            "executionTime": 104,
+            "startTime": 1676027897083,
+            "executionTime": 110,
             "source": [
               {
                 "previousNode": "uProc38"
@@ -1464,8 +1464,8 @@
         ],
         "uProc19": [
           {
-            "startTime": 1676026086230,
-            "executionTime": 109,
+            "startTime": 1676027897194,
+            "executionTime": 127,
             "source": [
               {
                 "previousNode": "uProc18"
@@ -1486,7 +1486,7 @@
                       },
                       "normalized": false,
                       "criteria": "10032",
-                      "time": 2,
+                      "time": 7,
                       "price": 0,
                       "real_price": 0.005,
                       "processor": "get-url-technologies",
@@ -1504,8 +1504,8 @@
         ],
         "uProc40": [
           {
-            "startTime": 1676026086340,
-            "executionTime": 101,
+            "startTime": 1676027897321,
+            "executionTime": 109,
             "source": [
               {
                 "previousNode": "uProc39"
@@ -1544,8 +1544,8 @@
         ],
         "uProc20": [
           {
-            "startTime": 1676026086441,
-            "executionTime": 119,
+            "startTime": 1676027897430,
+            "executionTime": 90,
             "source": [
               {
                 "previousNode": "uProc19"
@@ -1566,7 +1566,7 @@
                       },
                       "normalized": false,
                       "criteria": "10061",
-                      "time": 4,
+                      "time": 2,
                       "price": 0,
                       "real_price": 0,
                       "processor": "get-domain-visits",
@@ -1584,8 +1584,8 @@
         ],
         "uProc21": [
           {
-            "startTime": 1676026086560,
-            "executionTime": 120,
+            "startTime": 1676027897520,
+            "executionTime": 109,
             "source": [
               {
                 "previousNode": "uProc20"
@@ -1633,7 +1633,7 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2023-02-10T10:48:01.053Z",
-  "stoppedAt": "2023-02-10T10:48:06.680Z",
+  "startedAt": "2023-02-10T11:18:11.635Z",
+  "stoppedAt": "2023-02-10T11:18:17.629Z",
   "finished": true
 }

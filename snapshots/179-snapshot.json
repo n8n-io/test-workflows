@@ -5,8 +5,8 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1676026080835,
-            "executionTime": 0,
+            "startTime": 1676027891502,
+            "executionTime": 1,
             "source": [],
             "data": {
               "main": [
@@ -24,8 +24,8 @@
         ],
         "uProc": [
           {
-            "startTime": 1676026080836,
-            "executionTime": 172,
+            "startTime": 1676027891503,
+            "executionTime": 161,
             "source": [
               {
                 "previousNode": "Start"
@@ -64,8 +64,8 @@
         ],
         "uProc1": [
           {
-            "startTime": 1676026081008,
-            "executionTime": 145,
+            "startTime": 1676027891664,
+            "executionTime": 185,
             "source": [
               {
                 "previousNode": "Start"
@@ -86,7 +86,7 @@
                       },
                       "normalized": false,
                       "criteria": "10000",
-                      "time": 3,
+                      "time": 4,
                       "price": 0,
                       "real_price": 0,
                       "processor": "check-number-uuid",
@@ -104,8 +104,8 @@
         ],
         "uProc10": [
           {
-            "startTime": 1676026081153,
-            "executionTime": 134,
+            "startTime": 1676027891849,
+            "executionTime": 149,
             "source": [
               {
                 "previousNode": "uProc"
@@ -126,7 +126,7 @@
                       },
                       "normalized": false,
                       "criteria": "10032",
-                      "time": 3,
+                      "time": 4,
                       "price": 0,
                       "real_price": 0.0025,
                       "processor": "get-domain-logo",
@@ -144,8 +144,8 @@
         ],
         "uProc2": [
           {
-            "startTime": 1676026081287,
-            "executionTime": 127,
+            "startTime": 1676027891998,
+            "executionTime": 157,
             "source": [
               {
                 "previousNode": "uProc1"
@@ -184,8 +184,8 @@
         ],
         "uProc11": [
           {
-            "startTime": 1676026081414,
-            "executionTime": 125,
+            "startTime": 1676027892156,
+            "executionTime": 129,
             "source": [
               {
                 "previousNode": "uProc10"
@@ -224,8 +224,8 @@
         ],
         "uProc3": [
           {
-            "startTime": 1676026081540,
-            "executionTime": 141,
+            "startTime": 1676027892285,
+            "executionTime": 697,
             "source": [
               {
                 "previousNode": "uProc2"
@@ -246,7 +246,7 @@
                       },
                       "normalized": false,
                       "criteria": "10032",
-                      "time": 3,
+                      "time": 4,
                       "price": 0,
                       "real_price": 0.002,
                       "processor": "get-ip-blacklists",
@@ -264,8 +264,8 @@
         ],
         "uProc8": [
           {
-            "startTime": 1676026081681,
-            "executionTime": 330,
+            "startTime": 1676027892982,
+            "executionTime": 221,
             "source": [
               {
                 "previousNode": "uProc11"
@@ -286,7 +286,7 @@
                       },
                       "normalized": false,
                       "criteria": "10032",
-                      "time": 188,
+                      "time": 103,
                       "price": 0,
                       "real_price": 0,
                       "processor": "get-image-exif",
@@ -304,8 +304,8 @@
         ],
         "uProc4": [
           {
-            "startTime": 1676026082011,
-            "executionTime": 125,
+            "startTime": 1676027893203,
+            "executionTime": 108,
             "source": [
               {
                 "previousNode": "uProc3"
@@ -344,8 +344,8 @@
         ],
         "uProc9": [
           {
-            "startTime": 1676026082136,
-            "executionTime": 782,
+            "startTime": 1676027893311,
+            "executionTime": 228,
             "source": [
               {
                 "previousNode": "uProc8"
@@ -366,7 +366,7 @@
                       },
                       "normalized": false,
                       "criteria": "10032",
-                      "time": 650,
+                      "time": 112,
                       "price": 0,
                       "real_price": 0,
                       "processor": "get-image-with-text",
@@ -384,8 +384,8 @@
         ],
         "uProc5": [
           {
-            "startTime": 1676026082918,
-            "executionTime": 127,
+            "startTime": 1676027893540,
+            "executionTime": 113,
             "source": [
               {
                 "previousNode": "uProc4"
@@ -406,7 +406,7 @@
                       },
                       "normalized": false,
                       "criteria": "10032",
-                      "time": 2,
+                      "time": 3,
                       "price": 0,
                       "real_price": 0.001,
                       "processor": "check-password-strong",
@@ -433,7 +433,7 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2023-02-10T10:48:00.833Z",
-  "stoppedAt": "2023-02-10T10:48:03.045Z",
+  "startedAt": "2023-02-10T11:18:11.500Z",
+  "stoppedAt": "2023-02-10T11:18:13.653Z",
   "finished": true
 }
