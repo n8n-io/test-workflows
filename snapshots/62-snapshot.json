@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622629987173,
+            "startTime": 1676027863661,
             "executionTime": 1,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,8 +24,13 @@
         ],
         "ProfitWell": [
           {
-            "startTime": 1622629987174,
-            "executionTime": 429,
+            "startTime": 1676027863662,
+            "executionTime": 351,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -29,8 +38,11 @@
                     "json": {
                       "id": "fd47e958-b607-46be-b5b1-2e87c43dffbf",
                       "name": "n8nqa",
-                      "currency": "usd",
+                      "currency": "eur",
                       "timezone": "Europe/Paris"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -40,15 +52,20 @@
         ],
         "ProfitWell1": [
           {
-            "startTime": 1622629987604,
-            "executionTime": 826,
+            "startTime": 1676027864014,
+            "executionTime": 1946,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "recurring_revenue": 0,
-                      "date": "2021-06",
+                      "date": "2023-02",
                       "new_recurring_revenue": 0,
                       "existing_recurring_revenue": 0,
                       "churned_recurring_revenue": 0,
@@ -116,6 +133,9 @@
                       "trial_conversion_time": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -125,8 +145,13 @@
         ],
         "ProfitWell2": [
           {
-            "startTime": 1622629988431,
-            "executionTime": 903,
+            "startTime": 1676027865960,
+            "executionTime": 688,
+            "source": [
+              {
+                "previousNode": "ProfitWell1"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -177,6 +202,9 @@
                       "active_customers": [
                         "json array"
                       ]
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -190,11 +218,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-02T10:33:07.172Z",
-  "stoppedAt": "2021-06-02T10:33:09.334Z",
+  "startedAt": "2023-02-10T11:17:43.660Z",
+  "stoppedAt": "2023-02-10T11:17:46.649Z",
   "finished": true
 }

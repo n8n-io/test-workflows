@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622629991837,
+            "startTime": 1676027865525,
             "executionTime": 1,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,8 +24,13 @@
         ],
         "Storyblok": [
           {
-            "startTime": 1622629991839,
-            "executionTime": 381,
+            "startTime": 1676027865526,
+            "executionTime": 254,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -37,8 +46,8 @@
                       "sort_by_date": {
                         "object": true
                       },
-                      "updated_at": "2021-06-02T08:40:13.731Z",
-                      "published_at": "2021-06-02T08:40:13.507Z",
+                      "updated_at": "2023-02-10T11:12:41.442Z",
+                      "published_at": "2023-02-10T11:12:41.200Z",
                       "id": 39088436,
                       "uuid": "f52c4a20-cc6a-4994-bec1-9d3ea0e4fa9e",
                       "is_folder": false,
@@ -81,6 +90,9 @@
                         "json array"
                       ],
                       "can_not_view": false
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -90,8 +102,13 @@
         ],
         "Storyblok1": [
           {
-            "startTime": 1622629992220,
-            "executionTime": 119,
+            "startTime": 1676027865780,
+            "executionTime": 117,
+            "source": [
+              {
+                "previousNode": "Storyblok"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -104,14 +121,17 @@
                         "json array"
                       ],
                       "created_at": "2021-02-25T10:06:43.421Z",
+                      "deleted_at": {
+                        "object": true
+                      },
                       "sort_by_date": {
                         "object": true
                       },
                       "tag_list": [
                         "json array"
                       ],
-                      "updated_at": "2021-06-02T08:40:13.731Z",
-                      "published_at": "2021-06-02T08:40:13.507Z",
+                      "updated_at": "2023-02-10T11:12:41.442Z",
+                      "published_at": "2023-02-10T11:12:41.200Z",
                       "id": 39088436,
                       "uuid": "f52c4a20-cc6a-4994-bec1-9d3ea0e4fa9e",
                       "is_folder": false,
@@ -174,6 +194,9 @@
                       "is_scheduled": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -183,8 +206,13 @@
         ],
         "Storyblok2": [
           {
-            "startTime": 1622629992340,
-            "executionTime": 173,
+            "startTime": 1676027865897,
+            "executionTime": 205,
+            "source": [
+              {
+                "previousNode": "Storyblok1"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -197,14 +225,17 @@
                         "json array"
                       ],
                       "created_at": "2021-02-25T10:06:43.421Z",
+                      "deleted_at": {
+                        "object": true
+                      },
                       "sort_by_date": {
                         "object": true
                       },
                       "tag_list": [
                         "json array"
                       ],
-                      "updated_at": "2021-06-02T10:33:12.476Z",
-                      "published_at": "2021-06-02T10:33:12.459Z",
+                      "updated_at": "2023-02-10T11:17:46.076Z",
+                      "published_at": "2023-02-10T11:17:46.043Z",
                       "id": 39088436,
                       "uuid": "f52c4a20-cc6a-4994-bec1-9d3ea0e4fa9e",
                       "is_folder": false,
@@ -269,6 +300,9 @@
                       "is_scheduled": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -278,8 +312,13 @@
         ],
         "Storyblok3": [
           {
-            "startTime": 1622629992513,
-            "executionTime": 186,
+            "startTime": 1676027866102,
+            "executionTime": 124,
+            "source": [
+              {
+                "previousNode": "Storyblok2"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -292,14 +331,17 @@
                         "json array"
                       ],
                       "created_at": "2021-02-25T10:06:43.421Z",
+                      "deleted_at": {
+                        "object": true
+                      },
                       "sort_by_date": {
                         "object": true
                       },
                       "tag_list": [
                         "json array"
                       ],
-                      "updated_at": "2021-06-02T10:33:12.661Z",
-                      "published_at": "2021-06-02T10:33:12.459Z",
+                      "updated_at": "2023-02-10T11:17:46.254Z",
+                      "published_at": "2023-02-10T11:17:46.043Z",
                       "id": 39088436,
                       "uuid": "f52c4a20-cc6a-4994-bec1-9d3ea0e4fa9e",
                       "is_folder": false,
@@ -364,6 +406,9 @@
                       "is_scheduled": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -377,11 +422,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-02T10:33:11.836Z",
-  "stoppedAt": "2021-06-02T10:33:12.699Z",
+  "startedAt": "2023-02-10T11:17:45.524Z",
+  "stoppedAt": "2023-02-10T11:17:46.227Z",
   "finished": true
 }

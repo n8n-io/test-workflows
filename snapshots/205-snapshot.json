@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1623767464038,
+            "startTime": 1676027899698,
             "executionTime": 1,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,8 +24,13 @@
         ],
         "Pushover": [
           {
-            "startTime": 1623767464039,
-            "executionTime": 1893,
+            "startTime": 1676027899699,
+            "executionTime": 702,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -29,7 +38,10 @@
                     "json": {
                       "info": "no active devices to send to",
                       "status": 1,
-                      "request": "06919e5c-f966-42ef-ac1b-83fd1b74f4d5"
+                      "request": "304ca448-e611-447a-9e9e-f1258057d590"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -43,11 +55,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-15T14:31:04.037Z",
-  "stoppedAt": "2021-06-15T14:31:05.932Z",
+  "startedAt": "2023-02-10T11:18:19.697Z",
+  "stoppedAt": "2023-02-10T11:18:20.401Z",
   "finished": true
 }

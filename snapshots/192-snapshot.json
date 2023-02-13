@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622630099133,
-            "executionTime": 1,
+            "startTime": 1676027895810,
+            "executionTime": 0,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,21 +24,26 @@
         ],
         "Mattermost": [
           {
-            "startTime": 1622630099134,
-            "executionTime": 168,
+            "startTime": 1676027895811,
+            "executionTime": 176,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "7wchxrptg38udm6tp5acntcksc",
-                      "create_at": 1622630099246,
-                      "update_at": 1622630099246,
+                      "id": "yo15bbp94jg3tgg8twbxfmss1h",
+                      "create_at": 1676027895957,
+                      "update_at": 1676027895957,
                       "delete_at": 0,
                       "team_id": "y1p853gfspdrxre5oextbii7wh",
                       "type": "O",
-                      "display_name": "TestChannel1622630099144",
-                      "name": "testchannel1622630099144",
+                      "display_name": "TestChannel1676027895824",
+                      "name": "testchannel1676027895825",
                       "header": "",
                       "purpose": "",
                       "last_post_at": 0,
@@ -50,6 +59,9 @@
                       "group_constrained": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -59,21 +71,26 @@
         ],
         "Mattermost13": [
           {
-            "startTime": 1622630099303,
-            "executionTime": 250,
+            "startTime": 1676027895987,
+            "executionTime": 198,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "96gzzzwiej87xbzy9f4kowm9wh",
-                      "create_at": 1622630099449,
-                      "update_at": 1622630099449,
+                      "id": "qq8gqjg98ig1mrpmiq5ajzz53e",
+                      "create_at": 1676027896112,
+                      "update_at": 1676027896112,
                       "delete_at": 0,
-                      "username": "username1622630099313",
+                      "username": "username1676027895988",
                       "auth_data": "",
                       "auth_service": "email",
-                      "email": "fake1622630099313@test.com",
+                      "email": "fake1676027895988@test.com",
                       "nickname": "",
                       "first_name": "",
                       "last_name": "",
@@ -82,11 +99,14 @@
                       "notify_props": {
                         "object": true
                       },
-                      "last_password_update": 1622630099449,
+                      "last_password_update": 1676027896112,
                       "locale": "en",
                       "timezone": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -96,14 +116,19 @@
         ],
         "Mattermost1": [
           {
-            "startTime": 1622630099554,
-            "executionTime": 160,
+            "startTime": 1676027896186,
+            "executionTime": 89,
+            "source": [
+              {
+                "previousNode": "Mattermost"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "channel_id": "7wchxrptg38udm6tp5acntcksc",
+                      "channel_id": "yo15bbp94jg3tgg8twbxfmss1h",
                       "user_id": "4yp7tpa3sbgk9qrf38egttbioo",
                       "roles": "channel_user",
                       "last_viewed_at": 0,
@@ -112,11 +137,14 @@
                       "notify_props": {
                         "object": true
                       },
-                      "last_update_at": 1622630099697,
+                      "last_update_at": 1676027896320,
                       "scheme_guest": false,
                       "scheme_user": true,
                       "scheme_admin": false,
                       "explicit_roles": ""
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -126,21 +154,26 @@
         ],
         "Mattermost14": [
           {
-            "startTime": 1622630099715,
-            "executionTime": 88,
+            "startTime": 1676027896275,
+            "executionTime": 60,
+            "source": [
+              {
+                "previousNode": "Mattermost13"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "96gzzzwiej87xbzy9f4kowm9wh",
-                      "create_at": 1622630099449,
-                      "update_at": 1622630099449,
+                      "id": "qq8gqjg98ig1mrpmiq5ajzz53e",
+                      "create_at": 1676027896112,
+                      "update_at": 1676027896112,
                       "delete_at": 0,
-                      "username": "username1622630099313",
+                      "username": "username1676027895988",
                       "auth_data": "",
                       "auth_service": "email",
-                      "email": "fake1622630099313@test.com",
+                      "email": "fake1676027895988@test.com",
                       "nickname": "",
                       "first_name": "",
                       "last_name": "",
@@ -150,6 +183,9 @@
                       "timezone": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -159,25 +195,30 @@
         ],
         "Mattermost7": [
           {
-            "startTime": 1622630099804,
-            "executionTime": 136,
+            "startTime": 1676027896335,
+            "executionTime": 122,
+            "source": [
+              {
+                "previousNode": "Mattermost1"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "8qofb17h7tb9mg84dhtjwdi7kr",
-                      "create_at": 1622630099913,
-                      "update_at": 1622630099913,
+                      "id": "uixfcicpubd8brsmcodtzbkqpr",
+                      "create_at": 1676027896456,
+                      "update_at": 1676027896456,
                       "edit_at": 0,
                       "delete_at": 0,
                       "is_pinned": false,
                       "user_id": "fo4frgcntiy6jfc63wor76kxpy",
-                      "channel_id": "7wchxrptg38udm6tp5acntcksc",
+                      "channel_id": "yo15bbp94jg3tgg8twbxfmss1h",
                       "root_id": "",
                       "parent_id": "",
                       "original_id": "",
-                      "message": "Message1622630099814",
+                      "message": "Message1676027896336",
                       "type": "",
                       "props": {
                         "object": true
@@ -188,6 +229,9 @@
                       "metadata": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -197,21 +241,26 @@
         ],
         "Mattermost15": [
           {
-            "startTime": 1622630099940,
-            "executionTime": 103,
+            "startTime": 1676027896458,
+            "executionTime": 57,
+            "source": [
+              {
+                "previousNode": "Mattermost14"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "96gzzzwiej87xbzy9f4kowm9wh",
-                      "create_at": 1622630099449,
-                      "update_at": 1622630099449,
+                      "id": "qq8gqjg98ig1mrpmiq5ajzz53e",
+                      "create_at": 1676027896112,
+                      "update_at": 1676027896112,
                       "delete_at": 0,
-                      "username": "username1622630099313",
+                      "username": "username1676027895988",
                       "auth_data": "",
                       "auth_service": "email",
-                      "email": "fake1622630099313@test.com",
+                      "email": "fake1676027895988@test.com",
                       "nickname": "",
                       "first_name": "",
                       "last_name": "",
@@ -221,6 +270,9 @@
                       "timezone": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -230,25 +282,30 @@
         ],
         "Mattermost8": [
           {
-            "startTime": 1622630100043,
-            "executionTime": 120,
+            "startTime": 1676027896515,
+            "executionTime": 57,
+            "source": [
+              {
+                "previousNode": "Mattermost7"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "cgs6zzsf17dc8j3r3j9xtss8uw",
-                      "create_at": 1622630100157,
+                      "id": "y3uxkkphypf7zcg5gtnbptqywh",
+                      "create_at": 1676027896626,
                       "update_at": 0,
                       "edit_at": 0,
                       "delete_at": 0,
                       "is_pinned": false,
                       "user_id": "fo4frgcntiy6jfc63wor76kxpy",
-                      "channel_id": "7wchxrptg38udm6tp5acntcksc",
+                      "channel_id": "yo15bbp94jg3tgg8twbxfmss1h",
                       "root_id": "",
                       "parent_id": "",
                       "original_id": "",
-                      "message": "EpheMessage1622630100045",
+                      "message": "EpheMessage1676027896516",
                       "type": "system_ephemeral",
                       "props": {
                         "object": true
@@ -259,6 +316,9 @@
                       "metadata": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -268,8 +328,13 @@
         ],
         "Mattermost16": [
           {
-            "startTime": 1622630100164,
-            "executionTime": 238,
+            "startTime": 1676027896572,
+            "executionTime": 125,
+            "source": [
+              {
+                "previousNode": "Mattermost15"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -294,6 +359,9 @@
                       },
                       "is_bot": true,
                       "bot_description": "A bot account created by the channel export plugin."
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -303,17 +371,25 @@
         ],
         "Mattermost10": [
           {
-            "startTime": 1622630100402,
-            "executionTime": 139,
+            "startTime": 1676027896697,
+            "executionTime": 82,
+            "source": [
+              {
+                "previousNode": "Mattermost8"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "user_id": "fo4frgcntiy6jfc63wor76kxpy",
-                      "post_id": "8qofb17h7tb9mg84dhtjwdi7kr",
+                      "post_id": "uixfcicpubd8brsmcodtzbkqpr",
                       "emoji_name": "rocket",
-                      "create_at": 1622630100404
+                      "create_at": 1676027896698
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -323,14 +399,22 @@
         ],
         "Mattermost17": [
           {
-            "startTime": 1622630100542,
-            "executionTime": 116,
+            "startTime": 1676027896779,
+            "executionTime": 67,
+            "source": [
+              {
+                "previousNode": "Mattermost16"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "status": "OK"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -340,17 +424,25 @@
         ],
         "Mattermost11": [
           {
-            "startTime": 1622630100658,
-            "executionTime": 102,
+            "startTime": 1676027896847,
+            "executionTime": 69,
+            "source": [
+              {
+                "previousNode": "Mattermost10"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "user_id": "fo4frgcntiy6jfc63wor76kxpy",
-                      "post_id": "8qofb17h7tb9mg84dhtjwdi7kr",
+                      "post_id": "uixfcicpubd8brsmcodtzbkqpr",
                       "emoji_name": "rocket",
-                      "create_at": 1622630100404
+                      "create_at": 1676027896698
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -360,14 +452,22 @@
         ],
         "Mattermost18": [
           {
-            "startTime": 1622630100760,
-            "executionTime": 142,
+            "startTime": 1676027896916,
+            "executionTime": 80,
+            "source": [
+              {
+                "previousNode": "Mattermost17"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "status": "OK"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -377,14 +477,22 @@
         ],
         "Mattermost12": [
           {
-            "startTime": 1622630100903,
-            "executionTime": 116,
+            "startTime": 1676027896997,
+            "executionTime": 79,
+            "source": [
+              {
+                "previousNode": "Mattermost11"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "status": "OK"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -394,14 +502,22 @@
         ],
         "Mattermost9": [
           {
-            "startTime": 1622630101019,
-            "executionTime": 108,
+            "startTime": 1676027897076,
+            "executionTime": 78,
+            "source": [
+              {
+                "previousNode": "Mattermost12"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "status": "OK"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -411,8 +527,13 @@
         ],
         "Mattermost2": [
           {
-            "startTime": 1622630101127,
-            "executionTime": 237,
+            "startTime": 1676027897155,
+            "executionTime": 115,
+            "source": [
+              {
+                "previousNode": "Mattermost9"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -420,7 +541,7 @@
                     "json": {
                       "id": "fo4frgcntiy6jfc63wor76kxpy",
                       "create_at": 1619770719466,
-                      "update_at": 1619770793759,
+                      "update_at": 1624374690399,
                       "delete_at": 0,
                       "username": "nodeqa",
                       "auth_data": "",
@@ -435,6 +556,9 @@
                       "timezone": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -444,17 +568,25 @@
         ],
         "Mattermost3": [
           {
-            "startTime": 1622630101364,
-            "executionTime": 118,
+            "startTime": 1676027897271,
+            "executionTime": 64,
+            "source": [
+              {
+                "previousNode": "Mattermost2"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "channel_id": "7wchxrptg38udm6tp5acntcksc",
+                      "channel_id": "yo15bbp94jg3tgg8twbxfmss1h",
                       "member_count": 2,
                       "guest_count": 0,
                       "pinnedpost_count": 0
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -464,14 +596,22 @@
         ],
         "Mattermost4": [
           {
-            "startTime": 1622630101482,
-            "executionTime": 132,
+            "startTime": 1676027897335,
+            "executionTime": 82,
+            "source": [
+              {
+                "previousNode": "Mattermost3"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "status": "OK"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -481,24 +621,29 @@
         ],
         "Mattermost5": [
           {
-            "startTime": 1622630101614,
-            "executionTime": 118,
+            "startTime": 1676027897418,
+            "executionTime": 86,
+            "source": [
+              {
+                "previousNode": "Mattermost4"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "7wchxrptg38udm6tp5acntcksc",
-                      "create_at": 1622630099246,
-                      "update_at": 1622630101603,
+                      "id": "yo15bbp94jg3tgg8twbxfmss1h",
+                      "create_at": 1676027895957,
+                      "update_at": 1676027897467,
                       "delete_at": 0,
                       "team_id": "y1p853gfspdrxre5oextbii7wh",
                       "type": "O",
-                      "display_name": "TestChannel1622630099144",
-                      "name": "testchannel1622630099144",
+                      "display_name": "TestChannel1676027895824",
+                      "name": "testchannel1676027895825",
                       "header": "",
                       "purpose": "",
-                      "last_post_at": 1622630101594,
+                      "last_post_at": 1676027897453,
                       "total_msg_count": 2,
                       "extra_update_at": 0,
                       "creator_id": "fo4frgcntiy6jfc63wor76kxpy",
@@ -511,6 +656,9 @@
                       "group_constrained": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -520,14 +668,22 @@
         ],
         "Mattermost6": [
           {
-            "startTime": 1622630101733,
-            "executionTime": 119,
+            "startTime": 1676027897504,
+            "executionTime": 84,
+            "source": [
+              {
+                "previousNode": "Mattermost5"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "status": "OK"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -541,11 +697,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-02T10:34:59.129Z",
-  "stoppedAt": "2021-06-02T10:35:01.852Z",
+  "startedAt": "2023-02-10T11:18:15.807Z",
+  "stoppedAt": "2023-02-10T11:18:17.588Z",
   "finished": true
 }

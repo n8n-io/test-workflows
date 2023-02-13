@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622827469859,
+            "startTime": 1676027948775,
             "executionTime": 0,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,14 +24,22 @@
         ],
         "Set": [
           {
-            "startTime": 1622827469860,
-            "executionTime": 2,
+            "startTime": 1676027948776,
+            "executionTime": 27,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "userId": "User_1622827469861"
+                      "userId": "User_1676027948803"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -37,18 +49,26 @@
         ],
         "Iterable": [
           {
-            "startTime": 1622827469862,
-            "executionTime": 519,
+            "startTime": 1676027948803,
+            "executionTime": 453,
+            "source": [
+              {
+                "previousNode": "Set"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "msg": "",
+                      "msg": "User successfully created/updated.",
                       "code": "Success",
                       "params": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -58,19 +78,28 @@
         ],
         "Sleep 0.5 second": [
           {
-            "startTime": 1622827470381,
-            "executionTime": 506,
+            "startTime": 1676027949257,
+            "executionTime": 514,
+            "source": [
+              {
+                "previousNode": "Iterable"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "msg": "",
+                      "msg": "User successfully created/updated.",
                       "code": "Success",
                       "params": {
                         "object": true
                       }
-                    }
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    },
+                    "index": 0
                   }
                 ]
               ]
@@ -79,15 +108,23 @@
         ],
         "Iterable1": [
           {
-            "startTime": 1622827470888,
-            "executionTime": 454,
+            "startTime": 1676027949772,
+            "executionTime": 305,
+            "source": [
+              {
+                "previousNode": "Sleep 0.5 second"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "email": "user_1622827469861+-669508736@placeholder.email",
-                      "userId": "User_1622827469861"
+                      "email": "user_1676027948803+-134382405@placeholder.email",
+                      "userId": "User_1676027948803"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -97,8 +134,13 @@
         ],
         "Iterable2": [
           {
-            "startTime": 1622827471342,
-            "executionTime": 352,
+            "startTime": 1676027950078,
+            "executionTime": 439,
+            "source": [
+              {
+                "previousNode": "Iterable1"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -111,7 +153,16 @@
                       ],
                       "invalidUserIds": [
                         "json array"
+                      ],
+                      "filteredOutFields": [
+                        "json array"
+                      ],
+                      "createdFields": [
+                        "json array"
                       ]
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -121,8 +172,13 @@
         ],
         "Iterable3": [
           {
-            "startTime": 1622827471694,
-            "executionTime": 357,
+            "startTime": 1676027950518,
+            "executionTime": 311,
+            "source": [
+              {
+                "previousNode": "Iterable2"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -135,7 +191,16 @@
                       ],
                       "invalidUserIds": [
                         "json array"
+                      ],
+                      "filteredOutFields": [
+                        "json array"
+                      ],
+                      "createdFields": [
+                        "json array"
                       ]
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -145,8 +210,13 @@
         ],
         "Iterable4": [
           {
-            "startTime": 1622827472051,
-            "executionTime": 374,
+            "startTime": 1676027950830,
+            "executionTime": 346,
+            "source": [
+              {
+                "previousNode": "Iterable3"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -162,7 +232,16 @@
                       ],
                       "disallowedEventNames": [
                         "json array"
+                      ],
+                      "filteredOutFields": [
+                        "json array"
+                      ],
+                      "createdFields": [
+                        "json array"
                       ]
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -172,8 +251,13 @@
         ],
         "Iterable5": [
           {
-            "startTime": 1622827472425,
-            "executionTime": 345,
+            "startTime": 1676027951176,
+            "executionTime": 417,
+            "source": [
+              {
+                "previousNode": "Iterable4"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -184,6 +268,9 @@
                       "params": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -197,11 +284,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-04T17:24:29.857Z",
-  "stoppedAt": "2021-06-04T17:24:32.771Z",
+  "startedAt": "2023-02-10T11:19:08.772Z",
+  "stoppedAt": "2023-02-10T11:19:11.593Z",
   "finished": true
 }

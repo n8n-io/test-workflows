@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1627567642327,
-            "executionTime": 0,
+            "startTime": 1676027884650,
+            "executionTime": 1,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,8 +24,13 @@
         ],
         "DeepL": [
           {
-            "startTime": 1627567642328,
-            "executionTime": 1323,
+            "startTime": 1676027884651,
+            "executionTime": 847,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -29,6 +38,9 @@
                     "json": {
                       "detected_source_language": "EN",
                       "text": "n8n (ausgesprochen n-eight-n) hilft Ihnen, jede App mit einer API auf der Welt miteinander zu verbinden, um ihre Daten ohne eine einzige Zeile Code zu teilen und zu manipulieren. Es ist ein einfach zu bedienender, benutzerfreundlicher und hochgradig anpassbarer Dienst."
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -38,8 +50,13 @@
         ],
         "Function": [
           {
-            "startTime": 1627567643651,
-            "executionTime": 6,
+            "startTime": 1676027885498,
+            "executionTime": 7,
+            "source": [
+              {
+                "previousNode": "DeepL"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -47,7 +64,11 @@
                     "json": {
                       "detected_source_language": "EN",
                       "text": "n8n (ausgesprochen n-eight-n) hilft Ihnen, jede App mit einer API auf der Welt miteinander zu verbinden, um ihre Daten ohne eine einzige Zeile Code zu teilen und zu manipulieren. Es ist ein einfach zu bedienender, benutzerfreundlicher und hochgradig anpassbarer Dienst."
-                    }
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    },
+                    "index": 0
                   }
                 ]
               ]
@@ -60,11 +81,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-07-29T14:07:22.325Z",
-  "stoppedAt": "2021-07-29T14:07:23.657Z",
+  "startedAt": "2023-02-10T11:18:04.648Z",
+  "stoppedAt": "2023-02-10T11:18:05.505Z",
   "finished": true
 }

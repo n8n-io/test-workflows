@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622630083917,
+            "startTime": 1676027891676,
             "executionTime": 0,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,8 +24,13 @@
         ],
         "Webflow": [
           {
-            "startTime": 1622630083918,
-            "executionTime": 672,
+            "startTime": 1676027891677,
+            "executionTime": 520,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -29,11 +38,11 @@
                     "json": {
                       "_archived": false,
                       "_draft": true,
-                      "name": "Item1622630083919",
-                      "slug": "ItemSlug1622630083919",
-                      "updated-on": "2021-06-02T10:34:44.497Z",
+                      "name": "Item1676027891691",
+                      "slug": "ItemSlug1676027891691",
+                      "updated-on": "2023-02-10T11:18:12.183Z",
                       "updated-by": "Person_60828826c12bb73d4752eedb",
-                      "created-on": "2021-06-02T10:34:44.497Z",
+                      "created-on": "2023-02-10T11:18:12.183Z",
                       "created-by": "Person_60828826c12bb73d4752eedb",
                       "published-on": {
                         "object": true
@@ -42,7 +51,10 @@
                         "object": true
                       },
                       "_cid": "608289f18593d40792d70d54",
-                      "_id": "60b75ec4047fbadf35764f24"
+                      "_id": "63e627f4233b9559b9ecc423"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -52,8 +64,13 @@
         ],
         "Webflow1": [
           {
-            "startTime": 1622630084591,
-            "executionTime": 537,
+            "startTime": 1676027892197,
+            "executionTime": 474,
+            "source": [
+              {
+                "previousNode": "Webflow"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -61,11 +78,11 @@
                     "json": {
                       "_archived": false,
                       "_draft": true,
-                      "name": "Item1622630083919",
-                      "slug": "ItemSlug1622630083919",
-                      "updated-on": "2021-06-02T10:34:44.497Z",
+                      "name": "Item1676027891691",
+                      "slug": "ItemSlug1676027891691",
+                      "updated-on": "2023-02-10T11:18:12.183Z",
                       "updated-by": "Person_60828826c12bb73d4752eedb",
-                      "created-on": "2021-06-02T10:34:44.497Z",
+                      "created-on": "2023-02-10T11:18:12.183Z",
                       "created-by": "Person_60828826c12bb73d4752eedb",
                       "published-on": {
                         "object": true
@@ -74,7 +91,10 @@
                         "object": true
                       },
                       "_cid": "608289f18593d40792d70d54",
-                      "_id": "60b75ec4047fbadf35764f24"
+                      "_id": "63e627f4233b9559b9ecc423"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -84,8 +104,13 @@
         ],
         "Webflow2": [
           {
-            "startTime": 1622630085129,
-            "executionTime": 422,
+            "startTime": 1676027892672,
+            "executionTime": 408,
+            "source": [
+              {
+                "previousNode": "Webflow1"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -93,11 +118,11 @@
                     "json": {
                       "_archived": false,
                       "_draft": false,
-                      "name": "UpdatedItem1622630083919",
-                      "slug": "UpdatedItemSlug1622630083919",
-                      "updated-on": "2021-06-02T10:34:45.460Z",
+                      "name": "UpdatedItem1676027891691",
+                      "slug": "UpdatedItemSlug1676027891691",
+                      "updated-on": "2023-02-10T11:18:13.067Z",
                       "updated-by": "Person_60828826c12bb73d4752eedb",
-                      "created-on": "2021-06-02T10:34:44.497Z",
+                      "created-on": "2023-02-10T11:18:12.183Z",
                       "created-by": "Person_60828826c12bb73d4752eedb",
                       "published-on": {
                         "object": true
@@ -106,7 +131,10 @@
                         "object": true
                       },
                       "_cid": "608289f18593d40792d70d54",
-                      "_id": "60b75ec4047fbadf35764f24"
+                      "_id": "63e627f4233b9559b9ecc423"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -116,14 +144,22 @@
         ],
         "Webflow3": [
           {
-            "startTime": 1622630085552,
-            "executionTime": 467,
+            "startTime": 1676027893080,
+            "executionTime": 460,
+            "source": [
+              {
+                "previousNode": "Webflow2"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "deleted": 1
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -133,20 +169,25 @@
         ],
         "Webflow4": [
           {
-            "startTime": 1622630086019,
-            "executionTime": 451,
+            "startTime": 1676027893540,
+            "executionTime": 339,
+            "source": [
+              {
+                "previousNode": "Webflow3"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "_archived": false,
-                      "_draft": true,
-                      "name": "Item1622470438747",
-                      "slug": "ItemSlug1622470438747",
-                      "updated-on": "2021-05-31T14:14:01.240Z",
+                      "_draft": false,
+                      "name": "UpdatedItem1627896307490",
+                      "slug": "UpdatedItemSlug1627896307490",
+                      "updated-on": "2021-08-02T09:25:09.206Z",
                       "updated-by": "Person_60828826c12bb73d4752eedb",
-                      "created-on": "2021-05-31T14:14:01.240Z",
+                      "created-on": "2021-08-02T09:25:08.003Z",
                       "created-by": "Person_60828826c12bb73d4752eedb",
                       "published-on": {
                         "object": true
@@ -155,7 +196,10 @@
                         "object": true
                       },
                       "_cid": "608289f18593d40792d70d54",
-                      "_id": "60b4ef29e52f8821cdfbdbbd"
+                      "_id": "6107b9f4a4877ee65c89d4bd"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -169,11 +213,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-02T10:34:43.915Z",
-  "stoppedAt": "2021-06-02T10:34:46.470Z",
+  "startedAt": "2023-02-10T11:18:11.674Z",
+  "stoppedAt": "2023-02-10T11:18:13.880Z",
   "finished": true
 }

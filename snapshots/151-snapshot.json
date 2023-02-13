@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1627890523330,
-            "executionTime": 1,
+            "startTime": 1676027884768,
+            "executionTime": 0,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,8 +24,13 @@
         ],
         "Wise5": [
           {
-            "startTime": 1627890523332,
-            "executionTime": 518,
+            "startTime": 1676027884769,
+            "executionTime": 153,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -40,6 +49,9 @@
                       "user": 5681537,
                       "active": true,
                       "ownedByCustomer": true
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -49,8 +61,13 @@
         ],
         "Wise4": [
           {
-            "startTime": 1627890523851,
-            "executionTime": 354,
+            "startTime": 1676027884922,
+            "executionTime": 257,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -61,6 +78,9 @@
                       "details": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -70,17 +90,25 @@
         ],
         "Wise3": [
           {
-            "startTime": 1627890524206,
-            "executionTime": 1427,
+            "startTime": 1676027885179,
+            "executionTime": 150,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "rate": 1.18598,
+                      "rate": 1.07158,
                       "source": "EUR",
                       "target": "USD",
-                      "time": "2021-08-02T00:00:00+0000"
+                      "time": "2023-02-09T00:00:00+0000"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -90,8 +118,13 @@
         ],
         "Wise2": [
           {
-            "startTime": 1627890525633,
-            "executionTime": 308,
+            "startTime": 1676027885329,
+            "executionTime": 331,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -109,10 +142,16 @@
                       "transactions": [
                         "json array"
                       ],
+                      "startOfStatementBalance": {
+                        "object": true
+                      },
                       "endOfStatementBalance": {
                         "object": true
                       },
                       "endOfStatementUnrealisedGainLoss": {
+                        "object": true
+                      },
+                      "balanceAssetConfiguration": {
                         "object": true
                       },
                       "query": {
@@ -121,6 +160,9 @@
                       "request": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -130,8 +172,13 @@
         ],
         "Wise6": [
           {
-            "startTime": 1627890525941,
-            "executionTime": 358,
+            "startTime": 1676027885660,
+            "executionTime": 423,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -149,25 +196,28 @@
                       "transferFlowConfig": {
                         "object": true
                       },
-                      "rateTimestamp": "2021-08-02T07:48:46Z",
+                      "rateTimestamp": "2023-02-10T11:18:05Z",
                       "clientId": "transferwise-personal-tokens",
-                      "id": "b59c28c7-d41f-4f9f-81a7-fa985ac335d2",
+                      "id": "1880b2e6-4193-43a4-817e-872c2dbded66",
                       "type": "REGULAR",
+                      "expirationTime": "2023-02-10T11:48:05Z",
                       "status": "PENDING",
                       "profile": 16154361,
+                      "rate": 1,
                       "sourceCurrency": "EUR",
                       "targetCurrency": "EUR",
-                      "rate": 1,
-                      "createdTime": "2021-08-02T07:48:46Z",
+                      "createdTime": "2023-02-10T11:18:05Z",
                       "user": 5681537,
                       "rateType": "FIXED",
-                      "rateExpirationTime": "2021-09-01T07:48:46Z",
+                      "rateExpirationTime": "2023-03-12T11:18:05Z",
                       "payOut": "BANK_TRANSFER",
                       "guaranteedTargetAmount": false,
                       "providedAmountType": "SOURCE",
-                      "expirationTime": "2021-08-02T08:18:46Z",
                       "payInCountry": "GB",
                       "funding": "POST"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -177,8 +227,13 @@
         ],
         "Wise14": [
           {
-            "startTime": 1627890526299,
-            "executionTime": 316,
+            "startTime": 1676027886085,
+            "executionTime": 306,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -196,25 +251,28 @@
                       "transferFlowConfig": {
                         "object": true
                       },
-                      "rateTimestamp": "2021-08-02T07:48:46Z",
+                      "rateTimestamp": "2023-02-10T11:18:06Z",
                       "clientId": "transferwise-personal-tokens",
-                      "id": "4993d18d-8b59-47dc-8ed1-0dba949ea1fe",
+                      "id": "809cd905-bfed-4dd9-9e93-347a72bc0da3",
                       "type": "REGULAR",
+                      "expirationTime": "2023-02-10T11:48:06Z",
                       "status": "PENDING",
                       "profile": 16154361,
+                      "rate": 1,
                       "sourceCurrency": "EUR",
                       "targetCurrency": "EUR",
-                      "rate": 1,
-                      "createdTime": "2021-08-02T07:48:46Z",
+                      "createdTime": "2023-02-10T11:18:06Z",
                       "user": 5681537,
                       "rateType": "FIXED",
-                      "rateExpirationTime": "2021-09-01T07:48:46Z",
+                      "rateExpirationTime": "2023-03-12T11:18:06Z",
                       "payOut": "BANK_TRANSFER",
                       "guaranteedTargetAmount": false,
                       "providedAmountType": "SOURCE",
-                      "expirationTime": "2021-08-02T08:18:46Z",
                       "payInCountry": "GB",
                       "funding": "POST"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -224,8 +282,13 @@
         ],
         "Wise12": [
           {
-            "startTime": 1627890526616,
-            "executionTime": 251,
+            "startTime": 1676027886394,
+            "executionTime": 306,
+            "source": [
+              {
+                "previousNode": "Wise4"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -236,6 +299,9 @@
                       "details": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   },
                   {
@@ -245,6 +311,9 @@
                       "details": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -254,8 +323,13 @@
         ],
         "Wise": [
           {
-            "startTime": 1627890526867,
-            "executionTime": 1442,
+            "startTime": 1676027886701,
+            "executionTime": 165,
+            "source": [
+              {
+                "previousNode": "Wise2"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -271,6 +345,9 @@
                       "balances": [
                         "json array"
                       ]
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -280,8 +357,13 @@
         ],
         "Wise7": [
           {
-            "startTime": 1627890528310,
-            "executionTime": 227,
+            "startTime": 1676027886866,
+            "executionTime": 197,
+            "source": [
+              {
+                "previousNode": "Wise6"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -299,25 +381,28 @@
                       "transferFlowConfig": {
                         "object": true
                       },
-                      "rateTimestamp": "2021-08-02T07:48:46Z",
+                      "rateTimestamp": "2023-02-10T11:18:05Z",
                       "clientId": "transferwise-personal-tokens",
-                      "id": "b59c28c7-d41f-4f9f-81a7-fa985ac335d2",
+                      "id": "1880b2e6-4193-43a4-817e-872c2dbded66",
                       "type": "REGULAR",
+                      "expirationTime": "2023-02-10T11:48:05Z",
                       "status": "PENDING",
                       "profile": 16154361,
+                      "rate": 1,
                       "sourceCurrency": "EUR",
                       "targetCurrency": "EUR",
-                      "rate": 1,
-                      "createdTime": "2021-08-02T07:48:46Z",
+                      "createdTime": "2023-02-10T11:18:05Z",
                       "user": 5681537,
                       "rateType": "FIXED",
-                      "rateExpirationTime": "2021-09-01T07:48:46Z",
+                      "rateExpirationTime": "2023-03-12T11:18:05Z",
                       "payOut": "BANK_TRANSFER",
                       "guaranteedTargetAmount": false,
                       "providedAmountType": "SOURCE",
-                      "expirationTime": "2021-08-02T08:18:46Z",
                       "payInCountry": "GB",
                       "funding": "POST"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -327,14 +412,19 @@
         ],
         "Wise16": [
           {
-            "startTime": 1627890528537,
-            "executionTime": 930,
+            "startTime": 1676027887071,
+            "executionTime": 1294,
+            "source": [
+              {
+                "previousNode": "Wise14"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": 49919989,
+                      "id": 51678352,
                       "user": 5681537,
                       "targetAccount": 147784111,
                       "sourceAccount": {
@@ -343,11 +433,11 @@
                       "quote": {
                         "object": true
                       },
-                      "quoteUuid": "4993d18d-8b59-47dc-8ed1-0dba949ea1fe",
+                      "quoteUuid": "809cd905-bfed-4dd9-9e93-347a72bc0da3",
                       "status": "incoming_payment_waiting",
                       "reference": "",
                       "rate": 1,
-                      "created": "2021-08-02 07:48:49",
+                      "created": "2023-02-10 11:18:08",
                       "business": {
                         "object": true
                       },
@@ -362,7 +452,10 @@
                       "sourceValue": 2,
                       "targetCurrency": "EUR",
                       "targetValue": 2,
-                      "customerTransactionId": "5e699b75-e927-4abf-8f3c-2dec5959f3f5"
+                      "customerTransactionId": "b0de1010-ef20-4813-88e7-552b18d1354b"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -372,8 +465,13 @@
         ],
         "Wise1": [
           {
-            "startTime": 1627890529468,
-            "executionTime": 2307,
+            "startTime": 1676027888365,
+            "executionTime": 122,
+            "source": [
+              {
+                "previousNode": "Wise"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -385,6 +483,9 @@
                       "sampleBankDetails": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -394,14 +495,19 @@
         ],
         "Wise8": [
           {
-            "startTime": 1627890531775,
-            "executionTime": 1771,
+            "startTime": 1676027888488,
+            "executionTime": 898,
+            "source": [
+              {
+                "previousNode": "Wise7"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": 49919990,
+                      "id": 51678353,
                       "user": 5681537,
                       "targetAccount": 147784111,
                       "sourceAccount": {
@@ -410,11 +516,11 @@
                       "quote": {
                         "object": true
                       },
-                      "quoteUuid": "b59c28c7-d41f-4f9f-81a7-fa985ac335d2",
+                      "quoteUuid": "1880b2e6-4193-43a4-817e-872c2dbded66",
                       "status": "incoming_payment_waiting",
                       "reference": "",
                       "rate": 1,
-                      "created": "2021-08-02 07:48:53",
+                      "created": "2023-02-10 11:18:09",
                       "business": {
                         "object": true
                       },
@@ -429,7 +535,10 @@
                       "sourceValue": 2,
                       "targetCurrency": "EUR",
                       "targetValue": 2,
-                      "customerTransactionId": "eebbecfd-1a87-4a2c-b4a1-1fb438fdfa67"
+                      "customerTransactionId": "8966d760-2069-4230-bde5-821cded0be89"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -439,14 +548,19 @@
         ],
         "Wise15": [
           {
-            "startTime": 1627890533546,
-            "executionTime": 730,
+            "startTime": 1676027889386,
+            "executionTime": 248,
+            "source": [
+              {
+                "previousNode": "Wise16"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": 49919989,
+                      "id": 51678352,
                       "user": 5681537,
                       "targetAccount": 147784111,
                       "sourceAccount": {
@@ -455,11 +569,11 @@
                       "quote": {
                         "object": true
                       },
-                      "quoteUuid": "4993d18d-8b59-47dc-8ed1-0dba949ea1fe",
+                      "quoteUuid": "809cd905-bfed-4dd9-9e93-347a72bc0da3",
                       "status": "cancelled",
                       "reference": "",
                       "rate": 1,
-                      "created": "2021-08-02 07:48:49",
+                      "created": "2023-02-10 11:18:08",
                       "business": {
                         "object": true
                       },
@@ -474,7 +588,10 @@
                       "sourceValue": 2,
                       "targetCurrency": "EUR",
                       "targetValue": 2,
-                      "customerTransactionId": "5e699b75-e927-4abf-8f3c-2dec5959f3f5"
+                      "customerTransactionId": "b0de1010-ef20-4813-88e7-552b18d1354b"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -484,14 +601,19 @@
         ],
         "Wise9": [
           {
-            "startTime": 1627890534276,
-            "executionTime": 196,
+            "startTime": 1676027889634,
+            "executionTime": 198,
+            "source": [
+              {
+                "previousNode": "Wise8"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": 49919990,
+                      "id": 51678353,
                       "user": 5681537,
                       "targetAccount": 147784111,
                       "sourceAccount": {
@@ -500,11 +622,11 @@
                       "quote": {
                         "object": true
                       },
-                      "quoteUuid": "b59c28c7-d41f-4f9f-81a7-fa985ac335d2",
+                      "quoteUuid": "1880b2e6-4193-43a4-817e-872c2dbded66",
                       "status": "incoming_payment_waiting",
                       "reference": "",
                       "rate": 1,
-                      "created": "2021-08-02 07:48:53",
+                      "created": "2023-02-10 11:18:09",
                       "business": {
                         "object": true
                       },
@@ -519,7 +641,10 @@
                       "sourceValue": 2,
                       "targetCurrency": "EUR",
                       "targetValue": 2,
-                      "customerTransactionId": "eebbecfd-1a87-4a2c-b4a1-1fb438fdfa67"
+                      "customerTransactionId": "8966d760-2069-4230-bde5-821cded0be89"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -529,14 +654,19 @@
         ],
         "Wise10": [
           {
-            "startTime": 1627890534472,
-            "executionTime": 245,
+            "startTime": 1676027889832,
+            "executionTime": 198,
+            "source": [
+              {
+                "previousNode": "Wise9"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": 49846258,
+                      "id": 51670355,
                       "user": 5681537,
                       "targetAccount": 147784111,
                       "sourceAccount": {
@@ -545,11 +675,11 @@
                       "quote": {
                         "object": true
                       },
-                      "quoteUuid": "632d97d4-8f6a-47bf-9c33-9881821f931a",
-                      "status": "incoming_payment_waiting",
+                      "quoteUuid": "003db417-f56e-4378-a00f-091eec172f82",
+                      "status": "cancelled",
                       "reference": "",
                       "rate": 1,
-                      "created": "2021-07-12 13:04:14",
+                      "created": "2023-02-07 13:49:33",
                       "business": {
                         "object": true
                       },
@@ -564,7 +694,10 @@
                       "sourceValue": 2,
                       "targetCurrency": "EUR",
                       "targetValue": 2,
-                      "customerTransactionId": "027b4ec1-920d-4fbc-8117-5a02d5863e5f"
+                      "customerTransactionId": "22bcc3b2-7857-4abd-a2cf-f20015e5dc0f"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -574,14 +707,19 @@
         ],
         "Wise13": [
           {
-            "startTime": 1627890534717,
+            "startTime": 1676027890031,
             "executionTime": 0,
+            "source": [
+              {
+                "previousNode": "Wise10"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": 49846258,
+                      "id": 51670355,
                       "user": 5681537,
                       "targetAccount": 147784111,
                       "sourceAccount": {
@@ -590,11 +728,11 @@
                       "quote": {
                         "object": true
                       },
-                      "quoteUuid": "632d97d4-8f6a-47bf-9c33-9881821f931a",
-                      "status": "incoming_payment_waiting",
+                      "quoteUuid": "003db417-f56e-4378-a00f-091eec172f82",
+                      "status": "cancelled",
                       "reference": "",
                       "rate": 1,
-                      "created": "2021-07-12 13:04:14",
+                      "created": "2023-02-07 13:49:33",
                       "business": {
                         "object": true
                       },
@@ -609,7 +747,10 @@
                       "sourceValue": 2,
                       "targetCurrency": "EUR",
                       "targetValue": 2,
-                      "customerTransactionId": "027b4ec1-920d-4fbc-8117-5a02d5863e5f"
+                      "customerTransactionId": "22bcc3b2-7857-4abd-a2cf-f20015e5dc0f"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -623,11 +764,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-08-02T07:48:43.326Z",
-  "stoppedAt": "2021-08-02T07:48:54.717Z",
+  "startedAt": "2023-02-10T11:18:04.765Z",
+  "stoppedAt": "2023-02-10T11:18:10.031Z",
   "finished": true
 }

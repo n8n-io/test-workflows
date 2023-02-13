@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622630277172,
-            "executionTime": 1,
+            "startTime": 1676027851421,
+            "executionTime": 0,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,16 +24,21 @@
         ],
         "ClickUp": [
           {
-            "startTime": 1622630277173,
-            "executionTime": 298,
+            "startTime": 1676027851422,
+            "executionTime": 586,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "29946347",
-                      "name": "TestFolder31622630277176",
-                      "orderindex": 444,
+                      "id": "90100369503",
+                      "name": "TestFolder31676027851435",
+                      "orderindex": 149,
                       "override_statuses": false,
                       "hidden": false,
                       "space": {
@@ -44,6 +53,9 @@
                         "json array"
                       ],
                       "permission_level": "create"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -53,16 +65,21 @@
         ],
         "Sleep 8 Seconds": [
           {
-            "startTime": 1622630277471,
-            "executionTime": 807,
+            "startTime": 1676027852009,
+            "executionTime": 811,
+            "source": [
+              {
+                "previousNode": "ClickUp"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "29946347",
-                      "name": "TestFolder31622630277176",
-                      "orderindex": 444,
+                      "id": "90100369503",
+                      "name": "TestFolder31676027851435",
+                      "orderindex": 149,
                       "override_statuses": false,
                       "hidden": false,
                       "space": {
@@ -77,7 +94,11 @@
                         "json array"
                       ],
                       "permission_level": "create"
-                    }
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    },
+                    "index": 0
                   }
                 ]
               ]
@@ -86,15 +107,20 @@
         ],
         "ClickUp1": [
           {
-            "startTime": 1622630278279,
-            "executionTime": 486,
+            "startTime": 1676027852820,
+            "executionTime": 608,
+            "source": [
+              {
+                "previousNode": "Sleep 8 Seconds"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "61448945",
-                      "name": "TestList1622630278281",
+                      "id": "901000661714",
+                      "name": "TestList1676027852821",
                       "deleted": false,
                       "orderindex": 0,
                       "priority": {
@@ -115,13 +141,16 @@
                       "space": {
                         "object": true
                       },
-                      "inbound_address": "a.t.61448945.u-8779387.1af96f4c-60db-4ae3-af07-50e0039bb37c@tasks.clickup.com",
+                      "inbound_address": "a.t.901000661714.u-8779387.f16f6d66-5b1e-4a00-9468-bd5bd7b5aa44@tasks.clickup.com",
                       "archived": false,
                       "override_statuses": false,
                       "statuses": [
                         "json array"
                       ],
                       "permission_level": "create"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -131,15 +160,20 @@
         ],
         "Sleep 8 Seconds1": [
           {
-            "startTime": 1622630278765,
-            "executionTime": 802,
+            "startTime": 1676027853428,
+            "executionTime": 808,
+            "source": [
+              {
+                "previousNode": "ClickUp1"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "61448945",
-                      "name": "TestList1622630278281",
+                      "id": "901000661714",
+                      "name": "TestList1676027852821",
                       "deleted": false,
                       "orderindex": 0,
                       "priority": {
@@ -160,14 +194,18 @@
                       "space": {
                         "object": true
                       },
-                      "inbound_address": "a.t.61448945.u-8779387.1af96f4c-60db-4ae3-af07-50e0039bb37c@tasks.clickup.com",
+                      "inbound_address": "a.t.901000661714.u-8779387.f16f6d66-5b1e-4a00-9468-bd5bd7b5aa44@tasks.clickup.com",
                       "archived": false,
                       "override_statuses": false,
                       "statuses": [
                         "json array"
                       ],
                       "permission_level": "create"
-                    }
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    },
+                    "index": 0
                   }
                 ]
               ]
@@ -176,18 +214,23 @@
         ],
         "ClickUp9": [
           {
-            "startTime": 1622630279568,
-            "executionTime": 430,
+            "startTime": 1676027854236,
+            "executionTime": 696,
+            "source": [
+              {
+                "previousNode": "Sleep 8 Seconds1"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "kv8y8u",
+                      "id": "8677cr4yd",
                       "custom_id": {
                         "object": true
                       },
-                      "name": "testTask1622630279568",
+                      "name": "testTask1676027854237",
                       "text_content": {
                         "object": true
                       },
@@ -197,10 +240,13 @@
                       "status": {
                         "object": true
                       },
-                      "orderindex": "1116.41413379893120000000000000000000",
-                      "date_created": "1622630279774",
-                      "date_updated": "1622630279774",
+                      "orderindex": "2896.00000000000000000000000000000000",
+                      "date_created": "1676027854656",
+                      "date_updated": "1676027854656",
                       "date_closed": {
+                        "object": true
+                      },
+                      "date_done": {
                         "object": true
                       },
                       "archived": false,
@@ -248,7 +294,7 @@
                         "json array"
                       ],
                       "team_id": "4651110",
-                      "url": "https://app.clickup.com/t/kv8y8u",
+                      "url": "https://app.clickup.com/t/8677cr4yd",
                       "permission_level": "create",
                       "list": {
                         "object": true
@@ -262,6 +308,9 @@
                       "space": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -271,18 +320,23 @@
         ],
         "Sleep 8 Seconds2": [
           {
-            "startTime": 1622630279999,
-            "executionTime": 807,
+            "startTime": 1676027854932,
+            "executionTime": 803,
+            "source": [
+              {
+                "previousNode": "ClickUp9"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "kv8y8u",
+                      "id": "8677cr4yd",
                       "custom_id": {
                         "object": true
                       },
-                      "name": "testTask1622630279568",
+                      "name": "testTask1676027854237",
                       "text_content": {
                         "object": true
                       },
@@ -292,10 +346,13 @@
                       "status": {
                         "object": true
                       },
-                      "orderindex": "1116.41413379893120000000000000000000",
-                      "date_created": "1622630279774",
-                      "date_updated": "1622630279774",
+                      "orderindex": "2896.00000000000000000000000000000000",
+                      "date_created": "1676027854656",
+                      "date_updated": "1676027854656",
                       "date_closed": {
+                        "object": true
+                      },
+                      "date_done": {
                         "object": true
                       },
                       "archived": false,
@@ -343,7 +400,7 @@
                         "json array"
                       ],
                       "team_id": "4651110",
-                      "url": "https://app.clickup.com/t/kv8y8u",
+                      "url": "https://app.clickup.com/t/8677cr4yd",
                       "permission_level": "create",
                       "list": {
                         "object": true
@@ -357,7 +414,11 @@
                       "space": {
                         "object": true
                       }
-                    }
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    },
+                    "index": 0
                   }
                 ]
               ]
@@ -366,18 +427,23 @@
         ],
         "ClickUp11": [
           {
-            "startTime": 1622630280806,
-            "executionTime": 531,
+            "startTime": 1676027855736,
+            "executionTime": 780,
+            "source": [
+              {
+                "previousNode": "Sleep 8 Seconds2"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "kv8y93",
+                      "id": "8677cr4yq",
                       "custom_id": {
                         "object": true
                       },
-                      "name": "testTask21622630280806",
+                      "name": "testTask21676027855737",
                       "text_content": {
                         "object": true
                       },
@@ -387,10 +453,13 @@
                       "status": {
                         "object": true
                       },
-                      "orderindex": "1116.57639682702910000000000000000000",
-                      "date_created": "1622630281033",
-                      "date_updated": "1622630281033",
+                      "orderindex": "2897.00000000000000000000000000000000",
+                      "date_created": "1676027856188",
+                      "date_updated": "1676027856188",
                       "date_closed": {
+                        "object": true
+                      },
+                      "date_done": {
                         "object": true
                       },
                       "archived": false,
@@ -438,7 +507,7 @@
                         "json array"
                       ],
                       "team_id": "4651110",
-                      "url": "https://app.clickup.com/t/kv8y93",
+                      "url": "https://app.clickup.com/t/8677cr4yq",
                       "permission_level": "create",
                       "list": {
                         "object": true
@@ -452,6 +521,9 @@
                       "space": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -461,18 +533,23 @@
         ],
         "Sleep 8 Seconds3": [
           {
-            "startTime": 1622630281337,
-            "executionTime": 804,
+            "startTime": 1676027856516,
+            "executionTime": 803,
+            "source": [
+              {
+                "previousNode": "ClickUp11"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "kv8y93",
+                      "id": "8677cr4yq",
                       "custom_id": {
                         "object": true
                       },
-                      "name": "testTask21622630280806",
+                      "name": "testTask21676027855737",
                       "text_content": {
                         "object": true
                       },
@@ -482,10 +559,13 @@
                       "status": {
                         "object": true
                       },
-                      "orderindex": "1116.57639682702910000000000000000000",
-                      "date_created": "1622630281033",
-                      "date_updated": "1622630281033",
+                      "orderindex": "2897.00000000000000000000000000000000",
+                      "date_created": "1676027856188",
+                      "date_updated": "1676027856188",
                       "date_closed": {
+                        "object": true
+                      },
+                      "date_done": {
                         "object": true
                       },
                       "archived": false,
@@ -533,7 +613,7 @@
                         "json array"
                       ],
                       "team_id": "4651110",
-                      "url": "https://app.clickup.com/t/kv8y93",
+                      "url": "https://app.clickup.com/t/8677cr4yq",
                       "permission_level": "create",
                       "list": {
                         "object": true
@@ -547,7 +627,11 @@
                       "space": {
                         "object": true
                       }
-                    }
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    },
+                    "index": 0
                   }
                 ]
               ]
@@ -556,14 +640,22 @@
         ],
         "ClickUp10": [
           {
-            "startTime": 1622630282142,
-            "executionTime": 187,
+            "startTime": 1676027857319,
+            "executionTime": 454,
+            "source": [
+              {
+                "previousNode": "Sleep 8 Seconds3"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "success": true
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -573,15 +665,24 @@
         ],
         "Sleep 8 Seconds4": [
           {
-            "startTime": 1622630282329,
-            "executionTime": 801,
+            "startTime": 1676027857773,
+            "executionTime": 803,
+            "source": [
+              {
+                "previousNode": "ClickUp10"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "success": true
-                    }
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    },
+                    "index": 0
                   }
                 ]
               ]
@@ -590,14 +691,22 @@
         ],
         "ClickUp12": [
           {
-            "startTime": 1622630283131,
-            "executionTime": 181,
+            "startTime": 1676027858577,
+            "executionTime": 639,
+            "source": [
+              {
+                "previousNode": "Sleep 8 Seconds4"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "success": true
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -607,15 +716,24 @@
         ],
         "Sleep 8 Seconds5": [
           {
-            "startTime": 1622630283312,
-            "executionTime": 802,
+            "startTime": 1676027859216,
+            "executionTime": 804,
+            "source": [
+              {
+                "previousNode": "ClickUp12"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "success": true
-                    }
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    },
+                    "index": 0
                   }
                 ]
               ]
@@ -624,14 +742,22 @@
         ],
         "ClickUp7": [
           {
-            "startTime": 1622630284115,
-            "executionTime": 192,
+            "startTime": 1676027860020,
+            "executionTime": 419,
+            "source": [
+              {
+                "previousNode": "Sleep 8 Seconds5"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "success": true
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -641,15 +767,24 @@
         ],
         "Sleep 8 Seconds6": [
           {
-            "startTime": 1622630284308,
-            "executionTime": 805,
+            "startTime": 1676027860439,
+            "executionTime": 804,
+            "source": [
+              {
+                "previousNode": "ClickUp7"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "success": true
-                    }
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    },
+                    "index": 0
                   }
                 ]
               ]
@@ -658,14 +793,22 @@
         ],
         "ClickUp8": [
           {
-            "startTime": 1622630285114,
-            "executionTime": 237,
+            "startTime": 1676027861244,
+            "executionTime": 2051,
+            "source": [
+              {
+                "previousNode": "Sleep 8 Seconds6"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "success": true
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -679,11 +822,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-02T10:37:57.168Z",
-  "stoppedAt": "2021-06-02T10:38:05.352Z",
+  "startedAt": "2023-02-10T11:17:31.418Z",
+  "stoppedAt": "2023-02-10T11:17:43.296Z",
   "finished": true
 }

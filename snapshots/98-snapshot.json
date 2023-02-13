@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1623767230154,
-            "executionTime": 0,
+            "startTime": 1676027873649,
+            "executionTime": 1,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,8 +24,13 @@
         ],
         "Disqus": [
           {
-            "startTime": 1623767230155,
-            "executionTime": 239,
+            "startTime": 1676027873650,
+            "executionTime": 203,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -91,6 +100,9 @@
                       "forumCategory": {
                         "object": true
                       },
+                      "linkColor": {
+                        "object": true
+                      },
                       "colorScheme": "auto",
                       "pk": "5140050",
                       "commentsPlaceholderTextPopulated": {
@@ -122,6 +134,9 @@
                       "signedUrl": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -131,8 +146,13 @@
         ],
         "Disqus1": [
           {
-            "startTime": 1623767230394,
-            "executionTime": 209,
+            "startTime": 1676027873853,
+            "executionTime": 175,
+            "source": [
+              {
+                "previousNode": "Disqus"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -143,6 +163,9 @@
                       "order": 0,
                       "isDefault": true,
                       "title": "General"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -152,14 +175,19 @@
         ],
         "Disqus2": [
           {
-            "startTime": 1623767230604,
-            "executionTime": 1273,
+            "startTime": 1676027874028,
+            "executionTime": 217,
+            "source": [
+              {
+                "previousNode": "Disqus1"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "feed": "https://disqus-demo-page.disqus.com/httpsiriusdg1test8087preview/latest.rss",
+                      "feed": "https://disqus-demo-page.disqus.com/httpcraftsnstuffsiriusdg1test8083adminpreview/latest.rss",
                       "clean_title": "Untitled",
                       "dislikes": 0,
                       "likes": 0,
@@ -171,14 +199,14 @@
                       "adsDisabled": false,
                       "author": "252695960",
                       "userScore": 0,
-                      "id": "8574088339",
-                      "signedLink": "http://disq.us/?url=http%3A%2F%2Fsirius.dg1.test%3A8087%2Fpreview&key=q7gOLQ7YA6VyfnGkPxTDNQ",
-                      "createdAt": "2021-06-05T03:23:18",
+                      "id": "9557829355",
+                      "signedLink": "http://disq.us/?url=http%3A%2F%2Fcraftsnstuff.sirius.dg1.test%3A8083%2Fadmin%2Fpreview&key=h92gsex6Zpzysq7_4pK8vQ",
+                      "createdAt": "2023-01-31T03:30:38",
                       "hasStreaming": false,
                       "raw_message": "",
                       "isClosed": false,
-                      "link": "http://sirius.dg1.test:8087/preview",
-                      "slug": "httpsiriusdg1test8087preview",
+                      "link": "http://craftsnstuff.sirius.dg1.test:8083/admin/preview",
+                      "slug": "httpcraftsnstuffsiriusdg1test8083adminpreview",
                       "forum": "disqus-demo-page",
                       "identifiers": [
                         "json array"
@@ -190,6 +218,9 @@
                       "highlightedPost": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -199,8 +230,13 @@
         ],
         "Disqus3": [
           {
-            "startTime": 1623767231878,
-            "executionTime": 1227,
+            "startTime": 1676027874246,
+            "executionTime": 198,
+            "source": [
+              {
+                "previousNode": "Disqus2"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -240,6 +276,9 @@
                       ],
                       "isEdited": false,
                       "sb": false
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -253,11 +292,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-15T14:27:10.152Z",
-  "stoppedAt": "2021-06-15T14:27:13.106Z",
+  "startedAt": "2023-02-10T11:17:53.648Z",
+  "stoppedAt": "2023-02-10T11:17:54.444Z",
   "finished": true
 }

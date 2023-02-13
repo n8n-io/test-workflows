@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622630280727,
-            "executionTime": 1,
+            "startTime": 1676027883229,
+            "executionTime": 0,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,8 +24,13 @@
         ],
         "Clearbit2": [
           {
-            "startTime": 1622630280728,
-            "executionTime": 501,
+            "startTime": 1676027883230,
+            "executionTime": 601,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -34,7 +43,7 @@
                       "email": "jan@n8n.io",
                       "location": "Berlin, Berlin, DE",
                       "timeZone": "Europe/Berlin",
-                      "utcOffset": 2,
+                      "utcOffset": 1,
                       "geo": {
                         "object": true
                       },
@@ -66,7 +75,10 @@
                       },
                       "fuzzy": false,
                       "emailProvider": false,
-                      "indexedAt": "2021-05-20T12:47:52.843Z"
+                      "indexedAt": "2023-01-22T12:23:31.823Z"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -76,15 +88,20 @@
         ],
         "Clearbit": [
           {
-            "startTime": 1622630281229,
-            "executionTime": 465,
+            "startTime": 1676027883831,
+            "executionTime": 389,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "id": "546ba3f6-a6b7-41a1-aed8-4f9bba4119e8",
-                      "name": "n8n.io",
+                      "name": "n8n",
                       "legalName": {
                         "object": true
                       },
@@ -101,11 +118,11 @@
                       "tags": [
                         "json array"
                       ],
-                      "description": "Free and open self hostable workflow automation tool",
+                      "description": "n8n is a free and source-available workflow automation tool - install on prem, download our desktop app or sign up for our cloud service",
                       "foundedYear": 2019,
-                      "location": "13359 Berlin, Germany",
+                      "location": "Borsigstraße 27, 10115 Berlin, Germany",
                       "timeZone": "Europe/Berlin",
-                      "utcOffset": 2,
+                      "utcOffset": 1,
                       "geo": {
                         "object": true
                       },
@@ -136,7 +153,7 @@
                       "metrics": {
                         "object": true
                       },
-                      "indexedAt": "2021-05-29T04:35:34.692Z",
+                      "indexedAt": "2023-02-03T06:53:18.497Z",
                       "tech": [
                         "json array"
                       ],
@@ -149,6 +166,9 @@
                       "ultimateParent": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -158,8 +178,13 @@
         ],
         "Clearbit1": [
           {
-            "startTime": 1622630281695,
-            "executionTime": 250,
+            "startTime": 1676027884220,
+            "executionTime": 107,
+            "source": [
+              {
+                "previousNode": "Clearbit"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -168,13 +193,39 @@
                       "name": "Nielsen Norman Group",
                       "domain": "nngroup.com",
                       "logo": "https://logo.clearbit.com/nngroup.com"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   },
                   {
                     "json": {
-                      "name": "NN.RU Новости Нижнего Новгорода",
+                      "name": "2NN ニュース速報＋",
+                      "domain": "2nn.jp",
+                      "logo": "https://logo.clearbit.com/2nn.jp"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  },
+                  {
+                    "json": {
+                      "name": "Новости NN.RU",
                       "domain": "nn.ru",
                       "logo": "https://logo.clearbit.com/nn.ru"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  },
+                  {
+                    "json": {
+                      "name": "NNY360",
+                      "domain": "nny360.com",
+                      "logo": "https://logo.clearbit.com/nny360.com"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   },
                   {
@@ -182,20 +233,9 @@
                       "name": "NNNOW",
                       "domain": "nnnow.com",
                       "logo": "https://logo.clearbit.com/nnnow.com"
-                    }
-                  },
-                  {
-                    "json": {
-                      "name": "NNC Haber",
-                      "domain": "nnchaber.com",
-                      "logo": "https://logo.clearbit.com/nnchaber.com"
-                    }
-                  },
-                  {
-                    "json": {
-                      "name": "NNA ASIA",
-                      "domain": "nna.jp",
-                      "logo": "https://logo.clearbit.com/nna.jp"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -209,11 +249,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-02T10:38:00.726Z",
-  "stoppedAt": "2021-06-02T10:38:01.946Z",
+  "startedAt": "2023-02-10T11:18:03.227Z",
+  "stoppedAt": "2023-02-10T11:18:04.328Z",
   "finished": true
 }

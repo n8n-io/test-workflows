@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1627896646683,
-            "executionTime": 1,
+            "startTime": 1676027901328,
+            "executionTime": 0,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,14 +24,22 @@
         ],
         "Set job name": [
           {
-            "startTime": 1627896646685,
-            "executionTime": 2,
+            "startTime": 1676027901329,
+            "executionTime": 23,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "job_name": "nodemation_job_1627896646687"
+                      "job_name": "nodemation_job_1676027901351"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -37,14 +49,19 @@
         ],
         "AWS Transcribe": [
           {
-            "startTime": 1627896646687,
-            "executionTime": 867,
+            "startTime": 1676027901353,
+            "executionTime": 556,
+            "source": [
+              {
+                "previousNode": "Set job name"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "CreationTime": 1627896647.436,
+                      "CreationTime": 1676027901.875,
                       "LanguageCode": "en-US",
                       "Media": {
                         "object": true
@@ -52,9 +69,12 @@
                       "Settings": {
                         "object": true
                       },
-                      "StartTime": 1627896647.471,
-                      "TranscriptionJobName": "nodemation_job_1627896646687",
+                      "StartTime": 1676027901.9,
+                      "TranscriptionJobName": "nodemation_job_1676027901351",
                       "TranscriptionJobStatus": "IN_PROGRESS"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -64,14 +84,19 @@
         ],
         "AWS Transcribe1": [
           {
-            "startTime": 1627896647554,
-            "executionTime": 560,
+            "startTime": 1676027901910,
+            "executionTime": 357,
+            "source": [
+              {
+                "previousNode": "AWS Transcribe"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "CreationTime": 1627896647.436,
+                      "CreationTime": 1676027901.875,
                       "LanguageCode": "en-US",
                       "Media": {
                         "object": true
@@ -79,12 +104,15 @@
                       "Settings": {
                         "object": true
                       },
-                      "StartTime": 1627896647.471,
+                      "StartTime": 1676027901.9,
                       "Transcript": {
                         "object": true
                       },
-                      "TranscriptionJobName": "nodemation_job_1627896646687",
+                      "TranscriptionJobName": "nodemation_job_1676027901351",
                       "TranscriptionJobStatus": "IN_PROGRESS"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -94,19 +122,27 @@
         ],
         "AWS Transcribe2": [
           {
-            "startTime": 1627896648114,
-            "executionTime": 668,
+            "startTime": 1676027902267,
+            "executionTime": 354,
+            "source": [
+              {
+                "previousNode": "AWS Transcribe1"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "CreationTime": 1627896647.436,
+                      "CreationTime": 1676027901.875,
                       "LanguageCode": "en-US",
                       "OutputLocationType": "SERVICE_BUCKET",
-                      "StartTime": 1627896647.471,
-                      "TranscriptionJobName": "nodemation_job_1627896646687",
+                      "StartTime": 1676027901.9,
+                      "TranscriptionJobName": "nodemation_job_1676027901351",
                       "TranscriptionJobStatus": "IN_PROGRESS"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -116,20 +152,29 @@
         ],
         "Sleep 30 seconds": [
           {
-            "startTime": 1627896648782,
-            "executionTime": 30026,
+            "startTime": 1676027902621,
+            "executionTime": 30033,
+            "source": [
+              {
+                "previousNode": "AWS Transcribe2"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "CreationTime": 1627896647.436,
+                      "CreationTime": 1676027901.875,
                       "LanguageCode": "en-US",
                       "OutputLocationType": "SERVICE_BUCKET",
-                      "StartTime": 1627896647.471,
-                      "TranscriptionJobName": "nodemation_job_1627896646687",
+                      "StartTime": 1676027901.9,
+                      "TranscriptionJobName": "nodemation_job_1676027901351",
                       "TranscriptionJobStatus": "IN_PROGRESS"
-                    }
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    },
+                    "index": 0
                   }
                 ]
               ]
@@ -138,14 +183,22 @@
         ],
         "AWS Transcribe3": [
           {
-            "startTime": 1627896678808,
-            "executionTime": 454,
+            "startTime": 1676027932655,
+            "executionTime": 397,
+            "source": [
+              {
+                "previousNode": "Sleep 30 seconds"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "success": true
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -159,11 +212,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-08-02T09:30:46.681Z",
-  "stoppedAt": "2021-08-02T09:31:19.263Z",
+  "startedAt": "2023-02-10T11:18:21.321Z",
+  "stoppedAt": "2023-02-10T11:18:53.052Z",
   "finished": true
 }

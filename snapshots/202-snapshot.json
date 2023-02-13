@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622630113202,
+            "startTime": 1676027898837,
             "executionTime": 1,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,26 +24,35 @@
         ],
         "Beeminder": [
           {
-            "startTime": 1622630113203,
-            "executionTime": 831,
+            "startTime": 1676027898838,
+            "executionTime": 712,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "timestamp": 1622630113,
+                      "timestamp": 1676027899,
                       "value": 1,
                       "comment": "",
-                      "id": "60b75ee13b53bf1b04000658",
-                      "updated_at": 1622630113,
+                      "id": "63e627fbd4865f5361ce4c95",
+                      "updated_at": 1676027899,
                       "requestid": {
                         "object": true
                       },
-                      "canonical": "02 1",
-                      "fulltext": "2021-Jun-02 entered at 12:35 via api",
+                      "canonical": "10 1",
+                      "fulltext": "2023-Feb-10 entered at 12:18 by n8nsandbox via api",
                       "origin": "api",
-                      "daystamp": "20210602",
+                      "creator": "n8nsandbox",
+                      "daystamp": "20230210",
                       "status": "created"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -49,25 +62,34 @@
         ],
         "Beeminder1": [
           {
-            "startTime": 1622630114035,
-            "executionTime": 548,
+            "startTime": 1676027899550,
+            "executionTime": 514,
+            "source": [
+              {
+                "previousNode": "Beeminder"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "timestamp": 1622630113,
+                      "timestamp": 1676027899,
                       "value": 1,
                       "comment": "",
-                      "id": "60b75ee13b53bf1b04000658",
-                      "updated_at": 1622630113,
+                      "id": "63e627fbd4865f5361ce4c95",
+                      "updated_at": 1676027899,
                       "requestid": {
                         "object": true
                       },
-                      "canonical": "02 1",
-                      "fulltext": "2021-Jun-02 entered at 12:35 via api",
+                      "canonical": "10 1",
+                      "fulltext": "2023-Feb-10 entered at 12:18 by n8nsandbox via api",
                       "origin": "api",
-                      "daystamp": "20210602"
+                      "creator": "n8nsandbox",
+                      "daystamp": "20230210"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -77,25 +99,34 @@
         ],
         "Beeminder2": [
           {
-            "startTime": 1622630114583,
-            "executionTime": 633,
+            "startTime": 1676027900064,
+            "executionTime": 518,
+            "source": [
+              {
+                "previousNode": "Beeminder1"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "timestamp": 1622630113,
+                      "timestamp": 1676027899,
                       "value": 10,
                       "comment": "",
-                      "id": "60b75ee13b53bf1b04000658",
-                      "updated_at": 1622630115,
+                      "id": "63e627fbd4865f5361ce4c95",
+                      "updated_at": 1676027900,
                       "requestid": {
                         "object": true
                       },
-                      "canonical": "02 10",
-                      "fulltext": "2021-Jun-02 entered at 12:35 via api",
+                      "canonical": "10 10",
+                      "fulltext": "2023-Feb-10 entered at 12:18 by n8nsandbox via api",
                       "origin": "api",
-                      "daystamp": "20210602"
+                      "creator": "n8nsandbox",
+                      "daystamp": "20230210"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -105,26 +136,35 @@
         ],
         "Beeminder4": [
           {
-            "startTime": 1622630115217,
-            "executionTime": 627,
+            "startTime": 1676027900582,
+            "executionTime": 543,
+            "source": [
+              {
+                "previousNode": "Beeminder2"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "timestamp": 1622630115,
+                      "timestamp": 1676027901,
                       "value": 3,
                       "comment": "",
-                      "id": "60b75ee33b53bf1b04000659",
-                      "updated_at": 1622630115,
+                      "id": "63e627fdd4865f5375ce4b4a",
+                      "updated_at": 1676027901,
                       "requestid": {
                         "object": true
                       },
-                      "canonical": "02 3",
-                      "fulltext": "2021-Jun-02 entered at 12:35 via api",
+                      "canonical": "10 3",
+                      "fulltext": "2023-Feb-10 entered at 12:18 by n8nsandbox via api",
                       "origin": "api",
-                      "daystamp": "20210602",
+                      "creator": "n8nsandbox",
+                      "daystamp": "20230210",
                       "status": "created"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -134,25 +174,34 @@
         ],
         "Beeminder3": [
           {
-            "startTime": 1622630115845,
-            "executionTime": 562,
+            "startTime": 1676027901125,
+            "executionTime": 519,
+            "source": [
+              {
+                "previousNode": "Beeminder4"
+              }
+            ],
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "timestamp": 1622630115,
+                      "timestamp": 1676027901,
                       "value": 3,
                       "comment": "",
-                      "id": "60b75ee33b53bf1b04000659",
-                      "updated_at": 1622630115,
+                      "id": "63e627fdd4865f5375ce4b4a",
+                      "updated_at": 1676027901,
                       "requestid": {
                         "object": true
                       },
-                      "canonical": "02 3",
-                      "fulltext": "2021-Jun-02 entered at 12:35 via api",
+                      "canonical": "10 3",
+                      "fulltext": "2023-Feb-10 entered at 12:18 by n8nsandbox via api",
                       "origin": "api",
-                      "daystamp": "20210602"
+                      "creator": "n8nsandbox",
+                      "daystamp": "20230210"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -166,11 +215,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-02T10:35:13.201Z",
-  "stoppedAt": "2021-06-02T10:35:16.407Z",
+  "startedAt": "2023-02-10T11:18:18.836Z",
+  "stoppedAt": "2023-02-10T11:18:21.645Z",
   "finished": true
 }

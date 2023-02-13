@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622629939831,
-            "executionTime": 0,
+            "startTime": 1676027850254,
+            "executionTime": 1,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,8 +24,13 @@
         ],
         "Hacker News": [
           {
-            "startTime": 1622629939832,
-            "executionTime": 766,
+            "startTime": 1676027850261,
+            "executionTime": 657,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -60,6 +69,9 @@
                       "_highlightResult": {
                         "object": true
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -69,8 +81,13 @@
         ],
         "Hacker News1": [
           {
-            "startTime": 1622629940599,
-            "executionTime": 4640,
+            "startTime": 1676027850918,
+            "executionTime": 2724,
+            "source": [
+              {
+                "previousNode": "Hacker News"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -96,6 +113,9 @@
                       "options": [
                         "json array"
                       ]
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -105,8 +125,13 @@
         ],
         "Hacker News2": [
           {
-            "startTime": 1622629945239,
-            "executionTime": 800,
+            "startTime": 1676027853643,
+            "executionTime": 557,
+            "source": [
+              {
+                "previousNode": "Hacker News1"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -115,18 +140,21 @@
                       "id": 119207,
                       "username": "Cogito",
                       "about": "You can get me at andrew.ardill at gmail.",
-                      "karma": 4140,
+                      "karma": 4263,
                       "created_at": "2012-04-24T06:32:57.000Z",
                       "avg": 3.52273,
                       "delay": {
                         "object": true
                       },
-                      "submitted": 695,
-                      "updated_at": "2021-05-29T12:26:28.000Z",
+                      "submitted": 745,
+                      "updated_at": "2022-12-06T03:45:32.000Z",
                       "submission_count": 24,
-                      "comment_count": 670,
+                      "comment_count": 720,
                       "created_at_i": 1335249177,
                       "objectID": "Cogito"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -140,11 +168,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-02T10:32:19.829Z",
-  "stoppedAt": "2021-06-02T10:32:26.039Z",
+  "startedAt": "2023-02-10T11:17:30.252Z",
+  "stoppedAt": "2023-02-10T11:17:34.200Z",
   "finished": true
 }

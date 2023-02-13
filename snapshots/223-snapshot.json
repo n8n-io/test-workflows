@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1625829123447,
-            "executionTime": 0,
+            "startTime": 1676027904494,
+            "executionTime": 1,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,8 +24,13 @@
         ],
         "LingvaNex": [
           {
-            "startTime": 1625829123448,
-            "executionTime": 315,
+            "startTime": 1676027904495,
+            "executionTime": 224,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -31,6 +40,9 @@
                         "object": true
                       },
                       "result": "Automatisierung"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -44,11 +56,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-07-09T11:12:03.446Z",
-  "stoppedAt": "2021-07-09T11:12:03.763Z",
+  "startedAt": "2023-02-10T11:18:24.493Z",
+  "stoppedAt": "2023-02-10T11:18:24.719Z",
   "finished": true
 }

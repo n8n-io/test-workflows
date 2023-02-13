@@ -5,13 +5,17 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1622630053443,
+            "startTime": 1676027885378,
             "executionTime": 1,
+            "source": [],
             "data": {
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -20,8 +24,13 @@
         ],
         "Function": [
           {
-            "startTime": 1622630053445,
-            "executionTime": 4,
+            "startTime": 1676027885379,
+            "executionTime": 19,
+            "source": [
+              {
+                "previousNode": "Start"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -34,6 +43,9 @@
                         "fileExtension": "png",
                         "fileName": "n8n-logo.png"
                       }
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -43,8 +55,13 @@
         ],
         "AWS Rekognition": [
           {
-            "startTime": 1622630053450,
-            "executionTime": 1179,
+            "startTime": 1676027885398,
+            "executionTime": 818,
+            "source": [
+              {
+                "previousNode": "Function"
+              }
+            ],
             "data": {
               "main": [
                 [
@@ -54,6 +71,9 @@
                         "json array"
                       ],
                       "TextModelVersion": "3.0"
+                    },
+                    "pairedItem": {
+                      "item": 0
                     }
                   }
                 ]
@@ -67,11 +87,12 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "waitingExecution": {}
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2021-06-02T10:34:13.442Z",
-  "stoppedAt": "2021-06-02T10:34:14.629Z",
+  "startedAt": "2023-02-10T11:18:05.377Z",
+  "stoppedAt": "2023-02-10T11:18:06.216Z",
   "finished": true
 }
