@@ -5,9 +5,10 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1676027878450,
+            "startTime": 1676891406511,
             "executionTime": 0,
             "source": [],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -24,20 +25,21 @@
         ],
         "Set": [
           {
-            "startTime": 1676027878451,
-            "executionTime": 64,
+            "startTime": 1676891406512,
+            "executionTime": 65,
             "source": [
               {
                 "previousNode": "Start"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": 14820,
-                      "name": "Name1676027878515"
+                      "id": 90783,
+                      "name": "Name1676891406577"
                     },
                     "pairedItem": {
                       "item": 0
@@ -50,20 +52,21 @@
         ],
         "CrateDB": [
           {
-            "startTime": 1676027878515,
-            "executionTime": 311,
+            "startTime": 1676891406578,
+            "executionTime": 322,
             "source": [
               {
                 "previousNode": "Set"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": 14820,
-                      "name": "Name1676027878515"
+                      "id": 90783,
+                      "name": "Name1676891406577"
                     },
                     "pairedItem": {
                       "item": 0
@@ -76,20 +79,21 @@
         ],
         "Set1": [
           {
-            "startTime": 1676027878826,
-            "executionTime": 3,
+            "startTime": 1676891406901,
+            "executionTime": 13,
             "source": [
               {
                 "previousNode": "CrateDB"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": 14820,
-                      "name": "UpdatedName1676027878828"
+                      "id": 90783,
+                      "name": "UpdatedName1676891406903"
                     },
                     "pairedItem": {
                       "item": 0
@@ -102,20 +106,21 @@
         ],
         "CrateDB1": [
           {
-            "startTime": 1676027878829,
-            "executionTime": 1135,
+            "startTime": 1676891406916,
+            "executionTime": 310,
             "source": [
               {
                 "previousNode": "Set1"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": 14820,
-                      "name": "UpdatedName1676027878828"
+                      "id": 90783,
+                      "name": "UpdatedName1676891406903"
                     },
                     "pairedItem": {
                       "item": 0
@@ -128,13 +133,14 @@
         ],
         "CrateDB2": [
           {
-            "startTime": 1676027879964,
-            "executionTime": 268,
+            "startTime": 1676891407227,
+            "executionTime": 251,
             "source": [
               {
                 "previousNode": "CrateDB1"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 []
@@ -153,7 +159,8 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2023-02-10T11:17:58.449Z",
-  "stoppedAt": "2023-02-10T11:18:00.233Z",
+  "startedAt": "2023-02-20T11:10:06.509Z",
+  "stoppedAt": "2023-02-20T11:10:07.478Z",
+  "status": "running",
   "finished": true
 }

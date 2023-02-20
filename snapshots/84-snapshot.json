@@ -5,9 +5,10 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1676027870715,
+            "startTime": 1676891399013,
             "executionTime": 0,
             "source": [],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -24,19 +25,20 @@
         ],
         "Matrix1": [
           {
-            "startTime": 1676027870716,
-            "executionTime": 865,
+            "startTime": 1676891399014,
+            "executionTime": 1020,
             "source": [
               {
                 "previousNode": "Start"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "room_id": "!StnZwzKQsnZADSgXde:matrix.org"
+                      "room_id": "!DcFzypzOpeHAouWFqi:matrix.org"
                     },
                     "pairedItem": {
                       "item": 0
@@ -49,13 +51,14 @@
         ],
         "Matrix": [
           {
-            "startTime": 1676027871581,
-            "executionTime": 114,
+            "startTime": 1676891400034,
+            "executionTime": 142,
             "source": [
               {
                 "previousNode": "Start"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -76,19 +79,20 @@
         ],
         "Matrix6": [
           {
-            "startTime": 1676027871695,
-            "executionTime": 191,
+            "startTime": 1676891400176,
+            "executionTime": 201,
             "source": [
               {
                 "previousNode": "Matrix1"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "event_id": "$IXJKUjeeFFIw129yige5k3kMsBshqLx8KTEa4LVAqn4"
+                      "event_id": "$ieHbd402Uj_iQh9nxfS5fUz2PYifPv0aXo1npbROqbE"
                     },
                     "pairedItem": {
                       "item": 0
@@ -101,13 +105,14 @@
         ],
         "Matrix5": [
           {
-            "startTime": 1676027871886,
-            "executionTime": 192,
+            "startTime": 1676891400377,
+            "executionTime": 119,
             "source": [
               {
                 "previousNode": "Matrix1"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -116,17 +121,17 @@
                       "content": {
                         "object": true
                       },
-                      "origin_server_ts": 1676027871063,
-                      "room_id": "!StnZwzKQsnZADSgXde:matrix.org",
+                      "origin_server_ts": 1676891399367,
+                      "room_id": "!DcFzypzOpeHAouWFqi:matrix.org",
                       "sender": "@nodeqa:matrix.org",
                       "state_key": "@nodeqa:matrix.org",
                       "type": "m.room.member",
                       "unsigned": {
                         "object": true
                       },
-                      "event_id": "$U9MaxGgYXn3zP2wVbVBuq3l5kP56EB88mk26HqPaHI4",
+                      "event_id": "$4mMe-dA_I1wkGdTS1I-_NSIP0YD--DqP-GGLCtAkwAU",
                       "user_id": "@nodeqa:matrix.org",
-                      "age": 1057
+                      "age": 1156
                     },
                     "pairedItem": {
                       "item": 0
@@ -139,19 +144,20 @@
         ],
         "Read Binary File": [
           {
-            "startTime": 1676027872078,
-            "executionTime": 3,
+            "startTime": 1676891400496,
+            "executionTime": 5,
             "source": [
               {
                 "previousNode": "Matrix1"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "room_id": "!StnZwzKQsnZADSgXde:matrix.org"
+                      "room_id": "!DcFzypzOpeHAouWFqi:matrix.org"
                     },
                     "binary": {
                       "data": {
@@ -175,13 +181,14 @@
         ],
         "Matrix7": [
           {
-            "startTime": 1676027872081,
-            "executionTime": 217,
+            "startTime": 1676891400505,
+            "executionTime": 210,
             "source": [
               {
                 "previousNode": "Matrix6"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -190,16 +197,16 @@
                       "content": {
                         "object": true
                       },
-                      "origin_server_ts": 1676027871857,
-                      "room_id": "!StnZwzKQsnZADSgXde:matrix.org",
+                      "origin_server_ts": 1676891400330,
+                      "room_id": "!DcFzypzOpeHAouWFqi:matrix.org",
                       "sender": "@nodeqa:matrix.org",
                       "type": "m.room.message",
                       "unsigned": {
                         "object": true
                       },
-                      "event_id": "$IXJKUjeeFFIw129yige5k3kMsBshqLx8KTEa4LVAqn4",
+                      "event_id": "$ieHbd402Uj_iQh9nxfS5fUz2PYifPv0aXo1npbROqbE",
                       "user_id": "@nodeqa:matrix.org",
-                      "age": 477
+                      "age": 406
                     },
                     "pairedItem": {
                       "item": 0
@@ -212,19 +219,20 @@
         ],
         "Matrix8": [
           {
-            "startTime": 1676027872298,
-            "executionTime": 617,
+            "startTime": 1676891400715,
+            "executionTime": 969,
             "source": [
               {
                 "previousNode": "Read Binary File"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "event_id": "$IMh-Ny4PzRbu0chOL3qjxqx07mxuM0LPwcS5wKbgCYY"
+                      "event_id": "$KovAuVp0Ib4krQRFgioS7_OSf1oTqcPJOXg0UWy8pG8"
                     },
                     "pairedItem": {
                       "item": 0
@@ -237,13 +245,14 @@
         ],
         "Matrix2": [
           {
-            "startTime": 1676027872915,
-            "executionTime": 255,
+            "startTime": 1676891401685,
+            "executionTime": 229,
             "source": [
               {
                 "previousNode": "Matrix7"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -260,13 +269,14 @@
         ],
         "Matrix9": [
           {
-            "startTime": 1676027873170,
-            "executionTime": 128,
+            "startTime": 1676891401915,
+            "executionTime": 164,
             "source": [
               {
                 "previousNode": "Matrix8"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -275,16 +285,16 @@
                       "content": {
                         "object": true
                       },
-                      "origin_server_ts": 1676027872873,
-                      "room_id": "!StnZwzKQsnZADSgXde:matrix.org",
+                      "origin_server_ts": 1676891401444,
+                      "room_id": "!DcFzypzOpeHAouWFqi:matrix.org",
                       "sender": "@nodeqa:matrix.org",
                       "type": "m.room.message",
                       "unsigned": {
                         "object": true
                       },
-                      "event_id": "$IMh-Ny4PzRbu0chOL3qjxqx07mxuM0LPwcS5wKbgCYY",
+                      "event_id": "$KovAuVp0Ib4krQRFgioS7_OSf1oTqcPJOXg0UWy8pG8",
                       "user_id": "@nodeqa:matrix.org",
-                      "age": 469
+                      "age": 649
                     },
                     "pairedItem": {
                       "item": 0
@@ -297,13 +307,14 @@
         ],
         "Matrix3": [
           {
-            "startTime": 1676027873298,
-            "executionTime": 207,
+            "startTime": 1676891402079,
+            "executionTime": 331,
             "source": [
               {
                 "previousNode": "Matrix2"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -320,13 +331,14 @@
         ],
         "Matrix4": [
           {
-            "startTime": 1676027873506,
-            "executionTime": 1283,
+            "startTime": 1676891402410,
+            "executionTime": 5385,
             "source": [
               {
                 "previousNode": "Matrix3"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -352,7 +364,8 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2023-02-10T11:17:50.713Z",
-  "stoppedAt": "2023-02-10T11:17:54.789Z",
+  "startedAt": "2023-02-20T11:09:59.011Z",
+  "stoppedAt": "2023-02-20T11:10:07.795Z",
+  "status": "running",
   "finished": true
 }

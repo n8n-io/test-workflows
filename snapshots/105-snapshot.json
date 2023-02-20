@@ -5,9 +5,10 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1676027874871,
+            "startTime": 1676891402927,
             "executionTime": 1,
             "source": [],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -24,13 +25,14 @@
         ],
         "Function": [
           {
-            "startTime": 1676027874878,
-            "executionTime": 37,
+            "startTime": 1676891402928,
+            "executionTime": 34,
             "source": [
               {
                 "previousNode": "Start"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -54,13 +56,14 @@
         ],
         "Write Binary File": [
           {
-            "startTime": 1676027874916,
-            "executionTime": 2,
+            "startTime": 1676891402962,
+            "executionTime": 19,
             "source": [
               {
                 "previousNode": "Function"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -86,13 +89,14 @@
         ],
         "Read Binary File": [
           {
-            "startTime": 1676027874919,
-            "executionTime": 14,
+            "startTime": 1676891403000,
+            "executionTime": 9,
             "source": [
               {
                 "previousNode": "Write Binary File"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -122,13 +126,14 @@
         ],
         "Function1": [
           {
-            "startTime": 1676027874938,
-            "executionTime": 2,
+            "startTime": 1676891403009,
+            "executionTime": 23,
             "source": [
               {
                 "previousNode": "Read Binary File"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -168,7 +173,8 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2023-02-10T11:17:54.870Z",
-  "stoppedAt": "2023-02-10T11:17:54.940Z",
+  "startedAt": "2023-02-20T11:10:02.926Z",
+  "stoppedAt": "2023-02-20T11:10:03.033Z",
+  "status": "running",
   "finished": true
 }

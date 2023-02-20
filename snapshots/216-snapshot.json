@@ -5,9 +5,10 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1676027902578,
-            "executionTime": 0,
+            "startTime": 1676891425624,
+            "executionTime": 1,
             "source": [],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -24,13 +25,14 @@
         ],
         "Handle JSON data": [
           {
-            "startTime": 1676027902579,
-            "executionTime": 26,
+            "startTime": 1676891425626,
+            "executionTime": 23,
             "source": [
               {
                 "previousNode": "Start"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -56,13 +58,14 @@
         ],
         "Handle Binary data": [
           {
-            "startTime": 1676027902605,
+            "startTime": 1676891425649,
             "executionTime": 3,
             "source": [
               {
                 "previousNode": "Handle JSON data"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -97,13 +100,14 @@
         ],
         "Handle Static data": [
           {
-            "startTime": 1676027902608,
-            "executionTime": 13,
+            "startTime": 1676891425652,
+            "executionTime": 4,
             "source": [
               {
                 "previousNode": "Handle Binary data"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -149,7 +153,8 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2023-02-10T11:18:22.577Z",
-  "stoppedAt": "2023-02-10T11:18:22.621Z",
+  "startedAt": "2023-02-20T11:10:25.623Z",
+  "stoppedAt": "2023-02-20T11:10:25.657Z",
+  "status": "running",
   "finished": true
 }

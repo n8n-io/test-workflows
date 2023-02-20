@@ -5,9 +5,10 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1676027877901,
+            "startTime": 1676891405934,
             "executionTime": 1,
             "source": [],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -24,24 +25,25 @@
         ],
         "Gotify": [
           {
-            "startTime": 1676027877902,
-            "executionTime": 130,
+            "startTime": 1676891405937,
+            "executionTime": 131,
             "source": [
               {
                 "previousNode": "Start"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": 362,
+                      "id": 388,
                       "appid": 1,
-                      "message": "Message content 1676027877949",
-                      "title": "Title1676027877949",
+                      "message": "Message content 1676891405978",
+                      "title": "Title1676891405978",
                       "priority": 0,
-                      "date": "2023-02-10T11:17:58.073123172Z"
+                      "date": "2023-02-20T11:10:06.085491793Z"
                     },
                     "pairedItem": {
                       "item": 0
@@ -54,24 +56,25 @@
         ],
         "Gotify1": [
           {
-            "startTime": 1676027878033,
-            "executionTime": 81,
+            "startTime": 1676891406069,
+            "executionTime": 76,
             "source": [
               {
                 "previousNode": "Gotify"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": 362,
+                      "id": 388,
                       "appid": 1,
-                      "message": "Message content 1676027877949",
-                      "title": "Title1676027877949",
+                      "message": "Message content 1676891405978",
+                      "title": "Title1676891405978",
                       "priority": 0,
-                      "date": "2023-02-10T11:17:58.073123172Z"
+                      "date": "2023-02-20T11:10:06.085491793Z"
                     },
                     "pairedItem": {
                       "item": 0
@@ -84,13 +87,14 @@
         ],
         "Gotify2": [
           {
-            "startTime": 1676027878114,
-            "executionTime": 93,
+            "startTime": 1676891406145,
+            "executionTime": 76,
             "source": [
               {
                 "previousNode": "Gotify1"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -118,7 +122,8 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2023-02-10T11:17:57.900Z",
-  "stoppedAt": "2023-02-10T11:17:58.208Z",
+  "startedAt": "2023-02-20T11:10:05.930Z",
+  "stoppedAt": "2023-02-20T11:10:06.221Z",
+  "status": "running",
   "finished": true
 }

@@ -5,9 +5,10 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1676027852227,
-            "executionTime": 0,
+            "startTime": 1676891385818,
+            "executionTime": 1,
             "source": [],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -24,20 +25,21 @@
         ],
         "Drift ": [
           {
-            "startTime": 1676027852228,
-            "executionTime": 636,
+            "startTime": 1676891385820,
+            "executionTime": 628,
             "source": [
               {
                 "previousNode": "Start"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": 17239852265,
-                      "createdAt": 1676027852702,
+                      "id": 17339555917,
+                      "createdAt": 1676891386298,
                       "attributes": {
                         "object": true
                       }
@@ -53,20 +55,21 @@
         ],
         "Drift 1": [
           {
-            "startTime": 1676027852864,
-            "executionTime": 555,
+            "startTime": 1676891386448,
+            "executionTime": 632,
             "source": [
               {
                 "previousNode": "Drift "
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": 17239852265,
-                      "createdAt": 1676027852702,
+                      "id": 17339555917,
+                      "createdAt": 1676891386298,
                       "attributes": {
                         "object": true
                       }
@@ -82,20 +85,21 @@
         ],
         "Drift 2": [
           {
-            "startTime": 1676027853419,
-            "executionTime": 457,
+            "startTime": 1676891387080,
+            "executionTime": 482,
             "source": [
               {
                 "previousNode": "Drift 1"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": 17239852265,
-                      "createdAt": 1676027852702,
+                      "id": 17339555917,
+                      "createdAt": 1676891386298,
                       "attributes": {
                         "object": true
                       }
@@ -111,13 +115,14 @@
         ],
         "Drift 3": [
           {
-            "startTime": 1676027853877,
-            "executionTime": 404,
+            "startTime": 1676891387562,
+            "executionTime": 408,
             "source": [
               {
                 "previousNode": "Drift 2"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -145,7 +150,8 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2023-02-10T11:17:32.226Z",
-  "stoppedAt": "2023-02-10T11:17:34.281Z",
+  "startedAt": "2023-02-20T11:09:45.815Z",
+  "stoppedAt": "2023-02-20T11:09:47.970Z",
+  "status": "running",
   "finished": true
 }

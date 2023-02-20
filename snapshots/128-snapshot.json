@@ -5,9 +5,10 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1676027879892,
+            "startTime": 1676891408783,
             "executionTime": 1,
             "source": [],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -24,13 +25,14 @@
         ],
         "Yourls": [
           {
-            "startTime": 1676027879893,
-            "executionTime": 155,
+            "startTime": 1676891408784,
+            "executionTime": 267,
             "source": [
               {
                 "previousNode": "Start"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -40,9 +42,9 @@
                         "object": true
                       },
                       "status": "success",
-                      "message": "https://n8n.io/1676027879932 added to database",
+                      "message": "https://n8n.io/1676891408898 added to database",
                       "title": "n8n-ulr with random suffix",
-                      "shorturl": "http://157.90.159.163:8095/ag",
+                      "shorturl": "http://157.90.159.163:8095/b6",
                       "statusCode": 200
                     },
                     "pairedItem": {
@@ -56,22 +58,23 @@
         ],
         "Yourls1": [
           {
-            "startTime": 1676027880049,
-            "executionTime": 71,
+            "startTime": 1676891409051,
+            "executionTime": 83,
             "source": [
               {
                 "previousNode": "Yourls"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "shorturl": "http://157.90.159.163:8095/ag",
-                      "url": "https://n8n.io/1676027879932",
+                      "shorturl": "http://157.90.159.163:8095/b6",
+                      "url": "https://n8n.io/1676891408898",
                       "title": "n8n-ulr with random suffix",
-                      "timestamp": "2023-02-10 11:18:00",
+                      "timestamp": "2023-02-20 11:10:09",
                       "ip": "85.146.179.24",
                       "clicks": "0"
                     },
@@ -86,21 +89,22 @@
         ],
         "Yourls2": [
           {
-            "startTime": 1676027880120,
-            "executionTime": 69,
+            "startTime": 1676891409134,
+            "executionTime": 77,
             "source": [
               {
                 "previousNode": "Yourls1"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "keyword": "ag",
-                      "shorturl": "http://157.90.159.163:8095/ag",
-                      "longurl": "https://n8n.io/1676027879932",
+                      "keyword": "b6",
+                      "shorturl": "http://157.90.159.163:8095/b6",
+                      "longurl": "https://n8n.io/1676891408898",
                       "title": "n8n-ulr with random suffix",
                       "message": "success",
                       "statusCode": 200
@@ -125,7 +129,8 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2023-02-10T11:17:59.889Z",
-  "stoppedAt": "2023-02-10T11:18:00.191Z",
+  "startedAt": "2023-02-20T11:10:08.780Z",
+  "stoppedAt": "2023-02-20T11:10:09.211Z",
+  "status": "running",
   "finished": true
 }

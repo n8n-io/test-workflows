@@ -5,9 +5,10 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1676027874837,
-            "executionTime": 0,
+            "startTime": 1676891402420,
+            "executionTime": 1,
             "source": [],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -24,13 +25,14 @@
         ],
         "Read Binary File": [
           {
-            "startTime": 1676027874838,
-            "executionTime": 14,
+            "startTime": 1676891402421,
+            "executionTime": 5,
             "source": [
               {
                 "previousNode": "Start"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -57,13 +59,14 @@
         ],
         "Read PDF": [
           {
-            "startTime": 1676027874853,
-            "executionTime": 269,
+            "startTime": 1676891402429,
+            "executionTime": 250,
             "source": [
               {
                 "previousNode": "Read Binary File"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -110,7 +113,8 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2023-02-10T11:17:54.836Z",
-  "stoppedAt": "2023-02-10T11:17:55.159Z",
+  "startedAt": "2023-02-20T11:10:02.419Z",
+  "stoppedAt": "2023-02-20T11:10:02.715Z",
+  "status": "running",
   "finished": true
 }

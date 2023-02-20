@@ -5,9 +5,10 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1676027850303,
-            "executionTime": 1,
+            "startTime": 1676891385569,
+            "executionTime": 3,
             "source": [],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -24,24 +25,25 @@
         ],
         "PagerDuty": [
           {
-            "startTime": 1676027850304,
-            "executionTime": 1104,
+            "startTime": 1676891385573,
+            "executionTime": 1053,
             "source": [
               {
                 "previousNode": "Start"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "incident_number": 490,
+                      "incident_number": 516,
                       "title": "Test",
                       "description": "Test",
-                      "created_at": "2023-02-10T11:17:31Z",
+                      "created_at": "2023-02-20T11:09:46Z",
                       "status": "triggered",
-                      "incident_key": "064fbc7a373d4cb68b832ea2ab3ead75",
+                      "incident_key": "7879d351865c4e0783a2dbd1ea062fce",
                       "service": {
                         "object": true
                       },
@@ -49,7 +51,7 @@
                         "json array"
                       ],
                       "assigned_via": "escalation_policy",
-                      "last_status_change_at": "2023-02-10T11:17:31Z",
+                      "last_status_change_at": "2023-02-20T11:09:46Z",
                       "first_trigger_log_entry": {
                         "object": true
                       },
@@ -91,11 +93,11 @@
                         "json array"
                       ],
                       "urgency": "high",
-                      "id": "Q1E4IHNE0WDMQU",
+                      "id": "Q12GXKW5FOIUPF",
                       "type": "incident",
-                      "summary": "[#490] Test",
-                      "self": "https://api.pagerduty.com/incidents/Q1E4IHNE0WDMQU",
-                      "html_url": "https://dev-nodeqan8n.pagerduty.com/incidents/Q1E4IHNE0WDMQU"
+                      "summary": "[#516] Test",
+                      "self": "https://api.pagerduty.com/incidents/Q12GXKW5FOIUPF",
+                      "html_url": "https://dev-nodeqan8n.pagerduty.com/incidents/Q12GXKW5FOIUPF"
                     },
                     "pairedItem": {
                       "item": 0
@@ -108,26 +110,27 @@
         ],
         "PagerDuty7": [
           {
-            "startTime": 1676027851408,
-            "executionTime": 796,
+            "startTime": 1676891386626,
+            "executionTime": 800,
             "source": [
               {
                 "previousNode": "Start"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "R0A6R8SRV3IZCL2FSLUT6IKX8S",
+                      "id": "RQRKFQQLEJJAS5NC75YKNHNWOH",
                       "type": "assign_log_entry",
                       "summary": "Assigned to Node Qa.",
-                      "self": "https://api.pagerduty.com/log_entries/R0A6R8SRV3IZCL2FSLUT6IKX8S",
+                      "self": "https://api.pagerduty.com/log_entries/RQRKFQQLEJJAS5NC75YKNHNWOH",
                       "html_url": {
                         "object": true
                       },
-                      "created_at": "2023-02-10T11:17:31Z",
+                      "created_at": "2023-02-20T11:09:46Z",
                       "agent": {
                         "object": true
                       },
@@ -158,13 +161,14 @@
         ],
         "PagerDuty6": [
           {
-            "startTime": 1676027852205,
-            "executionTime": 601,
+            "startTime": 1676891387426,
+            "executionTime": 597,
             "source": [
               {
                 "previousNode": "Start"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -215,24 +219,25 @@
         ],
         "PagerDuty1": [
           {
-            "startTime": 1676027852806,
-            "executionTime": 847,
+            "startTime": 1676891388024,
+            "executionTime": 852,
             "source": [
               {
                 "previousNode": "PagerDuty"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "incident_number": 490,
+                      "incident_number": 516,
                       "title": "Test",
                       "description": "Test",
-                      "created_at": "2023-02-10T11:17:31Z",
+                      "created_at": "2023-02-20T11:09:46Z",
                       "status": "triggered",
-                      "incident_key": "064fbc7a373d4cb68b832ea2ab3ead75",
+                      "incident_key": "7879d351865c4e0783a2dbd1ea062fce",
                       "service": {
                         "object": true
                       },
@@ -240,7 +245,7 @@
                         "json array"
                       ],
                       "assigned_via": "escalation_policy",
-                      "last_status_change_at": "2023-02-10T11:17:31Z",
+                      "last_status_change_at": "2023-02-20T11:09:46Z",
                       "first_trigger_log_entry": {
                         "object": true
                       },
@@ -282,11 +287,11 @@
                         "json array"
                       ],
                       "urgency": "high",
-                      "id": "Q1E4IHNE0WDMQU",
+                      "id": "Q12GXKW5FOIUPF",
                       "type": "incident",
-                      "summary": "[#490] Test",
-                      "self": "https://api.pagerduty.com/incidents/Q1E4IHNE0WDMQU",
-                      "html_url": "https://dev-nodeqan8n.pagerduty.com/incidents/Q1E4IHNE0WDMQU"
+                      "summary": "[#516] Test",
+                      "self": "https://api.pagerduty.com/incidents/Q12GXKW5FOIUPF",
+                      "html_url": "https://dev-nodeqan8n.pagerduty.com/incidents/Q12GXKW5FOIUPF"
                     },
                     "pairedItem": {
                       "item": 0
@@ -299,24 +304,25 @@
         ],
         "Sleep 0.5 second1": [
           {
-            "startTime": 1676027853653,
-            "executionTime": 520,
+            "startTime": 1676891388877,
+            "executionTime": 516,
             "source": [
               {
                 "previousNode": "PagerDuty"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "incident_number": 490,
+                      "incident_number": 516,
                       "title": "Test",
                       "description": "Test",
-                      "created_at": "2023-02-10T11:17:31Z",
+                      "created_at": "2023-02-20T11:09:46Z",
                       "status": "triggered",
-                      "incident_key": "064fbc7a373d4cb68b832ea2ab3ead75",
+                      "incident_key": "7879d351865c4e0783a2dbd1ea062fce",
                       "service": {
                         "object": true
                       },
@@ -324,7 +330,7 @@
                         "json array"
                       ],
                       "assigned_via": "escalation_policy",
-                      "last_status_change_at": "2023-02-10T11:17:31Z",
+                      "last_status_change_at": "2023-02-20T11:09:46Z",
                       "first_trigger_log_entry": {
                         "object": true
                       },
@@ -366,11 +372,11 @@
                         "json array"
                       ],
                       "urgency": "high",
-                      "id": "Q1E4IHNE0WDMQU",
+                      "id": "Q12GXKW5FOIUPF",
                       "type": "incident",
-                      "summary": "[#490] Test",
-                      "self": "https://api.pagerduty.com/incidents/Q1E4IHNE0WDMQU",
-                      "html_url": "https://dev-nodeqan8n.pagerduty.com/incidents/Q1E4IHNE0WDMQU"
+                      "summary": "[#516] Test",
+                      "self": "https://api.pagerduty.com/incidents/Q12GXKW5FOIUPF",
+                      "html_url": "https://dev-nodeqan8n.pagerduty.com/incidents/Q12GXKW5FOIUPF"
                     },
                     "pairedItem": {
                       "item": 0
@@ -384,13 +390,14 @@
         ],
         "PagerDuty4": [
           {
-            "startTime": 1676027854173,
-            "executionTime": 804,
+            "startTime": 1676891389394,
+            "executionTime": 869,
             "source": [
               {
                 "previousNode": "PagerDuty1"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -411,24 +418,25 @@
         ],
         "PagerDuty5": [
           {
-            "startTime": 1676027854977,
-            "executionTime": 761,
+            "startTime": 1676891390263,
+            "executionTime": 778,
             "source": [
               {
                 "previousNode": "PagerDuty1"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "P667PCU",
+                      "id": "PECFEWB",
                       "user": {
                         "object": true
                       },
                       "content": "Simple note for an incident",
-                      "created_at": "2023-02-10T12:17:34+01:00",
+                      "created_at": "2023-02-20T12:09:50+01:00",
                       "channel": {
                         "object": true
                       }
@@ -444,24 +452,25 @@
         ],
         "PagerDuty2": [
           {
-            "startTime": 1676027855738,
-            "executionTime": 875,
+            "startTime": 1676891391041,
+            "executionTime": 937,
             "source": [
               {
                 "previousNode": "PagerDuty1"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "incident_number": 490,
+                      "incident_number": 516,
                       "title": "Test",
                       "description": "Test",
-                      "created_at": "2023-02-10T11:17:31Z",
+                      "created_at": "2023-02-20T11:09:46Z",
                       "status": "acknowledged",
-                      "incident_key": "064fbc7a373d4cb68b832ea2ab3ead75",
+                      "incident_key": "7879d351865c4e0783a2dbd1ea062fce",
                       "service": {
                         "object": true
                       },
@@ -469,7 +478,7 @@
                         "json array"
                       ],
                       "assigned_via": "escalation_policy",
-                      "last_status_change_at": "2023-02-10T11:17:36Z",
+                      "last_status_change_at": "2023-02-20T11:09:51Z",
                       "first_trigger_log_entry": {
                         "object": true
                       },
@@ -511,11 +520,11 @@
                         "json array"
                       ],
                       "urgency": "high",
-                      "id": "Q1E4IHNE0WDMQU",
+                      "id": "Q12GXKW5FOIUPF",
                       "type": "incident",
-                      "summary": "[#490] Test",
-                      "self": "https://api.pagerduty.com/incidents/Q1E4IHNE0WDMQU",
-                      "html_url": "https://dev-nodeqan8n.pagerduty.com/incidents/Q1E4IHNE0WDMQU"
+                      "summary": "[#516] Test",
+                      "self": "https://api.pagerduty.com/incidents/Q12GXKW5FOIUPF",
+                      "html_url": "https://dev-nodeqan8n.pagerduty.com/incidents/Q12GXKW5FOIUPF"
                     },
                     "pairedItem": {
                       "item": 0
@@ -528,24 +537,25 @@
         ],
         "PagerDuty8": [
           {
-            "startTime": 1676027856613,
-            "executionTime": 775,
+            "startTime": 1676891391978,
+            "executionTime": 615,
             "source": [
               {
                 "previousNode": "Sleep 0.5 second1"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "R9P7JJLWNY69E798TCVUW0PRHA",
+                      "id": "RRTUN1L7FG3XE8IVQOQTM5JZ26",
                       "type": "trigger_log_entry",
                       "summary": "Triggered through the website.",
-                      "self": "https://api.pagerduty.com/log_entries/R9P7JJLWNY69E798TCVUW0PRHA",
-                      "html_url": "https://dev-nodeqan8n.pagerduty.com/incidents/Q1E4IHNE0WDMQU/log_entries/R9P7JJLWNY69E798TCVUW0PRHA",
-                      "created_at": "2023-02-10T11:17:31Z",
+                      "self": "https://api.pagerduty.com/log_entries/RRTUN1L7FG3XE8IVQOQTM5JZ26",
+                      "html_url": "https://dev-nodeqan8n.pagerduty.com/incidents/Q12GXKW5FOIUPF/log_entries/RRTUN1L7FG3XE8IVQOQTM5JZ26",
+                      "created_at": "2023-02-20T11:09:46Z",
                       "agent": {
                         "object": true
                       },
@@ -579,13 +589,14 @@
         ],
         "PagerDuty3": [
           {
-            "startTime": 1676027857389,
-            "executionTime": 790,
+            "startTime": 1676891392595,
+            "executionTime": 644,
             "source": [
               {
                 "previousNode": "PagerDuty2"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -669,7 +680,8 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2023-02-10T11:17:30.301Z",
-  "stoppedAt": "2023-02-10T11:17:38.179Z",
+  "startedAt": "2023-02-20T11:09:45.563Z",
+  "stoppedAt": "2023-02-20T11:09:53.239Z",
+  "status": "running",
   "finished": true
 }

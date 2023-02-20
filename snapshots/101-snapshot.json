@@ -5,9 +5,10 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1676027873824,
-            "executionTime": 0,
+            "startTime": 1676891401771,
+            "executionTime": 1,
             "source": [],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -24,13 +25,14 @@
         ],
         "Set": [
           {
-            "startTime": 1676027873825,
-            "executionTime": 0,
+            "startTime": 1676891401772,
+            "executionTime": 1,
             "source": [
               {
                 "previousNode": "Start"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -50,13 +52,14 @@
         ],
         "Rename Keys": [
           {
-            "startTime": 1676027873826,
+            "startTime": 1676891401773,
             "executionTime": 0,
             "source": [
               {
                 "previousNode": "Set"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -76,13 +79,14 @@
         ],
         "Function": [
           {
-            "startTime": 1676027873826,
-            "executionTime": 25,
+            "startTime": 1676891401773,
+            "executionTime": 27,
             "source": [
               {
                 "previousNode": "Rename Keys"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -112,7 +116,8 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2023-02-10T11:17:53.822Z",
-  "stoppedAt": "2023-02-10T11:17:53.851Z",
+  "startedAt": "2023-02-20T11:10:01.770Z",
+  "stoppedAt": "2023-02-20T11:10:01.801Z",
+  "status": "running",
   "finished": true
 }

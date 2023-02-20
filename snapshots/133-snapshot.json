@@ -5,9 +5,10 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1676027881221,
-            "executionTime": 0,
+            "startTime": 1676891410420,
+            "executionTime": 1,
             "source": [],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -24,36 +25,37 @@
         ],
         "Twilio": [
           {
-            "startTime": 1676027881221,
-            "executionTime": 556,
+            "startTime": 1676891410421,
+            "executionTime": 596,
             "source": [
               {
                 "previousNode": "Start"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "body": "Message1676027881246",
+                      "body": "Message1676891410437",
                       "num_segments": "1",
                       "direction": "outbound-api",
                       "from": "+15005550006",
-                      "date_updated": "Fri, 10 Feb 2023 11:18:01 +0000",
+                      "date_updated": "Mon, 20 Feb 2023 11:10:11 +0000",
                       "price": {
                         "object": true
                       },
                       "error_message": {
                         "object": true
                       },
-                      "uri": "/2010-04-01/Accounts/AC8dd0c6e08b0f196d34adde4f00507d9f/Messages/SM9b42c0dc4806c3eaf9cd1f91a4dc510a.json",
+                      "uri": "/2010-04-01/Accounts/AC8dd0c6e08b0f196d34adde4f00507d9f/Messages/SM6cce4cc7677affc37514012243f42fc5.json",
                       "account_sid": "AC8dd0c6e08b0f196d34adde4f00507d9f",
                       "num_media": "0",
                       "to": "+15005550006",
-                      "date_created": "Fri, 10 Feb 2023 11:18:01 +0000",
+                      "date_created": "Mon, 20 Feb 2023 11:10:11 +0000",
                       "status": "queued",
-                      "sid": "SM9b42c0dc4806c3eaf9cd1f91a4dc510a",
+                      "sid": "SM6cce4cc7677affc37514012243f42fc5",
                       "date_sent": {
                         "object": true
                       },
@@ -89,7 +91,8 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2023-02-10T11:18:01.219Z",
-  "stoppedAt": "2023-02-10T11:18:01.777Z",
+  "startedAt": "2023-02-20T11:10:10.419Z",
+  "stoppedAt": "2023-02-20T11:10:11.017Z",
+  "status": "running",
   "finished": true
 }

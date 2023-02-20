@@ -5,9 +5,10 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1676027873959,
+            "startTime": 1676891402802,
             "executionTime": 1,
             "source": [],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -24,19 +25,20 @@
         ],
         "Set": [
           {
-            "startTime": 1676027873961,
-            "executionTime": 18,
+            "startTime": 1676891402803,
+            "executionTime": 31,
             "source": [
               {
                 "previousNode": "Start"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "filename": "filename1676027873978"
+                      "filename": "filename1676891402833"
                     },
                     "pairedItem": {
                       "item": 0
@@ -49,13 +51,14 @@
         ],
         "Execute Command": [
           {
-            "startTime": 1676027873979,
-            "executionTime": 13,
+            "startTime": 1676891402834,
+            "executionTime": 44,
             "source": [
               {
                 "previousNode": "Set"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -76,13 +79,14 @@
         ],
         "Read Binary File": [
           {
-            "startTime": 1676027873992,
-            "executionTime": 9,
+            "startTime": 1676891402878,
+            "executionTime": 20,
             "source": [
               {
                 "previousNode": "Execute Command"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -98,7 +102,7 @@
                         "fileType": "text",
                         "data": "dGVzdAo=",
                         "directory": "/tmp",
-                        "fileName": "filename1676027873978",
+                        "fileName": "filename1676891402833",
                         "fileSize": "5 B"
                       }
                     },
@@ -113,13 +117,14 @@
         ],
         "Function": [
           {
-            "startTime": 1676027874001,
-            "executionTime": 16,
+            "startTime": 1676891402898,
+            "executionTime": 15,
             "source": [
               {
                 "previousNode": "Read Binary File"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -135,7 +140,7 @@
                         "fileType": "text",
                         "data": "dGVzdAo=",
                         "directory": "/tmp",
-                        "fileName": "filename1676027873978",
+                        "fileName": "filename1676891402833",
                         "fileSize": "5 B"
                       }
                     },
@@ -151,13 +156,14 @@
         ],
         "Execute Command1": [
           {
-            "startTime": 1676027874018,
-            "executionTime": 15,
+            "startTime": 1676891402913,
+            "executionTime": 28,
             "source": [
               {
                 "previousNode": "Function"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -187,7 +193,8 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2023-02-10T11:17:53.958Z",
-  "stoppedAt": "2023-02-10T11:17:54.034Z",
+  "startedAt": "2023-02-20T11:10:02.800Z",
+  "stoppedAt": "2023-02-20T11:10:02.941Z",
+  "status": "running",
   "finished": true
 }
