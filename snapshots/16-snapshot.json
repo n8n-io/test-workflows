@@ -5,9 +5,10 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1676027850329,
-            "executionTime": 6,
+            "startTime": 1676891385654,
+            "executionTime": 0,
             "source": [],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -24,13 +25,14 @@
         ],
         "OpenWeatherMap": [
           {
-            "startTime": 1676027850335,
-            "executionTime": 128,
+            "startTime": 1676891385655,
+            "executionTime": 155,
             "source": [
               {
                 "previousNode": "Start"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -53,7 +55,7 @@
                       "clouds": {
                         "object": true
                       },
-                      "dt": 1676027285,
+                      "dt": 1676890819,
                       "sys": {
                         "object": true
                       },
@@ -73,13 +75,14 @@
         ],
         "OpenWeatherMap1": [
           {
-            "startTime": 1676027850463,
-            "executionTime": 66,
+            "startTime": 1676891385811,
+            "executionTime": 86,
             "source": [
               {
                 "previousNode": "OpenWeatherMap"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -115,7 +118,8 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2023-02-10T11:17:30.327Z",
-  "stoppedAt": "2023-02-10T11:17:30.530Z",
+  "startedAt": "2023-02-20T11:09:45.653Z",
+  "stoppedAt": "2023-02-20T11:09:45.902Z",
+  "status": "running",
   "finished": true
 }

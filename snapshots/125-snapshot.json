@@ -5,9 +5,10 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1676027879037,
+            "startTime": 1676891408444,
             "executionTime": 1,
             "source": [],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -24,20 +25,21 @@
         ],
         "Set": [
           {
-            "startTime": 1676027879038,
-            "executionTime": 31,
+            "startTime": 1676891408445,
+            "executionTime": 42,
             "source": [
               {
                 "previousNode": "Start"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": 530,
-                      "name": "Name1676027879069"
+                      "id": 555,
+                      "name": "Name1676891408487"
                     },
                     "pairedItem": {
                       "item": 0
@@ -50,20 +52,21 @@
         ],
         "Postgres": [
           {
-            "startTime": 1676027879070,
-            "executionTime": 141,
+            "startTime": 1676891408487,
+            "executionTime": 187,
             "source": [
               {
                 "previousNode": "Set"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": 530,
-                      "name": "Name1676027879069"
+                      "id": 555,
+                      "name": "Name1676891408487"
                     },
                     "pairedItem": {
                       "item": 0
@@ -76,20 +79,21 @@
         ],
         "Set1": [
           {
-            "startTime": 1676027879212,
-            "executionTime": 0,
+            "startTime": 1676891408675,
+            "executionTime": 3,
             "source": [
               {
                 "previousNode": "Postgres"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": 530,
-                      "name": "UpdatedName1676027879212"
+                      "id": 555,
+                      "name": "UpdatedName1676891408677"
                     },
                     "pairedItem": {
                       "item": 0
@@ -102,20 +106,21 @@
         ],
         "Postgres1": [
           {
-            "startTime": 1676027879213,
-            "executionTime": 138,
+            "startTime": 1676891408678,
+            "executionTime": 194,
             "source": [
               {
                 "previousNode": "Set1"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": 530,
-                      "name": "UpdatedName1676027879212"
+                      "id": 555,
+                      "name": "UpdatedName1676891408677"
                     },
                     "pairedItem": {
                       "item": 0
@@ -128,13 +133,14 @@
         ],
         "Postgres2": [
           {
-            "startTime": 1676027879352,
-            "executionTime": 136,
+            "startTime": 1676891408873,
+            "executionTime": 202,
             "source": [
               {
                 "previousNode": "Postgres1"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -272,8 +278,8 @@
                   },
                   {
                     "json": {
-                      "id": 530,
-                      "name": "UpdatedName1676027879212"
+                      "id": 555,
+                      "name": "UpdatedName1676891408677"
                     },
                     "pairedItem": {
                       "item": 0
@@ -299,13 +305,14 @@
         ],
         "Postgres3": [
           {
-            "startTime": 1676027879494,
-            "executionTime": 161,
+            "startTime": 1676891409075,
+            "executionTime": 126,
             "source": [
               {
                 "previousNode": "Postgres2"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 []
@@ -324,7 +331,8 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2023-02-10T11:17:59.035Z",
-  "stoppedAt": "2023-02-10T11:17:59.655Z",
+  "startedAt": "2023-02-20T11:10:08.443Z",
+  "stoppedAt": "2023-02-20T11:10:09.202Z",
+  "status": "running",
   "finished": true
 }

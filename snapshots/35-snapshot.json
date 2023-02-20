@@ -5,9 +5,10 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1676027855036,
-            "executionTime": 0,
+            "startTime": 1676891385914,
+            "executionTime": 1,
             "source": [],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -24,13 +25,14 @@
         ],
         "Slack": [
           {
-            "startTime": 1676027855037,
-            "executionTime": 246,
+            "startTime": 1676891385915,
+            "executionTime": 265,
             "source": [
               {
                 "previousNode": "Start"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -73,13 +75,14 @@
         ],
         "Slack13": [
           {
-            "startTime": 1676027855283,
-            "executionTime": 249,
+            "startTime": 1676891386180,
+            "executionTime": 272,
             "source": [
               {
                 "previousNode": "Start"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -87,7 +90,7 @@
                     "json": {
                       "ok": true,
                       "channel": "C01MZ82T9TR",
-                      "ts": "1676027855.497109",
+                      "ts": "1676891386.363999",
                       "message": {
                         "object": true
                       }
@@ -103,13 +106,14 @@
         ],
         "Slack1": [
           {
-            "startTime": 1676027855532,
-            "executionTime": 224,
+            "startTime": 1676891386452,
+            "executionTime": 244,
             "source": [
               {
                 "previousNode": "Slack"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -152,13 +156,14 @@
         ],
         "Slack18": [
           {
-            "startTime": 1676027855756,
-            "executionTime": 215,
+            "startTime": 1676891386696,
+            "executionTime": 218,
             "source": [
               {
                 "previousNode": "Slack13"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -177,13 +182,14 @@
         ],
         "Slack24": [
           {
-            "startTime": 1676027855971,
-            "executionTime": 193,
+            "startTime": 1676891386914,
+            "executionTime": 186,
             "source": [
               {
                 "previousNode": "Slack13"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -207,13 +213,14 @@
         ],
         "Slack19": [
           {
-            "startTime": 1676027856164,
-            "executionTime": 195,
+            "startTime": 1676891387101,
+            "executionTime": 265,
             "source": [
               {
                 "previousNode": "Slack18"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -237,13 +244,14 @@
         ],
         "Slack25": [
           {
-            "startTime": 1676027856359,
-            "executionTime": 184,
+            "startTime": 1676891387366,
+            "executionTime": 179,
             "source": [
               {
                 "previousNode": "Slack24"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -268,7 +276,7 @@
                       "is_ultra_restricted": false,
                       "is_bot": false,
                       "is_app_user": false,
-                      "updated": 1676027855,
+                      "updated": 1676891386,
                       "is_email_confirmed": true,
                       "has_2fa": false,
                       "who_can_share_contact_card": "EVERYONE"
@@ -284,13 +292,14 @@
         ],
         "Slack20": [
           {
-            "startTime": 1676027856543,
-            "executionTime": 308,
+            "startTime": 1676891387546,
+            "executionTime": 218,
             "source": [
               {
                 "previousNode": "Slack19"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -309,20 +318,21 @@
         ],
         "Slack14": [
           {
-            "startTime": 1676027856851,
-            "executionTime": 188,
+            "startTime": 1676891387764,
+            "executionTime": 291,
             "source": [
               {
                 "previousNode": "Slack20"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "ok": true,
-                      "permalink": "https://n8n-qa.slack.com/archives/C01MZ82T9TR/p1676027855497109",
+                      "permalink": "https://n8n-qa.slack.com/archives/C01MZ82T9TR/p1676891386363999",
                       "channel": "C01MZ82T9TR"
                     },
                     "pairedItem": {
@@ -336,13 +346,14 @@
         ],
         "Slack15": [
           {
-            "startTime": 1676027857039,
-            "executionTime": 321,
+            "startTime": 1676891388055,
+            "executionTime": 243,
             "source": [
               {
                 "previousNode": "Slack14"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -350,7 +361,7 @@
                     "json": {
                       "ok": true,
                       "channel": "C01MZ82T9TR",
-                      "ts": "1676027855.497109",
+                      "ts": "1676891386.363999",
                       "text": "Message Updated ",
                       "message": {
                         "object": true
@@ -367,20 +378,21 @@
         ],
         "Slack16": [
           {
-            "startTime": 1676027857360,
-            "executionTime": 206,
+            "startTime": 1676891388298,
+            "executionTime": 249,
             "source": [
               {
                 "previousNode": "Slack15"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "ok": true,
-                      "message_ts": "1676027857.000900"
+                      "message_ts": "1676891388.001400"
                     },
                     "pairedItem": {
                       "item": 0
@@ -393,13 +405,14 @@
         ],
         "Slack17": [
           {
-            "startTime": 1676027857567,
-            "executionTime": 286,
+            "startTime": 1676891388547,
+            "executionTime": 341,
             "source": [
               {
                 "previousNode": "Slack16"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -407,7 +420,7 @@
                     "json": {
                       "ok": true,
                       "channel": "C01MZ82T9TR",
-                      "ts": "1676027855.497109"
+                      "ts": "1676891386.363999"
                     },
                     "pairedItem": {
                       "item": 0
@@ -429,7 +442,8 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2023-02-10T11:17:35.033Z",
-  "stoppedAt": "2023-02-10T11:17:37.854Z",
+  "startedAt": "2023-02-20T11:09:45.908Z",
+  "stoppedAt": "2023-02-20T11:09:48.888Z",
+  "status": "running",
   "finished": true
 }

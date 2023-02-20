@@ -5,9 +5,10 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1676027869505,
-            "executionTime": 0,
+            "startTime": 1676891397882,
+            "executionTime": 1,
             "source": [],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -32,13 +33,14 @@
         ],
         "NASA": [
           {
-            "startTime": 1676027869506,
-            "executionTime": 1260,
+            "startTime": 1676891397883,
+            "executionTime": 1202,
             "source": [
               {
                 "previousNode": "Start"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -77,34 +79,37 @@
         ],
         "NASA3": [
           {
-            "startTime": 1676027870770,
-            "executionTime": 6383,
+            "startTime": 1676891399087,
+            "executionTime": 4243,
             "source": [
               {
                 "previousNode": "Start"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "activityID": "2023-01-11T01:25:00-CME-001",
+                      "activityID": "2023-01-21T02:00:00-CME-001",
                       "catalog": "M2M_CATALOG",
-                      "startTime": "2023-01-11T01:25Z",
-                      "sourceLocation": "N25E64",
-                      "activeRegionNum": 13186,
-                      "link": "https://webtools.ccmc.gsfc.nasa.gov/DONKI/view/CME/23259/-1",
-                      "note": "This CME is visible to the NE in SOHO LASCO C2/C3 and STEREO A COR2 coronagraph imagery. The source is likely an M2.4 Flare from AR13186 (N25E64) followed by faint moving/opening field lines visible in SDO/AIA 193 & 171 starting around 2023-01-11T00:50Z. This CME partially overlaps with CME: 2023-01-11T01:36Z.",
+                      "startTime": "2023-01-21T02:00Z",
+                      "sourceLocation": "",
+                      "activeRegionNum": {
+                        "object": true
+                      },
+                      "link": "https://webtools.ccmc.gsfc.nasa.gov/DONKI/view/CME/23401/-1",
+                      "note": "Faint CME SSW in SOHO LASCO C2/C3 and STEREO A COR2, another faint outflow following the 2023-01-20 mid-day filament eruptions/CMEs. No definitive source has been found.",
                       "instruments": [
                         "json array"
                       ],
                       "cmeAnalyses": [
                         "json array"
                       ],
-                      "linkedEvents": [
-                        "json array"
-                      ]
+                      "linkedEvents": {
+                        "object": true
+                      }
                     },
                     "pairedItem": {
                       "item": 0
@@ -117,13 +122,14 @@
         ],
         "NASA7": [
           {
-            "startTime": 1676027877159,
-            "executionTime": 1163,
+            "startTime": 1676891403333,
+            "executionTime": 934,
             "source": [
               {
                 "previousNode": "Start"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -139,32 +145,33 @@
         ],
         "NASA5": [
           {
-            "startTime": 1676027878322,
-            "executionTime": 1591,
+            "startTime": 1676891404267,
+            "executionTime": 1473,
             "source": [
               {
                 "previousNode": "Start"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "flrID": "2023-01-11T00:39:00-FLR-001",
+                      "flrID": "2023-01-22T12:12:00-FLR-001",
                       "instruments": [
                         "json array"
                       ],
-                      "beginTime": "2023-01-11T00:39Z",
-                      "peakTime": "2023-01-11T00:59Z",
-                      "endTime": "2023-01-11T01:10Z",
-                      "classType": "M2.4",
-                      "sourceLocation": "N25E64",
-                      "activeRegionNum": 13186,
-                      "linkedEvents": [
-                        "json array"
-                      ],
-                      "link": "https://webtools.ccmc.gsfc.nasa.gov/DONKI/view/FLR/23243/-1"
+                      "beginTime": "2023-01-22T12:12Z",
+                      "peakTime": "2023-01-22T12:26Z",
+                      "endTime": "2023-01-22T12:34Z",
+                      "classType": "M1.1",
+                      "sourceLocation": "S20W40",
+                      "activeRegionNum": 13190,
+                      "linkedEvents": {
+                        "object": true
+                      },
+                      "link": "https://webtools.ccmc.gsfc.nasa.gov/DONKI/view/FLR/23406/-1"
                     },
                     "pairedItem": {
                       "item": 0
@@ -177,13 +184,14 @@
         ],
         "NASA8": [
           {
-            "startTime": 1676027879913,
-            "executionTime": 958,
+            "startTime": 1676891405743,
+            "executionTime": 999,
             "source": [
               {
                 "previousNode": "Start"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -202,6 +210,22 @@
                     "pairedItem": {
                       "item": 0
                     }
+                  },
+                  {
+                    "json": {
+                      "rbeID": "2023-02-12T14:00:00-RBE-001",
+                      "eventTime": "2023-02-12T14:00Z",
+                      "instruments": [
+                        "json array"
+                      ],
+                      "linkedEvents": [
+                        "json array"
+                      ],
+                      "link": "https://webtools.ccmc.gsfc.nasa.gov/DONKI/view/RBE/23729/-1"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -210,13 +234,14 @@
         ],
         "NASA6": [
           {
-            "startTime": 1676027880872,
-            "executionTime": 932,
+            "startTime": 1676891406742,
+            "executionTime": 1003,
             "source": [
               {
                 "previousNode": "Start"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -232,23 +257,24 @@
         ],
         "NASA4": [
           {
-            "startTime": 1676027881804,
-            "executionTime": 975,
+            "startTime": 1676891407745,
+            "executionTime": 1266,
             "source": [
               {
                 "previousNode": "Start"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "catalog": "M2M_CATALOG",
-                      "activityID": "2023-01-12T07:00:00-IPS-001",
+                      "activityID": "2023-01-25T08:30:00-IPS-001",
                       "location": "STEREO A",
-                      "eventTime": "2023-01-12T07:00Z",
-                      "link": "https://webtools.ccmc.gsfc.nasa.gov/DONKI/view/IPS/23283/-1",
+                      "eventTime": "2023-01-25T08:30Z",
+                      "link": "https://webtools.ccmc.gsfc.nasa.gov/DONKI/view/IPS/23450/-1",
                       "instruments": [
                         "json array"
                       ]
@@ -264,27 +290,28 @@
         ],
         "NASA9": [
           {
-            "startTime": 1676027882779,
-            "executionTime": 857,
+            "startTime": 1676891409011,
+            "executionTime": 1063,
             "source": [
               {
                 "previousNode": "Start"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "hssID": "2023-01-13T17:36:00-HSS-001",
-                      "eventTime": "2023-01-13T17:36Z",
+                      "hssID": "2023-01-30T19:45:00-HSS-001",
+                      "eventTime": "2023-01-30T19:45Z",
                       "instruments": [
                         "json array"
                       ],
-                      "linkedEvents": [
-                        "json array"
-                      ],
-                      "link": "https://webtools.ccmc.gsfc.nasa.gov/DONKI/view/HSS/23329/-1"
+                      "linkedEvents": {
+                        "object": true
+                      },
+                      "link": "https://webtools.ccmc.gsfc.nasa.gov/DONKI/view/HSS/23526/-1"
                     },
                     "pairedItem": {
                       "item": 0
@@ -297,20 +324,21 @@
         ],
         "NASA10": [
           {
-            "startTime": 1676027883636,
-            "executionTime": 2231,
+            "startTime": 1676891410074,
+            "executionTime": 1889,
             "source": [
               {
                 "previousNode": "Start"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "simulationID": "WSA-ENLIL/23267/1",
-                      "modelCompletionTime": "2023-01-12T00:04Z",
+                      "simulationID": "WSA-ENLIL/23411/1",
+                      "modelCompletionTime": "2023-01-22T15:04Z",
                       "au": 2,
                       "cmeInputs": [
                         "json array"
@@ -337,10 +365,10 @@
                         "object": true
                       },
                       "isEarthGB": false,
-                      "impactList": [
-                        "json array"
-                      ],
-                      "link": "https://webtools.ccmc.gsfc.nasa.gov/DONKI/view/WSA-ENLIL/23267/-1"
+                      "impactList": {
+                        "object": true
+                      },
+                      "link": "https://webtools.ccmc.gsfc.nasa.gov/DONKI/view/WSA-ENLIL/23411/-1"
                     },
                     "pairedItem": {
                       "item": 0
@@ -353,23 +381,24 @@
         ],
         "NASA11": [
           {
-            "startTime": 1676027885869,
-            "executionTime": 2093,
+            "startTime": 1676891411965,
+            "executionTime": 2177,
             "source": [
               {
                 "previousNode": "Start"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "messageType": "Report",
-                      "messageID": "20230208-7D-001",
-                      "messageURL": "https://kauai.ccmc.gsfc.nasa.gov/DONKI/view/Alert/23659/1",
-                      "messageIssueTime": "2023-02-08T22:07Z",
-                      "messageBody": "## Community Coordinated Modeling Center Database Of Notifications, Knowledge, Information (CCMC DONKI)\n## Message Type: Weekly Space Weather Summary Report for February 01, 2023 - February 07, 2023\n##\n## Message Issue Date: 2023-02-08T22:07:08Z\n## Report Coverage Begin Date: 2023-02-01T00:00Z\n## Report Coverage End Date: 2023-02-07T23:59Z\n## Message ID: 20230208-7D-001\n##\n## Disclaimer: NOAA's Space Weather Prediction Center is the United States Government official source for space weather forecasts. This \"Experimental Research Information\" consists of preliminary NASA research products and should be interpreted and used accordingly.\n\n\n## Summary:\n\nSolar activity was at moderate levels during this reporting period with 4 M-class flares, 5 O-type CMEs, and 14 C-type CMEs (see details below).   \n\nBased on preliminary analysis by the Moon to Mars Space Weather Analysis Office and heliospheric modeling carried out at NASA Community Coordinated Modeling Center, it was estimated that the C-type CME first visible in SOHO LASCO C2 imagery at 2023-02-07T15:23Z may impact missions near Earth at 2023-02-10T15:30Z (plus minus 7 hours). The roughly estimated expected range of the maximum Kp index is 2-4 (below minor) (see notification 20230207-AL-001).\n\nIt was also estimated that the following CMEs are predicted to impact other locations:\n\nCME Starting time  | Predicted Location/Mission Impacts (plus minus 7 hours)\n-----------------------------------------------------------------------------\n2023-02-01T07:54Z   OSIRIS-REx at 2023-02-05T00:00Z (glancing blow) and Parker Solar Probe at 2023-02-03T07:00Z (glancing blow) (see notification 20230201-AL-001)\n2023-02-02T09:36Z   OSIRIS-REx at 2023-02-06T19:00Z (glancing blow) (see notification 20230202-AL-001)\n2023-02-03T00:48Z   Parker Solar Probe at 2023-02-04T09:52Z (see notifications 20230203-AL-001 and 20230203-AL-002)\n2023-02-06T12:36Z   OSIRIS-REx at 2023-02-10T00:00Z\n2023-02-07T15:23Z   Lucy at 2023-02-12T12:00Z (glancing blow), Solar Orbiter at 2023-02-10T12:00Z (glancing blow), and STEREO A at 2023-02-10T15:00Z (glancing blow) (see notification 20230207-AL-001)\n\nGeomagnetic activity was below minor levels with Kp (a measure of geomagnetic activity, ranging 0-9) <=4 for the reporting period. The highest value of Kp=4 occurred during the synoptic periods of 2023-02-07T00:00Z-06:00Z. This enhancement of geomagnetic activity may be associated with the coronal hole high speed stream detected by DSCOVR and ACE at L1 on 2023-02-05. The maximum sustained solar wind speed observed by DSCOVR at L1 reached approximately 600 km/s. STEREO A IMPACT and PLASTIC instruments detected an interplanetary shock around 2023-02-05T15:30Z that may have also been associated with the previously mentioned coronal hole high speed stream.\n\nThe > 2.0 MeV energetic electron flux detected at GOES had a slight increase towards the end of the reporting period, but remained below the threshold level of 1000 pfu for the entire reporting period.\n\nThe energetic proton flux of >10 MeV protons detected at GOES and the 13-100 MeV protons at STEREO A were all at background levels for the entire reporting period. \n\nSpace Weather Impact:\nSpace weather impacts on NASA spacecraft are expected to have been low this week.\n\n##Events:\nFlares (M-class and above)\nDate         Start     Stop      Peak      Class   Location         \n2023-02-07  13:33:00  14:15:00  13:53:00   M1.0   S14E90           \n2023-02-07  20:01:00  20:14:00  20:07:00   M1.5   N29E02 ( 13213 ) \n2023-02-07  22:46:00  23:05:00  22:58:00   M3.8   N28E02 ( 13213 ) \n2023-02-07  23:05:00  23:09:00  23:07:00   M6.3   N30E03 ( 13213 ) \n\nCMEs (>500 km/s):\n\nEarth directed:\nStarting time        Speed (km/s)   Type   Direction (LON/LAT in HEEQ)   Half-Angle width (degrees)  Detecting spacecraft (real-time)  \n2023-02-07T15:23Z     ~525            C               -11/28                25                          STEREO A, SOHO                    \n\nNon-Earth directed:\nStarting time        Speed (km/s)   Type   Direction (LON/LAT in HEEQ)   Half-Angle width (degrees)  Detecting spacecraft (real-time)  \n2023-02-01T07:54Z     ~1077           O               133/26                49                          SOHO, STEREO A                    \n2023-02-01T14:23Z     ~1000           O               105/56                16                          STEREO A, SOHO                    \n2023-02-02T09:36Z     ~851            C                53/22                22                          SOHO, STEREO A                    \n2023-02-02T12:12Z     ~1193           O              -125/37                10                          SOHO, STEREO A                    \n2023-02-02T18:48Z     ~656            C               104/42                22                          SOHO, STEREO A                    \n2023-02-03T00:12Z     ~530            C              NONE/-36(POS)          18                          SOHO\n2023-02-03T00:48Z     ~1261           O              -131/21                50                          SOHO, STEREO A                    \n2023-02-03T15:12Z     ~859            C              -112/38                15                          SOHO, STEREO A                    \n2023-02-04T06:24Z     ~583            C                22/-48               11                          SOHO, STEREO A                    \n2023-02-04T07:36Z     ~931            C              -102/41                17                          SOHO, STEREO A                    \n2023-02-04T13:48Z     ~689            C              -129/45                10                          SOHO, STEREO A                    \n2023-02-05T05:48Z     ~949            C               -99/53                15                          SOHO, STEREO A                    \n2023-02-05T13:09Z     ~844            C               -65/58                18                          STEREO A, SOHO                    \n2023-02-05T15:16Z     ~870            C              -126/-16               16                          SOHO, STEREO A                    \n2023-02-05T19:36Z     ~539            C               -66/54                10                          SOHO                              \n2023-02-06T12:36Z     ~673            C                48/-36               26                          SOHO, STEREO A                    \n2023-02-07T03:12Z     ~1075           O               -75/65                26                          SOHO                              \n2023-02-07T22:00Z     ~560            C               70/-47                24                          SOHO, STEREO A\n\n## Space Weather Outlook:\n## Outlook Coverage Begin Date: 2023-02-08T00:00Z \n## Outlook Coverage End Date:  2023-02-14T23:59Z\n\nSolar activity is expected to be at moderate to high levels throughout the outlook period. There are currently 9 numbered Active Regions on the Earth-facing disk. Active Region 13213 (N31W01) produced 3 M-class flares during the reporting period. This Active Region may continue to exhibit notable flaring activity during the outlook period. Newly numbered Active Region 13217, located around latitude S10, has begun to rotate onto the Earth-facing disk as seen in EUV imagery from STEREO A and SDO, and was the potential source of the M1.0 class flare that peaked at 2023-02-07T13:53Z.  This Active Region may continue to produce increased flaring activity as it continues to rotate onto the Earth-facing disk.\n\nGeomagnetic activity is expected to vary between low and minor levels during the outlook period. There may be minor enhancements in the geomagnetic activity due to the anticipated arrival of a C-type CME first visible in SOHO LASCO C2 at 2023-02-07T15:23Z which is predicted to impact missions near Earth around 2023-02-10. The > 2.0 MeV energetic electron flux in the Earth's outer radiation belt crossed the threshold of 1000 pfu at 2023-02-08T12:45Z and may remain elevated throughout the outlook period (see notifications 20230208-AL-002 and 20230208-AL-003).  This increase in energetic electron flux are associated with the the coronal hole high speed stream mentioned above.\n\n\n## Notes: \nSCORE CME typification system:\nS-type: CMEs with speeds less than 500 km/s\nC-type: Common 500-999 km/s\nO-type: Occasional 1000-1999 km/s\nR-type: Rare 2000-2999 km/s\nER-type: Extremely Rare >3000 km/s\n\n\n"
+                      "messageType": "CME",
+                      "messageID": "20230219-AL-003",
+                      "messageURL": "https://kauai.ccmc.gsfc.nasa.gov/DONKI/view/Alert/23823/1",
+                      "messageIssueTime": "2023-02-19T19:34Z",
+                      "messageBody": "## Community Coordinated Modeling Center Database Of Notifications, Knowledge, Information ( CCMC DONKI )\n## Message Type: Space Weather Notification - CME (Juno, Dawn, Parker Solar Probe)\n##\n## Message Issue Date: 2023-02-19T19:34:54Z\n## Message ID: 20230219-AL-003\n##\n## Disclaimer: NOAA's Space Weather Prediction Center is the United States Government official source for space weather forecasts. This \"Experimental Research Information\" consists of preliminary NASA research products and should be interpreted and used accordingly.\n\n\n## Summary:\n\nC-type CME detected by SOHO. \n\nStart time of the event: 2023-02-18T02:48Z.\n\nEstimated speed: ~992 km/s.\n\nEstimated opening half-angle: 45 deg.\n\nDirection (lon./lat.): -161/1 in Heliocentric Earth Equatorial coordinates.\n\nActivity ID: 2023-02-18T02:48:00-CME-001\n\nBased on preliminary analysis by the Moon to Mars Space Weather Analysis Office and heliospheric modeling carried out at NASA Community Coordinated Modeling Center, it is estimated that the CME may impact Juno (minor impact) and Parker Solar Probe.  The leading edge of the CME will reach Juno at 2023-03-04T00:00Z, and Parker Solar Probe at 2023-02-19T06:34Z (plus minus 7 hours). \n\nLinks to the movies of the modeled event (includes CME: 2023-02-18T02:48:00-CME-001):\n\n(a) 2 AU outer boundary\nhttp://iswa.gsfc.nasa.gov/downloads/20230218_063200_2.0_anim.tim-den.gif\nhttp://iswa.gsfc.nasa.gov/downloads/20230218_063200_2.0_anim.tim-vel.gif\nhttp://iswa.gsfc.nasa.gov/downloads/20230218_063200_2.0_ENLIL_CONE_timeline.gif\nhttp://iswa.gsfc.nasa.gov/downloads/20230218_063200_2.0_ENLIL_CONE_PSP_timeline.gif\n\n(b) 5.5 AU outer boundary\nhttp://iswa.gsfc.nasa.gov/downloads/20230218_063200_5.5_anim.tim-den.gif\nhttp://iswa.gsfc.nasa.gov/downloads/20230218_063200_5.5_anim.tim-vel.gif\nhttp://iswa.gsfc.nasa.gov/downloads/20230218_063200_5.5_ENLIL_CONE_Juno_timeline.gif\n\n\n## Notes: \n\n\nSCORE CME typification system:\nS-type: CMEs with speeds less than 500 km/s\nC-type: Common 500-999 km/s\nO-type: Occasional 1000-1999 km/s\nR-type: Rare 2000-2999 km/s\nER-type: Extremely Rare >3000 km/s\n\n\n"
                     },
                     "pairedItem": {
                       "item": 0
@@ -382,13 +411,14 @@
         ],
         "NASA12": [
           {
-            "startTime": 1676027887982,
-            "executionTime": 5446,
+            "startTime": 1676891414154,
+            "executionTime": 6091,
             "source": [
               {
                 "previousNode": "Start"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -422,13 +452,14 @@
         ],
         "NASA14": [
           {
-            "startTime": 1676027893430,
-            "executionTime": 1393,
+            "startTime": 1676891420248,
+            "executionTime": 1533,
             "source": [
               {
                 "previousNode": "Start"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -463,13 +494,14 @@
         ],
         "NASA13": [
           {
-            "startTime": 1676027894824,
-            "executionTime": 0,
+            "startTime": 1676891421782,
+            "executionTime": 1,
             "source": [
               {
                 "previousNode": "Start"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -494,13 +526,14 @@
         ],
         "NASA1": [
           {
-            "startTime": 1676027894824,
-            "executionTime": 1130,
+            "startTime": 1676891421783,
+            "executionTime": 1052,
             "source": [
               {
                 "previousNode": "NASA"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -536,13 +569,14 @@
         ],
         "NASA2": [
           {
-            "startTime": 1676027895954,
-            "executionTime": 2562,
+            "startTime": 1676891422835,
+            "executionTime": 1487,
             "source": [
               {
                 "previousNode": "NASA1"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -551,11 +585,34 @@
                       "links": {
                         "object": true
                       },
-                      "id": "2019764",
-                      "neo_reference_id": "2019764",
-                      "name": "19764 (2000 NF5)",
-                      "nasa_jpl_url": "http://ssd.jpl.nasa.gov/sbdb.cgi?sstr=2019764",
-                      "absolute_magnitude_h": 16.12,
+                      "id": "3404768",
+                      "neo_reference_id": "3404768",
+                      "name": "(2008 EE5)",
+                      "nasa_jpl_url": "http://ssd.jpl.nasa.gov/sbdb.cgi?sstr=3404768",
+                      "absolute_magnitude_h": 19.71,
+                      "estimated_diameter": {
+                        "object": true
+                      },
+                      "is_potentially_hazardous_asteroid": true,
+                      "close_approach_data": [
+                        "json array"
+                      ],
+                      "is_sentry_object": false
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  },
+                  {
+                    "json": {
+                      "links": {
+                        "object": true
+                      },
+                      "id": "3775203",
+                      "neo_reference_id": "3775203",
+                      "name": "(2017 LW)",
+                      "nasa_jpl_url": "http://ssd.jpl.nasa.gov/sbdb.cgi?sstr=3775203",
+                      "absolute_magnitude_h": 25.4,
                       "estimated_diameter": {
                         "object": true
                       },
@@ -574,11 +631,11 @@
                       "links": {
                         "object": true
                       },
-                      "id": "2357058",
-                      "neo_reference_id": "2357058",
-                      "name": "357058 (2001 OG25)",
-                      "nasa_jpl_url": "http://ssd.jpl.nasa.gov/sbdb.cgi?sstr=2357058",
-                      "absolute_magnitude_h": 20.13,
+                      "id": "3776070",
+                      "neo_reference_id": "3776070",
+                      "name": "(2017 MB4)",
+                      "nasa_jpl_url": "http://ssd.jpl.nasa.gov/sbdb.cgi?sstr=3776070",
+                      "absolute_magnitude_h": 22.5,
                       "estimated_diameter": {
                         "object": true
                       },
@@ -597,10 +654,10 @@
                       "links": {
                         "object": true
                       },
-                      "id": "3596682",
-                      "neo_reference_id": "3596682",
-                      "name": "(2012 BL77)",
-                      "nasa_jpl_url": "http://ssd.jpl.nasa.gov/sbdb.cgi?sstr=3596682",
+                      "id": "3781896",
+                      "neo_reference_id": "3781896",
+                      "name": "(2017 SN16)",
+                      "nasa_jpl_url": "http://ssd.jpl.nasa.gov/sbdb.cgi?sstr=3781896",
                       "absolute_magnitude_h": 23.3,
                       "estimated_diameter": {
                         "object": true
@@ -620,11 +677,11 @@
                       "links": {
                         "object": true
                       },
-                      "id": "3608929",
-                      "neo_reference_id": "3608929",
-                      "name": "(2012 SV20)",
-                      "nasa_jpl_url": "http://ssd.jpl.nasa.gov/sbdb.cgi?sstr=3608929",
-                      "absolute_magnitude_h": 19.9,
+                      "id": "3827141",
+                      "neo_reference_id": "3827141",
+                      "name": "(2018 QS1)",
+                      "nasa_jpl_url": "http://ssd.jpl.nasa.gov/sbdb.cgi?sstr=3827141",
+                      "absolute_magnitude_h": 27.6,
                       "estimated_diameter": {
                         "object": true
                       },
@@ -643,11 +700,11 @@
                       "links": {
                         "object": true
                       },
-                      "id": "3685269",
-                      "neo_reference_id": "3685269",
-                      "name": "(2014 QL390)",
-                      "nasa_jpl_url": "http://ssd.jpl.nasa.gov/sbdb.cgi?sstr=3685269",
-                      "absolute_magnitude_h": 22.1,
+                      "id": "3843318",
+                      "neo_reference_id": "3843318",
+                      "name": "(2019 NC7)",
+                      "nasa_jpl_url": "http://ssd.jpl.nasa.gov/sbdb.cgi?sstr=3843318",
+                      "absolute_magnitude_h": 22.12,
                       "estimated_diameter": {
                         "object": true
                       },
@@ -666,148 +723,10 @@
                       "links": {
                         "object": true
                       },
-                      "id": "3763958",
-                      "neo_reference_id": "3763958",
-                      "name": "(2016 WL1)",
-                      "nasa_jpl_url": "http://ssd.jpl.nasa.gov/sbdb.cgi?sstr=3763958",
-                      "absolute_magnitude_h": 25.8,
-                      "estimated_diameter": {
-                        "object": true
-                      },
-                      "is_potentially_hazardous_asteroid": false,
-                      "close_approach_data": [
-                        "json array"
-                      ],
-                      "is_sentry_object": false
-                    },
-                    "pairedItem": {
-                      "item": 0
-                    }
-                  },
-                  {
-                    "json": {
-                      "links": {
-                        "object": true
-                      },
-                      "id": "3780999",
-                      "neo_reference_id": "3780999",
-                      "name": "(2017 QA17)",
-                      "nasa_jpl_url": "http://ssd.jpl.nasa.gov/sbdb.cgi?sstr=3780999",
-                      "absolute_magnitude_h": 23.8,
-                      "estimated_diameter": {
-                        "object": true
-                      },
-                      "is_potentially_hazardous_asteroid": false,
-                      "close_approach_data": [
-                        "json array"
-                      ],
-                      "is_sentry_object": false
-                    },
-                    "pairedItem": {
-                      "item": 0
-                    }
-                  },
-                  {
-                    "json": {
-                      "links": {
-                        "object": true
-                      },
-                      "id": "3825768",
-                      "neo_reference_id": "3825768",
-                      "name": "(2018 OQ)",
-                      "nasa_jpl_url": "http://ssd.jpl.nasa.gov/sbdb.cgi?sstr=3825768",
-                      "absolute_magnitude_h": 26.8,
-                      "estimated_diameter": {
-                        "object": true
-                      },
-                      "is_potentially_hazardous_asteroid": false,
-                      "close_approach_data": [
-                        "json array"
-                      ],
-                      "is_sentry_object": false
-                    },
-                    "pairedItem": {
-                      "item": 0
-                    }
-                  },
-                  {
-                    "json": {
-                      "links": {
-                        "object": true
-                      },
-                      "id": "54006016",
-                      "neo_reference_id": "54006016",
-                      "name": "(2020 DL4)",
-                      "nasa_jpl_url": "http://ssd.jpl.nasa.gov/sbdb.cgi?sstr=54006016",
-                      "absolute_magnitude_h": 24.2,
-                      "estimated_diameter": {
-                        "object": true
-                      },
-                      "is_potentially_hazardous_asteroid": false,
-                      "close_approach_data": [
-                        "json array"
-                      ],
-                      "is_sentry_object": false
-                    },
-                    "pairedItem": {
-                      "item": 0
-                    }
-                  },
-                  {
-                    "json": {
-                      "links": {
-                        "object": true
-                      },
-                      "id": "54016472",
-                      "neo_reference_id": "54016472",
-                      "name": "(2020 GN1)",
-                      "nasa_jpl_url": "http://ssd.jpl.nasa.gov/sbdb.cgi?sstr=54016472",
-                      "absolute_magnitude_h": 27,
-                      "estimated_diameter": {
-                        "object": true
-                      },
-                      "is_potentially_hazardous_asteroid": false,
-                      "close_approach_data": [
-                        "json array"
-                      ],
-                      "is_sentry_object": false
-                    },
-                    "pairedItem": {
-                      "item": 0
-                    }
-                  },
-                  {
-                    "json": {
-                      "links": {
-                        "object": true
-                      },
-                      "id": "54048949",
-                      "neo_reference_id": "54048949",
-                      "name": "(2020 OZ2)",
-                      "nasa_jpl_url": "http://ssd.jpl.nasa.gov/sbdb.cgi?sstr=54048949",
-                      "absolute_magnitude_h": 21.5,
-                      "estimated_diameter": {
-                        "object": true
-                      },
-                      "is_potentially_hazardous_asteroid": false,
-                      "close_approach_data": [
-                        "json array"
-                      ],
-                      "is_sentry_object": false
-                    },
-                    "pairedItem": {
-                      "item": 0
-                    }
-                  },
-                  {
-                    "json": {
-                      "links": {
-                        "object": true
-                      },
-                      "id": "54050996",
-                      "neo_reference_id": "54050996",
-                      "name": "(2020 PL1)",
-                      "nasa_jpl_url": "http://ssd.jpl.nasa.gov/sbdb.cgi?sstr=54050996",
+                      "id": "54049890",
+                      "neo_reference_id": "54049890",
+                      "name": "(2020 PC)",
+                      "nasa_jpl_url": "http://ssd.jpl.nasa.gov/sbdb.cgi?sstr=54049890",
                       "absolute_magnitude_h": 28,
                       "estimated_diameter": {
                         "object": true
@@ -827,11 +746,11 @@
                       "links": {
                         "object": true
                       },
-                      "id": "54051253",
-                      "neo_reference_id": "54051253",
-                      "name": "(2020 QB2)",
-                      "nasa_jpl_url": "http://ssd.jpl.nasa.gov/sbdb.cgi?sstr=54051253",
-                      "absolute_magnitude_h": 25.2,
+                      "id": "54050981",
+                      "neo_reference_id": "54050981",
+                      "name": "(2020 PC1)",
+                      "nasa_jpl_url": "http://ssd.jpl.nasa.gov/sbdb.cgi?sstr=54050981",
+                      "absolute_magnitude_h": 25.3,
                       "estimated_diameter": {
                         "object": true
                       },
@@ -850,11 +769,11 @@
                       "links": {
                         "object": true
                       },
-                      "id": "54051382",
-                      "neo_reference_id": "54051382",
-                      "name": "(2020 QH5)",
-                      "nasa_jpl_url": "http://ssd.jpl.nasa.gov/sbdb.cgi?sstr=54051382",
-                      "absolute_magnitude_h": 23.4,
+                      "id": "54051038",
+                      "neo_reference_id": "54051038",
+                      "name": "(2020 PL2)",
+                      "nasa_jpl_url": "http://ssd.jpl.nasa.gov/sbdb.cgi?sstr=54051038",
+                      "absolute_magnitude_h": 23.06,
                       "estimated_diameter": {
                         "object": true
                       },
@@ -873,11 +792,11 @@
                       "links": {
                         "object": true
                       },
-                      "id": "54110054",
-                      "neo_reference_id": "54110054",
-                      "name": "(2021 CS)",
-                      "nasa_jpl_url": "http://ssd.jpl.nasa.gov/sbdb.cgi?sstr=54110054",
-                      "absolute_magnitude_h": 24,
+                      "id": "54051142",
+                      "neo_reference_id": "54051142",
+                      "name": "(2020 PX5)",
+                      "nasa_jpl_url": "http://ssd.jpl.nasa.gov/sbdb.cgi?sstr=54051142",
+                      "absolute_magnitude_h": 29.56,
                       "estimated_diameter": {
                         "object": true
                       },
@@ -896,11 +815,34 @@
                       "links": {
                         "object": true
                       },
-                      "id": "54316566",
-                      "neo_reference_id": "54316566",
-                      "name": "(2022 TS2)",
-                      "nasa_jpl_url": "http://ssd.jpl.nasa.gov/sbdb.cgi?sstr=54316566",
-                      "absolute_magnitude_h": 24.56,
+                      "id": "54051158",
+                      "neo_reference_id": "54051158",
+                      "name": "(2020 PA6)",
+                      "nasa_jpl_url": "http://ssd.jpl.nasa.gov/sbdb.cgi?sstr=54051158",
+                      "absolute_magnitude_h": 22.75,
+                      "estimated_diameter": {
+                        "object": true
+                      },
+                      "is_potentially_hazardous_asteroid": false,
+                      "close_approach_data": [
+                        "json array"
+                      ],
+                      "is_sentry_object": false
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  },
+                  {
+                    "json": {
+                      "links": {
+                        "object": true
+                      },
+                      "id": "54192746",
+                      "neo_reference_id": "54192746",
+                      "name": "(2021 RQ2)",
+                      "nasa_jpl_url": "http://ssd.jpl.nasa.gov/sbdb.cgi?sstr=54192746",
+                      "absolute_magnitude_h": 29.54,
                       "estimated_diameter": {
                         "object": true
                       },
@@ -930,7 +872,8 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2023-02-10T11:17:49.503Z",
-  "stoppedAt": "2023-02-10T11:18:18.518Z",
+  "startedAt": "2023-02-20T11:09:57.881Z",
+  "stoppedAt": "2023-02-20T11:10:24.325Z",
+  "status": "running",
   "finished": true
 }

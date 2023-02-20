@@ -5,9 +5,10 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1676027890792,
+            "startTime": 1676891417116,
             "executionTime": 1,
             "source": [],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -24,20 +25,21 @@
         ],
         "Set id & email": [
           {
-            "startTime": 1676027890793,
-            "executionTime": 43,
+            "startTime": 1676891417117,
+            "executionTime": 50,
             "source": [
               {
                 "previousNode": "Start"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": 274,
-                      "email": "fake1676027890836@email.com"
+                      "id": 534,
+                      "email": "fake1676891417166@email.com"
                     },
                     "pairedItem": {
                       "item": 0
@@ -50,13 +52,14 @@
         ],
         "Vero": [
           {
-            "startTime": 1676027890836,
-            "executionTime": 463,
+            "startTime": 1676891417167,
+            "executionTime": 493,
             "source": [
               {
                 "previousNode": "Set id & email"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -76,13 +79,14 @@
         ],
         "Vero1": [
           {
-            "startTime": 1676027891299,
-            "executionTime": 293,
+            "startTime": 1676891417660,
+            "executionTime": 305,
             "source": [
               {
                 "previousNode": "Vero"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -102,13 +106,14 @@
         ],
         "Vero2": [
           {
-            "startTime": 1676027891592,
-            "executionTime": 291,
+            "startTime": 1676891417966,
+            "executionTime": 304,
             "source": [
               {
                 "previousNode": "Vero1"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -128,13 +133,14 @@
         ],
         "Vero3": [
           {
-            "startTime": 1676027891883,
-            "executionTime": 293,
+            "startTime": 1676891418270,
+            "executionTime": 411,
             "source": [
               {
                 "previousNode": "Vero2"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -154,13 +160,14 @@
         ],
         "Vero4": [
           {
-            "startTime": 1676027892177,
-            "executionTime": 394,
+            "startTime": 1676891418681,
+            "executionTime": 303,
             "source": [
               {
                 "previousNode": "Vero3"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -180,13 +187,14 @@
         ],
         "Vero5": [
           {
-            "startTime": 1676027892572,
-            "executionTime": 300,
+            "startTime": 1676891418984,
+            "executionTime": 301,
             "source": [
               {
                 "previousNode": "Vero4"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -206,13 +214,14 @@
         ],
         "Vero7": [
           {
-            "startTime": 1676027892872,
-            "executionTime": 297,
+            "startTime": 1676891419286,
+            "executionTime": 409,
             "source": [
               {
                 "previousNode": "Vero5"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -232,13 +241,14 @@
         ],
         "Vero6": [
           {
-            "startTime": 1676027893169,
-            "executionTime": 425,
+            "startTime": 1676891419695,
+            "executionTime": 339,
             "source": [
               {
                 "previousNode": "Vero7"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -267,7 +277,8 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2023-02-10T11:18:10.786Z",
-  "stoppedAt": "2023-02-10T11:18:13.595Z",
+  "startedAt": "2023-02-20T11:10:17.114Z",
+  "stoppedAt": "2023-02-20T11:10:20.034Z",
+  "status": "running",
   "finished": true
 }

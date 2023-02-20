@@ -5,9 +5,10 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1676027850508,
-            "executionTime": 0,
+            "startTime": 1676891385658,
+            "executionTime": 1,
             "source": [],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -24,20 +25,21 @@
         ],
         "Hubspot6": [
           {
-            "startTime": 1676027850509,
-            "executionTime": 389,
+            "startTime": 1676891385659,
+            "executionTime": 463,
             "source": [
               {
                 "previousNode": "Start"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "portalId": 9435114,
-                      "companyId": 12453013858,
+                      "companyId": 14728009312,
                       "isDeleted": false,
                       "properties": {
                         "object": true
@@ -63,13 +65,14 @@
         ],
         "Hubspot": [
           {
-            "startTime": 1676027850898,
-            "executionTime": 492,
+            "startTime": 1676891386122,
+            "executionTime": 539,
             "source": [
               {
                 "previousNode": "Start"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -110,13 +113,14 @@
         ],
         "Hubspot7": [
           {
-            "startTime": 1676027851390,
-            "executionTime": 227,
+            "startTime": 1676891386661,
+            "executionTime": 483,
             "source": [
               {
                 "previousNode": "Hubspot6"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -149,13 +153,14 @@
         ],
         "Sleep 0.5 second": [
           {
-            "startTime": 1676027851618,
-            "executionTime": 508,
+            "startTime": 1676891387144,
+            "executionTime": 515,
             "source": [
               {
                 "previousNode": "Hubspot"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -197,13 +202,14 @@
         ],
         "Hubspot9": [
           {
-            "startTime": 1676027852127,
+            "startTime": 1676891387659,
             "executionTime": 200,
             "source": [
               {
                 "previousNode": "Hubspot7"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -236,13 +242,14 @@
         ],
         "Hubspot2": [
           {
-            "startTime": 1676027852327,
-            "executionTime": 297,
+            "startTime": 1676891387860,
+            "executionTime": 274,
             "source": [
               {
                 "previousNode": "Sleep 0.5 second"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -280,13 +287,14 @@
         ],
         "Hubspot8": [
           {
-            "startTime": 1676027852626,
-            "executionTime": 254,
+            "startTime": 1676891388134,
+            "executionTime": 255,
             "source": [
               {
                 "previousNode": "Hubspot9"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -319,13 +327,14 @@
         ],
         "Sleep 0.5 second1": [
           {
-            "startTime": 1676027852881,
-            "executionTime": 505,
+            "startTime": 1676891388393,
+            "executionTime": 517,
             "source": [
               {
                 "previousNode": "Hubspot2"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -364,20 +373,21 @@
         ],
         "Hubspot10": [
           {
-            "startTime": 1676027853387,
-            "executionTime": 249,
+            "startTime": 1676891388911,
+            "executionTime": 561,
             "source": [
               {
                 "previousNode": "Hubspot8"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "portalId": 9435114,
-                      "companyId": 12453013858,
+                      "companyId": 14728009312,
                       "isDeleted": false,
                       "properties": {
                         "object": true
@@ -403,13 +413,14 @@
         ],
         "Hubspot3": [
           {
-            "startTime": 1676027853637,
-            "executionTime": 511,
+            "startTime": 1676891389472,
+            "executionTime": 263,
             "source": [
               {
                 "previousNode": "Sleep 0.5 second1"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -434,20 +445,21 @@
         ],
         "Hubspot11": [
           {
-            "startTime": 1676027854148,
-            "executionTime": 252,
+            "startTime": 1676891389735,
+            "executionTime": 268,
             "source": [
               {
                 "previousNode": "Hubspot10"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "portalId": 9435114,
-                      "companyId": 12453013858,
+                      "companyId": 14728009312,
                       "isDeleted": false,
                       "properties": {
                         "object": true
@@ -473,13 +485,14 @@
         ],
         "Function": [
           {
-            "startTime": 1676027854401,
-            "executionTime": 1507,
+            "startTime": 1676891390006,
+            "executionTime": 1510,
             "source": [
               {
                 "previousNode": "Hubspot3"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -505,19 +518,20 @@
         ],
         "Hubspot12": [
           {
-            "startTime": 1676027855908,
-            "executionTime": 238,
+            "startTime": 1676891391516,
+            "executionTime": 303,
             "source": [
               {
                 "previousNode": "Hubspot11"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "companyId": 12453013858,
+                      "companyId": 14728009312,
                       "deleted": true
                     },
                     "pairedItem": {
@@ -531,13 +545,14 @@
         ],
         "Hubspot1": [
           {
-            "startTime": 1676027856146,
-            "executionTime": 224,
+            "startTime": 1676891391821,
+            "executionTime": 288,
             "source": [
               {
                 "previousNode": "Function"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 []
@@ -556,7 +571,8 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2023-02-10T11:17:30.503Z",
-  "stoppedAt": "2023-02-10T11:17:36.370Z",
+  "startedAt": "2023-02-20T11:09:45.654Z",
+  "stoppedAt": "2023-02-20T11:09:52.112Z",
+  "status": "running",
   "finished": true
 }

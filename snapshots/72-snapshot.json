@@ -5,9 +5,10 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1676027867565,
+            "startTime": 1676891396434,
             "executionTime": 0,
             "source": [],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -24,13 +25,14 @@
         ],
         "Read Binary File": [
           {
-            "startTime": 1676027867566,
-            "executionTime": 6,
+            "startTime": 1676891396435,
+            "executionTime": 24,
             "source": [
               {
                 "previousNode": "Start"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -58,13 +60,14 @@
         ],
         "Zulip": [
           {
-            "startTime": 1676027867573,
-            "executionTime": 474,
+            "startTime": 1676891396459,
+            "executionTime": 475,
             "source": [
               {
                 "previousNode": "Start"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -72,7 +75,7 @@
                     "json": {
                       "result": "success",
                       "msg": "",
-                      "id": 327022527
+                      "id": 328952614
                     },
                     "pairedItem": {
                       "item": 0
@@ -85,13 +88,14 @@
         ],
         "Zulip7": [
           {
-            "startTime": 1676027868048,
-            "executionTime": 464,
+            "startTime": 1676891396934,
+            "executionTime": 376,
             "source": [
               {
                 "previousNode": "Start"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -117,13 +121,14 @@
         ],
         "Zulip12": [
           {
-            "startTime": 1676027868512,
-            "executionTime": 416,
+            "startTime": 1676891397310,
+            "executionTime": 332,
             "source": [
               {
                 "previousNode": "Start"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -158,13 +163,14 @@
         ],
         "Zulip6": [
           {
-            "startTime": 1676027868928,
-            "executionTime": 533,
+            "startTime": 1676891397643,
+            "executionTime": 516,
             "source": [
               {
                 "previousNode": "Read Binary File"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -172,7 +178,7 @@
                     "json": {
                       "result": "success",
                       "msg": "",
-                      "uri": "https://nodeqa.zulipchat.com//user_uploads/33385/E2qDYWjDgInUD0ILYrsDX8bf/n8n-logo.png"
+                      "uri": "https://nodeqa.zulipchat.com//user_uploads/33385/j5pTnm6OfvyVgGiNXDVJ2Lkm/n8n-logo.png"
                     },
                     "pairedItem": {
                       "item": 0
@@ -185,13 +191,14 @@
         ],
         "Zulip1": [
           {
-            "startTime": 1676027869462,
-            "executionTime": 437,
+            "startTime": 1676891398160,
+            "executionTime": 478,
             "source": [
               {
                 "previousNode": "Zulip"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -211,22 +218,23 @@
         ],
         "Zulip8": [
           {
-            "startTime": 1676027869899,
-            "executionTime": 423,
+            "startTime": 1676891398638,
+            "executionTime": 424,
             "source": [
               {
                 "previousNode": "Zulip7"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "can_remove_subscribers_group_id": 35057,
-                      "date_created": 1676027868,
+                      "date_created": 1676891397,
                       "description": "testing stream from n8n",
-                      "first_message_id": 327022529,
+                      "first_message_id": 328952616,
                       "history_public_to_subscribers": true,
                       "invite_only": false,
                       "is_web_public": false,
@@ -235,7 +243,7 @@
                       },
                       "name": "StreamTest",
                       "rendered_description": "<p>testing stream from n8n</p>",
-                      "stream_id": 369731,
+                      "stream_id": 371131,
                       "stream_post_policy": 1,
                       "is_announcement_only": false
                     },
@@ -338,13 +346,14 @@
         ],
         "Zulip10": [
           {
-            "startTime": 1676027870322,
-            "executionTime": 421,
+            "startTime": 1676891399062,
+            "executionTime": 434,
             "source": [
               {
                 "previousNode": "Zulip7"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -354,17 +363,17 @@
                         "object": true
                       },
                       "can_remove_subscribers_group_id": 35057,
-                      "color": "#f4ae55",
-                      "date_created": 1676027868,
+                      "color": "#c2c2c2",
+                      "date_created": 1676891397,
                       "description": "testing stream from n8n",
                       "desktop_notifications": {
                         "object": true
                       },
-                      "email_address": "streamtest.ae79af91e14abd55eddacb19d5e20dbc.show-sender@streams.zulipchat.com",
+                      "email_address": "streamtest.84bda58354e62c8acafb42fa7db1a3be.show-sender@streams.zulipchat.com",
                       "email_notifications": {
                         "object": true
                       },
-                      "first_message_id": 327022529,
+                      "first_message_id": 328952616,
                       "history_public_to_subscribers": true,
                       "in_home_view": true,
                       "invite_only": false,
@@ -380,7 +389,7 @@
                         "object": true
                       },
                       "rendered_description": "<p>testing stream from n8n</p>",
-                      "stream_id": 369731,
+                      "stream_id": 371131,
                       "stream_post_policy": 1,
                       "stream_weekly_traffic": {
                         "object": true
@@ -529,13 +538,14 @@
         ],
         "Zulip13": [
           {
-            "startTime": 1676027870744,
+            "startTime": 1676891399496,
             "executionTime": 420,
             "source": [
               {
                 "previousNode": "Zulip12"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -558,13 +568,14 @@
         ],
         "Zulip2": [
           {
-            "startTime": 1676027871165,
-            "executionTime": 422,
+            "startTime": 1676891399916,
+            "executionTime": 447,
             "source": [
               {
                 "previousNode": "Zulip1"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -572,7 +583,7 @@
                     "json": {
                       "result": "success",
                       "msg": "",
-                      "id": 327022540
+                      "id": 328952630
                     },
                     "pairedItem": {
                       "item": 0
@@ -585,22 +596,23 @@
         ],
         "Function": [
           {
-            "startTime": 1676027871587,
-            "executionTime": 7,
+            "startTime": 1676891400363,
+            "executionTime": 9,
             "source": [
               {
                 "previousNode": "Zulip8"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "can_remove_subscribers_group_id": 35057,
-                      "date_created": 1676027868,
+                      "date_created": 1676891397,
                       "description": "testing stream from n8n",
-                      "first_message_id": 327022529,
+                      "first_message_id": 328952616,
                       "history_public_to_subscribers": true,
                       "invite_only": false,
                       "is_web_public": false,
@@ -609,7 +621,7 @@
                       },
                       "name": "StreamTest",
                       "rendered_description": "<p>testing stream from n8n</p>",
-                      "stream_id": 369731,
+                      "stream_id": 371131,
                       "stream_post_policy": 1,
                       "is_announcement_only": false
                     },
@@ -625,13 +637,14 @@
         ],
         "Zulip14": [
           {
-            "startTime": 1676027871594,
-            "executionTime": 1,
+            "startTime": 1676891400373,
+            "executionTime": 0,
             "source": [
               {
                 "previousNode": "Zulip13"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -654,13 +667,14 @@
         ],
         "Zulip3": [
           {
-            "startTime": 1676027871595,
-            "executionTime": 437,
+            "startTime": 1676891400373,
+            "executionTime": 435,
             "source": [
               {
                 "previousNode": "Zulip2"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -671,7 +685,7 @@
                       "message": {
                         "object": true
                       },
-                      "raw_content": "Update content 1676027869463"
+                      "raw_content": "Update content 1676891398165"
                     },
                     "pairedItem": {
                       "item": 0
@@ -684,13 +698,14 @@
         ],
         "Zulip9": [
           {
-            "startTime": 1676027872032,
-            "executionTime": 457,
+            "startTime": 1676891400808,
+            "executionTime": 375,
             "source": [
               {
                 "previousNode": "Function"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -710,13 +725,14 @@
         ],
         "Zulip15": [
           {
-            "startTime": 1676027872490,
+            "startTime": 1676891401184,
             "executionTime": 0,
             "source": [
               {
                 "previousNode": "Zulip14"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -739,13 +755,14 @@
         ],
         "Zulip4": [
           {
-            "startTime": 1676027872490,
-            "executionTime": 446,
+            "startTime": 1676891401184,
+            "executionTime": 374,
             "source": [
               {
                 "previousNode": "Zulip3"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -765,13 +782,14 @@
         ],
         "Zulip11": [
           {
-            "startTime": 1676027872936,
-            "executionTime": 454,
+            "startTime": 1676891401558,
+            "executionTime": 431,
             "source": [
               {
                 "previousNode": "Zulip9"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -791,13 +809,14 @@
         ],
         "Zulip5": [
           {
-            "startTime": 1676027873390,
-            "executionTime": 444,
+            "startTime": 1676891401989,
+            "executionTime": 483,
             "source": [
               {
                 "previousNode": "Zulip4"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -826,7 +845,8 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2023-02-10T11:17:47.562Z",
-  "stoppedAt": "2023-02-10T11:17:53.834Z",
+  "startedAt": "2023-02-20T11:09:56.431Z",
+  "stoppedAt": "2023-02-20T11:10:02.472Z",
+  "status": "running",
   "finished": true
 }

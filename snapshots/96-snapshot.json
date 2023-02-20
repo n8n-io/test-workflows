@@ -5,9 +5,10 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1676027873291,
-            "executionTime": 3,
+            "startTime": 1676891401168,
+            "executionTime": 0,
             "source": [],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -24,13 +25,14 @@
         ],
         "MessageBird": [
           {
-            "startTime": 1676027873295,
-            "executionTime": 212,
+            "startTime": 1676891401169,
+            "executionTime": 205,
             "source": [
               {
                 "previousNode": "Start"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -51,20 +53,21 @@
         ],
         "MessageBird1": [
           {
-            "startTime": 1676027873507,
-            "executionTime": 159,
+            "startTime": 1676891401374,
+            "executionTime": 144,
             "source": [
               {
                 "previousNode": "Start"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": "a96675f325524808b05afdde9c00b93d",
-                      "href": "https://rest.messagebird.com/messages/a96675f325524808b05afdde9c00b93d",
+                      "id": "2f2f7fe29c654583bd0877ebc28f1794",
+                      "href": "https://rest.messagebird.com/messages/2f2f7fe29c654583bd0877ebc28f1794",
                       "direction": "mt",
                       "type": "sms",
                       "originator": "4930270504079",
@@ -84,7 +87,7 @@
                       "scheduledDatetime": {
                         "object": true
                       },
-                      "createdDatetime": "2023-02-10T11:17:53+00:00",
+                      "createdDatetime": "2023-02-20T11:10:01+00:00",
                       "recipients": {
                         "object": true
                       }
@@ -109,7 +112,8 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2023-02-10T11:17:53.285Z",
-  "stoppedAt": "2023-02-10T11:17:53.666Z",
+  "startedAt": "2023-02-20T11:10:01.166Z",
+  "stoppedAt": "2023-02-20T11:10:01.518Z",
+  "status": "running",
   "finished": true
 }

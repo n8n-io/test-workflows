@@ -5,9 +5,10 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1676027880985,
-            "executionTime": 1,
+            "startTime": 1676891410385,
+            "executionTime": 2,
             "source": [],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -24,21 +25,22 @@
         ],
         "Mandrill": [
           {
-            "startTime": 1676027880987,
-            "executionTime": 497,
+            "startTime": 1676891410389,
+            "executionTime": 609,
             "source": [
               {
                 "previousNode": "Start"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "email": "nodeqa1676027881016@email.test",
+                      "email": "nodeqa1676891410421@email.test",
                       "status": "rejected",
-                      "_id": "54fadddfb7ae451f9ad5f6c606bc61c7",
+                      "_id": "2070d0f095174dba9d4e1bb67eb17a25",
                       "reject_reason": "unsigned",
                       "queued_reason": {
                         "object": true
@@ -55,21 +57,22 @@
         ],
         "Mandrill1": [
           {
-            "startTime": 1676027881484,
-            "executionTime": 487,
+            "startTime": 1676891410998,
+            "executionTime": 438,
             "source": [
               {
                 "previousNode": "Start"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "email": "nodeqa1676027881486@email.test",
+                      "email": "nodeqa1676891410999@email.test",
                       "status": "rejected",
-                      "_id": "3148a1e411604585aa93cd5ef2385fd1",
+                      "_id": "4ee4e6467c4d4be680e1ede7782dd736",
                       "reject_reason": "unsigned",
                       "queued_reason": {
                         "object": true
@@ -95,7 +98,8 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2023-02-10T11:18:00.983Z",
-  "stoppedAt": "2023-02-10T11:18:01.971Z",
+  "startedAt": "2023-02-20T11:10:10.381Z",
+  "stoppedAt": "2023-02-20T11:10:11.441Z",
+  "status": "running",
   "finished": true
 }

@@ -5,9 +5,10 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1676027850402,
+            "startTime": 1676891385766,
             "executionTime": 0,
             "source": [],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -24,13 +25,14 @@
         ],
         "Dropbox8": [
           {
-            "startTime": 1676027850403,
-            "executionTime": 1126,
+            "startTime": 1676891385767,
+            "executionTime": 899,
             "source": [
               {
                 "previousNode": "Start"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -51,13 +53,14 @@
         ],
         "Read Binary File": [
           {
-            "startTime": 1676027851529,
+            "startTime": 1676891386666,
             "executionTime": 2,
             "source": [
               {
                 "previousNode": "Dropbox8"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -89,13 +92,14 @@
         ],
         "Sleep 0.8 seconds": [
           {
-            "startTime": 1676027851531,
-            "executionTime": 811,
+            "startTime": 1676891386668,
+            "executionTime": 813,
             "source": [
               {
                 "previousNode": "Read Binary File"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -128,25 +132,26 @@
         ],
         "Dropbox": [
           {
-            "startTime": 1676027852342,
-            "executionTime": 1393,
+            "startTime": 1676891387481,
+            "executionTime": 1086,
             "source": [
               {
                 "previousNode": "Sleep 0.8 seconds"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "name": "testFile",
-                      "path_lower": "/testfolder1676027850903/testfile",
-                      "path_display": "/testFolder1676027850903/testFile",
-                      "id": "id:2Tke52G4OWEAAAAAAAAF9g",
-                      "client_modified": "2023-02-10T11:17:33Z",
-                      "server_modified": "2023-02-10T11:17:33Z",
-                      "rev": "015f456a4d927610000000222408c10",
+                      "path_lower": "/testfolder1676891386188/testfile",
+                      "path_display": "/testFolder1676891386188/testFile",
+                      "id": "id:2Tke52G4OWEAAAAAAAAGRA",
+                      "client_modified": "2023-02-20T11:09:48Z",
+                      "server_modified": "2023-02-20T11:09:48Z",
+                      "rev": "015f51fb38976ef0000000222408c10",
                       "size": 2675,
                       "is_downloadable": true,
                       "content_hash": "1fbea2b44830c71ca338c89a5e3a45585f74d9e15c19bfef69b19b38e9da99b9"
@@ -162,25 +167,26 @@
         ],
         "Sleep 0.8 seconds1": [
           {
-            "startTime": 1676027853735,
-            "executionTime": 807,
+            "startTime": 1676891388568,
+            "executionTime": 817,
             "source": [
               {
                 "previousNode": "Dropbox"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
                   {
                     "json": {
                       "name": "testFile",
-                      "path_lower": "/testfolder1676027850903/testfile",
-                      "path_display": "/testFolder1676027850903/testFile",
-                      "id": "id:2Tke52G4OWEAAAAAAAAF9g",
-                      "client_modified": "2023-02-10T11:17:33Z",
-                      "server_modified": "2023-02-10T11:17:33Z",
-                      "rev": "015f456a4d927610000000222408c10",
+                      "path_lower": "/testfolder1676891386188/testfile",
+                      "path_display": "/testFolder1676891386188/testFile",
+                      "id": "id:2Tke52G4OWEAAAAAAAAGRA",
+                      "client_modified": "2023-02-20T11:09:48Z",
+                      "server_modified": "2023-02-20T11:09:48Z",
+                      "rev": "015f51fb38976ef0000000222408c10",
                       "size": 2675,
                       "is_downloadable": true,
                       "content_hash": "1fbea2b44830c71ca338c89a5e3a45585f74d9e15c19bfef69b19b38e9da99b9"
@@ -197,13 +203,14 @@
         ],
         "Dropbox2": [
           {
-            "startTime": 1676027854543,
-            "executionTime": 1696,
+            "startTime": 1676891389385,
+            "executionTime": 2239,
             "source": [
               {
                 "previousNode": "Sleep 0.8 seconds1"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -224,13 +231,14 @@
         ],
         "Dropbox3": [
           {
-            "startTime": 1676027856239,
-            "executionTime": 1326,
+            "startTime": 1676891391624,
+            "executionTime": 1761,
             "source": [
               {
                 "previousNode": "Dropbox2"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -251,13 +259,14 @@
         ],
         "Dropbox5": [
           {
-            "startTime": 1676027857565,
-            "executionTime": 1008,
+            "startTime": 1676891393386,
+            "executionTime": 820,
             "source": [
               {
                 "previousNode": "Dropbox2"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -273,8 +282,8 @@
                         "fileType": "image",
                         "fileExtension": "png",
                         "data": "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",
-                        "directory": "/testFolder1676027850903",
-                        "fileName": "moveTestFile1676027854953",
+                        "directory": "/testFolder1676891386188",
+                        "fileName": "moveTestFile1676891389679",
                         "fileSize": "2.67 kB"
                       }
                     },
@@ -289,13 +298,14 @@
         ],
         "Sleep 0.8 seconds2": [
           {
-            "startTime": 1676027858573,
-            "executionTime": 807,
+            "startTime": 1676891394206,
+            "executionTime": 805,
             "source": [
               {
                 "previousNode": "Dropbox3"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -317,13 +327,14 @@
         ],
         "Sleep 0.8 seconds3": [
           {
-            "startTime": 1676027859380,
-            "executionTime": 805,
+            "startTime": 1676891395011,
+            "executionTime": 804,
             "source": [
               {
                 "previousNode": "Dropbox5"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -339,8 +350,8 @@
                         "fileType": "image",
                         "fileExtension": "png",
                         "data": "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",
-                        "directory": "/testFolder1676027850903",
-                        "fileName": "moveTestFile1676027854953",
+                        "directory": "/testFolder1676891386188",
+                        "fileName": "moveTestFile1676891389679",
                         "fileSize": "2.67 kB"
                       }
                     },
@@ -356,13 +367,14 @@
         ],
         "Dropbox4": [
           {
-            "startTime": 1676027860186,
-            "executionTime": 1168,
+            "startTime": 1676891395815,
+            "executionTime": 1350,
             "source": [
               {
                 "previousNode": "Sleep 0.8 seconds2"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -383,13 +395,14 @@
         ],
         "Dropbox6": [
           {
-            "startTime": 1676027861354,
-            "executionTime": 1168,
+            "startTime": 1676891397166,
+            "executionTime": 1350,
             "source": [
               {
                 "previousNode": "Sleep 0.8 seconds3"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -410,13 +423,14 @@
         ],
         "Sleep 0.8 seconds6": [
           {
-            "startTime": 1676027862522,
-            "executionTime": 804,
+            "startTime": 1676891398517,
+            "executionTime": 814,
             "source": [
               {
                 "previousNode": "Dropbox6"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -438,13 +452,14 @@
         ],
         "Dropbox10": [
           {
-            "startTime": 1676027863326,
-            "executionTime": 1677,
+            "startTime": 1676891399332,
+            "executionTime": 1406,
             "source": [
               {
                 "previousNode": "Sleep 0.8 seconds6"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -465,13 +480,14 @@
         ],
         "Sleep 0.8 seconds5": [
           {
-            "startTime": 1676027865004,
-            "executionTime": 802,
+            "startTime": 1676891400738,
+            "executionTime": 815,
             "source": [
               {
                 "previousNode": "Dropbox10"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -493,13 +509,14 @@
         ],
         "Dropbox9": [
           {
-            "startTime": 1676027865807,
-            "executionTime": 736,
+            "startTime": 1676891401560,
+            "executionTime": 570,
             "source": [
               {
                 "previousNode": "Sleep 0.8 seconds5"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -513,13 +530,14 @@
         ],
         "Sleep 0.8 seconds4": [
           {
-            "startTime": 1676027866543,
-            "executionTime": 807,
+            "startTime": 1676891402130,
+            "executionTime": 809,
             "source": [
               {
                 "previousNode": "Dropbox9"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -537,13 +555,14 @@
         ],
         "Dropbox11": [
           {
-            "startTime": 1676027867350,
-            "executionTime": 1238,
+            "startTime": 1676891402941,
+            "executionTime": 1176,
             "source": [
               {
                 "previousNode": "Sleep 0.8 seconds4"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -573,7 +592,8 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2023-02-10T11:17:30.400Z",
-  "stoppedAt": "2023-02-10T11:17:48.589Z",
+  "startedAt": "2023-02-20T11:09:45.762Z",
+  "stoppedAt": "2023-02-20T11:10:04.117Z",
+  "status": "running",
   "finished": true
 }

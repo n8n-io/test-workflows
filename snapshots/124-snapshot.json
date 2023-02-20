@@ -5,9 +5,10 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1676027878958,
+            "startTime": 1676891407793,
             "executionTime": 0,
             "source": [],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -24,20 +25,21 @@
         ],
         "Set": [
           {
-            "startTime": 1676027878959,
-            "executionTime": 32,
+            "startTime": 1676891407794,
+            "executionTime": 100,
             "source": [
               {
                 "previousNode": "Start"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": 790,
-                      "name": "Name1676027878991"
+                      "id": 545,
+                      "name": "Name1676891407894"
                     },
                     "pairedItem": {
                       "item": 0
@@ -50,20 +52,21 @@
         ],
         "QuestDB": [
           {
-            "startTime": 1676027878991,
-            "executionTime": 185,
+            "startTime": 1676891407894,
+            "executionTime": 172,
             "source": [
               {
                 "previousNode": "Set"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": 790,
-                      "name": "Name1676027878991"
+                      "id": 545,
+                      "name": "Name1676891407894"
                     },
                     "pairedItem": {
                       "item": 0
@@ -76,20 +79,21 @@
         ],
         "QuestDB1": [
           {
-            "startTime": 1676027879176,
-            "executionTime": 128,
+            "startTime": 1676891408068,
+            "executionTime": 123,
             "source": [
               {
                 "previousNode": "QuestDB"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "id": 790,
-                      "name": "Name1676027878991"
+                      "id": 545,
+                      "name": "Name1676891407894"
                     },
                     "pairedItem": {
                       "item": 0
@@ -102,13 +106,14 @@
         ],
         "QuestDB2": [
           {
-            "startTime": 1676027879304,
-            "executionTime": 122,
+            "startTime": 1676891408192,
+            "executionTime": 119,
             "source": [
               {
                 "previousNode": "QuestDB1"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 []
@@ -127,7 +132,8 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2023-02-10T11:17:58.956Z",
-  "stoppedAt": "2023-02-10T11:17:59.426Z",
+  "startedAt": "2023-02-20T11:10:07.791Z",
+  "stoppedAt": "2023-02-20T11:10:08.312Z",
+  "status": "running",
   "finished": true
 }

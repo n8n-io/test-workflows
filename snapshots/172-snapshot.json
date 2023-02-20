@@ -5,9 +5,10 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1676027890097,
-            "executionTime": 0,
+            "startTime": 1676891417018,
+            "executionTime": 1,
             "source": [],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -24,13 +25,14 @@
         ],
         "PayPal": [
           {
-            "startTime": 1676027890098,
-            "executionTime": 1139,
+            "startTime": 1676891417019,
+            "executionTime": 771,
             "source": [
               {
                 "previousNode": "Start"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
@@ -54,24 +56,25 @@
         ],
         "PayPal1": [
           {
-            "startTime": 1676027891238,
-            "executionTime": 536,
+            "startTime": 1676891417790,
+            "executionTime": 537,
             "source": [
               {
                 "previousNode": "PayPal"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "payout_item_id": "8QL68ZQ7N6NR2",
+                      "payout_item_id": "VE2QUHHWA949Y",
                       "transaction_status": "PENDING",
                       "payout_item_fee": {
                         "object": true
                       },
-                      "payout_batch_id": "G7X72TN5ME5XC",
+                      "payout_batch_id": "KHWGKJTUEZ67E",
                       "payout_item": {
                         "object": true
                       },
@@ -90,25 +93,26 @@
         ],
         "PayPal2": [
           {
-            "startTime": 1676027891774,
-            "executionTime": 517,
+            "startTime": 1676891418328,
+            "executionTime": 551,
             "source": [
               {
                 "previousNode": "PayPal1"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "payout_item_id": "8QL68ZQ7N6NR2",
+                      "payout_item_id": "VE2QUHHWA949Y",
                       "transaction_status": "PENDING",
                       "payout_item_fee": {
                         "object": true
                       },
-                      "payout_batch_id": "G7X72TN5ME5XC",
-                      "sender_batch_id": "1676027890123",
+                      "payout_batch_id": "KHWGKJTUEZ67E",
+                      "sender_batch_id": "1676891417049",
                       "payout_item": {
                         "object": true
                       },
@@ -127,25 +131,26 @@
         ],
         "PayPal3": [
           {
-            "startTime": 1676027892291,
+            "startTime": 1676891418879,
             "executionTime": 0,
             "source": [
               {
                 "previousNode": "PayPal2"
               }
             ],
+            "executionStatus": "success",
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "payout_item_id": "8QL68ZQ7N6NR2",
+                      "payout_item_id": "VE2QUHHWA949Y",
                       "transaction_status": "PENDING",
                       "payout_item_fee": {
                         "object": true
                       },
-                      "payout_batch_id": "G7X72TN5ME5XC",
-                      "sender_batch_id": "1676027890123",
+                      "payout_batch_id": "KHWGKJTUEZ67E",
+                      "sender_batch_id": "1676891417049",
                       "payout_item": {
                         "object": true
                       },
@@ -173,7 +178,8 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2023-02-10T11:18:10.095Z",
-  "stoppedAt": "2023-02-10T11:18:12.292Z",
+  "startedAt": "2023-02-20T11:10:17.017Z",
+  "stoppedAt": "2023-02-20T11:10:18.879Z",
+  "status": "running",
   "finished": true
 }
