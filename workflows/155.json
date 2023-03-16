@@ -1,5 +1,7 @@
 {
-  "id": 155,
+  "createdAt": "2021-03-25T10:06:21.916Z",
+  "updatedAt": "2023-03-16T11:39:51.000Z",
+  "id": "155",
   "name": "AWSS3:Bucket:create getAll search:File:upload getAll download delete:Folder:create getAll delete",
   "active": false,
   "nodes": [
@@ -11,7 +13,8 @@
       "position": [
         250,
         300
-      ]
+      ],
+      "id": "d1457491-53e0-46a5-b33d-f950be72cd4d"
     },
     {
       "parameters": {
@@ -26,8 +29,12 @@
         600,
         300
       ],
+      "id": "07bca9de-36b9-4dcb-b61e-7fe54ac44273",
       "credentials": {
-        "aws": "AWS creds"
+        "aws": {
+          "id": "124",
+          "name": "AWS creds"
+        }
       }
     },
     {
@@ -49,7 +56,8 @@
       "position": [
         450,
         300
-      ]
+      ],
+      "id": "cc6144f2-31e2-47ff-bcb3-92d1c61d07fe"
     },
     {
       "parameters": {
@@ -64,8 +72,12 @@
         750,
         300
       ],
+      "id": "d500a6b2-04ba-4786-bd4e-ab0432456caa",
       "credentials": {
-        "aws": "AWS creds"
+        "aws": {
+          "id": "124",
+          "name": "AWS creds"
+        }
       }
     },
     {
@@ -83,8 +95,12 @@
         1650,
         310
       ],
+      "id": "ae1381cd-181d-41d4-a058-a276b9a860bc",
       "credentials": {
-        "aws": "AWS creds"
+        "aws": {
+          "id": "124",
+          "name": "AWS creds"
+        }
       }
     },
     {
@@ -101,8 +117,12 @@
         1050,
         400
       ],
+      "id": "1ae1e324-2cbd-460b-ae07-45d76283b3de",
       "credentials": {
-        "aws": "AWS creds"
+        "aws": {
+          "id": "124",
+          "name": "AWS creds"
+        }
       }
     },
     {
@@ -115,7 +135,8 @@
       "position": [
         900,
         400
-      ]
+      ],
+      "id": "07cbc362-2f04-49d7-bfe7-f6dc1449e633"
     },
     {
       "parameters": {
@@ -131,8 +152,12 @@
         1200,
         400
       ],
+      "id": "6409d30f-f301-4455-915f-dca4ba380abd",
       "credentials": {
-        "aws": "AWS creds"
+        "aws": {
+          "id": "124",
+          "name": "AWS creds"
+        }
       }
     },
     {
@@ -147,8 +172,12 @@
         1350,
         400
       ],
+      "id": "c92b350b-d8ca-434a-8c46-8f2af62100f4",
       "credentials": {
-        "aws": "AWS creds"
+        "aws": {
+          "id": "124",
+          "name": "AWS creds"
+        }
       }
     },
     {
@@ -165,8 +194,12 @@
         1500,
         400
       ],
+      "id": "f2d2014a-1b8a-4d40-88ea-c4033cc9cfcb",
       "credentials": {
-        "aws": "AWS creds"
+        "aws": {
+          "id": "124",
+          "name": "AWS creds"
+        }
       },
       "disabled": true
     },
@@ -184,8 +217,12 @@
         1800,
         400
       ],
+      "id": "844d7a3e-3e56-4111-9667-f985f4ef3cfc",
       "credentials": {
-        "aws": "AWS creds"
+        "aws": {
+          "id": "124",
+          "name": "AWS creds"
+        }
       }
     },
     {
@@ -202,8 +239,12 @@
         900,
         150
       ],
+      "id": "2ede20ee-72aa-431a-bea6-b5831f4df5ae",
       "credentials": {
-        "aws": "AWS creds"
+        "aws": {
+          "id": "124",
+          "name": "AWS creds"
+        }
       }
     },
     {
@@ -221,8 +262,12 @@
         1050,
         150
       ],
+      "id": "6ec127d1-bb69-4d7d-9fcf-1ff928ae6b32",
       "credentials": {
-        "aws": "AWS creds"
+        "aws": {
+          "id": "124",
+          "name": "AWS creds"
+        }
       }
     },
     {
@@ -239,8 +284,12 @@
         1200,
         150
       ],
+      "id": "2697e526-d402-4d6b-8e87-6bd52cc39183",
       "credentials": {
-        "aws": "AWS creds"
+        "aws": {
+          "id": "124",
+          "name": "AWS creds"
+        }
       }
     },
     {
@@ -262,7 +311,29 @@
       "position": [
         750,
         150
-      ]
+      ],
+      "id": "a2c96217-5106-46a3-bbf9-ed8fb0062592"
+    },
+    {
+      "parameters": {
+        "resource": "bucket",
+        "operation": "delete",
+        "name": "={{$node[\"Set\"].json[\"bucketName\"]}}"
+      },
+      "id": "afab353f-4e1a-437b-9351-1fd786ededcc",
+      "name": "AWS S31",
+      "type": "n8n-nodes-base.awsS3",
+      "typeVersion": 1,
+      "position": [
+        1980,
+        400
+      ],
+      "credentials": {
+        "aws": {
+          "id": "124",
+          "name": "AWS creds"
+        }
+      }
     }
   ],
   "connections": {
@@ -413,10 +484,28 @@
           }
         ]
       ]
+    },
+    "AWS S10": {
+      "main": [
+        []
+      ]
+    },
+    "AWS S7": {
+      "main": [
+        [
+          {
+            "node": "AWS S31",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
-  "createdAt": "2021-03-25T10:06:21.916Z",
-  "updatedAt": "2021-03-25T10:38:29.121Z",
   "settings": {},
-  "staticData": null
+  "staticData": null,
+  "pinData": {},
+  "versionId": "75e8472d-f6c4-41de-9cc8-021c88f2e070",
+  "triggerCount": 0,
+  "tags": []
 }
