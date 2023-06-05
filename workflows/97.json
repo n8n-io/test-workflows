@@ -1,4 +1,7 @@
 {
+  "meta": {
+    "instanceId": "8e9416f42a954d0a370d988ac3c0f916f44074a6e45189164b1a8559394a7516"
+  },
   "id": 97,
   "name": "Crypto",
   "active": false,
@@ -9,9 +12,10 @@
       "type": "n8n-nodes-base.start",
       "typeVersion": 1,
       "position": [
-        270,
-        340
-      ]
+        890,
+        950
+      ],
+      "id": "17f0290e-2fc4-4bb8-a8fe-da8b0ad82d11"
     },
     {
       "parameters": {
@@ -22,9 +26,10 @@
       "type": "n8n-nodes-base.crypto",
       "typeVersion": 1,
       "position": [
-        650,
-        170
-      ]
+        1270,
+        780
+      ],
+      "id": "876c1fc1-5c0f-4c34-90ce-40447c668dfe"
     },
     {
       "parameters": {
@@ -35,9 +40,10 @@
       "type": "n8n-nodes-base.crypto",
       "typeVersion": 1,
       "position": [
-        800,
-        170
-      ]
+        1420,
+        780
+      ],
+      "id": "b4b4b61a-f90f-483a-b358-4d7288616161"
     },
     {
       "parameters": {
@@ -48,9 +54,10 @@
       "type": "n8n-nodes-base.crypto",
       "typeVersion": 1,
       "position": [
-        950,
-        170
-      ]
+        1570,
+        780
+      ],
+      "id": "9a72c6f0-ebff-4458-a5d8-06109e929fa8"
     },
     {
       "parameters": {
@@ -60,10 +67,11 @@
       "type": "n8n-nodes-base.function",
       "typeVersion": 1,
       "position": [
-        1150,
-        170
+        1770,
+        780
       ],
       "notesInFlow": true,
+      "id": "ff598e5f-ec1c-48d4-9931-2499cb259c56",
       "notes": "Verify hash values"
     },
     {
@@ -74,9 +82,10 @@
       "type": "n8n-nodes-base.crypto",
       "typeVersion": 1,
       "position": [
-        500,
-        170
-      ]
+        1120,
+        780
+      ],
+      "id": "63d99c49-73e9-4bf8-9d09-17ea120be6bc"
     },
     {
       "parameters": {
@@ -88,9 +97,10 @@
       "type": "n8n-nodes-base.crypto",
       "typeVersion": 1,
       "position": [
-        500,
-        320
-      ]
+        1120,
+        930
+      ],
+      "id": "e0ff879e-d6f9-4c46-8254-06f31b89f81c"
     },
     {
       "parameters": {
@@ -103,9 +113,10 @@
       "type": "n8n-nodes-base.crypto",
       "typeVersion": 1,
       "position": [
-        650,
-        320
-      ]
+        1270,
+        930
+      ],
+      "id": "0937aebb-df0e-4f85-90be-ba134eb6020f"
     },
     {
       "parameters": {
@@ -118,9 +129,10 @@
       "type": "n8n-nodes-base.crypto",
       "typeVersion": 1,
       "position": [
-        800,
-        320
-      ]
+        1420,
+        930
+      ],
+      "id": "d7704e57-dfd7-4a6d-b36a-d701814d77c4"
     },
     {
       "parameters": {
@@ -133,9 +145,10 @@
       "type": "n8n-nodes-base.crypto",
       "typeVersion": 1,
       "position": [
-        950,
-        320
-      ]
+        1570,
+        930
+      ],
+      "id": "b370c301-3a27-422d-a1c1-0eb459376680"
     },
     {
       "parameters": {
@@ -145,27 +158,12 @@
       "type": "n8n-nodes-base.function",
       "typeVersion": 1,
       "position": [
-        1150,
-        320
+        1770,
+        930
       ],
       "notesInFlow": true,
+      "id": "c5800166-d370-4fd3-9afe-77f6f13f57a4",
       "notes": "Verify hmac values"
-    },
-    {
-      "parameters": {
-        "action": "sign",
-        "value": "n8n",
-        "algorithm": "md4",
-        "privateKey": "-----BEGIN RSA PRIVATE KEY-----\nMIICXAIBAAKBgQDuY4lRGHHAW9mXYY57m/CUzM4zqQ1e0W9D3e76YpipgF6rWtUn\nS8aSD+DxGxp4MldazZTwPPcpJHcV/Hr3A/KezsY9aOpXdnUdquV85969OgyGCRJk\nBv2gowSGfy4ueomfm4PFTPF0anPir+X1IZzAyzO6igL5ZE0Y5rcVrOgLKwIDAQAB\nAoGARfQ4he8d5jwt0HHkzVoX0Zp+AgPgNAxSUcCNEbWgJdFRNoh7l0HxvcfiEu6I\nqG/hWXiNdaf2QYD9XxrNfLIQXj+2MVOh4wpeqbO1DlqiGa9J8y7rLOVO+64ODXGt\nbZns6kcWLx8gYnhwqIJHnqfzvAsFjEKuKiSxpyeK8EvjDW0CQQD91J9DzhSXyvwE\nNaZT4Y9BcEbazVv+xUVhkSs7WRWStimeb57eIrIcXPE9heiT+6QpAnm6EZQR7RWN\n48PiAfbnAkEA8G0gwMWsnpmtb9VbF2uuQxs4Bw5Nuzb6l/+0zTqMELSVCaHIGnxk\nkV08NHfnck1jp1RU9MiUFI1yfRrN6vz1HQJBAMWQ8w3Rn1Gumo2kPHvZeqlSfLPd\nV5drcF9KoL2mzxXMV4SMGLmJg9xzswlR6v8TxGhvFtPuzrNNN5OjDlohcU0CQBOC\nZ3P9FmLQSZiXkYq2/C8J2GQKLxiP/4myADPfGlqIrMdZT2mGyopZLHd9e1R1Hy8G\n0tYCKLH6QF4SfL8iw6kCQCV81eZ/3JthrEfsIMv9lxvTLaRrprI5Eei8Rl+cFhNH\nziv/tOUxppOn1SkHvxXni5F5dbNR9u4mjaCLDau+qIg=\n-----END RSA PRIVATE KEY-----"
-      },
-      "name": "Crypto8",
-      "type": "n8n-nodes-base.crypto",
-      "typeVersion": 1,
-      "position": [
-        500,
-        470
-      ],
-      "alwaysOutputData": true
     },
     {
       "parameters": {
@@ -178,10 +176,11 @@
       "type": "n8n-nodes-base.crypto",
       "typeVersion": 1,
       "position": [
-        650,
-        470
+        1120,
+        1100
       ],
-      "alwaysOutputData": true
+      "alwaysOutputData": true,
+      "id": "be07fbf1-33f9-4907-b3ce-aa838b89143d"
     },
     {
       "parameters": {
@@ -194,10 +193,11 @@
       "type": "n8n-nodes-base.crypto",
       "typeVersion": 1,
       "position": [
-        800,
-        470
+        1280,
+        1120
       ],
-      "alwaysOutputData": true
+      "alwaysOutputData": true,
+      "id": "a82e7d4c-9c07-4611-bb90-7d2ae3bde82e"
     },
     {
       "parameters": {
@@ -210,10 +210,11 @@
       "type": "n8n-nodes-base.crypto",
       "typeVersion": 1,
       "position": [
-        950,
-        470
+        1440,
+        1120
       ],
-      "alwaysOutputData": true
+      "alwaysOutputData": true,
+      "id": "298e84b6-1406-4456-8262-3ceb28c9b373"
     },
     {
       "parameters": {
@@ -226,10 +227,11 @@
       "type": "n8n-nodes-base.crypto",
       "typeVersion": 1,
       "position": [
-        1100,
-        470
+        1600,
+        1120
       ],
-      "alwaysOutputData": true
+      "alwaysOutputData": true,
+      "id": "72f32f8a-6735-433b-a56f-ad48d5a0ca3d"
     },
     {
       "parameters": {
@@ -242,10 +244,11 @@
       "type": "n8n-nodes-base.crypto",
       "typeVersion": 1,
       "position": [
-        1250,
-        470
+        1760,
+        1120
       ],
-      "alwaysOutputData": true
+      "alwaysOutputData": true,
+      "id": "59290356-46a4-4f70-ba49-ba22793ac41d"
     },
     {
       "parameters": {
@@ -258,10 +261,11 @@
       "type": "n8n-nodes-base.crypto",
       "typeVersion": 1,
       "position": [
-        1400,
-        470
+        1920,
+        1120
       ],
-      "alwaysOutputData": true
+      "alwaysOutputData": true,
+      "id": "b71681ba-52a7-42ed-ae6d-dad6478a8ad2"
     },
     {
       "parameters": {
@@ -274,10 +278,11 @@
       "type": "n8n-nodes-base.crypto",
       "typeVersion": 1,
       "position": [
-        1550,
-        470
+        2060,
+        1120
       ],
-      "alwaysOutputData": true
+      "alwaysOutputData": true,
+      "id": "4addd1e8-0932-4e9e-8228-7ae77f1a4868"
     },
     {
       "parameters": {
@@ -290,24 +295,26 @@
       "type": "n8n-nodes-base.crypto",
       "typeVersion": 1,
       "position": [
-        1700,
-        470
+        2200,
+        1120
       ],
-      "alwaysOutputData": true
+      "alwaysOutputData": true,
+      "id": "a0baa182-3162-47d4-85b7-72ffd9ebb302"
     },
     {
       "parameters": {
-        "functionCode": "testData = [\n  '7a6a3a4e1207925bb77e2e5f4965c3a0de3dd6cab38b5f2d84526fe0c4bcffb1c037d7c00833e59c3c306cb0b8d21f00047f9aaf875a9098fe304bbda44440d453c6d99a19dad683b5767d7610e3e43ea7f8a5deddc30286397933ab77a7f85b64ead86b0783c7304c11a74cab2b19a4154f3635fa17fa74343a7c044b6e4572',\n  '9d0bc120a967882743370f715dfa90789c4d9322a4faf691d1f80b306c6bd900bfcba5f62946ef88ba7e1fdd008ff3efe8545b979299b14e0e0eccd3e33b1afa11397494526e31968f13d2ac3e3deaa2bc4a27862b7025444c91ebed5f1b98d2c0390630d8eabc6a7662a9ab069cb3aab273ae1c09f20f51fa8e04af4bcccbc6',\n  '569983d257842de8cf0c151d09ba5209400dd6313c2fca43d2192d80ace0e77f6bce31e5a657306a6ff10635eb9c5a46bbe8c3cabfdddedd44a2739a4dbac5f7c63c124cdb57e3b740d106ea4ce0c2b5454bb9d24a252950fb111b470047a3e6693220fafaf7fe0c9262c06c7f76838b5aa9ba624aba5f0e1ea40f996ac7c570',\n  '0b494c8146f7efd7aa53b418a7057a3a57317a0380c06c7d18114077a03fc6441b57ca8c03edff4ca6fdc2394d026893258b97d34bf0c5c44bc20bd264899eb1316da1e624db1455c73c9054ff732464f775b473b3ba67250ffd74ee42b1acfdf5539bf793d7002327d8d156424444624a625f8dd3f013d40a7ba7b6726186a9',\n  '0b494c8146f7efd7aa53b418a7057a3a57317a0380c06c7d18114077a03fc6441b57ca8c03edff4ca6fdc2394d026893258b97d34bf0c5c44bc20bd264899eb1316da1e624db1455c73c9054ff732464f775b473b3ba67250ffd74ee42b1acfdf5539bf793d7002327d8d156424444624a625f8dd3f013d40a7ba7b6726186a9',\n  '0b494c8146f7efd7aa53b418a7057a3a57317a0380c06c7d18114077a03fc6441b57ca8c03edff4ca6fdc2394d026893258b97d34bf0c5c44bc20bd264899eb1316da1e624db1455c73c9054ff732464f775b473b3ba67250ffd74ee42b1acfdf5539bf793d7002327d8d156424444624a625f8dd3f013d40a7ba7b6726186a9',\n  'b9d0c7c4acb8ef55b5c323f82755fb420e5145bafe4de34925e86c53c9f652eb08ec0d87a9be95ca0c0d90b16dd1b55f1200d87c13e4cdb1ae902f41998314f7b85ffc82f0f1d5296119bd92e23ae685b8b59a3a4ba4b8d54db2314c077b1b238c4ac582e36b51c18c0b5474f0d68c1f42e01c08985111ded4cfd3463068d89a',\n  '1387958052cf887bd50925a8d44bbf8f138cdd23f51a3422028edf39ad413a1591f5ebd653c4f225298cd6857044648bcfb768113674e7bd11c632fb0fc40cfa646301934b8fcf4da9799272a737155a239e1f8db5e92a23bfa2aeabc6732f5be14078a5815fff542842efed681ac3b919f9d42bfc822b0fd611c0b22286f241',\n  '922659a8d40b12f81080425a8676830be06f26dd8cd18cad25d02055332c94b8b9634598ef5b172ee53e53788d33c183bf0984ae3b48d792f426a601dbf2eb4771bc844bc2464de8ca5b6746bbdc2f1713a1e1d57a6970568f033e588c759e4b179b791b7fcb75d323c98cc5c6f33c3659410b159c94bc13834e81ce297ce98d'\n]\n\nfor(let i=8;i<17;i++){\n  if($node[`Crypto${i}`].json['data'] !== testData[i-8]){\n    throw new Error(`Error in Hmac: ${$node[`Crypto${i}`].parameter[\"algorithm\"]} operation (node:Crypto${i})`);\n  }\n}\nreturn items;"
+        "functionCode": "testData = [\n  '9d0bc120a967882743370f715dfa90789c4d9322a4faf691d1f80b306c6bd900bfcba5f62946ef88ba7e1fdd008ff3efe8545b979299b14e0e0eccd3e33b1afa11397494526e31968f13d2ac3e3deaa2bc4a27862b7025444c91ebed5f1b98d2c0390630d8eabc6a7662a9ab069cb3aab273ae1c09f20f51fa8e04af4bcccbc6',\n  '569983d257842de8cf0c151d09ba5209400dd6313c2fca43d2192d80ace0e77f6bce31e5a657306a6ff10635eb9c5a46bbe8c3cabfdddedd44a2739a4dbac5f7c63c124cdb57e3b740d106ea4ce0c2b5454bb9d24a252950fb111b470047a3e6693220fafaf7fe0c9262c06c7f76838b5aa9ba624aba5f0e1ea40f996ac7c570',\n  '0b494c8146f7efd7aa53b418a7057a3a57317a0380c06c7d18114077a03fc6441b57ca8c03edff4ca6fdc2394d026893258b97d34bf0c5c44bc20bd264899eb1316da1e624db1455c73c9054ff732464f775b473b3ba67250ffd74ee42b1acfdf5539bf793d7002327d8d156424444624a625f8dd3f013d40a7ba7b6726186a9',\n  '0b494c8146f7efd7aa53b418a7057a3a57317a0380c06c7d18114077a03fc6441b57ca8c03edff4ca6fdc2394d026893258b97d34bf0c5c44bc20bd264899eb1316da1e624db1455c73c9054ff732464f775b473b3ba67250ffd74ee42b1acfdf5539bf793d7002327d8d156424444624a625f8dd3f013d40a7ba7b6726186a9',\n  '0b494c8146f7efd7aa53b418a7057a3a57317a0380c06c7d18114077a03fc6441b57ca8c03edff4ca6fdc2394d026893258b97d34bf0c5c44bc20bd264899eb1316da1e624db1455c73c9054ff732464f775b473b3ba67250ffd74ee42b1acfdf5539bf793d7002327d8d156424444624a625f8dd3f013d40a7ba7b6726186a9',\n  'b9d0c7c4acb8ef55b5c323f82755fb420e5145bafe4de34925e86c53c9f652eb08ec0d87a9be95ca0c0d90b16dd1b55f1200d87c13e4cdb1ae902f41998314f7b85ffc82f0f1d5296119bd92e23ae685b8b59a3a4ba4b8d54db2314c077b1b238c4ac582e36b51c18c0b5474f0d68c1f42e01c08985111ded4cfd3463068d89a',\n  '1387958052cf887bd50925a8d44bbf8f138cdd23f51a3422028edf39ad413a1591f5ebd653c4f225298cd6857044648bcfb768113674e7bd11c632fb0fc40cfa646301934b8fcf4da9799272a737155a239e1f8db5e92a23bfa2aeabc6732f5be14078a5815fff542842efed681ac3b919f9d42bfc822b0fd611c0b22286f241',\n  '922659a8d40b12f81080425a8676830be06f26dd8cd18cad25d02055332c94b8b9634598ef5b172ee53e53788d33c183bf0984ae3b48d792f426a601dbf2eb4771bc844bc2464de8ca5b6746bbdc2f1713a1e1d57a6970568f033e588c759e4b179b791b7fcb75d323c98cc5c6f33c3659410b159c94bc13834e81ce297ce98d'\n]\n\nfor(let i=9;i<17;i++){\n  if($node[`Crypto${i}`].json['data'] !== testData[i-9]){\n    throw new Error(`Error in Hmac: ${$node[`Crypto${i}`].parameter[\"algorithm\"]} operation (node:Crypto${i})`);\n  }\n}\nreturn items;"
       },
       "name": "Function2",
       "type": "n8n-nodes-base.function",
       "typeVersion": 1,
       "position": [
-        1840,
-        470
+        2360,
+        1120
       ],
       "alwaysOutputData": true,
       "notesInFlow": true,
+      "id": "10844eb6-b5dd-465b-830f-d71aab84e477",
       "notes": "Verify signing values"
     }
   ],
@@ -326,7 +333,7 @@
             "index": 0
           },
           {
-            "node": "Crypto8",
+            "node": "Crypto9",
             "type": "main",
             "index": 0
           }
@@ -421,17 +428,6 @@
         ]
       ]
     },
-    "Crypto8": {
-      "main": [
-        [
-          {
-            "node": "Crypto9",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
     "Crypto9": {
       "main": [
         [
@@ -520,9 +516,5 @@
         ]
       ]
     }
-  },
-  "createdAt": "2021-03-03T15:46:22.970Z",
-  "updatedAt": "2021-03-26T10:25:41.082Z",
-  "settings": {},
-  "staticData": null
+  }
 }
