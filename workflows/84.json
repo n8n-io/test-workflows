@@ -56,7 +56,7 @@
       "typeVersion": 1,
       "position": [
         1000,
-        300
+        200
       ],
       "alwaysOutputData": true,
       "credentials": {
@@ -75,8 +75,8 @@
       "type": "n8n-nodes-base.matrix",
       "typeVersion": 1,
       "position": [
-        1150,
-        300
+        1200,
+        200
       ],
       "alwaysOutputData": true,
       "credentials": {
@@ -93,8 +93,8 @@
       "type": "n8n-nodes-base.matrix",
       "typeVersion": 1,
       "position": [
-        1300,
-        300
+        1440,
+        420
       ],
       "alwaysOutputData": true,
       "credentials": {
@@ -111,8 +111,8 @@
       "type": "n8n-nodes-base.matrix",
       "typeVersion": 1,
       "position": [
-        600,
-        350
+        700,
+        420
       ],
       "alwaysOutputData": true,
       "credentials": {
@@ -147,7 +147,7 @@
       "type": "n8n-nodes-base.matrix",
       "typeVersion": 1,
       "position": [
-        750,
+        800,
         200
       ],
       "alwaysOutputData": true,
@@ -164,8 +164,8 @@
       "type": "n8n-nodes-base.matrix",
       "typeVersion": 1,
       "position": [
-        750,
-        500
+        820,
+        620
       ],
       "alwaysOutputData": true,
       "credentials": {
@@ -181,7 +181,7 @@
       "typeVersion": 1,
       "position": [
         600,
-        500
+        620
       ]
     },
     {
@@ -194,13 +194,25 @@
       "type": "n8n-nodes-base.matrix",
       "typeVersion": 1,
       "position": [
-        900,
-        550
+        1020,
+        620
       ],
       "alwaysOutputData": true,
       "credentials": {
         "matrixApi": "Matrix creds"
       }
+    },
+    {
+      "parameters": {
+        "mode": "chooseBranch"
+      },
+      "name": "Merge",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 2.1,
+      "position": [
+        1240,
+        420
+      ]
     }
   ],
   "connections": {
@@ -240,7 +252,7 @@
       "main": [
         [
           {
-            "node": "Matrix4",
+            "node": "Merge",
             "type": "main",
             "index": 0
           }
@@ -301,6 +313,38 @@
           },
           {
             "node": "Matrix",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Matrix5": {
+      "main": [
+        []
+      ]
+    },
+    "Matrix9": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Matrix4": {
+      "main": [
+        []
+      ]
+    },
+    "Merge": {
+      "main": [
+        [
+          {
+            "node": "Matrix4",
             "type": "main",
             "index": 0
           }

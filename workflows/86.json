@@ -41,8 +41,8 @@
       "type": "n8n-nodes-base.activeCampaign",
       "typeVersion": 1,
       "position": [
-        2100,
-        270
+        1860,
+        420
       ],
       "credentials": {
         "activeCampaignApi": "ActiveCampaign creds"
@@ -57,8 +57,8 @@
       "type": "n8n-nodes-base.activeCampaign",
       "typeVersion": 1,
       "position": [
-        2250,
-        270
+        2060,
+        420
       ],
       "credentials": {
         "activeCampaignApi": "ActiveCampaign creds"
@@ -74,8 +74,8 @@
       "type": "n8n-nodes-base.activeCampaign",
       "typeVersion": 1,
       "position": [
-        2400,
-        270
+        2240,
+        420
       ],
       "credentials": {
         "activeCampaignApi": "ActiveCampaign creds"
@@ -90,8 +90,8 @@
       "type": "n8n-nodes-base.activeCampaign",
       "typeVersion": 1,
       "position": [
-        2550,
-        270
+        2700,
+        580
       ],
       "credentials": {
         "activeCampaignApi": "ActiveCampaign creds"
@@ -108,7 +108,7 @@
       "typeVersion": 1,
       "position": [
         1800,
-        360
+        600
       ],
       "credentials": {
         "activeCampaignApi": "ActiveCampaign creds"
@@ -125,8 +125,8 @@
       "type": "n8n-nodes-base.activeCampaign",
       "typeVersion": 1,
       "position": [
-        1950,
-        360
+        2040,
+        600
       ],
       "credentials": {
         "activeCampaignApi": "ActiveCampaign creds"
@@ -309,6 +309,18 @@
       "credentials": {
         "activeCampaignApi": "ActiveCampaign creds"
       }
+    },
+    {
+      "parameters": {
+        "mode": "chooseBranch"
+      },
+      "name": "Merge",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 2.1,
+      "position": [
+        2480,
+        580
+      ]
     }
   ],
   "connections": {
@@ -349,7 +361,7 @@
       "main": [
         [
           {
-            "node": "ActiveCampaign4",
+            "node": "Merge",
             "type": "main",
             "index": 0
           }
@@ -487,6 +499,28 @@
           },
           {
             "node": "ActiveCampaign7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ActiveCampaign6": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Merge": {
+      "main": [
+        [
+          {
+            "node": "ActiveCampaign4",
             "type": "main",
             "index": 0
           }
