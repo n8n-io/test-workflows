@@ -1,0 +1,70 @@
+{
+  "data": {
+    "startData": {},
+    "resultData": {
+      "runData": {
+        "When clicking \"Execute Workflow\"": [
+          {
+            "startTime": 1699971404890,
+            "executionTime": 0,
+            "source": [],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "VirusTotal HTTP Request": [
+          {
+            "startTime": 1699971404890,
+            "executionTime": 876,
+            "source": [
+              {
+                "previousNode": "When clicking \"Execute Workflow\""
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "data": [
+                        "json array"
+                      ]
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      "lastNodeExecuted": "VirusTotal HTTP Request"
+    },
+    "executionData": {
+      "contextData": {},
+      "nodeExecutionStack": [],
+      "metadata": {},
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
+    }
+  },
+  "mode": "cli",
+  "startedAt": "2023-11-14T14:16:44.879Z",
+  "stoppedAt": "2023-11-14T14:16:45.767Z",
+  "status": "running",
+  "finished": true
+}
