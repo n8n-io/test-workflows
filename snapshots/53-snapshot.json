@@ -5,8 +5,8 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1676891393345,
-            "executionTime": 3,
+            "startTime": 1706635234951,
+            "executionTime": 1,
             "source": [],
             "executionStatus": "success",
             "data": {
@@ -25,8 +25,8 @@
         ],
         "ConvertKit": [
           {
-            "startTime": 1676891393349,
-            "executionTime": 640,
+            "startTime": 1706635234952,
+            "executionTime": 617,
             "source": [
               {
                 "previousNode": "Start"
@@ -38,10 +38,10 @@
                 [
                   {
                     "json": {
-                      "id": 373610,
-                      "name": "ck_field_373610_testfield0021328349420845383",
-                      "key": "testfield0_021328349420845383",
-                      "label": "testField0.021328349420845383"
+                      "id": 495826,
+                      "name": "ck_field_495826_testfield06587424230222096",
+                      "key": "testfield0_6587424230222096",
+                      "label": "testField0.6587424230222096"
                     },
                     "pairedItem": {
                       "item": 0
@@ -54,8 +54,8 @@
         ],
         "ConvertKit4": [
           {
-            "startTime": 1676891393990,
-            "executionTime": 416,
+            "startTime": 1706635235569,
+            "executionTime": 204,
             "source": [
               {
                 "previousNode": "Start"
@@ -88,8 +88,8 @@
         ],
         "ConvertKit1": [
           {
-            "startTime": 1676891394406,
-            "executionTime": 386,
+            "startTime": 1706635235774,
+            "executionTime": 146,
             "source": [
               {
                 "previousNode": "ConvertKit"
@@ -117,8 +117,8 @@
         ],
         "ConvertKit5": [
           {
-            "startTime": 1676891394792,
-            "executionTime": 555,
+            "startTime": 1706635235920,
+            "executionTime": 626,
             "source": [
               {
                 "previousNode": "ConvertKit4"
@@ -130,9 +130,9 @@
                 [
                   {
                     "json": {
-                      "id": 5668596614,
+                      "id": 7475082589,
                       "state": "inactive",
-                      "created_at": "2023-02-20T11:09:55.000Z",
+                      "created_at": "2024-01-30T17:20:36.000Z",
                       "source": "API::V3::SubscriptionsController (external)",
                       "referrer": {
                         "object": true
@@ -154,8 +154,8 @@
         ],
         "ConvertKit2": [
           {
-            "startTime": 1676891395347,
-            "executionTime": 372,
+            "startTime": 1706635236546,
+            "executionTime": 226,
             "source": [
               {
                 "previousNode": "ConvertKit1"
@@ -180,8 +180,8 @@
         ],
         "ConvertKit7": [
           {
-            "startTime": 1676891395719,
-            "executionTime": 374,
+            "startTime": 1706635236773,
+            "executionTime": 204,
             "source": [
               {
                 "previousNode": "ConvertKit5"
@@ -193,9 +193,9 @@
                 [
                   {
                     "json": {
-                      "id": 3657804,
-                      "name": "tag1676891395719",
-                      "created_at": "2023-02-20T11:09:56.000Z"
+                      "id": 4477426,
+                      "name": "tag1706635236774",
+                      "created_at": "2024-01-30T17:20:36.000Z"
                     },
                     "pairedItem": {
                       "item": 0
@@ -208,8 +208,8 @@
         ],
         "ConvertKit3": [
           {
-            "startTime": 1676891396094,
-            "executionTime": 492,
+            "startTime": 1706635236978,
+            "executionTime": 172,
             "source": [
               {
                 "previousNode": "ConvertKit2"
@@ -231,8 +231,8 @@
         ],
         "ConvertKit8": [
           {
-            "startTime": 1676891396586,
-            "executionTime": 787,
+            "startTime": 1706635237150,
+            "executionTime": 1232,
             "source": [
               {
                 "previousNode": "ConvertKit7"
@@ -259,8 +259,8 @@
         ],
         "ConvertKit9": [
           {
-            "startTime": 1676891397374,
-            "executionTime": 583,
+            "startTime": 1706635238383,
+            "executionTime": 539,
             "source": [
               {
                 "previousNode": "ConvertKit8"
@@ -272,14 +272,14 @@
                 [
                   {
                     "json": {
-                      "id": 5668596639,
+                      "id": 7475082855,
                       "state": "inactive",
-                      "created_at": "2023-02-20T11:09:57.000Z",
+                      "created_at": "2024-01-30T17:20:38.000Z",
                       "source": "API::V3::SubscriptionsController (external)",
                       "referrer": {
                         "object": true
                       },
-                      "subscribable_id": 3657804,
+                      "subscribable_id": 4477426,
                       "subscribable_type": "tag",
                       "subscriber": {
                         "object": true
@@ -296,8 +296,8 @@
         ],
         "ConvertKit10": [
           {
-            "startTime": 1676891397958,
-            "executionTime": 360,
+            "startTime": 1706635238922,
+            "executionTime": 162,
             "source": [
               {
                 "previousNode": "ConvertKit9"
@@ -308,7 +308,13 @@
               "main": [
                 [
                   {
-                    "json": {}
+                    "json": {},
+                    "pairedItem": [
+                      {
+                        "item": 0,
+                        "input": 0
+                      }
+                    ]
                   }
                 ]
               ]
@@ -317,8 +323,8 @@
         ],
         "ConvertKit11": [
           {
-            "startTime": 1676891398318,
-            "executionTime": 410,
+            "startTime": 1706635239084,
+            "executionTime": 466,
             "source": [
               {
                 "previousNode": "ConvertKit10"
@@ -330,9 +336,9 @@
                 [
                   {
                     "json": {
-                      "id": 3657804,
-                      "name": "tag1676891395719",
-                      "created_at": "2023-02-20T11:09:56.000Z"
+                      "id": 4477426,
+                      "name": "tag1706635236774",
+                      "created_at": "2024-01-30T17:20:36.000Z"
                     },
                     "pairedItem": {
                       "item": 0
@@ -345,8 +351,8 @@
         ],
         "ConvertKit6": [
           {
-            "startTime": 1676891398728,
-            "executionTime": 367,
+            "startTime": 1706635239551,
+            "executionTime": 188,
             "source": [
               {
                 "previousNode": "ConvertKit11"
@@ -366,13 +372,14 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
+      "metadata": {},
       "waitingExecution": {},
       "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2023-02-20T11:09:53.342Z",
-  "stoppedAt": "2023-02-20T11:09:59.095Z",
+  "startedAt": "2024-01-30T17:20:34.950Z",
+  "stoppedAt": "2024-01-30T17:20:39.739Z",
   "status": "running",
   "finished": true
 }

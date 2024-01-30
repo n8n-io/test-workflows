@@ -5,7 +5,7 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1676891406906,
+            "startTime": 1706635215786,
             "executionTime": 0,
             "source": [],
             "executionStatus": "success",
@@ -25,8 +25,8 @@
         ],
         "Set": [
           {
-            "startTime": 1676891406907,
-            "executionTime": 88,
+            "startTime": 1706635215787,
+            "executionTime": 9,
             "source": [
               {
                 "previousNode": "Start"
@@ -38,8 +38,8 @@
                 [
                   {
                     "json": {
-                      "id": 36935,
-                      "name": "Name1676891406995"
+                      "id": 79281,
+                      "name": "Name1706635215796"
                     },
                     "pairedItem": {
                       "item": 0
@@ -52,8 +52,8 @@
         ],
         "MySQL": [
           {
-            "startTime": 1676891406995,
-            "executionTime": 182,
+            "startTime": 1706635215796,
+            "executionTime": 205,
             "source": [
               {
                 "previousNode": "Set"
@@ -83,8 +83,8 @@
         ],
         "Set1": [
           {
-            "startTime": 1676891407178,
-            "executionTime": 3,
+            "startTime": 1706635216001,
+            "executionTime": 7,
             "source": [
               {
                 "previousNode": "MySQL"
@@ -102,8 +102,8 @@
                       "info": "",
                       "serverStatus": 2,
                       "warningStatus": 0,
-                      "id": 36935,
-                      "name": "UpdatedName1676891407181"
+                      "id": 79281,
+                      "name": "UpdatedName1706635216008"
                     },
                     "pairedItem": {
                       "item": 0
@@ -116,8 +116,8 @@
         ],
         "MySQL1": [
           {
-            "startTime": 1676891407181,
-            "executionTime": 153,
+            "startTime": 1706635216009,
+            "executionTime": 187,
             "source": [
               {
                 "previousNode": "Set1"
@@ -148,8 +148,8 @@
         ],
         "MySQL2": [
           {
-            "startTime": 1676891407334,
-            "executionTime": 148,
+            "startTime": 1706635216197,
+            "executionTime": 163,
             "source": [
               {
                 "previousNode": "MySQL1"
@@ -175,8 +175,8 @@
         ],
         "MySQL3": [
           {
-            "startTime": 1676891407482,
-            "executionTime": 152,
+            "startTime": 1706635216361,
+            "executionTime": 153,
             "source": [
               {
                 "previousNode": "MySQL2"
@@ -210,13 +210,14 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
+      "metadata": {},
       "waitingExecution": {},
       "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2023-02-20T11:10:06.904Z",
-  "stoppedAt": "2023-02-20T11:10:07.634Z",
+  "startedAt": "2024-01-30T17:20:15.786Z",
+  "stoppedAt": "2024-01-30T17:20:16.514Z",
   "status": "running",
   "finished": true
 }

@@ -5,8 +5,8 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1676891413717,
-            "executionTime": 2,
+            "startTime": 1706635218785,
+            "executionTime": 1,
             "source": [],
             "executionStatus": "success",
             "data": {
@@ -25,8 +25,8 @@
         ],
         "AWS Comprehend": [
           {
-            "startTime": 1676891413720,
-            "executionTime": 502,
+            "startTime": 1706635218786,
+            "executionTime": 551,
             "source": [
               {
                 "previousNode": "Start"
@@ -38,7 +38,7 @@
                 [
                   {
                     "json": {
-                      "en": 0.993780255317688
+                      "en": 0.995190441608429
                     },
                     "pairedItem": {
                       "item": 0
@@ -51,8 +51,8 @@
         ],
         "AWS Comprehend1": [
           {
-            "startTime": 1676891414223,
-            "executionTime": 484,
+            "startTime": 1706635219337,
+            "executionTime": 164,
             "source": [
               {
                 "previousNode": "Start"
@@ -80,8 +80,8 @@
         ],
         "AWS Comprehend2": [
           {
-            "startTime": 1676891414707,
-            "executionTime": 478,
+            "startTime": 1706635219501,
+            "executionTime": 150,
             "source": [
               {
                 "previousNode": "Start"
@@ -95,8 +95,20 @@
                     "json": {
                       "BeginOffset": 0,
                       "EndOffset": 3,
-                      "Score": 0.4930450916290283,
+                      "Score": 0.4956623315811157,
                       "Text": "n8n",
+                      "Type": "OTHER"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  },
+                  {
+                    "json": {
+                      "BeginOffset": 18,
+                      "EndOffset": 23,
+                      "Score": 0.4929276704788208,
+                      "Text": "eight",
                       "Type": "OTHER"
                     },
                     "pairedItem": {
@@ -107,7 +119,7 @@
                     "json": {
                       "BeginOffset": 53,
                       "EndOffset": 62,
-                      "Score": 0.814785897731781,
+                      "Score": 0.7383686304092407,
                       "Text": "every app",
                       "Type": "QUANTITY"
                     },
@@ -119,7 +131,7 @@
                     "json": {
                       "BeginOffset": 147,
                       "EndOffset": 158,
-                      "Score": 0.9504634737968445,
+                      "Score": 0.9422106146812439,
                       "Text": "single line",
                       "Type": "QUANTITY"
                     },
@@ -138,13 +150,14 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
+      "metadata": {},
       "waitingExecution": {},
       "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2023-02-20T11:10:13.714Z",
-  "stoppedAt": "2023-02-20T11:10:15.186Z",
+  "startedAt": "2024-01-30T17:20:18.785Z",
+  "stoppedAt": "2024-01-30T17:20:19.651Z",
   "status": "running",
   "finished": true
 }

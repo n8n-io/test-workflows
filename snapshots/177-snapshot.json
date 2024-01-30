@@ -5,7 +5,7 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1676891417558,
+            "startTime": 1706635221176,
             "executionTime": 0,
             "source": [],
             "executionStatus": "success",
@@ -25,8 +25,8 @@
         ],
         "uProc1": [
           {
-            "startTime": 1676891417559,
-            "executionTime": 134,
+            "startTime": 1706635221176,
+            "executionTime": 219,
             "source": [
               {
                 "previousNode": "Start"
@@ -48,7 +48,7 @@
                       },
                       "normalized": false,
                       "criteria": "10032",
-                      "time": 2,
+                      "time": 3,
                       "price": 0,
                       "real_price": 0.001,
                       "processor": "check-creditcard-checksum",
@@ -66,8 +66,8 @@
         ],
         "uProc2": [
           {
-            "startTime": 1676891417693,
-            "executionTime": 125,
+            "startTime": 1706635221395,
+            "executionTime": 71,
             "source": [
               {
                 "previousNode": "uProc1"
@@ -107,8 +107,8 @@
         ],
         "uProc3": [
           {
-            "startTime": 1676891417819,
-            "executionTime": 113,
+            "startTime": 1706635221466,
+            "executionTime": 77,
             "source": [
               {
                 "previousNode": "uProc2"
@@ -130,7 +130,7 @@
                       },
                       "normalized": false,
                       "criteria": "10032",
-                      "time": 2,
+                      "time": 3,
                       "price": 0,
                       "real_price": 0.0015,
                       "processor": "check-bank-account-valid-es",
@@ -148,8 +148,8 @@
         ],
         "uProc4": [
           {
-            "startTime": 1676891417932,
-            "executionTime": 101,
+            "startTime": 1706635221543,
+            "executionTime": 70,
             "source": [
               {
                 "previousNode": "uProc3"
@@ -189,8 +189,8 @@
         ],
         "uProc5": [
           {
-            "startTime": 1676891418033,
-            "executionTime": 141,
+            "startTime": 1706635221613,
+            "executionTime": 67,
             "source": [
               {
                 "previousNode": "uProc4"
@@ -212,7 +212,7 @@
                       },
                       "normalized": false,
                       "criteria": "10032",
-                      "time": 2,
+                      "time": 1,
                       "price": 0,
                       "real_price": 0.003,
                       "processor": "get-bank-iban-by-account",
@@ -230,8 +230,8 @@
         ],
         "uProc6": [
           {
-            "startTime": 1676891418174,
-            "executionTime": 145,
+            "startTime": 1706635221680,
+            "executionTime": 69,
             "source": [
               {
                 "previousNode": "uProc5"
@@ -253,7 +253,7 @@
                       },
                       "normalized": false,
                       "criteria": "10032",
-                      "time": 2,
+                      "time": 3,
                       "price": 0,
                       "real_price": 0.003,
                       "processor": "get-bank-iban-lookup",
@@ -271,8 +271,8 @@
         ],
         "uProc7": [
           {
-            "startTime": 1676891418319,
-            "executionTime": 116,
+            "startTime": 1706635221750,
+            "executionTime": 72,
             "source": [
               {
                 "previousNode": "uProc6"
@@ -312,8 +312,8 @@
         ],
         "uProc8": [
           {
-            "startTime": 1676891418435,
-            "executionTime": 109,
+            "startTime": 1706635221823,
+            "executionTime": 70,
             "source": [
               {
                 "previousNode": "uProc7"
@@ -353,8 +353,8 @@
         ],
         "uProc9": [
           {
-            "startTime": 1676891418544,
-            "executionTime": 121,
+            "startTime": 1706635221893,
+            "executionTime": 72,
             "source": [
               {
                 "previousNode": "uProc8"
@@ -376,7 +376,7 @@
                       },
                       "normalized": false,
                       "criteria": "10040",
-                      "time": 3,
+                      "time": 1,
                       "price": 0,
                       "real_price": 0.001,
                       "processor": "get-currency-by-country-isocode",
@@ -394,8 +394,8 @@
         ],
         "uProc10": [
           {
-            "startTime": 1676891418665,
-            "executionTime": 109,
+            "startTime": 1706635221965,
+            "executionTime": 75,
             "source": [
               {
                 "previousNode": "uProc9"
@@ -417,7 +417,7 @@
                       },
                       "normalized": false,
                       "criteria": "10040",
-                      "time": 2,
+                      "time": 1,
                       "price": 0,
                       "real_price": 0,
                       "processor": "get-currency-by-ip",
@@ -435,8 +435,8 @@
         ],
         "uProc11": [
           {
-            "startTime": 1676891418775,
-            "executionTime": 109,
+            "startTime": 1706635222040,
+            "executionTime": 66,
             "source": [
               {
                 "previousNode": "uProc10"
@@ -476,8 +476,8 @@
         ],
         "uProc12": [
           {
-            "startTime": 1676891418885,
-            "executionTime": 132,
+            "startTime": 1706635222106,
+            "executionTime": 70,
             "source": [
               {
                 "previousNode": "uProc11"
@@ -499,7 +499,7 @@
                       },
                       "normalized": false,
                       "criteria": "10040",
-                      "time": 6,
+                      "time": 3,
                       "price": 0.002,
                       "real_price": 0.002,
                       "processor": "get-currency-converted-between-isocode-date",
@@ -517,8 +517,8 @@
         ],
         "uProc13": [
           {
-            "startTime": 1676891419018,
-            "executionTime": 98,
+            "startTime": 1706635222176,
+            "executionTime": 72,
             "source": [
               {
                 "previousNode": "uProc12"
@@ -554,8 +554,8 @@
         ],
         "uProc14": [
           {
-            "startTime": 1676891419116,
-            "executionTime": 104,
+            "startTime": 1706635222248,
+            "executionTime": 70,
             "source": [
               {
                 "previousNode": "uProc13"
@@ -577,7 +577,7 @@
                       },
                       "normalized": false,
                       "criteria": "10040",
-                      "time": 3,
+                      "time": 2,
                       "price": 0,
                       "real_price": 0,
                       "processor": "get-currency-list-by-ip",
@@ -595,8 +595,8 @@
         ],
         "uProc15": [
           {
-            "startTime": 1676891419221,
-            "executionTime": 115,
+            "startTime": 1706635222318,
+            "executionTime": 70,
             "source": [
               {
                 "previousNode": "uProc14"
@@ -618,7 +618,7 @@
                       },
                       "normalized": false,
                       "criteria": "10040",
-                      "time": 4,
+                      "time": 2,
                       "price": 0,
                       "real_price": 0,
                       "processor": "get-currency-list-by-isocode",
@@ -636,8 +636,8 @@
         ],
         "uProc16": [
           {
-            "startTime": 1676891419336,
-            "executionTime": 111,
+            "startTime": 1706635222389,
+            "executionTime": 74,
             "source": [
               {
                 "previousNode": "uProc15"
@@ -659,7 +659,7 @@
                       },
                       "normalized": false,
                       "criteria": "10040",
-                      "time": 2,
+                      "time": 3,
                       "price": 0,
                       "real_price": 0.001,
                       "processor": "check-currency-valid-iso",
@@ -677,8 +677,8 @@
         ],
         "uProc17": [
           {
-            "startTime": 1676891419447,
-            "executionTime": 103,
+            "startTime": 1706635222464,
+            "executionTime": 76,
             "source": [
               {
                 "previousNode": "uProc16"
@@ -700,7 +700,7 @@
                       },
                       "normalized": false,
                       "criteria": "10040",
-                      "time": 3,
+                      "time": 1,
                       "price": 0,
                       "real_price": 0.005,
                       "processor": "get-vat-by-address",
@@ -718,8 +718,8 @@
         ],
         "uProc18": [
           {
-            "startTime": 1676891419551,
-            "executionTime": 105,
+            "startTime": 1706635222540,
+            "executionTime": 67,
             "source": [
               {
                 "previousNode": "uProc17"
@@ -741,7 +741,7 @@
                       },
                       "normalized": false,
                       "criteria": "10040",
-                      "time": 3,
+                      "time": 1,
                       "price": 0,
                       "real_price": 0.005,
                       "processor": "get-vat-by-coordinates",
@@ -759,8 +759,8 @@
         ],
         "uProc19": [
           {
-            "startTime": 1676891419656,
-            "executionTime": 155,
+            "startTime": 1706635222607,
+            "executionTime": 80,
             "source": [
               {
                 "previousNode": "uProc18"
@@ -782,7 +782,7 @@
                       },
                       "normalized": false,
                       "criteria": "10040",
-                      "time": 2,
+                      "time": 1,
                       "price": 0,
                       "real_price": 0,
                       "processor": "get-vat-by-ip",
@@ -800,8 +800,8 @@
         ],
         "uProc20": [
           {
-            "startTime": 1676891419811,
-            "executionTime": 107,
+            "startTime": 1706635222688,
+            "executionTime": 73,
             "source": [
               {
                 "previousNode": "uProc19"
@@ -841,8 +841,8 @@
         ],
         "uProc21": [
           {
-            "startTime": 1676891419918,
-            "executionTime": 108,
+            "startTime": 1706635222762,
+            "executionTime": 78,
             "source": [
               {
                 "previousNode": "uProc20"
@@ -864,7 +864,7 @@
                       },
                       "normalized": false,
                       "criteria": "10063",
-                      "time": 2,
+                      "time": 1,
                       "price": 0,
                       "real_price": 0.005,
                       "processor": "get-vat-by-number",
@@ -882,8 +882,8 @@
         ],
         "uProc22": [
           {
-            "startTime": 1676891420026,
-            "executionTime": 101,
+            "startTime": 1706635222840,
+            "executionTime": 80,
             "source": [
               {
                 "previousNode": "uProc21"
@@ -923,8 +923,8 @@
         ],
         "uProc23": [
           {
-            "startTime": 1676891420127,
-            "executionTime": 108,
+            "startTime": 1706635222921,
+            "executionTime": 66,
             "source": [
               {
                 "previousNode": "uProc22"
@@ -946,7 +946,7 @@
                       },
                       "normalized": false,
                       "criteria": "10040",
-                      "time": 2,
+                      "time": 1,
                       "price": 0,
                       "real_price": 0,
                       "processor": "get-vat-by-zipcode",
@@ -964,8 +964,8 @@
         ],
         "uProc24": [
           {
-            "startTime": 1676891420236,
-            "executionTime": 111,
+            "startTime": 1706635222987,
+            "executionTime": 68,
             "source": [
               {
                 "previousNode": "uProc23"
@@ -987,7 +987,7 @@
                       },
                       "normalized": false,
                       "criteria": "10063",
-                      "time": 2,
+                      "time": 1,
                       "price": 0,
                       "real_price": 0.0025,
                       "processor": "check-vat-exist",
@@ -1009,13 +1009,14 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
+      "metadata": {},
       "waitingExecution": {},
       "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2023-02-20T11:10:17.555Z",
-  "stoppedAt": "2023-02-20T11:10:20.347Z",
+  "startedAt": "2024-01-30T17:20:21.174Z",
+  "stoppedAt": "2024-01-30T17:20:23.055Z",
   "status": "running",
   "finished": true
 }

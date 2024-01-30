@@ -5,8 +5,8 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1676891405145,
-            "executionTime": 2,
+            "startTime": 1706635215665,
+            "executionTime": 0,
             "source": [],
             "executionStatus": "success",
             "data": {
@@ -25,8 +25,8 @@
         ],
         "Set": [
           {
-            "startTime": 1676891405147,
-            "executionTime": 71,
+            "startTime": 1706635215665,
+            "executionTime": 6,
             "source": [
               {
                 "previousNode": "Start"
@@ -38,7 +38,7 @@
                 [
                   {
                     "json": {
-                      "message": "AMQPMessage1676891405218"
+                      "message": "AMQPMessage1706635215671"
                     },
                     "pairedItem": {
                       "item": 0
@@ -51,8 +51,8 @@
         ],
         "AMQP Sender": [
           {
-            "startTime": 1676891405218,
-            "executionTime": 221,
+            "startTime": 1706635215671,
+            "executionTime": 342,
             "source": [
               {
                 "previousNode": "Set"
@@ -81,13 +81,14 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
+      "metadata": {},
       "waitingExecution": {},
       "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2023-02-20T11:10:05.142Z",
-  "stoppedAt": "2023-02-20T11:10:05.439Z",
+  "startedAt": "2024-01-30T17:20:15.665Z",
+  "stoppedAt": "2024-01-30T17:20:16.014Z",
   "status": "running",
   "finished": true
 }
