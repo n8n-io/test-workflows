@@ -8,14 +8,11 @@
       "name": "Start",
       "type": "n8n-nodes-base.start",
       "typeVersion": 1,
-      "position": [
-        190,
-        380
-      ]
+      "position": [190, 380]
     },
     {
       "parameters": {
-        "authentication": "oAuth2",
+        "authentication": "serviceAccount",
         "resource": "volume",
         "operation": "getAll",
         "searchQuery": "lean startup",
@@ -24,10 +21,7 @@
       "name": "Google Books",
       "type": "n8n-nodes-base.googleBooks",
       "typeVersion": 1,
-      "position": [
-        480,
-        300
-      ],
+      "position": [480, 300],
       "credentials": {
         "googleApi": {
           "id": "196",
@@ -38,17 +32,14 @@
     },
     {
       "parameters": {
-        "authentication": "oAuth2",
+        "authentication": "serviceAccount",
         "resource": "volume",
         "volumeId": "={{$node[\"Google Books\"].json[\"id\"]}}"
       },
       "name": "Google Books1",
       "type": "n8n-nodes-base.googleBooks",
       "typeVersion": 1,
-      "position": [
-        650,
-        300
-      ],
+      "position": [650, 300],
       "credentials": {
         "googleApi": {
           "id": "196",
@@ -59,7 +50,7 @@
     },
     {
       "parameters": {
-        "authentication": "oAuth2",
+        "authentication": "serviceAccount",
         "operation": "getAll",
         "myLibrary": true,
         "limit": 1
@@ -67,10 +58,7 @@
       "name": "Google Books2",
       "type": "n8n-nodes-base.googleBooks",
       "typeVersion": 1,
-      "position": [
-        480,
-        460
-      ],
+      "position": [480, 460],
       "credentials": {
         "googleApi": {
           "id": "196",
@@ -80,17 +68,14 @@
     },
     {
       "parameters": {
-        "authentication": "oAuth2",
+        "authentication": "serviceAccount",
         "myLibrary": true,
         "shelfId": "1001"
       },
       "name": "Google Books3",
       "type": "n8n-nodes-base.googleBooks",
       "typeVersion": 1,
-      "position": [
-        640,
-        460
-      ],
+      "position": [640, 460],
       "credentials": {
         "googleApi": {
           "id": "196",
@@ -100,7 +85,7 @@
     },
     {
       "parameters": {
-        "authentication": "oAuth2",
+        "authentication": "serviceAccount",
         "resource": "bookshelfVolume",
         "operation": "add",
         "shelfId": "1001",
@@ -109,10 +94,7 @@
       "name": "Google Books4",
       "type": "n8n-nodes-base.googleBooks",
       "typeVersion": 1,
-      "position": [
-        820,
-        420
-      ],
+      "position": [820, 420],
       "alwaysOutputData": true,
       "credentials": {
         "googleApi": {
@@ -123,7 +105,7 @@
     },
     {
       "parameters": {
-        "authentication": "oAuth2",
+        "authentication": "serviceAccount",
         "resource": "bookshelfVolume",
         "operation": "move",
         "shelfId": "1001",
@@ -133,10 +115,7 @@
       "name": "Google Books5",
       "type": "n8n-nodes-base.googleBooks",
       "typeVersion": 1,
-      "position": [
-        990,
-        420
-      ],
+      "position": [990, 420],
       "alwaysOutputData": true,
       "credentials": {
         "googleApi": {
@@ -147,7 +126,7 @@
     },
     {
       "parameters": {
-        "authentication": "oAuth2",
+        "authentication": "serviceAccount",
         "resource": "bookshelfVolume",
         "myLibrary": true,
         "shelfId": "1001",
@@ -156,10 +135,7 @@
       "name": "Google Books6",
       "type": "n8n-nodes-base.googleBooks",
       "typeVersion": 1,
-      "position": [
-        1150,
-        420
-      ],
+      "position": [1150, 420],
       "alwaysOutputData": true,
       "credentials": {
         "googleApi": {
@@ -171,7 +147,7 @@
     },
     {
       "parameters": {
-        "authentication": "oAuth2",
+        "authentication": "serviceAccount",
         "resource": "bookshelfVolume",
         "operation": "remove",
         "shelfId": "1001",
@@ -180,10 +156,7 @@
       "name": "Google Books7",
       "type": "n8n-nodes-base.googleBooks",
       "typeVersion": 1,
-      "position": [
-        1340,
-        420
-      ],
+      "position": [1340, 420],
       "alwaysOutputData": true,
       "credentials": {
         "googleApi": {
@@ -194,7 +167,7 @@
     },
     {
       "parameters": {
-        "authentication": "oAuth2",
+        "authentication": "serviceAccount",
         "resource": "bookshelfVolume",
         "operation": "clear",
         "shelfId": "1001"
@@ -202,10 +175,7 @@
       "name": "Google Books8",
       "type": "n8n-nodes-base.googleBooks",
       "typeVersion": 1,
-      "position": [
-        1520,
-        420
-      ],
+      "position": [1520, 420],
       "alwaysOutputData": true,
       "credentials": {
         "googleApi": {

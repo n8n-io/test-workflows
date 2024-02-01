@@ -8,23 +8,17 @@
       "name": "Start",
       "type": "n8n-nodes-base.start",
       "typeVersion": 1,
-      "position": [
-        250,
-        300
-      ]
+      "position": [250, 300]
     },
     {
       "parameters": {
-        "authentication": "oAuth2",
+        "authentication": "serviceAccount",
         "title": "=Slides{{(new Date()).toUTCString()}}"
       },
       "name": "Google Slides",
       "type": "n8n-nodes-base.googleSlides",
       "typeVersion": 1,
-      "position": [
-        480,
-        220
-      ],
+      "position": [480, 220],
       "credentials": {
         "googleApi": {
           "id": "196",
@@ -34,17 +28,14 @@
     },
     {
       "parameters": {
-        "authentication": "oAuth2",
+        "authentication": "serviceAccount",
         "operation": "get",
         "presentationId": "={{$node[\"Google Slides\"].json[\"presentationId\"]}}"
       },
       "name": "Google Slides1",
       "type": "n8n-nodes-base.googleSlides",
       "typeVersion": 1,
-      "position": [
-        640,
-        220
-      ],
+      "position": [640, 220],
       "credentials": {
         "googleApi": {
           "id": "196",
@@ -54,17 +45,14 @@
     },
     {
       "parameters": {
-        "authentication": "oAuth2",
+        "authentication": "serviceAccount",
         "operation": "getSlides",
         "presentationId": "={{$node[\"Google Slides\"].json[\"presentationId\"]}}"
       },
       "name": "Google Slides2",
       "type": "n8n-nodes-base.googleSlides",
       "typeVersion": 1,
-      "position": [
-        800,
-        220
-      ],
+      "position": [800, 220],
       "credentials": {
         "googleApi": {
           "id": "196",
@@ -74,15 +62,13 @@
     },
     {
       "parameters": {
-        "authentication": "oAuth2",
+        "authentication": "serviceAccount",
         "operation": "replaceText",
         "presentationId": "=1y7glcx_2V4LQoSWXTkBbn-kWRLBEAsn7I27B6RQ3cdo",
         "textUi": {
           "textValues": [
             {
-              "pageObjectIds": [
-                "p"
-              ],
+              "pageObjectIds": ["p"],
               "replaceText": "n8n",
               "text": "Title"
             }
@@ -95,10 +81,7 @@
       "name": "Google Slides3",
       "type": "n8n-nodes-base.googleSlides",
       "typeVersion": 1,
-      "position": [
-        500,
-        50
-      ],
+      "position": [500, 50],
       "credentials": {
         "googleApi": {
           "id": "196",
@@ -108,7 +91,7 @@
     },
     {
       "parameters": {
-        "authentication": "oAuth2",
+        "authentication": "serviceAccount",
         "resource": "page",
         "operation": "getThumbnail",
         "presentationId": "={{$node[\"Google Slides\"].json[\"presentationId\"]}}",
@@ -118,10 +101,7 @@
       "name": "Google Slides4",
       "type": "n8n-nodes-base.googleSlides",
       "typeVersion": 1,
-      "position": [
-        640,
-        390
-      ],
+      "position": [640, 390],
       "credentials": {
         "googleApi": {
           "id": "196",
@@ -131,7 +111,7 @@
     },
     {
       "parameters": {
-        "authentication": "oAuth2",
+        "authentication": "serviceAccount",
         "resource": "page",
         "presentationId": "={{$node[\"Google Slides\"].json[\"presentationId\"]}}",
         "pageObjectId": "p"
@@ -139,10 +119,7 @@
       "name": "Google Slides5",
       "type": "n8n-nodes-base.googleSlides",
       "typeVersion": 1,
-      "position": [
-        800,
-        390
-      ],
+      "position": [800, 390],
       "credentials": {
         "googleApi": {
           "id": "196",
@@ -152,15 +129,13 @@
     },
     {
       "parameters": {
-        "authentication": "oAuth2",
+        "authentication": "serviceAccount",
         "operation": "replaceText",
         "presentationId": "=1y7glcx_2V4LQoSWXTkBbn-kWRLBEAsn7I27B6RQ3cdo",
         "textUi": {
           "textValues": [
             {
-              "pageObjectIds": [
-                "p"
-              ],
+              "pageObjectIds": ["p"],
               "replaceText": "Title",
               "text": "n8n"
             }
@@ -173,10 +148,7 @@
       "name": "Google Slides6",
       "type": "n8n-nodes-base.googleSlides",
       "typeVersion": 1,
-      "position": [
-        650,
-        50
-      ],
+      "position": [650, 50],
       "credentials": {
         "googleApi": {
           "id": "196",
@@ -214,9 +186,7 @@
       ]
     },
     "Google Slides2": {
-      "main": [
-        []
-      ]
+      "main": [[]]
     },
     "Google Slides4": {
       "main": [

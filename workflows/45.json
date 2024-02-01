@@ -8,14 +8,11 @@
       "name": "Start",
       "type": "n8n-nodes-base.start",
       "typeVersion": 1,
-      "position": [
-        250,
-        300
-      ]
+      "position": [250, 300]
     },
     {
       "parameters": {
-        "authentication": "oAuth2",
+        "authentication": "serviceAccount",
         "resource": "spreadsheet",
         "title": "=TestSpreadSheet {{(new Date()).toGMTString()}}",
         "sheetsUi": {
@@ -26,10 +23,7 @@
       "name": "Google Sheets",
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 1,
-      "position": [
-        440,
-        200
-      ],
+      "position": [440, 200],
       "credentials": {
         "googleApi": {
           "id": "196",
@@ -39,7 +33,7 @@
     },
     {
       "parameters": {
-        "authentication": "oAuth2",
+        "authentication": "serviceAccount",
         "operation": "append",
         "sheetId": "1Vp6KkHSquwxi2Y4xiloyUMFrTAg9VHJ-PhGdgYq4apE",
         "range": "A:B",
@@ -50,10 +44,7 @@
       "name": "Google Sheets1",
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 1,
-      "position": [
-        610,
-        360
-      ],
+      "position": [610, 360],
       "credentials": {
         "googleApi": {
           "id": "196",
@@ -63,7 +54,7 @@
     },
     {
       "parameters": {
-        "authentication": "oAuth2",
+        "authentication": "serviceAccount",
         "operation": "update",
         "sheetId": "1Vp6KkHSquwxi2Y4xiloyUMFrTAg9VHJ-PhGdgYq4apE",
         "range": "Sheet1!A:B",
@@ -74,10 +65,7 @@
       "name": "Google Sheets2",
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 1,
-      "position": [
-        1200,
-        360
-      ],
+      "position": [1200, 360],
       "credentials": {
         "googleApi": {
           "id": "196",
@@ -106,10 +94,7 @@
       },
       "name": "Set1",
       "type": "n8n-nodes-base.set",
-      "position": [
-        1050,
-        360
-      ],
+      "position": [1050, 360],
       "typeVersion": 1,
       "alwaysOutputData": false,
       "notesInFlow": true,
@@ -117,7 +102,7 @@
     },
     {
       "parameters": {
-        "authentication": "oAuth2",
+        "authentication": "serviceAccount",
         "sheetId": "1Vp6KkHSquwxi2Y4xiloyUMFrTAg9VHJ-PhGdgYq4apE",
         "range": "Sheet1!A:C",
         "options": {}
@@ -125,10 +110,7 @@
       "name": "Google Sheets3",
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 1,
-      "position": [
-        770,
-        360
-      ],
+      "position": [770, 360],
       "credentials": {
         "googleApi": {
           "id": "196",
@@ -138,7 +120,7 @@
     },
     {
       "parameters": {
-        "authentication": "oAuth2",
+        "authentication": "serviceAccount",
         "operation": "lookup",
         "sheetId": "1Vp6KkHSquwxi2Y4xiloyUMFrTAg9VHJ-PhGdgYq4apE",
         "range": "Sheet1!A:B",
@@ -149,10 +131,7 @@
       "name": "Google Sheets4",
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 1,
-      "position": [
-        910,
-        360
-      ],
+      "position": [910, 360],
       "alwaysOutputData": true,
       "credentials": {
         "googleApi": {
@@ -163,7 +142,7 @@
     },
     {
       "parameters": {
-        "authentication": "oAuth2",
+        "authentication": "serviceAccount",
         "operation": "clear",
         "sheetId": "1Vp6KkHSquwxi2Y4xiloyUMFrTAg9VHJ-PhGdgYq4apE",
         "range": "A2:C50"
@@ -171,10 +150,7 @@
       "name": "Google Sheets5",
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 1,
-      "position": [
-        1500,
-        360
-      ],
+      "position": [1500, 360],
       "credentials": {
         "googleApi": {
           "id": "196",
@@ -184,7 +160,7 @@
     },
     {
       "parameters": {
-        "authentication": "oAuth2",
+        "authentication": "serviceAccount",
         "operation": "delete",
         "sheetId": "1Vp6KkHSquwxi2Y4xiloyUMFrTAg9VHJ-PhGdgYq4apE",
         "toDelete": {
@@ -200,10 +176,7 @@
       "name": "Google Sheets6",
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 1,
-      "position": [
-        1350,
-        360
-      ],
+      "position": [1350, 360],
       "credentials": {
         "googleApi": {
           "id": "196",
@@ -218,16 +191,13 @@
       "name": "Function",
       "type": "n8n-nodes-base.function",
       "typeVersion": 1,
-      "position": [
-        440,
-        360
-      ],
+      "position": [440, 360],
       "notesInFlow": true,
       "notes": "create the input data"
     },
     {
       "parameters": {
-        "authentication": "oAuth2",
+        "authentication": "serviceAccount",
         "operation": "create",
         "sheetId": "={{$node[\"Google Sheets\"].json[\"spreadsheetId\"]}}",
         "options": {
@@ -243,10 +213,7 @@
       "name": "Google Sheets7",
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 1,
-      "position": [
-        600,
-        200
-      ],
+      "position": [600, 200],
       "credentials": {
         "googleApi": {
           "id": "196",
@@ -256,7 +223,7 @@
     },
     {
       "parameters": {
-        "authentication": "oAuth2",
+        "authentication": "serviceAccount",
         "operation": "remove",
         "sheetId": "={{$node[\"Google Sheets\"].json[\"spreadsheetId\"]}}",
         "id": "={{$node[\"Google Sheets7\"].json[\"sheetId\"]}}"
@@ -264,10 +231,7 @@
       "name": "Google Sheets8",
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 1,
-      "position": [
-        750,
-        200
-      ],
+      "position": [750, 200],
       "credentials": {
         "googleApi": {
           "id": "196",
