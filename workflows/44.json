@@ -8,31 +8,28 @@
       "name": "Start",
       "type": "n8n-nodes-base.start",
       "typeVersion": 1,
-      "position": [
-        250,
-        450
-      ]
+      "position": [250, 450]
     },
     {
       "parameters": {
-        "authentication": "oAuth2",
+        "authentication": "serviceAccount",
         "resource": "folder",
         "name": "testFolder"
       },
       "name": "Google Drive",
       "type": "n8n-nodes-base.googleDrive",
       "typeVersion": 1,
-      "position": [
-        500,
-        290
-      ],
+      "position": [500, 290],
       "credentials": {
-        "googleDriveOAuth2Api": "Google Drive creds"
+        "googleApi": {
+          "id": "196",
+          "name": "Google API creds"
+        }
       }
     },
     {
       "parameters": {
-        "authentication": "oAuth2",
+        "authentication": "serviceAccount",
         "resource": "folder",
         "operation": "share",
         "fileId": "={{$node[\"Google Drive\"].json[\"id\"]}}",
@@ -47,17 +44,17 @@
       "name": "Google Drive1",
       "type": "n8n-nodes-base.googleDrive",
       "typeVersion": 1,
-      "position": [
-        670,
-        290
-      ],
+      "position": [670, 290],
       "credentials": {
-        "googleDriveOAuth2Api": "Google Drive creds"
+        "googleApi": {
+          "id": "196",
+          "name": "Google API creds"
+        }
       }
     },
     {
       "parameters": {
-        "authentication": "oAuth2",
+        "authentication": "serviceAccount",
         "resource": "folder",
         "operation": "delete",
         "fileId": "={{$node[\"Google Drive\"].json[\"id\"]}}"
@@ -65,17 +62,17 @@
       "name": "Google Drive2",
       "type": "n8n-nodes-base.googleDrive",
       "typeVersion": 1,
-      "position": [
-        830,
-        290
-      ],
+      "position": [830, 290],
       "credentials": {
-        "googleDriveOAuth2Api": "Google Drive creds"
+        "googleApi": {
+          "id": "196",
+          "name": "Google API creds"
+        }
       }
     },
     {
       "parameters": {
-        "authentication": "oAuth2",
+        "authentication": "serviceAccount",
         "fileContent": "Test File Content",
         "name": "testFile",
         "parents": []
@@ -83,17 +80,17 @@
       "name": "Google Drive3",
       "type": "n8n-nodes-base.googleDrive",
       "typeVersion": 1,
-      "position": [
-        500,
-        450
-      ],
+      "position": [500, 450],
       "credentials": {
-        "googleDriveOAuth2Api": "Google Drive creds"
+        "googleApi": {
+          "id": "196",
+          "name": "Google API creds"
+        }
       }
     },
     {
       "parameters": {
-        "authentication": "oAuth2",
+        "authentication": "serviceAccount",
         "operation": "share",
         "fileId": "={{$node[\"Google Drive3\"].json[\"id\"]}}",
         "permissionsUi": {
@@ -107,17 +104,17 @@
       "name": "Google Drive4",
       "type": "n8n-nodes-base.googleDrive",
       "typeVersion": 1,
-      "position": [
-        650,
-        450
-      ],
+      "position": [650, 450],
       "credentials": {
-        "googleDriveOAuth2Api": "Google Drive creds"
+        "googleApi": {
+          "id": "196",
+          "name": "Google API creds"
+        }
       }
     },
     {
       "parameters": {
-        "authentication": "oAuth2",
+        "authentication": "serviceAccount",
         "operation": "list",
         "limit": 1,
         "options": {}
@@ -125,34 +122,34 @@
       "name": "Google Drive5",
       "type": "n8n-nodes-base.googleDrive",
       "typeVersion": 1,
-      "position": [
-        800,
-        450
-      ],
+      "position": [800, 450],
       "credentials": {
-        "googleDriveOAuth2Api": "Google Drive creds"
+        "googleApi": {
+          "id": "196",
+          "name": "Google API creds"
+        }
       }
     },
     {
       "parameters": {
-        "authentication": "oAuth2",
+        "authentication": "serviceAccount",
         "operation": "download",
         "fileId": "={{$node[\"Google Drive3\"].json[\"id\"]}}"
       },
       "name": "Google Drive6",
       "type": "n8n-nodes-base.googleDrive",
       "typeVersion": 1,
-      "position": [
-        960,
-        450
-      ],
+      "position": [960, 450],
       "credentials": {
-        "googleDriveOAuth2Api": "Google Drive creds"
+        "googleApi": {
+          "id": "196",
+          "name": "Google API creds"
+        }
       }
     },
     {
       "parameters": {
-        "authentication": "oAuth2",
+        "authentication": "serviceAccount",
         "operation": "copy",
         "fileId": "={{$node[\"Google Drive3\"].json[\"id\"]}}",
         "options": {}
@@ -160,63 +157,63 @@
       "name": "Google Drive7",
       "type": "n8n-nodes-base.googleDrive",
       "typeVersion": 1,
-      "position": [
-        1100,
-        450
-      ],
+      "position": [1100, 450],
       "credentials": {
-        "googleDriveOAuth2Api": "Google Drive creds"
+        "googleApi": {
+          "id": "196",
+          "name": "Google API creds"
+        }
       }
     },
     {
       "parameters": {
-        "authentication": "oAuth2",
+        "authentication": "serviceAccount",
         "operation": "delete",
         "fileId": "={{$node[\"Google Drive3\"].json[\"id\"]}}"
       },
       "name": "Google Drive8",
       "type": "n8n-nodes-base.googleDrive",
       "typeVersion": 1,
-      "position": [
-        1240,
-        450
-      ],
+      "position": [1240, 450],
       "credentials": {
-        "googleDriveOAuth2Api": "Google Drive creds"
+        "googleApi": {
+          "id": "196",
+          "name": "Google API creds"
+        }
       }
     },
     {
       "parameters": {
-        "authentication": "oAuth2",
+        "authentication": "serviceAccount",
         "operation": "delete",
         "fileId": "={{$node[\"Google Drive7\"].json[\"id\"]}}"
       },
       "name": "Google Drive9",
       "type": "n8n-nodes-base.googleDrive",
       "typeVersion": 1,
-      "position": [
-        1380,
-        450
-      ],
+      "position": [1380, 450],
       "credentials": {
-        "googleDriveOAuth2Api": "Google Drive creds"
+        "googleApi": {
+          "id": "196",
+          "name": "Google API creds"
+        }
       }
     },
     {
       "parameters": {
-        "authentication": "oAuth2",
+        "authentication": "serviceAccount",
         "resource": "drive",
         "options": {}
       },
       "name": "Google Drive10",
       "type": "n8n-nodes-base.googleDrive",
       "typeVersion": 1,
-      "position": [
-        500,
-        610
-      ],
+      "position": [500, 610],
       "credentials": {
-        "googleDriveOAuth2Api": "Google Drive creds"
+        "googleApi": {
+          "id": "196",
+          "name": "Google API creds"
+        }
       },
       "disabled": true
     }

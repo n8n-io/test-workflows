@@ -5,8 +5,8 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1676891398510,
-            "executionTime": 1,
+            "startTime": 1706635241998,
+            "executionTime": 0,
             "source": [],
             "executionStatus": "success",
             "data": {
@@ -25,8 +25,8 @@
         ],
         "Phantombuster": [
           {
-            "startTime": 1676891398511,
-            "executionTime": 318,
+            "startTime": 1706635241998,
+            "executionTime": 278,
             "source": [
               {
                 "previousNode": "Start"
@@ -50,7 +50,7 @@
                         "object": true
                       },
                       "lastEndType": "finished",
-                      "lastEndedAt": 1676891208835,
+                      "lastEndedAt": 1706627820800,
                       "lastExitCode": 0,
                       "nbContainersRunning": 0,
                       "runningTime": {
@@ -70,8 +70,8 @@
         ],
         "Phantombuster1": [
           {
-            "startTime": 1676891398830,
-            "executionTime": 176,
+            "startTime": 1706635242276,
+            "executionTime": 54,
             "source": [
               {
                 "previousNode": "Phantombuster"
@@ -94,7 +94,7 @@
                         "object": true
                       },
                       "launchType": "manually",
-                      "nbLaunches": 453,
+                      "nbLaunches": 1297,
                       "s3Folder": "UKSkFmaigVohTti7pkwW0A",
                       "orgS3Folder": "sTTpLenO2iY",
                       "updatedAt": 1614591972895,
@@ -112,8 +112,8 @@
         ],
         "Phantombuster2": [
           {
-            "startTime": 1676891399006,
-            "executionTime": 981,
+            "startTime": 1706635242331,
+            "executionTime": 645,
             "source": [
               {
                 "previousNode": "Phantombuster1"
@@ -125,7 +125,7 @@
                 [
                   {
                     "json": {
-                      "containerId": "7053691486686778"
+                      "containerId": "2339642446758879"
                     },
                     "pairedItem": {
                       "item": 0
@@ -138,8 +138,8 @@
         ],
         "Phantombuster3": [
           {
-            "startTime": 1676891399990,
-            "executionTime": 208,
+            "startTime": 1706635242977,
+            "executionTime": 62,
             "source": [
               {
                 "previousNode": "Phantombuster2"
@@ -151,11 +151,11 @@
                 [
                   {
                     "json": {
-                      "containerId": "7053691486686778",
+                      "containerId": "2339642446758879",
                       "status": "running",
                       "output": "",
                       "outputPos": 0,
-                      "isAgentRunning": true,
+                      "isAgentRunning": false,
                       "canSoftAbort": false
                     },
                     "pairedItem": {
@@ -173,13 +173,14 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
+      "metadata": {},
       "waitingExecution": {},
       "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2023-02-20T11:09:58.504Z",
-  "stoppedAt": "2023-02-20T11:10:00.198Z",
+  "startedAt": "2024-01-30T17:20:41.997Z",
+  "stoppedAt": "2024-01-30T17:20:43.039Z",
   "status": "running",
   "finished": true
 }

@@ -5,8 +5,8 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1676891417018,
-            "executionTime": 1,
+            "startTime": 1706635220583,
+            "executionTime": 0,
             "source": [],
             "executionStatus": "success",
             "data": {
@@ -25,8 +25,8 @@
         ],
         "PayPal": [
           {
-            "startTime": 1676891417019,
-            "executionTime": 771,
+            "startTime": 1706635220583,
+            "executionTime": 955,
             "source": [
               {
                 "previousNode": "Start"
@@ -56,8 +56,8 @@
         ],
         "PayPal1": [
           {
-            "startTime": 1676891417790,
-            "executionTime": 537,
+            "startTime": 1706635221538,
+            "executionTime": 471,
             "source": [
               {
                 "previousNode": "PayPal"
@@ -69,12 +69,12 @@
                 [
                   {
                     "json": {
-                      "payout_item_id": "VE2QUHHWA949Y",
+                      "payout_item_id": "4CAFCE75WJSV6",
                       "transaction_status": "PENDING",
                       "payout_item_fee": {
                         "object": true
                       },
-                      "payout_batch_id": "KHWGKJTUEZ67E",
+                      "payout_batch_id": "V9B937K9KGHHQ",
                       "payout_item": {
                         "object": true
                       },
@@ -93,8 +93,8 @@
         ],
         "PayPal2": [
           {
-            "startTime": 1676891418328,
-            "executionTime": 551,
+            "startTime": 1706635222010,
+            "executionTime": 475,
             "source": [
               {
                 "previousNode": "PayPal1"
@@ -106,13 +106,13 @@
                 [
                   {
                     "json": {
-                      "payout_item_id": "VE2QUHHWA949Y",
-                      "transaction_status": "PENDING",
+                      "payout_item_id": "4CAFCE75WJSV6",
+                      "transaction_status": "FAILED",
                       "payout_item_fee": {
                         "object": true
                       },
-                      "payout_batch_id": "KHWGKJTUEZ67E",
-                      "sender_batch_id": "1676891417049",
+                      "payout_batch_id": "V9B937K9KGHHQ",
+                      "sender_batch_id": "1706635220583",
                       "payout_item": {
                         "object": true
                       },
@@ -131,7 +131,7 @@
         ],
         "PayPal3": [
           {
-            "startTime": 1676891418879,
+            "startTime": 1706635222485,
             "executionTime": 0,
             "source": [
               {
@@ -144,13 +144,13 @@
                 [
                   {
                     "json": {
-                      "payout_item_id": "VE2QUHHWA949Y",
-                      "transaction_status": "PENDING",
+                      "payout_item_id": "4CAFCE75WJSV6",
+                      "transaction_status": "FAILED",
                       "payout_item_fee": {
                         "object": true
                       },
-                      "payout_batch_id": "KHWGKJTUEZ67E",
-                      "sender_batch_id": "1676891417049",
+                      "payout_batch_id": "V9B937K9KGHHQ",
+                      "sender_batch_id": "1706635220583",
                       "payout_item": {
                         "object": true
                       },
@@ -173,13 +173,14 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
+      "metadata": {},
       "waitingExecution": {},
       "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2023-02-20T11:10:17.017Z",
-  "stoppedAt": "2023-02-20T11:10:18.879Z",
+  "startedAt": "2024-01-30T17:20:20.582Z",
+  "stoppedAt": "2024-01-30T17:20:22.486Z",
   "status": "running",
   "finished": true
 }

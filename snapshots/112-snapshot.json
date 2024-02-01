@@ -5,7 +5,7 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1706635245944,
+            "startTime": 1706635214674,
             "executionTime": 0,
             "source": [],
             "executionStatus": "success",
@@ -23,10 +23,10 @@
             }
           }
         ],
-        "FunctionItem": [
+        "RabbitMQ": [
           {
-            "startTime": 1706635245944,
-            "executionTime": 3,
+            "startTime": 1706635214675,
+            "executionTime": 1303,
             "source": [
               {
                 "previousNode": "Start"
@@ -38,13 +38,7 @@
                 [
                   {
                     "json": {
-                      "name": "test",
-                      "indexes": [
-                        "json array"
-                      ],
-                      "subobj": {
-                        "object": true
-                      }
+                      "success": true
                     },
                     "pairedItem": {
                       "item": 0
@@ -55,13 +49,13 @@
             }
           }
         ],
-        "Move Binary Data": [
+        "RabbitMQ1": [
           {
-            "startTime": 1706635245948,
-            "executionTime": 0,
+            "startTime": 1706635215978,
+            "executionTime": 374,
             "source": [
               {
-                "previousNode": "FunctionItem"
+                "previousNode": "Start"
               }
             ],
             "executionStatus": "success",
@@ -69,18 +63,11 @@
               "main": [
                 [
                   {
-                    "json": {},
+                    "json": {
+                      "success": true
+                    },
                     "pairedItem": {
                       "item": 0
-                    },
-                    "binary": {
-                      "data": {
-                        "mimeType": "application/json",
-                        "fileType": "json",
-                        "fileExtension": "json",
-                        "data": "eyJuYW1lIjoidGVzdCIsImluZGV4ZXMiOlsxLDIsM10sInN1Ym9iaiI6eyJuYW1lIjoic3VidGVzdCJ9fQ==",
-                        "fileSize": "61 B"
-                      }
                     }
                   }
                 ]
@@ -88,13 +75,13 @@
             }
           }
         ],
-        "Move Binary Data1": [
+        "RabbitMQ2": [
           {
-            "startTime": 1706635245948,
-            "executionTime": 0,
+            "startTime": 1706635216353,
+            "executionTime": 305,
             "source": [
               {
-                "previousNode": "Move Binary Data"
+                "previousNode": "RabbitMQ1"
               }
             ],
             "executionStatus": "success",
@@ -103,31 +90,24 @@
                 [
                   {
                     "json": {
-                      "name": "test",
-                      "indexes": [
-                        "json array"
-                      ],
-                      "subobj": {
-                        "object": true
-                      }
+                      "success": true
                     },
                     "pairedItem": {
                       "item": 0
-                    },
-                    "binary": {}
+                    }
                   }
                 ]
               ]
             }
           }
         ],
-        "Function": [
+        "RabbitMQ3": [
           {
-            "startTime": 1706635245948,
-            "executionTime": 2,
+            "startTime": 1706635216658,
+            "executionTime": 1093,
             "source": [
               {
-                "previousNode": "Move Binary Data1"
+                "previousNode": "RabbitMQ2"
               }
             ],
             "executionStatus": "success",
@@ -136,19 +116,37 @@
                 [
                   {
                     "json": {
-                      "name": "test",
-                      "indexes": [
-                        "json array"
-                      ],
-                      "subobj": {
-                        "object": true
-                      }
+                      "success": true
                     },
                     "pairedItem": {
                       "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "RabbitMQ4": [
+          {
+            "startTime": 1706635217751,
+            "executionTime": 745,
+            "source": [
+              {
+                "previousNode": "RabbitMQ3"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "success": true
                     },
-                    "binary": {},
-                    "index": 0
+                    "pairedItem": {
+                      "item": 0
+                    }
                   }
                 ]
               ]
@@ -156,7 +154,7 @@
           }
         ]
       },
-      "lastNodeExecuted": "Function"
+      "lastNodeExecuted": "RabbitMQ4"
     },
     "executionData": {
       "contextData": {},
@@ -167,8 +165,8 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2024-01-30T17:20:45.943Z",
-  "stoppedAt": "2024-01-30T17:20:45.950Z",
+  "startedAt": "2024-01-30T17:20:14.674Z",
+  "stoppedAt": "2024-01-30T17:20:18.496Z",
   "status": "running",
   "finished": true
 }
