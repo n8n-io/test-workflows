@@ -1,0 +1,128 @@
+{
+  "data": {
+    "startData": {},
+    "resultData": {
+      "runData": {
+        "When clicking \"Test workflow\"": [
+          {
+            "startTime": 1707236722571,
+            "executionTime": 0,
+            "source": [],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "HTTP Request": [
+          {
+            "startTime": 1707236722572,
+            "executionTime": 137,
+            "source": [
+              {
+                "previousNode": "When clicking \"Test workflow\""
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "error": {
+                        "object": true
+                      }
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Internal SSL Error?": [
+          {
+            "startTime": 1707236722709,
+            "executionTime": 6,
+            "source": [
+              {
+                "previousNode": "HTTP Request"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [],
+                [
+                  {
+                    "json": {
+                      "error": {
+                        "object": true
+                      }
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Success": [
+          {
+            "startTime": 1707236722715,
+            "executionTime": 0,
+            "source": [
+              {
+                "previousNode": "Internal SSL Error?",
+                "previousNodeOutput": 1
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "error": {
+                        "object": true
+                      }
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      "lastNodeExecuted": "Success"
+    },
+    "executionData": {
+      "contextData": {},
+      "nodeExecutionStack": [],
+      "metadata": {},
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
+    }
+  },
+  "mode": "cli",
+  "startedAt": "2024-02-06T16:25:22.570Z",
+  "stoppedAt": "2024-02-06T16:25:22.715Z",
+  "status": "running",
+  "finished": true
+}
