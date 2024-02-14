@@ -1,5 +1,7 @@
 {
-  "id": 124,
+  "createdAt": "2021-03-11T12:18:29.698Z",
+  "updatedAt": "2021-03-11T12:18:29.698Z",
+  "id": "124",
   "name": "QuestDB: insert executeQuery",
   "active": false,
   "nodes": [
@@ -11,7 +13,8 @@
       "position": [
         250,
         300
-      ]
+      ],
+      "id": "97bc2a65-cef4-47d4-b986-8bbf54f8698d"
     },
     {
       "parameters": {
@@ -26,8 +29,12 @@
         300
       ],
       "credentials": {
-        "questDb": "QuestDB creds"
-      }
+        "questDb": {
+          "id": "91",
+          "name": "QuestDB creds"
+        }
+      },
+      "id": "da306e33-0ed0-4c94-b37e-2769511e28d1"
     },
     {
       "parameters": {
@@ -55,7 +62,8 @@
         300
       ],
       "notesInFlow": true,
-      "notes": "prepare data"
+      "notes": "prepare data",
+      "id": "53f41164-da16-4eae-a333-09166cfffeea"
     },
     {
       "parameters": {
@@ -71,9 +79,13 @@
       ],
       "notesInFlow": true,
       "credentials": {
-        "questDb": "QuestDB creds"
+        "questDb": {
+          "id": "91",
+          "name": "QuestDB creds"
+        }
       },
-      "notes": "get data"
+      "notes": "get data",
+      "id": "d40ddbdd-c531-469b-8470-06d93e4a72e2"
     },
     {
       "parameters": {
@@ -89,9 +101,13 @@
       ],
       "notesInFlow": true,
       "credentials": {
-        "questDb": "QuestDB creds"
+        "questDb": {
+          "id": "91",
+          "name": "QuestDB creds"
+        }
       },
-      "notes": "delete data"
+      "notes": "delete data",
+      "id": "7cd8a74b-0305-4700-b9db-ddcb844aa40b"
     }
   ],
   "connections": {
@@ -140,8 +156,11 @@
       ]
     }
   },
-  "createdAt": "2021-03-11T12:18:29.698Z",
-  "updatedAt": "2021-03-11T12:18:29.698Z",
   "settings": {},
-  "staticData": null
+  "staticData": null,
+  "meta": null,
+  "pinData": null,
+  "versionId": null,
+  "triggerCount": 0,
+  "tags": []
 }

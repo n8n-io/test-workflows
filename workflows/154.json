@@ -1,5 +1,7 @@
 {
-  "id": 154,
+  "createdAt": "2021-03-25T09:52:50.269Z",
+  "updatedAt": "2021-03-25T09:52:50.269Z",
+  "id": "154",
   "name": "AWSRekognition:Image:analyze",
   "active": false,
   "nodes": [
@@ -11,7 +13,8 @@
       "position": [
         250,
         300
-      ]
+      ],
+      "id": "b1f09994-6b4a-4979-bfc4-ec27ba3003ff"
     },
     {
       "parameters": {
@@ -27,8 +30,12 @@
         300
       ],
       "credentials": {
-        "aws": "AWS creds"
-      }
+        "aws": {
+          "id": "124",
+          "name": "AWS creds"
+        }
+      },
+      "id": "9dd43252-32fd-469a-9698-7f486fc51bb5"
     },
     {
       "parameters": {
@@ -40,7 +47,8 @@
       "position": [
         500,
         300
-      ]
+      ],
+      "id": "1d29136d-934f-4913-bd1c-d34a2881c9c8"
     }
   ],
   "connections": {
@@ -67,8 +75,11 @@
       ]
     }
   },
-  "createdAt": "2021-03-25T09:52:50.269Z",
-  "updatedAt": "2021-03-25T09:52:50.269Z",
   "settings": {},
-  "staticData": null
+  "staticData": null,
+  "meta": null,
+  "pinData": null,
+  "versionId": null,
+  "triggerCount": 0,
+  "tags": []
 }

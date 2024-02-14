@@ -1,5 +1,7 @@
 {
-  "id": 146,
+  "createdAt": "2021-03-23T19:24:34.036Z",
+  "updatedAt": "2021-03-23T19:24:34.036Z",
+  "id": "146",
   "name": "TimescaleDB:insert update executeQuery",
   "active": false,
   "nodes": [
@@ -11,7 +13,8 @@
       "position": [
         250,
         300
-      ]
+      ],
+      "id": "22efcecd-6cad-42b4-9571-123444740429"
     },
     {
       "parameters": {
@@ -26,8 +29,12 @@
         300
       ],
       "credentials": {
-        "timescaleDb": "TimescaleDB creds"
-      }
+        "timescaleDb": {
+          "id": "117",
+          "name": "TimescaleDB creds"
+        }
+      },
+      "id": "e1b1c99c-bf00-4203-b879-bce0feda1963"
     },
     {
       "parameters": {
@@ -57,7 +64,8 @@
       "position": [
         400,
         300
-      ]
+      ],
+      "id": "834fa03b-7027-435b-acb0-21ca690a6252"
     },
     {
       "parameters": {
@@ -74,8 +82,12 @@
         300
       ],
       "credentials": {
-        "timescaleDb": "TimescaleDB creds"
-      }
+        "timescaleDb": {
+          "id": "117",
+          "name": "TimescaleDB creds"
+        }
+      },
+      "id": "1fae6a3d-91b5-4c4d-8204-270856d7d6de"
     },
     {
       "parameters": {
@@ -91,9 +103,13 @@
       ],
       "notesInFlow": true,
       "credentials": {
-        "timescaleDb": "TimescaleDB creds"
+        "timescaleDb": {
+          "id": "117",
+          "name": "TimescaleDB creds"
+        }
       },
-      "notes": "Select row using query"
+      "notes": "Select row using query",
+      "id": "6e296996-47ee-446a-8784-731d7ecfc9e7"
     },
     {
       "parameters": {
@@ -114,7 +130,8 @@
       "position": [
         850,
         300
-      ]
+      ],
+      "id": "344e4ad6-aba8-4792-b846-508e61592a38"
     },
     {
       "parameters": {
@@ -129,8 +146,12 @@
         300
       ],
       "credentials": {
-        "timescaleDb": "TimescaleDB creds"
-      }
+        "timescaleDb": {
+          "id": "117",
+          "name": "TimescaleDB creds"
+        }
+      },
+      "id": "516e1804-3f18-4897-86e7-cf924f92b5aa"
     }
   ],
   "connections": {
@@ -201,8 +222,11 @@
       ]
     }
   },
-  "createdAt": "2021-03-23T19:24:34.036Z",
-  "updatedAt": "2021-03-23T19:24:34.036Z",
   "settings": {},
-  "staticData": null
+  "staticData": null,
+  "meta": null,
+  "pinData": null,
+  "versionId": null,
+  "triggerCount": 0,
+  "tags": []
 }

@@ -1,5 +1,7 @@
 {
-  "id": 172,
+  "createdAt": "2021-04-19T13:01:49.487Z",
+  "updatedAt": "2021-06-08T09:29:29.798Z",
+  "id": "172",
   "name": "Paypal:Payout:create get:PayoutItem:get",
   "active": false,
   "nodes": [
@@ -11,7 +13,8 @@
       "position": [
         250,
         300
-      ]
+      ],
+      "id": "c685e7cb-90e2-42d3-87d4-c8f8143c5a8c"
     },
     {
       "parameters": {
@@ -34,8 +37,12 @@
         200
       ],
       "credentials": {
-        "payPalApi": "PayPal API creds"
-      }
+        "payPalApi": {
+          "id": "141",
+          "name": "PayPal API creds"
+        }
+      },
+      "id": "31bf4a9b-bc38-4b63-9990-4f08db26a285"
     },
     {
       "parameters": {
@@ -51,9 +58,13 @@
         200
       ],
       "credentials": {
-        "payPalApi": "PayPal API creds"
+        "payPalApi": {
+          "id": "141",
+          "name": "PayPal API creds"
+        }
       },
-      "notes": "IGNORED_PROPERTIES=errors"
+      "notes": "IGNORED_PROPERTIES=errors",
+      "id": "d2fdb861-6f84-4ee1-86a4-a5b8c81b0656"
     },
     {
       "parameters": {
@@ -68,9 +79,13 @@
         250
       ],
       "credentials": {
-        "payPalApi": "PayPal API creds"
+        "payPalApi": {
+          "id": "141",
+          "name": "PayPal API creds"
+        }
       },
-      "notes": "IGNORED_PROPERTIES=errors"
+      "notes": "IGNORED_PROPERTIES=errors",
+      "id": "0ef6ac4c-4aa1-4cb1-a4f7-3feb6a17208e"
     },
     {
       "parameters": {
@@ -86,9 +101,13 @@
         250
       ],
       "credentials": {
-        "payPalApi": "PayPal API creds"
+        "payPalApi": {
+          "id": "141",
+          "name": "PayPal API creds"
+        }
       },
-      "disabled": true
+      "disabled": true,
+      "id": "bec01033-9ce1-4789-9115-7f07991ac6b1"
     }
   ],
   "connections": {
@@ -137,8 +156,11 @@
       ]
     }
   },
-  "createdAt": "2021-04-19T13:01:49.487Z",
-  "updatedAt": "2021-06-08T09:29:29.798Z",
   "settings": {},
-  "staticData": null
+  "staticData": null,
+  "meta": null,
+  "pinData": null,
+  "versionId": null,
+  "triggerCount": 0,
+  "tags": []
 }

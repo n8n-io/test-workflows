@@ -1,5 +1,7 @@
 {
-  "id": 152,
+  "createdAt": "2021-03-25T09:23:15.717Z",
+  "updatedAt": "2021-05-10T14:22:21.201Z",
+  "id": "152",
   "name": "AWSComprehend:Text:detectDominantLanguage detectSentiment detectEntities",
   "active": false,
   "nodes": [
@@ -11,7 +13,8 @@
       "position": [
         250,
         300
-      ]
+      ],
+      "id": "4db01d0f-ffb0-4ced-be9a-8e80eddc20d4"
     },
     {
       "parameters": {
@@ -25,8 +28,12 @@
         200
       ],
       "credentials": {
-        "aws": "AWS creds"
-      }
+        "aws": {
+          "id": "124",
+          "name": "AWS creds"
+        }
+      },
+      "id": "dbc6fd62-d8c6-44e7-aed9-6f8f28e609db"
     },
     {
       "parameters": {
@@ -41,8 +48,12 @@
         380
       ],
       "credentials": {
-        "aws": "AWS creds"
-      }
+        "aws": {
+          "id": "124",
+          "name": "AWS creds"
+        }
+      },
+      "id": "5ba9b2b0-0534-44d9-bdb5-3f45cd4964d9"
     },
     {
       "parameters": {
@@ -58,8 +69,12 @@
         550
       ],
       "credentials": {
-        "aws": "AWS creds"
-      }
+        "aws": {
+          "id": "124",
+          "name": "AWS creds"
+        }
+      },
+      "id": "c744db52-65cc-4e4a-811b-69b2ec328352"
     }
   ],
   "connections": {
@@ -85,8 +100,11 @@
       ]
     }
   },
-  "createdAt": "2021-03-25T09:23:15.717Z",
-  "updatedAt": "2021-05-10T14:22:21.201Z",
   "settings": {},
-  "staticData": null
+  "staticData": null,
+  "meta": null,
+  "pinData": null,
+  "versionId": null,
+  "triggerCount": 0,
+  "tags": []
 }

@@ -1,5 +1,7 @@
 {
-  "id": 1,
+  "createdAt": "2021-01-21T10:32:07.628Z",
+  "updatedAt": "2021-06-04T10:25:41.024Z",
+  "id": "1",
   "name": "Twitter:tweet:create:create like retweet delete search",
   "active": false,
   "nodes": [
@@ -11,7 +13,8 @@
       "position": [
         250,
         300
-      ]
+      ],
+      "id": "0d0e09b1-87e5-4c64-acf5-9a7da0718775"
     },
     {
       "parameters": {
@@ -26,8 +29,12 @@
         300
       ],
       "credentials": {
-        "twitterOAuth1Api": "Twitter API"
-      }
+        "twitterOAuth1Api": {
+          "id": "161",
+          "name": "Twitter API"
+        }
+      },
+      "id": "e3e833e8-c567-492d-b5e9-6233e0a3890d"
     },
     {
       "parameters": {
@@ -43,8 +50,12 @@
         300
       ],
       "credentials": {
-        "twitterOAuth1Api": "Twitter API"
-      }
+        "twitterOAuth1Api": {
+          "id": "161",
+          "name": "Twitter API"
+        }
+      },
+      "id": "904c5a06-bd36-4edc-abbc-d3cfd946a9f2"
     },
     {
       "parameters": {
@@ -60,8 +71,12 @@
         300
       ],
       "credentials": {
-        "twitterOAuth1Api": "Twitter API"
-      }
+        "twitterOAuth1Api": {
+          "id": "161",
+          "name": "Twitter API"
+        }
+      },
+      "id": "fdd7b0de-c279-452e-b6be-acebea480071"
     },
     {
       "parameters": {
@@ -76,8 +91,12 @@
         300
       ],
       "credentials": {
-        "twitterOAuth1Api": "Twitter API"
-      }
+        "twitterOAuth1Api": {
+          "id": "161",
+          "name": "Twitter API"
+        }
+      },
+      "id": "6dff7ba3-ba03-4cdb-9305-d80eb02d4b83"
     },
     {
       "parameters": {
@@ -94,9 +113,13 @@
         450
       ],
       "credentials": {
-        "twitterOAuth1Api": "Twitter API"
+        "twitterOAuth1Api": {
+          "id": "161",
+          "name": "Twitter API"
+        }
       },
-      "notes": "IGNORED_PROPERTIES=extended_entities,retweeted_status,quoted_status_id,quoted_status_id_str,quoted_status,possibly_sensitive"
+      "notes": "IGNORED_PROPERTIES=extended_entities,retweeted_status,quoted_status_id,quoted_status_id_str,quoted_status,possibly_sensitive",
+      "id": "205bf8c9-afed-4a6a-b538-bb572ef14287"
     }
   ],
   "connections": {
@@ -150,8 +173,11 @@
       ]
     }
   },
-  "createdAt": "2021-01-21T10:32:07.628Z",
-  "updatedAt": "2021-06-04T10:25:41.024Z",
   "settings": {},
-  "staticData": null
+  "staticData": null,
+  "meta": null,
+  "pinData": null,
+  "versionId": null,
+  "triggerCount": 0,
+  "tags": []
 }

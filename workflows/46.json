@@ -1,5 +1,7 @@
 {
-  "id": 46,
+  "createdAt": "2021-02-19T09:10:55.093Z",
+  "updatedAt": "2021-06-04T16:58:49.525Z",
+  "id": "46",
   "name": "GoogleBooks:Volume:getAll get:BookShelf:getAll get:BookShelfVolume:add move getAll remove clear",
   "active": false,
   "nodes": [
@@ -8,7 +10,11 @@
       "name": "Start",
       "type": "n8n-nodes-base.start",
       "typeVersion": 1,
-      "position": [190, 380]
+      "position": [
+        190,
+        380
+      ],
+      "id": "92c95e9a-bed8-4099-9f53-f2744380c0e2"
     },
     {
       "parameters": {
@@ -21,14 +27,18 @@
       "name": "Google Books",
       "type": "n8n-nodes-base.googleBooks",
       "typeVersion": 1,
-      "position": [480, 300],
+      "position": [
+        480,
+        300
+      ],
       "credentials": {
         "googleApi": {
           "id": "196",
           "name": "Google API creds"
         }
       },
-      "notes": "IGNORED_PROPERTIES=userInfo"
+      "notes": "IGNORED_PROPERTIES=userInfo",
+      "id": "2cc49cda-b0ee-4c8f-96c9-eede0627537c"
     },
     {
       "parameters": {
@@ -39,14 +49,18 @@
       "name": "Google Books1",
       "type": "n8n-nodes-base.googleBooks",
       "typeVersion": 1,
-      "position": [650, 300],
+      "position": [
+        650,
+        300
+      ],
       "credentials": {
         "googleApi": {
           "id": "196",
           "name": "Google API creds"
         }
       },
-      "notes": "IGNORED_PROPERTIES=layerInfo"
+      "notes": "IGNORED_PROPERTIES=layerInfo",
+      "id": "629b25f8-ced3-41a0-9e8e-47a84c1c654b"
     },
     {
       "parameters": {
@@ -58,13 +72,17 @@
       "name": "Google Books2",
       "type": "n8n-nodes-base.googleBooks",
       "typeVersion": 1,
-      "position": [480, 460],
+      "position": [
+        480,
+        460
+      ],
       "credentials": {
         "googleApi": {
           "id": "196",
           "name": "Google API creds"
         }
-      }
+      },
+      "id": "6deb68ae-0a5d-4d1c-b8f0-e6f7a53bb67a"
     },
     {
       "parameters": {
@@ -75,13 +93,17 @@
       "name": "Google Books3",
       "type": "n8n-nodes-base.googleBooks",
       "typeVersion": 1,
-      "position": [640, 460],
+      "position": [
+        640,
+        460
+      ],
       "credentials": {
         "googleApi": {
           "id": "196",
           "name": "Google API creds"
         }
-      }
+      },
+      "id": "75b090c9-0b7b-466a-8805-3a7a19cb4db8"
     },
     {
       "parameters": {
@@ -94,14 +116,18 @@
       "name": "Google Books4",
       "type": "n8n-nodes-base.googleBooks",
       "typeVersion": 1,
-      "position": [820, 420],
+      "position": [
+        820,
+        420
+      ],
       "alwaysOutputData": true,
       "credentials": {
         "googleApi": {
           "id": "196",
           "name": "Google API creds"
         }
-      }
+      },
+      "id": "de433fd4-9964-4e37-9446-33248f9851f6"
     },
     {
       "parameters": {
@@ -115,14 +141,18 @@
       "name": "Google Books5",
       "type": "n8n-nodes-base.googleBooks",
       "typeVersion": 1,
-      "position": [990, 420],
+      "position": [
+        990,
+        420
+      ],
       "alwaysOutputData": true,
       "credentials": {
         "googleApi": {
           "id": "196",
           "name": "Google API creds"
         }
-      }
+      },
+      "id": "f797616b-cd2d-4f41-b138-eafeaac2a059"
     },
     {
       "parameters": {
@@ -135,7 +165,10 @@
       "name": "Google Books6",
       "type": "n8n-nodes-base.googleBooks",
       "typeVersion": 1,
-      "position": [1150, 420],
+      "position": [
+        1150,
+        420
+      ],
       "alwaysOutputData": true,
       "credentials": {
         "googleApi": {
@@ -143,7 +176,8 @@
           "name": "Google API creds"
         }
       },
-      "notes": "IGNORED_PROPERTIES=layerInfo"
+      "notes": "IGNORED_PROPERTIES=layerInfo",
+      "id": "2c5e6a25-48c7-44e7-bce6-e7b15af5632f"
     },
     {
       "parameters": {
@@ -156,14 +190,18 @@
       "name": "Google Books7",
       "type": "n8n-nodes-base.googleBooks",
       "typeVersion": 1,
-      "position": [1340, 420],
+      "position": [
+        1340,
+        420
+      ],
       "alwaysOutputData": true,
       "credentials": {
         "googleApi": {
           "id": "196",
           "name": "Google API creds"
         }
-      }
+      },
+      "id": "3effe483-67fd-4dc4-90b2-aacea6a8e4b2"
     },
     {
       "parameters": {
@@ -175,14 +213,18 @@
       "name": "Google Books8",
       "type": "n8n-nodes-base.googleBooks",
       "typeVersion": 1,
-      "position": [1520, 420],
+      "position": [
+        1520,
+        420
+      ],
       "alwaysOutputData": true,
       "credentials": {
         "googleApi": {
           "id": "196",
           "name": "Google API creds"
         }
-      }
+      },
+      "id": "e0d6001c-abb2-41b2-a61e-3aaa47999106"
     }
   ],
   "connections": {
@@ -280,8 +322,11 @@
       ]
     }
   },
-  "createdAt": "2021-02-19T09:10:55.093Z",
-  "updatedAt": "2021-06-04T16:58:49.525Z",
   "settings": {},
-  "staticData": null
+  "staticData": null,
+  "meta": null,
+  "pinData": null,
+  "versionId": null,
+  "triggerCount": 0,
+  "tags": []
 }

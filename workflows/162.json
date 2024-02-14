@@ -1,5 +1,7 @@
 {
-  "id": 162,
+  "createdAt": "2021-04-06T08:27:12.354Z",
+  "updatedAt": "2021-04-19T08:16:20.657Z",
+  "id": "162",
   "name": "AWSSQS:sendMessage",
   "active": false,
   "nodes": [
@@ -11,7 +13,8 @@
       "position": [
         250,
         300
-      ]
+      ],
+      "id": "61c9e1a4-21ab-4146-82ae-4c4388c1da30"
     },
     {
       "parameters": {
@@ -37,8 +40,12 @@
         200
       ],
       "credentials": {
-        "aws": "AWS creds"
-      }
+        "aws": {
+          "id": "124",
+          "name": "AWS creds"
+        }
+      },
+      "id": "0194b047-c629-4f68-a629-12455de6ecf6"
     },
     {
       "parameters": {
@@ -67,8 +74,12 @@
         380
       ],
       "credentials": {
-        "aws": "AWS creds"
-      }
+        "aws": {
+          "id": "124",
+          "name": "AWS creds"
+        }
+      },
+      "id": "25bc7b70-06c8-4605-8744-f27ab8765761"
     }
   ],
   "connections": {
@@ -89,8 +100,11 @@
       ]
     }
   },
-  "createdAt": "2021-04-06T08:27:12.354Z",
-  "updatedAt": "2021-04-19T08:16:20.657Z",
   "settings": {},
-  "staticData": null
+  "staticData": null,
+  "meta": null,
+  "pinData": null,
+  "versionId": null,
+  "triggerCount": 0,
+  "tags": []
 }

@@ -1,5 +1,7 @@
 {
-  "id": 4,
+  "createdAt": "2021-01-21T13:48:02.703Z",
+  "updatedAt": "2021-03-15T13:59:19.891Z",
+  "id": "4",
   "name": "FTP:ftp:list download upload",
   "active": false,
   "nodes": [
@@ -11,7 +13,8 @@
       "position": [
         250,
         300
-      ]
+      ],
+      "id": "5bc91980-86a2-469c-8ad0-7de1d8c9b7e1"
     },
     {
       "parameters": {
@@ -26,8 +29,12 @@
         300
       ],
       "credentials": {
-        "ftp": "FTP creds"
-      }
+        "ftp": {
+          "id": "106",
+          "name": "FTP creds"
+        }
+      },
+      "id": "7aee41cf-627d-424a-99a3-952837497848"
     },
     {
       "parameters": {
@@ -41,8 +48,12 @@
         300
       ],
       "credentials": {
-        "ftp": "FTP creds"
-      }
+        "ftp": {
+          "id": "106",
+          "name": "FTP creds"
+        }
+      },
+      "id": "ab5f20c7-6464-4779-8e13-b47b11ba9459"
     },
     {
       "parameters": {
@@ -57,8 +68,12 @@
         300
       ],
       "credentials": {
-        "ftp": "FTP creds"
-      }
+        "ftp": {
+          "id": "106",
+          "name": "FTP creds"
+        }
+      },
+      "id": "066b0e3d-918f-4a28-94b6-9432e6e572a1"
     },
     {
       "parameters": {
@@ -78,7 +93,8 @@
       "position": [
         750,
         300
-      ]
+      ],
+      "id": "08e2e0f0-f730-48cf-a05e-40820a55aaa3"
     }
   ],
   "connections": {
@@ -132,8 +148,11 @@
       ]
     }
   },
-  "createdAt": "2021-01-21T13:48:02.703Z",
-  "updatedAt": "2021-03-15T13:59:19.891Z",
   "settings": {},
-  "staticData": null
+  "staticData": null,
+  "meta": null,
+  "pinData": null,
+  "versionId": null,
+  "triggerCount": 0,
+  "tags": []
 }

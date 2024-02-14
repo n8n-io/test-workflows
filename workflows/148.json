@@ -1,5 +1,7 @@
 {
-  "id": 148,
+  "createdAt": "2021-03-24T09:07:34.933Z",
+  "updatedAt": "2021-07-29T14:07:02.141Z",
+  "id": "148",
   "name": "Deepl:Language:translate",
   "active": false,
   "nodes": [
@@ -11,7 +13,8 @@
       "position": [
         250,
         300
-      ]
+      ],
+      "id": "e3254a53-50f2-42df-925a-f7f4ac8d0a50"
     },
     {
       "parameters": {
@@ -31,8 +34,12 @@
         300
       ],
       "credentials": {
-        "deepLApi": "Deepl Free API creds"
-      }
+        "deepLApi": {
+          "id": "183",
+          "name": "Deepl Free API creds"
+        }
+      },
+      "id": "e8c6fe13-54b6-476f-a5c5-d6699874fc9e"
     },
     {
       "parameters": {
@@ -44,7 +51,8 @@
       "position": [
         650,
         300
-      ]
+      ],
+      "id": "2672ca93-3052-4bc7-9145-f0f25405378d"
     }
   ],
   "connections": {
@@ -71,8 +79,11 @@
       ]
     }
   },
-  "createdAt": "2021-03-24T09:07:34.933Z",
-  "updatedAt": "2021-07-29T14:07:02.141Z",
   "settings": {},
-  "staticData": null
+  "staticData": null,
+  "meta": null,
+  "pinData": null,
+  "versionId": null,
+  "triggerCount": 0,
+  "tags": []
 }

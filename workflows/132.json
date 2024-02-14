@@ -1,5 +1,7 @@
 {
-  "id": 132,
+  "createdAt": "2021-03-12T15:55:16.919Z",
+  "updatedAt": "2021-03-12T15:55:16.919Z",
+  "id": "132",
   "name": "Mandrill:Message:sendTemplate sendHTML",
   "active": false,
   "nodes": [
@@ -11,7 +13,8 @@
       "position": [
         250,
         300
-      ]
+      ],
+      "id": "d6242130-9d76-4db0-8fc8-5b2cbd24b5fe"
     },
     {
       "parameters": {
@@ -28,8 +31,12 @@
         250
       ],
       "credentials": {
-        "mandrillApi": "Mandrill API creds"
-      }
+        "mandrillApi": {
+          "id": "100",
+          "name": "Mandrill API creds"
+        }
+      },
+      "id": "e31f6f3e-eee2-4047-90dc-acc08c80438d"
     },
     {
       "parameters": {
@@ -48,8 +55,12 @@
         400
       ],
       "credentials": {
-        "mandrillApi": "Mandrill API creds"
-      }
+        "mandrillApi": {
+          "id": "100",
+          "name": "Mandrill API creds"
+        }
+      },
+      "id": "da056d97-7a2b-457d-8236-5ce62f35ab17"
     }
   ],
   "connections": {
@@ -70,8 +81,11 @@
       ]
     }
   },
-  "createdAt": "2021-03-12T15:55:16.919Z",
-  "updatedAt": "2021-03-12T15:55:16.919Z",
   "settings": {},
-  "staticData": null
+  "staticData": null,
+  "meta": null,
+  "pinData": null,
+  "versionId": null,
+  "triggerCount": 0,
+  "tags": []
 }

@@ -1,5 +1,7 @@
 {
-  "id": 171,
+  "createdAt": "2021-04-19T10:15:58.189Z",
+  "updatedAt": "2021-06-04T14:55:29.008Z",
+  "id": "171",
   "name": "Stackby:append read list delete",
   "active": false,
   "nodes": [
@@ -11,7 +13,8 @@
       "position": [
         250,
         300
-      ]
+      ],
+      "id": "570ac713-7639-4d31-aed5-d813b6cb3f32"
     },
     {
       "parameters": {
@@ -27,8 +30,12 @@
         300
       ],
       "credentials": {
-        "stackbyApi": "Stackby API creds"
-      }
+        "stackbyApi": {
+          "id": "140",
+          "name": "Stackby API creds"
+        }
+      },
+      "id": "c5684dac-5284-4aee-ac91-fbf9cd9f0ee6"
     },
     {
       "parameters": {
@@ -54,7 +61,8 @@
       "position": [
         400,
         300
-      ]
+      ],
+      "id": "31ebc435-4f59-42a7-813d-6d98eb59449e"
     },
     {
       "parameters": {
@@ -71,8 +79,12 @@
         300
       ],
       "credentials": {
-        "stackbyApi": "Stackby API creds"
-      }
+        "stackbyApi": {
+          "id": "140",
+          "name": "Stackby API creds"
+        }
+      },
+      "id": "d78e9f09-6930-46d9-919b-80bfaeeac953"
     },
     {
       "parameters": {
@@ -91,9 +103,13 @@
         300
       ],
       "credentials": {
-        "stackbyApi": "Stackby API creds"
+        "stackbyApi": {
+          "id": "140",
+          "name": "Stackby API creds"
+        }
       },
-      "notes": "CAP_RESULTS_LENGTH=1"
+      "notes": "CAP_RESULTS_LENGTH=1",
+      "id": "e94a8735-e82b-4388-8020-925e6e549c1b"
     },
     {
       "parameters": {
@@ -111,8 +127,12 @@
       ],
       "executeOnce": true,
       "credentials": {
-        "stackbyApi": "Stackby API creds"
-      }
+        "stackbyApi": {
+          "id": "140",
+          "name": "Stackby API creds"
+        }
+      },
+      "id": "18174a44-9f60-4a2b-9635-1f5f5eb579c7"
     }
   ],
   "connections": {
@@ -172,8 +192,11 @@
       ]
     }
   },
-  "createdAt": "2021-04-19T10:15:58.189Z",
-  "updatedAt": "2021-06-04T14:55:29.008Z",
   "settings": {},
-  "staticData": null
+  "staticData": null,
+  "meta": null,
+  "pinData": null,
+  "versionId": null,
+  "triggerCount": 0,
+  "tags": []
 }

@@ -1,5 +1,7 @@
 {
-  "id": 156,
+  "createdAt": "2021-03-25T10:56:20.715Z",
+  "updatedAt": "2021-03-25T10:56:20.715Z",
+  "id": "156",
   "name": "AWSSNS:publish",
   "active": false,
   "nodes": [
@@ -11,7 +13,8 @@
       "position": [
         250,
         300
-      ]
+      ],
+      "id": "b5a64e20-a0a9-4ed0-8eb2-f648f8f12789"
     },
     {
       "parameters": {
@@ -27,8 +30,12 @@
         300
       ],
       "credentials": {
-        "aws": "AWS creds"
-      }
+        "aws": {
+          "id": "124",
+          "name": "AWS creds"
+        }
+      },
+      "id": "f57aef0c-0bb4-4e26-b9c2-89df3c72675c"
     }
   ],
   "connections": {
@@ -44,8 +51,11 @@
       ]
     }
   },
-  "createdAt": "2021-03-25T10:56:20.715Z",
-  "updatedAt": "2021-03-25T10:56:20.715Z",
   "settings": {},
-  "staticData": null
+  "staticData": null,
+  "meta": null,
+  "pinData": null,
+  "versionId": null,
+  "triggerCount": 0,
+  "tags": []
 }

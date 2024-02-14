@@ -1,5 +1,7 @@
 {
-  "id": 126,
+  "createdAt": "2021-03-11T14:51:32.026Z",
+  "updatedAt": "2021-03-18T10:28:03.209Z",
+  "id": "126",
   "name": "Kafka",
   "active": false,
   "nodes": [
@@ -11,7 +13,8 @@
       "position": [
         250,
         300
-      ]
+      ],
+      "id": "76f28c5d-1894-4d95-ab23-4e6e39bf69e9"
     },
     {
       "parameters": {
@@ -31,8 +34,12 @@
         300
       ],
       "credentials": {
-        "kafka": "Kafka creds"
-      }
+        "kafka": {
+          "id": "93",
+          "name": "Kafka creds"
+        }
+      },
+      "id": "9d37ab21-f676-4e88-8d71-3033d301ed62"
     },
     {
       "parameters": {
@@ -52,7 +59,8 @@
       "position": [
         500,
         300
-      ]
+      ],
+      "id": "2d1bf06b-6d8e-4f82-b56f-7fde44b74007"
     }
   ],
   "connections": {
@@ -79,8 +87,11 @@
       ]
     }
   },
-  "createdAt": "2021-03-11T14:51:32.026Z",
-  "updatedAt": "2021-03-18T10:28:03.209Z",
   "settings": {},
-  "staticData": null
+  "staticData": null,
+  "meta": null,
+  "pinData": null,
+  "versionId": null,
+  "triggerCount": 0,
+  "tags": []
 }

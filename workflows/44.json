@@ -1,5 +1,7 @@
 {
-  "id": 44,
+  "createdAt": "2021-02-19T07:45:12.148Z",
+  "updatedAt": "2021-02-26T12:22:54.085Z",
+  "id": "44",
   "name": "GoogleDrive:Folder:create share delete:File:upload share list download copy delete",
   "active": false,
   "nodes": [
@@ -8,7 +10,11 @@
       "name": "Start",
       "type": "n8n-nodes-base.start",
       "typeVersion": 1,
-      "position": [250, 450]
+      "position": [
+        250,
+        450
+      ],
+      "id": "8213c874-bb15-4a4e-af12-efe5b749179c"
     },
     {
       "parameters": {
@@ -19,13 +25,17 @@
       "name": "Google Drive",
       "type": "n8n-nodes-base.googleDrive",
       "typeVersion": 1,
-      "position": [500, 290],
+      "position": [
+        500,
+        290
+      ],
       "credentials": {
         "googleApi": {
           "id": "196",
           "name": "Google API creds"
         }
-      }
+      },
+      "id": "8fb84335-a6b3-4147-a352-72c7911cfe26"
     },
     {
       "parameters": {
@@ -44,13 +54,17 @@
       "name": "Google Drive1",
       "type": "n8n-nodes-base.googleDrive",
       "typeVersion": 1,
-      "position": [670, 290],
+      "position": [
+        670,
+        290
+      ],
       "credentials": {
         "googleApi": {
           "id": "196",
           "name": "Google API creds"
         }
-      }
+      },
+      "id": "07038a52-58d5-49a0-bd35-50499664a826"
     },
     {
       "parameters": {
@@ -62,13 +76,17 @@
       "name": "Google Drive2",
       "type": "n8n-nodes-base.googleDrive",
       "typeVersion": 1,
-      "position": [830, 290],
+      "position": [
+        830,
+        290
+      ],
       "credentials": {
         "googleApi": {
           "id": "196",
           "name": "Google API creds"
         }
-      }
+      },
+      "id": "ebd9563e-f9fa-4ced-a791-fe0ffc3f5d00"
     },
     {
       "parameters": {
@@ -80,13 +98,17 @@
       "name": "Google Drive3",
       "type": "n8n-nodes-base.googleDrive",
       "typeVersion": 1,
-      "position": [500, 450],
+      "position": [
+        500,
+        450
+      ],
       "credentials": {
         "googleApi": {
           "id": "196",
           "name": "Google API creds"
         }
-      }
+      },
+      "id": "848f7c4d-60b3-4f21-96a0-28ce6768bff5"
     },
     {
       "parameters": {
@@ -104,13 +126,17 @@
       "name": "Google Drive4",
       "type": "n8n-nodes-base.googleDrive",
       "typeVersion": 1,
-      "position": [650, 450],
+      "position": [
+        650,
+        450
+      ],
       "credentials": {
         "googleApi": {
           "id": "196",
           "name": "Google API creds"
         }
-      }
+      },
+      "id": "6bc457b8-8cce-4664-89a7-3c59a4a1cac9"
     },
     {
       "parameters": {
@@ -122,13 +148,17 @@
       "name": "Google Drive5",
       "type": "n8n-nodes-base.googleDrive",
       "typeVersion": 1,
-      "position": [800, 450],
+      "position": [
+        800,
+        450
+      ],
       "credentials": {
         "googleApi": {
           "id": "196",
           "name": "Google API creds"
         }
-      }
+      },
+      "id": "939faa4e-f542-41ad-804a-cda6cc30cd89"
     },
     {
       "parameters": {
@@ -139,13 +169,17 @@
       "name": "Google Drive6",
       "type": "n8n-nodes-base.googleDrive",
       "typeVersion": 1,
-      "position": [960, 450],
+      "position": [
+        960,
+        450
+      ],
       "credentials": {
         "googleApi": {
           "id": "196",
           "name": "Google API creds"
         }
-      }
+      },
+      "id": "8fa69472-389c-416b-9be1-8e104c99f9f9"
     },
     {
       "parameters": {
@@ -157,13 +191,17 @@
       "name": "Google Drive7",
       "type": "n8n-nodes-base.googleDrive",
       "typeVersion": 1,
-      "position": [1100, 450],
+      "position": [
+        1100,
+        450
+      ],
       "credentials": {
         "googleApi": {
           "id": "196",
           "name": "Google API creds"
         }
-      }
+      },
+      "id": "1b9c73b8-4f19-49b8-9165-a8c125e264f6"
     },
     {
       "parameters": {
@@ -174,13 +212,17 @@
       "name": "Google Drive8",
       "type": "n8n-nodes-base.googleDrive",
       "typeVersion": 1,
-      "position": [1240, 450],
+      "position": [
+        1240,
+        450
+      ],
       "credentials": {
         "googleApi": {
           "id": "196",
           "name": "Google API creds"
         }
-      }
+      },
+      "id": "e17d373d-907f-4635-bd44-b0e85e24acf7"
     },
     {
       "parameters": {
@@ -191,13 +233,17 @@
       "name": "Google Drive9",
       "type": "n8n-nodes-base.googleDrive",
       "typeVersion": 1,
-      "position": [1380, 450],
+      "position": [
+        1380,
+        450
+      ],
       "credentials": {
         "googleApi": {
           "id": "196",
           "name": "Google API creds"
         }
-      }
+      },
+      "id": "8621da7a-e990-4dca-84b7-1ddccf256016"
     },
     {
       "parameters": {
@@ -208,14 +254,18 @@
       "name": "Google Drive10",
       "type": "n8n-nodes-base.googleDrive",
       "typeVersion": 1,
-      "position": [500, 610],
+      "position": [
+        500,
+        610
+      ],
       "credentials": {
         "googleApi": {
           "id": "196",
           "name": "Google API creds"
         }
       },
-      "disabled": true
+      "disabled": true,
+      "id": "6a675ae3-30c5-44cb-8811-66625259b47d"
     }
   ],
   "connections": {
@@ -329,8 +379,11 @@
       ]
     }
   },
-  "createdAt": "2021-02-19T07:45:12.148Z",
-  "updatedAt": "2021-02-26T12:22:54.085Z",
   "settings": {},
-  "staticData": null
+  "staticData": null,
+  "meta": null,
+  "pinData": null,
+  "versionId": null,
+  "triggerCount": 0,
+  "tags": []
 }

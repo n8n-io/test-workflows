@@ -1,5 +1,7 @@
 {
-  "id": 161,
+  "createdAt": "2021-03-29T08:38:31.241Z",
+  "updatedAt": "2021-03-29T08:39:51.181Z",
+  "id": "161",
   "name": "Vonage:SMS:send",
   "active": false,
   "nodes": [
@@ -11,7 +13,8 @@
       "position": [
         250,
         300
-      ]
+      ],
+      "id": "e945a821-3ba5-4579-966a-2dad40345d27"
     },
     {
       "parameters": {
@@ -28,8 +31,12 @@
         300
       ],
       "credentials": {
-        "vonageApi": "Vonage API creds"
-      }
+        "vonageApi": {
+          "id": "128",
+          "name": "Vonage API creds"
+        }
+      },
+      "id": "d92003eb-6352-45fe-9e96-7a4b98fdd513"
     }
   ],
   "connections": {
@@ -45,8 +52,11 @@
       ]
     }
   },
-  "createdAt": "2021-03-29T08:38:31.241Z",
-  "updatedAt": "2021-03-29T08:39:51.181Z",
   "settings": {},
-  "staticData": null
+  "staticData": null,
+  "meta": null,
+  "pinData": null,
+  "versionId": null,
+  "triggerCount": 0,
+  "tags": []
 }

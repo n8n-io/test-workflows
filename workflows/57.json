@@ -1,5 +1,7 @@
 {
-  "id": 57,
+  "createdAt": "2021-02-22T13:24:15.920Z",
+  "updatedAt": "2021-07-14T13:33:54.633Z",
+  "id": "57",
   "name": "Mindee:receipt:predict:invoice:predict",
   "active": false,
   "nodes": [
@@ -11,7 +13,8 @@
       "position": [
         330,
         230
-      ]
+      ],
+      "id": "a2fb028a-a712-440d-b273-88e18c86f688"
     },
     {
       "parameters": {},
@@ -23,8 +26,12 @@
         150
       ],
       "credentials": {
-        "mindeeReceiptApi": "Mindee Receipt creds"
-      }
+        "mindeeReceiptApi": {
+          "id": "44",
+          "name": "Mindee Receipt creds"
+        }
+      },
+      "id": "d1c7c807-0f46-48d7-a6a8-07c6fbd9298e"
     },
     {
       "parameters": {
@@ -46,7 +53,8 @@
       "position": [
         500,
         150
-      ]
+      ],
+      "id": "8313ed3a-96d5-4f34-8d5c-76bcdc7be95a"
     },
     {
       "parameters": {
@@ -60,8 +68,12 @@
         300
       ],
       "credentials": {
-        "mindeeInvoiceApi": "Mindee Invoice creds"
-      }
+        "mindeeInvoiceApi": {
+          "id": "45",
+          "name": "Mindee Invoice creds"
+        }
+      },
+      "id": "1632bf97-ed0a-49cc-8c55-be7be333c91b"
     },
     {
       "parameters": {
@@ -75,7 +87,8 @@
       "position": [
         500,
         300
-      ]
+      ],
+      "id": "72d76ab1-1074-42ca-af84-cf8dc7eef32f"
     }
   ],
   "connections": {
@@ -118,8 +131,11 @@
       ]
     }
   },
-  "createdAt": "2021-02-22T13:24:15.920Z",
-  "updatedAt": "2021-07-14T13:33:54.633Z",
   "settings": {},
-  "staticData": null
+  "staticData": null,
+  "meta": null,
+  "pinData": null,
+  "versionId": null,
+  "triggerCount": 0,
+  "tags": []
 }

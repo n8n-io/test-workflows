@@ -1,5 +1,7 @@
 {
-  "id": 119,
+  "createdAt": "2021-03-10T15:10:43.540Z",
+  "updatedAt": "2021-03-10T15:13:14.859Z",
+  "id": "119",
   "name": "CrateDB:insert update executeQuery",
   "active": false,
   "nodes": [
@@ -11,7 +13,8 @@
       "position": [
         250,
         300
-      ]
+      ],
+      "id": "e0aab098-04f4-42ce-b128-c1707e6ab085"
     },
     {
       "parameters": {
@@ -26,8 +29,12 @@
         300
       ],
       "credentials": {
-        "crateDb": "CrateDB creds"
-      }
+        "crateDb": {
+          "id": "86",
+          "name": "CrateDB creds"
+        }
+      },
+      "id": "51925b66-eddd-4a2c-bd53-3c93d8c4d3d9"
     },
     {
       "parameters": {
@@ -53,7 +60,8 @@
       "position": [
         450,
         300
-      ]
+      ],
+      "id": "ca7b9956-a037-4efa-9bfa-769067d489b8"
     },
     {
       "parameters": {
@@ -69,8 +77,12 @@
         300
       ],
       "credentials": {
-        "crateDb": "CrateDB creds"
-      }
+        "crateDb": {
+          "id": "86",
+          "name": "CrateDB creds"
+        }
+      },
+      "id": "7f727eb3-00c1-464d-aa3b-503138386420"
     },
     {
       "parameters": {
@@ -96,7 +108,8 @@
       "position": [
         850,
         300
-      ]
+      ],
+      "id": "d8d1fb13-1756-4cff-b6f6-adbe388851f6"
     },
     {
       "parameters": {
@@ -111,8 +124,12 @@
         300
       ],
       "credentials": {
-        "crateDb": "CrateDB creds"
-      }
+        "crateDb": {
+          "id": "86",
+          "name": "CrateDB creds"
+        }
+      },
+      "id": "41bbb36e-d1b4-419a-a587-4fb9a0a4d349"
     }
   ],
   "connections": {
@@ -172,8 +189,11 @@
       ]
     }
   },
-  "createdAt": "2021-03-10T15:10:43.540Z",
-  "updatedAt": "2021-03-10T15:13:14.859Z",
   "settings": {},
-  "staticData": null
+  "staticData": null,
+  "meta": null,
+  "pinData": null,
+  "versionId": null,
+  "triggerCount": 0,
+  "tags": []
 }

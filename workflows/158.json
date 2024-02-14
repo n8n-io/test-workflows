@@ -1,5 +1,7 @@
 {
-  "id": 158,
+  "createdAt": "2021-03-25T15:40:17.167Z",
+  "updatedAt": "2021-03-25T15:40:17.167Z",
+  "id": "158",
   "name": "MicrosoftSQL:insert update executeQuery",
   "active": false,
   "nodes": [
@@ -11,7 +13,8 @@
       "position": [
         250,
         300
-      ]
+      ],
+      "id": "07cfaafd-88a2-4563-9c2d-7ecfacc4a008"
     },
     {
       "parameters": {
@@ -26,8 +29,12 @@
         300
       ],
       "credentials": {
-        "microsoftSql": "Microsoft SQL"
-      }
+        "microsoftSql": {
+          "id": "98",
+          "name": "Microsoft SQL"
+        }
+      },
+      "id": "e854f1b2-572c-4697-8597-aaa1cbfb06cb"
     },
     {
       "parameters": {
@@ -53,7 +60,8 @@
       "position": [
         400,
         300
-      ]
+      ],
+      "id": "59f67b24-0711-4944-aec9-b3470e58ef3a"
     },
     {
       "parameters": {
@@ -69,8 +77,12 @@
         300
       ],
       "credentials": {
-        "microsoftSql": "Microsoft SQL"
-      }
+        "microsoftSql": {
+          "id": "98",
+          "name": "Microsoft SQL"
+        }
+      },
+      "id": "7dd65584-a631-4365-aa97-d1eac48055dd"
     },
     {
       "parameters": {
@@ -91,7 +103,8 @@
       "position": [
         700,
         300
-      ]
+      ],
+      "id": "a7177030-713f-456c-97d8-2d1eeeabacd8"
     },
     {
       "parameters": {
@@ -107,9 +120,13 @@
       ],
       "notesInFlow": true,
       "credentials": {
-        "microsoftSql": "Microsoft SQL"
+        "microsoftSql": {
+          "id": "98",
+          "name": "Microsoft SQL"
+        }
       },
-      "notes": "Execute Query (SELECT one)"
+      "notes": "Execute Query (SELECT one)",
+      "id": "66a5e1da-49ef-4b2a-a505-6d42985c72d3"
     },
     {
       "parameters": {
@@ -124,8 +141,12 @@
         300
       ],
       "credentials": {
-        "microsoftSql": "Microsoft SQL"
-      }
+        "microsoftSql": {
+          "id": "98",
+          "name": "Microsoft SQL"
+        }
+      },
+      "id": "43594a06-313c-40f6-b454-7bf217d8dfb8"
     },
     {
       "parameters": {
@@ -141,9 +162,13 @@
       ],
       "notesInFlow": true,
       "credentials": {
-        "microsoftSql": "Microsoft SQL"
+        "microsoftSql": {
+          "id": "98",
+          "name": "Microsoft SQL"
+        }
       },
-      "notes": "Execute Query (SELECT All)"
+      "notes": "Execute Query (SELECT All)",
+      "id": "5c833fc6-917e-445b-b4bc-d7d2090c9e1a"
     }
   ],
   "connections": {
@@ -225,8 +250,11 @@
       ]
     }
   },
-  "createdAt": "2021-03-25T15:40:17.167Z",
-  "updatedAt": "2021-03-25T15:40:17.167Z",
   "settings": {},
-  "staticData": null
+  "staticData": null,
+  "meta": null,
+  "pinData": null,
+  "versionId": null,
+  "triggerCount": 0,
+  "tags": []
 }
