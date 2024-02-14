@@ -1,5 +1,7 @@
 {
-  "id": 188,
+  "createdAt": "2021-04-29T08:16:23.227Z",
+  "updatedAt": "2021-04-29T08:16:23.227Z",
+  "id": "188",
   "name": "Uplead:Company:enrich:Person:enrich",
   "active": false,
   "nodes": [
@@ -11,7 +13,8 @@
       "position": [
         250,
         300
-      ]
+      ],
+      "id": "1a29e4a7-f246-40dc-b79c-b786d4c806b1"
     },
     {
       "parameters": {
@@ -25,8 +28,12 @@
         200
       ],
       "credentials": {
-        "upleadApi": "Uplead API creds"
-      }
+        "upleadApi": {
+          "id": "151",
+          "name": "Uplead API creds"
+        }
+      },
+      "id": "879b9140-4c58-4d4d-86ab-a483fd617922"
     },
     {
       "parameters": {
@@ -43,8 +50,12 @@
         350
       ],
       "credentials": {
-        "upleadApi": "Uplead API creds"
-      }
+        "upleadApi": {
+          "id": "151",
+          "name": "Uplead API creds"
+        }
+      },
+      "id": "e97bccd6-c107-4099-9141-040cebe56ed8"
     }
   ],
   "connections": {
@@ -65,8 +76,11 @@
       ]
     }
   },
-  "createdAt": "2021-04-29T08:16:23.227Z",
-  "updatedAt": "2021-04-29T08:16:23.227Z",
   "settings": {},
-  "staticData": null
+  "staticData": null,
+  "meta": null,
+  "pinData": null,
+  "versionId": null,
+  "triggerCount": 0,
+  "tags": []
 }

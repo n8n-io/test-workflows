@@ -1,5 +1,7 @@
 {
-  "id": 194,
+  "createdAt": "2021-04-30T10:58:10.188Z",
+  "updatedAt": "2021-04-30T10:58:10.188Z",
+  "id": "194",
   "name": "Mailjet:Email:send sendTemplate",
   "active": false,
   "nodes": [
@@ -11,7 +13,8 @@
       "position": [
         250,
         300
-      ]
+      ],
+      "id": "0a7bd7bf-38ad-4d4f-9e74-390a5a008663"
     },
     {
       "parameters": {
@@ -30,8 +33,12 @@
         240
       ],
       "credentials": {
-        "mailjetEmailApi": "Mailjet Email API creds"
-      }
+        "mailjetEmailApi": {
+          "id": "157",
+          "name": "Mailjet Email API creds"
+        }
+      },
+      "id": "ad66d136-3fcc-4173-871e-545e451c3fdb"
     },
     {
       "parameters": {
@@ -49,8 +56,12 @@
         240
       ],
       "credentials": {
-        "mailjetEmailApi": "Mailjet Email API creds"
-      }
+        "mailjetEmailApi": {
+          "id": "157",
+          "name": "Mailjet Email API creds"
+        }
+      },
+      "id": "9a786724-7be7-4cc8-bac6-f168b1afa8b7"
     },
     {
       "parameters": {
@@ -66,9 +77,13 @@
         390
       ],
       "credentials": {
-        "mailjetSmsApi": "Mailjet SMS API creds"
+        "mailjetSmsApi": {
+          "id": "158",
+          "name": "Mailjet SMS API creds"
+        }
       },
-      "disabled": true
+      "disabled": true,
+      "id": "20d1d0dd-e801-41c9-a1b1-1aae62a2a1bf"
     }
   ],
   "connections": {
@@ -100,8 +115,11 @@
       ]
     }
   },
-  "createdAt": "2021-04-30T10:58:10.188Z",
-  "updatedAt": "2021-04-30T10:58:10.188Z",
   "settings": {},
-  "staticData": null
+  "staticData": null,
+  "meta": null,
+  "pinData": null,
+  "versionId": null,
+  "triggerCount": 0,
+  "tags": []
 }

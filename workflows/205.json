@@ -1,5 +1,7 @@
 {
-  "id": 205,
+  "createdAt": "2021-05-14T09:46:06.853Z",
+  "updatedAt": "2021-05-14T09:46:06.853Z",
+  "id": "205",
   "name": "Pushover:Message:push",
   "active": false,
   "nodes": [
@@ -11,7 +13,8 @@
       "position": [
         250,
         300
-      ]
+      ],
+      "id": "b67fccde-5dac-406f-98f4-d5c58ac8aa37"
     },
     {
       "parameters": {
@@ -29,8 +32,12 @@
         300
       ],
       "credentials": {
-        "pushoverApi": "Pushover API creds"
-      }
+        "pushoverApi": {
+          "id": "177",
+          "name": "Pushover API creds"
+        }
+      },
+      "id": "1036f288-8058-48b9-9d2e-3a915bfadb12"
     }
   ],
   "connections": {
@@ -46,8 +53,11 @@
       ]
     }
   },
-  "createdAt": "2021-05-14T09:46:06.853Z",
-  "updatedAt": "2021-05-14T09:46:06.853Z",
   "settings": {},
-  "staticData": null
+  "staticData": null,
+  "meta": null,
+  "pinData": null,
+  "versionId": null,
+  "triggerCount": 0,
+  "tags": []
 }

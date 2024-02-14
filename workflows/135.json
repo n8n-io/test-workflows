@@ -1,5 +1,7 @@
 {
-  "id": 135,
+  "createdAt": "2021-03-15T11:07:38.626Z",
+  "updatedAt": "2021-07-15T15:43:31.557Z",
+  "id": "135",
   "name": "Cortex:Analyzer:execute:Job:report get:Responder:execute",
   "active": false,
   "nodes": [
@@ -11,7 +13,8 @@
       "position": [
         250,
         300
-      ]
+      ],
+      "id": "746052e5-aa2d-44d8-9868-51eac17d07b2"
     },
     {
       "parameters": {
@@ -29,8 +32,12 @@
         300
       ],
       "credentials": {
-        "cortexApi": "Cortex API creds"
-      }
+        "cortexApi": {
+          "id": "103",
+          "name": "Cortex API creds"
+        }
+      },
+      "id": "a020251f-8fc4-4257-8038-0092bb07209b"
     },
     {
       "parameters": {
@@ -46,8 +53,12 @@
         300
       ],
       "credentials": {
-        "cortexApi": "Cortex API creds"
-      }
+        "cortexApi": {
+          "id": "103",
+          "name": "Cortex API creds"
+        }
+      },
+      "id": "c32de960-141e-4fdb-8b0f-dfd08fc3b28a"
     },
     {
       "parameters": {
@@ -62,8 +73,12 @@
         300
       ],
       "credentials": {
-        "cortexApi": "Cortex API creds"
-      }
+        "cortexApi": {
+          "id": "103",
+          "name": "Cortex API creds"
+        }
+      },
+      "id": "c2072875-c609-4eb8-88e7-2bba3a8d0a49"
     },
     {
       "parameters": {
@@ -89,8 +104,12 @@
         300
       ],
       "credentials": {
-        "cortexApi": "Cortex API creds"
-      }
+        "cortexApi": {
+          "id": "103",
+          "name": "Cortex API creds"
+        }
+      },
+      "id": "47ccf815-64bd-469f-b836-6d3749cfc7cb"
     },
     {
       "parameters": {
@@ -106,9 +125,13 @@
         300
       ],
       "credentials": {
-        "cortexApi": "Cortex API creds"
+        "cortexApi": {
+          "id": "103",
+          "name": "Cortex API creds"
+        }
       },
-      "disabled": true
+      "disabled": true,
+      "id": "efec07a1-aa91-49e0-9c2c-3f2c222fa90f"
     },
     {
       "parameters": {
@@ -120,7 +143,8 @@
         1100,
         300
       ],
-      "typeVersion": 1
+      "typeVersion": 1,
+      "id": "68f7efca-c385-4642-814f-3123f7e892ee"
     }
   ],
   "connections": {
@@ -191,8 +215,11 @@
       ]
     }
   },
-  "createdAt": "2021-03-15T11:07:38.626Z",
-  "updatedAt": "2021-07-15T15:43:31.557Z",
   "settings": {},
-  "staticData": null
+  "staticData": null,
+  "meta": null,
+  "pinData": null,
+  "versionId": null,
+  "triggerCount": 0,
+  "tags": []
 }

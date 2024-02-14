@@ -1,5 +1,7 @@
 {
-  "id": 209,
+  "createdAt": "2021-05-31T08:24:33.353Z",
+  "updatedAt": "2021-05-31T08:38:47.411Z",
+  "id": "209",
   "name": "AWS Transcribe:TranscriptionJob:create get getAll delete",
   "active": false,
   "nodes": [
@@ -11,7 +13,8 @@
       "position": [
         250,
         300
-      ]
+      ],
+      "id": "cb687f80-1046-40f3-bddb-78a67623b70e"
     },
     {
       "parameters": {
@@ -27,8 +30,12 @@
         300
       ],
       "credentials": {
-        "aws": "AWS creds"
-      }
+        "aws": {
+          "id": "124",
+          "name": "AWS creds"
+        }
+      },
+      "id": "ccdefb6d-7aac-4360-9285-135ddf34449b"
     },
     {
       "parameters": {
@@ -44,8 +51,12 @@
         300
       ],
       "credentials": {
-        "aws": "AWS creds"
-      }
+        "aws": {
+          "id": "124",
+          "name": "AWS creds"
+        }
+      },
+      "id": "3840763a-16d3-4073-a008-9b5dae451d48"
     },
     {
       "parameters": {
@@ -61,8 +72,12 @@
         300
       ],
       "credentials": {
-        "aws": "AWS creds"
-      }
+        "aws": {
+          "id": "124",
+          "name": "AWS creds"
+        }
+      },
+      "id": "b477493b-0688-47f4-ad5c-4a1f509e672e"
     },
     {
       "parameters": {
@@ -77,8 +92,12 @@
         300
       ],
       "credentials": {
-        "aws": "AWS creds"
-      }
+        "aws": {
+          "id": "124",
+          "name": "AWS creds"
+        }
+      },
+      "id": "f7c49172-c16a-4881-951b-c35927fe9ea4"
     },
     {
       "parameters": {
@@ -98,7 +117,8 @@
       "position": [
         400,
         300
-      ]
+      ],
+      "id": "e96a125a-10fb-4d1a-869e-3e31467b1bb6"
     },
     {
       "parameters": {
@@ -110,7 +130,8 @@
         1000,
         300
       ],
-      "typeVersion": 1
+      "typeVersion": 1,
+      "id": "93a0b1db-6bda-4e6d-9797-6a3957cf05d0"
     }
   ],
   "connections": {
@@ -181,8 +202,11 @@
       ]
     }
   },
-  "createdAt": "2021-05-31T08:24:33.353Z",
-  "updatedAt": "2021-05-31T08:38:47.411Z",
   "settings": {},
-  "staticData": null
+  "staticData": null,
+  "meta": null,
+  "pinData": null,
+  "versionId": null,
+  "triggerCount": 0,
+  "tags": []
 }

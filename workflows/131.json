@@ -1,5 +1,7 @@
 {
-  "id": 131,
+  "createdAt": "2021-03-12T15:30:32.231Z",
+  "updatedAt": "2021-03-12T15:30:32.231Z",
+  "id": "131",
   "name": "Line:Notification:send",
   "active": false,
   "nodes": [
@@ -11,7 +13,8 @@
       "position": [
         250,
         300
-      ]
+      ],
+      "id": "b97b22de-c820-46c3-bd9a-9ccd77d9fb2f"
     },
     {
       "parameters": {
@@ -26,8 +29,12 @@
         300
       ],
       "credentials": {
-        "lineNotifyOAuth2Api": "Line Notify OAuth2 API"
-      }
+        "lineNotifyOAuth2Api": {
+          "id": "99",
+          "name": "Line Notify OAuth2 API"
+        }
+      },
+      "id": "bda3f612-99db-4f50-86ec-71f3f7e26917"
     }
   ],
   "connections": {
@@ -48,8 +55,11 @@
       ]
     }
   },
-  "createdAt": "2021-03-12T15:30:32.231Z",
-  "updatedAt": "2021-03-12T15:30:32.231Z",
   "settings": {},
-  "staticData": null
+  "staticData": null,
+  "meta": null,
+  "pinData": null,
+  "versionId": null,
+  "triggerCount": 0,
+  "tags": []
 }

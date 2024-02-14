@@ -1,5 +1,7 @@
 {
-  "id": 68,
+  "createdAt": "2021-02-25T12:44:44.483Z",
+  "updatedAt": "2021-02-25T12:44:52.927Z",
+  "id": "68",
   "name": "CircleCI:Pipeline:getAll get trigger",
   "active": false,
   "nodes": [
@@ -11,7 +13,8 @@
       "position": [
         250,
         300
-      ]
+      ],
+      "id": "ccd210e8-4155-4e27-bcda-8ecde0543afe"
     },
     {
       "parameters": {
@@ -29,8 +32,12 @@
         300
       ],
       "credentials": {
-        "circleCiApi": "CircleCI creds"
-      }
+        "circleCiApi": {
+          "id": "59",
+          "name": "CircleCI creds"
+        }
+      },
+      "id": "72b39f65-9aef-4dd2-9887-a68e247e5c0d"
     },
     {
       "parameters": {
@@ -45,8 +52,12 @@
         300
       ],
       "credentials": {
-        "circleCiApi": "CircleCI creds"
-      }
+        "circleCiApi": {
+          "id": "59",
+          "name": "CircleCI creds"
+        }
+      },
+      "id": "094f3916-c071-47af-9d66-d54d88a826ff"
     },
     {
       "parameters": {
@@ -65,8 +76,12 @@
         300
       ],
       "credentials": {
-        "circleCiApi": "CircleCI creds"
-      }
+        "circleCiApi": {
+          "id": "59",
+          "name": "CircleCI creds"
+        }
+      },
+      "id": "eeb564f3-d08d-4fdb-8c7a-19937bcb2817"
     }
   ],
   "connections": {
@@ -104,8 +119,11 @@
       ]
     }
   },
-  "createdAt": "2021-02-25T12:44:44.483Z",
-  "updatedAt": "2021-02-25T12:44:52.927Z",
   "settings": {},
-  "staticData": null
+  "staticData": null,
+  "meta": null,
+  "pinData": null,
+  "versionId": null,
+  "triggerCount": 0,
+  "tags": []
 }
