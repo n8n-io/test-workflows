@@ -1,0 +1,139 @@
+{
+  "data": {
+    "startData": {},
+    "resultData": {
+      "runData": {
+        "When clicking \"Test workflow\"": [
+          {
+            "startTime": 1709804316438,
+            "executionTime": 0,
+            "source": [],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "OpenAI Chat Model": [
+          {
+            "startTime": 1709804316440,
+            "executionTime": 418,
+            "executionStatus": "success",
+            "source": [
+              null
+            ],
+            "data": {
+              "ai_languageModel": [
+                [
+                  {
+                    "json": {
+                      "response": {
+                        "object": true
+                      }
+                    }
+                  }
+                ]
+              ]
+            },
+            "inputOverride": {
+              "ai_languageModel": [
+                [
+                  {
+                    "json": {
+                      "messages": [
+                        {
+                          "lc": 1,
+                          "type": "constructor",
+                          "id": [
+                            "langchain_core",
+                            "messages",
+                            "HumanMessage"
+                          ],
+                          "kwargs": {
+                            "content": "How much is 1+1? Only provide the numerical answer without any other text.\n",
+                            "additional_kwargs": {}
+                          }
+                        }
+                      ],
+                      "options": {
+                        "signal": {},
+                        "promptIndex": 0
+                      }
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Open AI Chat": [
+          {
+            "startTime": 1709804316438,
+            "executionTime": 420,
+            "source": [
+              {
+                "previousNode": "When clicking \"Test workflow\""
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "text": "2"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            },
+            "metadata": {
+              "subRun": [
+                {
+                  "node": "OpenAI Chat Model",
+                  "runIndex": 0
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "lastNodeExecuted": "Open AI Chat"
+    },
+    "executionData": {
+      "contextData": {},
+      "nodeExecutionStack": [],
+      "metadata": {
+        "Open AI Chat": [
+          {
+            "subRun": [
+              {
+                "node": "OpenAI Chat Model",
+                "runIndex": 0
+              }
+            ]
+          }
+        ]
+      },
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
+    }
+  },
+  "mode": "cli",
+  "startedAt": "2024-03-07T09:38:36.438Z",
+  "stoppedAt": "2024-03-07T09:38:36.858Z",
+  "status": "running",
+  "finished": true
+}

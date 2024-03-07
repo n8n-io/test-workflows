@@ -1,0 +1,126 @@
+{
+  "data": {
+    "startData": {},
+    "resultData": {
+      "runData": {
+        "When clicking \"Test workflow\"": [
+          {
+            "startTime": 1709804222839,
+            "executionTime": 0,
+            "source": [],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "OpenAI Model": [
+          {
+            "startTime": 1709804222844,
+            "executionTime": 385,
+            "executionStatus": "success",
+            "source": [
+              null
+            ],
+            "data": {
+              "ai_languageModel": [
+                [
+                  {
+                    "json": {
+                      "response": {
+                        "object": true
+                      }
+                    }
+                  }
+                ]
+              ]
+            },
+            "inputOverride": {
+              "ai_languageModel": [
+                [
+                  {
+                    "json": {
+                      "messages": [
+                        "How much is 1+1? Only provide the numerical answer without any other text.\n\n"
+                      ],
+                      "options": {
+                        "signal": {}
+                      }
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Open AI Instruct": [
+          {
+            "startTime": 1709804222840,
+            "executionTime": 390,
+            "source": [
+              {
+                "previousNode": "When clicking \"Test workflow\""
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "text": "2"
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            },
+            "metadata": {
+              "subRun": [
+                {
+                  "node": "OpenAI Model",
+                  "runIndex": 0
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "lastNodeExecuted": "Open AI Instruct"
+    },
+    "executionData": {
+      "contextData": {},
+      "nodeExecutionStack": [],
+      "metadata": {
+        "Open AI Instruct": [
+          {
+            "subRun": [
+              {
+                "node": "OpenAI Model",
+                "runIndex": 0
+              }
+            ]
+          }
+        ]
+      },
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
+    }
+  },
+  "mode": "cli",
+  "startedAt": "2024-03-07T09:37:02.839Z",
+  "stoppedAt": "2024-03-07T09:37:03.230Z",
+  "status": "running",
+  "finished": true
+}
