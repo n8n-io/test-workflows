@@ -1,6 +1,6 @@
 {
   "createdAt": "2024-03-04T20:32:40.367Z",
-  "updatedAt": "2024-03-04T21:12:14.000Z",
+  "updatedAt": "2024-03-13T13:41:09.000Z",
   "id": "243",
   "name": "Agent:ReAct",
   "active": false,
@@ -18,7 +18,6 @@
     },
     {
       "parameters": {
-        "model": "gpt-4-turbo-preview",
         "options": {
           "temperature": 0
         }
@@ -47,17 +46,6 @@
       "typeVersion": 1,
       "position": [
         1220,
-        1160
-      ]
-    },
-    {
-      "parameters": {},
-      "id": "48072986-3fb5-4828-acf7-d0f1ae27e74d",
-      "name": "Wikipedia2",
-      "type": "@n8n/n8n-nodes-langchain.toolWikipedia",
-      "typeVersion": 1,
-      "position": [
-        1220,
         1060
       ]
     },
@@ -65,12 +53,6 @@
       "parameters": {
         "assignments": {
           "assignments": [
-            {
-              "id": "b6fdea51-4b5d-49b6-bbb9-f398e3ea872c",
-              "name": "wiki_called",
-              "value": "={{ $json.intermediateSteps.filter(a => a.action.tool === 'wikipedia-api').length >= 2 }}",
-              "type": "boolean"
-            },
             {
               "id": "a2807ad9-7402-47a8-baf8-3ba8feea2494",
               "name": "calculator_called",
@@ -80,7 +62,7 @@
             {
               "id": "29ca8b14-ce95-4497-85eb-687db33ecd06",
               "name": "has_correct_output",
-              "value": "={{ $json.output.includes('37830') }}",
+              "value": "={{ $json.output.includes('100052') }}",
               "type": "string"
             }
           ]
@@ -100,7 +82,7 @@
       "parameters": {
         "agent": "reActAgent",
         "promptType": "define",
-        "text": "1. Search for Albert Einstein on Wikipedia, note his year of birth\n2. Search for J. Robert Oppenheimer on Wikipedia, note his year of birth\n3. Sum Oppenheimer + Einstein years of birth and multiply by 10\n4. Respond ONLY with numerical result, no other comments or text",
+        "text": "What is the result of 30 + (10002200 / 100)? Only respond with a number.",
         "options": {
           "returnIntermediateSteps": true
         }
@@ -138,12 +120,12 @@
         ]
       ]
     },
-    "Wikipedia2": {
-      "ai_tool": [
+    "When clicking \"Test workflow\"": {
+      "main": [
         [
           {
             "node": "AI Agent2",
-            "type": "ai_tool",
+            "type": "main",
             "index": 0
           }
         ]
@@ -159,17 +141,6 @@
           }
         ]
       ]
-    },
-    "When clicking \"Test workflow\"": {
-      "main": [
-        [
-          {
-            "node": "AI Agent2",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
     }
   },
   "settings": {
@@ -180,7 +151,7 @@
     "templateCredsSetupCompleted": true
   },
   "pinData": {},
-  "versionId": "b16fc709-6ada-49b2-bd76-e3a2569fd182",
+  "versionId": "aeb32e87-d821-4885-ab26-58321ad2d0a4",
   "triggerCount": 0,
   "tags": []
 }

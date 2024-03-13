@@ -1,6 +1,6 @@
 {
   "createdAt": "2024-03-04T20:33:51.500Z",
-  "updatedAt": "2024-03-04T21:15:59.000Z",
+  "updatedAt": "2024-03-13T13:41:47.000Z",
   "id": "241",
   "name": "Agent:OpenAiFunctions",
   "active": false,
@@ -10,12 +10,6 @@
         "assignments": {
           "assignments": [
             {
-              "id": "b6fdea51-4b5d-49b6-bbb9-f398e3ea872c",
-              "name": "wiki_called",
-              "value": "={{ $json.intermediateSteps.filter(a => a.action.tool === 'wikipedia-api').length >= 2 }}",
-              "type": "boolean"
-            },
-            {
               "id": "a2807ad9-7402-47a8-baf8-3ba8feea2494",
               "name": "calculator_called",
               "value": "={{ $json.intermediateSteps.filter(a => a.action.tool === 'calculator').length >= 1 }}",
@@ -24,7 +18,7 @@
             {
               "id": "29ca8b14-ce95-4497-85eb-687db33ecd06",
               "name": "has_correct_output",
-              "value": "={{ $json.output.includes('37830') }}",
+              "value": "={{ $json.output.includes('100052') }}",
               "type": "string"
             }
           ]
@@ -42,7 +36,6 @@
     },
     {
       "parameters": {
-        "model": "gpt-4-turbo-preview",
         "options": {
           "temperature": 0
         }
@@ -68,17 +61,6 @@
       "id": "44f670cc-c4e9-44fc-8870-18955f727be1",
       "name": "Calculator",
       "type": "@n8n/n8n-nodes-langchain.toolCalculator",
-      "typeVersion": 1,
-      "position": [
-        1080,
-        1040
-      ]
-    },
-    {
-      "parameters": {},
-      "id": "512b9782-663e-43dd-b16f-d6bdbcced585",
-      "name": "Wikipedia",
-      "type": "@n8n/n8n-nodes-langchain.toolWikipedia",
       "typeVersion": 1,
       "position": [
         1080,
@@ -188,7 +170,7 @@
       "parameters": {
         "agent": "openAiFunctionsAgent",
         "promptType": "define",
-        "text": "1. Search for Albert Einstein on Wikipedia, note his year of birth\n2. Search for J. Robert Oppenheimer on Wikipedia, note his year of birth\n3. Sum Oppenheimer + Einstein years of birth and multiply by 10\n4. Respond ONLY with numerical result, no other comments or text",
+        "text": "What is the result of 30 + (10002200 / 100)? Only respond with a number.",
         "options": {
           "returnIntermediateSteps": true
         }
@@ -216,17 +198,6 @@
       ]
     },
     "Calculator": {
-      "ai_tool": [
-        [
-          {
-            "node": "AI Agent",
-            "type": "ai_tool",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Wikipedia": {
       "ai_tool": [
         [
           {
@@ -317,7 +288,7 @@
     "templateCredsSetupCompleted": true
   },
   "pinData": {},
-  "versionId": "efbb6d01-7aae-45ac-a210-0001540ba923",
+  "versionId": "92205881-151a-4e66-acd1-31f2d4e3a58c",
   "triggerCount": 0,
   "tags": []
 }
