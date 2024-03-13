@@ -1,13 +1,12 @@
 {
   "createdAt": "2024-03-04T20:33:10.367Z",
-  "updatedAt": "2024-03-04T20:33:21.000Z",
+  "updatedAt": "2024-03-13T13:40:25.000Z",
   "id": "251",
   "name": "Agent:Conversational",
   "active": false,
   "nodes": [
     {
       "parameters": {
-        "model": "gpt-4-turbo-preview",
         "options": {
           "temperature": 0
         }
@@ -18,7 +17,7 @@
       "typeVersion": 1,
       "position": [
         1000,
-        560
+        580
       ],
       "credentials": {
         "openAiApi": {
@@ -36,35 +35,7 @@
       "typeVersion": 1,
       "position": [
         1160,
-        680
-      ]
-    },
-    {
-      "parameters": {},
-      "id": "424917fb-8f83-4e7e-8d76-cf675940695f",
-      "name": "Wikipedia1",
-      "type": "@n8n/n8n-nodes-langchain.toolWikipedia",
-      "typeVersion": 1,
-      "position": [
-        1160,
         580
-      ]
-    },
-    {
-      "parameters": {
-        "promptType": "define",
-        "text": "Make sure to use all the tools before responding.\n1. Search for Albert Einstein on Wikipedia(use wikipedia-api tool), note his year of birth\n2. Search for J. Robert Oppenheimer on Wikipedia(use wikipedia-api tool), note his year of birth\n3. Sum(use calculator tool) Oppenheimer + Einstein years of birth and multiply by 10\n4. Respond only with numerical result, no other comments",
-        "options": {
-          "returnIntermediateSteps": true
-        }
-      },
-      "id": "5f23aaf0-0649-4e26-926d-9bdf59e89aa7",
-      "name": "AI Agent1",
-      "type": "@n8n/n8n-nodes-langchain.agent",
-      "typeVersion": 1.4,
-      "position": [
-        980,
-        420
       ]
     },
     {
@@ -75,6 +46,23 @@
       "typeVersion": 1,
       "position": [
         800,
+        420
+      ]
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "What is the result of 30 + (10002200 / 100)? Only respond with a number.",
+        "options": {
+          "returnIntermediateSteps": true
+        }
+      },
+      "id": "5f23aaf0-0649-4e26-926d-9bdf59e89aa7",
+      "name": "AI Agent1",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.4,
+      "position": [
+        980,
         420
       ]
     }
@@ -102,22 +90,6 @@
         ]
       ]
     },
-    "Wikipedia1": {
-      "ai_tool": [
-        [
-          {
-            "node": "AI Agent1",
-            "type": "ai_tool",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "AI Agent1": {
-      "main": [
-        []
-      ]
-    },
     "When clicking \"Test workflow\"": {
       "main": [
         [
@@ -138,7 +110,7 @@
     "templateCredsSetupCompleted": true
   },
   "pinData": {},
-  "versionId": "9d8d65e1-a626-4e68-986e-4814f915f0c0",
+  "versionId": "da23ae8e-c1e2-4f3c-a585-8e89696633b2",
   "triggerCount": 0,
   "tags": []
 }
