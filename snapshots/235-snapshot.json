@@ -5,7 +5,7 @@
       "runData": {
         "When clicking \"Test workflow\"": [
           {
-            "startTime": 1709804201611,
+            "startTime": 1710331900710,
             "executionTime": 0,
             "source": [],
             "executionStatus": "success",
@@ -25,8 +25,8 @@
         ],
         "Set Baseline": [
           {
-            "startTime": 1709804201611,
-            "executionTime": 0,
+            "startTime": 1710331900710,
+            "executionTime": 1,
             "source": [
               {
                 "previousNode": "When clicking \"Test workflow\""
@@ -51,8 +51,8 @@
         ],
         "Set Article": [
           {
-            "startTime": 1709804201611,
-            "executionTime": 9,
+            "startTime": 1710331900711,
+            "executionTime": 3,
             "source": [
               {
                 "previousNode": "Set Baseline"
@@ -77,8 +77,8 @@
         ],
         "OpenAI Chat Model": [
           {
-            "startTime": 1709804201979,
-            "executionTime": 3114,
+            "startTime": 1710331901601,
+            "executionTime": 2599,
             "executionStatus": "success",
             "source": [
               null
@@ -128,8 +128,8 @@
         ],
         "Summary - Simple - Map": [
           {
-            "startTime": 1709804201620,
-            "executionTime": 3474,
+            "startTime": 1710331900714,
+            "executionTime": 3486,
             "source": [
               {
                 "previousNode": "Set Article"
@@ -164,8 +164,8 @@
         ],
         "OpenAI Chat Model1": [
           {
-            "startTime": 1709804205151,
-            "executionTime": 3530,
+            "startTime": 1710331904242,
+            "executionTime": 3479,
             "executionStatus": "success",
             "source": [
               null
@@ -198,7 +198,7 @@
                             "HumanMessage"
                           ],
                           "kwargs": {
-                            "content": "You are assessing a submitted answer on a given task or input based on a set of criteria. Here is the data:\n[BEGIN DATA]\n***\n[Input]: Summarize Wikipedia article about the dancing plague of 1518\n***\n[Submission]: The dancing plague of 1518 was a case of dancing mania that occurred in Strasbourg, Alsace, where between 50 and 400 people danced uncontrollably for weeks. The cause is debated, with theories including stress-induced mass hysteria, ergot poisoning, and religious explanations. The outbreak eventually subsided when the dancers were sent to a shrine to pray for absolution. The number of deaths is controversial, with some sources claiming fatalities while others do not mention any deaths. Modern theories suggest food poisoning or stress-induced mass hysteria as possible explanations. The event has inspired various works of art and media, including films, songs, and novels.\n***\n[Criteria]: helpfulness: Is the submission helpful, insightful, and appropriate? If so, response Y. If not, respond N.\n***\n[Reference]: The dancing plague of 1518 in Strasbourg, Alsace involved between 50 and 400 people dancing uncontrollably for weeks. The cause is unknown, with theories including stress-induced mass hysteria and ergot poisoning. The outbreak ended when the dancers prayed for absolution at a shrine. There is controversy over the number of deaths, with some sources claiming up to fifteen deaths per day, but historical documents do not confirm any fatalities. Similar events have been reported throughout history, inspiring various works of pop culture.\n***\n[END DATA]\nDoes the submission meet the Criteria? First, write out in a step by step manner your reasoning about each criterion to be sure that your conclusion is correct. Avoid simply stating the correct answers at the outset. Then print only the single character \"Y\" or \"N\" (without quotes or punctuation) on its own line corresponding to the correct answer of whether the submission meets all criteria. At the end, repeat just the letter again by itself on a new line.",
+                            "content": "You are assessing a submitted answer on a given task or input based on a set of criteria. Here is the data:\n[BEGIN DATA]\n***\n[Input]: Summarize Wikipedia article about the dancing plague of 1518\n***\n[Submission]: The dancing plague of 1518, also known as the dance epidemic, occurred in Strasbourg, Alsace, where between 50 and 400 people danced uncontrollably for weeks. The cause is debated, with theories including stress-induced mass hysteria, ergot poisoning, and religious explanations. The outbreak eventually subsided after dancers were sent to a shrine to pray for absolution. The veracity of deaths is disputed, with some sources claiming fatalities while others do not mention any deaths. Modern theories suggest food poisoning or stress-induced mass hysteria as possible explanations. The event has inspired various works of art and media, including films, songs, and novels.\n***\n[Criteria]: helpfulness: Is the submission helpful, insightful, and appropriate? If so, response Y. If not, respond N.\n***\n[Reference]: The dancing plague of 1518 in Strasbourg, Alsace involved between 50 and 400 people dancing uncontrollably for weeks. The cause is unknown, with theories including stress-induced mass hysteria and ergot poisoning. The outbreak ended when the dancers prayed for absolution at a shrine. There is controversy over the number of deaths, with some sources claiming up to fifteen deaths per day, but historical documents do not confirm any fatalities. Similar events have been reported throughout history, inspiring various works of pop culture.\n***\n[END DATA]\nDoes the submission meet the Criteria? First, write out in a step by step manner your reasoning about each criterion to be sure that your conclusion is correct. Avoid simply stating the correct answers at the outset. Then print only the single character \"Y\" or \"N\" (without quotes or punctuation) on its own line corresponding to the correct answer of whether the submission meets all criteria. At the end, repeat just the letter again by itself on a new line.",
                             "additional_kwargs": {}
                           }
                         }
@@ -215,8 +215,8 @@
         ],
         "Evaluate to Baseline": [
           {
-            "startTime": 1709804205094,
-            "executionTime": 3589,
+            "startTime": 1710331904201,
+            "executionTime": 3521,
             "source": [
               {
                 "previousNode": "Summary - Simple - Map"
@@ -228,7 +228,7 @@
                 [
                   {
                     "json": {
-                      "reasoning": "1. Is the submission helpful? - The submission provides a summary of the Wikipedia article about the dancing plague of 1518, including key details such as the location, number of people involved, possible causes, and outcomes. This information is relevant and informative, making the submission helpful.2. Is the submission insightful?- The submission includes insights into the possible causes of the dancing plague, such as stress-induced mass hysteria, ergot poisoning, and religious explanations. It also mentions the controversy surrounding the number of deaths and the inspiration the event has had on various forms of art and media. These insights add depth to the summary and make it insightful.3. Is the submission appropriate?- The submission is appropriate as it stays focused on summarizing the Wikipedia article about the dancing plague of 1518. It does not include irrelevant information and covers the main points of the event. Therefore, the submission meets all criteria.",
+                      "reasoning": "1. Is the submission helpful?- The submission provides a summary of the Wikipedia article about the dancing plague of 1518, including key details such as the location, number of people involved, possible causes, and outcomes.- The submission also mentions the controversy surrounding the number of deaths and the inspiration for various works of art and media.- Overall, the submission is informative and provides a concise overview of the topic, which can be considered helpful.Therefore, the submission meets the criteria for helpfulness.",
                       "value": "Y",
                       "score": 1
                     },
@@ -282,8 +282,8 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2024-03-07T09:36:41.610Z",
-  "stoppedAt": "2024-03-07T09:36:48.684Z",
+  "startedAt": "2024-03-13T12:11:40.710Z",
+  "stoppedAt": "2024-03-13T12:11:47.722Z",
   "status": "running",
   "finished": true
 }

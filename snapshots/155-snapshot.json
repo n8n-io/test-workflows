@@ -5,7 +5,7 @@
       "runData": {
         "Start": [
           {
-            "startTime": 1706635219287,
+            "startTime": 1710331889202,
             "executionTime": 0,
             "source": [],
             "executionStatus": "success",
@@ -25,7 +25,7 @@
         ],
         "Set": [
           {
-            "startTime": 1706635219287,
+            "startTime": 1710331889202,
             "executionTime": 2,
             "source": [
               {
@@ -38,7 +38,7 @@
                 [
                   {
                     "json": {
-                      "bucketName": "Bucket1706635219289"
+                      "bucketName": "Bucket1710331889204"
                     },
                     "pairedItem": {
                       "item": 0
@@ -51,8 +51,8 @@
         ],
         "AWS S3": [
           {
-            "startTime": 1706635219289,
-            "executionTime": 750,
+            "startTime": 1710331889204,
+            "executionTime": 770,
             "source": [
               {
                 "previousNode": "Set"
@@ -77,8 +77,8 @@
         ],
         "AWS S": [
           {
-            "startTime": 1706635220040,
-            "executionTime": 528,
+            "startTime": 1710331889974,
+            "executionTime": 575,
             "source": [
               {
                 "previousNode": "AWS S3"
@@ -104,7 +104,7 @@
         ],
         "Set1": [
           {
-            "startTime": 1706635220568,
+            "startTime": 1710331890549,
             "executionTime": 0,
             "source": [
               {
@@ -117,7 +117,7 @@
                 [
                   {
                     "json": {
-                      "folderName": "Folder1706635220568"
+                      "folderName": "Folder1710331890549"
                     },
                     "pairedItem": {
                       "item": 0
@@ -130,7 +130,7 @@
         ],
         "Function": [
           {
-            "startTime": 1706635220569,
+            "startTime": 1710331890549,
             "executionTime": 3,
             "source": [
               {
@@ -162,8 +162,8 @@
         ],
         "AWS S8": [
           {
-            "startTime": 1706635220572,
-            "executionTime": 278,
+            "startTime": 1710331890552,
+            "executionTime": 1103,
             "source": [
               {
                 "previousNode": "Set1"
@@ -188,8 +188,8 @@
         ],
         "AWS S2": [
           {
-            "startTime": 1706635220850,
-            "executionTime": 480,
+            "startTime": 1710331891655,
+            "executionTime": 1370,
             "source": [
               {
                 "previousNode": "Function"
@@ -214,8 +214,8 @@
         ],
         "AWS S9": [
           {
-            "startTime": 1706635221331,
-            "executionTime": 255,
+            "startTime": 1710331893026,
+            "executionTime": 1103,
             "source": [
               {
                 "previousNode": "AWS S8"
@@ -227,8 +227,8 @@
                 [
                   {
                     "json": {
-                      "Key": "Folder1706635220568/",
-                      "LastModified": "2024-01-30T17:20:21.000Z",
+                      "Key": "Folder1710331890549/",
+                      "LastModified": "2024-03-13T12:11:32.000Z",
                       "ETag": "\"d41d8cd98f00b204e9800998ecf8427e\"",
                       "Size": "0",
                       "StorageClass": "STANDARD"
@@ -244,8 +244,8 @@
         ],
         "AWS S4": [
           {
-            "startTime": 1706635221586,
-            "executionTime": 255,
+            "startTime": 1710331894129,
+            "executionTime": 1091,
             "source": [
               {
                 "previousNode": "AWS S2"
@@ -258,7 +258,7 @@
                   {
                     "json": {
                       "Key": "n8n-logo.png",
-                      "LastModified": "2024-01-30T17:20:22.000Z",
+                      "LastModified": "2024-03-13T12:11:33.000Z",
                       "ETag": "\"174dbbfbcabb9dc0c2e82002e5ce289e\"",
                       "Size": "2675",
                       "StorageClass": "STANDARD"
@@ -274,8 +274,8 @@
         ],
         "AWS S10": [
           {
-            "startTime": 1706635221841,
-            "executionTime": 403,
+            "startTime": 1710331895220,
+            "executionTime": 1729,
             "source": [
               {
                 "previousNode": "AWS S9"
@@ -302,8 +302,8 @@
         ],
         "AWS S5": [
           {
-            "startTime": 1706635222245,
-            "executionTime": 653,
+            "startTime": 1710331896950,
+            "executionTime": 1112,
             "source": [
               {
                 "previousNode": "AWS S4"
@@ -316,7 +316,7 @@
                   {
                     "json": {
                       "Key": "n8n-logo.png",
-                      "LastModified": "2024-01-30T17:20:22.000Z",
+                      "LastModified": "2024-03-13T12:11:33.000Z",
                       "ETag": "\"174dbbfbcabb9dc0c2e82002e5ce289e\"",
                       "Size": "2675",
                       "StorageClass": "STANDARD"
@@ -342,7 +342,7 @@
         ],
         "AWS S6": [
           {
-            "startTime": 1706635222899,
+            "startTime": 1710331898062,
             "executionTime": 0,
             "source": [
               {
@@ -356,7 +356,7 @@
                   {
                     "json": {
                       "Key": "n8n-logo.png",
-                      "LastModified": "2024-01-30T17:20:22.000Z",
+                      "LastModified": "2024-03-13T12:11:33.000Z",
                       "ETag": "\"174dbbfbcabb9dc0c2e82002e5ce289e\"",
                       "Size": "2675",
                       "StorageClass": "STANDARD"
@@ -382,8 +382,8 @@
         ],
         "AWS S1": [
           {
-            "startTime": 1706635222899,
-            "executionTime": 288,
+            "startTime": 1710331898062,
+            "executionTime": 1152,
             "source": [
               {
                 "previousNode": "AWS S6"
@@ -396,7 +396,7 @@
                   {
                     "json": {
                       "Key": "n8n-logo.png",
-                      "LastModified": "2024-01-30T17:20:22.000Z",
+                      "LastModified": "2024-03-13T12:11:33.000Z",
                       "ETag": "\"174dbbfbcabb9dc0c2e82002e5ce289e\"",
                       "Size": "2675",
                       "StorageClass": "STANDARD"
@@ -412,8 +412,8 @@
         ],
         "AWS S7": [
           {
-            "startTime": 1706635223187,
-            "executionTime": 271,
+            "startTime": 1710331899215,
+            "executionTime": 1339,
             "source": [
               {
                 "previousNode": "AWS S1"
@@ -438,8 +438,8 @@
         ],
         "AWS S31": [
           {
-            "startTime": 1706635223458,
-            "executionTime": 279,
+            "startTime": 1710331900554,
+            "executionTime": 730,
             "source": [
               {
                 "previousNode": "AWS S7"
@@ -474,8 +474,8 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2024-01-30T17:20:19.287Z",
-  "stoppedAt": "2024-01-30T17:20:23.737Z",
+  "startedAt": "2024-03-13T12:11:29.201Z",
+  "stoppedAt": "2024-03-13T12:11:41.284Z",
   "status": "running",
   "finished": true
 }

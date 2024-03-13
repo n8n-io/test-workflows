@@ -5,7 +5,7 @@
       "runData": {
         "When clicking \"Test workflow\"": [
           {
-            "startTime": 1709804254134,
+            "startTime": 1710331902418,
             "executionTime": 0,
             "source": [],
             "executionStatus": "success",
@@ -25,8 +25,8 @@
         ],
         "OpenAI Chat Model": [
           {
-            "startTime": 1709804254154,
-            "executionTime": 1047,
+            "startTime": 1710331902423,
+            "executionTime": 1425,
             "executionStatus": "success",
             "source": [
               null
@@ -117,8 +117,8 @@
             }
           },
           {
-            "startTime": 1709804256490,
-            "executionTime": 1543,
+            "startTime": 1710331905099,
+            "executionTime": 1770,
             "executionStatus": "success",
             "source": [
               null
@@ -241,8 +241,8 @@
             }
           },
           {
-            "startTime": 1709804259489,
-            "executionTime": 2457,
+            "startTime": 1710331908434,
+            "executionTime": 2521,
             "executionStatus": "success",
             "source": [
               null
@@ -397,8 +397,8 @@
             }
           },
           {
-            "startTime": 1709804261948,
-            "executionTime": 805,
+            "startTime": 1710331910957,
+            "executionTime": 1107,
             "executionStatus": "success",
             "source": [
               null
@@ -587,8 +587,8 @@
         ],
         "Wikipedia": [
           {
-            "startTime": 1709804255202,
-            "executionTime": 1286,
+            "startTime": 1710331903849,
+            "executionTime": 1249,
             "executionStatus": "success",
             "source": [
               null
@@ -617,8 +617,8 @@
             }
           },
           {
-            "startTime": 1709804258034,
-            "executionTime": 1454,
+            "startTime": 1710331906869,
+            "executionTime": 1565,
             "executionStatus": "success",
             "source": [
               null
@@ -649,7 +649,7 @@
         ],
         "Calculator": [
           {
-            "startTime": 1709804261947,
+            "startTime": 1710331910955,
             "executionTime": 1,
             "executionStatus": "success",
             "source": [
@@ -681,8 +681,8 @@
         ],
         "AI Agent": [
           {
-            "startTime": 1709804254134,
-            "executionTime": 8620,
+            "startTime": 1710331902419,
+            "executionTime": 9645,
             "source": [
               {
                 "previousNode": "When clicking \"Test workflow\""
@@ -742,8 +742,8 @@
         ],
         "Edit Fields": [
           {
-            "startTime": 1709804262754,
-            "executionTime": 28,
+            "startTime": 1710331912064,
+            "executionTime": 5,
             "source": [
               {
                 "previousNode": "AI Agent"
@@ -770,8 +770,8 @@
         ],
         "Structured Output Parser": [
           {
-            "startTime": 1709804262788,
-            "executionTime": 1,
+            "startTime": 1710331912074,
+            "executionTime": 0,
             "executionStatus": "success",
             "source": [
               null
@@ -801,7 +801,7 @@
             }
           },
           {
-            "startTime": 1709804267510,
+            "startTime": 1710331917144,
             "executionTime": 1,
             "executionStatus": "success",
             "source": [
@@ -827,7 +827,7 @@
                   {
                     "json": {
                       "action": "parse",
-                      "text": "```json\n{\n  \"output\": {\n    \"result\": 100\n  }\n}\n```"
+                      "text": "```json\n{\"output\":{\"result\":100}}\n```"
                     }
                   }
                 ]
@@ -837,8 +837,8 @@
         ],
         "Azure OpenAI Chat Model": [
           {
-            "startTime": 1709804262790,
-            "executionTime": 2631,
+            "startTime": 1710331912075,
+            "executionTime": 2652,
             "executionStatus": "success",
             "source": [
               null
@@ -915,8 +915,8 @@
             }
           },
           {
-            "startTime": 1709804265424,
-            "executionTime": 2086,
+            "startTime": 1710331914728,
+            "executionTime": 2416,
             "executionStatus": "success",
             "source": [
               null
@@ -978,8 +978,8 @@
                             "content": "",
                             "additional_kwargs": {
                               "function_call": {
-                                "name": "calculator",
-                                "arguments": "{\"input\":\"23200 / 232\"}"
+                                "arguments": "{\"input\":\"23200 / 232\"}",
+                                "name": "calculator"
                               }
                             }
                           }
@@ -1027,8 +1027,8 @@
         ],
         "Calculator1": [
           {
-            "startTime": 1709804265421,
-            "executionTime": 1,
+            "startTime": 1710331914728,
+            "executionTime": 0,
             "executionStatus": "success",
             "source": [
               null
@@ -1059,8 +1059,8 @@
         ],
         "AI Agent1": [
           {
-            "startTime": 1709804262782,
-            "executionTime": 4730,
+            "startTime": 1710331912069,
+            "executionTime": 5076,
             "source": [
               {
                 "previousNode": "When clicking \"Test workflow\""
@@ -1111,8 +1111,8 @@
         ],
         "Edit Fields1": [
           {
-            "startTime": 1709804267512,
-            "executionTime": 10,
+            "startTime": 1710331917145,
+            "executionTime": 3,
             "source": [
               {
                 "previousNode": "AI Agent1"
@@ -1208,8 +1208,8 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2024-03-07T09:37:34.134Z",
-  "stoppedAt": "2024-03-07T09:37:47.522Z",
+  "startedAt": "2024-03-13T12:11:42.418Z",
+  "stoppedAt": "2024-03-13T12:11:57.148Z",
   "status": "running",
   "finished": true
 }
