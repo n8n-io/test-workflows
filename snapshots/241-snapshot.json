@@ -5,7 +5,7 @@
       "runData": {
         "When clicking \"Test workflow\"": [
           {
-            "startTime": 1710331902418,
+            "startTime": 1710334011491,
             "executionTime": 0,
             "source": [],
             "executionStatus": "success",
@@ -25,8 +25,8 @@
         ],
         "OpenAI Chat Model": [
           {
-            "startTime": 1710331902423,
-            "executionTime": 1425,
+            "startTime": 1710334011506,
+            "executionTime": 1536,
             "executionStatus": "success",
             "source": [
               null
@@ -117,8 +117,8 @@
             }
           },
           {
-            "startTime": 1710331905099,
-            "executionTime": 1770,
+            "startTime": 1710334014370,
+            "executionTime": 2201,
             "executionStatus": "success",
             "source": [
               null
@@ -241,8 +241,8 @@
             }
           },
           {
-            "startTime": 1710331908434,
-            "executionTime": 2521,
+            "startTime": 1710334017882,
+            "executionTime": 1189,
             "executionStatus": "success",
             "source": [
               null
@@ -397,8 +397,8 @@
             }
           },
           {
-            "startTime": 1710331910957,
-            "executionTime": 1107,
+            "startTime": 1710334019074,
+            "executionTime": 1442,
             "executionStatus": "success",
             "source": [
               null
@@ -525,7 +525,227 @@
                             "additional_kwargs": {
                               "function_call": {
                                 "name": "calculator",
-                                "arguments": "{\"input\":\"(1879 + 1904) * 10\"}"
+                                "arguments": "{\"input\":\"1879 + 1904\"}"
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "lc": 1,
+                          "type": "constructor",
+                          "id": [
+                            "langchain_core",
+                            "messages",
+                            "FunctionMessage"
+                          ],
+                          "kwargs": {
+                            "content": "3783",
+                            "name": "calculator",
+                            "additional_kwargs": {}
+                          }
+                        }
+                      ],
+                      "options": {
+                        "functions": [
+                          {
+                            "name": "wikipedia-api",
+                            "description": "A tool for interacting with and fetching data from the Wikipedia API. The input should always be a string query.",
+                            "parameters": {
+                              "type": "object",
+                              "properties": {
+                                "input": {
+                                  "type": "string"
+                                }
+                              },
+                              "additionalProperties": false,
+                              "$schema": "http://json-schema.org/draft-07/schema#"
+                            }
+                          },
+                          {
+                            "name": "calculator",
+                            "description": "Useful for getting the result of a math expression. The input to this tool should be a valid mathematical expression that could be executed by a simple calculator.",
+                            "parameters": {
+                              "type": "object",
+                              "properties": {
+                                "input": {
+                                  "type": "string"
+                                }
+                              },
+                              "additionalProperties": false,
+                              "$schema": "http://json-schema.org/draft-07/schema#"
+                            }
+                          }
+                        ],
+                        "promptIndex": 0
+                      }
+                    }
+                  }
+                ]
+              ]
+            }
+          },
+          {
+            "startTime": 1710334020521,
+            "executionTime": 1559,
+            "executionStatus": "success",
+            "source": [
+              null
+            ],
+            "data": {
+              "ai_languageModel": [
+                [
+                  {
+                    "json": {
+                      "response": {
+                        "object": true
+                      }
+                    }
+                  }
+                ]
+              ]
+            },
+            "inputOverride": {
+              "ai_languageModel": [
+                [
+                  {
+                    "json": {
+                      "messages": [
+                        {
+                          "lc": 1,
+                          "type": "constructor",
+                          "id": [
+                            "langchain_core",
+                            "messages",
+                            "SystemMessage"
+                          ],
+                          "kwargs": {
+                            "content": "You are a helpful AI assistant.",
+                            "additional_kwargs": {}
+                          }
+                        },
+                        {
+                          "lc": 1,
+                          "type": "constructor",
+                          "id": [
+                            "langchain_core",
+                            "messages",
+                            "HumanMessage"
+                          ],
+                          "kwargs": {
+                            "content": "1. Search for Albert Einstein on Wikipedia, note his year of birth\n2. Search for J. Robert Oppenheimer on Wikipedia, note his year of birth\n3. Sum Oppenheimer + Einstein years of birth and multiply by 10\n4. Respond ONLY with numerical result, no other comments or text",
+                            "additional_kwargs": {}
+                          }
+                        },
+                        {
+                          "lc": 1,
+                          "type": "constructor",
+                          "id": [
+                            "langchain_core",
+                            "messages",
+                            "AIMessage"
+                          ],
+                          "kwargs": {
+                            "content": "",
+                            "additional_kwargs": {
+                              "function_call": {
+                                "name": "wikipedia-api",
+                                "arguments": "{\"input\":\"Albert Einstein\"}"
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "lc": 1,
+                          "type": "constructor",
+                          "id": [
+                            "langchain_core",
+                            "messages",
+                            "FunctionMessage"
+                          ],
+                          "kwargs": {
+                            "content": "Page: Albert Einstein\nSummary: Albert Einstein ( EYEN-styne; German: [ˈalbɛɐt ˈʔaɪnʃtaɪn] ; 14 March 1879 – 18 April 1955) was a German-born theoretical physicist who is widely held to be one of the greatest and most influential scientists of all time. Best known for developing the theory of relativity, Einstein also made important contributions to quantum mechanics, and was thus a central figure in the revolutionary reshaping of the scientific understanding of nature that modern physics accomplished in the first decades of the twentieth century. His mass–energy equivalence formula E = mc2, which arises from relativity theory, has been called \"the world's most famous equation\". He received the 1921 Nobel Prize in Physics \"for his services to theoretical physics, and especially for his discovery of the law of the photoelectric effect\", a pivotal step in the development of quantum theory. His work is also known for its influence on the philosophy of science. In a 1999 poll of 130 leading physicists worldwide by the British journal Physics World, Einstein was ranked the greatest physicist of all time. His intellectual achievements and originality have made the word Einstein broadly synonymous with genius.Born in the German Empire, Einstein moved to Switzerland in 1895, forsaking his German citizenship (as a subject of the Kingdom of Württemberg) the following year. In 1897, at the age of seventeen, he enrolled in the mathematics and physics teaching diploma program at the Swiss federal polytechnic school in Zürich, graduating in 1900. In 1901, he acquired Swiss citizenship, which he kept for the rest of his life. In 1903, he secured a permanent position at the Swiss Patent Office in Bern. In 1905, he submitted a successful PhD dissertation to the University of Zurich. In 1914, he moved to Berlin in order to join the Prussian Academy of Sciences and the Humboldt University of Berlin. In 1917, he became director of the Kaiser Wilhelm Institute for Physics; he also became a German citizen again, this time as a subject of the Kingdom of Prussia.In 1933, while he was visiting the United States, Adolf Hitler came to power in Germany. Horrified by the Nazi \"war of extermination\" against his fellow Jews, Einstein decided to remain in the US, and was granted American citizenship in 1940. On the eve of World War II, he endorsed a letter to President Franklin D. Roosevelt alerting him to the potential German nuclear weapons program and recommending that the US begin similar research. Einstein supported the Allies but generally viewed the idea of nuclear weapons with great dismay.In 1905, sometimes described as his annus mirabilis (miracle year), Einstein published four groundbreaking papers. These outlined a theory of the photoelectric effect, explained Brownian motion, introduced his special theory of relativity—a theory which addressed the inability of classical mechanics to account satisfactorily for the behavior of the electromagnetic field—and demonstrated that if the special theory is correct, mass and energy are equivalent to each other. In 1915, he proposed a general theory of relativity that extended his system of mechanics to incorporate gravitation. A cosmological paper that he published the following year laid out the implications of general relativity for the modeling of the structure and evolution of the universe as a whole. The middle part of his career also saw him making important contributions to statistical mechanics and quantum theory. Especially notable was his work on the quantum physics of radiation, in which light consists of particles, subsequently called photons. For much of the last phase of his academic life, Einstein worked on two endeavors that proved ultimately unsuccessful. Firstly, he advocated against quantum theory's introduction of fundamental randomness into science's picture of the world, objecting that \"God does not play dice\". Secondly, he attempted to devise a unified field theory by generalizing his",
+                            "name": "wikipedia-api",
+                            "additional_kwargs": {}
+                          }
+                        },
+                        {
+                          "lc": 1,
+                          "type": "constructor",
+                          "id": [
+                            "langchain_core",
+                            "messages",
+                            "AIMessage"
+                          ],
+                          "kwargs": {
+                            "content": "",
+                            "additional_kwargs": {
+                              "function_call": {
+                                "name": "wikipedia-api",
+                                "arguments": "{\"input\":\"J. Robert Oppenheimer\"}"
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "lc": 1,
+                          "type": "constructor",
+                          "id": [
+                            "langchain_core",
+                            "messages",
+                            "FunctionMessage"
+                          ],
+                          "kwargs": {
+                            "content": "Page: J. Robert Oppenheimer\nSummary: J. Robert Oppenheimer  (born Julius Robert Oppenheimer;  OP-ən-hy-mər; April 22, 1904 – February 18, 1967) was an American theoretical physicist. He was director of the Manhattan Project's Los Alamos Laboratory during World War II and is often called the \"father of the atomic bomb\".\nBorn in New York City, Oppenheimer earned a bachelor of arts degree in chemistry from Harvard University in 1925 and a doctorate in physics from the University of Göttingen in Germany in 1927, where he studied under Max Born. After research at other institutions, he joined the physics department at the University of California, Berkeley, where he became a full professor in 1936. He made significant contributions to theoretical physics, including achievements in quantum mechanics and nuclear physics such as the Born–Oppenheimer approximation for molecular wave functions, work on the theory of electrons and positrons, the Oppenheimer–Phillips process in nuclear fusion, and early work on quantum tunneling. With his students, he also made contributions to the theory of neutron stars and black holes, quantum field theory, and the interactions of cosmic rays.\nIn 1942, Oppenheimer was recruited to work on the Manhattan Project, and in 1943 he was appointed director of the project's Los Alamos Laboratory in New Mexico, tasked with developing the first nuclear weapons. His leadership and scientific expertise were instrumental in the project's success. On July 16, 1945, he was present at the first test of the atomic bomb, Trinity. In August 1945, the weapons were used against Japan in the bombings of Hiroshima and Nagasaki, the only use of nuclear weapons in an armed conflict.\nIn 1947, Oppenheimer became the director of the Institute for Advanced Study in Princeton, New Jersey, and chaired the influential General Advisory Committee of the newly created U.S. Atomic Energy Commission. He lobbied for international control of nuclear power to avert nuclear proliferation and a nuclear arms race with the Soviet Union. He opposed the development of the hydrogen bomb during a 1949–1950 governmental debate on the question and subsequently took positions on defense-related issues that provoked the ire of some U.S. government and military factions. During the second Red Scare, Oppenheimer's stances, together with his past associations with the Communist Party USA, led to the revocation of his security clearance, following a 1954 security hearing. This effectively ended his access to the government's atomic secrets and his career as a nuclear physicist. Also stripped of his direct political influence, Oppenheimer nevertheless continued to lecture, write, and work in physics. In 1963, as a gesture of political rehabilitation, he was given the Enrico Fermi Award. He died four years later, of throat cancer. In 2022, the federal government vacated the 1954 revocation of his security clearance.\n\n\n== Early life ==\n\n\n=== Childhood and education ===\nOppenheimer was born Julius Robert Oppenheimer into a non-observant Jewish family in New York City on April 22, 1904, to Ella (née Friedman), a painter, and Julius Seligmann Oppenheimer, a successful textile importer. Robert had a younger brother, Frank, who also became a physicist. Their father was born in Hanau, when it was still part of the Hesse-Nassau province of the Kingdom of Prussia, and as a teenager made his way to the United States in 1888, without money, higher education, or even English. He was hired by a textile company and within a decade was an executive there, eventually becoming wealthy. In 1912, the family moved to an apartment on Riverside Drive near West 88th Street, Manhattan, an area known for luxurious mansions and townhouses. Their art collection included works by Pablo Picasso, Édouard Vuillard, and Vincent van Gogh.Oppenheimer was initially educated at Alcuin Preparatory School. In 1911, he entered the Ethical Culture Society School, founded by Felix Adler to promote tr",
+                            "name": "wikipedia-api",
+                            "additional_kwargs": {}
+                          }
+                        },
+                        {
+                          "lc": 1,
+                          "type": "constructor",
+                          "id": [
+                            "langchain_core",
+                            "messages",
+                            "AIMessage"
+                          ],
+                          "kwargs": {
+                            "content": "",
+                            "additional_kwargs": {
+                              "function_call": {
+                                "name": "calculator",
+                                "arguments": "{\"input\":\"1879 + 1904\"}"
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "lc": 1,
+                          "type": "constructor",
+                          "id": [
+                            "langchain_core",
+                            "messages",
+                            "FunctionMessage"
+                          ],
+                          "kwargs": {
+                            "content": "3783",
+                            "name": "calculator",
+                            "additional_kwargs": {}
+                          }
+                        },
+                        {
+                          "lc": 1,
+                          "type": "constructor",
+                          "id": [
+                            "langchain_core",
+                            "messages",
+                            "AIMessage"
+                          ],
+                          "kwargs": {
+                            "content": "",
+                            "additional_kwargs": {
+                              "function_call": {
+                                "name": "calculator",
+                                "arguments": "{\"input\":\"3783 * 10\"}"
                               }
                             }
                           }
@@ -587,8 +807,8 @@
         ],
         "Wikipedia": [
           {
-            "startTime": 1710331903849,
-            "executionTime": 1249,
+            "startTime": 1710334013042,
+            "executionTime": 1327,
             "executionStatus": "success",
             "source": [
               null
@@ -617,8 +837,8 @@
             }
           },
           {
-            "startTime": 1710331906869,
-            "executionTime": 1565,
+            "startTime": 1710334016573,
+            "executionTime": 1308,
             "executionStatus": "success",
             "source": [
               null
@@ -649,7 +869,37 @@
         ],
         "Calculator": [
           {
-            "startTime": 1710331910955,
+            "startTime": 1710334019072,
+            "executionTime": 1,
+            "executionStatus": "success",
+            "source": [
+              null
+            ],
+            "data": {
+              "ai_tool": [
+                [
+                  {
+                    "json": {
+                      "response": "3783"
+                    }
+                  }
+                ]
+              ]
+            },
+            "inputOverride": {
+              "ai_tool": [
+                [
+                  {
+                    "json": {
+                      "query": "1879 + 1904"
+                    }
+                  }
+                ]
+              ]
+            }
+          },
+          {
+            "startTime": 1710334020517,
             "executionTime": 1,
             "executionStatus": "success",
             "source": [
@@ -671,7 +921,7 @@
                 [
                   {
                     "json": {
-                      "query": "(1879 + 1904) * 10"
+                      "query": "3783 * 10"
                     }
                   }
                 ]
@@ -681,8 +931,8 @@
         ],
         "AI Agent": [
           {
-            "startTime": 1710331902419,
-            "executionTime": 9645,
+            "startTime": 1710334011491,
+            "executionTime": 10590,
             "source": [
               {
                 "previousNode": "When clicking \"Test workflow\""
@@ -735,6 +985,14 @@
                 {
                   "node": "OpenAI Chat Model",
                   "runIndex": 3
+                },
+                {
+                  "node": "Calculator",
+                  "runIndex": 1
+                },
+                {
+                  "node": "OpenAI Chat Model",
+                  "runIndex": 4
                 }
               ]
             }
@@ -742,8 +1000,8 @@
         ],
         "Edit Fields": [
           {
-            "startTime": 1710331912064,
-            "executionTime": 5,
+            "startTime": 1710334022082,
+            "executionTime": 23,
             "source": [
               {
                 "previousNode": "AI Agent"
@@ -770,7 +1028,7 @@
         ],
         "Structured Output Parser": [
           {
-            "startTime": 1710331912074,
+            "startTime": 1710334022112,
             "executionTime": 0,
             "executionStatus": "success",
             "source": [
@@ -801,7 +1059,7 @@
             }
           },
           {
-            "startTime": 1710331917144,
+            "startTime": 1710334027677,
             "executionTime": 1,
             "executionStatus": "success",
             "source": [
@@ -837,8 +1095,8 @@
         ],
         "Azure OpenAI Chat Model": [
           {
-            "startTime": 1710331912075,
-            "executionTime": 2652,
+            "startTime": 1710334022113,
+            "executionTime": 3928,
             "executionStatus": "success",
             "source": [
               null
@@ -915,8 +1173,8 @@
             }
           },
           {
-            "startTime": 1710331914728,
-            "executionTime": 2416,
+            "startTime": 1710334026043,
+            "executionTime": 1633,
             "executionStatus": "success",
             "source": [
               null
@@ -1027,8 +1285,8 @@
         ],
         "Calculator1": [
           {
-            "startTime": 1710331914728,
-            "executionTime": 0,
+            "startTime": 1710334026041,
+            "executionTime": 2,
             "executionStatus": "success",
             "source": [
               null
@@ -1059,8 +1317,8 @@
         ],
         "AI Agent1": [
           {
-            "startTime": 1710331912069,
-            "executionTime": 5076,
+            "startTime": 1710334022105,
+            "executionTime": 5573,
             "source": [
               {
                 "previousNode": "When clicking \"Test workflow\""
@@ -1111,8 +1369,8 @@
         ],
         "Edit Fields1": [
           {
-            "startTime": 1710331917145,
-            "executionTime": 3,
+            "startTime": 1710334027679,
+            "executionTime": 6,
             "source": [
               {
                 "previousNode": "AI Agent1"
@@ -1172,6 +1430,14 @@
               {
                 "node": "OpenAI Chat Model",
                 "runIndex": 3
+              },
+              {
+                "node": "Calculator",
+                "runIndex": 1
+              },
+              {
+                "node": "OpenAI Chat Model",
+                "runIndex": 4
               }
             ]
           }
@@ -1208,8 +1474,8 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2024-03-13T12:11:42.418Z",
-  "stoppedAt": "2024-03-13T12:11:57.148Z",
+  "startedAt": "2024-03-13T12:46:51.490Z",
+  "stoppedAt": "2024-03-13T12:47:07.686Z",
   "status": "running",
   "finished": true
 }

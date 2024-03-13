@@ -5,7 +5,7 @@
       "runData": {
         "When clicking \"Test workflow\"": [
           {
-            "startTime": 1710331900710,
+            "startTime": 1710333960572,
             "executionTime": 0,
             "source": [],
             "executionStatus": "success",
@@ -25,8 +25,8 @@
         ],
         "Set Baseline": [
           {
-            "startTime": 1710331900710,
-            "executionTime": 1,
+            "startTime": 1710333960572,
+            "executionTime": 0,
             "source": [
               {
                 "previousNode": "When clicking \"Test workflow\""
@@ -51,7 +51,7 @@
         ],
         "Set Article": [
           {
-            "startTime": 1710331900711,
+            "startTime": 1710333960573,
             "executionTime": 3,
             "source": [
               {
@@ -77,8 +77,8 @@
         ],
         "OpenAI Chat Model": [
           {
-            "startTime": 1710331901601,
-            "executionTime": 2599,
+            "startTime": 1710333960592,
+            "executionTime": 3235,
             "executionStatus": "success",
             "source": [
               null
@@ -128,8 +128,8 @@
         ],
         "Summary - Simple - Map": [
           {
-            "startTime": 1710331900714,
-            "executionTime": 3486,
+            "startTime": 1710333960576,
+            "executionTime": 3252,
             "source": [
               {
                 "previousNode": "Set Article"
@@ -164,8 +164,8 @@
         ],
         "OpenAI Chat Model1": [
           {
-            "startTime": 1710331904242,
-            "executionTime": 3479,
+            "startTime": 1710333963874,
+            "executionTime": 2404,
             "executionStatus": "success",
             "source": [
               null
@@ -198,7 +198,7 @@
                             "HumanMessage"
                           ],
                           "kwargs": {
-                            "content": "You are assessing a submitted answer on a given task or input based on a set of criteria. Here is the data:\n[BEGIN DATA]\n***\n[Input]: Summarize Wikipedia article about the dancing plague of 1518\n***\n[Submission]: The dancing plague of 1518, also known as the dance epidemic, occurred in Strasbourg, Alsace, where between 50 and 400 people danced uncontrollably for weeks. The cause is debated, with theories including stress-induced mass hysteria, ergot poisoning, and religious explanations. The outbreak eventually subsided after dancers were sent to a shrine to pray for absolution. The veracity of deaths is disputed, with some sources claiming fatalities while others do not mention any deaths. Modern theories suggest food poisoning or stress-induced mass hysteria as possible explanations. The event has inspired various works of art and media, including films, songs, and novels.\n***\n[Criteria]: helpfulness: Is the submission helpful, insightful, and appropriate? If so, response Y. If not, respond N.\n***\n[Reference]: The dancing plague of 1518 in Strasbourg, Alsace involved between 50 and 400 people dancing uncontrollably for weeks. The cause is unknown, with theories including stress-induced mass hysteria and ergot poisoning. The outbreak ended when the dancers prayed for absolution at a shrine. There is controversy over the number of deaths, with some sources claiming up to fifteen deaths per day, but historical documents do not confirm any fatalities. Similar events have been reported throughout history, inspiring various works of pop culture.\n***\n[END DATA]\nDoes the submission meet the Criteria? First, write out in a step by step manner your reasoning about each criterion to be sure that your conclusion is correct. Avoid simply stating the correct answers at the outset. Then print only the single character \"Y\" or \"N\" (without quotes or punctuation) on its own line corresponding to the correct answer of whether the submission meets all criteria. At the end, repeat just the letter again by itself on a new line.",
+                            "content": "You are assessing a submitted answer on a given task or input based on a set of criteria. Here is the data:\n[BEGIN DATA]\n***\n[Input]: Summarize Wikipedia article about the dancing plague of 1518\n***\n[Submission]: The dancing plague of 1518, also known as the dance epidemic, occurred in Strasbourg, Alsace, where between 50 and 400 people danced uncontrollably for weeks. The cause is debated, with theories including stress-induced mass hysteria, ergot poisoning, and religious explanations. The outbreak began with one woman dancing and spread to others, leading to deaths and eventually subsiding after victims were sent to a shrine. The veracity of deaths is disputed, with some sources claiming up to 15 deaths per day. Modern theories suggest food poisoning or stress-induced mass hysteria as possible explanations. The event has inspired various works of art and media, including films, songs, and novels.\n***\n[Criteria]: helpfulness: Is the submission helpful, insightful, and appropriate? If so, response Y. If not, respond N.\n***\n[Reference]: The dancing plague of 1518 in Strasbourg, Alsace involved between 50 and 400 people dancing uncontrollably for weeks. The cause is unknown, with theories including stress-induced mass hysteria and ergot poisoning. The outbreak ended when the dancers prayed for absolution at a shrine. There is controversy over the number of deaths, with some sources claiming up to fifteen deaths per day, but historical documents do not confirm any fatalities. Similar events have been reported throughout history, inspiring various works of pop culture.\n***\n[END DATA]\nDoes the submission meet the Criteria? First, write out in a step by step manner your reasoning about each criterion to be sure that your conclusion is correct. Avoid simply stating the correct answers at the outset. Then print only the single character \"Y\" or \"N\" (without quotes or punctuation) on its own line corresponding to the correct answer of whether the submission meets all criteria. At the end, repeat just the letter again by itself on a new line.",
                             "additional_kwargs": {}
                           }
                         }
@@ -215,8 +215,8 @@
         ],
         "Evaluate to Baseline": [
           {
-            "startTime": 1710331904201,
-            "executionTime": 3521,
+            "startTime": 1710333963828,
+            "executionTime": 2452,
             "source": [
               {
                 "previousNode": "Summary - Simple - Map"
@@ -228,7 +228,7 @@
                 [
                   {
                     "json": {
-                      "reasoning": "1. Is the submission helpful?- The submission provides a summary of the Wikipedia article about the dancing plague of 1518, including key details such as the location, number of people involved, possible causes, and outcomes.- The submission also mentions the controversy surrounding the number of deaths and the inspiration for various works of art and media.- Overall, the submission is informative and provides a concise overview of the topic, which can be considered helpful.Therefore, the submission meets the criteria for helpfulness.",
+                      "reasoning": "Step by step reasoning:1. Is the submission helpful? - Yes, the submission provides a detailed summary of the Wikipedia article about the dancing plague of 1518, including key information such as the location, number of people involved, possible causes, outcomes, and cultural impact.2. Is the submission insightful? - Yes, the submission offers insights into the various theories surrounding the cause of the dancing plague, the controversy over the number of deaths, and the inspiration for works of art and media.3. Is the submission appropriate? - Yes, the submission is appropriate as it directly addresses the task of summarizing the Wikipedia article about the dancing plague of 1518.Therefore, the submission meets the Criteria.",
                       "value": "Y",
                       "score": 1
                     },
@@ -282,8 +282,8 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2024-03-13T12:11:40.710Z",
-  "stoppedAt": "2024-03-13T12:11:47.722Z",
+  "startedAt": "2024-03-13T12:46:00.572Z",
+  "stoppedAt": "2024-03-13T12:46:06.280Z",
   "status": "running",
   "finished": true
 }
