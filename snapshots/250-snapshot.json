@@ -5,7 +5,7 @@
       "runData": {
         "When clicking \"Test workflow\"": [
           {
-            "startTime": 1709804341128,
+            "startTime": 1710334093326,
             "executionTime": 0,
             "source": [],
             "executionStatus": "success",
@@ -25,8 +25,8 @@
         ],
         "Code": [
           {
-            "startTime": 1709804341128,
-            "executionTime": 15,
+            "startTime": 1710334093326,
+            "executionTime": 13,
             "source": [
               {
                 "previousNode": "When clicking \"Test workflow\""
@@ -51,8 +51,8 @@
         ],
         "Default Data Loader": [
           {
-            "startTime": 1709804341148,
-            "executionTime": 173,
+            "startTime": 1710334093342,
+            "executionTime": 10,
             "executionStatus": "success",
             "source": [
               null
@@ -91,8 +91,8 @@
         ],
         "Token Splitter": [
           {
-            "startTime": 1709804341149,
-            "executionTime": 172,
+            "startTime": 1710334093342,
+            "executionTime": 10,
             "executionStatus": "success",
             "source": [
               null
@@ -125,8 +125,8 @@
         ],
         "Embeddings OpenAI": [
           {
-            "startTime": 1709804343269,
-            "executionTime": 988,
+            "startTime": 1710334094191,
+            "executionTime": 1015,
             "executionStatus": "success",
             "source": [
               null
@@ -172,8 +172,8 @@
         ],
         "Pinecone Vector Store": [
           {
-            "startTime": 1709804341144,
-            "executionTime": 3939,
+            "startTime": 1710334093340,
+            "executionTime": 2458,
             "source": [
               {
                 "previousNode": "Code"
@@ -338,8 +338,8 @@
         ],
         "Check Vector Store Populated": [
           {
-            "startTime": 1709804345083,
-            "executionTime": 2,
+            "startTime": 1710334095799,
+            "executionTime": 1,
             "source": [
               {
                 "previousNode": "Pinecone Vector Store"
@@ -366,8 +366,8 @@
         ],
         "Wait": [
           {
-            "startTime": 1709804345085,
-            "executionTime": 15003,
+            "startTime": 1710334095800,
+            "executionTime": 15002,
             "source": [
               {
                 "previousNode": "Check Vector Store Populated"
@@ -394,8 +394,8 @@
         ],
         "Embeddings OpenAI10": [
           {
-            "startTime": 1709804360180,
-            "executionTime": 433,
+            "startTime": 1710334110903,
+            "executionTime": 392,
             "executionStatus": "success",
             "source": [
               null
@@ -428,8 +428,8 @@
         ],
         "Pinecone Vector Store1": [
           {
-            "startTime": 1709804360089,
-            "executionTime": 916,
+            "startTime": 1710334110803,
+            "executionTime": 1975,
             "source": [
               {
                 "previousNode": "Wait"
@@ -444,7 +444,7 @@
                       "document": {
                         "object": true
                       },
-                      "score": 0.43818453
+                      "score": 0.438186795
                     },
                     "pairedItem": {
                       "item": 0
@@ -455,7 +455,7 @@
                       "document": {
                         "object": true
                       },
-                      "score": 0.383746445
+                      "score": 0.383704036
                     },
                     "pairedItem": {
                       "item": 0
@@ -477,7 +477,7 @@
                       "document": {
                         "object": true
                       },
-                      "score": 0.329059
+                      "score": 0.32910651
                     },
                     "pairedItem": {
                       "item": 0
@@ -498,7 +498,7 @@
         ],
         "Check Vector Store Retrieval": [
           {
-            "startTime": 1709804361005,
+            "startTime": 1710334112778,
             "executionTime": 2,
             "source": [
               {
@@ -526,8 +526,8 @@
         ],
         "Vector Store Retriever": [
           {
-            "startTime": 1709804361087,
-            "executionTime": 635,
+            "startTime": 1710334112853,
+            "executionTime": 2481,
             "executionStatus": "success",
             "source": [
               null
@@ -560,8 +560,8 @@
         ],
         "Pinecone Vector Store2": [
           {
-            "startTime": 1709804361087,
-            "executionTime": 635,
+            "startTime": 1710334112853,
+            "executionTime": 2480,
             "executionStatus": "success",
             "source": [
               null
@@ -595,8 +595,8 @@
         ],
         "Embeddings OpenAI9": [
           {
-            "startTime": 1709804361087,
-            "executionTime": 359,
+            "startTime": 1710334112853,
+            "executionTime": 369,
             "executionStatus": "success",
             "source": [
               null
@@ -629,8 +629,8 @@
         ],
         "OpenAI Chat Model": [
           {
-            "startTime": 1709804361722,
-            "executionTime": 871,
+            "startTime": 1710334115335,
+            "executionTime": 457,
             "executionStatus": "success",
             "source": [
               null
@@ -693,8 +693,8 @@
         ],
         "Question and Answer Chain": [
           {
-            "startTime": 1709804361007,
-            "executionTime": 1587,
+            "startTime": 1710334112780,
+            "executionTime": 3012,
             "source": [
               {
                 "previousNode": "Check Vector Store Retrieval"
@@ -741,7 +741,7 @@
         ],
         "Edit Fields": [
           {
-            "startTime": 1709804362594,
+            "startTime": 1710334115793,
             "executionTime": 1,
             "source": [
               {
@@ -828,8 +828,8 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2024-03-07T09:39:01.126Z",
-  "stoppedAt": "2024-03-07T09:39:22.595Z",
+  "startedAt": "2024-03-13T12:48:13.325Z",
+  "stoppedAt": "2024-03-13T12:48:35.794Z",
   "status": "running",
   "finished": true
 }
