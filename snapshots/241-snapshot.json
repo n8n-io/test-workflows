@@ -5,7 +5,8 @@
       "runData": {
         "When clicking \"Test workflow\"": [
           {
-            "startTime": 1710337667008,
+            "hints": [],
+            "startTime": 1721987051773,
             "executionTime": 0,
             "source": [],
             "executionStatus": "success",
@@ -25,8 +26,8 @@
         ],
         "OpenAI Chat Model": [
           {
-            "startTime": 1710337667013,
-            "executionTime": 934,
+            "startTime": 1721987052139,
+            "executionTime": 806,
             "executionStatus": "success",
             "source": [
               null
@@ -37,6 +38,9 @@
                   {
                     "json": {
                       "response": {
+                        "object": true
+                      },
+                      "tokenUsage": {
                         "object": true
                       }
                     }
@@ -50,51 +54,23 @@
                   {
                     "json": {
                       "messages": [
-                        {
-                          "lc": 1,
-                          "type": "constructor",
-                          "id": [
-                            "langchain_core",
-                            "messages",
-                            "SystemMessage"
-                          ],
-                          "kwargs": {
-                            "content": "You are a helpful AI assistant.",
-                            "additional_kwargs": {}
-                          }
-                        },
-                        {
-                          "lc": 1,
-                          "type": "constructor",
-                          "id": [
-                            "langchain_core",
-                            "messages",
-                            "HumanMessage"
-                          ],
-                          "kwargs": {
-                            "content": "What is the result of 30 + (10002200 / 100)? Only respond with a number.",
-                            "additional_kwargs": {}
-                          }
-                        }
+                        "System: You are a helpful AI assistant.\nHuman: What is the result of 30 + (10002200 / 100)? Only respond with a number."
                       ],
+                      "estimatedTokens": 33,
                       "options": {
-                        "functions": [
-                          {
-                            "name": "calculator",
-                            "description": "Useful for getting the result of a math expression. The input to this tool should be a valid mathematical expression that could be executed by a simple calculator.",
-                            "parameters": {
-                              "type": "object",
-                              "properties": {
-                                "input": {
-                                  "type": "string"
-                                }
-                              },
-                              "additionalProperties": false,
-                              "$schema": "http://json-schema.org/draft-07/schema#"
-                            }
-                          }
-                        ],
-                        "promptIndex": 0
+                        "openai_api_key": {
+                          "lc": 1,
+                          "type": "secret",
+                          "id": [
+                            "OPENAI_API_KEY"
+                          ]
+                        },
+                        "model": "gpt-3.5-turbo",
+                        "temperature": 0,
+                        "timeout": 60000,
+                        "max_retries": 2,
+                        "configuration": {},
+                        "model_kwargs": {}
                       }
                     }
                   }
@@ -103,8 +79,8 @@
             }
           },
           {
-            "startTime": 1710337667951,
-            "executionTime": 785,
+            "startTime": 1721987052947,
+            "executionTime": 830,
             "executionStatus": "success",
             "source": [
               null
@@ -115,6 +91,9 @@
                   {
                     "json": {
                       "response": {
+                        "object": true
+                      },
+                      "tokenUsage": {
                         "object": true
                       }
                     }
@@ -128,83 +107,23 @@
                   {
                     "json": {
                       "messages": [
-                        {
-                          "lc": 1,
-                          "type": "constructor",
-                          "id": [
-                            "langchain_core",
-                            "messages",
-                            "SystemMessage"
-                          ],
-                          "kwargs": {
-                            "content": "You are a helpful AI assistant.",
-                            "additional_kwargs": {}
-                          }
-                        },
-                        {
-                          "lc": 1,
-                          "type": "constructor",
-                          "id": [
-                            "langchain_core",
-                            "messages",
-                            "HumanMessage"
-                          ],
-                          "kwargs": {
-                            "content": "What is the result of 30 + (10002200 / 100)? Only respond with a number.",
-                            "additional_kwargs": {}
-                          }
-                        },
-                        {
-                          "lc": 1,
-                          "type": "constructor",
-                          "id": [
-                            "langchain_core",
-                            "messages",
-                            "AIMessage"
-                          ],
-                          "kwargs": {
-                            "content": "",
-                            "additional_kwargs": {
-                              "function_call": {
-                                "name": "calculator",
-                                "arguments": "{\"input\":\"30 + (10002200 / 100)\"}"
-                              }
-                            }
-                          }
-                        },
-                        {
-                          "lc": 1,
-                          "type": "constructor",
-                          "id": [
-                            "langchain_core",
-                            "messages",
-                            "FunctionMessage"
-                          ],
-                          "kwargs": {
-                            "content": "100052",
-                            "name": "calculator",
-                            "additional_kwargs": {}
-                          }
-                        }
+                        "System: You are a helpful AI assistant.\nHuman: What is the result of 30 + (10002200 / 100)? Only respond with a number.\nAI: \nFunction: calculator, 100052"
                       ],
+                      "estimatedTokens": 43,
                       "options": {
-                        "functions": [
-                          {
-                            "name": "calculator",
-                            "description": "Useful for getting the result of a math expression. The input to this tool should be a valid mathematical expression that could be executed by a simple calculator.",
-                            "parameters": {
-                              "type": "object",
-                              "properties": {
-                                "input": {
-                                  "type": "string"
-                                }
-                              },
-                              "additionalProperties": false,
-                              "$schema": "http://json-schema.org/draft-07/schema#"
-                            }
-                          }
-                        ],
-                        "promptIndex": 0
+                        "openai_api_key": {
+                          "lc": 1,
+                          "type": "secret",
+                          "id": [
+                            "OPENAI_API_KEY"
+                          ]
+                        },
+                        "model": "gpt-3.5-turbo",
+                        "temperature": 0,
+                        "timeout": 60000,
+                        "max_retries": 2,
+                        "configuration": {},
+                        "model_kwargs": {}
                       }
                     }
                   }
@@ -215,8 +134,8 @@
         ],
         "Calculator": [
           {
-            "startTime": 1710337667948,
-            "executionTime": 1,
+            "startTime": 1721987052946,
+            "executionTime": 0,
             "executionStatus": "success",
             "source": [
               null
@@ -247,8 +166,9 @@
         ],
         "AI Agent": [
           {
-            "startTime": 1710337667009,
-            "executionTime": 1727,
+            "hints": [],
+            "startTime": 1721987051773,
+            "executionTime": 2004,
             "source": [
               {
                 "previousNode": "When clicking \"Test workflow\""
@@ -260,7 +180,7 @@
                 [
                   {
                     "json": {
-                      "output": "The result of the expression 30 + (10002200 / 100) is 100052.",
+                      "output": "The result of 30 + (10002200 / 100) is 100052.",
                       "intermediateSteps": [
                         "json array"
                       ]
@@ -292,8 +212,9 @@
         ],
         "Edit Fields": [
           {
-            "startTime": 1710337668737,
-            "executionTime": 17,
+            "hints": [],
+            "startTime": 1721987053777,
+            "executionTime": 0,
             "source": [
               {
                 "previousNode": "AI Agent"
@@ -317,32 +238,62 @@
             }
           }
         ],
-        "Structured Output Parser": [
+        "Azure OpenAI Chat Model": [
           {
-            "startTime": 1710337668762,
-            "executionTime": 1,
+            "startTime": 1721987053782,
+            "executionTime": 1357,
             "executionStatus": "success",
             "source": [
               null
             ],
             "data": {
-              "ai_outputParser": [
+              "ai_languageModel": [
                 [
                   {
                     "json": {
-                      "action": "getFormatInstructions",
-                      "response": "You must format your output as a JSON value that adheres to a given \"JSON Schema\" instance.\n\n\"JSON Schema\" is a declarative language that allows you to annotate and validate JSON documents.\n\nFor example, the example \"JSON Schema\" instance {{\"properties\": {{\"foo\": {{\"description\": \"a list of test words\", \"type\": \"array\", \"items\": {{\"type\": \"string\"}}}}}}, \"required\": [\"foo\"]}}}}\nwould match an object with one required property, \"foo\". The \"type\" property specifies \"foo\" must be an \"array\", and the \"description\" property semantically describes it as \"a list of test words\". The items within \"foo\" must be strings.\nThus, the object {{\"foo\": [\"bar\", \"baz\"]}} is a well-formatted instance of this example \"JSON Schema\". The object {{\"properties\": {{\"foo\": [\"bar\", \"baz\"]}}}} is not well-formatted.\n\nYour output will be parsed and type-checked according to the provided schema instance, so make sure all fields in your output match the schema exactly and there are no trailing commas!\n\nHere is the JSON Schema instance your output must adhere to. Include the enclosing markdown codeblock:\n```json\n{\"type\":\"object\",\"properties\":{\"output\":{\"type\":\"object\",\"properties\":{\"result\":{}},\"additionalProperties\":false}},\"additionalProperties\":false,\"$schema\":\"http://json-schema.org/draft-07/schema#\"}\n```\n"
+                      "response": {
+                        "object": true
+                      },
+                      "tokenUsage": {
+                        "object": true
+                      }
                     }
                   }
                 ]
               ]
             },
             "inputOverride": {
-              "ai_outputParser": [
+              "ai_languageModel": [
                 [
                   {
                     "json": {
-                      "action": "getFormatInstructions"
+                      "messages": [
+                        "System: You are a helpful AI assistant.\nHuman: How much is 23200 / 232? Only respond with a number\nYou must format your output as a JSON value that adheres to a given \"JSON Schema\" instance.\n\n\"JSON Schema\" is a declarative language that allows you to annotate and validate JSON documents.\n\nFor example, the example \"JSON Schema\" instance {{\"properties\": {{\"foo\": {{\"description\": \"a list of test words\", \"type\": \"array\", \"items\": {{\"type\": \"string\"}}}}}}, \"required\": [\"foo\"]}}}}\nwould match an object with one required property, \"foo\". The \"type\" property specifies \"foo\" must be an \"array\", and the \"description\" property semantically describes it as \"a list of test words\". The items within \"foo\" must be strings.\nThus, the object {{\"foo\": [\"bar\", \"baz\"]}} is a well-formatted instance of this example \"JSON Schema\". The object {{\"properties\": {{\"foo\": [\"bar\", \"baz\"]}}}} is not well-formatted.\n\nYour output will be parsed and type-checked according to the provided schema instance, so make sure all fields in your output match the schema exactly and there are no trailing commas!\n\nHere is the JSON Schema instance your output must adhere to. Include the enclosing markdown codeblock:\n```json\n{\"type\":\"object\",\"properties\":{\"output\":{\"type\":\"object\",\"properties\":{\"result\":{}},\"additionalProperties\":false}},\"additionalProperties\":false,\"$schema\":\"http://json-schema.org/draft-07/schema#\"}\n```\n"
+                      ],
+                      "estimatedTokens": 333,
+                      "options": {
+                        "azure_openai_api_deployment_name": "gpt4",
+                        "azure_openai_api_instance_name": "n8n-ai-us",
+                        "azure_openai_api_key": {
+                          "lc": 1,
+                          "type": "secret",
+                          "id": [
+                            "AZURE_OPENAI_API_KEY"
+                          ]
+                        },
+                        "azure_openai_api_version": "2023-07-01-preview",
+                        "temperature": 0,
+                        "timeout": 60000,
+                        "max_retries": 2,
+                        "configuration": {},
+                        "openai_api_key": {
+                          "lc": 1,
+                          "type": "secret",
+                          "id": [
+                            "OPENAI_API_KEY"
+                          ]
+                        }
+                      }
                     }
                   }
                 ]
@@ -350,8 +301,103 @@
             }
           },
           {
-            "startTime": 1710337678589,
-            "executionTime": 2,
+            "startTime": 1721987055141,
+            "executionTime": 723,
+            "executionStatus": "success",
+            "source": [
+              null
+            ],
+            "data": {
+              "ai_languageModel": [
+                [
+                  {
+                    "json": {
+                      "response": {
+                        "object": true
+                      },
+                      "tokenUsage": {
+                        "object": true
+                      }
+                    }
+                  }
+                ]
+              ]
+            },
+            "inputOverride": {
+              "ai_languageModel": [
+                [
+                  {
+                    "json": {
+                      "messages": [
+                        "System: You are a helpful AI assistant.\nHuman: How much is 23200 / 232? Only respond with a number\nYou must format your output as a JSON value that adheres to a given \"JSON Schema\" instance.\n\n\"JSON Schema\" is a declarative language that allows you to annotate and validate JSON documents.\n\nFor example, the example \"JSON Schema\" instance {{\"properties\": {{\"foo\": {{\"description\": \"a list of test words\", \"type\": \"array\", \"items\": {{\"type\": \"string\"}}}}}}, \"required\": [\"foo\"]}}}}\nwould match an object with one required property, \"foo\". The \"type\" property specifies \"foo\" must be an \"array\", and the \"description\" property semantically describes it as \"a list of test words\". The items within \"foo\" must be strings.\nThus, the object {{\"foo\": [\"bar\", \"baz\"]}} is a well-formatted instance of this example \"JSON Schema\". The object {{\"properties\": {{\"foo\": [\"bar\", \"baz\"]}}}} is not well-formatted.\n\nYour output will be parsed and type-checked according to the provided schema instance, so make sure all fields in your output match the schema exactly and there are no trailing commas!\n\nHere is the JSON Schema instance your output must adhere to. Include the enclosing markdown codeblock:\n```json\n{\"type\":\"object\",\"properties\":{\"output\":{\"type\":\"object\",\"properties\":{\"result\":{}},\"additionalProperties\":false}},\"additionalProperties\":false,\"$schema\":\"http://json-schema.org/draft-07/schema#\"}\n```\n\nAI: \nFunction: calculator, 100"
+                      ],
+                      "estimatedTokens": 342,
+                      "options": {
+                        "azure_openai_api_deployment_name": "gpt4",
+                        "azure_openai_api_instance_name": "n8n-ai-us",
+                        "azure_openai_api_key": {
+                          "lc": 1,
+                          "type": "secret",
+                          "id": [
+                            "AZURE_OPENAI_API_KEY"
+                          ]
+                        },
+                        "azure_openai_api_version": "2023-07-01-preview",
+                        "temperature": 0,
+                        "timeout": 60000,
+                        "max_retries": 2,
+                        "configuration": {},
+                        "openai_api_key": {
+                          "lc": 1,
+                          "type": "secret",
+                          "id": [
+                            "OPENAI_API_KEY"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Calculator1": [
+          {
+            "startTime": 1721987055140,
+            "executionTime": 0,
+            "executionStatus": "success",
+            "source": [
+              null
+            ],
+            "data": {
+              "ai_tool": [
+                [
+                  {
+                    "json": {
+                      "response": "100"
+                    }
+                  }
+                ]
+              ]
+            },
+            "inputOverride": {
+              "ai_tool": [
+                [
+                  {
+                    "json": {
+                      "query": "23200 / 232"
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Structured Output Parser": [
+          {
+            "startTime": 1721987055864,
+            "executionTime": 0,
             "executionStatus": "success",
             "source": [
               null
@@ -384,232 +430,11 @@
             }
           }
         ],
-        "Azure OpenAI Chat Model": [
-          {
-            "startTime": 1710337668763,
-            "executionTime": 7360,
-            "executionStatus": "success",
-            "source": [
-              null
-            ],
-            "data": {
-              "ai_languageModel": [
-                [
-                  {
-                    "json": {
-                      "response": {
-                        "object": true
-                      }
-                    }
-                  }
-                ]
-              ]
-            },
-            "inputOverride": {
-              "ai_languageModel": [
-                [
-                  {
-                    "json": {
-                      "messages": [
-                        {
-                          "lc": 1,
-                          "type": "constructor",
-                          "id": [
-                            "langchain_core",
-                            "messages",
-                            "SystemMessage"
-                          ],
-                          "kwargs": {
-                            "content": "You are a helpful AI assistant.",
-                            "additional_kwargs": {}
-                          }
-                        },
-                        {
-                          "lc": 1,
-                          "type": "constructor",
-                          "id": [
-                            "langchain_core",
-                            "messages",
-                            "HumanMessage"
-                          ],
-                          "kwargs": {
-                            "content": "How much is 23200 / 232? Only respond with a number\nYou must format your output as a JSON value that adheres to a given \"JSON Schema\" instance.\n\n\"JSON Schema\" is a declarative language that allows you to annotate and validate JSON documents.\n\nFor example, the example \"JSON Schema\" instance {{\"properties\": {{\"foo\": {{\"description\": \"a list of test words\", \"type\": \"array\", \"items\": {{\"type\": \"string\"}}}}}}, \"required\": [\"foo\"]}}}}\nwould match an object with one required property, \"foo\". The \"type\" property specifies \"foo\" must be an \"array\", and the \"description\" property semantically describes it as \"a list of test words\". The items within \"foo\" must be strings.\nThus, the object {{\"foo\": [\"bar\", \"baz\"]}} is a well-formatted instance of this example \"JSON Schema\". The object {{\"properties\": {{\"foo\": [\"bar\", \"baz\"]}}}} is not well-formatted.\n\nYour output will be parsed and type-checked according to the provided schema instance, so make sure all fields in your output match the schema exactly and there are no trailing commas!\n\nHere is the JSON Schema instance your output must adhere to. Include the enclosing markdown codeblock:\n```json\n{\"type\":\"object\",\"properties\":{\"output\":{\"type\":\"object\",\"properties\":{\"result\":{}},\"additionalProperties\":false}},\"additionalProperties\":false,\"$schema\":\"http://json-schema.org/draft-07/schema#\"}\n```\n",
-                            "additional_kwargs": {}
-                          }
-                        }
-                      ],
-                      "options": {
-                        "functions": [
-                          {
-                            "name": "calculator",
-                            "description": "Useful for getting the result of a math expression. The input to this tool should be a valid mathematical expression that could be executed by a simple calculator.",
-                            "parameters": {
-                              "type": "object",
-                              "properties": {
-                                "input": {
-                                  "type": "string"
-                                }
-                              },
-                              "additionalProperties": false,
-                              "$schema": "http://json-schema.org/draft-07/schema#"
-                            }
-                          }
-                        ],
-                        "promptIndex": 0
-                      }
-                    }
-                  }
-                ]
-              ]
-            }
-          },
-          {
-            "startTime": 1710337676126,
-            "executionTime": 2462,
-            "executionStatus": "success",
-            "source": [
-              null
-            ],
-            "data": {
-              "ai_languageModel": [
-                [
-                  {
-                    "json": {
-                      "response": {
-                        "object": true
-                      }
-                    }
-                  }
-                ]
-              ]
-            },
-            "inputOverride": {
-              "ai_languageModel": [
-                [
-                  {
-                    "json": {
-                      "messages": [
-                        {
-                          "lc": 1,
-                          "type": "constructor",
-                          "id": [
-                            "langchain_core",
-                            "messages",
-                            "SystemMessage"
-                          ],
-                          "kwargs": {
-                            "content": "You are a helpful AI assistant.",
-                            "additional_kwargs": {}
-                          }
-                        },
-                        {
-                          "lc": 1,
-                          "type": "constructor",
-                          "id": [
-                            "langchain_core",
-                            "messages",
-                            "HumanMessage"
-                          ],
-                          "kwargs": {
-                            "content": "How much is 23200 / 232? Only respond with a number\nYou must format your output as a JSON value that adheres to a given \"JSON Schema\" instance.\n\n\"JSON Schema\" is a declarative language that allows you to annotate and validate JSON documents.\n\nFor example, the example \"JSON Schema\" instance {{\"properties\": {{\"foo\": {{\"description\": \"a list of test words\", \"type\": \"array\", \"items\": {{\"type\": \"string\"}}}}}}, \"required\": [\"foo\"]}}}}\nwould match an object with one required property, \"foo\". The \"type\" property specifies \"foo\" must be an \"array\", and the \"description\" property semantically describes it as \"a list of test words\". The items within \"foo\" must be strings.\nThus, the object {{\"foo\": [\"bar\", \"baz\"]}} is a well-formatted instance of this example \"JSON Schema\". The object {{\"properties\": {{\"foo\": [\"bar\", \"baz\"]}}}} is not well-formatted.\n\nYour output will be parsed and type-checked according to the provided schema instance, so make sure all fields in your output match the schema exactly and there are no trailing commas!\n\nHere is the JSON Schema instance your output must adhere to. Include the enclosing markdown codeblock:\n```json\n{\"type\":\"object\",\"properties\":{\"output\":{\"type\":\"object\",\"properties\":{\"result\":{}},\"additionalProperties\":false}},\"additionalProperties\":false,\"$schema\":\"http://json-schema.org/draft-07/schema#\"}\n```\n",
-                            "additional_kwargs": {}
-                          }
-                        },
-                        {
-                          "lc": 1,
-                          "type": "constructor",
-                          "id": [
-                            "langchain_core",
-                            "messages",
-                            "AIMessage"
-                          ],
-                          "kwargs": {
-                            "content": "",
-                            "additional_kwargs": {
-                              "function_call": {
-                                "arguments": "{\"input\":\"23200 / 232\"}",
-                                "name": "calculator"
-                              }
-                            }
-                          }
-                        },
-                        {
-                          "lc": 1,
-                          "type": "constructor",
-                          "id": [
-                            "langchain_core",
-                            "messages",
-                            "FunctionMessage"
-                          ],
-                          "kwargs": {
-                            "content": "100",
-                            "name": "calculator",
-                            "additional_kwargs": {}
-                          }
-                        }
-                      ],
-                      "options": {
-                        "functions": [
-                          {
-                            "name": "calculator",
-                            "description": "Useful for getting the result of a math expression. The input to this tool should be a valid mathematical expression that could be executed by a simple calculator.",
-                            "parameters": {
-                              "type": "object",
-                              "properties": {
-                                "input": {
-                                  "type": "string"
-                                }
-                              },
-                              "additionalProperties": false,
-                              "$schema": "http://json-schema.org/draft-07/schema#"
-                            }
-                          }
-                        ],
-                        "promptIndex": 0
-                      }
-                    }
-                  }
-                ]
-              ]
-            }
-          }
-        ],
-        "Calculator1": [
-          {
-            "startTime": 1710337676124,
-            "executionTime": 0,
-            "executionStatus": "success",
-            "source": [
-              null
-            ],
-            "data": {
-              "ai_tool": [
-                [
-                  {
-                    "json": {
-                      "response": "100"
-                    }
-                  }
-                ]
-              ]
-            },
-            "inputOverride": {
-              "ai_tool": [
-                [
-                  {
-                    "json": {
-                      "query": "23200 / 232"
-                    }
-                  }
-                ]
-              ]
-            }
-          }
-        ],
         "AI Agent1": [
           {
-            "startTime": 1710337668755,
-            "executionTime": 9836,
+            "hints": [],
+            "startTime": 1721987053777,
+            "executionTime": 2087,
             "source": [
               {
                 "previousNode": "When clicking \"Test workflow\""
@@ -635,10 +460,6 @@
             "metadata": {
               "subRun": [
                 {
-                  "node": "Structured Output Parser",
-                  "runIndex": 0
-                },
-                {
                   "node": "Azure OpenAI Chat Model",
                   "runIndex": 0
                 },
@@ -652,7 +473,7 @@
                 },
                 {
                   "node": "Structured Output Parser",
-                  "runIndex": 1
+                  "runIndex": 0
                 }
               ]
             }
@@ -660,8 +481,9 @@
         ],
         "Edit Fields1": [
           {
-            "startTime": 1710337678591,
-            "executionTime": 10,
+            "hints": [],
+            "startTime": 1721987055864,
+            "executionTime": 2,
             "source": [
               {
                 "previousNode": "AI Agent1"
@@ -713,10 +535,6 @@
           {
             "subRun": [
               {
-                "node": "Structured Output Parser",
-                "runIndex": 0
-              },
-              {
                 "node": "Azure OpenAI Chat Model",
                 "runIndex": 0
               },
@@ -730,7 +548,7 @@
               },
               {
                 "node": "Structured Output Parser",
-                "runIndex": 1
+                "runIndex": 0
               }
             ]
           }
@@ -741,8 +559,8 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2024-03-13T13:47:47.008Z",
-  "stoppedAt": "2024-03-13T13:47:58.601Z",
+  "startedAt": "2024-07-26T09:44:11.773Z",
+  "stoppedAt": "2024-07-26T09:44:15.866Z",
   "status": "running",
   "finished": true
 }

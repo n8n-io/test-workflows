@@ -5,7 +5,8 @@
       "runData": {
         "When clicking \"Test workflow\"": [
           {
-            "startTime": 1710337682353,
+            "hints": [],
+            "startTime": 1721987051769,
             "executionTime": 0,
             "source": [],
             "executionStatus": "success",
@@ -25,8 +26,8 @@
         ],
         "OpenAI Chat Model2": [
           {
-            "startTime": 1710337682358,
-            "executionTime": 1476,
+            "startTime": 1721987052139,
+            "executionTime": 992,
             "executionStatus": "success",
             "source": [
               null
@@ -37,6 +38,9 @@
                   {
                     "json": {
                       "response": {
+                        "object": true
+                      },
+                      "tokenUsage": {
                         "object": true
                       }
                     }
@@ -50,38 +54,23 @@
                   {
                     "json": {
                       "messages": [
-                        {
-                          "lc": 1,
-                          "type": "constructor",
-                          "id": [
-                            "langchain_core",
-                            "messages",
-                            "SystemMessage"
-                          ],
-                          "kwargs": {
-                            "content": "Answer the following questions as best you can. You have access to the following tools:\n\ncalculator: Useful for getting the result of a math expression. The input to this tool should be a valid mathematical expression that could be executed by a simple calculator.\n\nThe way you use the tools is by specifying a json blob, denoted below by $JSON_BLOB\nSpecifically, this $JSON_BLOB should have a \"action\" key (with the name of the tool to use) and a \"action_input\" key (with the input to the tool going here). \nThe $JSON_BLOB should only contain a SINGLE action, do NOT return a list of multiple actions. Here is an example of a valid $JSON_BLOB:\n\n```\n{\n  \"action\": \"calculator\",\n  \"action_input\": \"1 + 2\"\n}\n```\n\nALWAYS use the following format:\n\nQuestion: the input question you must answer\nThought: you should always think about what to do\nAction: \n```\n$JSON_BLOB\n```\nObservation: the result of the action\n... (this Thought/Action/Observation can repeat N times)\nThought: I now know the final answer\nFinal Answer: the final answer to the original input question\n\nBegin! Reminder to always use the exact characters `Final Answer` when responding.",
-                            "additional_kwargs": {}
-                          }
-                        },
-                        {
-                          "lc": 1,
-                          "type": "constructor",
-                          "id": [
-                            "langchain_core",
-                            "messages",
-                            "HumanMessage"
-                          ],
-                          "kwargs": {
-                            "content": "What is the result of 30 + (10002200 / 100)? Only respond with a number.\n\n",
-                            "additional_kwargs": {}
-                          }
-                        }
+                        "System: Answer the following questions as best you can. You have access to the following tools:\n\ncalculator: Useful for getting the result of a math expression. The input to this tool should be a valid mathematical expression that could be executed by a simple calculator.\n\nThe way you use the tools is by specifying a json blob, denoted below by $JSON_BLOB\nSpecifically, this $JSON_BLOB should have a \"action\" key (with the name of the tool to use) and a \"action_input\" key (with the input to the tool going here). \nThe $JSON_BLOB should only contain a SINGLE action, do NOT return a list of multiple actions. Here is an example of a valid $JSON_BLOB:\n\n```\n{\n  \"action\": \"calculator\",\n  \"action_input\": \"1 + 2\"\n}\n```\n\nALWAYS use the following format:\n\nQuestion: the input question you must answer\nThought: you should always think about what to do\nAction: \n```\n$JSON_BLOB\n```\nObservation: the result of the action\n... (this Thought/Action/Observation can repeat N times)\nThought: I now know the final answer\nFinal Answer: the final answer to the original input question\n\nBegin! Reminder to always use the exact characters `Final Answer` when responding.\nHuman: What is the result of 30 + (10002200 / 100)? Only respond with a number.\n\n"
                       ],
+                      "estimatedTokens": 296,
                       "options": {
-                        "stop": [
-                          "Observation:"
-                        ],
-                        "promptIndex": 0
+                        "openai_api_key": {
+                          "lc": 1,
+                          "type": "secret",
+                          "id": [
+                            "OPENAI_API_KEY"
+                          ]
+                        },
+                        "model": "gpt-3.5-turbo",
+                        "temperature": 0,
+                        "timeout": 60000,
+                        "max_retries": 2,
+                        "configuration": {},
+                        "model_kwargs": {}
                       }
                     }
                   }
@@ -90,8 +79,8 @@
             }
           },
           {
-            "startTime": 1710337683837,
-            "executionTime": 684,
+            "startTime": 1721987053132,
+            "executionTime": 587,
             "executionStatus": "success",
             "source": [
               null
@@ -102,6 +91,9 @@
                   {
                     "json": {
                       "response": {
+                        "object": true
+                      },
+                      "tokenUsage": {
                         "object": true
                       }
                     }
@@ -115,38 +107,23 @@
                   {
                     "json": {
                       "messages": [
-                        {
-                          "lc": 1,
-                          "type": "constructor",
-                          "id": [
-                            "langchain_core",
-                            "messages",
-                            "SystemMessage"
-                          ],
-                          "kwargs": {
-                            "content": "Answer the following questions as best you can. You have access to the following tools:\n\ncalculator: Useful for getting the result of a math expression. The input to this tool should be a valid mathematical expression that could be executed by a simple calculator.\n\nThe way you use the tools is by specifying a json blob, denoted below by $JSON_BLOB\nSpecifically, this $JSON_BLOB should have a \"action\" key (with the name of the tool to use) and a \"action_input\" key (with the input to the tool going here). \nThe $JSON_BLOB should only contain a SINGLE action, do NOT return a list of multiple actions. Here is an example of a valid $JSON_BLOB:\n\n```\n{\n  \"action\": \"calculator\",\n  \"action_input\": \"1 + 2\"\n}\n```\n\nALWAYS use the following format:\n\nQuestion: the input question you must answer\nThought: you should always think about what to do\nAction: \n```\n$JSON_BLOB\n```\nObservation: the result of the action\n... (this Thought/Action/Observation can repeat N times)\nThought: I now know the final answer\nFinal Answer: the final answer to the original input question\n\nBegin! Reminder to always use the exact characters `Final Answer` when responding.",
-                            "additional_kwargs": {}
-                          }
-                        },
-                        {
-                          "lc": 1,
-                          "type": "constructor",
-                          "id": [
-                            "langchain_core",
-                            "messages",
-                            "HumanMessage"
-                          ],
-                          "kwargs": {
-                            "content": "What is the result of 30 + (10002200 / 100)? Only respond with a number.\n\nThis was your previous work (but I haven't seen any of it! I only see what you return as final answer):\nThought: We can use a calculator to find the result of this expression.  \nAction: \n```\n{\n  \"action\": \"calculator\",\n  \"action_input\": \"30 + (10002200 / 100)\"\n}\n```  \n\nObservation: 100052\nThought:",
-                            "additional_kwargs": {}
-                          }
-                        }
+                        "System: Answer the following questions as best you can. You have access to the following tools:\n\ncalculator: Useful for getting the result of a math expression. The input to this tool should be a valid mathematical expression that could be executed by a simple calculator.\n\nThe way you use the tools is by specifying a json blob, denoted below by $JSON_BLOB\nSpecifically, this $JSON_BLOB should have a \"action\" key (with the name of the tool to use) and a \"action_input\" key (with the input to the tool going here). \nThe $JSON_BLOB should only contain a SINGLE action, do NOT return a list of multiple actions. Here is an example of a valid $JSON_BLOB:\n\n```\n{\n  \"action\": \"calculator\",\n  \"action_input\": \"1 + 2\"\n}\n```\n\nALWAYS use the following format:\n\nQuestion: the input question you must answer\nThought: you should always think about what to do\nAction: \n```\n$JSON_BLOB\n```\nObservation: the result of the action\n... (this Thought/Action/Observation can repeat N times)\nThought: I now know the final answer\nFinal Answer: the final answer to the original input question\n\nBegin! Reminder to always use the exact characters `Final Answer` when responding.\nHuman: What is the result of 30 + (10002200 / 100)? Only respond with a number.\n\nThis was your previous work (but I haven't seen any of it! I only see what you return as final answer):\nThought: We can calculate the result by performing the division first and then adding 30 to the result.  \nAction: \n```\n{\n  \"action\": \"calculator\",\n  \"action_input\": \"30 + (10002200 / 100)\"\n}\n```  \n\nObservation: 100052\nThought:"
                       ],
+                      "estimatedTokens": 384,
                       "options": {
-                        "stop": [
-                          "Observation:"
-                        ],
-                        "promptIndex": 0
+                        "openai_api_key": {
+                          "lc": 1,
+                          "type": "secret",
+                          "id": [
+                            "OPENAI_API_KEY"
+                          ]
+                        },
+                        "model": "gpt-3.5-turbo",
+                        "temperature": 0,
+                        "timeout": 60000,
+                        "max_retries": 2,
+                        "configuration": {},
+                        "model_kwargs": {}
                       }
                     }
                   }
@@ -157,8 +134,8 @@
         ],
         "Calculator2": [
           {
-            "startTime": 1710337683835,
-            "executionTime": 1,
+            "startTime": 1721987053131,
+            "executionTime": 0,
             "executionStatus": "success",
             "source": [
               null
@@ -189,8 +166,9 @@
         ],
         "AI Agent2": [
           {
-            "startTime": 1710337682353,
-            "executionTime": 2169,
+            "hints": [],
+            "startTime": 1721987051769,
+            "executionTime": 1950,
             "source": [
               {
                 "previousNode": "When clicking \"Test workflow\""
@@ -234,8 +212,9 @@
         ],
         "Edit Fields2": [
           {
-            "startTime": 1710337684522,
-            "executionTime": 1,
+            "hints": [],
+            "startTime": 1721987053719,
+            "executionTime": 3,
             "source": [
               {
                 "previousNode": "AI Agent2"
@@ -290,8 +269,8 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2024-03-13T13:48:02.352Z",
-  "stoppedAt": "2024-03-13T13:48:04.523Z",
+  "startedAt": "2024-07-26T09:44:11.769Z",
+  "stoppedAt": "2024-07-26T09:44:13.723Z",
   "status": "running",
   "finished": true
 }

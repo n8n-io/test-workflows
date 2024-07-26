@@ -5,7 +5,8 @@
       "runData": {
         "When clicking \"Test workflow\"": [
           {
-            "startTime": 1710334027712,
+            "hints": [],
+            "startTime": 1721987051772,
             "executionTime": 0,
             "source": [],
             "executionStatus": "success",
@@ -23,41 +24,65 @@
             }
           }
         ],
-        "Structured Output Parser1": [
+        "OpenAI Chat Model1": [
           {
-            "startTime": 1710334027716,
-            "executionTime": 0,
+            "startTime": 1721987052139,
+            "executionTime": 2391,
             "executionStatus": "success",
             "source": [
               null
             ],
             "data": {
-              "ai_outputParser": [
+              "ai_languageModel": [
                 [
                   {
                     "json": {
-                      "action": "getFormatInstructions",
-                      "response": "You must format your output as a JSON value that adheres to a given \"JSON Schema\" instance.\n\n\"JSON Schema\" is a declarative language that allows you to annotate and validate JSON documents.\n\nFor example, the example \"JSON Schema\" instance {{\"properties\": {{\"foo\": {{\"description\": \"a list of test words\", \"type\": \"array\", \"items\": {{\"type\": \"string\"}}}}}}, \"required\": [\"foo\"]}}}}\nwould match an object with one required property, \"foo\". The \"type\" property specifies \"foo\" must be an \"array\", and the \"description\" property semantically describes it as \"a list of test words\". The items within \"foo\" must be strings.\nThus, the object {{\"foo\": [\"bar\", \"baz\"]}} is a well-formatted instance of this example \"JSON Schema\". The object {{\"properties\": {{\"foo\": [\"bar\", \"baz\"]}}}} is not well-formatted.\n\nYour output will be parsed and type-checked according to the provided schema instance, so make sure all fields in your output match the schema exactly and there are no trailing commas!\n\nHere is the JSON Schema instance your output must adhere to. Include the enclosing markdown codeblock:\n```json\n{\"type\":\"object\",\"properties\":{\"output\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"state_name\":{},\"capital\":{},\"electoral_college_votes\":{}},\"additionalProperties\":false}}},\"additionalProperties\":false,\"$schema\":\"http://json-schema.org/draft-07/schema#\"}\n```\n"
+                      "response": {
+                        "object": true
+                      },
+                      "tokenUsage": {
+                        "object": true
+                      }
                     }
                   }
                 ]
               ]
             },
             "inputOverride": {
-              "ai_outputParser": [
+              "ai_languageModel": [
                 [
                   {
                     "json": {
-                      "action": "getFormatInstructions"
+                      "messages": [
+                        "Human: What are the top 5 states of US by population?\nYou must format your output as a JSON value that adheres to a given \"JSON Schema\" instance.\n\n\"JSON Schema\" is a declarative language that allows you to annotate and validate JSON documents.\n\nFor example, the example \"JSON Schema\" instance {{\"properties\": {{\"foo\": {{\"description\": \"a list of test words\", \"type\": \"array\", \"items\": {{\"type\": \"string\"}}}}}}, \"required\": [\"foo\"]}}}}\nwould match an object with one required property, \"foo\". The \"type\" property specifies \"foo\" must be an \"array\", and the \"description\" property semantically describes it as \"a list of test words\". The items within \"foo\" must be strings.\nThus, the object {{\"foo\": [\"bar\", \"baz\"]}} is a well-formatted instance of this example \"JSON Schema\". The object {{\"properties\": {{\"foo\": [\"bar\", \"baz\"]}}}} is not well-formatted.\n\nYour output will be parsed and type-checked according to the provided schema instance, so make sure all fields in your output match the schema exactly and there are no trailing commas!\n\nHere is the JSON Schema instance your output must adhere to. Include the enclosing markdown codeblock:\n```json\n{\"type\":\"object\",\"properties\":{\"output\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"state_name\":{},\"capital\":{},\"electoral_college_votes\":{}},\"additionalProperties\":false}}},\"additionalProperties\":false,\"$schema\":\"http://json-schema.org/draft-07/schema#\"}\n```\n"
+                      ],
+                      "estimatedTokens": 339,
+                      "options": {
+                        "openai_api_key": {
+                          "lc": 1,
+                          "type": "secret",
+                          "id": [
+                            "OPENAI_API_KEY"
+                          ]
+                        },
+                        "model": "gpt-3.5-turbo",
+                        "temperature": 0,
+                        "timeout": 60000,
+                        "max_retries": 2,
+                        "configuration": {},
+                        "model_kwargs": {}
+                      }
                     }
                   }
                 ]
               ]
             }
-          },
+          }
+        ],
+        "Structured Output Parser1": [
           {
-            "startTime": 1710334030734,
-            "executionTime": 2,
+            "startTime": 1721987054531,
+            "executionTime": 0,
             "executionStatus": "success",
             "source": [
               null
@@ -90,61 +115,11 @@
             }
           }
         ],
-        "OpenAI Chat Model1": [
-          {
-            "startTime": 1710334027717,
-            "executionTime": 3016,
-            "executionStatus": "success",
-            "source": [
-              null
-            ],
-            "data": {
-              "ai_languageModel": [
-                [
-                  {
-                    "json": {
-                      "response": {
-                        "object": true
-                      }
-                    }
-                  }
-                ]
-              ]
-            },
-            "inputOverride": {
-              "ai_languageModel": [
-                [
-                  {
-                    "json": {
-                      "messages": [
-                        {
-                          "lc": 1,
-                          "type": "constructor",
-                          "id": [
-                            "langchain_core",
-                            "messages",
-                            "HumanMessage"
-                          ],
-                          "kwargs": {
-                            "content": "What are the top 5 states of US by population?\nYou must format your output as a JSON value that adheres to a given \"JSON Schema\" instance.\n\n\"JSON Schema\" is a declarative language that allows you to annotate and validate JSON documents.\n\nFor example, the example \"JSON Schema\" instance {{\"properties\": {{\"foo\": {{\"description\": \"a list of test words\", \"type\": \"array\", \"items\": {{\"type\": \"string\"}}}}}}, \"required\": [\"foo\"]}}}}\nwould match an object with one required property, \"foo\". The \"type\" property specifies \"foo\" must be an \"array\", and the \"description\" property semantically describes it as \"a list of test words\". The items within \"foo\" must be strings.\nThus, the object {{\"foo\": [\"bar\", \"baz\"]}} is a well-formatted instance of this example \"JSON Schema\". The object {{\"properties\": {{\"foo\": [\"bar\", \"baz\"]}}}} is not well-formatted.\n\nYour output will be parsed and type-checked according to the provided schema instance, so make sure all fields in your output match the schema exactly and there are no trailing commas!\n\nHere is the JSON Schema instance your output must adhere to. Include the enclosing markdown codeblock:\n```json\n{\"type\":\"object\",\"properties\":{\"output\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"state_name\":{},\"capital\":{},\"electoral_college_votes\":{}},\"additionalProperties\":false}}},\"additionalProperties\":false,\"$schema\":\"http://json-schema.org/draft-07/schema#\"}\n```\n",
-                            "additional_kwargs": {}
-                          }
-                        }
-                      ],
-                      "options": {
-                        "promptIndex": 0
-                      }
-                    }
-                  }
-                ]
-              ]
-            }
-          }
-        ],
         "Open AI Chat - Output Parsing": [
           {
-            "startTime": 1710334027713,
-            "executionTime": 3024,
+            "hints": [],
+            "startTime": 1721987051772,
+            "executionTime": 2759,
             "source": [
               {
                 "previousNode": "When clicking \"Test workflow\""
@@ -170,16 +145,12 @@
             "metadata": {
               "subRun": [
                 {
-                  "node": "Structured Output Parser1",
-                  "runIndex": 0
-                },
-                {
                   "node": "OpenAI Chat Model1",
                   "runIndex": 0
                 },
                 {
                   "node": "Structured Output Parser1",
-                  "runIndex": 1
+                  "runIndex": 0
                 }
               ]
             }
@@ -196,16 +167,12 @@
           {
             "subRun": [
               {
-                "node": "Structured Output Parser1",
-                "runIndex": 0
-              },
-              {
                 "node": "OpenAI Chat Model1",
                 "runIndex": 0
               },
               {
                 "node": "Structured Output Parser1",
-                "runIndex": 1
+                "runIndex": 0
               }
             ]
           }
@@ -216,8 +183,8 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2024-03-13T12:47:07.712Z",
-  "stoppedAt": "2024-03-13T12:47:10.737Z",
+  "startedAt": "2024-07-26T09:44:11.772Z",
+  "stoppedAt": "2024-07-26T09:44:14.531Z",
   "status": "running",
   "finished": true
 }

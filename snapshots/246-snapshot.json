@@ -5,7 +5,8 @@
       "runData": {
         "When clicking \"Test workflow\"": [
           {
-            "startTime": 1710334066583,
+            "hints": [],
+            "startTime": 1721987051768,
             "executionTime": 0,
             "source": [],
             "executionStatus": "success",
@@ -25,8 +26,8 @@
         ],
         "OpenAI Chat Model": [
           {
-            "startTime": 1710334066586,
-            "executionTime": 336,
+            "startTime": 1721987052139,
+            "executionTime": 776,
             "executionStatus": "success",
             "source": [
               null
@@ -37,6 +38,9 @@
                   {
                     "json": {
                       "response": {
+                        "object": true
+                      },
+                      "tokenUsage": {
                         "object": true
                       }
                     }
@@ -50,23 +54,23 @@
                   {
                     "json": {
                       "messages": [
-                        {
-                          "lc": 1,
-                          "type": "constructor",
-                          "id": [
-                            "langchain_core",
-                            "messages",
-                            "HumanMessage"
-                          ],
-                          "kwargs": {
-                            "content": "How much is 1+1? Only provide the numerical answer without any other text.\n",
-                            "additional_kwargs": {}
-                          }
-                        }
+                        "Human: How much is 1+1? Only provide the numerical answer without any other text.\n"
                       ],
+                      "estimatedTokens": 20,
                       "options": {
-                        "signal": {},
-                        "promptIndex": 0
+                        "openai_api_key": {
+                          "lc": 1,
+                          "type": "secret",
+                          "id": [
+                            "OPENAI_API_KEY"
+                          ]
+                        },
+                        "model": "gpt-3.5-turbo-0125",
+                        "temperature": 0,
+                        "timeout": 60000,
+                        "max_retries": 2,
+                        "configuration": {},
+                        "model_kwargs": {}
                       }
                     }
                   }
@@ -77,8 +81,9 @@
         ],
         "Open AI Chat": [
           {
-            "startTime": 1710334066583,
-            "executionTime": 339,
+            "hints": [],
+            "startTime": 1721987051768,
+            "executionTime": 1147,
             "source": [
               {
                 "previousNode": "When clicking \"Test workflow\""
@@ -132,8 +137,8 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2024-03-13T12:47:46.582Z",
-  "stoppedAt": "2024-03-13T12:47:46.922Z",
+  "startedAt": "2024-07-26T09:44:11.768Z",
+  "stoppedAt": "2024-07-26T09:44:12.915Z",
   "status": "running",
   "finished": true
 }

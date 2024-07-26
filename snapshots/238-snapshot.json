@@ -5,7 +5,8 @@
       "runData": {
         "When clicking \"Test workflow\"": [
           {
-            "startTime": 1710333976321,
+            "hints": [],
+            "startTime": 1721987051770,
             "executionTime": 0,
             "source": [],
             "executionStatus": "success",
@@ -25,8 +26,8 @@
         ],
         "OpenAI Model": [
           {
-            "startTime": 1710333976325,
-            "executionTime": 307,
+            "startTime": 1721987052139,
+            "executionTime": 425,
             "executionStatus": "success",
             "source": [
               null
@@ -37,6 +38,9 @@
                   {
                     "json": {
                       "response": {
+                        "object": true
+                      },
+                      "tokenUsage": {
                         "object": true
                       }
                     }
@@ -52,8 +56,20 @@
                       "messages": [
                         "How much is 1+1? Only provide the numerical answer without any other text.\n\n"
                       ],
+                      "estimatedTokens": 18,
                       "options": {
-                        "signal": {}
+                        "openai_api_key": {
+                          "lc": 1,
+                          "type": "secret",
+                          "id": [
+                            "OPENAI_API_KEY"
+                          ]
+                        },
+                        "model": "gpt-3.5-turbo-instruct",
+                        "temperature": 0,
+                        "configuration": {},
+                        "timeout": 60000,
+                        "max_retries": 2
                       }
                     }
                   }
@@ -64,8 +80,9 @@
         ],
         "Open AI Instruct": [
           {
-            "startTime": 1710333976321,
-            "executionTime": 311,
+            "hints": [],
+            "startTime": 1721987051770,
+            "executionTime": 794,
             "source": [
               {
                 "previousNode": "When clicking \"Test workflow\""
@@ -119,8 +136,8 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2024-03-13T12:46:16.320Z",
-  "stoppedAt": "2024-03-13T12:46:16.632Z",
+  "startedAt": "2024-07-26T09:44:11.770Z",
+  "stoppedAt": "2024-07-26T09:44:12.564Z",
   "status": "running",
   "finished": true
 }

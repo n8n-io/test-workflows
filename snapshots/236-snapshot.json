@@ -5,7 +5,8 @@
       "runData": {
         "When clicking \"Test workflow\"": [
           {
-            "startTime": 1710333966450,
+            "hints": [],
+            "startTime": 1721987051773,
             "executionTime": 0,
             "source": [],
             "executionStatus": "success",
@@ -25,8 +26,9 @@
         ],
         "Set Baseline": [
           {
-            "startTime": 1710333966450,
-            "executionTime": 1,
+            "hints": [],
+            "startTime": 1721987051773,
+            "executionTime": 0,
             "source": [
               {
                 "previousNode": "When clicking \"Test workflow\""
@@ -51,7 +53,8 @@
         ],
         "Set Article": [
           {
-            "startTime": 1710333966451,
+            "hints": [],
+            "startTime": 1721987051773,
             "executionTime": 2,
             "source": [
               {
@@ -77,8 +80,9 @@
         ],
         "Convert to File": [
           {
-            "startTime": 1710333966453,
-            "executionTime": 4,
+            "hints": [],
+            "startTime": 1721987051775,
+            "executionTime": 3,
             "source": [
               {
                 "previousNode": "Set Article"
@@ -113,9 +117,9 @@
         ],
         "OpenAI Chat Model4": [
           {
-            "startTime": 1710333966466,
-            "executionTime": 2743,
-            "executionStatus": "success",
+            "startTime": 1721987052148,
+            "executionTime": 0,
+            "executionStatus": "running",
             "source": [
               null
             ],
@@ -124,7 +128,11 @@
                 [
                   {
                     "json": {
-                      "response": {
+                      "messages": [
+                        "json array"
+                      ],
+                      "estimatedTokens": 799,
+                      "options": {
                         "object": true
                       }
                     }
@@ -138,22 +146,11 @@
                   {
                     "json": {
                       "messages": [
-                        {
-                          "lc": 1,
-                          "type": "constructor",
-                          "id": [
-                            "langchain_core",
-                            "messages",
-                            "HumanMessage"
-                          ],
-                          "kwargs": {
-                            "content": "Write a concise summary of the following:\n\n\n\"The dancing plague of 1518, or dance epidemic of 1518 (French: Épidémie dansante de 1518), was a case of dancing mania that occurred in Strasbourg, Alsace (modern-day France), in the Holy Roman Empire from July 1518 to September 1518. Somewhere between 50 and 400 people took to dancing for weeks. There are many theories behind the phenomenon, the most popular being stress-induced mass hysteria, suggested by John Waller. Other theories include ergot and religious explanations. There is controversy concerning the number of deaths.\n\nHistory\nEvents\nThe outbreak began in July 1518 when a woman called Frau Troffea began to dance fervently and uncontrollably in a street in Strasbourg. Troffea kept up the constant dancing for a week. Soon, three dozen others joined in. By August, the \"dancing plague\" had claimed 400 victims. Dancers were beginning to collapse. It is said some even died from a stroke or heart attack. No one knew what caused this reaction, which meant no one understood how to remedy it. By early September, the outbreak began to subside, when the dancers were sent to a mountain shrine to pray for absolution.\n\nHistorical documents, including \"physician notes, cathedral sermons, local and regional chronicles, and even notes issued by the Strasbourg city council\" are clear that the victims danced; it is not known why. Historical sources agree that there was an outbreak of dancing after a single woman started dancing, and the dancing did not seem to die down. It lasted for such a long time that it even attracted the attention of the authorities; until the council gave up authority to the physicians, who prescribed the afflicted to \"dance themselves free of it.\" There are claims that guild halls were refurbished to accommodate the dancing, as well as musicians and strong people to help keep those dealing with the dancing mania to stay upright. This backfired, and the council was forced to ban public dancing as people danced in fear it was a punishment from Saint Vitus; and to be \"free of sin\" many joined in on the dancing epidemic. The council went as far as to ban music, as well. Those who danced were then ordered to go to the shrine of Saint Vitus, wore red shoes that were sprinkled with holy water and had painted crosses on the tops and soles. They also had to hold small crosses in their hands; and incense and Latin incantations were part of this \"ritual.\" Apparently \"forgiven by Vitus,\" word was spread of a successful ritual and the Dancing Plague had ended.\n\nEvents similar to this are said to have occurred throughout the medieval age including 11th century in Kölbigk, Saxony, where it was believed to be the result of divine judgment . In 15th century Apulia, Italy, a woman was bitten by a tarantula, the venom making her dance convulsively. The only way to cure the bite was to \"shimmy\" and to have the right sort of music available, which was an accepted remedy by scholars like Athanasius Kircher.\n\nContemporaneous explanations included demonic possession and overheated blood.\n\nVeracity of deaths\nControversy exists over whether people ultimately danced to their deaths. Some sources claim that for a period the plague killed around fifteen people per day, but the sources of the city of Strasbourg at the time of the events did not mention the number of deaths, or even if there were fatalities. There do not appear to be any sources related to the events that make note of any fatalities. Ned Pennant-Rea also claims that the final death toll is not known, but if the claims of fifteen people dying per day were true then the toll could be \"into the hundreds.\"\"\n\n\nCONCISE SUMMARY:",
-                            "additional_kwargs": {}
-                          }
-                        }
+                        "json array"
                       ],
+                      "estimatedTokens": 799,
                       "options": {
-                        "promptIndex": 0
+                        "object": true
                       }
                     }
                   }
@@ -162,9 +159,9 @@
             }
           },
           {
-            "startTime": 1710333966466,
-            "executionTime": 2081,
-            "executionStatus": "success",
+            "startTime": 1721987052148,
+            "executionTime": 0,
+            "executionStatus": "running",
             "source": [
               null
             ],
@@ -173,7 +170,11 @@
                 [
                   {
                     "json": {
-                      "response": {
+                      "messages": [
+                        "json array"
+                      ],
+                      "estimatedTokens": 780,
+                      "options": {
                         "object": true
                       }
                     }
@@ -187,22 +188,11 @@
                   {
                     "json": {
                       "messages": [
-                        {
-                          "lc": 1,
-                          "type": "constructor",
-                          "id": [
-                            "langchain_core",
-                            "messages",
-                            "HumanMessage"
-                          ],
-                          "kwargs": {
-                            "content": "Write a concise summary of the following:\n\n\n\"The main source for the claim is John Waller, who has written several journal articles on the subject and the book A Time to Dance, a Time to Die: The Extraordinary Story of the Dancing Plague of 1518. The sources cited by Waller that mention deaths were all from later accounts of the events. There is also uncertainty around the identity of the initial dancer (either an unnamed woman or \"Frau Troffea\") and the number of dancers involved (somewhere between 50 and 400). Of the six chronicle accounts, four support Lady Troffea as the first dancer.\n\nModern theories\nFood poisoning\nSome believe the dancing could have been brought on by food poisoning caused by the toxic and psychoactive chemical products of ergot fungi (ergotism), which grows commonly on grains (such as rye) used for baking bread. Ergotamine is the main psychoactive product of ergot fungi; it is structurally related to the drug lysergic acid diethylamide (LSD-25) and is the substance from which LSD-25 was originally synthesized. The same fungus has also been implicated in other major historical anomalies, including the Salem witch trials.\n\nIn The Lancet, John Waller argues that \"this theory does not seem tenable, since it is unlikely that those poisoned by ergot could have danced for days at a time. Nor would so many people have reacted to its psychotropic chemicals in the same way. The ergotism theory also fails to explain why almost every outbreak occurred somewhere along the Rhine and Moselle rivers, areas linked by water but with quite different climates and crops\".\n\nStress-induced mass hysteria\nThis could have been an example of fully developed cases of psychogenic movement disorder happening in mass hysteria or mass psychogenic illness, which involves many individuals suddenly exhibiting the same bizarre behavior. The behavior spreads rapidly and broadly in an epidemic pattern. This kind of comportment could have been caused by elevated levels of psychological stress, caused by the ruthless years (even by the rough standards of the early modern period) the people of Alsace were suffering.\n\nWaller speculates that the dancing was \"stress-induced psychosis\" on a mass level, since the region where the people danced was riddled with starvation and disease, and the inhabitants tended to be superstitious. Seven other cases of dancing plague were reported in the same region during the medieval era.\n\nThis psychogenic illness could have created a chorea (from the Greek khoreia meaning \"to dance\"), a situation comprising random and intricate unintentional movements that flit from body part to body part. Diverse choreas (St. Vitus' dance, St. John's dance, and tarantism) were labeled in the Middle Ages referring to the independent epidemics of \"dancing mania\" that happened in central Europe, particularly at the time of the plague.\n\nPop culture and media\nThe event inspired Jonathan Glazer's 2020 short film Strasbourg 1518.\n\nIt was also the inspiration behind the 2022 choral song \"Choreomania\" by Florence and the Machine. It was the third track on the album Dance Fever, which took its title from the song.\n\nThe book series \"A Collection of Utter Speculation\" released a title \"The Dancing Plague: A Collection of Utter Speculation\" in 2022. It is a fictional account about the events that happened in Strasbourg.\n\nThe 2023 novel, The Dance Tree, by Kiran Millwood Hargrave is a fictionalized version of the summer of 1518 in Strasbourg.\n\nThe event is featured as part of the first season of Watcher Entertainment's \"Puppet History\" in the episode \"The Dancing Plague\".\"\n\n\nCONCISE SUMMARY:",
-                            "additional_kwargs": {}
-                          }
-                        }
+                        "json array"
                       ],
+                      "estimatedTokens": 780,
                       "options": {
-                        "promptIndex": 0
+                        "object": true
                       }
                     }
                   }
@@ -211,9 +201,9 @@
             }
           },
           {
-            "startTime": 1710333966466,
-            "executionTime": 2761,
-            "executionStatus": "success",
+            "startTime": 1721987052148,
+            "executionTime": 0,
+            "executionStatus": "running",
             "source": [
               null
             ],
@@ -222,7 +212,11 @@
                 [
                   {
                     "json": {
-                      "response": {
+                      "messages": [
+                        "json array"
+                      ],
+                      "estimatedTokens": 799,
+                      "options": {
                         "object": true
                       }
                     }
@@ -236,22 +230,11 @@
                   {
                     "json": {
                       "messages": [
-                        {
-                          "lc": 1,
-                          "type": "constructor",
-                          "id": [
-                            "langchain_core",
-                            "messages",
-                            "HumanMessage"
-                          ],
-                          "kwargs": {
-                            "content": "Write a concise summary of the following:\n\n\n\"The dancing plague of 1518, or dance epidemic of 1518 (French: Épidémie dansante de 1518), was a case of dancing mania that occurred in Strasbourg, Alsace (modern-day France), in the Holy Roman Empire from July 1518 to September 1518. Somewhere between 50 and 400 people took to dancing for weeks. There are many theories behind the phenomenon, the most popular being stress-induced mass hysteria, suggested by John Waller. Other theories include ergot and religious explanations. There is controversy concerning the number of deaths.\n\nHistory\nEvents\nThe outbreak began in July 1518 when a woman called Frau Troffea began to dance fervently and uncontrollably in a street in Strasbourg. Troffea kept up the constant dancing for a week. Soon, three dozen others joined in. By August, the \"dancing plague\" had claimed 400 victims. Dancers were beginning to collapse. It is said some even died from a stroke or heart attack. No one knew what caused this reaction, which meant no one understood how to remedy it. By early September, the outbreak began to subside, when the dancers were sent to a mountain shrine to pray for absolution.\n\nHistorical documents, including \"physician notes, cathedral sermons, local and regional chronicles, and even notes issued by the Strasbourg city council\" are clear that the victims danced; it is not known why. Historical sources agree that there was an outbreak of dancing after a single woman started dancing, and the dancing did not seem to die down. It lasted for such a long time that it even attracted the attention of the authorities; until the council gave up authority to the physicians, who prescribed the afflicted to \"dance themselves free of it.\" There are claims that guild halls were refurbished to accommodate the dancing, as well as musicians and strong people to help keep those dealing with the dancing mania to stay upright. This backfired, and the council was forced to ban public dancing as people danced in fear it was a punishment from Saint Vitus; and to be \"free of sin\" many joined in on the dancing epidemic. The council went as far as to ban music, as well. Those who danced were then ordered to go to the shrine of Saint Vitus, wore red shoes that were sprinkled with holy water and had painted crosses on the tops and soles. They also had to hold small crosses in their hands; and incense and Latin incantations were part of this \"ritual.\" Apparently \"forgiven by Vitus,\" word was spread of a successful ritual and the Dancing Plague had ended.\n\nEvents similar to this are said to have occurred throughout the medieval age including 11th century in Kölbigk, Saxony, where it was believed to be the result of divine judgment . In 15th century Apulia, Italy, a woman was bitten by a tarantula, the venom making her dance convulsively. The only way to cure the bite was to \"shimmy\" and to have the right sort of music available, which was an accepted remedy by scholars like Athanasius Kircher.\n\nContemporaneous explanations included demonic possession and overheated blood.\n\nVeracity of deaths\nControversy exists over whether people ultimately danced to their deaths. Some sources claim that for a period the plague killed around fifteen people per day, but the sources of the city of Strasbourg at the time of the events did not mention the number of deaths, or even if there were fatalities. There do not appear to be any sources related to the events that make note of any fatalities. Ned Pennant-Rea also claims that the final death toll is not known, but if the claims of fifteen people dying per day were true then the toll could be \"into the hundreds.\"\"\n\n\nCONCISE SUMMARY:",
-                            "additional_kwargs": {}
-                          }
-                        }
+                        "json array"
                       ],
+                      "estimatedTokens": 799,
                       "options": {
-                        "promptIndex": 0
+                        "object": true
                       }
                     }
                   }
@@ -260,8 +243,8 @@
             }
           },
           {
-            "startTime": 1710333966466,
-            "executionTime": 2069,
+            "startTime": 1721987052148,
+            "executionTime": 1946,
             "executionStatus": "success",
             "source": [
               null
@@ -272,6 +255,9 @@
                   {
                     "json": {
                       "response": {
+                        "object": true
+                      },
+                      "tokenUsage": {
                         "object": true
                       }
                     }
@@ -285,22 +271,23 @@
                   {
                     "json": {
                       "messages": [
-                        {
-                          "lc": 1,
-                          "type": "constructor",
-                          "id": [
-                            "langchain_core",
-                            "messages",
-                            "HumanMessage"
-                          ],
-                          "kwargs": {
-                            "content": "Write a concise summary of the following:\n\n\n\"The main source for the claim is John Waller, who has written several journal articles on the subject and the book A Time to Dance, a Time to Die: The Extraordinary Story of the Dancing Plague of 1518. The sources cited by Waller that mention deaths were all from later accounts of the events. There is also uncertainty around the identity of the initial dancer (either an unnamed woman or \"Frau Troffea\") and the number of dancers involved (somewhere between 50 and 400). Of the six chronicle accounts, four support Lady Troffea as the first dancer.\n\nModern theories\nFood poisoning\nSome believe the dancing could have been brought on by food poisoning caused by the toxic and psychoactive chemical products of ergot fungi (ergotism), which grows commonly on grains (such as rye) used for baking bread. Ergotamine is the main psychoactive product of ergot fungi; it is structurally related to the drug lysergic acid diethylamide (LSD-25) and is the substance from which LSD-25 was originally synthesized. The same fungus has also been implicated in other major historical anomalies, including the Salem witch trials.\n\nIn The Lancet, John Waller argues that \"this theory does not seem tenable, since it is unlikely that those poisoned by ergot could have danced for days at a time. Nor would so many people have reacted to its psychotropic chemicals in the same way. The ergotism theory also fails to explain why almost every outbreak occurred somewhere along the Rhine and Moselle rivers, areas linked by water but with quite different climates and crops\".\n\nStress-induced mass hysteria\nThis could have been an example of fully developed cases of psychogenic movement disorder happening in mass hysteria or mass psychogenic illness, which involves many individuals suddenly exhibiting the same bizarre behavior. The behavior spreads rapidly and broadly in an epidemic pattern. This kind of comportment could have been caused by elevated levels of psychological stress, caused by the ruthless years (even by the rough standards of the early modern period) the people of Alsace were suffering.\n\nWaller speculates that the dancing was \"stress-induced psychosis\" on a mass level, since the region where the people danced was riddled with starvation and disease, and the inhabitants tended to be superstitious. Seven other cases of dancing plague were reported in the same region during the medieval era.\n\nThis psychogenic illness could have created a chorea (from the Greek khoreia meaning \"to dance\"), a situation comprising random and intricate unintentional movements that flit from body part to body part. Diverse choreas (St. Vitus' dance, St. John's dance, and tarantism) were labeled in the Middle Ages referring to the independent epidemics of \"dancing mania\" that happened in central Europe, particularly at the time of the plague.\n\nPop culture and media\nThe event inspired Jonathan Glazer's 2020 short film Strasbourg 1518.\n\nIt was also the inspiration behind the 2022 choral song \"Choreomania\" by Florence and the Machine. It was the third track on the album Dance Fever, which took its title from the song.\n\nThe book series \"A Collection of Utter Speculation\" released a title \"The Dancing Plague: A Collection of Utter Speculation\" in 2022. It is a fictional account about the events that happened in Strasbourg.\n\nThe 2023 novel, The Dance Tree, by Kiran Millwood Hargrave is a fictionalized version of the summer of 1518 in Strasbourg.\n\nThe event is featured as part of the first season of Watcher Entertainment's \"Puppet History\" in the episode \"The Dancing Plague\".\"\n\n\nCONCISE SUMMARY:",
-                            "additional_kwargs": {}
-                          }
-                        }
+                        "Human: Write a concise summary of the following:\n\n\n\"The main source for the claim is John Waller, who has written several journal articles on the subject and the book A Time to Dance, a Time to Die: The Extraordinary Story of the Dancing Plague of 1518. The sources cited by Waller that mention deaths were all from later accounts of the events. There is also uncertainty around the identity of the initial dancer (either an unnamed woman or \"Frau Troffea\") and the number of dancers involved (somewhere between 50 and 400). Of the six chronicle accounts, four support Lady Troffea as the first dancer.\n\nModern theories\nFood poisoning\nSome believe the dancing could have been brought on by food poisoning caused by the toxic and psychoactive chemical products of ergot fungi (ergotism), which grows commonly on grains (such as rye) used for baking bread. Ergotamine is the main psychoactive product of ergot fungi; it is structurally related to the drug lysergic acid diethylamide (LSD-25) and is the substance from which LSD-25 was originally synthesized. The same fungus has also been implicated in other major historical anomalies, including the Salem witch trials.\n\nIn The Lancet, John Waller argues that \"this theory does not seem tenable, since it is unlikely that those poisoned by ergot could have danced for days at a time. Nor would so many people have reacted to its psychotropic chemicals in the same way. The ergotism theory also fails to explain why almost every outbreak occurred somewhere along the Rhine and Moselle rivers, areas linked by water but with quite different climates and crops\".\n\nStress-induced mass hysteria\nThis could have been an example of fully developed cases of psychogenic movement disorder happening in mass hysteria or mass psychogenic illness, which involves many individuals suddenly exhibiting the same bizarre behavior. The behavior spreads rapidly and broadly in an epidemic pattern. This kind of comportment could have been caused by elevated levels of psychological stress, caused by the ruthless years (even by the rough standards of the early modern period) the people of Alsace were suffering.\n\nWaller speculates that the dancing was \"stress-induced psychosis\" on a mass level, since the region where the people danced was riddled with starvation and disease, and the inhabitants tended to be superstitious. Seven other cases of dancing plague were reported in the same region during the medieval era.\n\nThis psychogenic illness could have created a chorea (from the Greek khoreia meaning \"to dance\"), a situation comprising random and intricate unintentional movements that flit from body part to body part. Diverse choreas (St. Vitus' dance, St. John's dance, and tarantism) were labeled in the Middle Ages referring to the independent epidemics of \"dancing mania\" that happened in central Europe, particularly at the time of the plague.\n\nPop culture and media\nThe event inspired Jonathan Glazer's 2020 short film Strasbourg 1518.\n\nIt was also the inspiration behind the 2022 choral song \"Choreomania\" by Florence and the Machine. It was the third track on the album Dance Fever, which took its title from the song.\n\nThe book series \"A Collection of Utter Speculation\" released a title \"The Dancing Plague: A Collection of Utter Speculation\" in 2022. It is a fictional account about the events that happened in Strasbourg.\n\nThe 2023 novel, The Dance Tree, by Kiran Millwood Hargrave is a fictionalized version of the summer of 1518 in Strasbourg.\n\nThe event is featured as part of the first season of Watcher Entertainment's \"Puppet History\" in the episode \"The Dancing Plague\".\"\n\n\nCONCISE SUMMARY:"
                       ],
+                      "estimatedTokens": 780,
                       "options": {
-                        "promptIndex": 0
+                        "openai_api_key": {
+                          "lc": 1,
+                          "type": "secret",
+                          "id": [
+                            "OPENAI_API_KEY"
+                          ]
+                        },
+                        "model": "gpt-3.5-turbo-0125",
+                        "temperature": 0,
+                        "timeout": 60000,
+                        "max_retries": 2,
+                        "configuration": {},
+                        "model_kwargs": {}
                       }
                     }
                   }
@@ -309,8 +296,8 @@
             }
           },
           {
-            "startTime": 1710333969230,
-            "executionTime": 2772,
+            "startTime": 1721987054096,
+            "executionTime": 2030,
             "executionStatus": "success",
             "source": [
               null
@@ -321,6 +308,9 @@
                   {
                     "json": {
                       "response": {
+                        "object": true
+                      },
+                      "tokenUsage": {
                         "object": true
                       }
                     }
@@ -334,22 +324,23 @@
                   {
                     "json": {
                       "messages": [
-                        {
-                          "lc": 1,
-                          "type": "constructor",
-                          "id": [
-                            "langchain_core",
-                            "messages",
-                            "HumanMessage"
-                          ],
-                          "kwargs": {
-                            "content": "Write a concise summary of the following:\n\n\n\"The dancing plague of 1518 occurred in Strasbourg, Alsace, where between 50 and 400 people danced uncontrollably for weeks. The cause is believed to be stress-induced mass hysteria, with other theories including ergot poisoning and religious explanations. The outbreak began with one woman dancing and spread to others, leading to deaths from strokes or heart attacks. The epidemic ended when the dancers were sent to a shrine to pray for absolution. Similar events have been reported throughout history. There is controversy over the number of deaths, with some sources claiming up to fifteen deaths per day, but historical records do not confirm this.\n\nThe Dancing Plague of 1518 was a mysterious event in Strasbourg where a large group of people danced uncontrollably for days. The main source for this claim is John Waller, who has written extensively on the subject. Modern theories suggest it could have been caused by food poisoning from ergot fungi or stress-induced mass hysteria. The event has inspired various works of art and media, including films, songs, and novels.\n\nThe dancing plague of 1518 occurred in Strasbourg, Alsace, where between 50 and 400 people danced uncontrollably for weeks. The cause is believed to be stress-induced mass hysteria, with other theories including ergot poisoning and religious explanations. The outbreak began with one woman dancing and spread to others, leading to deaths from strokes or heart attacks. The epidemic subsided when the dancers were sent to pray for absolution. The veracity of deaths is controversial, with some sources claiming up to fifteen deaths per day, but historical documents do not mention fatalities. Similar events occurred throughout the medieval age, with explanations including demonic possession and overheated blood.\n\nThe Dancing Plague of 1518, a historical event in Strasbourg, involved a large group of people dancing uncontrollably for days. The main source for this claim is John Waller, who has written extensively on the subject. Modern theories suggest the dancing may have been caused by food poisoning from ergot fungi or stress-induced mass hysteria. The event has inspired various works of pop culture, including films, songs, and novels.\"\n\n\nCONCISE SUMMARY:",
-                            "additional_kwargs": {}
-                          }
-                        }
+                        "Human: Write a concise summary of the following:\n\n\n\"The dancing plague of 1518 occurred in Strasbourg, Alsace, where between 50 and 400 people danced uncontrollably for weeks. The cause is believed to be stress-induced mass hysteria, with other theories including ergot poisoning and religious explanations. The outbreak began with one woman dancing and spread to others, leading to deaths from strokes or heart attacks. The epidemic subsided when the dancers were sent to pray for absolution. Similar events occurred throughout history, with controversy over the number of deaths, as some sources claim up to fifteen deaths per day.\n\nThe Dancing Plague of 1518 in Strasbourg involved a large group of people dancing uncontrollably for days, with theories suggesting it was caused by food poisoning from ergot fungi or stress-induced mass hysteria. John Waller's research questions the ergotism theory and suggests the dancing was a result of stress-induced psychosis. The event has inspired various works of art and media, including films, songs, and novels.\n\nThe dancing plague of 1518 occurred in Strasbourg, Alsace, where between 50 and 400 people danced uncontrollably for weeks. The cause is believed to be stress-induced mass hysteria, with other theories including ergot poisoning and religious explanations. The outbreak began with one woman dancing and spread to others, leading to deaths from strokes or heart attacks. The epidemic ended when the dancers were sent to a shrine to pray for absolution. Similar events have been reported throughout history. There is controversy over the number of deaths, with some sources claiming up to fifteen deaths per day, but historical records do not confirm this.\n\nThe Dancing Plague of 1518, a historical event in Strasbourg, has been the subject of various theories and interpretations. John Waller's research suggests that food poisoning from ergot fungi is unlikely to have caused the dancing, leading to speculation of stress-induced mass hysteria as a possible explanation. The event has inspired works in pop culture, including films, songs, and novels, highlighting the enduring fascination with this mysterious phenomenon.\"\n\n\nCONCISE SUMMARY:"
                       ],
+                      "estimatedTokens": 425,
                       "options": {
-                        "promptIndex": 0
+                        "openai_api_key": {
+                          "lc": 1,
+                          "type": "secret",
+                          "id": [
+                            "OPENAI_API_KEY"
+                          ]
+                        },
+                        "model": "gpt-3.5-turbo-0125",
+                        "temperature": 0,
+                        "timeout": 60000,
+                        "max_retries": 2,
+                        "configuration": {},
+                        "model_kwargs": {}
                       }
                     }
                   }
@@ -360,8 +351,9 @@
         ],
         "Summary - Simple - Map - Binary": [
           {
-            "startTime": 1710333966457,
-            "executionTime": 5545,
+            "hints": [],
+            "startTime": 1721987051778,
+            "executionTime": 4349,
             "source": [
               {
                 "previousNode": "Convert to File"
@@ -392,15 +384,15 @@
                 },
                 {
                   "node": "OpenAI Chat Model4",
-                  "runIndex": 1
+                  "runIndex": 3
                 },
                 {
                   "node": "OpenAI Chat Model4",
-                  "runIndex": 0
+                  "runIndex": 3
                 },
                 {
                   "node": "OpenAI Chat Model4",
-                  "runIndex": 2
+                  "runIndex": 3
                 },
                 {
                   "node": "OpenAI Chat Model4",
@@ -412,8 +404,8 @@
         ],
         "OpenAI Chat Model5": [
           {
-            "startTime": 1710333972016,
-            "executionTime": 2223,
+            "startTime": 1721987056131,
+            "executionTime": 1420,
             "executionStatus": "success",
             "source": [
               null
@@ -424,6 +416,9 @@
                   {
                     "json": {
                       "response": {
+                        "object": true
+                      },
+                      "tokenUsage": {
                         "object": true
                       }
                     }
@@ -437,22 +432,23 @@
                   {
                     "json": {
                       "messages": [
-                        {
-                          "lc": 1,
-                          "type": "constructor",
-                          "id": [
-                            "langchain_core",
-                            "messages",
-                            "HumanMessage"
-                          ],
-                          "kwargs": {
-                            "content": "You are assessing a submitted answer on a given task or input based on a set of criteria. Here is the data:\n[BEGIN DATA]\n***\n[Input]: Summarize Wikipedia article about the dancing plague of 1518\n***\n[Submission]: The dancing plague of 1518 in Strasbourg, Alsace involved between 50 and 400 people dancing uncontrollably for weeks, with possible causes including stress-induced mass hysteria, ergot poisoning, or religious explanations. Deaths occurred from strokes or heart attacks, and the epidemic ended when the dancers were sent to pray for absolution. The number of deaths is disputed, with some sources claiming up to fifteen per day, but historical records do not confirm this. The event has inspired various works of art and media, and similar occurrences have been reported throughout history.\n***\n[Criteria]: helpfulness: Is the submission helpful, insightful, and appropriate? If so, response Y. If not, respond N.\n***\n[Reference]: The dancing plague of 1518 in Strasbourg, Alsace involved between 50 and 400 people dancing uncontrollably for weeks. The cause is unknown, with theories including stress-induced mass hysteria and ergot poisoning. The outbreak ended when the dancers prayed for absolution at a shrine. There is controversy over the number of deaths, with some sources claiming up to fifteen deaths per day, but historical documents do not confirm any fatalities. Similar events have been reported throughout history, inspiring various works of pop culture.\n***\n[END DATA]\nDoes the submission meet the Criteria? First, write out in a step by step manner your reasoning about each criterion to be sure that your conclusion is correct. Avoid simply stating the correct answers at the outset. Then print only the single character \"Y\" or \"N\" (without quotes or punctuation) on its own line corresponding to the correct answer of whether the submission meets all criteria. At the end, repeat just the letter again by itself on a new line.",
-                            "additional_kwargs": {}
-                          }
-                        }
+                        "Human: You are assessing a submitted answer on a given task or input based on a set of criteria. Here is the data:\n[BEGIN DATA]\n***\n[Input]: Summarize Wikipedia article about the dancing plague of 1518\n***\n[Submission]: The dancing plague of 1518 in Strasbourg, Alsace involved between 50 and 400 people dancing uncontrollably for weeks, with theories suggesting it was caused by stress-induced mass hysteria or ergot poisoning. The outbreak began with one woman dancing and spread to others, resulting in deaths from strokes or heart attacks. The epidemic ended when the dancers were sent to pray for absolution. Similar events have occurred throughout history, inspiring various works of art and media. John Waller's research questions the ergotism theory and suggests stress-induced psychosis as a possible explanation.\n***\n[Criteria]: helpfulness: Is the submission helpful, insightful, and appropriate? If so, response Y. If not, respond N.\n***\n[Reference]: The dancing plague of 1518 in Strasbourg, Alsace involved between 50 and 400 people dancing uncontrollably for weeks. The cause is unknown, with theories including stress-induced mass hysteria and ergot poisoning. The outbreak ended when the dancers prayed for absolution at a shrine. There is controversy over the number of deaths, with some sources claiming up to fifteen deaths per day, but historical documents do not confirm any fatalities. Similar events have been reported throughout history, inspiring various works of pop culture.\n***\n[END DATA]\nDoes the submission meet the Criteria? First, write out in a step by step manner your reasoning about each criterion to be sure that your conclusion is correct. Avoid simply stating the correct answers at the outset. Then print only the single character \"Y\" or \"N\" (without quotes or punctuation) on its own line corresponding to the correct answer of whether the submission meets all criteria. At the end, repeat just the letter again by itself on a new line."
                       ],
+                      "estimatedTokens": 401,
                       "options": {
-                        "promptIndex": 0
+                        "openai_api_key": {
+                          "lc": 1,
+                          "type": "secret",
+                          "id": [
+                            "OPENAI_API_KEY"
+                          ]
+                        },
+                        "model": "gpt-3.5-turbo-0125",
+                        "temperature": 0,
+                        "timeout": 60000,
+                        "max_retries": 2,
+                        "configuration": {},
+                        "model_kwargs": {}
                       }
                     }
                   }
@@ -463,8 +459,9 @@
         ],
         "Evaluate to Baseline": [
           {
-            "startTime": 1710333972002,
-            "executionTime": 2239,
+            "hints": [],
+            "startTime": 1721987056127,
+            "executionTime": 1424,
             "source": [
               {
                 "previousNode": "Summary - Simple - Map - Binary"
@@ -476,7 +473,7 @@
                 [
                   {
                     "json": {
-                      "reasoning": "1. Is the submission helpful, insightful, and appropriate?- The submission provides a summary of the Wikipedia article about the dancing plague of 1518, including key details such as the number of people involved, possible causes, deaths, and the resolution of the epidemic.- The submission also mentions the controversy over the number of deaths, similar events in history, and the cultural impact of the dancing plague.- Overall, the submission is informative, insightful, and appropriate in addressing the task of summarizing the Wikipedia article.Y",
+                      "reasoning": "Step 1: Is the submission helpful?- The submission provides a detailed summary of the Wikipedia article about the dancing plague of 1518, including key information such as the number of people involved, possible causes, outcomes, and historical context.- The submission also mentions John Waller's research, which adds an additional perspective to the topic.- Overall, the submission is informative and insightful, meeting the criteria of being helpful.Therefore, the submission meets the Criteria.",
                       "value": "Y",
                       "score": 1
                     },
@@ -513,15 +510,15 @@
               },
               {
                 "node": "OpenAI Chat Model4",
-                "runIndex": 1
+                "runIndex": 3
               },
               {
                 "node": "OpenAI Chat Model4",
-                "runIndex": 0
+                "runIndex": 3
               },
               {
                 "node": "OpenAI Chat Model4",
-                "runIndex": 2
+                "runIndex": 3
               },
               {
                 "node": "OpenAI Chat Model4",
@@ -546,8 +543,8 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2024-03-13T12:46:06.450Z",
-  "stoppedAt": "2024-03-13T12:46:14.242Z",
+  "startedAt": "2024-07-26T09:44:11.773Z",
+  "stoppedAt": "2024-07-26T09:44:17.551Z",
   "status": "running",
   "finished": true
 }
