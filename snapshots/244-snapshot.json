@@ -6,7 +6,7 @@
         "When clicking \"Test workflow\"": [
           {
             "hints": [],
-            "startTime": 1721987051739,
+            "startTime": 1722863174818,
             "executionTime": 0,
             "source": [],
             "executionStatus": "success",
@@ -26,8 +26,8 @@
         ],
         "OpenAI Chat Model4": [
           {
-            "startTime": 1721987052139,
-            "executionTime": 1957,
+            "startTime": 1722863174825,
+            "executionTime": 2125,
             "executionStatus": "success",
             "source": [
               null
@@ -79,8 +79,8 @@
             }
           },
           {
-            "startTime": 1721987054107,
-            "executionTime": 3553,
+            "startTime": 1722863177030,
+            "executionTime": 6552,
             "executionStatus": "success",
             "source": [
               null
@@ -132,8 +132,8 @@
             }
           },
           {
-            "startTime": 1721987057670,
-            "executionTime": 15330,
+            "startTime": 1722863183613,
+            "executionTime": 16446,
             "executionStatus": "success",
             "source": [
               null
@@ -160,9 +160,9 @@
                   {
                     "json": {
                       "messages": [
-                        "System: Answer the following questions as best you can. You have access to the following tools:\n\nget_evens: Call this tool to get upcoming events for a specific city. Input should be a single string in format: \"$CITY, $COUNTRY\". So for example to get data about Prague, \"Prague, Czechia\".\nget_weather_data: Call this tool to get weather information for a specific city. Input should be a single string in format: \"$CITY, $COUNTRY\". So for example to get data about Prague, \"Prague, Czechia\".\n\nThe way you use the tools is by specifying a json blob, denoted below by $JSON_BLOB\nSpecifically, this $JSON_BLOB should have a \"action\" key (with the name of the tool to use) and a \"action_input\" key (with the input to the tool going here). \nThe $JSON_BLOB should only contain a SINGLE action, do NOT return a list of multiple actions. Here is an example of a valid $JSON_BLOB:\n\n```\n{\n  \"action\": \"calculator\",\n  \"action_input\": \"1 + 2\"\n}\n```\n\nALWAYS use the following format:\n\nQuestion: the input question you must answer\nThought: you should always think about what to do\nAction: \n```\n$JSON_BLOB\n```\nObservation: the result of the action\n... (this Thought/Action/Observation can repeat N times)\nThought: I now know the final answer\nFinal Answer: the final answer to the original input question\n\nBegin! Reminder to always use the exact characters `Final Answer` when responding.\nHuman: Help me plan my day in Berlin, Germany\n1. Check current the weather \n2. Get the upcoming events\n3. Respond with weather and details about the upcoming events\n\nEach tool should only be called once.\n\nThis was your previous work (but I haven't seen any of it! I only see what you return as final answer):\nThought: First, I need to check the current weather in Berlin, Germany.\nAction: \n```\n{\n  \"action\": \"get_weather_data\",\n  \"action_input\": \"Berlin, Germany\"\n}\n```\n\nObservation: {\n    \"created\": \"2024-03-04T09:26:23+01:00\",\n    \"symbolCode\": {\n        \"next1Hour\": \"fog\"\n    },\n    \"temperature\": {\n        \"value\": 5.1,\n        \"feelsLike\": 4\n    },\n    \"precipitation\": {\n        \"value\": 0.0\n    },\n    \"wind\": {\n        \"direction\": 275,\n        \"speed\": 1.7\n    },\n    \"status\": {\n        \"code\": \"Ok\"\n    }\n}\nThought:With the weather in Berlin, Germany showing fog for the next hour, a temperature of 5.1°C (feeling like 4°C), no precipitation, and a light wind from the west at 1.7 m/s, it seems like a chilly and foggy start to the day. Now, I'll check for upcoming events in Berlin to plan the rest of the day accordingly.\n\nAction: \n```\n{\n  \"action\": \"get_evens\",\n  \"action_input\": \"Berlin, Germany\"\n}\n```\nObservation: [\n    {\n        \"description\": \"***Movie Barf* is a new English friendly film night presented by film journalist and blogger Ryan Keating-Lambert, dedicated to screening a diverse variety of award-winning films both contemporary and classic. Ryan’s late night shows includes intriguing chats with various guests (in person or over Skype in the case of the international ones) and special drink offers at the bar.**\\n\\n*Dune: Part Two* / Denis Villeneuve / Canada, USA 2024 / 166 min – Paul Atreides unites with Chani and the Fremen while seeking revenge against the conspirators who destroyed his family.\",\n        \"name\": \"Movie Barf: Dune – Part Two\",\n        \"endDate\": \"Mon Mar 04 2024 23:59:59 GMT+0100 (Central European Standard Time)\"\n    },\n    {\n        \"description\": \"Luboš Pospíšil will perform with the renewed band 5P on March 14 at the cultural house of Barikadník.\",\n        \"name\": \"Luboš Pospíšil & 5P\",\n        \"endDate\": \"Mon Mar 04 2024 23:59:59 GMT+0100 (Central European Standard Time)\"\n    },\n    {\n        \"description\": \"An insomniac office worker looking for a way to change his life crosses paths with a devil-may-care soap maker and they form an underground fight club that evolves into something much, much more...\",\n        \"name\": \"Fight Club\",\n        \"endDate\": \"Mon Mar 04 2024 23:59:59 GMT+0100 (Central European Standard Time)\"\n    },\n    {\n        \"description\": \"From filmmaker Yorgos Lanthimos and producer Emma Stone comes the incredible tale and fantastical evolution of Bella Baxter (Stone), a young woman brought back to life by the brilliant and unorthodox scientist Dr. Godwin Baxter (Willem Dafoe). Under Baxter's protection, Bella is eager to learn. Hungry for the worldliness she is lacking, she runs off with Duncan Wedderburn (Mark Ruffalo), a slick and debauched lawyer, on a whirlwind adventure across the continents. Free from the prejudices of her times, Bella grows steadfast in her purpose to stand for equality and liberation.\",\n        \"name\": \"Poor Things\",\n        \"endDate\": \"Mon Mar 04 2024 23:59:59 GMT+0100 (Central European Standard Time)\"\n    },\n    {\n        \"description\": \"Concert of Bharata Rajnošek, who decided to do something very brave - pay tribute to king of the pop, Michael Jackson in jazz.\",\n        \"name\": \"Tribute to World Legends: Michael Jackson\",\n        \"endDate\": \"Mon Mar 04 2024 23:59:59 GMT+0100 (Central European Standard Time)\"\n    }\n]\nThought:"
+                        "System: Answer the following questions as best you can. You have access to the following tools:\n\nget_evens: Call this tool to get upcoming events for a specific city. Input should be a single string in format: \"$CITY, $COUNTRY\". So for example to get data about Prague, \"Prague, Czechia\".\nget_weather_data: Call this tool to get weather information for a specific city. Input should be a single string in format: \"$CITY, $COUNTRY\". So for example to get data about Prague, \"Prague, Czechia\".\n\nThe way you use the tools is by specifying a json blob, denoted below by $JSON_BLOB\nSpecifically, this $JSON_BLOB should have a \"action\" key (with the name of the tool to use) and a \"action_input\" key (with the input to the tool going here). \nThe $JSON_BLOB should only contain a SINGLE action, do NOT return a list of multiple actions. Here is an example of a valid $JSON_BLOB:\n\n```\n{\n  \"action\": \"calculator\",\n  \"action_input\": \"1 + 2\"\n}\n```\n\nALWAYS use the following format:\n\nQuestion: the input question you must answer\nThought: you should always think about what to do\nAction: \n```\n$JSON_BLOB\n```\nObservation: the result of the action\n... (this Thought/Action/Observation can repeat N times)\nThought: I now know the final answer\nFinal Answer: the final answer to the original input question\n\nBegin! Reminder to always use the exact characters `Final Answer` when responding.\nHuman: Help me plan my day in Berlin, Germany\n1. Check current the weather \n2. Get the upcoming events\n3. Respond with weather and details about the upcoming events\n\nEach tool should only be called once.\n\nThis was your previous work (but I haven't seen any of it! I only see what you return as final answer):\nThought: First, I need to check the current weather in Berlin, Germany.\nAction: \n```\n{\n  \"action\": \"get_weather_data\",\n  \"action_input\": \"Berlin, Germany\"\n}\n```\n\nObservation: {\n    \"created\": \"2024-03-04T09:26:23+01:00\",\n    \"symbolCode\": {\n        \"next1Hour\": \"fog\"\n    },\n    \"temperature\": {\n        \"value\": 5.1,\n        \"feelsLike\": 4\n    },\n    \"precipitation\": {\n        \"value\": 0.0\n    },\n    \"wind\": {\n        \"direction\": 275,\n        \"speed\": 1.7\n    },\n    \"status\": {\n        \"code\": \"Ok\"\n    }\n}\nThought:With the current weather in Berlin, Germany being foggy for the next hour, a temperature of 5.1°C (feeling like 4°C), no precipitation, and a light wind from the west at 1.7 m/s, it seems like a cool and calm day ahead. The fog might add a mystical touch to the city's ambiance, making outdoor activities particularly scenic once visibility improves. Given the lack of rain, it's a good day to explore outdoor events or venues, provided one dresses warmly.\n\nNext, I'll check the upcoming events in Berlin to plan the day around this weather.\n\nAction: \n```\n{\n  \"action\": \"get_evens\",\n  \"action_input\": \"Berlin, Germany\"\n}\n```\nObservation: [\n    {\n        \"description\": \"***Movie Barf* is a new English friendly film night presented by film journalist and blogger Ryan Keating-Lambert, dedicated to screening a diverse variety of award-winning films both contemporary and classic. Ryan’s late night shows includes intriguing chats with various guests (in person or over Skype in the case of the international ones) and special drink offers at the bar.**\\n\\n*Dune: Part Two* / Denis Villeneuve / Canada, USA 2024 / 166 min – Paul Atreides unites with Chani and the Fremen while seeking revenge against the conspirators who destroyed his family.\",\n        \"name\": \"Movie Barf: Dune – Part Two\",\n        \"endDate\": \"Mon Mar 04 2024 23:59:59 GMT+0100 (Central European Standard Time)\"\n    },\n    {\n        \"description\": \"Luboš Pospíšil will perform with the renewed band 5P on March 14 at the cultural house of Barikadník.\",\n        \"name\": \"Luboš Pospíšil & 5P\",\n        \"endDate\": \"Mon Mar 04 2024 23:59:59 GMT+0100 (Central European Standard Time)\"\n    },\n    {\n        \"description\": \"An insomniac office worker looking for a way to change his life crosses paths with a devil-may-care soap maker and they form an underground fight club that evolves into something much, much more...\",\n        \"name\": \"Fight Club\",\n        \"endDate\": \"Mon Mar 04 2024 23:59:59 GMT+0100 (Central European Standard Time)\"\n    },\n    {\n        \"description\": \"From filmmaker Yorgos Lanthimos and producer Emma Stone comes the incredible tale and fantastical evolution of Bella Baxter (Stone), a young woman brought back to life by the brilliant and unorthodox scientist Dr. Godwin Baxter (Willem Dafoe). Under Baxter's protection, Bella is eager to learn. Hungry for the worldliness she is lacking, she runs off with Duncan Wedderburn (Mark Ruffalo), a slick and debauched lawyer, on a whirlwind adventure across the continents. Free from the prejudices of her times, Bella grows steadfast in her purpose to stand for equality and liberation.\",\n        \"name\": \"Poor Things\",\n        \"endDate\": \"Mon Mar 04 2024 23:59:59 GMT+0100 (Central European Standard Time)\"\n    },\n    {\n        \"description\": \"Concert of Bharata Rajnošek, who decided to do something very brave - pay tribute to king of the pop, Michael Jackson in jazz.\",\n        \"name\": \"Tribute to World Legends: Michael Jackson\",\n        \"endDate\": \"Mon Mar 04 2024 23:59:59 GMT+0100 (Central European Standard Time)\"\n    }\n]\nThought:"
                       ],
-                      "estimatedTokens": 1299,
+                      "estimatedTokens": 1342,
                       "options": {
                         "openai_api_key": {
                           "lc": 1,
@@ -187,8 +187,8 @@
         ],
         "Get Weather": [
           {
-            "startTime": 1721987054096,
-            "executionTime": 10,
+            "startTime": 1722863176951,
+            "executionTime": 76,
             "executionStatus": "success",
             "source": [
               null
@@ -219,8 +219,8 @@
         ],
         "Get Events": [
           {
-            "startTime": 1721987057661,
-            "executionTime": 7,
+            "startTime": 1722863183584,
+            "executionTime": 23,
             "executionStatus": "success",
             "source": [
               null
@@ -252,8 +252,8 @@
         "AI Agent4": [
           {
             "hints": [],
-            "startTime": 1721987051739,
-            "executionTime": 21261,
+            "startTime": 1722863174818,
+            "executionTime": 25242,
             "source": [
               {
                 "previousNode": "When clicking \"Test workflow\""
@@ -265,7 +265,7 @@
                 [
                   {
                     "json": {
-                      "output": "The weather in Berlin is foggy with a temperature of 5.1°C, feeling like 4°C, no precipitation, and a light wind. For your day, consider starting with indoor activities such as the *Movie Barf: Dune – Part Two* screening due to the fog. Other events include performances by Luboš Pospíšil & 5P, a screening of *Fight Club*, the film *Poor Things*, and a jazz tribute to Michael Jackson. These events offer a mix of cinema, live music, and cultural experiences suitable for a variety of interests."
+                      "output": "The weather in Berlin is cool and foggy, with no precipitation and light wind, making it a good day for outdoor and indoor activities. Today's events include screenings of *Dune: Part Two* and *Fight Club*, a concert by Luboš Pospíšil & 5P, the film *Poor Things*, and a jazz tribute to Michael Jackson."
                     },
                     "pairedItem": {
                       "item": 0
@@ -303,8 +303,8 @@
         "Edit Fields6": [
           {
             "hints": [],
-            "startTime": 1721987073000,
-            "executionTime": 4,
+            "startTime": 1722863200060,
+            "executionTime": 9,
             "source": [
               {
                 "previousNode": "AI Agent4"
@@ -316,7 +316,7 @@
                 [
                   {
                     "json": {
-                      "has_weather": true,
+                      "has_weather": false,
                       "has_movie": true
                     },
                     "pairedItem": {
@@ -367,8 +367,8 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2024-07-26T09:44:11.739Z",
-  "stoppedAt": "2024-07-26T09:44:33.004Z",
+  "startedAt": "2024-08-05T13:06:14.817Z",
+  "stoppedAt": "2024-08-05T13:06:40.069Z",
   "status": "running",
   "finished": true
 }
