@@ -3,8 +3,9 @@ n8n workflows used for testing nodes
 
 ## Docker config
 
-Copy `dot-env.example` to `.env` and add the encryption key there. Then you
-can run the tests with:
+Copy `dot-env.example` to `.env` and add the encryption key there. Also make
+sure the n8n repository is checked out at `../n8n`. Then you can run the tests
+with:
 
 
 ```
