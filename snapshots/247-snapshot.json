@@ -6,7 +6,7 @@
         "When clicking \"Test workflow\"": [
           {
             "hints": [],
-            "startTime": 1722863176941,
+            "startTime": 1726655444364,
             "executionTime": 0,
             "source": [],
             "executionStatus": "success",
@@ -27,8 +27,8 @@
         "Set Baseline": [
           {
             "hints": [],
-            "startTime": 1722863176941,
-            "executionTime": 1,
+            "startTime": 1726655444364,
+            "executionTime": 0,
             "source": [
               {
                 "previousNode": "When clicking \"Test workflow\""
@@ -54,8 +54,8 @@
         "Set Article": [
           {
             "hints": [],
-            "startTime": 1722863176942,
-            "executionTime": 6,
+            "startTime": 1726655444364,
+            "executionTime": 3,
             "source": [
               {
                 "previousNode": "Set Baseline"
@@ -80,8 +80,8 @@
         ],
         "Token Splitter": [
           {
-            "startTime": 1722863176963,
-            "executionTime": 14,
+            "startTime": 1726655444369,
+            "executionTime": 4,
             "executionStatus": "success",
             "source": [
               null
@@ -114,8 +114,8 @@
         ],
         "OpenAI Chat Model1": [
           {
-            "startTime": 1722863177002,
-            "executionTime": 4501,
+            "startTime": 1726655444381,
+            "executionTime": 2464,
             "executionStatus": "success",
             "source": [
               null
@@ -170,8 +170,8 @@
         "Summary - Advanced": [
           {
             "hints": [],
-            "startTime": 1722863176948,
-            "executionTime": 4555,
+            "startTime": 1726655444367,
+            "executionTime": 2478,
             "source": [
               {
                 "previousNode": "Set Article"
@@ -210,8 +210,8 @@
         ],
         "OpenAI Chat Model8": [
           {
-            "startTime": 1722863181529,
-            "executionTime": 4109,
+            "startTime": 1726655446852,
+            "executionTime": 1603,
             "executionStatus": "success",
             "source": [
               null
@@ -238,9 +238,9 @@
                   {
                     "json": {
                       "messages": [
-                        "Human: You are assessing a submitted answer on a given task or input based on a set of criteria. Here is the data:\n[BEGIN DATA]\n***\n[Input]: Summarize Wikipedia article about the dancing plague of 1518\n***\n[Submission]: The dancing plague of 1518 was a case of dancing mania that occurred in Strasbourg, Alsace, where between 50 and 400 people danced uncontrollably for weeks. The cause is debated, with theories including stress-induced mass hysteria, ergot poisoning, and religious explanations. The outbreak eventually subsided when the dancers were sent to a shrine to pray for absolution. The veracity of deaths is controversial, with some sources claiming fatalities while others do not mention any deaths. Modern theories suggest food poisoning or stress-induced mass hysteria as possible explanations. The event has inspired various works of art and media, including films, songs, and novels.\n***\n[Criteria]: helpfulness: Is the submission helpful, insightful, and appropriate? If so, response Y. If not, respond N.\n***\n[Reference]: The dancing plague of 1518 in Strasbourg, Alsace involved between 50 and 400 people dancing uncontrollably for weeks. The cause is unknown, with theories including stress-induced mass hysteria and ergot poisoning. The outbreak ended when the dancers prayed for absolution at a shrine. There is controversy over the number of deaths, with some sources claiming up to fifteen deaths per day, but historical documents do not confirm any fatalities. Similar events have been reported throughout history, inspiring various works of pop culture.\n***\n[END DATA]\nDoes the submission meet the Criteria? First, write out in a step by step manner your reasoning about each criterion to be sure that your conclusion is correct. Avoid simply stating the correct answers at the outset. Then print only the single character \"Y\" or \"N\" (without quotes or punctuation) on its own line corresponding to the correct answer of whether the submission meets all criteria. At the end, repeat just the letter again by itself on a new line."
+                        "Human: You are assessing a submitted answer on a given task or input based on a set of criteria. Here is the data:\n[BEGIN DATA]\n***\n[Input]: Summarize Wikipedia article about the dancing plague of 1518\n***\n[Submission]: The dancing plague of 1518 was a case of dancing mania that occurred in Strasbourg, Alsace, where between 50 and 400 people danced uncontrollably for weeks. The cause is debated, with theories including stress-induced mass hysteria, ergot poisoning, and religious explanations. The outbreak began with a woman dancing in the street, and eventually subsided after dancers were sent to a shrine to pray for absolution. The veracity of deaths is disputed, with some sources claiming fatalities. Modern theories suggest food poisoning or stress-induced mass hysteria as possible explanations. The event has inspired various works of art and media.\n***\n[Criteria]: helpfulness: Is the submission helpful, insightful, and appropriate? If so, response Y. If not, respond N.\n***\n[Reference]: The dancing plague of 1518 in Strasbourg, Alsace involved between 50 and 400 people dancing uncontrollably for weeks. The cause is unknown, with theories including stress-induced mass hysteria and ergot poisoning. The outbreak ended when the dancers prayed for absolution at a shrine. There is controversy over the number of deaths, with some sources claiming up to fifteen deaths per day, but historical documents do not confirm any fatalities. Similar events have been reported throughout history, inspiring various works of pop culture.\n***\n[END DATA]\nDoes the submission meet the Criteria? First, write out in a step by step manner your reasoning about each criterion to be sure that your conclusion is correct. Avoid simply stating the correct answers at the outset. Then print only the single character \"Y\" or \"N\" (without quotes or punctuation) on its own line corresponding to the correct answer of whether the submission meets all criteria. At the end, repeat just the letter again by itself on a new line."
                       ],
-                      "estimatedTokens": 418,
+                      "estimatedTokens": 412,
                       "options": {
                         "openai_api_key": {
                           "lc": 1,
@@ -266,8 +266,8 @@
         "Evaluate to Baseline3": [
           {
             "hints": [],
-            "startTime": 1722863181503,
-            "executionTime": 4136,
+            "startTime": 1726655446845,
+            "executionTime": 1610,
             "source": [
               {
                 "previousNode": "Summary - Advanced"
@@ -279,7 +279,7 @@
                 [
                   {
                     "json": {
-                      "reasoning": "1. Is the submission helpful?- The submission provides a summary of the Wikipedia article about the dancing plague of 1518, including key details such as the location, number of people involved, possible causes, and outcomes.- The submission also mentions the controversy surrounding the number of deaths and the inspiration for various works of art and media.- Overall, the submission is informative and provides a good overview of the topic.2. Is the submission insightful?- The submission discusses different theories about the cause of the dancing plague, including stress-induced mass hysteria, ergot poisoning, and religious explanations.- It also mentions modern theories such as food poisoning and stress-induced mass hysteria.- The submission provides a balanced view of the topic and offers insights into the possible explanations for the phenomenon.3. Is the submission appropriate?- The submission is appropriate as it stays focused on summarizing the Wikipedia article about the dancing plague of 1518.- It covers the key points of the article without going off-topic or introducing irrelevant information.- The submission is suitable for the task at hand.Therefore, the submission meets the criteria.",
+                      "reasoning": "1. Is the submission helpful, insightful, and appropriate?- The submission provides a summary of the Wikipedia article about the dancing plague of 1518, including key details such as the location, number of people involved, possible causes, and outcomes.- The submission also mentions the controversy surrounding the number of deaths and the inspiration for various works of art and media.- Overall, the submission is informative, insightful, and appropriate in summarizing the topic.Y",
                       "value": "Y",
                       "score": 1
                     },
@@ -337,8 +337,8 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2024-08-05T13:06:16.941Z",
-  "stoppedAt": "2024-08-05T13:06:25.639Z",
+  "startedAt": "2024-09-18T10:30:44.364Z",
+  "stoppedAt": "2024-09-18T10:30:48.455Z",
   "status": "running",
   "finished": true
 }

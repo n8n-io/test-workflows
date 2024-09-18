@@ -6,7 +6,7 @@
         "When clicking \"Test workflow\"": [
           {
             "hints": [],
-            "startTime": 1722863144931,
+            "startTime": 1726655418576,
             "executionTime": 0,
             "source": [],
             "executionStatus": "success",
@@ -26,8 +26,8 @@
         ],
         "Mistral Cloud Chat Model": [
           {
-            "startTime": 1722863144962,
-            "executionTime": 384,
+            "startTime": 1726655418869,
+            "executionTime": 285,
             "executionStatus": "success",
             "source": [
               null
@@ -58,7 +58,13 @@
                       ],
                       "estimatedTokens": 20,
                       "options": {
-                        "api_key": "oC5KJ27TydAIhcsioal3I0hoJshkTR26",
+                        "mistral_api_key": {
+                          "lc": 1,
+                          "type": "secret",
+                          "id": [
+                            "MISTRAL_API_KEY"
+                          ]
+                        },
                         "model_name": "mistral-tiny",
                         "temperature": 0
                       }
@@ -72,8 +78,8 @@
         "Mistral Cloud Chat": [
           {
             "hints": [],
-            "startTime": 1722863144931,
-            "executionTime": 416,
+            "startTime": 1726655418576,
+            "executionTime": 579,
             "source": [
               {
                 "previousNode": "When clicking \"Test workflow\""
@@ -127,8 +133,8 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2024-08-05T13:05:44.930Z",
-  "stoppedAt": "2024-08-05T13:05:45.347Z",
+  "startedAt": "2024-09-18T10:30:18.575Z",
+  "stoppedAt": "2024-09-18T10:30:19.155Z",
   "status": "running",
   "finished": true
 }

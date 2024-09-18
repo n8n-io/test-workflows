@@ -6,7 +6,7 @@
         "When clicking \"Test workflow\"": [
           {
             "hints": [],
-            "startTime": 1722863183744,
+            "startTime": 1726655453491,
             "executionTime": 0,
             "source": [],
             "executionStatus": "success",
@@ -27,8 +27,8 @@
         "Code": [
           {
             "hints": [],
-            "startTime": 1722863183744,
-            "executionTime": 7,
+            "startTime": 1726655453491,
+            "executionTime": 2,
             "source": [
               {
                 "previousNode": "When clicking \"Test workflow\""
@@ -53,8 +53,8 @@
         ],
         "Default Data Loader": [
           {
-            "startTime": 1722863183755,
-            "executionTime": 21,
+            "startTime": 1726655453495,
+            "executionTime": 8,
             "executionStatus": "success",
             "source": [
               null
@@ -93,8 +93,8 @@
         ],
         "Token Splitter": [
           {
-            "startTime": 1722863183756,
-            "executionTime": 19,
+            "startTime": 1726655453495,
+            "executionTime": 8,
             "executionStatus": "success",
             "source": [
               null
@@ -127,8 +127,8 @@
         ],
         "Embeddings OpenAI": [
           {
-            "startTime": 1722863185016,
-            "executionTime": 931,
+            "startTime": 1726655454954,
+            "executionTime": 1224,
             "executionStatus": "success",
             "source": [
               null
@@ -175,8 +175,8 @@
         "Pinecone Vector Store": [
           {
             "hints": [],
-            "startTime": 1722863183751,
-            "executionTime": 4234,
+            "startTime": 1726655453493,
+            "executionTime": 5021,
             "source": [
               {
                 "previousNode": "Code"
@@ -342,8 +342,8 @@
         "Check Vector Store Populated": [
           {
             "hints": [],
-            "startTime": 1722863187985,
-            "executionTime": 2,
+            "startTime": 1726655458515,
+            "executionTime": 0,
             "source": [
               {
                 "previousNode": "Pinecone Vector Store"
@@ -371,7 +371,7 @@
         "Wait": [
           {
             "hints": [],
-            "startTime": 1722863187987,
+            "startTime": 1726655458515,
             "executionTime": 15001,
             "source": [
               {
@@ -399,8 +399,8 @@
         ],
         "Embeddings OpenAI10": [
           {
-            "startTime": 1722863203269,
-            "executionTime": 368,
+            "startTime": 1726655473605,
+            "executionTime": 429,
             "executionStatus": "success",
             "source": [
               null
@@ -434,8 +434,8 @@
         "Pinecone Vector Store1": [
           {
             "hints": [],
-            "startTime": 1722863202988,
-            "executionTime": 1384,
+            "startTime": 1726655473516,
+            "executionTime": 2778,
             "source": [
               {
                 "previousNode": "Wait"
@@ -505,8 +505,8 @@
         "Check Vector Store Retrieval": [
           {
             "hints": [],
-            "startTime": 1722863204372,
-            "executionTime": 3,
+            "startTime": 1726655476294,
+            "executionTime": 1,
             "source": [
               {
                 "previousNode": "Pinecone Vector Store1"
@@ -533,8 +533,8 @@
         ],
         "Vector Store Retriever": [
           {
-            "startTime": 1722863204673,
-            "executionTime": 831,
+            "startTime": 1726655476379,
+            "executionTime": 566,
             "executionStatus": "success",
             "source": [
               null
@@ -567,8 +567,8 @@
         ],
         "Pinecone Vector Store2": [
           {
-            "startTime": 1722863204673,
-            "executionTime": 831,
+            "startTime": 1726655476379,
+            "executionTime": 566,
             "executionStatus": "success",
             "source": [
               null
@@ -602,8 +602,8 @@
         ],
         "Embeddings OpenAI9": [
           {
-            "startTime": 1722863204673,
-            "executionTime": 450,
+            "startTime": 1726655476379,
+            "executionTime": 301,
             "executionStatus": "success",
             "source": [
               null
@@ -636,8 +636,8 @@
         ],
         "OpenAI Chat Model": [
           {
-            "startTime": 1722863205514,
-            "executionTime": 734,
+            "startTime": 1726655476948,
+            "executionTime": 630,
             "executionStatus": "success",
             "source": [
               null
@@ -692,8 +692,8 @@
         "Question and Answer Chain": [
           {
             "hints": [],
-            "startTime": 1722863204375,
-            "executionTime": 1873,
+            "startTime": 1726655476295,
+            "executionTime": 1283,
             "source": [
               {
                 "previousNode": "Check Vector Store Retrieval"
@@ -741,8 +741,8 @@
         "Edit Fields": [
           {
             "hints": [],
-            "startTime": 1722863206248,
-            "executionTime": 1,
+            "startTime": 1726655477579,
+            "executionTime": 0,
             "source": [
               {
                 "previousNode": "Question and Answer Chain"
@@ -828,8 +828,8 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2024-08-05T13:06:23.743Z",
-  "stoppedAt": "2024-08-05T13:06:46.249Z",
+  "startedAt": "2024-09-18T10:30:53.491Z",
+  "stoppedAt": "2024-09-18T10:31:17.579Z",
   "status": "running",
   "finished": true
 }
