@@ -6,7 +6,7 @@
         "When clicking \"Test workflow\"": [
           {
             "hints": [],
-            "startTime": 1722863177223,
+            "startTime": 1726655444927,
             "executionTime": 0,
             "source": [],
             "executionStatus": "success",
@@ -27,8 +27,8 @@
         "Code": [
           {
             "hints": [],
-            "startTime": 1722863177223,
-            "executionTime": 6,
+            "startTime": 1726655444927,
+            "executionTime": 3,
             "source": [
               {
                 "previousNode": "When clicking \"Test workflow\""
@@ -53,8 +53,8 @@
         ],
         "Default Data Loader2": [
           {
-            "startTime": 1722863177233,
-            "executionTime": 32,
+            "startTime": 1726655444931,
+            "executionTime": 10,
             "executionStatus": "success",
             "source": [
               null
@@ -93,8 +93,8 @@
         ],
         "Token Splitter2": [
           {
-            "startTime": 1722863177234,
-            "executionTime": 31,
+            "startTime": 1726655444932,
+            "executionTime": 9,
             "executionStatus": "success",
             "source": [
               null
@@ -127,8 +127,8 @@
         ],
         "Embeddings OpenAI6": [
           {
-            "startTime": 1722863177266,
-            "executionTime": 1090,
+            "startTime": 1726655444941,
+            "executionTime": 907,
             "executionStatus": "success",
             "source": [
               null
@@ -172,8 +172,8 @@
             }
           },
           {
-            "startTime": 1722863187636,
-            "executionTime": 554,
+            "startTime": 1726655455371,
+            "executionTime": 358,
             "executionStatus": "success",
             "source": [
               null
@@ -207,8 +207,8 @@
         "In-Memory Vector Store": [
           {
             "hints": [],
-            "startTime": 1722863177229,
-            "executionTime": 38,
+            "startTime": 1726655444930,
+            "executionTime": 11,
             "source": [
               {
                 "previousNode": "Code"
@@ -378,8 +378,8 @@
         "Check Vector Store Populated2": [
           {
             "hints": [],
-            "startTime": 1722863177268,
-            "executionTime": 2,
+            "startTime": 1726655444942,
+            "executionTime": 1,
             "source": [
               {
                 "previousNode": "In-Memory Vector Store"
@@ -407,8 +407,8 @@
         "Wait": [
           {
             "hints": [],
-            "startTime": 1722863177270,
-            "executionTime": 10001,
+            "startTime": 1726655444943,
+            "executionTime": 10000,
             "source": [
               {
                 "previousNode": "Check Vector Store Populated2"
@@ -435,8 +435,8 @@
         ],
         "Embeddings OpenAI8": [
           {
-            "startTime": 1722863187275,
-            "executionTime": 345,
+            "startTime": 1726655454945,
+            "executionTime": 421,
             "executionStatus": "success",
             "source": [
               null
@@ -470,8 +470,8 @@
         "In-Memory Vector Store1": [
           {
             "hints": [],
-            "startTime": 1722863187271,
-            "executionTime": 355,
+            "startTime": 1726655454943,
+            "executionTime": 425,
             "source": [
               {
                 "previousNode": "Wait"
@@ -486,7 +486,7 @@
                       "document": {
                         "object": true
                       },
-                      "score": 0.34862316344370786
+                      "score": 0.3488701824189936
                     },
                     "pairedItem": {
                       "item": 0
@@ -497,7 +497,7 @@
                       "document": {
                         "object": true
                       },
-                      "score": 0.3470682153813109
+                      "score": 0.347061341166265
                     },
                     "pairedItem": {
                       "item": 0
@@ -508,7 +508,7 @@
                       "document": {
                         "object": true
                       },
-                      "score": 0.3299841909673089
+                      "score": 0.3299710088210718
                     },
                     "pairedItem": {
                       "item": 0
@@ -519,7 +519,7 @@
                       "document": {
                         "object": true
                       },
-                      "score": 0.3143513382024947
+                      "score": 0.3144374547516938
                     },
                     "pairedItem": {
                       "item": 0
@@ -541,8 +541,8 @@
         "Check Vector Store Retrieval2": [
           {
             "hints": [],
-            "startTime": 1722863187626,
-            "executionTime": 2,
+            "startTime": 1726655455368,
+            "executionTime": 1,
             "source": [
               {
                 "previousNode": "In-Memory Vector Store1"
@@ -569,8 +569,8 @@
         ],
         "Vector Store Retriever2": [
           {
-            "startTime": 1722863187636,
-            "executionTime": 554,
+            "startTime": 1726655455371,
+            "executionTime": 358,
             "executionStatus": "success",
             "source": [
               null
@@ -603,8 +603,8 @@
         ],
         "In-Memory Vector Store2": [
           {
-            "startTime": 1722863187636,
-            "executionTime": 554,
+            "startTime": 1726655455371,
+            "executionTime": 358,
             "executionStatus": "success",
             "source": [
               null
@@ -638,8 +638,8 @@
         ],
         "OpenAI Chat Model2": [
           {
-            "startTime": 1722863188199,
-            "executionTime": 838,
+            "startTime": 1726655455731,
+            "executionTime": 524,
             "executionStatus": "success",
             "source": [
               null
@@ -694,8 +694,8 @@
         "Question and Answer Chain2": [
           {
             "hints": [],
-            "startTime": 1722863187628,
-            "executionTime": 1410,
+            "startTime": 1726655455369,
+            "executionTime": 887,
             "source": [
               {
                 "previousNode": "Check Vector Store Retrieval2"
@@ -739,8 +739,8 @@
         "Edit Fields2": [
           {
             "hints": [],
-            "startTime": 1722863189038,
-            "executionTime": 1,
+            "startTime": 1726655456256,
+            "executionTime": 0,
             "source": [
               {
                 "previousNode": "Question and Answer Chain2"
@@ -826,8 +826,8 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2024-08-05T13:06:17.222Z",
-  "stoppedAt": "2024-08-05T13:06:29.039Z",
+  "startedAt": "2024-09-18T10:30:44.927Z",
+  "stoppedAt": "2024-09-18T10:30:56.256Z",
   "status": "running",
   "finished": true
 }
