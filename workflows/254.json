@@ -1,19 +1,19 @@
 {
-  "createdAt": "2024-09-25T08:48:42.324Z",
-  "updatedAt": "2024-09-25T11:23:25.000Z",
-  "id": "253",
-  "name": "Agent:Tools:OpenAI",
+  "createdAt": "2024-09-25T09:14:35.108Z",
+  "updatedAt": "2024-09-25T11:27:58.000Z",
+  "id": "254",
+  "name": "Agent:Tools:Anthropic",
   "active": false,
   "nodes": [
     {
       "parameters": {},
-      "id": "a731e388-a711-44c4-a03a-acfd0667e10f",
+      "id": "f9b7ea03-1809-4fef-80dd-521e9d60f3bc",
       "name": "Execute Workflow Trigger",
       "type": "n8n-nodes-base.executeWorkflowTrigger",
       "typeVersion": 1,
       "position": [
         240,
-        980
+        1100
       ]
     },
     {
@@ -30,13 +30,13 @@
           ]
         }
       },
-      "id": "e082d1ac-db5e-4122-bb0e-4dbb08296463",
+      "id": "4275e044-2ce3-4942-a0ed-406bed90debc",
       "name": "Get Weather",
       "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
       "typeVersion": 1,
       "position": [
         640,
-        700
+        580
       ]
     },
     {
@@ -53,13 +53,13 @@
           ]
         }
       },
-      "id": "ff4cae49-b5d5-4825-a59b-875375933c59",
+      "id": "c28a61c8-be38-4031-a456-76f936ba6721",
       "name": "Get Events",
       "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
       "typeVersion": 1,
       "position": [
         760,
-        700
+        580
       ]
     },
     {
@@ -76,13 +76,13 @@
         },
         "options": {}
       },
-      "id": "8f707bcc-0635-43b8-aa29-0ecd9ceecbbb",
+      "id": "141f2081-39eb-48f4-9ade-924187116c58",
       "name": "Edit Fields4",
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.3,
       "position": [
-        740,
-        920
+        1140,
+        900
       ]
     },
     {
@@ -99,37 +99,14 @@
         },
         "options": {}
       },
-      "id": "0086c025-54ad-41c2-bc7b-ce12fbe05fb2",
+      "id": "ce0ba26a-5149-436f-aaf6-dc2b64ca02b1",
       "name": "Edit Fields5",
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.3,
       "position": [
-        740,
-        1100
+        1140,
+        1080
       ]
-    },
-    {
-      "parameters": {
-        "model": "gpt-4o-mini",
-        "options": {
-          "temperature": 0
-        }
-      },
-      "id": "956d7763-aa7a-4089-8ba6-4ea55d9f7daf",
-      "name": "OpenAI Chat Model4",
-      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
-      "typeVersion": 1,
-      "position": [
-        540,
-        540
-      ],
-      "credentials": {
-        "openAiApi": {
-          "id": "Zak03cqeLUOsgkFI",
-          "name": "OpenAi account"
-        }
-      },
-      "notes": "IGNORED_PROPERTIES=messages"
     },
     {
       "parameters": {
@@ -138,7 +115,7 @@
             {
               "id": "414caf45-02aa-4c0a-9cdb-e6da9ec03d80",
               "name": "has_weather",
-              "value": "={{ $json.output.includes('5.1') }}",
+              "value": "={{ $json.output.includes('weather') }}",
               "type": "boolean"
             },
             {
@@ -151,18 +128,18 @@
         },
         "options": {}
       },
-      "id": "653e99b2-80c8-4b15-8b3b-818940e28365",
+      "id": "4ec6d24d-353c-4534-a9e7-5a19f62f8fde",
       "name": "Edit Fields6",
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.3,
       "position": [
         900,
-        380
+        260
       ]
     },
     {
       "parameters": {},
-      "id": "5f16c9cf-cab4-45ba-8974-5a366ef64677",
+      "id": "e14fcffe-bbf8-429c-b84e-aa749017fb8c",
       "name": "When clicking \"Test workflow\"",
       "type": "n8n-nodes-base.manualTrigger",
       "typeVersion": 1,
@@ -177,13 +154,13 @@
         "height": 80,
         "width": 335
       },
-      "id": "32ebc991-eb8a-48de-a8e4-5aef5c6ba7ae",
+      "id": "62fb5440-b07d-4279-9c0a-722a65fa5322",
       "name": "Sticky Note",
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
         500,
-        320
+        200
       ]
     },
     {
@@ -192,12 +169,12 @@
         "height": 88,
         "width": 386
       },
-      "id": "00ffa66d-4359-4b9b-9cd2-f53e64b5f9d2",
+      "id": "8020da6e-2ab4-4613-8527-b78705f72114",
       "name": "Sticky Note1",
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        500,
+        480,
         -240
       ]
     },
@@ -215,13 +192,291 @@
         },
         "options": {}
       },
-      "id": "d827a4a6-dbaa-4af9-a3c2-123c3b37b81a",
+      "id": "2a0cdc4d-2ed8-4efe-973f-a633469c8001",
       "name": "Edit Fields",
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.3,
       "position": [
+        1140,
+        1260
+      ]
+    },
+    {
+      "parameters": {
+        "name": "get_evens",
+        "description": "Call this tool to search Wikipedia.",
+        "workflowId": "={{ $workflow.id }}",
+        "fields": {
+          "values": [
+            {
+              "name": "tool",
+              "stringValue": "search_wiki"
+            }
+          ]
+        }
+      },
+      "id": "e4d9f9bc-45b0-41ce-8f52-539144736ed5",
+      "name": "Search Wiki",
+      "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
+      "typeVersion": 1,
+      "position": [
+        640,
+        60
+      ]
+    },
+    {
+      "parameters": {
+        "schemaType": "manual",
+        "inputSchema": "{\n  \"type\": \"object\",\n  \"properties\": {\n    \"name\": {\n      \"type\": \"string\",\n      \"description\": \"Full name of the artist\"\n    },\n    \"birthDate\": {\n      \"type\": \"string\",\n      \"format\": \"date\",\n      \"description\": \"Date of birth\"\n    },\n    \"deathDate\": {\n      \"type\": \"string\",\n      \"format\": \"date\",\n      \"description\": \"Date of death\"\n    },\n    \"nationality\": {\n      \"type\": \"string\",\n      \"description\": \"Artist's nationality\"\n    },\n    \"profession\": {\n      \"type\": \"string\",\n      \"description\": \"Artist's primary profession\"\n    },\n    \"notableWorks\": {\n      \"type\": \"array\",\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"description\": \"Notable works created by the artist\"\n    }\n  },\n  \"required\": [\"name\", \"birthDate\", \"deathDate\", \"nationality\", \"profession\", \"notableWorks\"]\n}"
+      },
+      "id": "466a8e57-8eb7-47a9-b0f0-f16c52b18c8f",
+      "name": "Structured Output Parser",
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.2,
+      "position": [
+        780,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "Tell me about M.C. Escher",
+        "hasOutputParser": true,
+        "options": {}
+      },
+      "id": "75babac0-cb8c-401a-a027-49b850166bf3",
+      "name": "AI Agent",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.6,
+      "position": [
+        520,
+        -180
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "414caf45-02aa-4c0a-9cdb-e6da9ec03d80",
+              "name": "has_birth_date",
+              "value": "={{ $json.output.birthDate === '1898-06-17' }}",
+              "type": "boolean"
+            },
+            {
+              "id": "57513cf6-1ee7-40b7-95fc-316066c62153",
+              "name": "has_death_date",
+              "value": "={{ $json.output.deathDate === '1972-03-27' }}",
+              "type": "string"
+            },
+            {
+              "id": "357953da-7578-4c7e-b8f8-aa25bd9187a4",
+              "name": "has_name",
+              "value": "={{ $json.output.name.includes('Escher') }}",
+              "type": "string"
+            },
+            {
+              "id": "7cf215ea-f65a-467c-b158-9a80d8de7511",
+              "name": "has_works",
+              "value": "={{ $json.output.notableWorks.length > 0 }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "31344c44-bbfc-4774-92d9-b61762b43238",
+      "name": "Edit Fields7",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.3,
+      "position": [
+        880,
+        -180
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## Code Tool with Schema\n",
+        "height": 88,
+        "width": 386
+      },
+      "id": "54533ef5-039b-4243-a81c-9ac1265ae3ec",
+      "name": "Sticky Note2",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        500,
+        -620
+      ]
+    },
+    {
+      "parameters": {
+        "name": "array_merge",
+        "description": "Call this tool to merge array of strings to a single string",
+        "jsCode": "// Example: convert the incoming query to uppercase and return it\nreturn query.strings_array.join(', ');",
+        "specifyInputSchema": true,
+        "jsonSchemaExample": "{\n\t\"strings_array\": [\"some_value\", \"some_other_value\"]\n}"
+      },
+      "id": "35be87b4-b947-4b05-9380-23570dac701d",
+      "name": "Code Tool",
+      "type": "@n8n/n8n-nodes-langchain.toolCode",
+      "typeVersion": 1.1,
+      "position": [
         740,
-        1280
+        -400
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "414caf45-02aa-4c0a-9cdb-e6da9ec03d80",
+              "name": "passed_array_parameter",
+              "value": "={{ Array.isArray($json.intermediateSteps[0].action.messageLog[0].kwargs.tool_calls[0].args.strings_array) }}",
+              "type": "boolean"
+            },
+            {
+              "id": "069c2fe9-f0f8-4938-9552-1dac5c720add",
+              "name": "has_correct_length",
+              "value": "={{ $json.intermediateSteps[0].action.messageLog[0].kwargs.tool_calls[0].args.strings_array.length === 4 }}",
+              "type": "boolean"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "33afa806-84d4-4c2e-a004-22e4d4808d47",
+      "name": "Edit Fields8",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.3,
+      "position": [
+        900,
+        -560
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "66c36215-8924-4534-8e7b-845d8de29f4a",
+              "name": "response",
+              "value": "success",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "b35ef011-376c-4982-b7d9-8ad29eb65cd0",
+      "name": "Edit Fields1",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1140,
+        1460
+      ]
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "Convert this JSON array to a single string: ['This', 'Is', 'An', 'Array!'].",
+        "options": {
+          "returnIntermediateSteps": true
+        }
+      },
+      "id": "ed050ae2-eb67-4b1f-a87b-28bf5952e5da",
+      "name": "AI Agent1",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.6,
+      "position": [
+        540,
+        -560
+      ]
+    },
+    {
+      "parameters": {
+        "model": "claude-3-haiku-20240307",
+        "options": {
+          "temperature": 0.1
+        }
+      },
+      "id": "5aa82a01-8d32-4ede-a7f3-9ea2f24432d2",
+      "name": "Anthropic Chat Model2",
+      "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
+      "typeVersion": 1.2,
+      "position": [
+        520,
+        460
+      ],
+      "credentials": {
+        "anthropicApi": {
+          "id": "1Dr1Xbrd2xeq7gaq",
+          "name": "Anthropic account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": "claude-3-haiku-20240307",
+        "options": {
+          "temperature": 0.1
+        }
+      },
+      "id": "2bfdb0c4-6bc9-481d-ad3c-51bed0925a78",
+      "name": "Anthropic Chat Model",
+      "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
+      "typeVersion": 1.2,
+      "position": [
+        520,
+        20
+      ],
+      "credentials": {
+        "anthropicApi": {
+          "id": "1Dr1Xbrd2xeq7gaq",
+          "name": "Anthropic account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": "claude-3-haiku-20240307",
+        "options": {
+          "temperature": 0.1
+        }
+      },
+      "id": "11d7b586-bf4b-42aa-81c1-55aa0e17a3fc",
+      "name": "Anthropic Chat Model3",
+      "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
+      "typeVersion": 1.2,
+      "position": [
+        540,
+        -400
+      ],
+      "credentials": {
+        "anthropicApi": {
+          "id": "1Dr1Xbrd2xeq7gaq",
+          "name": "Anthropic account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "Help me plan my day in Berlin, Germany. Check current the weather  and get the upcoming events and respond with weather and details about the upcoming events.\n\nEach tool should only be called only once.",
+        "options": {
+          "returnIntermediateSteps": true
+        }
+      },
+      "id": "59f6625d-fbb2-47f8-ab09-31a6e0f3e527",
+      "name": "AI Agent4",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.6,
+      "position": [
+        520,
+        260
       ]
     },
     {
@@ -233,7 +488,8 @@
                 "options": {
                   "caseSensitive": true,
                   "leftValue": "",
-                  "typeValidation": "strict"
+                  "typeValidation": "strict",
+                  "version": 1
                 },
                 "conditions": [
                   {
@@ -255,7 +511,8 @@
                 "options": {
                   "caseSensitive": true,
                   "leftValue": "",
-                  "typeValidation": "strict"
+                  "typeValidation": "strict",
+                  "version": 1
                 },
                 "conditions": [
                   {
@@ -279,7 +536,8 @@
                 "options": {
                   "caseSensitive": true,
                   "leftValue": "",
-                  "typeValidation": "strict"
+                  "typeValidation": "strict",
+                  "version": 1
                 },
                 "conditions": [
                   {
@@ -297,251 +555,43 @@
               },
               "renameOutput": true,
               "outputKey": "search_wiki"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 1
+                },
+                "conditions": [
+                  {
+                    "id": "85f031f4-123f-4407-b5d0-fdd90a26667c",
+                    "leftValue": "={{ $json.tool }}",
+                    "rightValue": "no_query",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "empty_query"
             }
           ]
         },
         "options": {}
       },
-      "id": "46387d9e-d93f-443c-93b6-6f61013839ae",
+      "id": "f4dde342-7945-49a1-8e98-cb967ada7afe",
       "name": "Switch",
       "type": "n8n-nodes-base.switch",
       "typeVersion": 3,
       "position": [
         460,
-        980
-      ]
-    },
-    {
-      "parameters": {
-        "name": "get_evens",
-        "description": "Call this tool to search Wikipedia.",
-        "workflowId": "={{ $workflow.id }}",
-        "fields": {
-          "values": [
-            {
-              "name": "tool",
-              "stringValue": "search_wiki"
-            }
-          ]
-        }
-      },
-      "id": "7a52053b-bcdd-4c55-badb-9cf4739f1804",
-      "name": "Search Wiki",
-      "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
-      "typeVersion": 1,
-      "position": [
-        660,
-        60
-      ]
-    },
-    {
-      "parameters": {
-        "model": "gpt-4o-mini",
-        "options": {
-          "temperature": 0.1
-        }
-      },
-      "id": "fb451b3f-1c18-4f58-953a-5787d7dc27a5",
-      "name": "OpenAI Chat Model",
-      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
-      "typeVersion": 1,
-      "position": [
-        540,
-        0
-      ],
-      "credentials": {
-        "openAiApi": {
-          "id": "Zak03cqeLUOsgkFI",
-          "name": "OpenAi account"
-        }
-      }
-    },
-    {
-      "parameters": {
-        "schemaType": "manual",
-        "inputSchema": "{\n  \"type\": \"object\",\n  \"properties\": {\n    \"name\": {\n      \"type\": \"string\",\n      \"description\": \"Full name of the artist\"\n    },\n    \"birthDate\": {\n      \"type\": \"string\",\n      \"format\": \"date\",\n      \"description\": \"Date of birth\"\n    },\n    \"deathDate\": {\n      \"type\": \"string\",\n      \"format\": \"date\",\n      \"description\": \"Date of death\"\n    },\n    \"nationality\": {\n      \"type\": \"string\",\n      \"description\": \"Artist's nationality\"\n    },\n    \"profession\": {\n      \"type\": \"string\",\n      \"description\": \"Artist's primary profession\"\n    },\n    \"notableWorks\": {\n      \"type\": \"array\",\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"description\": \"Notable works created by the artist\"\n    }\n  },\n  \"required\": [\"name\", \"birthDate\", \"deathDate\", \"nationality\", \"profession\", \"notableWorks\"]\n}"
-      },
-      "id": "bba3dd1d-82f1-4bf2-80ba-2b64e6748abb",
-      "name": "Structured Output Parser",
-      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
-      "typeVersion": 1.2,
-      "position": [
-        800,
-        0
-      ]
-    },
-    {
-      "parameters": {
-        "promptType": "define",
-        "text": "Tell me about M.C. Escher",
-        "hasOutputParser": true,
-        "options": {}
-      },
-      "id": "7b8eee2b-6677-4935-a102-8a40405b968b",
-      "name": "AI Agent",
-      "type": "@n8n/n8n-nodes-langchain.agent",
-      "typeVersion": 1.6,
-      "position": [
-        540,
-        -180
-      ]
-    },
-    {
-      "parameters": {
-        "assignments": {
-          "assignments": [
-            {
-              "id": "414caf45-02aa-4c0a-9cdb-e6da9ec03d80",
-              "name": "has_birth_date",
-              "value": "={{ $json.output.birthDate === '1898-06-17' }}",
-              "type": "boolean"
-            },
-            {
-              "id": "57513cf6-1ee7-40b7-95fc-316066c62153",
-              "name": "has_death_date",
-              "value": "={{ $json.output.deathDate === '1972-03-27' }}",
-              "type": "string"
-            },
-            {
-              "id": "357953da-7578-4c7e-b8f8-aa25bd9187a4",
-              "name": "has_name",
-              "value": "={{ $json.output.name === 'Maurits Cornelis Escher' }}",
-              "type": "string"
-            },
-            {
-              "id": "7cf215ea-f65a-467c-b158-9a80d8de7511",
-              "name": "has_works",
-              "value": "={{ $json.output.notableWorks.includes('Hand with Reflecting Sphere') }}",
-              "type": "string"
-            }
-          ]
-        },
-        "options": {}
-      },
-      "id": "857bab38-39a5-4d53-800f-4fe3bd96f666",
-      "name": "Edit Fields7",
-      "type": "n8n-nodes-base.set",
-      "typeVersion": 3.3,
-      "position": [
-        900,
-        -180
-      ]
-    },
-    {
-      "parameters": {
-        "content": "## Code Tool with Schema\n",
-        "height": 88,
-        "width": 386
-      },
-      "id": "cca57c6d-f08e-4032-83b9-3a9a6caf0334",
-      "name": "Sticky Note2",
-      "type": "n8n-nodes-base.stickyNote",
-      "typeVersion": 1,
-      "position": [
-        500,
-        -620
-      ]
-    },
-    {
-      "parameters": {
-        "name": "array_merge",
-        "description": "Call this tool to merge array of strings to a single string",
-        "jsCode": "// Example: convert the incoming query to uppercase and return it\nreturn query.strings_array.join(', ');",
-        "specifyInputSchema": true,
-        "jsonSchemaExample": "{\n\t\"strings_array\": [\"some_value\", \"some_other_value\"]\n}"
-      },
-      "id": "66abd2b8-45ab-455e-b3e1-d6a4d5f083de",
-      "name": "Code Tool",
-      "type": "@n8n/n8n-nodes-langchain.toolCode",
-      "typeVersion": 1.1,
-      "position": [
-        740,
-        -400
-      ]
-    },
-    {
-      "parameters": {
-        "model": "gpt-4o-mini",
-        "options": {
-          "temperature": 0.3
-        }
-      },
-      "id": "899ed8b5-2805-4647-870c-ffa80828d195",
-      "name": "OpenAI Chat Model1",
-      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
-      "typeVersion": 1,
-      "position": [
-        540,
-        -420
-      ],
-      "credentials": {
-        "openAiApi": {
-          "id": "Zak03cqeLUOsgkFI",
-          "name": "OpenAi account"
-        }
-      }
-    },
-    {
-      "parameters": {
-        "promptType": "define",
-        "text": "Help me plan my day in Berlin, Germany. Check current the weather  and get the upcoming events and respond with weather and details about the upcoming events.\n\nEach tool should only be called only once.",
-        "options": {
-          "returnIntermediateSteps": false
-        }
-      },
-      "id": "ab2d9ecf-f338-4e45-b327-667604b21a10",
-      "name": "AI Agent4",
-      "type": "@n8n/n8n-nodes-langchain.agent",
-      "typeVersion": 1.6,
-      "position": [
-        520,
-        380
-      ]
-    },
-    {
-      "parameters": {
-        "promptType": "define",
-        "text": "Convert this JSON array to a single string: ['This', 'Is', 'An', 'Array!'].",
-        "options": {
-          "returnIntermediateSteps": true
-        }
-      },
-      "id": "02408929-ec1f-45ab-bd1f-1b9964814281",
-      "name": "AI Agent1",
-      "type": "@n8n/n8n-nodes-langchain.agent",
-      "typeVersion": 1.6,
-      "position": [
-        540,
-        -560
-      ]
-    },
-    {
-      "parameters": {
-        "assignments": {
-          "assignments": [
-            {
-              "id": "414caf45-02aa-4c0a-9cdb-e6da9ec03d80",
-              "name": "passed_array_parameter",
-              "value": "={{ Array.isArray($json.intermediateSteps[0].action.messageLog[0].kwargs.tool_calls[0].args.strings_array) }}",
-              "type": "boolean"
-            },
-            {
-              "id": "069c2fe9-f0f8-4938-9552-1dac5c720add",
-              "name": "has_correct_length",
-              "value": "={{ $json.intermediateSteps[0].action.messageLog[0].kwargs.tool_calls[0].args.strings_array.length === 4 }}",
-              "type": "boolean"
-            }
-          ]
-        },
-        "options": {}
-      },
-      "id": "dcae231c-5b1c-49f9-b8e4-c9df4e6fa855",
-      "name": "Edit Fields8",
-      "type": "n8n-nodes-base.set",
-      "typeVersion": 3.3,
-      "position": [
-        900,
-        -560
+        1100
       ]
     },
     {
@@ -550,13 +600,13 @@
         "height": 88,
         "width": 386
       },
-      "id": "b29f9a3d-db79-4d7c-8b2c-0044b56b5a6e",
+      "id": "b5dca644-99e9-4493-9e6a-1fbc03502d5a",
       "name": "Sticky Note3",
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        560,
-        -1020
+        520,
+        -1040
       ]
     },
     {
@@ -573,50 +623,50 @@
         },
         "options": {}
       },
-      "id": "ca926d8b-86d5-4dcd-b23f-aadc5f43d35c",
+      "id": "2336c95b-f98a-4c4a-89df-d02c7ad00d42",
       "name": "Edit Fields9",
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.3,
       "position": [
-        960,
-        -960
+        920,
+        -980
       ]
+    },
+    {
+      "parameters": {
+        "model": "claude-3-haiku-20240307",
+        "options": {
+          "temperature": 0.1
+        }
+      },
+      "id": "7646d5c7-3717-483f-85b5-da0f8eadf609",
+      "name": "Anthropic Chat Model4",
+      "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
+      "typeVersion": 1.2,
+      "position": [
+        560,
+        -820
+      ],
+      "credentials": {
+        "anthropicApi": {
+          "id": "1Dr1Xbrd2xeq7gaq",
+          "name": "Anthropic account"
+        }
+      }
     },
     {
       "parameters": {
         "toolDescription": "Fetch Example website",
         "url": "https://example.com"
       },
-      "id": "a237cbf1-dab1-4ea9-bb6c-aff17b33e0d3",
+      "id": "1e1f51e8-7668-4efd-95d6-9c8e7cd5dfbc",
       "name": "HTTP Request",
       "type": "@n8n/n8n-nodes-langchain.toolHttpRequest",
       "typeVersion": 1.1,
       "position": [
-        800,
-        -800
+        740,
+        -820
       ]
-    },
-    {
-      "parameters": {
-        "model": "gpt-4o-mini",
-        "options": {
-          "temperature": 0.3
-        }
-      },
-      "id": "6aadda49-1d19-4038-90e6-5f7adecc5a1f",
-      "name": "OpenAI Chat Model2",
-      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
-      "typeVersion": 1,
-      "position": [
-        600,
-        -800
-      ],
-      "credentials": {
-        "openAiApi": {
-          "id": "Zak03cqeLUOsgkFI",
-          "name": "OpenAi account"
-        }
-      }
     },
     {
       "parameters": {
@@ -626,13 +676,13 @@
           "returnIntermediateSteps": true
         }
       },
-      "id": "bdcc5d54-9532-4bf3-a2b7-da03c196cb15",
+      "id": "36e3e45c-8167-4382-87fa-fed3eccc7dff",
       "name": "AI Agent2",
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 1.6,
       "position": [
-        600,
-        -960
+        560,
+        -980
       ]
     },
     {
@@ -641,66 +691,59 @@
         "sessionKey": "memory3",
         "contextWindowLength": 10
       },
-      "id": "e49bafe2-725a-4146-8023-ecd86952569f",
+      "id": "7eace01a-7ea1-4175-a989-297a885d6f54",
       "name": "Window Buffer Memory1",
       "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
       "typeVersion": 1.2,
       "position": [
-        580,
-        -1220
+        500,
+        -1240
       ]
     },
     {
       "parameters": {
         "jsonSchemaExample": "{\n\t\"english_answer\": \"California\",\n\t\"czech_answer\": \"California\"\n}"
       },
-      "id": "ca8a3ac2-9055-4f3f-8ccc-897718885cd4",
+      "id": "58269208-5599-4e2f-b9fe-f63ce1bd73d3",
       "name": "Structured Output Parser1",
       "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
       "typeVersion": 1.2,
       "position": [
-        720,
-        -1220
+        660,
+        -1240
       ]
     },
     {
       "parameters": {
-        "model": "gpt-4o-mini",
-        "options": {
-          "temperature": 0.1
-        }
-      },
-      "id": "bc913d5b-c00f-44da-a07c-2dceda473199",
-      "name": "OpenAI Chat Model3",
-      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
-      "typeVersion": 1,
-      "position": [
-        440,
-        -1220
-      ],
-      "credentials": {
-        "openAiApi": {
-          "id": "Zak03cqeLUOsgkFI",
-          "name": "OpenAi account"
-        }
-      }
-    },
-    {
-      "parameters": {
         "promptType": "define",
-        "text": "Can you still remember my name?",
+        "text": "Hi, my name is Oleg. Tell me about magnets like I'm 5.",
         "hasOutputParser": true,
         "options": {
           "systemMessage": "You are a helpful assistant. Always provide both `english_answer` and `czech_answer` in the final output and be very concise."
         }
       },
-      "id": "c255ee66-3a23-4051-9bc3-09eccdf4a4e8",
-      "name": "AI Agent3",
+      "id": "66af25fe-deed-4aa1-b597-a2b8ec2aa9be",
+      "name": "AI Agent5",
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 1.6,
       "position": [
-        960,
-        -1380
+        540,
+        -1400
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## Output Parser + Memory\n",
+        "height": 88,
+        "width": 386
+      },
+      "id": "9dbe76ab-c191-404b-a3e6-bd81910923bc",
+      "name": "Sticky Note4",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        520,
+        -1460
       ]
     },
     {
@@ -723,46 +766,53 @@
         },
         "options": {}
       },
-      "id": "92534d51-0e5b-481d-9e57-165b77ee9f9d",
-      "name": "Edit Fields1",
+      "id": "02cd9756-bc75-4467-a587-e9b063219b94",
+      "name": "Edit Fields2",
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
       "position": [
-        1300,
-        -1380
+        1240,
+        -1400
       ]
     },
     {
       "parameters": {
+        "model": "claude-3-haiku-20240307",
+        "options": {
+          "temperature": 0.1
+        }
+      },
+      "id": "acd4aefe-5deb-465c-81c3-28647e4a62c6",
+      "name": "Anthropic Chat Model5",
+      "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
+      "typeVersion": 1.2,
+      "position": [
+        360,
+        -1240
+      ],
+      "credentials": {
+        "anthropicApi": {
+          "id": "1Dr1Xbrd2xeq7gaq",
+          "name": "Anthropic account"
+        }
+      }
+    },
+    {
+      "parameters": {
         "promptType": "define",
-        "text": "Hi, my name is Oleg. Tell me about magnets like I'm 5.",
+        "text": "Can you still remember my name?",
         "hasOutputParser": true,
         "options": {
           "systemMessage": "You are a helpful assistant. Always provide both `english_answer` and `czech_answer` in the final output and be very concise."
         }
       },
-      "id": "8fbc4e41-29c5-442d-8661-441a7e9f348a",
-      "name": "AI Agent5",
+      "id": "cd67dbc8-d756-4e0c-8f75-f753e61a4280",
+      "name": "AI Agent3",
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 1.6,
       "position": [
-        600,
-        -1380
-      ]
-    },
-    {
-      "parameters": {
-        "content": "## Output Parser + Memory\n",
-        "height": 88,
-        "width": 386
-      },
-      "id": "be054b49-a62a-4caa-88b3-6b9d44386431",
-      "name": "Sticky Note4",
-      "type": "n8n-nodes-base.stickyNote",
-      "typeVersion": 1,
-      "position": [
-        580,
-        -1440
+        900,
+        -1400
       ]
     }
   ],
@@ -800,59 +850,12 @@
         ]
       ]
     },
-    "OpenAI Chat Model4": {
-      "ai_languageModel": [
-        [
-          {
-            "node": "AI Agent4",
-            "type": "ai_languageModel",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Switch": {
-      "main": [
-        [
-          {
-            "node": "Edit Fields4",
-            "type": "main",
-            "index": 0
-          }
-        ],
-        [
-          {
-            "node": "Edit Fields5",
-            "type": "main",
-            "index": 0
-          }
-        ],
-        [
-          {
-            "node": "Edit Fields",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
     "Search Wiki": {
       "ai_tool": [
         [
           {
             "node": "AI Agent",
             "type": "ai_tool",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "OpenAI Chat Model": {
-      "ai_languageModel": [
-        [
-          {
-            "node": "AI Agent",
-            "type": "ai_languageModel",
             "index": 0
           }
         ]
@@ -891,17 +894,6 @@
         ]
       ]
     },
-    "OpenAI Chat Model1": {
-      "ai_languageModel": [
-        [
-          {
-            "node": "AI Agent1",
-            "type": "ai_languageModel",
-            "index": 0
-          }
-        ]
-      ]
-    },
     "When clicking \"Test workflow\"": {
       "main": [
         [
@@ -933,17 +925,6 @@
         ]
       ]
     },
-    "AI Agent4": {
-      "main": [
-        [
-          {
-            "node": "Edit Fields6",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
     "AI Agent1": {
       "main": [
         [
@@ -955,23 +936,99 @@
         ]
       ]
     },
+    "Anthropic Chat Model2": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent4",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Anthropic Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Anthropic Chat Model3": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent1",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent4": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields4",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Edit Fields5",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Edit Fields1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Anthropic Chat Model4": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent2",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
     "HTTP Request": {
       "ai_tool": [
         [
           {
             "node": "AI Agent2",
             "type": "ai_tool",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "OpenAI Chat Model2": {
-      "ai_languageModel": [
-        [
-          {
-            "node": "AI Agent2",
-            "type": "ai_languageModel",
             "index": 0
           }
         ]
@@ -1020,7 +1077,18 @@
         ]
       ]
     },
-    "OpenAI Chat Model3": {
+    "AI Agent5": {
+      "main": [
+        [
+          {
+            "node": "AI Agent3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Anthropic Chat Model5": {
       "ai_languageModel": [
         [
           {
@@ -1040,18 +1108,7 @@
       "main": [
         [
           {
-            "node": "Edit Fields1",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "AI Agent5": {
-      "main": [
-        [
-          {
-            "node": "AI Agent3",
+            "node": "Edit Fields2",
             "type": "main",
             "index": 0
           }
@@ -1068,7 +1125,7 @@
     "instanceId": "27cc9b56542ad45b38725555722c50a1c3fee1670bbb67980558314ee08517c4"
   },
   "pinData": {},
-  "versionId": "efad4233-0bf7-47f0-9da9-20b335b6b999",
+  "versionId": "40faa4fb-40b3-4081-8f60-1b226a6294dc",
   "triggerCount": 0,
   "tags": []
 }
