@@ -5,10 +5,12 @@ echo '{ "encryptionKey": "'$ENCRYPTION_KEY'" }' > ~/.n8n/config
 
 cd /n8n
 
+export DOCKER_BUILD=true
+
 echo installing dependencies
 #rm -rf node_modules
 rm -rf **/node_modules **/dist **/.turbo
-echo | pnpm clean
+echo | pnpm clean || echo "skipping clean"
 # doing the echo to make the command skip asking questions...
 echo | pnpm install
 
