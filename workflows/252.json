@@ -1,5 +1,9 @@
 {
+  "createdAt": "2024-10-03T09:40:13.616Z",
+  "updatedAt": "2024-10-03T10:45:47.000Z",
+  "id": "252",
   "name": "vectorStorePGVector:*",
+  "active": false,
   "nodes": [
     {
       "parameters": {},
@@ -8,7 +12,7 @@
       "type": "n8n-nodes-base.manualTrigger",
       "typeVersion": 1,
       "position": [
-        920,
+        180,
         600
       ]
     },
@@ -21,7 +25,7 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        1140,
+        640,
         600
       ]
     },
@@ -35,8 +39,8 @@
       "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
       "typeVersion": 1,
       "position": [
-        1320,
-        860
+        1180,
+        720
       ],
       "credentials": {
         "openAiApi": {
@@ -51,12 +55,8 @@
           "metadata": {
             "metadataValues": [
               {
-                "name": "some-meta",
-                "value": "test"
-              },
-              {
-                "name": "other-meta",
-                "value": "test2"
+                "name": "purpose",
+                "value": "qa_chain"
               }
             ]
           }
@@ -67,8 +67,8 @@
       "type": "@n8n/n8n-nodes-langchain.documentDefaultDataLoader",
       "typeVersion": 1,
       "position": [
-        1500,
-        840
+        1300,
+        760
       ]
     },
     {
@@ -81,99 +81,28 @@
       "type": "@n8n/n8n-nodes-langchain.textSplitterTokenSplitter",
       "typeVersion": 1,
       "position": [
-        1500,
-        1000
+        1320,
+        860
       ]
     },
     {
       "parameters": {
-        "assignments": {
-          "assignments": [
-            {
-              "id": "5f9a8751-2eb2-4ab6-8f12-b7856d9baa8a",
-              "name": "output_length_matches",
-              "value": "={{ $items().length === 12 }}",
-              "type": "boolean"
-            },
-            {
-              "id": "a5a61e4e-ff4d-4da5-a174-9788c22cddfd",
-              "name": "has_content",
-              "value": "={{ $json.pageContent.length > 100 }}",
-              "type": "boolean"
-            },
-            {
-              "id": "bceaea49-b29f-47d7-8a5a-14d4e02477ec",
-              "name": "has_meta",
-              "value": "={{ $items().every(i => i.json.metadata['some-meta'] === 'test' && i.json.metadata['other-meta'] === 'test2') }}",
-              "type": "boolean"
-            }
-          ]
-        },
-        "options": {}
-      },
-      "id": "1bb69331-a69e-418e-9944-8b3520661ee5",
-      "name": "Check Vector Store Populated1",
-      "type": "n8n-nodes-base.set",
-      "typeVersion": 3.3,
-      "position": [
-        1900,
-        600
-      ],
-      "executeOnce": true
-    },
-    {
-      "parameters": {
-        "assignments": {
-          "assignments": [
-            {
-              "id": "5f9a8751-2eb2-4ab6-8f12-b7856d9baa8a",
-              "name": "output_length_matches",
-              "value": "={{ $items().length === 4 }}",
-              "type": "boolean"
-            },
-            {
-              "id": "a5a61e4e-ff4d-4da5-a174-9788c22cddfd",
-              "name": "has_content",
-              "value": "={{ $json.document.pageContent.length > 100 }}",
-              "type": "boolean"
-            },
-            {
-              "id": "bceaea49-b29f-47d7-8a5a-14d4e02477ec",
-              "name": "has_meta",
-              "value": "={{ $items().every(i => i.json.document.metadata['some-meta'] === 'test' && i.json.document.metadata['other-meta'] === 'test2') }}",
-              "type": "boolean"
-            }
-          ]
-        },
-        "options": {}
-      },
-      "id": "b65edecc-5518-46b7-b63f-840150dedd37",
-      "name": "Check Vector Store Retrieval1",
-      "type": "n8n-nodes-base.set",
-      "typeVersion": 3.3,
-      "position": [
-        2560,
-        600
-      ],
-      "executeOnce": true
-    },
-    {
-      "parameters": {
         "promptType": "define",
-        "text": "What is the size of a block header with no transactions? Respond only with number of bytes."
+        "text": "What is the size of a block header with no transactions? Respond only with number of bytes.",
+        "options": {}
       },
       "id": "31e9699d-1959-46db-8745-a107f83986c5",
       "name": "Question and Answer Chain1",
       "type": "@n8n/n8n-nodes-langchain.chainRetrievalQa",
       "typeVersion": 1.3,
       "position": [
-        2760,
-        600
+        1140,
+        2420
       ]
     },
     {
       "parameters": {
-        "model": "gpt-3.5-turbo-0125",
+        "model": "gpt-4o-mini",
         "options": {
           "temperature": 0
         }
@@ -183,8 +112,8 @@
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
       "typeVersion": 1,
       "position": [
-        2760,
-        800
+        1140,
+        2620
       ],
       "credentials": {
         "openAiApi": {
@@ -194,14 +123,16 @@
       }
     },
     {
-      "parameters": {},
+      "parameters": {
+        "topK": 40
+      },
       "id": "1c5a4e2d-0220-4647-9cd9-10bcf2e59ee2",
       "name": "Vector Store Retriever1",
       "type": "@n8n/n8n-nodes-langchain.retrieverVectorStore",
       "typeVersion": 1,
       "position": [
-        2840,
-        800
+        1220,
+        2620
       ]
     },
     {
@@ -214,8 +145,8 @@
       "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
       "typeVersion": 1,
       "position": [
-        2780,
-        1160
+        1140,
+        2920
       ],
       "credentials": {
         "openAiApi": {
@@ -243,70 +174,9 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.3,
       "position": [
-        3100,
-        600
+        1480,
+        2420
       ]
-    },
-    {
-      "parameters": {
-        "model": "text-embedding-3-small",
-        "options": {}
-      },
-      "id": "c34cba98-dc8f-4bf2-9694-445985a5b6be",
-      "name": "Embeddings OpenAI5",
-      "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
-      "typeVersion": 1,
-      "position": [
-        2200,
-        820
-      ],
-      "credentials": {
-        "openAiApi": {
-          "id": "Zak03cqeLUOsgkFI",
-          "name": "OpenAi account"
-        }
-      }
-    },
-    {
-      "parameters": {
-        "mode": "insert",
-        "options": {}
-      },
-      "id": "ef5cb549-6c57-475f-a574-6969ba51626e",
-      "name": "Postgres PGVector Store",
-      "type": "@n8n/n8n-nodes-langchain.vectorStorePGVector",
-      "typeVersion": 1,
-      "position": [
-        1420,
-        600
-      ],
-      "credentials": {
-        "postgres": {
-          "id": "pHGfJmTMIpWliDSS",
-          "name": "PGVector account"
-        }
-      }
-    },
-    {
-      "parameters": {
-        "mode": "load",
-        "prompt": "Security risks",
-        "options": {}
-      },
-      "id": "c94f84ee-e887-4a74-affd-7f13eada1fc8",
-      "name": "Postgres PGVector Store1",
-      "type": "@n8n/n8n-nodes-langchain.vectorStorePGVector",
-      "typeVersion": 1,
-      "position": [
-        2220,
-        600
-      ],
-      "credentials": {
-        "postgres": {
-          "id": "pHGfJmTMIpWliDSS",
-          "name": "PGVector account"
-        }
-      }
     },
     {
       "parameters": {
@@ -329,7 +199,159 @@
       "type": "n8n-nodes-base.postgres",
       "typeVersion": 2.5,
       "position": [
-        3320,
+        1120,
+        3460
+      ],
+      "credentials": {
+        "postgres": {
+          "id": "pHGfJmTMIpWliDSS",
+          "name": "PGVector account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": "text-embedding-3-small",
+        "options": {}
+      },
+      "id": "01711e02-6d7c-4afa-9d61-d3f7c7ba4466",
+      "name": "Embeddings OpenAI",
+      "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+      "typeVersion": 1,
+      "position": [
+        1120,
+        2160
+      ],
+      "credentials": {
+        "openAiApi": {
+          "id": "Zak03cqeLUOsgkFI",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": "text-embedding-3-small",
+        "options": {}
+      },
+      "id": "63ae1d1c-adb1-4b88-9885-704d3d31ebda",
+      "name": "Embeddings OpenAI8",
+      "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+      "typeVersion": 1,
+      "position": [
+        1160,
+        1160
+      ],
+      "credentials": {
+        "openAiApi": {
+          "id": "Zak03cqeLUOsgkFI",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {
+          "metadata": {
+            "metadataValues": [
+              {
+                "name": "purpose",
+                "value": "retriever"
+              }
+            ]
+          }
+        }
+      },
+      "id": "c9631a79-8fb8-4e78-8f91-cac5040c23f7",
+      "name": "Default Data Loader3",
+      "type": "@n8n/n8n-nodes-langchain.documentDefaultDataLoader",
+      "typeVersion": 1,
+      "position": [
+        1260,
+        1160
+      ]
+    },
+    {
+      "parameters": {
+        "chunkSize": 500,
+        "chunkOverlap": 100
+      },
+      "id": "00345fc9-0c4f-4db8-82e5-e809c69980cd",
+      "name": "Token Splitter3",
+      "type": "@n8n/n8n-nodes-langchain.textSplitterTokenSplitter",
+      "typeVersion": 1,
+      "position": [
+        1260,
+        1300
+      ]
+    },
+    {
+      "parameters": {
+        "model": "text-embedding-3-small",
+        "options": {}
+      },
+      "id": "6f64e063-03a0-451b-a93a-377a5f49b1ef",
+      "name": "Embeddings OpenAI9",
+      "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+      "typeVersion": 1,
+      "position": [
+        1120,
+        1540
+      ],
+      "credentials": {
+        "openAiApi": {
+          "id": "Zak03cqeLUOsgkFI",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {
+          "metadata": {
+            "metadataValues": [
+              {
+                "name": "purpose",
+                "value": "get_all"
+              }
+            ]
+          }
+        }
+      },
+      "id": "b39c08af-2700-4c7a-9a43-b8842307ea32",
+      "name": "Default Data Loader4",
+      "type": "@n8n/n8n-nodes-langchain.documentDefaultDataLoader",
+      "typeVersion": 1,
+      "position": [
+        1220,
+        1540
+      ]
+    },
+    {
+      "parameters": {
+        "chunkSize": 500,
+        "chunkOverlap": 100
+      },
+      "id": "c02b660b-4301-4a82-986e-d29f12257243",
+      "name": "Token Splitter4",
+      "type": "@n8n/n8n-nodes-langchain.textSplitterTokenSplitter",
+      "typeVersion": 1,
+      "position": [
+        1220,
+        1660
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "insert",
+        "options": {}
+      },
+      "id": "ef5cb549-6c57-475f-a574-6969ba51626e",
+      "name": "Postgres PGVector Store",
+      "type": "@n8n/n8n-nodes-langchain.vectorStorePGVector",
+      "typeVersion": 1,
+      "position": [
+        1200,
         600
       ],
       "credentials": {
@@ -341,15 +363,244 @@
     },
     {
       "parameters": {
+        "mode": "insert",
         "options": {}
+      },
+      "id": "93302c27-5e2f-4497-8b2b-a544f71f0b4c",
+      "name": "Postgres PGVector Store6",
+      "type": "@n8n/n8n-nodes-langchain.vectorStorePGVector",
+      "typeVersion": 1,
+      "position": [
+        1200,
+        1040
+      ],
+      "credentials": {
+        "postgres": {
+          "id": "pHGfJmTMIpWliDSS",
+          "name": "PGVector account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "code": {
+          "execute": {
+            "code": "const { PromptTemplate } = require('@langchain/core/prompts');\n\nconst vectorStore = await this.getInputConnectionData('ai_vectorStore', 0);\nconst retriever = vectorStore.asRetriever(40);\n\nconst documents = await retriever.invoke('Some query');\nreturn [ {json: { documents } } ];"
+          }
+        },
+        "inputs": {
+          "input": [
+            {
+              "type": "main",
+              "maxConnections": 1,
+              "required": true
+            },
+            {
+              "type": "ai_vectorStore",
+              "maxConnections": 1,
+              "required": true
+            }
+          ]
+        },
+        "outputs": {
+          "output": [
+            {
+              "type": "main"
+            }
+          ]
+        }
+      },
+      "id": "547331e8-808f-4015-854c-06cf8a876e12",
+      "name": "LangChain Code",
+      "type": "@n8n/n8n-nodes-langchain.code",
+      "typeVersion": 1,
+      "position": [
+        1160,
+        1840
+      ],
+      "executeOnce": true
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "5a9bd52c-f383-4f1c-9a6c-dc1f326775ce",
+              "name": "has_correct_length",
+              "value": "={{ $json.documents.length === 12 }}",
+              "type": "boolean"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "e0771a3b-5765-481a-a05c-a56331078797",
+      "name": "Edit Fields",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1540,
+        1840
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "insert",
+        "options": {}
+      },
+      "id": "8d013334-cfba-4e04-bac8-ae282500366d",
+      "name": "Postgres PGVector Store7",
+      "type": "@n8n/n8n-nodes-langchain.vectorStorePGVector",
+      "typeVersion": 1,
+      "position": [
+        1180,
+        1420
+      ],
+      "executeOnce": true,
+      "credentials": {
+        "postgres": {
+          "id": "pHGfJmTMIpWliDSS",
+          "name": "PGVector account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": "text-embedding-3-small",
+        "options": {}
+      },
+      "id": "22fdcb8c-e4d6-457b-8635-cb8d4f84189b",
+      "name": "Embeddings OpenAI5",
+      "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+      "typeVersion": 1,
+      "position": [
+        1120,
+        3280
+      ],
+      "credentials": {
+        "openAiApi": {
+          "id": "Zak03cqeLUOsgkFI",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "5a9bd52c-f383-4f1c-9a6c-dc1f326775ce",
+              "name": "has_correct_length",
+              "value": "={{ $json.documents.length === 12 }}",
+              "type": "boolean"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "be8de136-11c8-4656-b94f-132286f7a84c",
+      "name": "Edit Fields2",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1700,
+        3120
+      ]
+    },
+    {
+      "parameters": {
+        "aggregate": "aggregateAllItemData",
+        "destinationFieldName": "documents",
+        "options": {}
+      },
+      "id": "c3625b63-5e97-4a1c-b0f2-40abcccdcf68",
+      "name": "Aggregate",
+      "type": "n8n-nodes-base.aggregate",
+      "typeVersion": 1,
+      "position": [
+        1500,
+        3120
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "load",
+        "prompt": "n8n_vectors",
+        "topK": 40,
+        "options": {
+          "metadata": {
+            "metadataValues": [
+              {
+                "name": "purpose",
+                "value": "get_all"
+              }
+            ]
+          }
+        }
+      },
+      "id": "da78ec78-5970-495c-a597-33b4f1ec8fc4",
+      "name": "Postgres PGVector Store1",
+      "type": "@n8n/n8n-nodes-langchain.vectorStorePGVector",
+      "typeVersion": 1,
+      "position": [
+        1120,
+        3120
+      ],
+      "credentials": {
+        "postgres": {
+          "id": "pHGfJmTMIpWliDSS",
+          "name": "PGVector account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {
+          "metadata": {
+            "metadataValues": [
+              {
+                "name": "purpose",
+                "value": "retriever"
+              }
+            ]
+          }
+        }
       },
       "id": "a90f2fe9-e51b-43cc-a345-fd581a67b204",
       "name": "Postgres PGVector Store2",
       "type": "@n8n/n8n-nodes-langchain.vectorStorePGVector",
       "typeVersion": 1,
       "position": [
-        2760,
-        980
+        1140,
+        2800
+      ],
+      "credentials": {
+        "postgres": {
+          "id": "pHGfJmTMIpWliDSS",
+          "name": "PGVector account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {
+          "metadata": {
+            "metadataValues": [
+              {
+                "name": "purpose",
+                "value": "retriever"
+              }
+            ]
+          }
+        }
+      },
+      "id": "7111c549-0a33-4662-b574-10eac290bc2e",
+      "name": "Postgres PGVector Store3",
+      "type": "@n8n/n8n-nodes-langchain.vectorStorePGVector",
+      "typeVersion": 1,
+      "position": [
+        1120,
+        2040
       ],
       "credentials": {
         "postgres": {
@@ -359,7 +610,6 @@
       }
     }
   ],
-  "pinData": {},
   "connections": {
     "When clicking \"Test workflow\"": {
       "main": [
@@ -378,28 +628,6 @@
           {
             "node": "Default Data Loader1",
             "type": "ai_textSplitter",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Check Vector Store Populated1": {
-      "main": [
-        [
-          {
-            "node": "Postgres PGVector Store1",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Check Vector Store Retrieval1": {
-      "main": [
-        [
-          {
-            "node": "Question and Answer Chain1",
-            "type": "main",
             "index": 0
           }
         ]
@@ -438,17 +666,6 @@
         ]
       ]
     },
-    "Edit Fields1": {
-      "main": [
-        [
-          {
-            "node": "Postgres",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
     "Code": {
       "main": [
         [
@@ -456,15 +673,34 @@
             "node": "Postgres PGVector Store",
             "type": "main",
             "index": 0
-          }
-        ]
-      ]
-    },
-    "Postgres PGVector Store": {
-      "main": [
-        [
+          },
           {
-            "node": "Check Vector Store Populated1",
+            "node": "Postgres PGVector Store6",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Postgres PGVector Store7",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "LangChain Code",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Question and Answer Chain1",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Postgres PGVector Store1",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Postgres",
             "type": "main",
             "index": 0
           }
@@ -493,11 +729,99 @@
         ]
       ]
     },
-    "Postgres PGVector Store1": {
+    "Embeddings OpenAI3": {
+      "ai_embedding": [
+        [
+          {
+            "node": "Postgres PGVector Store2",
+            "type": "ai_embedding",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Embeddings OpenAI": {
+      "ai_embedding": [
+        [
+          {
+            "node": "Postgres PGVector Store3",
+            "type": "ai_embedding",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Embeddings OpenAI8": {
+      "ai_embedding": [
+        [
+          {
+            "node": "Postgres PGVector Store6",
+            "type": "ai_embedding",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Default Data Loader3": {
+      "ai_document": [
+        [
+          {
+            "node": "Postgres PGVector Store6",
+            "type": "ai_document",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Token Splitter3": {
+      "ai_textSplitter": [
+        [
+          {
+            "node": "Default Data Loader3",
+            "type": "ai_textSplitter",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Embeddings OpenAI9": {
+      "ai_embedding": [
+        [
+          {
+            "node": "Postgres PGVector Store7",
+            "type": "ai_embedding",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Default Data Loader4": {
+      "ai_document": [
+        [
+          {
+            "node": "Postgres PGVector Store7",
+            "type": "ai_document",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Token Splitter4": {
+      "ai_textSplitter": [
+        [
+          {
+            "node": "Default Data Loader4",
+            "type": "ai_textSplitter",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "LangChain Code": {
       "main": [
         [
           {
-            "node": "Check Vector Store Retrieval1",
+            "node": "Edit Fields",
             "type": "main",
             "index": 0
           }
@@ -515,12 +839,23 @@
         ]
       ]
     },
-    "Embeddings OpenAI3": {
-      "ai_embedding": [
+    "Aggregate": {
+      "main": [
         [
           {
-            "node": "Postgres PGVector Store2",
-            "type": "ai_embedding",
+            "node": "Edit Fields2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Postgres PGVector Store1": {
+      "main": [
+        [
+          {
+            "node": "Aggregate",
+            "type": "main",
             "index": 0
           }
         ]
@@ -536,17 +871,29 @@
           }
         ]
       ]
+    },
+    "Postgres PGVector Store3": {
+      "ai_vectorStore": [
+        [
+          {
+            "node": "LangChain Code",
+            "type": "ai_vectorStore",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
-  "active": false,
   "settings": {
     "executionOrder": "v1"
   },
-  "versionId": "c78b07a8-e388-42f2-a29c-812e07b55bc4",
+  "staticData": null,
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "27cc9b56542ad45b38725555722c50a1c3fee1670bbb67980558314ee08517c4"
   },
-  "id": "252",
+  "pinData": {},
+  "versionId": "85e0e2ac-b253-4c25-8cdb-2cfc2d1b87f7",
+  "triggerCount": 0,
   "tags": []
 }
