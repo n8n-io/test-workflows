@@ -1,0 +1,24 @@
+services:
+  n8n:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file: ".env"
+    volumes:
+      - ../n8n:/n8n
+      - ./:/test-workflows
+      - ./output:/output
+      - ./docker-data/dot-n8n:/home/node/.n8n
+    ports:
+      - 5678:5678
+    depends_on:
+      - pgvector
+    command: ${COMMAND:-test}
+  pgvector:
+    image: pgvector/pgvector:pg16
+    volumes:
+      - ./docker-data/pgvector:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_USER=pgvector
+      - POSTGRES_DB=pgvector
