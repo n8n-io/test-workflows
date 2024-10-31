@@ -6,7 +6,7 @@
         "When clicking \"Test workflow\"": [
           {
             "hints": [],
-            "startTime": 1726655418576,
+            "startTime": 1730383335713,
             "executionTime": 0,
             "source": [],
             "executionStatus": "success",
@@ -26,8 +26,8 @@
         ],
         "Mistral Cloud Chat Model": [
           {
-            "startTime": 1726655418869,
-            "executionTime": 285,
+            "startTime": 1730383336374,
+            "executionTime": 76,
             "executionStatus": "success",
             "source": [
               null
@@ -72,14 +72,22 @@
                   }
                 ]
               ]
+            },
+            "metadata": {
+              "subRun": [
+                {
+                  "node": "Mistral Cloud Chat Model",
+                  "runIndex": 0
+                }
+              ]
             }
           }
         ],
         "Mistral Cloud Chat": [
           {
             "hints": [],
-            "startTime": 1726655418576,
-            "executionTime": 579,
+            "startTime": 1730383335713,
+            "executionTime": 737,
             "source": [
               {
                 "previousNode": "When clicking \"Test workflow\""
@@ -99,14 +107,6 @@
                   }
                 ]
               ]
-            },
-            "metadata": {
-              "subRun": [
-                {
-                  "node": "Mistral Cloud Chat Model",
-                  "runIndex": 0
-                }
-              ]
             }
           }
         ]
@@ -117,7 +117,7 @@
       "contextData": {},
       "nodeExecutionStack": [],
       "metadata": {
-        "Mistral Cloud Chat": [
+        "Mistral Cloud Chat Model": [
           {
             "subRun": [
               {
@@ -133,8 +133,8 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2024-09-18T10:30:18.575Z",
-  "stoppedAt": "2024-09-18T10:30:19.155Z",
+  "startedAt": "2024-10-31T14:02:15.713Z",
+  "stoppedAt": "2024-10-31T14:02:16.450Z",
   "status": "running",
   "finished": true
 }

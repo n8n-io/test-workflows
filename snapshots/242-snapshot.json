@@ -6,7 +6,7 @@
         "When clicking \"Test workflow\"": [
           {
             "hints": [],
-            "startTime": 1726655441444,
+            "startTime": 1730383335735,
             "executionTime": 0,
             "source": [],
             "executionStatus": "success",
@@ -26,8 +26,8 @@
         ],
         "OpenAI Chat Model1": [
           {
-            "startTime": 1726655441456,
-            "executionTime": 2043,
+            "startTime": 1730383336373,
+            "executionTime": 4872,
             "executionStatus": "success",
             "source": [
               null
@@ -56,7 +56,7 @@
                       "messages": [
                         "Human: What are the top 5 states of US by population?\nYou must format your output as a JSON value that adheres to a given \"JSON Schema\" instance.\n\n\"JSON Schema\" is a declarative language that allows you to annotate and validate JSON documents.\n\nFor example, the example \"JSON Schema\" instance {{\"properties\": {{\"foo\": {{\"description\": \"a list of test words\", \"type\": \"array\", \"items\": {{\"type\": \"string\"}}}}}}, \"required\": [\"foo\"]}}}}\nwould match an object with one required property, \"foo\". The \"type\" property specifies \"foo\" must be an \"array\", and the \"description\" property semantically describes it as \"a list of test words\". The items within \"foo\" must be strings.\nThus, the object {{\"foo\": [\"bar\", \"baz\"]}} is a well-formatted instance of this example \"JSON Schema\". The object {{\"properties\": {{\"foo\": [\"bar\", \"baz\"]}}}} is not well-formatted.\n\nYour output will be parsed and type-checked according to the provided schema instance, so make sure all fields in your output match the schema exactly and there are no trailing commas!\n\nHere is the JSON Schema instance your output must adhere to. Include the enclosing markdown codeblock:\n```json\n{\"type\":\"object\",\"properties\":{\"output\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"state_name\":{},\"capital\":{},\"electoral_college_votes\":{}},\"additionalProperties\":false}}},\"additionalProperties\":false,\"$schema\":\"http://json-schema.org/draft-07/schema#\"}\n```\n"
                       ],
-                      "estimatedTokens": 339,
+                      "estimatedTokens": 340,
                       "options": {
                         "openai_api_key": {
                           "lc": 1,
@@ -65,7 +65,7 @@
                             "OPENAI_API_KEY"
                           ]
                         },
-                        "model": "gpt-3.5-turbo",
+                        "model": "gpt-4o-mini",
                         "temperature": 0,
                         "timeout": 60000,
                         "max_retries": 2,
@@ -76,12 +76,20 @@
                   }
                 ]
               ]
+            },
+            "metadata": {
+              "subRun": [
+                {
+                  "node": "OpenAI Chat Model1",
+                  "runIndex": 0
+                }
+              ]
             }
           }
         ],
         "Structured Output Parser1": [
           {
-            "startTime": 1726655443499,
+            "startTime": 1730383341246,
             "executionTime": 1,
             "executionStatus": "success",
             "source": [
@@ -112,14 +120,22 @@
                   }
                 ]
               ]
+            },
+            "metadata": {
+              "subRun": [
+                {
+                  "node": "Structured Output Parser1",
+                  "runIndex": 0
+                }
+              ]
             }
           }
         ],
         "Open AI Chat - Output Parsing": [
           {
             "hints": [],
-            "startTime": 1726655441444,
-            "executionTime": 2056,
+            "startTime": 1730383335735,
+            "executionTime": 5512,
             "source": [
               {
                 "previousNode": "When clicking \"Test workflow\""
@@ -141,18 +157,6 @@
                   }
                 ]
               ]
-            },
-            "metadata": {
-              "subRun": [
-                {
-                  "node": "OpenAI Chat Model1",
-                  "runIndex": 0
-                },
-                {
-                  "node": "Structured Output Parser1",
-                  "runIndex": 0
-                }
-              ]
             }
           }
         ]
@@ -163,13 +167,19 @@
       "contextData": {},
       "nodeExecutionStack": [],
       "metadata": {
-        "Open AI Chat - Output Parsing": [
+        "OpenAI Chat Model1": [
           {
             "subRun": [
               {
                 "node": "OpenAI Chat Model1",
                 "runIndex": 0
-              },
+              }
+            ]
+          }
+        ],
+        "Structured Output Parser1": [
+          {
+            "subRun": [
               {
                 "node": "Structured Output Parser1",
                 "runIndex": 0
@@ -183,8 +193,8 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2024-09-18T10:30:41.444Z",
-  "stoppedAt": "2024-09-18T10:30:43.500Z",
+  "startedAt": "2024-10-31T14:02:15.735Z",
+  "stoppedAt": "2024-10-31T14:02:21.247Z",
   "status": "running",
   "finished": true
 }
