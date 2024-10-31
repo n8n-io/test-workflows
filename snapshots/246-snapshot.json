@@ -6,7 +6,7 @@
         "When clicking \"Test workflow\"": [
           {
             "hints": [],
-            "startTime": 1726655444330,
+            "startTime": 1730383336468,
             "executionTime": 0,
             "source": [],
             "executionStatus": "success",
@@ -26,8 +26,8 @@
         ],
         "OpenAI Chat Model": [
           {
-            "startTime": 1726655444331,
-            "executionTime": 586,
+            "startTime": 1730383336470,
+            "executionTime": 446,
             "executionStatus": "success",
             "source": [
               null
@@ -76,14 +76,22 @@
                   }
                 ]
               ]
+            },
+            "metadata": {
+              "subRun": [
+                {
+                  "node": "OpenAI Chat Model",
+                  "runIndex": 0
+                }
+              ]
             }
           }
         ],
         "Open AI Chat": [
           {
             "hints": [],
-            "startTime": 1726655444330,
-            "executionTime": 587,
+            "startTime": 1730383336468,
+            "executionTime": 448,
             "source": [
               {
                 "previousNode": "When clicking \"Test workflow\""
@@ -103,14 +111,6 @@
                   }
                 ]
               ]
-            },
-            "metadata": {
-              "subRun": [
-                {
-                  "node": "OpenAI Chat Model",
-                  "runIndex": 0
-                }
-              ]
             }
           }
         ]
@@ -121,7 +121,7 @@
       "contextData": {},
       "nodeExecutionStack": [],
       "metadata": {
-        "Open AI Chat": [
+        "OpenAI Chat Model": [
           {
             "subRun": [
               {
@@ -137,8 +137,8 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2024-09-18T10:30:44.330Z",
-  "stoppedAt": "2024-09-18T10:30:44.917Z",
+  "startedAt": "2024-10-31T14:02:16.468Z",
+  "stoppedAt": "2024-10-31T14:02:16.916Z",
   "status": "running",
   "finished": true
 }
