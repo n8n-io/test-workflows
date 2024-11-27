@@ -6,7 +6,7 @@
         "When clicking \"Test workflow\"": [
           {
             "hints": [],
-            "startTime": 1730383335718,
+            "startTime": 1732699059044,
             "executionTime": 0,
             "source": [],
             "executionStatus": "success",
@@ -27,7 +27,7 @@
         "Set Baseline": [
           {
             "hints": [],
-            "startTime": 1730383335718,
+            "startTime": 1732699059044,
             "executionTime": 0,
             "source": [
               {
@@ -54,8 +54,8 @@
         "Set Article": [
           {
             "hints": [],
-            "startTime": 1730383335718,
-            "executionTime": 2,
+            "startTime": 1732699059044,
+            "executionTime": 6,
             "source": [
               {
                 "previousNode": "Set Baseline"
@@ -81,8 +81,8 @@
         "Convert to File": [
           {
             "hints": [],
-            "startTime": 1730383335721,
-            "executionTime": 3,
+            "startTime": 1732699059050,
+            "executionTime": 9,
             "source": [
               {
                 "previousNode": "Set Article"
@@ -117,8 +117,8 @@
         ],
         "OpenAI Chat Model4": [
           {
-            "startTime": 1730383336375,
-            "executionTime": 1867,
+            "startTime": 1732699059105,
+            "executionTime": 1332,
             "executionStatus": "success",
             "source": [
               null
@@ -172,11 +172,11 @@
               "subRun": [
                 {
                   "node": "OpenAI Chat Model4",
-                  "runIndex": 1
+                  "runIndex": 3
                 },
                 {
                   "node": "OpenAI Chat Model4",
-                  "runIndex": 3
+                  "runIndex": 1
                 },
                 {
                   "node": "OpenAI Chat Model4",
@@ -194,8 +194,8 @@
             }
           },
           {
-            "startTime": 1730383336376,
-            "executionTime": 1462,
+            "startTime": 1732699059105,
+            "executionTime": 1194,
             "executionStatus": "success",
             "source": [
               null
@@ -247,8 +247,8 @@
             }
           },
           {
-            "startTime": 1730383336376,
-            "executionTime": 2167,
+            "startTime": 1732699059105,
+            "executionTime": 1504,
             "executionStatus": "success",
             "source": [
               null
@@ -300,8 +300,8 @@
             }
           },
           {
-            "startTime": 1730383336377,
-            "executionTime": 1471,
+            "startTime": 1732699059105,
+            "executionTime": 1136,
             "executionStatus": "success",
             "source": [
               null
@@ -353,8 +353,8 @@
             }
           },
           {
-            "startTime": 1730383338545,
-            "executionTime": 2359,
+            "startTime": 1732699060614,
+            "executionTime": 1632,
             "executionStatus": "success",
             "source": [
               null
@@ -381,9 +381,9 @@
                   {
                     "json": {
                       "messages": [
-                        "Human: Write a concise summary of the following:\n\n\n\"The dancing plague of 1518 occurred in Strasbourg, Alsace, where between 50 and 400 people danced uncontrollably for weeks. The cause is believed to be stress-induced mass hysteria, with other theories including ergot poisoning and religious explanations. The outbreak began with one woman dancing and spread to others, leading to deaths from strokes or heart attacks. The epidemic subsided when the dancers were sent to pray for absolution. Similar events occurred throughout history, with controversy over the number of deaths during the Strasbourg outbreak.\n\nThe Dancing Plague of 1518 in Strasbourg involved a large group of people dancing uncontrollably for days, with theories suggesting it was caused by food poisoning from ergot fungi or stress-induced mass hysteria. John Waller's research questions the ergotism theory and suggests the dancing was a result of stress-induced psychosis. The event has inspired various works of art and media, including films, songs, and novels.\n\nThe dancing plague of 1518 occurred in Strasbourg, Alsace, where between 50 and 400 people danced uncontrollably for weeks. The cause is believed to be stress-induced mass hysteria, with other theories including ergot poisoning and religious explanations. The outbreak began with one woman dancing and spread to others, leading to deaths from strokes or heart attacks. The epidemic subsided when the dancers were sent to pray for absolution. Similar events have been reported throughout history. There is controversy over the number of deaths, with some sources claiming up to fifteen deaths per day, but historical documents do not confirm this.\n\nThe Dancing Plague of 1518, a historical event in Strasbourg, has been the subject of various theories and interpretations. John Waller's research suggests that food poisoning from ergot fungi is unlikely to have caused the dancing, leading to speculation of stress-induced mass hysteria as a possible explanation. The event has inspired works in pop culture, including films, songs, and novels, highlighting the enduring fascination with this mysterious phenomenon.\"\n\n\nCONCISE SUMMARY:"
+                        "Human: Write a concise summary of the following:\n\n\n\"The dancing plague of 1518 occurred in Strasbourg, Alsace, where between 50 and 400 people danced uncontrollably for weeks. The cause is unknown, with theories ranging from stress-induced mass hysteria to religious explanations. The outbreak eventually subsided when the dancers were sent to a shrine to pray for absolution. There is controversy over the number of deaths, with some sources claiming up to fifteen deaths per day, but historical documents do not mention fatalities. Similar events have been reported throughout history, with explanations including demonic possession and overheated blood.\n\nThe Dancing Plague of 1518, a historical event in Strasbourg, has been the subject of various theories and interpretations. John Waller's research suggests that food poisoning from ergot fungi is an unlikely cause, and instead proposes stress-induced mass hysteria as a possible explanation. The event has inspired works in pop culture, including films, songs, and novels, highlighting the enduring fascination with this mysterious and bizarre phenomenon.\n\nThe dancing plague of 1518 occurred in Strasbourg, Alsace, where between 50 and 400 people danced uncontrollably for weeks. The cause is believed to be stress-induced mass hysteria, with other theories including ergot poisoning and religious explanations. The outbreak began with one woman dancing and spread to others, leading to deaths from strokes or heart attacks. The epidemic ended when the dancers were sent to a shrine to pray for absolution. Similar events have been reported throughout history. There is controversy over the number of deaths, with some sources claiming up to fifteen deaths per day, but historical documents do not confirm this.\n\nThe Dancing Plague of 1518, a historical event in Strasbourg, has been the subject of various theories and interpretations. John Waller's research suggests that food poisoning from ergot fungi is an unlikely cause, and instead, stress-induced mass hysteria may have played a role. The event has inspired works in pop culture, including films, songs, and books, highlighting the enduring fascination with this mysterious phenomenon.\"\n\n\nCONCISE SUMMARY:"
                       ],
-                      "estimatedTokens": 417,
+                      "estimatedTokens": 421,
                       "options": {
                         "openai_api_key": {
                           "lc": 1,
@@ -409,8 +409,8 @@
         "Summary - Simple - Map - Binary": [
           {
             "hints": [],
-            "startTime": 1730383335724,
-            "executionTime": 5180,
+            "startTime": 1732699059059,
+            "executionTime": 3187,
             "source": [
               {
                 "previousNode": "Convert to File"
@@ -437,8 +437,8 @@
         ],
         "OpenAI Chat Model5": [
           {
-            "startTime": 1730383340914,
-            "executionTime": 3855,
+            "startTime": 1732699062263,
+            "executionTime": 1159,
             "executionStatus": "success",
             "source": [
               null
@@ -465,9 +465,9 @@
                   {
                     "json": {
                       "messages": [
-                        "Human: You are assessing a submitted answer on a given task or input based on a set of criteria. Here is the data:\n[BEGIN DATA]\n***\n[Input]: Summarize Wikipedia article about the dancing plague of 1518\n***\n[Submission]: The dancing plague of 1518 in Strasbourg, Alsace involved between 50 and 400 people dancing uncontrollably for weeks, with theories suggesting it was caused by stress-induced mass hysteria, ergot poisoning, or religious reasons. Deaths occurred from strokes or heart attacks, and the epidemic subsided when the dancers were sent to pray for absolution. Similar events have been reported throughout history, with controversy over the number of deaths. John Waller's research questions the ergotism theory and suggests stress-induced psychosis as a possible cause. The event has inspired various works of art and media, reflecting the enduring fascination with this mysterious phenomenon.\n***\n[Criteria]: helpfulness: Is the submission helpful, insightful, and appropriate? If so, response Y. If not, respond N.\n***\n[Reference]: The dancing plague of 1518 in Strasbourg, Alsace involved between 50 and 400 people dancing uncontrollably for weeks. The cause is unknown, with theories including stress-induced mass hysteria and ergot poisoning. The outbreak ended when the dancers prayed for absolution at a shrine. There is controversy over the number of deaths, with some sources claiming up to fifteen deaths per day, but historical documents do not confirm any fatalities. Similar events have been reported throughout history, inspiring various works of pop culture.\n***\n[END DATA]\nDoes the submission meet the Criteria? First, write out in a step by step manner your reasoning about each criterion to be sure that your conclusion is correct. Avoid simply stating the correct answers at the outset. Then print only the single character \"Y\" or \"N\" (without quotes or punctuation) on its own line corresponding to the correct answer of whether the submission meets all criteria. At the end, repeat just the letter again by itself on a new line."
+                        "Human: You are assessing a submitted answer on a given task or input based on a set of criteria. Here is the data:\n[BEGIN DATA]\n***\n[Input]: Summarize Wikipedia article about the dancing plague of 1518\n***\n[Submission]: The dancing plague of 1518 in Strasbourg, Alsace involved between 50 and 400 people dancing uncontrollably for weeks. The cause is unknown, with theories including stress-induced mass hysteria and religious explanations. The outbreak ended when the dancers prayed for absolution at a shrine. There is controversy over the number of deaths, with some sources claiming up to fifteen deaths per day, but historical documents do not confirm this. Similar events have been reported throughout history, with explanations ranging from demonic possession to overheated blood. John Waller's research suggests stress-induced mass hysteria as a possible explanation, rather than food poisoning from ergot fungi. The event has inspired works in pop culture, highlighting the enduring fascination with this mysterious phenomenon.\n***\n[Criteria]: helpfulness: Is the submission helpful, insightful, and appropriate? If so, response Y. If not, respond N.\n***\n[Reference]: The dancing plague of 1518 in Strasbourg, Alsace involved between 50 and 400 people dancing uncontrollably for weeks. The cause is unknown, with theories including stress-induced mass hysteria and ergot poisoning. The outbreak ended when the dancers prayed for absolution at a shrine. There is controversy over the number of deaths, with some sources claiming up to fifteen deaths per day, but historical documents do not confirm any fatalities. Similar events have been reported throughout history, inspiring various works of pop culture.\n***\n[END DATA]\nDoes the submission meet the Criteria? First, write out in a step by step manner your reasoning about each criterion to be sure that your conclusion is correct. Avoid simply stating the correct answers at the outset. Then print only the single character \"Y\" or \"N\" (without quotes or punctuation) on its own line corresponding to the correct answer of whether the submission meets all criteria. At the end, repeat just the letter again by itself on a new line."
                       ],
-                      "estimatedTokens": 417,
+                      "estimatedTokens": 435,
                       "options": {
                         "openai_api_key": {
                           "lc": 1,
@@ -501,8 +501,8 @@
         "Evaluate to Baseline": [
           {
             "hints": [],
-            "startTime": 1730383340904,
-            "executionTime": 3865,
+            "startTime": 1732699062247,
+            "executionTime": 1176,
             "source": [
               {
                 "previousNode": "Summary - Simple - Map - Binary"
@@ -514,7 +514,7 @@
                 [
                   {
                     "json": {
-                      "reasoning": "Step 1: Is the submission helpful?- The submission provides a detailed summary of the Wikipedia article about the dancing plague of 1518, including information about the number of people involved, possible causes, deaths, and the end of the epidemic.- The submission also mentions John Waller's research questioning the ergotism theory and suggesting stress-induced psychosis as a possible cause.- The submission discusses the enduring fascination with the event and its influence on art and media.- Overall, the submission is informative and provides insights into the topic.Step 2: Is the submission insightful?- The submission delves into different theories about the cause of the dancing plague, including stress-induced mass hysteria, ergot poisoning, and stress-induced psychosis.- It mentions the controversy over the number of deaths and the lack of confirmation in historical documents.- The submission also highlights the cultural impact of the event and its representation in various works of art and media.- The submission offers a well-rounded perspective on the topic.Step 3: Is the submission appropriate?- The submission stays focused on summarizing the Wikipedia article about the dancing plague of 1518.- It covers key aspects of the event, including the number of people involved, possible causes, deaths, and the resolution of the epidemic.- The submission is relevant and appropriate for the given task.",
+                      "reasoning": "1. Is the submission helpful?- The submission provides a detailed summary of the Wikipedia article about the dancing plague of 1518, including key information such as the number of people involved, possible causes, controversy over deaths, and historical context.- The submission also mentions John Waller's research and the event's impact on pop culture.- Overall, the submission is informative and provides a good overview of the topic.Based on the above analysis, the submission is helpful, insightful, and appropriate.",
                       "value": "Y",
                       "score": 1
                     },
@@ -539,11 +539,11 @@
             "subRun": [
               {
                 "node": "OpenAI Chat Model4",
-                "runIndex": 1
+                "runIndex": 3
               },
               {
                 "node": "OpenAI Chat Model4",
-                "runIndex": 3
+                "runIndex": 1
               },
               {
                 "node": "OpenAI Chat Model4",
@@ -576,8 +576,8 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2024-10-31T14:02:15.717Z",
-  "stoppedAt": "2024-10-31T14:02:24.769Z",
+  "startedAt": "2024-11-27T09:17:39.043Z",
+  "stoppedAt": "2024-11-27T09:17:43.423Z",
   "status": "running",
   "finished": true
 }

@@ -6,8 +6,8 @@
         "When clicking \"Test workflow\"": [
           {
             "hints": [],
-            "startTime": 1730383340220,
-            "executionTime": 0,
+            "startTime": 1732699087766,
+            "executionTime": 1,
             "source": [],
             "executionStatus": "success",
             "data": {
@@ -26,7 +26,7 @@
         ],
         "Window Buffer Memory1": [
           {
-            "startTime": 1730383340228,
+            "startTime": 1732699087775,
             "executionTime": 0,
             "executionStatus": "success",
             "source": [
@@ -84,7 +84,7 @@
             }
           },
           {
-            "startTime": 1730383346148,
+            "startTime": 1732699091573,
             "executionTime": 0,
             "executionStatus": "success",
             "source": [
@@ -121,8 +121,8 @@
                         "formatting_instructions": "IMPORTANT: Always call `format_final_response` to format your final response!",
                         "chat_history": [],
                         "output": {
-                          "english_answer": "Magnets are special things that can pull some metals, like iron, towards them. They have two sides: one side is called the north pole and the other is the south pole. If you put two magnets together, the north pole of one magnet will stick to the south pole of the other, but if you try to put two north poles together, they will push away from each other. Magnets are used in many things, like fridges to hold notes and in toys!",
-                          "czech_answer": "Magnety jsou zvláštní věci, které mohou přitahovat některé kovy, jako je železo. Mají dvě strany: jedna strana se nazývá severní pól a druhá jižní pól. Když dáte dva magnety k sobě, severní pól jednoho magnetu se přichytí k jižnímu pólu druhého, ale když se pokusíte dát dva severní póly k sobě, budou se od sebe odtahovat. Magnety se používají v mnoha věcech, jako jsou ledničky na držení poznámek a v hračkách!"
+                          "english_answer": "Magnets are special things that can pull some metals, like iron, towards them. They can stick to your fridge or make toys move without touching them! There are two sides to a magnet: one side is called 'north' and the other is 'south.' If you put two magnets together, the north side of one will push away the north side of the other, but the north side will pull the south side closer. It's like magic!",
+                          "czech_answer": "Magnety jsou zvláštní věci, které mohou přitahovat některé kovy, jako je železo. Mohou se přichytit na vaši lednici nebo pohybovat hračkami bez dotyku! Magnet má dvě strany: jedna strana se nazývá 'sever' a druhá 'jih.' Pokud dáte dva magnety k sobě, severní strana jednoho od sebe odtlačí severní stranu druhého, ale severní strana přitáhne jihovou stranu blíž. Je to jako kouzlo!"
                         }
                       }
                     }
@@ -132,7 +132,7 @@
             }
           },
           {
-            "startTime": 1730383346151,
+            "startTime": 1732699091580,
             "executionTime": 0,
             "executionStatus": "success",
             "source": [
@@ -170,7 +170,7 @@
             }
           },
           {
-            "startTime": 1730383347048,
+            "startTime": 1732699092457,
             "executionTime": 0,
             "executionStatus": "success",
             "source": [
@@ -229,7 +229,7 @@
                               "AIMessage"
                             ],
                             "kwargs": {
-                              "content": "{\"output\":{\"english_answer\":\"Magnets are special things that can pull some metals, like iron, towards them. They have two sides: one side is called the north pole and the other is the south pole. If you put two magnets together, the north pole of one magnet will stick to the south pole of the other, but if you try to put two north poles together, they will push away from each other. Magnets are used in many things, like fridges to hold notes and in toys!\",\"czech_answer\":\"Magnety jsou zvláštní věci, které mohou přitahovat některé kovy, jako je železo. Mají dvě strany: jedna strana se nazývá severní pól a druhá jižní pól. Když dáte dva magnety k sobě, severní pól jednoho magnetu se přichytí k jižnímu pólu druhého, ale když se pokusíte dát dva severní póly k sobě, budou se od sebe odtahovat. Magnety se používají v mnoha věcech, jako jsou ledničky na držení poznámek a v hračkách!\"}}",
+                              "content": "{\"output\":{\"english_answer\":\"Magnets are special things that can pull some metals, like iron, towards them. They can stick to your fridge or make toys move without touching them! There are two sides to a magnet: one side is called 'north' and the other is 'south.' If you put two magnets together, the north side of one will push away the north side of the other, but the north side will pull the south side closer. It's like magic!\",\"czech_answer\":\"Magnety jsou zvláštní věci, které mohou přitahovat některé kovy, jako je železo. Mohou se přichytit na vaši lednici nebo pohybovat hračkami bez dotyku! Magnet má dvě strany: jedna strana se nazývá 'sever' a druhá 'jih.' Pokud dáte dva magnety k sobě, severní strana jednoho od sebe odtlačí severní stranu druhého, ale severní strana přitáhne jihovou stranu blíž. Je to jako kouzlo!\"}}",
                               "tool_calls": [],
                               "invalid_tool_calls": [],
                               "additional_kwargs": {},
@@ -251,8 +251,8 @@
         ],
         "OpenAI Chat Model3": [
           {
-            "startTime": 1730383340230,
-            "executionTime": 5918,
+            "startTime": 1732699087780,
+            "executionTime": 3789,
             "executionStatus": "success",
             "source": [
               null
@@ -265,7 +265,7 @@
                       "response": {
                         "object": true
                       },
-                      "tokenUsageEstimate": {
+                      "tokenUsage": {
                         "object": true
                       }
                     }
@@ -316,8 +316,8 @@
             }
           },
           {
-            "startTime": 1730383346155,
-            "executionTime": 893,
+            "startTime": 1732699091588,
+            "executionTime": 867,
             "executionStatus": "success",
             "source": [
               null
@@ -330,7 +330,7 @@
                       "response": {
                         "object": true
                       },
-                      "tokenUsageEstimate": {
+                      "tokenUsage": {
                         "object": true
                       }
                     }
@@ -344,9 +344,9 @@
                   {
                     "json": {
                       "messages": [
-                        "System: You are a helpful assistant. Always provide both `english_answer` and `czech_answer` in the final output and be very concise.\n\nIMPORTANT: Always call `format_final_response` to format your final response!\nHuman: Hi, my name is Oleg. Tell me about magnets like I'm 5.\nAI: {\"output\":{\"english_answer\":\"Magnets are special things that can pull some metals, like iron, towards them. They have two sides: one side is called the north pole and the other is the south pole. If you put two magnets together, the north pole of one magnet will stick to the south pole of the other, but if you try to put two north poles together, they will push away from each other. Magnets are used in many things, like fridges to hold notes and in toys!\",\"czech_answer\":\"Magnety jsou zvláštní věci, které mohou přitahovat některé kovy, jako je železo. Mají dvě strany: jedna strana se nazývá severní pól a druhá jižní pól. Když dáte dva magnety k sobě, severní pól jednoho magnetu se přichytí k jižnímu pólu druhého, ale když se pokusíte dát dva severní póly k sobě, budou se od sebe odtahovat. Magnety se používají v mnoha věcech, jako jsou ledničky na držení poznámek a v hračkách!\"}}\nHuman: Can you still remember my name?"
+                        "System: You are a helpful assistant. Always provide both `english_answer` and `czech_answer` in the final output and be very concise.\n\nIMPORTANT: Always call `format_final_response` to format your final response!\nHuman: Hi, my name is Oleg. Tell me about magnets like I'm 5.\nAI: {\"output\":{\"english_answer\":\"Magnets are special things that can pull some metals, like iron, towards them. They can stick to your fridge or make toys move without touching them! There are two sides to a magnet: one side is called 'north' and the other is 'south.' If you put two magnets together, the north side of one will push away the north side of the other, but the north side will pull the south side closer. It's like magic!\",\"czech_answer\":\"Magnety jsou zvláštní věci, které mohou přitahovat některé kovy, jako je železo. Mohou se přichytit na vaši lednici nebo pohybovat hračkami bez dotyku! Magnet má dvě strany: jedna strana se nazývá 'sever' a druhá 'jih.' Pokud dáte dva magnety k sobě, severní strana jednoho od sebe odtlačí severní stranu druhého, ale severní strana přitáhne jihovou stranu blíž. Je to jako kouzlo!\"}}\nHuman: Can you still remember my name?"
                       ],
-                      "estimatedTokens": 319,
+                      "estimatedTokens": 302,
                       "options": {
                         "openai_api_key": {
                           "lc": 1,
@@ -371,8 +371,8 @@
         ],
         "Structured Output Parser1": [
           {
-            "startTime": 1730383346148,
-            "executionTime": 0,
+            "startTime": 1732699091570,
+            "executionTime": 1,
             "executionStatus": "success",
             "source": [
               null
@@ -397,7 +397,7 @@
                   {
                     "json": {
                       "action": "parse",
-                      "text": "{\"output\":{\"english_answer\":\"Magnets are special things that can pull some metals, like iron, towards them. They have two sides: one side is called the north pole and the other is the south pole. If you put two magnets together, the north pole of one magnet will stick to the south pole of the other, but if you try to put two north poles together, they will push away from each other. Magnets are used in many things, like fridges to hold notes and in toys!\",\"czech_answer\":\"Magnety jsou zvláštní věci, které mohou přitahovat některé kovy, jako je železo. Mají dvě strany: jedna strana se nazývá severní pól a druhá jižní pól. Když dáte dva magnety k sobě, severní pól jednoho magnetu se přichytí k jižnímu pólu druhého, ale když se pokusíte dát dva severní póly k sobě, budou se od sebe odtahovat. Magnety se používají v mnoha věcech, jako jsou ledničky na držení poznámek a v hračkách!\"}}"
+                      "text": "{\"output\":{\"english_answer\":\"Magnets are special things that can pull some metals, like iron, towards them. They can stick to your fridge or make toys move without touching them! There are two sides to a magnet: one side is called 'north' and the other is 'south.' If you put two magnets together, the north side of one will push away the north side of the other, but the north side will pull the south side closer. It's like magic!\",\"czech_answer\":\"Magnety jsou zvláštní věci, které mohou přitahovat některé kovy, jako je železo. Mohou se přichytit na vaši lednici nebo pohybovat hračkami bez dotyku! Magnet má dvě strany: jedna strana se nazývá 'sever' a druhá 'jih.' Pokud dáte dva magnety k sobě, severní strana jednoho od sebe odtlačí severní stranu druhého, ale severní strana přitáhne jihovou stranu blíž. Je to jako kouzlo!\"}}"
                     }
                   }
                 ]
@@ -417,7 +417,7 @@
             }
           },
           {
-            "startTime": 1730383347048,
+            "startTime": 1732699092456,
             "executionTime": 0,
             "executionStatus": "success",
             "source": [
@@ -454,8 +454,8 @@
         "AI Agent5": [
           {
             "hints": [],
-            "startTime": 1730383340220,
-            "executionTime": 5928,
+            "startTime": 1732699087767,
+            "executionTime": 3806,
             "source": [
               {
                 "previousNode": "When clicking \"Test workflow\""
@@ -483,8 +483,8 @@
         "AI Agent3": [
           {
             "hints": [],
-            "startTime": 1730383346148,
-            "executionTime": 901,
+            "startTime": 1732699091574,
+            "executionTime": 883,
             "source": [
               {
                 "previousNode": "AI Agent5"
@@ -512,8 +512,8 @@
         "Edit Fields1": [
           {
             "hints": [],
-            "startTime": 1730383347049,
-            "executionTime": 0,
+            "startTime": 1732699092457,
+            "executionTime": 11,
             "source": [
               {
                 "previousNode": "AI Agent3"
@@ -539,8 +539,8 @@
         ],
         "OpenAI Chat Model2": [
           {
-            "startTime": 1730383347056,
-            "executionTime": 519,
+            "startTime": 1732699092479,
+            "executionTime": 677,
             "executionStatus": "success",
             "source": [
               null
@@ -553,7 +553,7 @@
                       "response": {
                         "object": true
                       },
-                      "tokenUsageEstimate": {
+                      "tokenUsage": {
                         "object": true
                       }
                     }
@@ -604,8 +604,8 @@
             }
           },
           {
-            "startTime": 1730383347986,
-            "executionTime": 5676,
+            "startTime": 1732699093871,
+            "executionTime": 8028,
             "executionStatus": "success",
             "source": [
               null
@@ -618,7 +618,7 @@
                       "response": {
                         "object": true
                       },
-                      "tokenUsageEstimate": {
+                      "tokenUsage": {
                         "object": true
                       }
                     }
@@ -659,8 +659,8 @@
         ],
         "HTTP Request": [
           {
-            "startTime": 1730383347576,
-            "executionTime": 409,
+            "startTime": 1732699093159,
+            "executionTime": 708,
             "executionStatus": "success",
             "source": [
               null
@@ -700,8 +700,8 @@
         "AI Agent2": [
           {
             "hints": [],
-            "startTime": 1730383347049,
-            "executionTime": 6614,
+            "startTime": 1732699092469,
+            "executionTime": 9432,
             "source": [
               {
                 "previousNode": "When clicking \"Test workflow\""
@@ -713,7 +713,7 @@
                 [
                   {
                     "json": {
-                      "output": "Here is the content of the example website:\n\n```html\n<!doctype html>\n<html>\n<head>\n    <title>Example Domain</title>\n\n    <meta charset=\"utf-8\" />\n    <meta http-equiv=\"Content-type\" content=\"text/html; charset=utf-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n    <style type=\"text/css\">\n    body {\n        background-color: #f0f0f2;\n        margin: 0;\n        padding: 0;\n        font-family: -apple-system, system-ui, BlinkMacSystemFont, \"Segoe UI\", \"Open Sans\", \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n        \n    }\n    div {\n        width: 600px;\n        margin: 5em auto;\n        padding: 2em;\n        background-color: #fdfdff;\n        border-radius: 0.5em;\n        box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.02);\n    }\n    a:link, a:visited {\n        color: #38488f;\n        text-decoration: none;\n    }\n    @media (max-width: 700px) {\n        div {\n            margin: 0 auto;\n            width: auto;\n        }\n    }\n    </style>    \n</head>\n\n<body>\n<div>\n    <h1>Example Domain</h1>\n    <p>This domain is for use in illustrative examples in documents. You may use this\n    domain in literature without prior coordination or asking for permission.</p>\n    <p><a href=\"https://www.iana.org/domains/example\">More information...</a></p>\n</div>\n</body>\n</html>\n```\n\n### Summary:\n- **Title**: Example Domain\n- **Description**: This domain is for use in illustrative examples in documents. You may use this domain in literature without prior coordination or asking for permission.\n- **Link**: [More information...](https://www.iana.org/domains/example)",
+                      "output": "Here is the HTML content of the Example website:\n\n```html\n<!doctype html>\n<html>\n<head>\n    <title>Example Domain</title>\n\n    <meta charset=\"utf-8\" />\n    <meta http-equiv=\"Content-type\" content=\"text/html; charset=utf-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n    <style type=\"text/css\">\n    body {\n        background-color: #f0f0f2;\n        margin: 0;\n        padding: 0;\n        font-family: -apple-system, system-ui, BlinkMacSystemFont, \"Segoe UI\", \"Open Sans\", \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n        \n    }\n    div {\n        width: 600px;\n        margin: 5em auto;\n        padding: 2em;\n        background-color: #fdfdff;\n        border-radius: 0.5em;\n        box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.02);\n    }\n    a:link, a:visited {\n        color: #38488f;\n        text-decoration: none;\n    }\n    @media (max-width: 700px) {\n        div {\n            margin: 0 auto;\n            width: auto;\n        }\n    }\n    </style>    \n</head>\n\n<body>\n<div>\n    <h1>Example Domain</h1>\n    <p>This domain is for use in illustrative examples in documents. You may use this\n    domain in literature without prior coordination or asking for permission.</p>\n    <p><a href=\"https://www.iana.org/domains/example\">More information...</a></p>\n</div>\n</body>\n</html>\n```\n\n### Summary of the Content:\n- **Title**: Example Domain\n- **Description**: This domain is for use in illustrative examples in documents. You may use this domain in literature without prior coordination or asking for permission.\n- **Link**: [More information...](https://www.iana.org/domains/example)",
                       "intermediateSteps": [
                         "json array"
                       ]
@@ -730,8 +730,8 @@
         "Edit Fields9": [
           {
             "hints": [],
-            "startTime": 1730383353663,
-            "executionTime": 2,
+            "startTime": 1732699101901,
+            "executionTime": 1,
             "source": [
               {
                 "previousNode": "AI Agent2"
@@ -758,8 +758,8 @@
         ],
         "OpenAI Chat Model1": [
           {
-            "startTime": 1730383353668,
-            "executionTime": 617,
+            "startTime": 1732699101913,
+            "executionTime": 731,
             "executionStatus": "success",
             "source": [
               null
@@ -772,7 +772,7 @@
                       "response": {
                         "object": true
                       },
-                      "tokenUsageEstimate": {
+                      "tokenUsage": {
                         "object": true
                       }
                     }
@@ -823,8 +823,8 @@
             }
           },
           {
-            "startTime": 1730383354288,
-            "executionTime": 694,
+            "startTime": 1732699102651,
+            "executionTime": 615,
             "executionStatus": "success",
             "source": [
               null
@@ -837,7 +837,7 @@
                       "response": {
                         "object": true
                       },
-                      "tokenUsageEstimate": {
+                      "tokenUsage": {
                         "object": true
                       }
                     }
@@ -878,8 +878,8 @@
         ],
         "Code Tool": [
           {
-            "startTime": 1730383354285,
-            "executionTime": 2,
+            "startTime": 1732699102645,
+            "executionTime": 4,
             "executionStatus": "success",
             "source": [
               null
@@ -926,8 +926,8 @@
         "AI Agent1": [
           {
             "hints": [],
-            "startTime": 1730383353665,
-            "executionTime": 1317,
+            "startTime": 1732699101902,
+            "executionTime": 1366,
             "source": [
               {
                 "previousNode": "When clicking \"Test workflow\""
@@ -956,8 +956,8 @@
         "Edit Fields8": [
           {
             "hints": [],
-            "startTime": 1730383354982,
-            "executionTime": 5,
+            "startTime": 1732699103268,
+            "executionTime": 1,
             "source": [
               {
                 "previousNode": "AI Agent1"
@@ -987,8 +987,8 @@
         ],
         "OpenAI Chat Model": [
           {
-            "startTime": 1730383354991,
-            "executionTime": 564,
+            "startTime": 1732699103277,
+            "executionTime": 728,
             "executionStatus": "success",
             "source": [
               null
@@ -1001,7 +1001,7 @@
                       "response": {
                         "object": true
                       },
-                      "tokenUsageEstimate": {
+                      "tokenUsage": {
                         "object": true
                       }
                     }
@@ -1052,8 +1052,8 @@
             }
           },
           {
-            "startTime": 1730383355571,
-            "executionTime": 3281,
+            "startTime": 1732699104036,
+            "executionTime": 1572,
             "executionStatus": "success",
             "source": [
               null
@@ -1066,7 +1066,7 @@
                       "response": {
                         "object": true
                       },
-                      "tokenUsageEstimate": {
+                      "tokenUsage": {
                         "object": true
                       }
                     }
@@ -1080,9 +1080,9 @@
                   {
                     "json": {
                       "messages": [
-                        "System: You are a helpful assistant\n\nIMPORTANT: Always call `format_final_response` to format your final response!\nHuman: Tell me about M.C. Escher\nAI: \nTool: Maurits Cornelis Escher (Dutch pronunciation: [ˈmʌurɪts kɔrˈneːlɪs ˈɛɕər]; 17 June 1898 – 27 March 1972) was a Dutch graphic artist who made woodcuts, lithographs, and mezzotints, many of which were inspired by mathematics. Despite wide popular interest, for most of his life Escher was neglected in the art world, even in his native Netherlands. He was 70 before a retrospective exhibition was held. In the late twentieth century, he became more widely appreciated, and in the twenty-first century he has been celebrated in exhibitions around the world.\n\nHis work features mathematical objects and operations including impossible objects, explorations of infinity, reflection, symmetry, perspective, truncated and stellated polyhedra, hyperbolic geometry, and tessellations. Although Escher believed he had no mathematical ability, he interacted with the mathematicians George Pólya, Roger Penrose, and Donald Coxeter, and the crystallographer Friedrich Haag, and conducted his own research into tessellation.\n\nEarly in his career, he drew inspiration from nature, making studies of insects, landscapes, and plants such as lichens, all of which he used as details in his artworks. He traveled in Italy and Spain, sketching buildings, townscapes, architecture and the tilings of the Alhambra and the Mezquita of Cordoba, and became steadily more interested in their mathematical structure.\n\nEscher's art became well known among scientists and mathematicians, and in popular culture, especially after it was featured by Martin Gardner in his April 1966 Mathematical Games column in Scientific American. Apart from being used in a variety of technical papers, his work has appeared on the covers of many books and albums. He was one of the major inspirations for Douglas Hofstadter's Pulitzer Prize-winning 1979 book Gödel, Escher, Bach.\n\nExhibitions\n\nPoster advertising the first major exhibition of Escher's work in Britain (Dulwich Picture Gallery, 14 October 2015 – 17 January 2016). The image, which shows Escher and his interest in geometric distortion and multiple levels of distance from reality, is based on his Hand with Reflecting Sphere, 1935.[62][22]\nDespite wide popular interest, Escher was for a long time somewhat neglected in the art world; even in his native Netherlands, he was 70 before a retrospective exhibition was held.[43][k] In the twenty-first century, major exhibitions have been held in cities around the world.[63][64][65] An exhibition of his work in Rio de Janeiro attracted more than 573,000 visitors in 2011;[63] its daily visitor count of 9,677 made it the most visited museum exhibition of the year, anywhere in the world.[66] No major exhibition of Escher's work was held in Britain until 2015, when the Scottish National Gallery of Modern Art ran one in Edinburgh from June to September 2015,[64] moving in October 2015 to the Dulwich Picture Gallery, London. The exhibition poster is based on Hand with Reflecting Sphere, 1935, which shows Escher in his house reflected in a handheld sphere, thus illustrating the artist, his interest in levels of reality in art (e.g., is the hand in the foreground more real than the reflected one?), perspective, and spherical geometry.[22][62][67] The exhibition moved to Italy in 2015–2016, attracting over 500,000 visitors in Rome and Bologna,[65] and then Milan.[68][69][70]"
+                        "System: You are a helpful assistant\n\nIMPORTANT: Always call `format_final_response` to format your final response!\nHuman: Tell me about M.C. Escher\nAI: \nTool: {\n  \"response\": \"Maurits Cornelis Escher (Dutch pronunciation: [ˈmʌurɪts kɔrˈneːlɪs ˈɛɕər]; 17 June 1898 – 27 March 1972) was a Dutch graphic artist who made woodcuts, lithographs, and mezzotints, many of which were inspired by mathematics. Despite wide popular interest, for most of his life Escher was neglected in the art world, even in his native Netherlands. He was 70 before a retrospective exhibition was held. In the late twentieth century, he became more widely appreciated, and in the twenty-first century he has been celebrated in exhibitions around the world.\\n\\nHis work features mathematical objects and operations including impossible objects, explorations of infinity, reflection, symmetry, perspective, truncated and stellated polyhedra, hyperbolic geometry, and tessellations. Although Escher believed he had no mathematical ability, he interacted with the mathematicians George Pólya, Roger Penrose, and Donald Coxeter, and the crystallographer Friedrich Haag, and conducted his own research into tessellation.\\n\\nEarly in his career, he drew inspiration from nature, making studies of insects, landscapes, and plants such as lichens, all of which he used as details in his artworks. He traveled in Italy and Spain, sketching buildings, townscapes, architecture and the tilings of the Alhambra and the Mezquita of Cordoba, and became steadily more interested in their mathematical structure.\\n\\nEscher's art became well known among scientists and mathematicians, and in popular culture, especially after it was featured by Martin Gardner in his April 1966 Mathematical Games column in Scientific American. Apart from being used in a variety of technical papers, his work has appeared on the covers of many books and albums. He was one of the major inspirations for Douglas Hofstadter's Pulitzer Prize-winning 1979 book Gödel, Escher, Bach.\\n\\nExhibitions\\n\\nPoster advertising the first major exhibition of Escher's work in Britain (Dulwich Picture Gallery, 14 October 2015 – 17 January 2016). The image, which shows Escher and his interest in geometric distortion and multiple levels of distance from reality, is based on his Hand with Reflecting Sphere, 1935.[62][22]\\nDespite wide popular interest, Escher was for a long time somewhat neglected in the art world; even in his native Netherlands, he was 70 before a retrospective exhibition was held.[43][k] In the twenty-first century, major exhibitions have been held in cities around the world.[63][64][65] An exhibition of his work in Rio de Janeiro attracted more than 573,000 visitors in 2011;[63] its daily visitor count of 9,677 made it the most visited museum exhibition of the year, anywhere in the world.[66] No major exhibition of Escher's work was held in Britain until 2015, when the Scottish National Gallery of Modern Art ran one in Edinburgh from June to September 2015,[64] moving in October 2015 to the Dulwich Picture Gallery, London. The exhibition poster is based on Hand with Reflecting Sphere, 1935, which shows Escher in his house reflected in a handheld sphere, thus illustrating the artist, his interest in levels of reality in art (e.g., is the hand in the foreground more real than the reflected one?), perspective, and spherical geometry.[22][62][67] The exhibition moved to Italy in 2015–2016, attracting over 500,000 visitors in Rome and Bologna,[65] and then Milan.[68][69][70]\"\n}"
                       ],
-                      "estimatedTokens": 792,
+                      "estimatedTokens": 809,
                       "options": {
                         "openai_api_key": {
                           "lc": 1,
@@ -1107,8 +1107,8 @@
         ],
         "Search Wiki": [
           {
-            "startTime": 1730383355556,
-            "executionTime": 13,
+            "startTime": 1732699104007,
+            "executionTime": 23,
             "executionStatus": "success",
             "source": [
               null
@@ -1136,6 +1136,10 @@
               ]
             },
             "metadata": {
+              "subExecution": {
+                "executionId": "65",
+                "workflowId": "253"
+              },
               "subRun": [
                 {
                   "node": "Search Wiki",
@@ -1147,8 +1151,8 @@
         ],
         "Structured Output Parser": [
           {
-            "startTime": 1730383358853,
-            "executionTime": 2,
+            "startTime": 1732699105609,
+            "executionTime": 0,
             "executionStatus": "success",
             "source": [
               null
@@ -1192,8 +1196,8 @@
         "AI Agent": [
           {
             "hints": [],
-            "startTime": 1730383354987,
-            "executionTime": 3869,
+            "startTime": 1732699103269,
+            "executionTime": 2341,
             "source": [
               {
                 "previousNode": "When clicking \"Test workflow\""
@@ -1221,8 +1225,8 @@
         "Edit Fields7": [
           {
             "hints": [],
-            "startTime": 1730383358856,
-            "executionTime": 12,
+            "startTime": 1732699105610,
+            "executionTime": 6,
             "source": [
               {
                 "previousNode": "AI Agent"
@@ -1250,8 +1254,8 @@
         ],
         "OpenAI Chat Model4": [
           {
-            "startTime": 1730383358873,
-            "executionTime": 1263,
+            "startTime": 1732699105632,
+            "executionTime": 12080,
             "executionStatus": "success",
             "source": [
               null
@@ -1264,7 +1268,7 @@
                       "response": {
                         "object": true
                       },
-                      "tokenUsageEstimate": {
+                      "tokenUsage": {
                         "object": true
                       }
                     }
@@ -1315,8 +1319,8 @@
             }
           },
           {
-            "startTime": 1730383360174,
-            "executionTime": 6256,
+            "startTime": 1732699117761,
+            "executionTime": 6895,
             "executionStatus": "success",
             "source": [
               null
@@ -1329,7 +1333,7 @@
                       "response": {
                         "object": true
                       },
-                      "tokenUsageEstimate": {
+                      "tokenUsage": {
                         "object": true
                       }
                     }
@@ -1343,9 +1347,9 @@
                   {
                     "json": {
                       "messages": [
-                        "System: You are a helpful assistant\nHuman: Help me plan my day in Berlin, Germany. Check current the weather  and get the upcoming events and respond with weather and details about the upcoming events.\n\nEach tool should only be called only once.\nAI: \nTool: {\n    \"created\": \"2024-03-04T09:26:23+01:00\",\n    \"symbolCode\": {\n        \"next1Hour\": \"fog\"\n    },\n    \"temperature\": {\n        \"value\": 5.1,\n        \"feelsLike\": 4\n    },\n    \"precipitation\": {\n        \"value\": 0.0\n    },\n    \"wind\": {\n        \"direction\": 275,\n        \"speed\": 1.7\n    },\n    \"status\": {\n        \"code\": \"Ok\"\n    }\n}\nTool: [\n    {\n        \"description\": \"***Movie Barf* is a new English friendly film night presented by film journalist and blogger Ryan Keating-Lambert, dedicated to screening a diverse variety of award-winning films both contemporary and classic. Ryan’s late night shows includes intriguing chats with various guests (in person or over Skype in the case of the international ones) and special drink offers at the bar.**\\n\\n*Dune: Part Two* / Denis Villeneuve / Canada, USA 2024 / 166 min – Paul Atreides unites with Chani and the Fremen while seeking revenge against the conspirators who destroyed his family.\",\n        \"name\": \"Movie Barf: Dune – Part Two\",\n        \"endDate\": \"Mon Mar 04 2024 23:59:59 GMT+0100 (Central European Standard Time)\"\n    },\n    {\n        \"description\": \"Luboš Pospíšil will perform with the renewed band 5P on March 14 at the cultural house of Barikadník.\",\n        \"name\": \"Luboš Pospíšil & 5P\",\n        \"endDate\": \"Mon Mar 04 2024 23:59:59 GMT+0100 (Central European Standard Time)\"\n    },\n    {\n        \"description\": \"An insomniac office worker looking for a way to change his life crosses paths with a devil-may-care soap maker and they form an underground fight club that evolves into something much, much more...\",\n        \"name\": \"Fight Club\",\n        \"endDate\": \"Mon Mar 04 2024 23:59:59 GMT+0100 (Central European Standard Time)\"\n    },\n    {\n        \"description\": \"From filmmaker Yorgos Lanthimos and producer Emma Stone comes the incredible tale and fantastical evolution of Bella Baxter (Stone), a young woman brought back to life by the brilliant and unorthodox scientist Dr. Godwin Baxter (Willem Dafoe). Under Baxter's protection, Bella is eager to learn. Hungry for the worldliness she is lacking, she runs off with Duncan Wedderburn (Mark Ruffalo), a slick and debauched lawyer, on a whirlwind adventure across the continents. Free from the prejudices of her times, Bella grows steadfast in her purpose to stand for equality and liberation.\",\n        \"name\": \"Poor Things\",\n        \"endDate\": \"Mon Mar 04 2024 23:59:59 GMT+0100 (Central European Standard Time)\"\n    },\n    {\n        \"description\": \"Concert of Bharata Rajnošek, who decided to do something very brave - pay tribute to king of the pop, Michael Jackson in jazz.\",\n        \"name\": \"Tribute to World Legends: Michael Jackson\",\n        \"endDate\": \"Mon Mar 04 2024 23:59:59 GMT+0100 (Central European Standard Time)\"\n    }\n]"
+                        "System: You are a helpful assistant\nHuman: Help me plan my day in Berlin, Germany. Check current the weather  and get the upcoming events and respond with weather and details about the upcoming events.\n\nEach tool should only be called only once.\nAI: \nTool: {\n  \"response\": \"{\\n    \\\"created\\\": \\\"2024-03-04T09:26:23+01:00\\\",\\n    \\\"symbolCode\\\": {\\n        \\\"next1Hour\\\": \\\"fog\\\"\\n    },\\n    \\\"temperature\\\": {\\n        \\\"value\\\": 5.1,\\n        \\\"feelsLike\\\": 4\\n    },\\n    \\\"precipitation\\\": {\\n        \\\"value\\\": 0.0\\n    },\\n    \\\"wind\\\": {\\n        \\\"direction\\\": 275,\\n        \\\"speed\\\": 1.7\\n    },\\n    \\\"status\\\": {\\n        \\\"code\\\": \\\"Ok\\\"\\n    }\\n}\"\n}\nTool: {\n  \"response\": \"[\\n    {\\n        \\\"description\\\": \\\"***Movie Barf* is a new English friendly film night presented by film journalist and blogger Ryan Keating-Lambert, dedicated to screening a diverse variety of award-winning films both contemporary and classic. Ryan’s late night shows includes intriguing chats with various guests (in person or over Skype in the case of the international ones) and special drink offers at the bar.**\\\\n\\\\n*Dune: Part Two* / Denis Villeneuve / Canada, USA 2024 / 166 min – Paul Atreides unites with Chani and the Fremen while seeking revenge against the conspirators who destroyed his family.\\\",\\n        \\\"name\\\": \\\"Movie Barf: Dune – Part Two\\\",\\n        \\\"endDate\\\": \\\"Mon Mar 04 2024 23:59:59 GMT+0100 (Central European Standard Time)\\\"\\n    },\\n    {\\n        \\\"description\\\": \\\"Luboš Pospíšil will perform with the renewed band 5P on March 14 at the cultural house of Barikadník.\\\",\\n        \\\"name\\\": \\\"Luboš Pospíšil & 5P\\\",\\n        \\\"endDate\\\": \\\"Mon Mar 04 2024 23:59:59 GMT+0100 (Central European Standard Time)\\\"\\n    },\\n    {\\n        \\\"description\\\": \\\"An insomniac office worker looking for a way to change his life crosses paths with a devil-may-care soap maker and they form an underground fight club that evolves into something much, much more...\\\",\\n        \\\"name\\\": \\\"Fight Club\\\",\\n        \\\"endDate\\\": \\\"Mon Mar 04 2024 23:59:59 GMT+0100 (Central European Standard Time)\\\"\\n    },\\n    {\\n        \\\"description\\\": \\\"From filmmaker Yorgos Lanthimos and producer Emma Stone comes the incredible tale and fantastical evolution of Bella Baxter (Stone), a young woman brought back to life by the brilliant and unorthodox scientist Dr. Godwin Baxter (Willem Dafoe). Under Baxter's protection, Bella is eager to learn. Hungry for the worldliness she is lacking, she runs off with Duncan Wedderburn (Mark Ruffalo), a slick and debauched lawyer, on a whirlwind adventure across the continents. Free from the prejudices of her times, Bella grows steadfast in her purpose to stand for equality and liberation.\\\",\\n        \\\"name\\\": \\\"Poor Things\\\",\\n        \\\"endDate\\\": \\\"Mon Mar 04 2024 23:59:59 GMT+0100 (Central European Standard Time)\\\"\\n    },\\n    {\\n        \\\"description\\\": \\\"Concert of Bharata Rajnošek, who decided to do something very brave - pay tribute to king of the pop, Michael Jackson in jazz.\\\",\\n        \\\"name\\\": \\\"Tribute to World Legends: Michael Jackson\\\",\\n        \\\"endDate\\\": \\\"Mon Mar 04 2024 23:59:59 GMT+0100 (Central European Standard Time)\\\"\\n    }\\n]\"\n}"
                       ],
-                      "estimatedTokens": 782,
+                      "estimatedTokens": 862,
                       "options": {
                         "openai_api_key": {
                           "lc": 1,
@@ -1370,8 +1374,8 @@
         ],
         "Get Weather": [
           {
-            "startTime": 1730383360142,
-            "executionTime": 29,
+            "startTime": 1732699117713,
+            "executionTime": 35,
             "executionStatus": "success",
             "source": [
               null
@@ -1399,6 +1403,10 @@
               ]
             },
             "metadata": {
+              "subExecution": {
+                "executionId": "76",
+                "workflowId": "253"
+              },
               "subRun": [
                 {
                   "node": "Get Weather",
@@ -1410,8 +1418,8 @@
         ],
         "Get Events": [
           {
-            "startTime": 1730383360143,
-            "executionTime": 28,
+            "startTime": 1732699117714,
+            "executionTime": 37,
             "executionStatus": "success",
             "source": [
               null
@@ -1439,6 +1447,10 @@
               ]
             },
             "metadata": {
+              "subExecution": {
+                "executionId": "77",
+                "workflowId": "253"
+              },
               "subRun": [
                 {
                   "node": "Get Events",
@@ -1451,8 +1463,8 @@
         "AI Agent4": [
           {
             "hints": [],
-            "startTime": 1730383358868,
-            "executionTime": 7562,
+            "startTime": 1732699105616,
+            "executionTime": 19041,
             "source": [
               {
                 "previousNode": "When clicking \"Test workflow\""
@@ -1464,7 +1476,7 @@
                 [
                   {
                     "json": {
-                      "output": "### Weather in Berlin, Germany\n- **Current Temperature:** 5.1°C (Feels like 4°C)\n- **Weather Condition:** Fog\n- **Precipitation:** 0.0 mm (No rain expected)\n- **Wind:** 1.7 m/s from the west (275°)\n\n### Upcoming Events in Berlin\n1. **Movie Barf: Dune – Part Two**\n   - **Description:** A new English-friendly film night presented by film journalist Ryan Keating-Lambert, featuring a variety of award-winning films. This late-night show includes intriguing chats with guests and special drink offers at the bar.\n   - **Film:** *Dune: Part Two* / Denis Villeneuve / Canada, USA 2024 / 166 min\n   - **End Date:** March 4, 2024, 23:59\n\n2. **Luboš Pospíšil & 5P**\n   - **Description:** Performance by Luboš Pospíšil with the renewed band 5P.\n   - **End Date:** March 4, 2024, 23:59\n\n3. **Fight Club**\n   - **Description:** A film about an insomniac office worker who forms an underground fight club that evolves into something much more.\n   - **End Date:** March 4, 2024, 23:59\n\n4. **Poor Things**\n   - **Description:** A fantastical tale of Bella Baxter, a young woman brought back to life by a scientist, who embarks on a whirlwind adventure seeking equality and liberation.\n   - **End Date:** March 4, 2024, 23:59\n\n5. **Tribute to World Legends: Michael Jackson**\n   - **Description:** Concert by Bharata Rajnošek paying tribute to the king of pop, Michael Jackson, in jazz style.\n   - **End Date:** March 4, 2024, 23:59\n\n### Summary\nYou can enjoy a variety of events today in Berlin, including film screenings and live performances. The weather is cool and foggy, so dress warmly if you plan to go out!"
+                      "output": "### Weather in Berlin, Germany\n- **Current Temperature:** 5.1°C (Feels like 4°C)\n- **Weather Condition:** Fog\n- **Precipitation:** 0.0 mm (No rain expected)\n- **Wind:** 1.7 m/s from the west (275°)\n\n### Upcoming Events in Berlin\n1. **Movie Barf: Dune – Part Two**\n   - **Description:** A new English-friendly film night featuring *Dune: Part Two* directed by Denis Villeneuve. The event includes intriguing chats with guests and special drink offers at the bar.\n   - **End Date:** March 4, 2024, 23:59\n\n2. **Luboš Pospíšil & 5P**\n   - **Description:** Performance by Luboš Pospíšil with the renewed band 5P.\n   - **End Date:** March 4, 2024, 23:59\n\n3. **Fight Club**\n   - **Description:** A film screening about an insomniac office worker who forms an underground fight club.\n   - **End Date:** March 4, 2024, 23:59\n\n4. **Poor Things**\n   - **Description:** A film by Yorgos Lanthimos about Bella Baxter, a young woman brought back to life, exploring themes of equality and liberation.\n   - **End Date:** March 4, 2024, 23:59\n\n5. **Tribute to World Legends: Michael Jackson**\n   - **Description:** A concert paying tribute to Michael Jackson in jazz style by Bharata Rajnošek.\n   - **End Date:** March 4, 2024, 23:59\n\n### Summary\nYou can enjoy a variety of events today in Berlin, including film screenings and a concert. The weather is cool and foggy, so dress warmly if you plan to go out!"
                     },
                     "pairedItem": {
                       "item": 0
@@ -1478,8 +1490,8 @@
         "Edit Fields6": [
           {
             "hints": [],
-            "startTime": 1730383366430,
-            "executionTime": 1,
+            "startTime": 1732699124657,
+            "executionTime": 2,
             "source": [
               {
                 "previousNode": "AI Agent4"
@@ -1656,21 +1668,21 @@
             ]
           }
         ],
-        "Get Events": [
-          {
-            "subRun": [
-              {
-                "node": "Get Events",
-                "runIndex": 0
-              }
-            ]
-          }
-        ],
         "Get Weather": [
           {
             "subRun": [
               {
                 "node": "Get Weather",
+                "runIndex": 0
+              }
+            ]
+          }
+        ],
+        "Get Events": [
+          {
+            "subRun": [
+              {
+                "node": "Get Events",
                 "runIndex": 0
               }
             ]
@@ -1682,8 +1694,8 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2024-10-31T14:02:20.220Z",
-  "stoppedAt": "2024-10-31T14:02:46.431Z",
+  "startedAt": "2024-11-27T09:18:07.766Z",
+  "stoppedAt": "2024-11-27T09:18:44.659Z",
   "status": "running",
   "finished": true
 }

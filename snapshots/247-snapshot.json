@@ -6,7 +6,7 @@
         "When clicking \"Test workflow\"": [
           {
             "hints": [],
-            "startTime": 1730383336932,
+            "startTime": 1732699078775,
             "executionTime": 0,
             "source": [],
             "executionStatus": "success",
@@ -27,7 +27,7 @@
         "Set Baseline": [
           {
             "hints": [],
-            "startTime": 1730383336932,
+            "startTime": 1732699078776,
             "executionTime": 0,
             "source": [
               {
@@ -54,8 +54,8 @@
         "Set Article": [
           {
             "hints": [],
-            "startTime": 1730383336932,
-            "executionTime": 2,
+            "startTime": 1732699078776,
+            "executionTime": 8,
             "source": [
               {
                 "previousNode": "Set Baseline"
@@ -80,8 +80,8 @@
         ],
         "Token Splitter": [
           {
-            "startTime": 1730383336936,
-            "executionTime": 5,
+            "startTime": 1732699078793,
+            "executionTime": 10,
             "executionStatus": "success",
             "source": [
               null
@@ -122,8 +122,8 @@
         ],
         "OpenAI Chat Model1": [
           {
-            "startTime": 1730383336952,
-            "executionTime": 2262,
+            "startTime": 1732699078825,
+            "executionTime": 1866,
             "executionStatus": "success",
             "source": [
               null
@@ -186,8 +186,8 @@
         "Summary - Advanced": [
           {
             "hints": [],
-            "startTime": 1730383336934,
-            "executionTime": 2280,
+            "startTime": 1732699078784,
+            "executionTime": 1908,
             "source": [
               {
                 "previousNode": "Set Article"
@@ -214,8 +214,8 @@
         ],
         "OpenAI Chat Model8": [
           {
-            "startTime": 1730383339221,
-            "executionTime": 1728,
+            "startTime": 1732699080707,
+            "executionTime": 1179,
             "executionStatus": "success",
             "source": [
               null
@@ -278,8 +278,8 @@
         "Evaluate to Baseline3": [
           {
             "hints": [],
-            "startTime": 1730383339214,
-            "executionTime": 1735,
+            "startTime": 1732699080692,
+            "executionTime": 1195,
             "source": [
               {
                 "previousNode": "Summary - Advanced"
@@ -291,7 +291,7 @@
                 [
                   {
                     "json": {
-                      "reasoning": "1. Is the submission helpful?- The submission provides a summary of the Wikipedia article about the dancing plague of 1518, including key details such as the location, number of people involved, possible causes, and outcomes.- The submission also mentions the controversy surrounding the number of deaths and the inspiration for various works of art and media.- Overall, the submission is informative and provides a good overview of the topic.Therefore, the submission meets the criteria of helpfulness.",
+                      "reasoning": "1. Is the submission helpful, insightful, and appropriate?- The submission provides a summary of the Wikipedia article about the dancing plague of 1518, including key details such as the location, number of people involved, possible causes, and outcomes.- The submission also mentions the controversy surrounding the number of deaths and the inspiration for various works of art and media.- Overall, the submission is informative, insightful, and appropriate in summarizing the main points of the article.Y",
                       "value": "Y",
                       "score": 1
                     },
@@ -347,8 +347,8 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2024-10-31T14:02:16.931Z",
-  "stoppedAt": "2024-10-31T14:02:20.949Z",
+  "startedAt": "2024-11-27T09:17:58.775Z",
+  "stoppedAt": "2024-11-27T09:18:01.887Z",
   "status": "running",
   "finished": true
 }
