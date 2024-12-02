@@ -6,7 +6,7 @@
         "When clicking \"Test workflow\"": [
           {
             "hints": [],
-            "startTime": 1732699082327,
+            "startTime": 1733150010792,
             "executionTime": 0,
             "source": [],
             "executionStatus": "success",
@@ -26,9 +26,14 @@
         ],
         "Code": [
           {
-            "hints": [],
-            "startTime": 1732699082327,
-            "executionTime": 4,
+            "hints": [
+              {
+                "message": "To make sure expressions after this node work, return the input items that produced each output item. <a target=\"_blank\" href=\"https://docs.n8n.io/data/data-mapping/data-item-linking/item-linking-code-node/\">More info</a>",
+                "location": "outputPane"
+              }
+            ],
+            "startTime": 1733150010792,
+            "executionTime": 9,
             "source": [
               {
                 "previousNode": "When clicking \"Test workflow\""
@@ -53,8 +58,8 @@
         ],
         "Default Data Loader": [
           {
-            "startTime": 1732699082335,
-            "executionTime": 18,
+            "startTime": 1733150010805,
+            "executionTime": 21,
             "executionStatus": "success",
             "source": [
               null
@@ -101,8 +106,8 @@
         ],
         "Token Splitter": [
           {
-            "startTime": 1732699082336,
-            "executionTime": 17,
+            "startTime": 1733150010806,
+            "executionTime": 20,
             "executionStatus": "success",
             "source": [
               null
@@ -143,8 +148,8 @@
         ],
         "Embeddings OpenAI": [
           {
-            "startTime": 1732699084684,
-            "executionTime": 937,
+            "startTime": 1733150013301,
+            "executionTime": 1137,
             "executionStatus": "success",
             "source": [
               null
@@ -199,8 +204,8 @@
         "Pinecone Vector Store": [
           {
             "hints": [],
-            "startTime": 1732699082332,
-            "executionTime": 4067,
+            "startTime": 1733150010801,
+            "executionTime": 5540,
             "source": [
               {
                 "previousNode": "Code"
@@ -350,7 +355,7 @@
         "Check Vector Store Populated": [
           {
             "hints": [],
-            "startTime": 1732699086399,
+            "startTime": 1733150016342,
             "executionTime": 2,
             "source": [
               {
@@ -379,8 +384,8 @@
         "Wait": [
           {
             "hints": [],
-            "startTime": 1732699086401,
-            "executionTime": 15001,
+            "startTime": 1733150016345,
+            "executionTime": 15000,
             "source": [
               {
                 "previousNode": "Check Vector Store Populated"
@@ -407,8 +412,8 @@
         ],
         "Embeddings OpenAI10": [
           {
-            "startTime": 1732699101408,
-            "executionTime": 449,
+            "startTime": 1733150031353,
+            "executionTime": 423,
             "executionStatus": "success",
             "source": [
               null
@@ -450,8 +455,8 @@
         "Pinecone Vector Store1": [
           {
             "hints": [],
-            "startTime": 1732699101402,
-            "executionTime": 2197,
+            "startTime": 1733150031346,
+            "executionTime": 3312,
             "source": [
               {
                 "previousNode": "Wait"
@@ -466,7 +471,7 @@
                       "document": {
                         "object": true
                       },
-                      "score": 0.438324153
+                      "score": 0.438223064
                     },
                     "pairedItem": {
                       "item": 0
@@ -513,7 +518,7 @@
         "Check Vector Store Retrieval": [
           {
             "hints": [],
-            "startTime": 1732699103599,
+            "startTime": 1733150034658,
             "executionTime": 2,
             "source": [
               {
@@ -541,8 +546,8 @@
         ],
         "Vector Store Retriever": [
           {
-            "startTime": 1732699103609,
-            "executionTime": 708,
+            "startTime": 1733150034667,
+            "executionTime": 653,
             "executionStatus": "success",
             "source": [
               null
@@ -583,8 +588,8 @@
         ],
         "Pinecone Vector Store2": [
           {
-            "startTime": 1732699103609,
-            "executionTime": 708,
+            "startTime": 1733150034667,
+            "executionTime": 653,
             "executionStatus": "success",
             "source": [
               null
@@ -626,8 +631,8 @@
         ],
         "Embeddings OpenAI9": [
           {
-            "startTime": 1732699103609,
-            "executionTime": 436,
+            "startTime": 1733150034667,
+            "executionTime": 459,
             "executionStatus": "success",
             "source": [
               null
@@ -668,8 +673,8 @@
         ],
         "OpenAI Chat Model": [
           {
-            "startTime": 1732699104327,
-            "executionTime": 416,
+            "startTime": 1733150035325,
+            "executionTime": 404,
             "executionStatus": "success",
             "source": [
               null
@@ -732,8 +737,8 @@
         "Question and Answer Chain": [
           {
             "hints": [],
-            "startTime": 1732699103601,
-            "executionTime": 1142,
+            "startTime": 1733150034660,
+            "executionTime": 1069,
             "source": [
               {
                 "previousNode": "Check Vector Store Retrieval"
@@ -761,8 +766,8 @@
         "Edit Fields": [
           {
             "hints": [],
-            "startTime": 1732699104744,
-            "executionTime": 0,
+            "startTime": 1733150035729,
+            "executionTime": 1,
             "source": [
               {
                 "previousNode": "Question and Answer Chain"
@@ -878,8 +883,8 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2024-11-27T09:18:02.326Z",
-  "stoppedAt": "2024-11-27T09:18:24.745Z",
+  "startedAt": "2024-12-02T14:33:30.791Z",
+  "stoppedAt": "2024-12-02T14:33:55.730Z",
   "status": "running",
   "finished": true
 }

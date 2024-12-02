@@ -6,7 +6,7 @@
         "When clicking \"Test workflow\"": [
           {
             "hints": [],
-            "startTime": 1732699054046,
+            "startTime": 1733149982541,
             "executionTime": 0,
             "source": [],
             "executionStatus": "success",
@@ -24,11 +24,70 @@
             }
           }
         ],
+        "Mistral Cloud Chat Model": [
+          {
+            "startTime": 1733149983807,
+            "executionTime": 1699,
+            "executionStatus": "success",
+            "source": [
+              null
+            ],
+            "data": {
+              "ai_languageModel": [
+                [
+                  {
+                    "json": {
+                      "response": {
+                        "object": true
+                      },
+                      "tokenUsageEstimate": {
+                        "object": true
+                      }
+                    }
+                  }
+                ]
+              ]
+            },
+            "inputOverride": {
+              "ai_languageModel": [
+                [
+                  {
+                    "json": {
+                      "messages": [
+                        "Human: How much is 1+1? Only provide the numerical answer without any other text.\n"
+                      ],
+                      "estimatedTokens": 20,
+                      "options": {
+                        "mistral_api_key": {
+                          "lc": 1,
+                          "type": "secret",
+                          "id": [
+                            "MISTRAL_API_KEY"
+                          ]
+                        },
+                        "model_name": "mistral-tiny",
+                        "temperature": 0
+                      }
+                    }
+                  }
+                ]
+              ]
+            },
+            "metadata": {
+              "subRun": [
+                {
+                  "node": "Mistral Cloud Chat Model",
+                  "runIndex": 0
+                }
+              ]
+            }
+          }
+        ],
         "Mistral Cloud Chat": [
           {
             "hints": [],
-            "startTime": 1732699054046,
-            "executionTime": 783,
+            "startTime": 1733149982541,
+            "executionTime": 2966,
             "source": [
               {
                 "previousNode": "When clicking \"Test workflow\""
@@ -57,14 +116,25 @@
     "executionData": {
       "contextData": {},
       "nodeExecutionStack": [],
-      "metadata": {},
+      "metadata": {
+        "Mistral Cloud Chat Model": [
+          {
+            "subRun": [
+              {
+                "node": "Mistral Cloud Chat Model",
+                "runIndex": 0
+              }
+            ]
+          }
+        ]
+      },
       "waitingExecution": {},
       "waitingExecutionSource": {}
     }
   },
   "mode": "cli",
-  "startedAt": "2024-11-27T09:17:34.046Z",
-  "stoppedAt": "2024-11-27T09:17:34.829Z",
+  "startedAt": "2024-12-02T14:33:02.541Z",
+  "stoppedAt": "2024-12-02T14:33:05.507Z",
   "status": "running",
   "finished": true
 }
