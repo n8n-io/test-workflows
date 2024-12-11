@@ -6,7 +6,7 @@
         "When clicking \"Test workflow\"": [
           {
             "hints": [],
-            "startTime": 1733150007799,
+            "startTime": 1733911694428,
             "executionTime": 0,
             "source": [],
             "executionStatus": "success",
@@ -27,8 +27,8 @@
         "Set Baseline": [
           {
             "hints": [],
-            "startTime": 1733150007799,
-            "executionTime": 0,
+            "startTime": 1733911694428,
+            "executionTime": 1,
             "source": [
               {
                 "previousNode": "When clicking \"Test workflow\""
@@ -59,8 +59,8 @@
                 "location": "outputPane"
               }
             ],
-            "startTime": 1733150007799,
-            "executionTime": 6,
+            "startTime": 1733911694429,
+            "executionTime": 2,
             "source": [
               {
                 "previousNode": "Set Baseline"
@@ -85,8 +85,8 @@
         ],
         "Token Splitter": [
           {
-            "startTime": 1733150007808,
-            "executionTime": 12,
+            "startTime": 1733911694432,
+            "executionTime": 5,
             "executionStatus": "success",
             "source": [
               null
@@ -127,8 +127,8 @@
         ],
         "OpenAI Chat Model1": [
           {
-            "startTime": 1733150007833,
-            "executionTime": 1260,
+            "startTime": 1733911694443,
+            "executionTime": 1615,
             "executionStatus": "success",
             "source": [
               null
@@ -191,8 +191,8 @@
         "Summary - Advanced": [
           {
             "hints": [],
-            "startTime": 1733150007805,
-            "executionTime": 1288,
+            "startTime": 1733911694431,
+            "executionTime": 1627,
             "source": [
               {
                 "previousNode": "Set Article"
@@ -219,8 +219,8 @@
         ],
         "OpenAI Chat Model8": [
           {
-            "startTime": 1733150009108,
-            "executionTime": 1646,
+            "startTime": 1733911696065,
+            "executionTime": 1250,
             "executionStatus": "success",
             "source": [
               null
@@ -247,9 +247,9 @@
                   {
                     "json": {
                       "messages": [
-                        "Human: You are assessing a submitted answer on a given task or input based on a set of criteria. Here is the data:\n[BEGIN DATA]\n***\n[Input]: Summarize Wikipedia article about the dancing plague of 1518\n***\n[Submission]: The dancing plague of 1518, also known as the dance epidemic, occurred in Strasbourg, Alsace, where between 50 and 400 people danced uncontrollably for weeks. The cause is debated, with theories including stress-induced mass hysteria, ergot poisoning, and religious explanations. The outbreak began with one woman dancing and spread to others, resulting in deaths and mass dancing. The event has inspired various works of art and media, including films, songs, and novels.\n***\n[Criteria]: helpfulness: Is the submission helpful, insightful, and appropriate? If so, response Y. If not, respond N.\n***\n[Reference]: The dancing plague of 1518 in Strasbourg, Alsace involved between 50 and 400 people dancing uncontrollably for weeks. The cause is unknown, with theories including stress-induced mass hysteria and ergot poisoning. The outbreak ended when the dancers prayed for absolution at a shrine. There is controversy over the number of deaths, with some sources claiming up to fifteen deaths per day, but historical documents do not confirm any fatalities. Similar events have been reported throughout history, inspiring various works of pop culture.\n***\n[END DATA]\nDoes the submission meet the Criteria? First, write out in a step by step manner your reasoning about each criterion to be sure that your conclusion is correct. Avoid simply stating the correct answers at the outset. Then print only the single character \"Y\" or \"N\" (without quotes or punctuation) on its own line corresponding to the correct answer of whether the submission meets all criteria. At the end, repeat just the letter again by itself on a new line."
+                        "Human: You are assessing a submitted answer on a given task or input based on a set of criteria. Here is the data:\n[BEGIN DATA]\n***\n[Input]: Summarize Wikipedia article about the dancing plague of 1518\n***\n[Submission]: The dancing plague of 1518 was a case of dancing mania that occurred in Strasbourg, Alsace, where between 50 and 400 people danced uncontrollably for weeks. The cause is debated, with theories including stress-induced mass hysteria, ergot poisoning, and religious explanations. The outbreak began with a woman dancing in the street, and eventually subsided after dancers were sent to a shrine to pray for absolution. The veracity of deaths is disputed, with some sources claiming fatalities. Modern theories suggest food poisoning or stress-induced mass hysteria as possible explanations. The event has inspired various works of art and media.\n***\n[Criteria]: helpfulness: Is the submission helpful, insightful, and appropriate? If so, response Y. If not, respond N.\n***\n[Reference]: The dancing plague of 1518 in Strasbourg, Alsace involved between 50 and 400 people dancing uncontrollably for weeks. The cause is unknown, with theories including stress-induced mass hysteria and ergot poisoning. The outbreak ended when the dancers prayed for absolution at a shrine. There is controversy over the number of deaths, with some sources claiming up to fifteen deaths per day, but historical documents do not confirm any fatalities. Similar events have been reported throughout history, inspiring various works of pop culture.\n***\n[END DATA]\nDoes the submission meet the Criteria? First, write out in a step by step manner your reasoning about each criterion to be sure that your conclusion is correct. Avoid simply stating the correct answers at the outset. Then print only the single character \"Y\" or \"N\" (without quotes or punctuation) on its own line corresponding to the correct answer of whether the submission meets all criteria. At the end, repeat just the letter again by itself on a new line."
                       ],
-                      "estimatedTokens": 383,
+                      "estimatedTokens": 412,
                       "options": {
                         "openai_api_key": {
                           "lc": 1,
@@ -283,8 +283,8 @@
         "Evaluate to Baseline3": [
           {
             "hints": [],
-            "startTime": 1733150009093,
-            "executionTime": 1663,
+            "startTime": 1733911696058,
+            "executionTime": 1258,
             "source": [
               {
                 "previousNode": "Summary - Advanced"
@@ -296,7 +296,7 @@
                 [
                   {
                     "json": {
-                      "reasoning": "Step 1: Is the submission helpful?- The submission provides a summary of the Wikipedia article about the dancing plague of 1518, including key details such as the location, number of people involved, possible causes, outcomes, and cultural impact.- The submission is informative and gives a concise overview of the topic.- The submission is relevant to the input question.- The submission is insightful in discussing the various theories surrounding the cause of the dancing plague.- The submission is appropriate in its content and tone.Based on the above analysis, the submission meets the criteria of helpfulness.Y",
+                      "reasoning": "1. Is the submission helpful, insightful, and appropriate?- The submission provides a summary of the Wikipedia article about the dancing plague of 1518, including key details such as the location, number of people involved, possible causes, and how the outbreak ended.- The submission also mentions the controversy over the number of deaths and the inspiration for various works of art and media.- Overall, the submission is informative, insightful, and appropriate in summarizing the main points of the Wikipedia article.Therefore, the submission meets the criteria.",
                       "value": "Y",
                       "score": 1
                     },
@@ -352,8 +352,8 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2024-12-02T14:33:27.798Z",
-  "stoppedAt": "2024-12-02T14:33:30.756Z",
+  "startedAt": "2024-12-11T10:08:14.428Z",
+  "stoppedAt": "2024-12-11T10:08:17.316Z",
   "status": "running",
   "finished": true
 }
