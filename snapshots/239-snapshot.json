@@ -6,7 +6,7 @@
         "When clicking \"Test workflow\"": [
           {
             "hints": [],
-            "startTime": 1733911682278,
+            "startTime": 1734619746481,
             "executionTime": 0,
             "source": [],
             "executionStatus": "success",
@@ -26,8 +26,8 @@
         ],
         "OpenAI Chat Model3": [
           {
-            "startTime": 1733911682290,
-            "executionTime": 1773,
+            "startTime": 1734619746503,
+            "executionTime": 1806,
             "executionStatus": "success",
             "source": [
               null
@@ -69,7 +69,9 @@
                         "temperature": 0,
                         "timeout": 60000,
                         "max_retries": 2,
-                        "configuration": {},
+                        "configuration": {
+                          "baseURL": "https://api.openai.com/v1"
+                        },
                         "model_kwargs": {}
                       }
                     }
@@ -107,8 +109,8 @@
             }
           },
           {
-            "startTime": 1733911684064,
-            "executionTime": 1763,
+            "startTime": 1734619748312,
+            "executionTime": 2188,
             "executionStatus": "success",
             "source": [
               null
@@ -150,7 +152,9 @@
                         "temperature": 0,
                         "timeout": 60000,
                         "max_retries": 2,
-                        "configuration": {},
+                        "configuration": {
+                          "baseURL": "https://api.openai.com/v1"
+                        },
                         "model_kwargs": {}
                       }
                     }
@@ -160,8 +164,8 @@
             }
           },
           {
-            "startTime": 1733911685830,
-            "executionTime": 1280,
+            "startTime": 1734619750506,
+            "executionTime": 1084,
             "executionStatus": "success",
             "source": [
               null
@@ -188,9 +192,9 @@
                   {
                     "json": {
                       "messages": [
-                        "System: Answer the following questions as best you can. You have access to the following tools:\n\ncalculator: Useful for getting the result of a math expression. The input to this tool should be a valid mathematical expression that could be executed by a simple calculator.\n\nThe way you use the tools is by specifying a json blob, denoted below by $JSON_BLOB\nSpecifically, this $JSON_BLOB should have a \"action\" key (with the name of the tool to use) and a \"action_input\" key (with the input to the tool going here). \nThe $JSON_BLOB should only contain a SINGLE action, do NOT return a list of multiple actions. Here is an example of a valid $JSON_BLOB:\n\n```\n{\n  \"action\": \"calculator\",\n  \"action_input\": \"1 + 2\"\n}\n```\n\nALWAYS use the following format:\n\nQuestion: the input question you must answer\nThought: you should always think about what to do\nAction: \n```\n$JSON_BLOB\n```\nObservation: the result of the action\n... (this Thought/Action/Observation can repeat N times)\nThought: I now know the final answer\nFinal Answer: the final answer to the original input question\n\nBegin! Reminder to always use the exact characters `Final Answer` when responding.\nHuman: Previous steps: []\n\nCurrent objective: Calculate the division part of the expression: 10002200 / 100.\n\nThis was your previous work (but I haven't seen any of it! I only see what you return as final answer):\nThought: To calculate the division part of the expression \\(10002200 / 100\\), I will use the calculator tool.\n\nAction: \n```\n{\n  \"action\": \"calculator\",\n  \"action_input\": \"10002200 / 100\"\n}\n```\n\n\nObservation: 100022\nThought:\n\nYou may extract and combine relevant data from your previous steps when responding to me."
+                        "System: Answer the following questions as best you can. You have access to the following tools:\n\ncalculator: Useful for getting the result of a math expression. The input to this tool should be a valid mathematical expression that could be executed by a simple calculator.\n\nThe way you use the tools is by specifying a json blob, denoted below by $JSON_BLOB\nSpecifically, this $JSON_BLOB should have a \"action\" key (with the name of the tool to use) and a \"action_input\" key (with the input to the tool going here). \nThe $JSON_BLOB should only contain a SINGLE action, do NOT return a list of multiple actions. Here is an example of a valid $JSON_BLOB:\n\n```\n{\n  \"action\": \"calculator\",\n  \"action_input\": \"1 + 2\"\n}\n```\n\nALWAYS use the following format:\n\nQuestion: the input question you must answer\nThought: you should always think about what to do\nAction: \n```\n$JSON_BLOB\n```\nObservation: the result of the action\n... (this Thought/Action/Observation can repeat N times)\nThought: I now know the final answer\nFinal Answer: the final answer to the original input question\n\nBegin! Reminder to always use the exact characters `Final Answer` when responding.\nHuman: Previous steps: []\n\nCurrent objective: Calculate the division part of the expression: 10002200 / 100.\n\nThis was your previous work (but I haven't seen any of it! I only see what you return as final answer):\nThought: To calculate the division part of the expression \\(10002200 / 100\\), I will use the calculator tool.\n\nAction:\n```\n{\n  \"action\": \"calculator\",\n  \"action_input\": \"10002200 / 100\"\n}\n```\n\n\nObservation: 100022\nThought:\n\nYou may extract and combine relevant data from your previous steps when responding to me."
                       ],
-                      "estimatedTokens": 398,
+                      "estimatedTokens": 397,
                       "options": {
                         "openai_api_key": {
                           "lc": 1,
@@ -203,7 +207,9 @@
                         "temperature": 0,
                         "timeout": 60000,
                         "max_retries": 2,
-                        "configuration": {},
+                        "configuration": {
+                          "baseURL": "https://api.openai.com/v1"
+                        },
                         "model_kwargs": {}
                       }
                     }
@@ -213,8 +219,8 @@
             }
           },
           {
-            "startTime": 1733911687111,
-            "executionTime": 2497,
+            "startTime": 1734619751594,
+            "executionTime": 2483,
             "executionStatus": "success",
             "source": [
               null
@@ -256,7 +262,9 @@
                         "temperature": 0,
                         "timeout": 60000,
                         "max_retries": 2,
-                        "configuration": {},
+                        "configuration": {
+                          "baseURL": "https://api.openai.com/v1"
+                        },
                         "model_kwargs": {}
                       }
                     }
@@ -266,8 +274,8 @@
             }
           },
           {
-            "startTime": 1733911689610,
-            "executionTime": 1353,
+            "startTime": 1734619754082,
+            "executionTime": 1040,
             "executionStatus": "success",
             "source": [
               null
@@ -309,7 +317,9 @@
                         "temperature": 0,
                         "timeout": 60000,
                         "max_retries": 2,
-                        "configuration": {},
+                        "configuration": {
+                          "baseURL": "https://api.openai.com/v1"
+                        },
                         "model_kwargs": {}
                       }
                     }
@@ -319,8 +329,8 @@
             }
           },
           {
-            "startTime": 1733911690964,
-            "executionTime": 643,
+            "startTime": 1734619755127,
+            "executionTime": 606,
             "executionStatus": "success",
             "source": [
               null
@@ -347,9 +357,9 @@
                   {
                     "json": {
                       "messages": [
-                        "System: Answer the following questions as best you can. You have access to the following tools:\n\ncalculator: Useful for getting the result of a math expression. The input to this tool should be a valid mathematical expression that could be executed by a simple calculator.\n\nThe way you use the tools is by specifying a json blob, denoted below by $JSON_BLOB\nSpecifically, this $JSON_BLOB should have a \"action\" key (with the name of the tool to use) and a \"action_input\" key (with the input to the tool going here). \nThe $JSON_BLOB should only contain a SINGLE action, do NOT return a list of multiple actions. Here is an example of a valid $JSON_BLOB:\n\n```\n{\n  \"action\": \"calculator\",\n  \"action_input\": \"1 + 2\"\n}\n```\n\nALWAYS use the following format:\n\nQuestion: the input question you must answer\nThought: you should always think about what to do\nAction: \n```\n$JSON_BLOB\n```\nObservation: the result of the action\n... (this Thought/Action/Observation can repeat N times)\nThought: I now know the final answer\nFinal Answer: the final answer to the original input question\n\nBegin! Reminder to always use the exact characters `Final Answer` when responding.\nHuman: Previous steps: [{\"action\":{\"text\":\"Calculate the division part of the expression: 10002200 / 100.\"},\"result\":{\"response\":\"The result of the division \\\\(10002200 / 100\\\\) is 100022.\"}},{\"action\":{\"text\":\"Add 30 to the result of step 1.\"},\"result\":{\"response\":\"100052\"}}]\n\nCurrent objective: Output the final result as a number.\n\n The original question was: What is the result of 30 + (10002200 / 100)? Only respond with a number..\n\n\n\nYou may extract and combine relevant data from your previous steps when responding to me."
+                        "System: Answer the following questions as best you can. You have access to the following tools:\n\ncalculator: Useful for getting the result of a math expression. The input to this tool should be a valid mathematical expression that could be executed by a simple calculator.\n\nThe way you use the tools is by specifying a json blob, denoted below by $JSON_BLOB\nSpecifically, this $JSON_BLOB should have a \"action\" key (with the name of the tool to use) and a \"action_input\" key (with the input to the tool going here). \nThe $JSON_BLOB should only contain a SINGLE action, do NOT return a list of multiple actions. Here is an example of a valid $JSON_BLOB:\n\n```\n{\n  \"action\": \"calculator\",\n  \"action_input\": \"1 + 2\"\n}\n```\n\nALWAYS use the following format:\n\nQuestion: the input question you must answer\nThought: you should always think about what to do\nAction: \n```\n$JSON_BLOB\n```\nObservation: the result of the action\n... (this Thought/Action/Observation can repeat N times)\nThought: I now know the final answer\nFinal Answer: the final answer to the original input question\n\nBegin! Reminder to always use the exact characters `Final Answer` when responding.\nHuman: Previous steps: [{\"action\":{\"text\":\"Calculate the division part of the expression: 10002200 / 100.\"},\"result\":{\"response\":\"The result of the division \\\\(10002200 / 100\\\\) is 100022.\"}},{\"action\":{\"text\":\"Add 30 to the result of step 1.\"},\"result\":{\"response\":\"The final result after adding 30 to the result of step 1 is 100052.\"}}]\n\nCurrent objective: Output the final result as a number.\n\n The original question was: What is the result of 30 + (10002200 / 100)? Only respond with a number..\n\n\n\nYou may extract and combine relevant data from your previous steps when responding to me."
                       ],
-                      "estimatedTokens": 402,
+                      "estimatedTokens": 419,
                       "options": {
                         "openai_api_key": {
                           "lc": 1,
@@ -362,7 +372,9 @@
                         "temperature": 0,
                         "timeout": 60000,
                         "max_retries": 2,
-                        "configuration": {},
+                        "configuration": {
+                          "baseURL": "https://api.openai.com/v1"
+                        },
                         "model_kwargs": {}
                       }
                     }
@@ -374,8 +386,8 @@
         ],
         "Calculator3": [
           {
-            "startTime": 1733911685828,
-            "executionTime": 1,
+            "startTime": 1734619750502,
+            "executionTime": 2,
             "executionStatus": "success",
             "source": [
               null
@@ -416,7 +428,7 @@
             }
           },
           {
-            "startTime": 1733911689609,
+            "startTime": 1734619754078,
             "executionTime": 0,
             "executionStatus": "success",
             "source": [
@@ -449,8 +461,8 @@
         "AI Agent3": [
           {
             "hints": [],
-            "startTime": 1733911682278,
-            "executionTime": 9329,
+            "startTime": 1734619746481,
+            "executionTime": 9252,
             "source": [
               {
                 "previousNode": "When clicking \"Test workflow\""
@@ -530,8 +542,8 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2024-12-11T10:08:02.278Z",
-  "stoppedAt": "2024-12-11T10:08:11.607Z",
+  "startedAt": "2024-12-19T14:49:06.481Z",
+  "stoppedAt": "2024-12-19T14:49:15.733Z",
   "status": "running",
   "finished": true
 }

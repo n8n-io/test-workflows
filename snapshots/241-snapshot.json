@@ -6,7 +6,7 @@
         "When clicking \"Test workflow\"": [
           {
             "hints": [],
-            "startTime": 1733911689987,
+            "startTime": 1734619752658,
             "executionTime": 0,
             "source": [],
             "executionStatus": "success",
@@ -26,8 +26,8 @@
         ],
         "OpenAI Chat Model": [
           {
-            "startTime": 1733911689991,
-            "executionTime": 1534,
+            "startTime": 1734619752666,
+            "executionTime": 815,
             "executionStatus": "success",
             "source": [
               null
@@ -69,7 +69,9 @@
                         "temperature": 0,
                         "timeout": 60000,
                         "max_retries": 2,
-                        "configuration": {},
+                        "configuration": {
+                          "baseURL": "https://api.openai.com/v1"
+                        },
                         "model_kwargs": {}
                       }
                     }
@@ -91,8 +93,8 @@
             }
           },
           {
-            "startTime": 1733911691525,
-            "executionTime": 394,
+            "startTime": 1734619753487,
+            "executionTime": 371,
             "executionStatus": "success",
             "source": [
               null
@@ -134,7 +136,9 @@
                         "temperature": 0,
                         "timeout": 60000,
                         "max_retries": 2,
-                        "configuration": {},
+                        "configuration": {
+                          "baseURL": "https://api.openai.com/v1"
+                        },
                         "model_kwargs": {}
                       }
                     }
@@ -146,8 +150,8 @@
         ],
         "Calculator": [
           {
-            "startTime": 1733911691525,
-            "executionTime": 0,
+            "startTime": 1734619753482,
+            "executionTime": 1,
             "executionStatus": "success",
             "source": [
               null
@@ -187,8 +191,8 @@
         "AI Agent": [
           {
             "hints": [],
-            "startTime": 1733911689987,
-            "executionTime": 1932,
+            "startTime": 1734619752658,
+            "executionTime": 1201,
             "source": [
               {
                 "previousNode": "When clicking \"Test workflow\""
@@ -217,8 +221,8 @@
         "Edit Fields": [
           {
             "hints": [],
-            "startTime": 1733911691919,
-            "executionTime": 4,
+            "startTime": 1734619753859,
+            "executionTime": 13,
             "source": [
               {
                 "previousNode": "AI Agent"
@@ -244,8 +248,8 @@
         ],
         "Azure OpenAI Chat Model": [
           {
-            "startTime": 1733911691928,
-            "executionTime": 1711,
+            "startTime": 1734619753882,
+            "executionTime": 1624,
             "executionStatus": "success",
             "source": [
               null
@@ -317,8 +321,8 @@
             }
           },
           {
-            "startTime": 1733911693640,
-            "executionTime": 729,
+            "startTime": 1734619755509,
+            "executionTime": 1015,
             "executionStatus": "success",
             "source": [
               null
@@ -380,7 +384,7 @@
         ],
         "Calculator1": [
           {
-            "startTime": 1733911693639,
+            "startTime": 1734619755507,
             "executionTime": 0,
             "executionStatus": "success",
             "source": [
@@ -420,7 +424,7 @@
         ],
         "Structured Output Parser": [
           {
-            "startTime": 1733911694369,
+            "startTime": 1734619756524,
             "executionTime": 0,
             "executionStatus": "success",
             "source": [
@@ -446,7 +450,7 @@
                   {
                     "json": {
                       "action": "parse",
-                      "text": "```json\n{\"output\":{\"result\":100}}\n```"
+                      "text": "```json\n{\n  \"output\": {\n    \"result\": 100\n  }\n}\n```"
                     }
                   }
                 ]
@@ -465,8 +469,8 @@
         "AI Agent1": [
           {
             "hints": [],
-            "startTime": 1733911691923,
-            "executionTime": 2446,
+            "startTime": 1734619753872,
+            "executionTime": 2652,
             "source": [
               {
                 "previousNode": "When clicking \"Test workflow\""
@@ -494,8 +498,8 @@
         "Edit Fields1": [
           {
             "hints": [],
-            "startTime": 1733911694369,
-            "executionTime": 2,
+            "startTime": 1734619756525,
+            "executionTime": 6,
             "source": [
               {
                 "previousNode": "AI Agent1"
@@ -589,8 +593,8 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2024-12-11T10:08:09.987Z",
-  "stoppedAt": "2024-12-11T10:08:14.371Z",
+  "startedAt": "2024-12-19T14:49:12.657Z",
+  "stoppedAt": "2024-12-19T14:49:16.531Z",
   "status": "running",
   "finished": true
 }

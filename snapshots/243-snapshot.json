@@ -6,7 +6,7 @@
         "When clicking \"Test workflow\"": [
           {
             "hints": [],
-            "startTime": 1733911691617,
+            "startTime": 1734619756155,
             "executionTime": 0,
             "source": [],
             "executionStatus": "success",
@@ -26,8 +26,8 @@
         ],
         "OpenAI Chat Model2": [
           {
-            "startTime": 1733911691619,
-            "executionTime": 1326,
+            "startTime": 1734619756162,
+            "executionTime": 1346,
             "executionStatus": "success",
             "source": [
               null
@@ -69,7 +69,9 @@
                         "temperature": 0,
                         "timeout": 60000,
                         "max_retries": 2,
-                        "configuration": {},
+                        "configuration": {
+                          "baseURL": "https://api.openai.com/v1"
+                        },
                         "model_kwargs": {}
                       }
                     }
@@ -82,6 +84,105 @@
                 {
                   "node": "OpenAI Chat Model2",
                   "runIndex": 0
+                },
+                {
+                  "node": "OpenAI Chat Model2",
+                  "runIndex": 1
+                }
+              ]
+            }
+          },
+          {
+            "startTime": 1734619757511,
+            "executionTime": 669,
+            "executionStatus": "success",
+            "source": [
+              null
+            ],
+            "data": {
+              "ai_languageModel": [
+                [
+                  {
+                    "json": {
+                      "response": {
+                        "object": true
+                      },
+                      "tokenUsage": {
+                        "object": true
+                      }
+                    }
+                  }
+                ]
+              ]
+            },
+            "inputOverride": {
+              "ai_languageModel": [
+                [
+                  {
+                    "json": {
+                      "messages": [
+                        "System: Answer the following questions as best you can. You have access to the following tools:\n\ncalculator: Useful for getting the result of a math expression. The input to this tool should be a valid mathematical expression that could be executed by a simple calculator.\n\nThe way you use the tools is by specifying a json blob, denoted below by $JSON_BLOB\nSpecifically, this $JSON_BLOB should have a \"action\" key (with the name of the tool to use) and a \"action_input\" key (with the input to the tool going here). \nThe $JSON_BLOB should only contain a SINGLE action, do NOT return a list of multiple actions. Here is an example of a valid $JSON_BLOB:\n\n```\n{\n  \"action\": \"calculator\",\n  \"action_input\": \"1 + 2\"\n}\n```\n\nALWAYS use the following format:\n\nQuestion: the input question you must answer\nThought: you should always think about what to do\nAction: \n```\n$JSON_BLOB\n```\nObservation: the result of the action\n... (this Thought/Action/Observation can repeat N times)\nThought: I now know the final answer\nFinal Answer: the final answer to the original input question\n\nBegin! Reminder to always use the exact characters `Final Answer` when responding.\nHuman: What is the result of 30 + (10002200 / 100)? Only respond with a number.\n\nThis was your previous work (but I haven't seen any of it! I only see what you return as final answer):\nQuestion: What is the result of 30 + (10002200 / 100)?\nThought: I need to calculate the division first and then add 30 to the result.\nAction: \n```\n{\n  \"action\": \"calculator\",\n  \"action_input\": \"30 + (10002200 / 100)\"\n}\n```\n\nObservation: 100052\nThought:"
+                      ],
+                      "estimatedTokens": 394,
+                      "options": {
+                        "openai_api_key": {
+                          "lc": 1,
+                          "type": "secret",
+                          "id": [
+                            "OPENAI_API_KEY"
+                          ]
+                        },
+                        "model": "gpt-4o-mini",
+                        "temperature": 0,
+                        "timeout": 60000,
+                        "max_retries": 2,
+                        "configuration": {
+                          "baseURL": "https://api.openai.com/v1"
+                        },
+                        "model_kwargs": {}
+                      }
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Calculator2": [
+          {
+            "startTime": 1734619757509,
+            "executionTime": 0,
+            "executionStatus": "success",
+            "source": [
+              null
+            ],
+            "data": {
+              "ai_tool": [
+                [
+                  {
+                    "json": {
+                      "response": "100052"
+                    }
+                  }
+                ]
+              ]
+            },
+            "inputOverride": {
+              "ai_tool": [
+                [
+                  {
+                    "json": {
+                      "query": "30 + (10002200 / 100)"
+                    }
+                  }
+                ]
+              ]
+            },
+            "metadata": {
+              "subRun": [
+                {
+                  "node": "Calculator2",
+                  "runIndex": 0
                 }
               ]
             }
@@ -90,8 +191,8 @@
         "AI Agent2": [
           {
             "hints": [],
-            "startTime": 1733911691617,
-            "executionTime": 1328,
+            "startTime": 1734619756155,
+            "executionTime": 2026,
             "source": [
               {
                 "previousNode": "When clicking \"Test workflow\""
@@ -103,7 +204,7 @@
                 [
                   {
                     "json": {
-                      "output": "Question: What is the result of 30 + (10002200 / 100)?\nThought: I need to calculate the division first and then add 30 to the result.\nAction: \n```\n$JSON_BLOB\n```",
+                      "output": "100052",
                       "intermediateSteps": [
                         "json array"
                       ]
@@ -120,8 +221,8 @@
         "Edit Fields2": [
           {
             "hints": [],
-            "startTime": 1733911692945,
-            "executionTime": 0,
+            "startTime": 1734619758181,
+            "executionTime": 1,
             "source": [
               {
                 "previousNode": "AI Agent2"
@@ -133,8 +234,8 @@
                 [
                   {
                     "json": {
-                      "calculator_called": false,
-                      "has_correct_output": "false"
+                      "calculator_called": true,
+                      "has_correct_output": "true"
                     },
                     "pairedItem": {
                       "item": 0
@@ -158,6 +259,20 @@
               {
                 "node": "OpenAI Chat Model2",
                 "runIndex": 0
+              },
+              {
+                "node": "OpenAI Chat Model2",
+                "runIndex": 1
+              }
+            ]
+          }
+        ],
+        "Calculator2": [
+          {
+            "subRun": [
+              {
+                "node": "Calculator2",
+                "runIndex": 0
               }
             ]
           }
@@ -168,8 +283,8 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2024-12-11T10:08:11.617Z",
-  "stoppedAt": "2024-12-11T10:08:12.945Z",
+  "startedAt": "2024-12-19T14:49:16.154Z",
+  "stoppedAt": "2024-12-19T14:49:18.182Z",
   "status": "running",
   "finished": true
 }

@@ -6,7 +6,7 @@
         "When clicking \"Test workflow\"": [
           {
             "hints": [],
-            "startTime": 1733911697331,
+            "startTime": 1734619761421,
             "executionTime": 0,
             "source": [],
             "executionStatus": "success",
@@ -32,8 +32,8 @@
                 "location": "outputPane"
               }
             ],
-            "startTime": 1733911697331,
-            "executionTime": 2,
+            "startTime": 1734619761421,
+            "executionTime": 4,
             "source": [
               {
                 "previousNode": "When clicking \"Test workflow\""
@@ -58,8 +58,8 @@
         ],
         "Default Data Loader": [
           {
-            "startTime": 1733911697334,
-            "executionTime": 8,
+            "startTime": 1734619761428,
+            "executionTime": 14,
             "executionStatus": "success",
             "source": [
               null
@@ -106,8 +106,8 @@
         ],
         "Token Splitter": [
           {
-            "startTime": 1733911697334,
-            "executionTime": 8,
+            "startTime": 1734619761429,
+            "executionTime": 12,
             "executionStatus": "success",
             "source": [
               null
@@ -148,8 +148,8 @@
         ],
         "Embeddings OpenAI": [
           {
-            "startTime": 1733911699106,
-            "executionTime": 1431,
+            "startTime": 1734619762111,
+            "executionTime": 579,
             "executionStatus": "success",
             "source": [
               null
@@ -204,8 +204,8 @@
         "Pinecone Vector Store": [
           {
             "hints": [],
-            "startTime": 1733911697333,
-            "executionTime": 3588,
+            "startTime": 1734619761425,
+            "executionTime": 1670,
             "source": [
               {
                 "previousNode": "Code"
@@ -355,8 +355,8 @@
         "Check Vector Store Populated": [
           {
             "hints": [],
-            "startTime": 1733911700921,
-            "executionTime": 0,
+            "startTime": 1734619763095,
+            "executionTime": 2,
             "source": [
               {
                 "previousNode": "Pinecone Vector Store"
@@ -384,8 +384,8 @@
         "Wait": [
           {
             "hints": [],
-            "startTime": 1733911700921,
-            "executionTime": 15001,
+            "startTime": 1734619763097,
+            "executionTime": 15000,
             "source": [
               {
                 "previousNode": "Check Vector Store Populated"
@@ -412,8 +412,8 @@
         ],
         "Embeddings OpenAI10": [
           {
-            "startTime": 1733911715926,
-            "executionTime": 3815,
+            "startTime": 1734619778102,
+            "executionTime": 782,
             "executionStatus": "success",
             "source": [
               null
@@ -455,8 +455,8 @@
         "Pinecone Vector Store1": [
           {
             "hints": [],
-            "startTime": 1733911715922,
-            "executionTime": 5377,
+            "startTime": 1734619778097,
+            "executionTime": 2523,
             "source": [
               {
                 "previousNode": "Wait"
@@ -465,333 +465,13 @@
             "executionStatus": "success",
             "data": {
               "main": [
-                [
-                  {
-                    "json": {
-                      "document": {
-                        "object": true
-                      },
-                      "score": 0.438237041
-                    },
-                    "pairedItem": {
-                      "item": 0
-                    }
-                  },
-                  {
-                    "json": {
-                      "document": {
-                        "object": true
-                      },
-                      "score": 0.383477718
-                    },
-                    "pairedItem": {
-                      "item": 0
-                    }
-                  },
-                  {
-                    "json": {
-                      "document": {
-                        "object": true
-                      },
-                      "score": 0.332747936
-                    },
-                    "pairedItem": {
-                      "item": 0
-                    }
-                  },
-                  {
-                    "json": {
-                      "document": {
-                        "object": true
-                      },
-                      "score": 0.329087853
-                    },
-                    "pairedItem": {
-                      "item": 0
-                    }
-                  }
-                ]
-              ]
-            }
-          }
-        ],
-        "Check Vector Store Retrieval": [
-          {
-            "hints": [],
-            "startTime": 1733911721299,
-            "executionTime": 1,
-            "source": [
-              {
-                "previousNode": "Pinecone Vector Store1"
-              }
-            ],
-            "executionStatus": "success",
-            "data": {
-              "main": [
-                [
-                  {
-                    "json": {
-                      "output_length_matches": true,
-                      "has_content": true,
-                      "has_meta": true
-                    },
-                    "pairedItem": {
-                      "item": 0
-                    }
-                  }
-                ]
-              ]
-            }
-          }
-        ],
-        "Vector Store Retriever": [
-          {
-            "startTime": 1733911721305,
-            "executionTime": 2386,
-            "executionStatus": "success",
-            "source": [
-              null
-            ],
-            "data": {
-              "ai_retriever": [
-                [
-                  {
-                    "json": {
-                      "response": [
-                        "json array"
-                      ]
-                    }
-                  }
-                ]
-              ]
-            },
-            "inputOverride": {
-              "ai_retriever": [
-                [
-                  {
-                    "json": {
-                      "query": "What is the size of a block header with no transactions? Respond only with number of bytes."
-                    }
-                  }
-                ]
-              ]
-            },
-            "metadata": {
-              "subRun": [
-                {
-                  "node": "Vector Store Retriever",
-                  "runIndex": 0
-                }
-              ]
-            }
-          }
-        ],
-        "Pinecone Vector Store2": [
-          {
-            "startTime": 1733911721305,
-            "executionTime": 2386,
-            "executionStatus": "success",
-            "source": [
-              null
-            ],
-            "data": {
-              "ai_vectorStore": [
-                [
-                  {
-                    "json": {
-                      "response": [
-                        "json array"
-                      ]
-                    }
-                  }
-                ]
-              ]
-            },
-            "inputOverride": {
-              "ai_vectorStore": [
-                [
-                  {
-                    "json": {
-                      "query": "What is the size of a block header with no transactions? Respond only with number of bytes.",
-                      "k": 4
-                    }
-                  }
-                ]
-              ]
-            },
-            "metadata": {
-              "subRun": [
-                {
-                  "node": "Pinecone Vector Store2",
-                  "runIndex": 0
-                }
-              ]
-            }
-          }
-        ],
-        "Embeddings OpenAI9": [
-          {
-            "startTime": 1733911721305,
-            "executionTime": 327,
-            "executionStatus": "success",
-            "source": [
-              null
-            ],
-            "data": {
-              "ai_embedding": [
-                [
-                  {
-                    "json": {
-                      "response": [
-                        "json array"
-                      ]
-                    }
-                  }
-                ]
-              ]
-            },
-            "inputOverride": {
-              "ai_embedding": [
-                [
-                  {
-                    "json": {
-                      "query": "What is the size of a block header with no transactions? Respond only with number of bytes."
-                    }
-                  }
-                ]
-              ]
-            },
-            "metadata": {
-              "subRun": [
-                {
-                  "node": "Embeddings OpenAI9",
-                  "runIndex": 0
-                }
-              ]
-            }
-          }
-        ],
-        "OpenAI Chat Model": [
-          {
-            "startTime": 1733911723693,
-            "executionTime": 403,
-            "executionStatus": "success",
-            "source": [
-              null
-            ],
-            "data": {
-              "ai_languageModel": [
-                [
-                  {
-                    "json": {
-                      "response": {
-                        "object": true
-                      },
-                      "tokenUsage": {
-                        "object": true
-                      }
-                    }
-                  }
-                ]
-              ]
-            },
-            "inputOverride": {
-              "ai_languageModel": [
-                [
-                  {
-                    "json": {
-                      "messages": [
-                        "System: Use the following pieces of context to answer the users question. \nIf you don't know the answer, just say that you don't know, don't try to make up an answer.\n----------------\n new coins than everyone else combined, than to undermine the system and the validity of his own wealth. 7. Reclaiming Disk Space Once the latest transaction in a coin is buried under enough blocks, the spent transactions before it can be discarded to save disk space. To facilitate this without breaking the block's hash, transactions are hashed in a Merkle Tree [7][2][5], with only the root included in the block's hash. Old blocks can then be compacted by stubbing off branches of the tree. The interior hashes do not need to be stored. A block header with no transactions would be about 80 bytes. If we suppose blocks are generated every 10 minutes, 80 bytes * 6 * 24 * 365 = 4.2MB per year. With computer systems typically selling with 2GB of RAM as of 2008, and Moore's Law predicting current growth of 1.2GB per year, storage should not be a problem even if the block headers must be kept in memory. 4 BlockBlock Block Header (Block Hash) Prev Hash Nonce Hash01 Hash0 Hash1 Hash2 Hash3 Hash23 Root Hash Hash01 Hash2 Tx3 Hash23 Block Header (Block Hash) Root Hash Transactions Hashed in a Merkle Tree After Pruning Tx0-2 from the Block Prev Hash Nonce Hash3 Tx0 Tx1 Tx2 Tx3 8. Simplified Payment Verification It is possible to verify payments without running a full network node. A user only needs to keep a copy of the block headers of the longest proof-of-work chain, which he can get by querying network nodes until he's convinced he has the longest chain, and obtain the Merkle branch linking the transaction to the block it's timestamped in. He can't check the transaction for himself, but by linking it to a place in the chain, he can see that a network node has accepted it, and blocks added after it further confirm the network has accepted it. As such, the verification is reliable as long as honest nodes control the network, but is more vulnerable if the network is overpowered by an attacker. While network nodes can verify transactions for themselves, the simplified method can be fooled by an attacker's fabricated transactions for as long as the attacker can continue to overpower the network. One strategy to protect against this would be to accept alerts from network nodes when they detect an invalid block, prompting the user's software to download the\n\n next block simultaneously, some nodes may receive one or the other first. In that case, they work on the first one they received, but save the other branch in case it becomes longer. The tie will be broken when the next proof- of-work is found and one branch becomes longer; the nodes that were working on the other branch will then switch to the longer one. 3 Block Prev Hash Nonce Tx Tx ... Block Prev Hash Nonce Tx Tx ... New transaction broadcasts do not necessarily need to reach all nodes. As long as they reach many nodes, they will get into a block before long. Block broadcasts are also tolerant of dropped messages. If a node does not receive a block, it will request it when it receives the next block and realizes it missed one. 6. Incentive By convention, the first transaction in a block is a special transaction that starts a new coin owned by the creator of the block. This adds an incentive for nodes to support the network, and provides a way to initially distribute coins into circulation, since there is no central authority to issue them. The steady addition of a constant of amount of new coins is analogous to gold miners expending resources to add gold to circulation. In our case, it is CPU time and electricity that is expended. The incentive can also be funded with transaction fees. If the output value of a transaction is less than its input value, the difference is a transaction fee that is added to the incentive value of the block containing the transaction. Once a predetermined number of coins have entered circulation, the incentive can transition entirely to transaction fees and be completely inflation free. The incentive may help encourage nodes to stay honest. If a greedy attacker is able to assemble more CPU power than all the honest nodes, he would have to choose between using it to defraud people by stealing back his payments, or using it to generate new coins. He ought to find it more profitable to play by the rules, such rules that favour him with more new coins than everyone else combined, than to undermine the system and the validity of his own wealth. 7. Reclaiming Disk Space Once the latest transaction in a coin is buried under enough blocks, the spent transactions before it can be discarded to save disk space. To facilitate this without breaking the block's hash, transactions are hashed in a Merkle Tree [7][2][5], with only the root included in the block's hash. Old blocks can then be compacted by stubbing\n\n confirm the network has accepted it. As such, the verification is reliable as long as honest nodes control the network, but is more vulnerable if the network is overpowered by an attacker. While network nodes can verify transactions for themselves, the simplified method can be fooled by an attacker's fabricated transactions for as long as the attacker can continue to overpower the network. One strategy to protect against this would be to accept alerts from network nodes when they detect an invalid block, prompting the user's software to download the full block and alerted transactions to confirm the inconsistency. Businesses that receive frequent payments will probably still want to run their own nodes for more independent security and quicker verification. 9. Combining and Splitting Value Although it would be possible to handle coins individually, it would be unwieldy to make a separate transaction for every cent in a transfer. To allow value to be split and combined, transactions contain multiple inputs and outputs. Normally there will be either a single input from a larger previous transaction or multiple inputs combining smaller amounts, and at most two outputs: one for the payment, and one returning the change, if any, back to the sender. It should be noted that fan-out, where a transaction depends on several transactions, and those transactions depend on many more, is not a problem here. There is never the need to extract a complete standalone copy of a transaction's history. 5 Transaction In ... In Out ... Hash01 Hash2 Hash3 Hash23 Block Header Merkle Root Prev Hash Nonce Block Header Merkle Root Prev Hash Nonce Block Header Merkle Root Prev Hash Nonce Merkle Branch for Tx3 Longest Proof-of-Work Chain Tx3 10. Privacy The traditional banking model achieves a level of privacy by limiting access to information to the parties involved and the trusted third party. The necessity to announce all transactions publicly precludes this method, but privacy can still be maintained by breaking the flow of information in another place: by keeping public keys anonymous. The public can see that someone is sending an amount to someone else, but without information linking the transaction to anyone. This is similar to the level of information released by stock exchanges, where the time and size of individual trades, the \"tape\", is made public, but without telling who the parties were. As an additional firewall, a new key pair should be used for each transaction to keep them from being linked to a common owner. Some linking is still unavoidable with multi-input transactions, which necessarily reveal that their inputs\n\n-work, the block cannot be changed without redoing the work. As later blocks are chained after it, the work to change the block would include redoing all the blocks after it. The proof-of-work also solves the problem of determining representation in majority decision making. If the majority were based on one-IP-address-one-vote, it could be subverted by anyone able to allocate many IPs. Proof-of-work is essentially one-CPU-one-vote. The majority decision is represented by the longest chain, which has the greatest proof-of-work effort invested in it. If a majority of CPU power is controlled by honest nodes, the honest chain will grow the fastest and outpace any competing chains. To modify a past block, an attacker would have to redo the proof-of-work of the block and all blocks after it and then catch up with and surpass the work of the honest nodes. We will show later that the probability of a slower attacker catching up diminishes exponentially as subsequent blocks are added. To compensate for increasing hardware speed and varying interest in running nodes over time, the proof-of-work difficulty is determined by a moving average targeting an average number of blocks per hour. If they're generated too fast, the difficulty increases. 5. Network The steps to run the network are as follows: 1) New transactions are broadcast to all nodes. 2) Each node collects new transactions into a block. 3) Each node works on finding a difficult proof-of-work for its block. 4) When a node finds a proof-of-work, it broadcasts the block to all nodes. 5) Nodes accept the block only if all transactions in it are valid and not already spent. 6) Nodes express their acceptance of the block by working on creating the next block in the chain, using the hash of the accepted block as the previous hash. Nodes always consider the longest chain to be the correct one and will keep working on extending it. If two nodes broadcast different versions of the next block simultaneously, some nodes may receive one or the other first. In that case, they work on the first one they received, but save the other branch in case it becomes longer. The tie will be broken when the next proof- of-work is found and one branch becomes longer; the nodes that were working on the other branch will then switch to the longer one. 3 Block Prev Hash Nonce Tx Tx ... Block Prev Hash Nonce Tx Tx ... New transaction broadcasts do not necessarily need\nHuman: What is the size of a block header with no transactions? Respond only with number of bytes."
-                      ],
-                      "estimatedTokens": 2059,
-                      "options": {
-                        "openai_api_key": {
-                          "lc": 1,
-                          "type": "secret",
-                          "id": [
-                            "OPENAI_API_KEY"
-                          ]
-                        },
-                        "model": "gpt-3.5-turbo-0125",
-                        "temperature": 0,
-                        "timeout": 60000,
-                        "max_retries": 2,
-                        "configuration": {},
-                        "model_kwargs": {}
-                      }
-                    }
-                  }
-                ]
-              ]
-            },
-            "metadata": {
-              "subRun": [
-                {
-                  "node": "OpenAI Chat Model",
-                  "runIndex": 0
-                }
-              ]
-            }
-          }
-        ],
-        "Question and Answer Chain": [
-          {
-            "hints": [],
-            "startTime": 1733911721300,
-            "executionTime": 2796,
-            "source": [
-              {
-                "previousNode": "Check Vector Store Retrieval"
-              }
-            ],
-            "executionStatus": "success",
-            "data": {
-              "main": [
-                [
-                  {
-                    "json": {
-                      "response": {
-                        "object": true
-                      }
-                    },
-                    "pairedItem": {
-                      "item": 0
-                    }
-                  }
-                ]
-              ]
-            }
-          }
-        ],
-        "Edit Fields": [
-          {
-            "hints": [],
-            "startTime": 1733911724096,
-            "executionTime": 1,
-            "source": [
-              {
-                "previousNode": "Question and Answer Chain"
-              }
-            ],
-            "executionStatus": "success",
-            "data": {
-              "main": [
-                [
-                  {
-                    "json": {
-                      "output_matches": true
-                    },
-                    "pairedItem": {
-                      "item": 0
-                    }
-                  }
-                ]
+                []
               ]
             }
           }
         ]
       },
-      "lastNodeExecuted": "Edit Fields"
+      "lastNodeExecuted": "Pinecone Vector Store1"
     },
     "executionData": {
       "contextData": {},
@@ -836,46 +516,6 @@
               }
             ]
           }
-        ],
-        "Embeddings OpenAI9": [
-          {
-            "subRun": [
-              {
-                "node": "Embeddings OpenAI9",
-                "runIndex": 0
-              }
-            ]
-          }
-        ],
-        "Pinecone Vector Store2": [
-          {
-            "subRun": [
-              {
-                "node": "Pinecone Vector Store2",
-                "runIndex": 0
-              }
-            ]
-          }
-        ],
-        "Vector Store Retriever": [
-          {
-            "subRun": [
-              {
-                "node": "Vector Store Retriever",
-                "runIndex": 0
-              }
-            ]
-          }
-        ],
-        "OpenAI Chat Model": [
-          {
-            "subRun": [
-              {
-                "node": "OpenAI Chat Model",
-                "runIndex": 0
-              }
-            ]
-          }
         ]
       },
       "waitingExecution": {},
@@ -883,8 +523,8 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2024-12-11T10:08:17.330Z",
-  "stoppedAt": "2024-12-11T10:08:44.097Z",
+  "startedAt": "2024-12-19T14:49:21.420Z",
+  "stoppedAt": "2024-12-19T14:49:40.620Z",
   "status": "running",
   "finished": true
 }

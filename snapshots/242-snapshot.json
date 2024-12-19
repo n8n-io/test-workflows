@@ -6,7 +6,7 @@
         "When clicking \"Test workflow\"": [
           {
             "hints": [],
-            "startTime": 1733911690016,
+            "startTime": 1734619755756,
             "executionTime": 0,
             "source": [],
             "executionStatus": "success",
@@ -26,8 +26,8 @@
         ],
         "OpenAI Chat Model1": [
           {
-            "startTime": 1733911690021,
-            "executionTime": 2199,
+            "startTime": 1734619755763,
+            "executionTime": 1911,
             "executionStatus": "success",
             "source": [
               null
@@ -69,7 +69,9 @@
                         "temperature": 0,
                         "timeout": 60000,
                         "max_retries": 2,
-                        "configuration": {},
+                        "configuration": {
+                          "baseURL": "https://api.openai.com/v1"
+                        },
                         "model_kwargs": {}
                       }
                     }
@@ -89,8 +91,8 @@
         ],
         "Structured Output Parser1": [
           {
-            "startTime": 1733911692220,
-            "executionTime": 0,
+            "startTime": 1734619757675,
+            "executionTime": 1,
             "executionStatus": "success",
             "source": [
               null
@@ -115,7 +117,7 @@
                   {
                     "json": {
                       "action": "parse",
-                      "text": "```json\n{\n  \"output\": [\n    {\n      \"state_name\": \"California\",\n      \"capital\": \"Sacramento\",\n      \"electoral_college_votes\": 55\n    },\n    {\n      \"state_name\": \"Texas\",\n      \"capital\": \"Austin\",\n      \"electoral_college_votes\": 38\n    },\n    {\n      \"state_name\": \"Florida\",\n      \"capital\": \"Tallahassee\",\n      \"electoral_college_votes\": 29\n    },\n    {\n      \"state_name\": \"New York\",\n      \"capital\": \"Albany\",\n      \"electoral_college_votes\": 29\n    },\n    {\n      \"state_name\": \"Pennsylvania\",\n      \"capital\": \"Harrisburg\",\n      \"electoral_college_votes\": 20\n    }\n  ]\n}\n```"
+                      "text": "```json\n{\"output\":[{\"state_name\":\"California\",\"capital\":\"Sacramento\",\"electoral_college_votes\":55},{\"state_name\":\"Texas\",\"capital\":\"Austin\",\"electoral_college_votes\":38},{\"state_name\":\"Florida\",\"capital\":\"Tallahassee\",\"electoral_college_votes\":29},{\"state_name\":\"New York\",\"capital\":\"Albany\",\"electoral_college_votes\":29},{\"state_name\":\"Pennsylvania\",\"capital\":\"Harrisburg\",\"electoral_college_votes\":20}]}\n```"
                     }
                   }
                 ]
@@ -134,8 +136,8 @@
         "Open AI Chat - Output Parsing": [
           {
             "hints": [],
-            "startTime": 1733911690016,
-            "executionTime": 2204,
+            "startTime": 1734619755756,
+            "executionTime": 1920,
             "source": [
               {
                 "previousNode": "When clicking \"Test workflow\""
@@ -193,8 +195,8 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2024-12-11T10:08:10.016Z",
-  "stoppedAt": "2024-12-11T10:08:12.220Z",
+  "startedAt": "2024-12-19T14:49:15.756Z",
+  "stoppedAt": "2024-12-19T14:49:17.676Z",
   "status": "running",
   "finished": true
 }

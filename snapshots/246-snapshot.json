@@ -6,8 +6,8 @@
         "When clicking \"Test workflow\"": [
           {
             "hints": [],
-            "startTime": 1733911694378,
-            "executionTime": 1,
+            "startTime": 1734619757690,
+            "executionTime": 0,
             "source": [],
             "executionStatus": "success",
             "data": {
@@ -26,8 +26,8 @@
         ],
         "OpenAI Chat Model": [
           {
-            "startTime": 1733911694380,
-            "executionTime": 407,
+            "startTime": 1734619757692,
+            "executionTime": 3664,
             "executionStatus": "success",
             "source": [
               null
@@ -69,7 +69,9 @@
                         "temperature": 0,
                         "timeout": 60000,
                         "max_retries": 2,
-                        "configuration": {},
+                        "configuration": {
+                          "baseURL": "https://api.openai.com/v1"
+                        },
                         "model_kwargs": {}
                       }
                     }
@@ -90,8 +92,8 @@
         "Open AI Chat": [
           {
             "hints": [],
-            "startTime": 1733911694379,
-            "executionTime": 408,
+            "startTime": 1734619757690,
+            "executionTime": 3666,
             "source": [
               {
                 "previousNode": "When clicking \"Test workflow\""
@@ -137,8 +139,8 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2024-12-11T10:08:14.378Z",
-  "stoppedAt": "2024-12-11T10:08:14.787Z",
+  "startedAt": "2024-12-19T14:49:17.689Z",
+  "stoppedAt": "2024-12-19T14:49:21.356Z",
   "status": "running",
   "finished": true
 }

@@ -6,7 +6,7 @@
         "When clicking ‘Test workflow’": [
           {
             "hints": [],
-            "startTime": 1733911713380,
+            "startTime": 1734619777524,
             "executionTime": 0,
             "source": [],
             "executionStatus": "success",
@@ -26,8 +26,8 @@
         ],
         "OpenAI Chat Model": [
           {
-            "startTime": 1733911713385,
-            "executionTime": 657,
+            "startTime": 1734619777534,
+            "executionTime": 671,
             "executionStatus": "success",
             "source": [
               null
@@ -68,7 +68,9 @@
                         "model": "gpt-4o-mini",
                         "timeout": 60000,
                         "max_retries": 2,
-                        "configuration": {},
+                        "configuration": {
+                          "baseURL": "https://api.openai.com/v1"
+                        },
                         "model_kwargs": {}
                       }
                     }
@@ -90,8 +92,8 @@
             }
           },
           {
-            "startTime": 1733911714650,
-            "executionTime": 646,
+            "startTime": 1734619778901,
+            "executionTime": 1347,
             "executionStatus": "success",
             "source": [
               null
@@ -132,7 +134,9 @@
                         "model": "gpt-4o-mini",
                         "timeout": 60000,
                         "max_retries": 2,
-                        "configuration": {},
+                        "configuration": {
+                          "baseURL": "https://api.openai.com/v1"
+                        },
                         "model_kwargs": {}
                       }
                     }
@@ -144,8 +148,8 @@
         ],
         "Vector Store Tool": [
           {
-            "startTime": 1733911714043,
-            "executionTime": 605,
+            "startTime": 1734619778206,
+            "executionTime": 693,
             "executionStatus": "error",
             "source": [
               null
@@ -155,7 +159,7 @@
                 [
                   {
                     "json": {
-                      "query": "What happened on October 17, 2023"
+                      "query": "What happened yesterday?"
                     }
                   }
                 ]
@@ -166,7 +170,7 @@
                 [
                   {
                     "json": {
-                      "query": "What happened on October 17, 2023"
+                      "query": "What happened yesterday?"
                     }
                   }
                 ]
@@ -182,13 +186,13 @@
             },
             "error": {
               "message": "The resource you are requesting could not be found",
-              "timestamp": 1733911714648,
+              "timestamp": 1734619778898,
               "name": "NodeOperationError",
               "description": "The resource you are requesting could not be found",
               "context": {},
               "cause": {
                 "message": "The resource you are requesting could not be found",
-                "timestamp": 1733911714648,
+                "timestamp": 1734619778897,
                 "name": "NodeApiError",
                 "description": "The model `gpt-4o-mini123` does not exist or you do not have access to it.",
                 "context": {},
@@ -197,20 +201,20 @@
                   "headers": {
                     "alt-svc": "h3=\":443\"; ma=86400",
                     "cf-cache-status": "DYNAMIC",
-                    "cf-ray": "8f04ac976ad3e52d-TXL",
+                    "cf-ray": "8f4833511cb34516-TXL",
                     "connection": "keep-alive",
                     "content-encoding": "gzip",
                     "content-type": "application/json; charset=utf-8",
-                    "date": "Wed, 11 Dec 2024 10:08:34 GMT",
+                    "date": "Thu, 19 Dec 2024 14:49:38 GMT",
                     "server": "cloudflare",
-                    "set-cookie": "__cf_bm=rx5vDkfy.VyObhmjB8RLpfgw8s8ISHdZlfB8SoWvwvY-1733911714-1.0.1.1-xZQAw5DpgKt5yt6DEji3j4BLfXnGDvOAM09x445gRctH8xRlverG1o1NWlUfElQ.rGalb2a6gQjO0YOm.tvl.g; path=/; expires=Wed, 11-Dec-24 10:38:34 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None, _cfuvid=yq6o.1LSC_dkhLfdXOYnPRWToWDV758C3GW_eDFfNb0-1733911714613-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None",
+                    "set-cookie": "__cf_bm=IkJjcfphWgeSYRc72Pr4b_U7ICKfPXMYeFEZ365GRJ4-1734619778-1.0.1.1-A7LAXjf79_b7QLfxGk574kADbeSo446pb9gKmJGOFznidwt7XtRPMs1s1.8ZLVDQM6z6K2YCbDh_do3OnyZ_uA; path=/; expires=Thu, 19-Dec-24 15:19:38 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None, _cfuvid=X..gXe5.hMpr3908VIBfoNNonmEh6zyiT3z4K7yGvms-1734619778888-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None",
                     "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
                     "transfer-encoding": "chunked",
                     "vary": "Origin",
                     "x-content-type-options": "nosniff",
-                    "x-request-id": "req_2e0d91ad02dac4706b4e6bd280c336c1"
+                    "x-request-id": "req_b45a38d30a3e48a0fe8b62d725048289"
                   },
-                  "request_id": "req_2e0d91ad02dac4706b4e6bd280c336c1",
+                  "request_id": "req_b45a38d30a3e48a0fe8b62d725048289",
                   "error": {
                     "message": "The model `gpt-4o-mini123` does not exist or you do not have access to it.",
                     "type": "invalid_request_error",
@@ -230,8 +234,8 @@
         ],
         "In-Memory Vector Store": [
           {
-            "startTime": 1733911714043,
-            "executionTime": 447,
+            "startTime": 1734619778207,
+            "executionTime": 524,
             "executionStatus": "success",
             "source": [
               null
@@ -254,7 +258,7 @@
                 [
                   {
                     "json": {
-                      "query": "What happened on October 17, 2023",
+                      "query": "What happened yesterday?",
                       "k": 4
                     }
                   }
@@ -273,8 +277,8 @@
         ],
         "Embeddings OpenAI": [
           {
-            "startTime": 1733911714043,
-            "executionTime": 447,
+            "startTime": 1734619778207,
+            "executionTime": 524,
             "executionStatus": "success",
             "source": [
               null
@@ -297,7 +301,7 @@
                 [
                   {
                     "json": {
-                      "query": "What happened on October 17, 2023"
+                      "query": "What happened yesterday?"
                     }
                   }
                 ]
@@ -315,8 +319,8 @@
         ],
         "OpenAI Chat Model1": [
           {
-            "startTime": 1733911714491,
-            "executionTime": 157,
+            "startTime": 1734619778732,
+            "executionTime": 166,
             "executionStatus": "error",
             "source": [
               null
@@ -329,7 +333,7 @@
                       "messages": [
                         "json array"
                       ],
-                      "estimatedTokens": 51,
+                      "estimatedTokens": 45,
                       "options": {
                         "object": true
                       }
@@ -346,7 +350,7 @@
                       "messages": [
                         "json array"
                       ],
-                      "estimatedTokens": 51,
+                      "estimatedTokens": 45,
                       "options": {
                         "object": true
                       }
@@ -365,7 +369,7 @@
             },
             "error": {
               "message": "The resource you are requesting could not be found",
-              "timestamp": 1733911714648,
+              "timestamp": 1734619778897,
               "name": "NodeApiError",
               "description": "The model `gpt-4o-mini123` does not exist or you do not have access to it.",
               "context": {},
@@ -374,20 +378,20 @@
                 "headers": {
                   "alt-svc": "h3=\":443\"; ma=86400",
                   "cf-cache-status": "DYNAMIC",
-                  "cf-ray": "8f04ac976ad3e52d-TXL",
+                  "cf-ray": "8f4833511cb34516-TXL",
                   "connection": "keep-alive",
                   "content-encoding": "gzip",
                   "content-type": "application/json; charset=utf-8",
-                  "date": "Wed, 11 Dec 2024 10:08:34 GMT",
+                  "date": "Thu, 19 Dec 2024 14:49:38 GMT",
                   "server": "cloudflare",
-                  "set-cookie": "__cf_bm=rx5vDkfy.VyObhmjB8RLpfgw8s8ISHdZlfB8SoWvwvY-1733911714-1.0.1.1-xZQAw5DpgKt5yt6DEji3j4BLfXnGDvOAM09x445gRctH8xRlverG1o1NWlUfElQ.rGalb2a6gQjO0YOm.tvl.g; path=/; expires=Wed, 11-Dec-24 10:38:34 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None, _cfuvid=yq6o.1LSC_dkhLfdXOYnPRWToWDV758C3GW_eDFfNb0-1733911714613-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None",
+                  "set-cookie": "__cf_bm=IkJjcfphWgeSYRc72Pr4b_U7ICKfPXMYeFEZ365GRJ4-1734619778-1.0.1.1-A7LAXjf79_b7QLfxGk574kADbeSo446pb9gKmJGOFznidwt7XtRPMs1s1.8ZLVDQM6z6K2YCbDh_do3OnyZ_uA; path=/; expires=Thu, 19-Dec-24 15:19:38 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None, _cfuvid=X..gXe5.hMpr3908VIBfoNNonmEh6zyiT3z4K7yGvms-1734619778888-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None",
                   "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
                   "transfer-encoding": "chunked",
                   "vary": "Origin",
                   "x-content-type-options": "nosniff",
-                  "x-request-id": "req_2e0d91ad02dac4706b4e6bd280c336c1"
+                  "x-request-id": "req_b45a38d30a3e48a0fe8b62d725048289"
                 },
-                "request_id": "req_2e0d91ad02dac4706b4e6bd280c336c1",
+                "request_id": "req_b45a38d30a3e48a0fe8b62d725048289",
                 "error": {
                   "message": "The model `gpt-4o-mini123` does not exist or you do not have access to it.",
                   "type": "invalid_request_error",
@@ -407,8 +411,8 @@
         "AI Agent": [
           {
             "hints": [],
-            "startTime": 1733911713380,
-            "executionTime": 1917,
+            "startTime": 1734619777524,
+            "executionTime": 2725,
             "source": [
               {
                 "previousNode": "When clicking ‘Test workflow’"
@@ -420,7 +424,7 @@
                 [
                   {
                     "json": {
-                      "output": "I'm unable to provide specific events from yesterday at the moment. If you're interested in a particular area, such as news or sports, please let me know!"
+                      "output": "It seems that I am unable to retrieve information about events that occurred yesterday. If you have a specific topic or event in mind, please let me know, and I can help you with that!"
                     },
                     "pairedItem": {
                       "item": 0
@@ -498,8 +502,8 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2024-12-11T10:08:33.380Z",
-  "stoppedAt": "2024-12-11T10:08:35.297Z",
+  "startedAt": "2024-12-19T14:49:37.524Z",
+  "stoppedAt": "2024-12-19T14:49:40.249Z",
   "status": "running",
   "finished": true
 }
