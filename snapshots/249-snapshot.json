@@ -6,7 +6,7 @@
         "When clicking \"Test workflow\"": [
           {
             "hints": [],
-            "startTime": 1733911695225,
+            "startTime": 1734618405149,
             "executionTime": 0,
             "source": [],
             "executionStatus": "success",
@@ -27,8 +27,8 @@
         "Set Baseline": [
           {
             "hints": [],
-            "startTime": 1733911695225,
-            "executionTime": 0,
+            "startTime": 1734618405149,
+            "executionTime": 1,
             "source": [
               {
                 "previousNode": "When clicking \"Test workflow\""
@@ -59,8 +59,8 @@
                 "location": "outputPane"
               }
             ],
-            "startTime": 1733911695225,
-            "executionTime": 3,
+            "startTime": 1734618405150,
+            "executionTime": 5,
             "source": [
               {
                 "previousNode": "Set Baseline"
@@ -85,8 +85,8 @@
         ],
         "OpenAI Chat Model": [
           {
-            "startTime": 1733911695235,
-            "executionTime": 2010,
+            "startTime": 1734618405164,
+            "executionTime": 2347,
             "executionStatus": "success",
             "source": [
               null
@@ -128,7 +128,9 @@
                         "temperature": 0,
                         "timeout": 60000,
                         "max_retries": 2,
-                        "configuration": {},
+                        "configuration": {
+                          "baseURL": "https://api.openai.com/v1"
+                        },
                         "model_kwargs": {}
                       }
                     }
@@ -149,8 +151,8 @@
         "Summary - Simple - Stuff": [
           {
             "hints": [],
-            "startTime": 1733911695228,
-            "executionTime": 2018,
+            "startTime": 1734618405155,
+            "executionTime": 2356,
             "source": [
               {
                 "previousNode": "Set Article"
@@ -177,8 +179,8 @@
         ],
         "OpenAI Chat Model1": [
           {
-            "startTime": 1733911697252,
-            "executionTime": 1676,
+            "startTime": 1734618407522,
+            "executionTime": 2590,
             "executionStatus": "success",
             "source": [
               null
@@ -220,7 +222,9 @@
                         "temperature": 0,
                         "timeout": 60000,
                         "max_retries": 2,
-                        "configuration": {},
+                        "configuration": {
+                          "baseURL": "https://api.openai.com/v1"
+                        },
                         "model_kwargs": {}
                       }
                     }
@@ -241,8 +245,8 @@
         "Evaluate to Baseline": [
           {
             "hints": [],
-            "startTime": 1733911697246,
-            "executionTime": 1683,
+            "startTime": 1734618407511,
+            "executionTime": 2603,
             "source": [
               {
                 "previousNode": "Summary - Simple - Stuff"
@@ -254,7 +258,7 @@
                 [
                   {
                     "json": {
-                      "reasoning": "Step by step reasoning:1. Is the submission helpful? - Yes, the submission provides a concise summary of the Wikipedia article about the dancing plague of 1518, including key details such as the location, number of people involved, possible causes, and outcomes.2. Is the submission insightful? - Yes, the submission offers insights into the various theories surrounding the cause of the dancing plague, the controversy over the number of deaths, and the cultural impact of the event.3. Is the submission appropriate? - Yes, the submission is appropriate as it directly addresses the task of summarizing the Wikipedia article about the dancing plague of 1518.Therefore, the submission meets the Criteria.",
+                      "reasoning": "Step 1: Is the submission helpful?- The submission provides a concise summary of the Wikipedia article about the dancing plague of 1518.- It includes key information such as the location, number of people involved, possible causes, resolution, and cultural impact.- The submission is informative and covers the main points of the topic.- Overall, the submission is helpful in providing an overview of the dancing plague of 1518.Step 2: Is the submission insightful?- The submission discusses various theories about the cause of the dancing plague, including stress-induced mass hysteria and ergot poisoning.- It mentions the controversy surrounding the number of deaths during the plague.- The submission also highlights the cultural impact of the event.- The insights provided in the submission add depth to the summary of the dancing plague of 1518.Step 3: Is the submission appropriate?- The submission is appropriate as it stays focused on summarizing the Wikipedia article about the dancing plague of 1518.- It does not include irrelevant information or stray from the main topic.- The submission is suitable for the task at hand.Therefore, the submission meets the Criteria.",
                       "value": "Y",
                       "score": 1
                     },
@@ -300,8 +304,8 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2024-12-11T10:08:15.225Z",
-  "stoppedAt": "2024-12-11T10:08:18.929Z",
+  "startedAt": "2024-12-19T14:26:45.149Z",
+  "stoppedAt": "2024-12-19T14:26:50.114Z",
   "status": "running",
   "finished": true
 }

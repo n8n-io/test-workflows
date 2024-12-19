@@ -6,7 +6,7 @@
         "When clicking \"Test workflow\"": [
           {
             "hints": [],
-            "startTime": 1733911700906,
+            "startTime": 1734618411997,
             "executionTime": 0,
             "source": [],
             "executionStatus": "success",
@@ -26,7 +26,7 @@
         ],
         "Window Buffer Memory1": [
           {
-            "startTime": 1733911700910,
+            "startTime": 1734618412007,
             "executionTime": 0,
             "executionStatus": "success",
             "source": [
@@ -84,7 +84,7 @@
             }
           },
           {
-            "startTime": 1733911704237,
+            "startTime": 1734618415793,
             "executionTime": 0,
             "executionStatus": "success",
             "source": [
@@ -121,8 +121,8 @@
                         "formatting_instructions": "IMPORTANT: Always call `format_final_response` to format your final response!",
                         "chat_history": [],
                         "output": {
-                          "english_answer": "Magnets are special things that can pull some metals, like iron, towards them. They can stick to your fridge or make toys move without touching them! There are two sides to a magnet: one side is called 'north' and the other is 'south.' If you put two north sides together, they push away from each other, but if you put a north and a south side together, they stick!",
-                          "czech_answer": "Magnety jsou zvláštní věci, které mohou přitahovat některé kovy, jako je železo. Mohou se přichytit na vaši lednici nebo pohybovat hračkami bez dotyku! Magnet má dvě strany: jedna se nazývá 'sever' a druhá 'jih.' Když dáte dvě severní strany k sobě, odtlačují se, ale když dáte severní a jižní stranu k sobě, přichytí se!"
+                          "english_answer": "Magnets are special things that can pull some metals, like iron, towards them. They can stick to the fridge or make toys move without touching them! There are two sides to a magnet: one side is called 'north' and the other is 'south.' If you put two magnets together, the north side of one will push away the north side of the other, but the north side will pull the south side closer. It's like magic!",
+                          "czech_answer": "Magnety jsou zvláštní věci, které mohou přitahovat některé kovy, jako je železo. Mohou se přichytit na lednici nebo pohybovat hračkami, aniž by se jich dotýkaly! Magnet má dvě strany: jedna strana se nazývá 'sever' a druhá 'jih.' Když dáte dva magnety k sobě, severní strana jednoho od sebe odtlačí severní stranu druhého, ale severní strana přitáhne jihovou stranu blíž. Je to jako kouzlo!"
                         }
                       }
                     }
@@ -132,7 +132,7 @@
             }
           },
           {
-            "startTime": 1733911704240,
+            "startTime": 1734618415800,
             "executionTime": 0,
             "executionStatus": "success",
             "source": [
@@ -170,7 +170,7 @@
             }
           },
           {
-            "startTime": 1733911705345,
+            "startTime": 1734618416634,
             "executionTime": 0,
             "executionStatus": "success",
             "source": [
@@ -229,7 +229,7 @@
                               "AIMessage"
                             ],
                             "kwargs": {
-                              "content": "{\"output\":{\"english_answer\":\"Magnets are special things that can pull some metals, like iron, towards them. They can stick to your fridge or make toys move without touching them! There are two sides to a magnet: one side is called 'north' and the other is 'south.' If you put two north sides together, they push away from each other, but if you put a north and a south side together, they stick!\",\"czech_answer\":\"Magnety jsou zvláštní věci, které mohou přitahovat některé kovy, jako je železo. Mohou se přichytit na vaši lednici nebo pohybovat hračkami bez dotyku! Magnet má dvě strany: jedna se nazývá 'sever' a druhá 'jih.' Když dáte dvě severní strany k sobě, odtlačují se, ale když dáte severní a jižní stranu k sobě, přichytí se!\"}}",
+                              "content": "{\"output\":{\"english_answer\":\"Magnets are special things that can pull some metals, like iron, towards them. They can stick to the fridge or make toys move without touching them! There are two sides to a magnet: one side is called 'north' and the other is 'south.' If you put two magnets together, the north side of one will push away the north side of the other, but the north side will pull the south side closer. It's like magic!\",\"czech_answer\":\"Magnety jsou zvláštní věci, které mohou přitahovat některé kovy, jako je železo. Mohou se přichytit na lednici nebo pohybovat hračkami, aniž by se jich dotýkaly! Magnet má dvě strany: jedna strana se nazývá 'sever' a druhá 'jih.' Když dáte dva magnety k sobě, severní strana jednoho od sebe odtlačí severní stranu druhého, ale severní strana přitáhne jihovou stranu blíž. Je to jako kouzlo!\"}}",
                               "tool_calls": [],
                               "invalid_tool_calls": [],
                               "additional_kwargs": {},
@@ -251,8 +251,8 @@
         ],
         "OpenAI Chat Model3": [
           {
-            "startTime": 1733911700913,
-            "executionTime": 3323,
+            "startTime": 1734618412012,
+            "executionTime": 3778,
             "executionStatus": "success",
             "source": [
               null
@@ -294,7 +294,9 @@
                         "temperature": 0.1,
                         "timeout": 60000,
                         "max_retries": 2,
-                        "configuration": {},
+                        "configuration": {
+                          "baseURL": "https://api.openai.com/v1"
+                        },
                         "model_kwargs": {}
                       }
                     }
@@ -316,8 +318,8 @@
             }
           },
           {
-            "startTime": 1733911704242,
-            "executionTime": 1102,
+            "startTime": 1734618415804,
+            "executionTime": 828,
             "executionStatus": "success",
             "source": [
               null
@@ -344,9 +346,9 @@
                   {
                     "json": {
                       "messages": [
-                        "System: You are a helpful assistant. Always provide both `english_answer` and `czech_answer` in the final output and be very concise.\n\nIMPORTANT: Always call `format_final_response` to format your final response!\nHuman: Hi, my name is Oleg. Tell me about magnets like I'm 5.\nAI: {\"output\":{\"english_answer\":\"Magnets are special things that can pull some metals, like iron, towards them. They can stick to your fridge or make toys move without touching them! There are two sides to a magnet: one side is called 'north' and the other is 'south.' If you put two north sides together, they push away from each other, but if you put a north and a south side together, they stick!\",\"czech_answer\":\"Magnety jsou zvláštní věci, které mohou přitahovat některé kovy, jako je železo. Mohou se přichytit na vaši lednici nebo pohybovat hračkami bez dotyku! Magnet má dvě strany: jedna se nazývá 'sever' a druhá 'jih.' Když dáte dvě severní strany k sobě, odtlačují se, ale když dáte severní a jižní stranu k sobě, přichytí se!\"}}\nHuman: Can you still remember my name?"
+                        "System: You are a helpful assistant. Always provide both `english_answer` and `czech_answer` in the final output and be very concise.\n\nIMPORTANT: Always call `format_final_response` to format your final response!\nHuman: Hi, my name is Oleg. Tell me about magnets like I'm 5.\nAI: {\"output\":{\"english_answer\":\"Magnets are special things that can pull some metals, like iron, towards them. They can stick to the fridge or make toys move without touching them! There are two sides to a magnet: one side is called 'north' and the other is 'south.' If you put two magnets together, the north side of one will push away the north side of the other, but the north side will pull the south side closer. It's like magic!\",\"czech_answer\":\"Magnety jsou zvláštní věci, které mohou přitahovat některé kovy, jako je železo. Mohou se přichytit na lednici nebo pohybovat hračkami, aniž by se jich dotýkaly! Magnet má dvě strany: jedna strana se nazývá 'sever' a druhá 'jih.' Když dáte dva magnety k sobě, severní strana jednoho od sebe odtlačí severní stranu druhého, ale severní strana přitáhne jihovou stranu blíž. Je to jako kouzlo!\"}}\nHuman: Can you still remember my name?"
                       ],
-                      "estimatedTokens": 282,
+                      "estimatedTokens": 308,
                       "options": {
                         "openai_api_key": {
                           "lc": 1,
@@ -359,7 +361,9 @@
                         "temperature": 0.1,
                         "timeout": 60000,
                         "max_retries": 2,
-                        "configuration": {},
+                        "configuration": {
+                          "baseURL": "https://api.openai.com/v1"
+                        },
                         "model_kwargs": {}
                       }
                     }
@@ -371,7 +375,7 @@
         ],
         "Structured Output Parser1": [
           {
-            "startTime": 1733911704237,
+            "startTime": 1734618415792,
             "executionTime": 0,
             "executionStatus": "success",
             "source": [
@@ -397,7 +401,7 @@
                   {
                     "json": {
                       "action": "parse",
-                      "text": "{\"output\":{\"english_answer\":\"Magnets are special things that can pull some metals, like iron, towards them. They can stick to your fridge or make toys move without touching them! There are two sides to a magnet: one side is called 'north' and the other is 'south.' If you put two north sides together, they push away from each other, but if you put a north and a south side together, they stick!\",\"czech_answer\":\"Magnety jsou zvláštní věci, které mohou přitahovat některé kovy, jako je železo. Mohou se přichytit na vaši lednici nebo pohybovat hračkami bez dotyku! Magnet má dvě strany: jedna se nazývá 'sever' a druhá 'jih.' Když dáte dvě severní strany k sobě, odtlačují se, ale když dáte severní a jižní stranu k sobě, přichytí se!\"}}"
+                      "text": "{\"output\":{\"english_answer\":\"Magnets are special things that can pull some metals, like iron, towards them. They can stick to the fridge or make toys move without touching them! There are two sides to a magnet: one side is called 'north' and the other is 'south.' If you put two magnets together, the north side of one will push away the north side of the other, but the north side will pull the south side closer. It's like magic!\",\"czech_answer\":\"Magnety jsou zvláštní věci, které mohou přitahovat některé kovy, jako je železo. Mohou se přichytit na lednici nebo pohybovat hračkami, aniž by se jich dotýkaly! Magnet má dvě strany: jedna strana se nazývá 'sever' a druhá 'jih.' Když dáte dva magnety k sobě, severní strana jednoho od sebe odtlačí severní stranu druhého, ale severní strana přitáhne jihovou stranu blíž. Je to jako kouzlo!\"}}"
                     }
                   }
                 ]
@@ -417,7 +421,7 @@
             }
           },
           {
-            "startTime": 1733911705345,
+            "startTime": 1734618416633,
             "executionTime": 0,
             "executionStatus": "success",
             "source": [
@@ -454,8 +458,8 @@
         "AI Agent5": [
           {
             "hints": [],
-            "startTime": 1733911700906,
-            "executionTime": 3331,
+            "startTime": 1734618411998,
+            "executionTime": 3796,
             "source": [
               {
                 "previousNode": "When clicking \"Test workflow\""
@@ -483,8 +487,8 @@
         "AI Agent3": [
           {
             "hints": [],
-            "startTime": 1733911704237,
-            "executionTime": 1108,
+            "startTime": 1734618415794,
+            "executionTime": 840,
             "source": [
               {
                 "previousNode": "AI Agent5"
@@ -512,8 +516,8 @@
         "Edit Fields1": [
           {
             "hints": [],
-            "startTime": 1733911705345,
-            "executionTime": 4,
+            "startTime": 1734618416634,
+            "executionTime": 9,
             "source": [
               {
                 "previousNode": "AI Agent3"
@@ -539,8 +543,8 @@
         ],
         "OpenAI Chat Model2": [
           {
-            "startTime": 1733911705353,
-            "executionTime": 693,
+            "startTime": 1734618416652,
+            "executionTime": 721,
             "executionStatus": "success",
             "source": [
               null
@@ -582,7 +586,9 @@
                         "temperature": 0.3,
                         "timeout": 60000,
                         "max_retries": 2,
-                        "configuration": {},
+                        "configuration": {
+                          "baseURL": "https://api.openai.com/v1"
+                        },
                         "model_kwargs": {}
                       }
                     }
@@ -604,8 +610,8 @@
             }
           },
           {
-            "startTime": 1733911706582,
-            "executionTime": 6761,
+            "startTime": 1734618417894,
+            "executionTime": 7954,
             "executionStatus": "success",
             "source": [
               null
@@ -647,7 +653,9 @@
                         "temperature": 0.3,
                         "timeout": 60000,
                         "max_retries": 2,
-                        "configuration": {},
+                        "configuration": {
+                          "baseURL": "https://api.openai.com/v1"
+                        },
                         "model_kwargs": {}
                       }
                     }
@@ -659,8 +667,8 @@
         ],
         "HTTP Request": [
           {
-            "startTime": 1733911706047,
-            "executionTime": 533,
+            "startTime": 1734618417376,
+            "executionTime": 515,
             "executionStatus": "success",
             "source": [
               null
@@ -700,8 +708,8 @@
         "AI Agent2": [
           {
             "hints": [],
-            "startTime": 1733911705349,
-            "executionTime": 7994,
+            "startTime": 1734618416643,
+            "executionTime": 9207,
             "source": [
               {
                 "previousNode": "When clicking \"Test workflow\""
@@ -713,7 +721,7 @@
                 [
                   {
                     "json": {
-                      "output": "Here is the content of the example website:\n\n```html\n<!doctype html>\n<html>\n<head>\n    <title>Example Domain</title>\n    <meta charset=\"utf-8\" />\n    <meta http-equiv=\"Content-type\" content=\"text/html; charset=utf-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n    <style type=\"text/css\">\n    body {\n        background-color: #f0f0f2;\n        margin: 0;\n        padding: 0;\n        font-family: -apple-system, system-ui, BlinkMacSystemFont, \"Segoe UI\", \"Open Sans\", \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n    }\n    div {\n        width: 600px;\n        margin: 5em auto;\n        padding: 2em;\n        background-color: #fdfdff;\n        border-radius: 0.5em;\n        box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.02);\n    }\n    a:link, a:visited {\n        color: #38488f;\n        text-decoration: none;\n    }\n    @media (max-width: 700px) {\n        div {\n            margin: 0 auto;\n            width: auto;\n        }\n    }\n    </style>    \n</head>\n\n<body>\n<div>\n    <h1>Example Domain</h1>\n    <p>This domain is for use in illustrative examples in documents. You may use this\n    domain in literature without prior coordination or asking for permission.</p>\n    <p><a href=\"https://www.iana.org/domains/example\">More information...</a></p>\n</div>\n</body>\n</html>\n```\n\n### Summary:\n- **Title**: Example Domain\n- **Description**: This domain is for use in illustrative examples in documents. You may use this domain in literature without prior coordination or asking for permission.\n- **Link**: [More information...](https://www.iana.org/domains/example)",
+                      "output": "Here is the content of the example website:\n\n```html\n<!doctype html>\n<html>\n<head>\n    <title>Example Domain</title>\n\n    <meta charset=\"utf-8\" />\n    <meta http-equiv=\"Content-type\" content=\"text/html; charset=utf-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n    <style type=\"text/css\">\n    body {\n        background-color: #f0f0f2;\n        margin: 0;\n        padding: 0;\n        font-family: -apple-system, system-ui, BlinkMacSystemFont, \"Segoe UI\", \"Open Sans\", \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n        \n    }\n    div {\n        width: 600px;\n        margin: 5em auto;\n        padding: 2em;\n        background-color: #fdfdff;\n        border-radius: 0.5em;\n        box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.02);\n    }\n    a:link, a:visited {\n        color: #38488f;\n        text-decoration: none;\n    }\n    @media (max-width: 700px) {\n        div {\n            margin: 0 auto;\n            width: auto;\n        }\n    }\n    </style>    \n</head>\n\n<body>\n<div>\n    <h1>Example Domain</h1>\n    <p>This domain is for use in illustrative examples in documents. You may use this\n    domain in literature without prior coordination or asking for permission.</p>\n    <p><a href=\"https://www.iana.org/domains/example\">More information...</a></p>\n</div>\n</body>\n</html>\n```\n\n### Summary of the Content:\n- **Title:** Example Domain\n- **Description:** This domain is for use in illustrative examples in documents. You may use this domain in literature without prior coordination or asking for permission.\n- **Link:** [More information...](https://www.iana.org/domains/example)",
                       "intermediateSteps": [
                         "json array"
                       ]
@@ -730,8 +738,8 @@
         "Edit Fields9": [
           {
             "hints": [],
-            "startTime": 1733911713343,
-            "executionTime": 3,
+            "startTime": 1734618425850,
+            "executionTime": 1,
             "source": [
               {
                 "previousNode": "AI Agent2"
@@ -758,8 +766,8 @@
         ],
         "OpenAI Chat Model1": [
           {
-            "startTime": 1733911713349,
-            "executionTime": 668,
+            "startTime": 1734618425858,
+            "executionTime": 656,
             "executionStatus": "success",
             "source": [
               null
@@ -801,7 +809,9 @@
                         "temperature": 0.3,
                         "timeout": 60000,
                         "max_retries": 2,
-                        "configuration": {},
+                        "configuration": {
+                          "baseURL": "https://api.openai.com/v1"
+                        },
                         "model_kwargs": {}
                       }
                     }
@@ -823,8 +833,8 @@
             }
           },
           {
-            "startTime": 1733911714020,
-            "executionTime": 597,
+            "startTime": 1734618426522,
+            "executionTime": 685,
             "executionStatus": "success",
             "source": [
               null
@@ -866,7 +876,9 @@
                         "temperature": 0.3,
                         "timeout": 60000,
                         "max_retries": 2,
-                        "configuration": {},
+                        "configuration": {
+                          "baseURL": "https://api.openai.com/v1"
+                        },
                         "model_kwargs": {}
                       }
                     }
@@ -878,8 +890,8 @@
         ],
         "Code Tool": [
           {
-            "startTime": 1733911714017,
-            "executionTime": 2,
+            "startTime": 1734618426516,
+            "executionTime": 4,
             "executionStatus": "success",
             "source": [
               null
@@ -926,8 +938,8 @@
         "AI Agent1": [
           {
             "hints": [],
-            "startTime": 1733911713346,
-            "executionTime": 1271,
+            "startTime": 1734618425851,
+            "executionTime": 1358,
             "source": [
               {
                 "previousNode": "When clicking \"Test workflow\""
@@ -956,8 +968,8 @@
         "Edit Fields8": [
           {
             "hints": [],
-            "startTime": 1733911714617,
-            "executionTime": 4,
+            "startTime": 1734618427209,
+            "executionTime": 2,
             "source": [
               {
                 "previousNode": "AI Agent1"
@@ -987,8 +999,8 @@
         ],
         "OpenAI Chat Model": [
           {
-            "startTime": 1733911714626,
-            "executionTime": 1477,
+            "startTime": 1734618427225,
+            "executionTime": 775,
             "executionStatus": "success",
             "source": [
               null
@@ -1030,7 +1042,9 @@
                         "temperature": 0.1,
                         "timeout": 60000,
                         "max_retries": 2,
-                        "configuration": {},
+                        "configuration": {
+                          "baseURL": "https://api.openai.com/v1"
+                        },
                         "model_kwargs": {}
                       }
                     }
@@ -1052,8 +1066,8 @@
             }
           },
           {
-            "startTime": 1733911716116,
-            "executionTime": 1272,
+            "startTime": 1734618428025,
+            "executionTime": 2015,
             "executionStatus": "success",
             "source": [
               null
@@ -1095,7 +1109,9 @@
                         "temperature": 0.1,
                         "timeout": 60000,
                         "max_retries": 2,
-                        "configuration": {},
+                        "configuration": {
+                          "baseURL": "https://api.openai.com/v1"
+                        },
                         "model_kwargs": {}
                       }
                     }
@@ -1107,8 +1123,8 @@
         ],
         "Search Wiki": [
           {
-            "startTime": 1733911716104,
-            "executionTime": 10,
+            "startTime": 1734618428001,
+            "executionTime": 19,
             "executionStatus": "success",
             "source": [
               null
@@ -1137,7 +1153,7 @@
             },
             "metadata": {
               "subExecution": {
-                "executionId": "66",
+                "executionId": "65",
                 "workflowId": "253"
               },
               "subRun": [
@@ -1151,8 +1167,8 @@
         ],
         "Structured Output Parser": [
           {
-            "startTime": 1733911717388,
-            "executionTime": 0,
+            "startTime": 1734618430040,
+            "executionTime": 1,
             "executionStatus": "success",
             "source": [
               null
@@ -1196,8 +1212,8 @@
         "AI Agent": [
           {
             "hints": [],
-            "startTime": 1733911714621,
-            "executionTime": 2768,
+            "startTime": 1734618427211,
+            "executionTime": 2831,
             "source": [
               {
                 "previousNode": "When clicking \"Test workflow\""
@@ -1225,8 +1241,8 @@
         "Edit Fields7": [
           {
             "hints": [],
-            "startTime": 1733911717389,
-            "executionTime": 4,
+            "startTime": 1734618430042,
+            "executionTime": 11,
             "source": [
               {
                 "previousNode": "AI Agent"
@@ -1254,8 +1270,8 @@
         ],
         "OpenAI Chat Model4": [
           {
-            "startTime": 1733911717396,
-            "executionTime": 1264,
+            "startTime": 1734618430060,
+            "executionTime": 1231,
             "executionStatus": "success",
             "source": [
               null
@@ -1297,7 +1313,9 @@
                         "temperature": 0,
                         "timeout": 60000,
                         "max_retries": 2,
-                        "configuration": {},
+                        "configuration": {
+                          "baseURL": "https://api.openai.com/v1"
+                        },
                         "model_kwargs": {}
                       }
                     }
@@ -1319,8 +1337,8 @@
             }
           },
           {
-            "startTime": 1733911718684,
-            "executionTime": 5909,
+            "startTime": 1734618431332,
+            "executionTime": 9100,
             "executionStatus": "success",
             "source": [
               null
@@ -1362,7 +1380,9 @@
                         "temperature": 0,
                         "timeout": 60000,
                         "max_retries": 2,
-                        "configuration": {},
+                        "configuration": {
+                          "baseURL": "https://api.openai.com/v1"
+                        },
                         "model_kwargs": {}
                       }
                     }
@@ -1374,8 +1394,8 @@
         ],
         "Get Weather": [
           {
-            "startTime": 1733911718660,
-            "executionTime": 22,
+            "startTime": 1734618431292,
+            "executionTime": 34,
             "executionStatus": "success",
             "source": [
               null
@@ -1418,8 +1438,8 @@
         ],
         "Get Events": [
           {
-            "startTime": 1733911718660,
-            "executionTime": 22,
+            "startTime": 1734618431293,
+            "executionTime": 34,
             "executionStatus": "success",
             "source": [
               null
@@ -1463,8 +1483,8 @@
         "AI Agent4": [
           {
             "hints": [],
-            "startTime": 1733911717393,
-            "executionTime": 7201,
+            "startTime": 1734618430053,
+            "executionTime": 10380,
             "source": [
               {
                 "previousNode": "When clicking \"Test workflow\""
@@ -1490,8 +1510,8 @@
         "Edit Fields6": [
           {
             "hints": [],
-            "startTime": 1733911724594,
-            "executionTime": 0,
+            "startTime": 1734618440433,
+            "executionTime": 1,
             "source": [
               {
                 "previousNode": "AI Agent4"
@@ -1694,8 +1714,8 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2024-12-11T10:08:20.905Z",
-  "stoppedAt": "2024-12-11T10:08:44.594Z",
+  "startedAt": "2024-12-19T14:26:51.996Z",
+  "stoppedAt": "2024-12-19T14:27:20.434Z",
   "status": "running",
   "finished": true
 }
