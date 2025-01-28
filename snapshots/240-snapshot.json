@@ -6,7 +6,7 @@
         "When clicking \"Test workflow\"": [
           {
             "hints": [],
-            "startTime": 1734619746999,
+            "startTime": 1738078199417,
             "executionTime": 0,
             "source": [],
             "executionStatus": "success",
@@ -27,8 +27,8 @@
         "Set Baseline": [
           {
             "hints": [],
-            "startTime": 1734619746999,
-            "executionTime": 0,
+            "startTime": 1738078199417,
+            "executionTime": 1,
             "source": [
               {
                 "previousNode": "When clicking \"Test workflow\""
@@ -59,8 +59,8 @@
                 "location": "outputPane"
               }
             ],
-            "startTime": 1734619746999,
-            "executionTime": 4,
+            "startTime": 1738078199418,
+            "executionTime": 5,
             "source": [
               {
                 "previousNode": "Set Baseline"
@@ -85,8 +85,8 @@
         ],
         "OpenAI Chat Model2": [
           {
-            "startTime": 1734619747012,
-            "executionTime": 1535,
+            "startTime": 1738078199433,
+            "executionTime": 1710,
             "executionStatus": "success",
             "source": [
               null
@@ -152,8 +152,8 @@
             }
           },
           {
-            "startTime": 1734619748552,
-            "executionTime": 1744,
+            "startTime": 1738078201149,
+            "executionTime": 1673,
             "executionStatus": "success",
             "source": [
               null
@@ -210,8 +210,8 @@
         "Summary - Simple - Refine": [
           {
             "hints": [],
-            "startTime": 1734619747004,
-            "executionTime": 3292,
+            "startTime": 1738078199424,
+            "executionTime": 3399,
             "source": [
               {
                 "previousNode": "Set Article"
@@ -238,8 +238,8 @@
         ],
         "OpenAI Chat Model9": [
           {
-            "startTime": 1734619750309,
-            "executionTime": 2317,
+            "startTime": 1738078202838,
+            "executionTime": 1436,
             "executionStatus": "success",
             "source": [
               null
@@ -304,8 +304,8 @@
         "Evaluate to Baseline4": [
           {
             "hints": [],
-            "startTime": 1734619750296,
-            "executionTime": 2332,
+            "startTime": 1738078202823,
+            "executionTime": 1453,
             "source": [
               {
                 "previousNode": "Summary - Simple - Refine"
@@ -317,7 +317,7 @@
                 [
                   {
                     "json": {
-                      "reasoning": "Step 1: Is the submission helpful?- The submission provides a brief summary of the Wikipedia article about the dancing plague of 1518, mentioning key points such as the location, number of people involved, possible causes, and the outcome.- This information is relevant and gives a basic understanding of the event.- Therefore, the submission is helpful.Step 2: Is the submission insightful?- The submission includes details about the event, such as the theories surrounding its cause and the controversy over the number of deaths.- These details add depth to the summary and show a deeper understanding of the topic.- Therefore, the submission is insightful.Step 3: Is the submission appropriate?- The submission stays focused on summarizing the Wikipedia article about the dancing plague of 1518 without including irrelevant information.- It presents the information in a clear and concise manner.- Therefore, the submission is appropriate.Based on the step by step reasoning, the submission meets all criteria.",
+                      "reasoning": "Step by step reasoning:1. Is the submission helpful, insightful, and appropriate?- The submission provides a concise summary of the Wikipedia article about the dancing plague of 1518, including key details such as the location, number of people involved, possible causes, and outcome.- The submission is informative and relevant to the input provided.- The submission does not contain any irrelevant or misleading information.- Overall, the submission meets the criteria of being helpful, insightful, and appropriate.Therefore, the submission meets the Criteria.",
                       "value": "Y",
                       "score": 1
                     },
@@ -367,8 +367,8 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2024-12-19T14:49:06.999Z",
-  "stoppedAt": "2024-12-19T14:49:12.628Z",
+  "startedAt": "2025-01-28T15:29:59.416Z",
+  "stoppedAt": "2025-01-28T15:30:04.276Z",
   "status": "running",
   "finished": true
 }
