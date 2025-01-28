@@ -6,7 +6,7 @@
         "When clicking \"Test workflow\"": [
           {
             "hints": [],
-            "startTime": 1734619727806,
+            "startTime": 1738078178841,
             "executionTime": 0,
             "source": [],
             "executionStatus": "success",
@@ -32,8 +32,8 @@
                 "location": "outputPane"
               }
             ],
-            "startTime": 1734619727806,
-            "executionTime": 13,
+            "startTime": 1738078178841,
+            "executionTime": 10,
             "source": [
               {
                 "previousNode": "When clicking \"Test workflow\""
@@ -58,8 +58,8 @@
         ],
         "Default Data Loader1": [
           {
-            "startTime": 1734619727883,
-            "executionTime": 1228,
+            "startTime": 1738078178875,
+            "executionTime": 1144,
             "executionStatus": "success",
             "source": [
               null
@@ -106,8 +106,8 @@
         ],
         "Token Splitter1": [
           {
-            "startTime": 1734619727885,
-            "executionTime": 1225,
+            "startTime": 1738078178877,
+            "executionTime": 1142,
             "executionStatus": "success",
             "source": [
               null
@@ -148,8 +148,8 @@
         ],
         "Embeddings OpenAI4": [
           {
-            "startTime": 1734619729132,
-            "executionTime": 921,
+            "startTime": 1738078180072,
+            "executionTime": 2392,
             "executionStatus": "success",
             "source": [
               null
@@ -205,8 +205,8 @@
             }
           },
           {
-            "startTime": 1734619731213,
-            "executionTime": 299,
+            "startTime": 1738078183170,
+            "executionTime": 820,
             "executionStatus": "success",
             "source": [
               null
@@ -240,8 +240,8 @@
         "Qdrant Vector Store": [
           {
             "hints": [],
-            "startTime": 1734619727820,
-            "executionTime": 4538,
+            "startTime": 1738078178851,
+            "executionTime": 6311,
             "source": [
               {
                 "previousNode": "Code"
@@ -391,8 +391,8 @@
         "Check Vector Store Populated1": [
           {
             "hints": [],
-            "startTime": 1734619732358,
-            "executionTime": 11,
+            "startTime": 1738078185162,
+            "executionTime": 10,
             "source": [
               {
                 "previousNode": "Qdrant Vector Store"
@@ -420,7 +420,7 @@
         "Wait1": [
           {
             "hints": [],
-            "startTime": 1734619732369,
+            "startTime": 1738078185173,
             "executionTime": 10001,
             "source": [
               {
@@ -448,8 +448,8 @@
         ],
         "Embeddings OpenAI5": [
           {
-            "startTime": 1734619742820,
-            "executionTime": 566,
+            "startTime": 1738078195902,
+            "executionTime": 471,
             "executionStatus": "success",
             "source": [
               null
@@ -491,8 +491,8 @@
         "Qdrant Vector Store1": [
           {
             "hints": [],
-            "startTime": 1734619742371,
-            "executionTime": 1371,
+            "startTime": 1738078195175,
+            "executionTime": 1652,
             "source": [
               {
                 "previousNode": "Wait1"
@@ -507,7 +507,7 @@
                       "document": {
                         "object": true
                       },
-                      "score": 0.3488196
+                      "score": 0.34772277
                     },
                     "pairedItem": {
                       "item": 0
@@ -518,7 +518,7 @@
                       "document": {
                         "object": true
                       },
-                      "score": 0.34682733
+                      "score": 0.34708342
                     },
                     "pairedItem": {
                       "item": 0
@@ -529,7 +529,7 @@
                       "document": {
                         "object": true
                       },
-                      "score": 0.3298859
+                      "score": 0.3299051
                     },
                     "pairedItem": {
                       "item": 0
@@ -540,7 +540,7 @@
                       "document": {
                         "object": true
                       },
-                      "score": 0.31429824
+                      "score": 0.31434047
                     },
                     "pairedItem": {
                       "item": 0
@@ -554,8 +554,8 @@
         "Check Vector Store Retrieval1": [
           {
             "hints": [],
-            "startTime": 1734619743742,
-            "executionTime": 15,
+            "startTime": 1738078196827,
+            "executionTime": 13,
             "source": [
               {
                 "previousNode": "Qdrant Vector Store1"
@@ -582,8 +582,8 @@
         ],
         "Vector Store Retriever1": [
           {
-            "startTime": 1734619744357,
-            "executionTime": 1036,
+            "startTime": 1738078197496,
+            "executionTime": 874,
             "executionStatus": "success",
             "source": [
               null
@@ -624,8 +624,8 @@
         ],
         "Qdrant Vector Store2": [
           {
-            "startTime": 1734619744358,
-            "executionTime": 1035,
+            "startTime": 1738078197496,
+            "executionTime": 874,
             "executionStatus": "success",
             "source": [
               null
@@ -667,8 +667,8 @@
         ],
         "Embeddings OpenAI3": [
           {
-            "startTime": 1734619744358,
-            "executionTime": 614,
+            "startTime": 1738078197496,
+            "executionTime": 437,
             "executionStatus": "success",
             "source": [
               null
@@ -709,8 +709,8 @@
         ],
         "OpenAI Chat Model1": [
           {
-            "startTime": 1734619745400,
-            "executionTime": 395,
+            "startTime": 1738078198377,
+            "executionTime": 499,
             "executionStatus": "success",
             "source": [
               null
@@ -775,8 +775,8 @@
         "Question and Answer Chain1": [
           {
             "hints": [],
-            "startTime": 1734619743757,
-            "executionTime": 2038,
+            "startTime": 1738078196841,
+            "executionTime": 2036,
             "source": [
               {
                 "previousNode": "Check Vector Store Retrieval1"
@@ -804,8 +804,8 @@
         "Edit Fields1": [
           {
             "hints": [],
-            "startTime": 1734619745795,
-            "executionTime": 4,
+            "startTime": 1738078198877,
+            "executionTime": 6,
             "source": [
               {
                 "previousNode": "Question and Answer Chain1"
@@ -831,8 +831,8 @@
         "Delete Collection": [
           {
             "hints": [],
-            "startTime": 1734619745800,
-            "executionTime": 508,
+            "startTime": 1738078198883,
+            "executionTime": 490,
             "source": [
               {
                 "previousNode": "Edit Fields1"
@@ -846,7 +846,7 @@
                     "json": {
                       "result": true,
                       "status": "ok",
-                      "time": 0.013263825
+                      "time": 0.011831243
                     },
                     "pairedItem": {
                       "item": 0
@@ -954,8 +954,8 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2024-12-19T14:48:47.804Z",
-  "stoppedAt": "2024-12-19T14:49:06.308Z",
+  "startedAt": "2025-01-28T15:29:38.839Z",
+  "stoppedAt": "2025-01-28T15:29:59.373Z",
   "status": "running",
   "finished": true
 }
