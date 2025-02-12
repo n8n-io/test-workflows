@@ -6,8 +6,8 @@
         "When clicking \"Test workflow\"": [
           {
             "hints": [],
-            "startTime": 1738078197469,
-            "executionTime": 1,
+            "startTime": 1739394003782,
+            "executionTime": 0,
             "source": [],
             "executionStatus": "success",
             "data": {
@@ -26,8 +26,8 @@
         ],
         "OpenAI Chat Model3": [
           {
-            "startTime": 1738078197504,
-            "executionTime": 2248,
+            "startTime": 1739394003817,
+            "executionTime": 2988,
             "executionStatus": "success",
             "source": [
               null
@@ -109,8 +109,8 @@
             }
           },
           {
-            "startTime": 1738078199755,
-            "executionTime": 2354,
+            "startTime": 1739394006808,
+            "executionTime": 1980,
             "executionStatus": "success",
             "source": [
               null
@@ -164,8 +164,8 @@
             }
           },
           {
-            "startTime": 1738078202116,
-            "executionTime": 1444,
+            "startTime": 1739394008792,
+            "executionTime": 1158,
             "executionStatus": "success",
             "source": [
               null
@@ -219,8 +219,8 @@
             }
           },
           {
-            "startTime": 1738078203563,
-            "executionTime": 3372,
+            "startTime": 1739394009952,
+            "executionTime": 3923,
             "executionStatus": "success",
             "source": [
               null
@@ -247,7 +247,7 @@
                   {
                     "json": {
                       "messages": [
-                        "System: Answer the following questions as best you can. You have access to the following tools:\n\ncalculator: Useful for getting the result of a math expression. The input to this tool should be a valid mathematical expression that could be executed by a simple calculator.\n\nThe way you use the tools is by specifying a json blob, denoted below by $JSON_BLOB\nSpecifically, this $JSON_BLOB should have a \"action\" key (with the name of the tool to use) and a \"action_input\" key (with the input to the tool going here). \nThe $JSON_BLOB should only contain a SINGLE action, do NOT return a list of multiple actions. Here is an example of a valid $JSON_BLOB:\n\n```\n{\n  \"action\": \"calculator\",\n  \"action_input\": \"1 + 2\"\n}\n```\n\nALWAYS use the following format:\n\nQuestion: the input question you must answer\nThought: you should always think about what to do\nAction: \n```\n$JSON_BLOB\n```\nObservation: the result of the action\n... (this Thought/Action/Observation can repeat N times)\nThought: I now know the final answer\nFinal Answer: the final answer to the original input question\n\nBegin! Reminder to always use the exact characters `Final Answer` when responding.\nHuman: Previous steps: [{\"action\":{\"text\":\"Calculate the division part of the expression: 10002200 / 100.\"},\"result\":{\"response\":\"The result of the division \\\\(10002200 / 100\\\\) is 100022.\"}}]\n\nCurrent objective: Add 30 to the result from step 1.\n\n\n\nYou may extract and combine relevant data from your previous steps when responding to me."
+                        "System: Answer the following questions as best you can. You have access to the following tools:\n\ncalculator: Useful for getting the result of a math expression. The input to this tool should be a valid mathematical expression that could be executed by a simple calculator.\n\nThe way you use the tools is by specifying a json blob, denoted below by $JSON_BLOB\nSpecifically, this $JSON_BLOB should have a \"action\" key (with the name of the tool to use) and a \"action_input\" key (with the input to the tool going here). \nThe $JSON_BLOB should only contain a SINGLE action, do NOT return a list of multiple actions. Here is an example of a valid $JSON_BLOB:\n\n```\n{\n  \"action\": \"calculator\",\n  \"action_input\": \"1 + 2\"\n}\n```\n\nALWAYS use the following format:\n\nQuestion: the input question you must answer\nThought: you should always think about what to do\nAction: \n```\n$JSON_BLOB\n```\nObservation: the result of the action\n... (this Thought/Action/Observation can repeat N times)\nThought: I now know the final answer\nFinal Answer: the final answer to the original input question\n\nBegin! Reminder to always use the exact characters `Final Answer` when responding.\nHuman: Previous steps: [{\"action\":{\"text\":\"Calculate the division part of the expression: 10002200 / 100.\"},\"result\":{\"response\":\"The result of the division \\\\(10002200 / 100\\\\) is 100022.\"}}]\n\nCurrent objective: Add 30 to the result of step 1.\n\n\n\nYou may extract and combine relevant data from your previous steps when responding to me."
                       ],
                       "estimatedTokens": 353,
                       "options": {
@@ -274,8 +274,8 @@
             }
           },
           {
-            "startTime": 1738078206938,
-            "executionTime": 1358,
+            "startTime": 1739394013878,
+            "executionTime": 1279,
             "executionStatus": "success",
             "source": [
               null
@@ -302,9 +302,9 @@
                   {
                     "json": {
                       "messages": [
-                        "System: Answer the following questions as best you can. You have access to the following tools:\n\ncalculator: Useful for getting the result of a math expression. The input to this tool should be a valid mathematical expression that could be executed by a simple calculator.\n\nThe way you use the tools is by specifying a json blob, denoted below by $JSON_BLOB\nSpecifically, this $JSON_BLOB should have a \"action\" key (with the name of the tool to use) and a \"action_input\" key (with the input to the tool going here). \nThe $JSON_BLOB should only contain a SINGLE action, do NOT return a list of multiple actions. Here is an example of a valid $JSON_BLOB:\n\n```\n{\n  \"action\": \"calculator\",\n  \"action_input\": \"1 + 2\"\n}\n```\n\nALWAYS use the following format:\n\nQuestion: the input question you must answer\nThought: you should always think about what to do\nAction: \n```\n$JSON_BLOB\n```\nObservation: the result of the action\n... (this Thought/Action/Observation can repeat N times)\nThought: I now know the final answer\nFinal Answer: the final answer to the original input question\n\nBegin! Reminder to always use the exact characters `Final Answer` when responding.\nHuman: Previous steps: [{\"action\":{\"text\":\"Calculate the division part of the expression: 10002200 / 100.\"},\"result\":{\"response\":\"The result of the division \\\\(10002200 / 100\\\\) is 100022.\"}}]\n\nCurrent objective: Add 30 to the result from step 1.\n\nThis was your previous work (but I haven't seen any of it! I only see what you return as final answer):\nThought: To achieve the current objective, I need to add 30 to the result from step 1, which is 100022.\n\nAction: \n```\n{\n  \"action\": \"calculator\",\n  \"action_input\": \"100022 + 30\"\n}\n```\n\nObservation: 100052\nThought:\n\nYou may extract and combine relevant data from your previous steps when responding to me."
+                        "System: Answer the following questions as best you can. You have access to the following tools:\n\ncalculator: Useful for getting the result of a math expression. The input to this tool should be a valid mathematical expression that could be executed by a simple calculator.\n\nThe way you use the tools is by specifying a json blob, denoted below by $JSON_BLOB\nSpecifically, this $JSON_BLOB should have a \"action\" key (with the name of the tool to use) and a \"action_input\" key (with the input to the tool going here). \nThe $JSON_BLOB should only contain a SINGLE action, do NOT return a list of multiple actions. Here is an example of a valid $JSON_BLOB:\n\n```\n{\n  \"action\": \"calculator\",\n  \"action_input\": \"1 + 2\"\n}\n```\n\nALWAYS use the following format:\n\nQuestion: the input question you must answer\nThought: you should always think about what to do\nAction: \n```\n$JSON_BLOB\n```\nObservation: the result of the action\n... (this Thought/Action/Observation can repeat N times)\nThought: I now know the final answer\nFinal Answer: the final answer to the original input question\n\nBegin! Reminder to always use the exact characters `Final Answer` when responding.\nHuman: Previous steps: [{\"action\":{\"text\":\"Calculate the division part of the expression: 10002200 / 100.\"},\"result\":{\"response\":\"The result of the division \\\\(10002200 / 100\\\\) is 100022.\"}}]\n\nCurrent objective: Add 30 to the result of step 1.\n\nThis was your previous work (but I haven't seen any of it! I only see what you return as final answer):\nThought: To achieve the current objective, I need to add 30 to the result of the division from step 1, which is 100022.\n\nAction: \n```\n{\n  \"action\": \"calculator\",\n  \"action_input\": \"100022 + 30\"\n}\n```\n\nObservation: 100052\nThought:\n\nYou may extract and combine relevant data from your previous steps when responding to me."
                       ],
-                      "estimatedTokens": 441,
+                      "estimatedTokens": 444,
                       "options": {
                         "openai_api_key": {
                           "lc": 1,
@@ -329,8 +329,8 @@
             }
           },
           {
-            "startTime": 1738078208298,
-            "executionTime": 990,
+            "startTime": 1739394015159,
+            "executionTime": 916,
             "executionStatus": "success",
             "source": [
               null
@@ -357,9 +357,9 @@
                   {
                     "json": {
                       "messages": [
-                        "System: Answer the following questions as best you can. You have access to the following tools:\n\ncalculator: Useful for getting the result of a math expression. The input to this tool should be a valid mathematical expression that could be executed by a simple calculator.\n\nThe way you use the tools is by specifying a json blob, denoted below by $JSON_BLOB\nSpecifically, this $JSON_BLOB should have a \"action\" key (with the name of the tool to use) and a \"action_input\" key (with the input to the tool going here). \nThe $JSON_BLOB should only contain a SINGLE action, do NOT return a list of multiple actions. Here is an example of a valid $JSON_BLOB:\n\n```\n{\n  \"action\": \"calculator\",\n  \"action_input\": \"1 + 2\"\n}\n```\n\nALWAYS use the following format:\n\nQuestion: the input question you must answer\nThought: you should always think about what to do\nAction: \n```\n$JSON_BLOB\n```\nObservation: the result of the action\n... (this Thought/Action/Observation can repeat N times)\nThought: I now know the final answer\nFinal Answer: the final answer to the original input question\n\nBegin! Reminder to always use the exact characters `Final Answer` when responding.\nHuman: Previous steps: [{\"action\":{\"text\":\"Calculate the division part of the expression: 10002200 / 100.\"},\"result\":{\"response\":\"The result of the division \\\\(10002200 / 100\\\\) is 100022.\"}},{\"action\":{\"text\":\"Add 30 to the result from step 1.\"},\"result\":{\"response\":\"The final result after adding 30 to 100022 is 100052.\"}}]\n\nCurrent objective: Output the final result.\n\n The original question was: What is the result of 30 + (10002200 / 100)? Only respond with a number..\n\n\n\nYou may extract and combine relevant data from your previous steps when responding to me."
+                        "System: Answer the following questions as best you can. You have access to the following tools:\n\ncalculator: Useful for getting the result of a math expression. The input to this tool should be a valid mathematical expression that could be executed by a simple calculator.\n\nThe way you use the tools is by specifying a json blob, denoted below by $JSON_BLOB\nSpecifically, this $JSON_BLOB should have a \"action\" key (with the name of the tool to use) and a \"action_input\" key (with the input to the tool going here). \nThe $JSON_BLOB should only contain a SINGLE action, do NOT return a list of multiple actions. Here is an example of a valid $JSON_BLOB:\n\n```\n{\n  \"action\": \"calculator\",\n  \"action_input\": \"1 + 2\"\n}\n```\n\nALWAYS use the following format:\n\nQuestion: the input question you must answer\nThought: you should always think about what to do\nAction: \n```\n$JSON_BLOB\n```\nObservation: the result of the action\n... (this Thought/Action/Observation can repeat N times)\nThought: I now know the final answer\nFinal Answer: the final answer to the original input question\n\nBegin! Reminder to always use the exact characters `Final Answer` when responding.\nHuman: Previous steps: [{\"action\":{\"text\":\"Calculate the division part of the expression: 10002200 / 100.\"},\"result\":{\"response\":\"The result of the division \\\\(10002200 / 100\\\\) is 100022.\"}},{\"action\":{\"text\":\"Add 30 to the result of step 1.\"},\"result\":{\"response\":\"The final result after adding 30 to the result of step 1 is 100052.\"}}]\n\nCurrent objective: Output the final result as a number.\n\n The original question was: What is the result of 30 + (10002200 / 100)? Only respond with a number..\n\n\n\nYou may extract and combine relevant data from your previous steps when responding to me."
                       ],
-                      "estimatedTokens": 413,
+                      "estimatedTokens": 419,
                       "options": {
                         "openai_api_key": {
                           "lc": 1,
@@ -386,8 +386,8 @@
         ],
         "Calculator3": [
           {
-            "startTime": 1738078202111,
-            "executionTime": 2,
+            "startTime": 1739394008789,
+            "executionTime": 1,
             "executionStatus": "success",
             "source": [
               null
@@ -428,7 +428,7 @@
             }
           },
           {
-            "startTime": 1738078206936,
+            "startTime": 1739394013876,
             "executionTime": 0,
             "executionStatus": "success",
             "source": [
@@ -461,8 +461,8 @@
         "AI Agent3": [
           {
             "hints": [],
-            "startTime": 1738078197470,
-            "executionTime": 11819,
+            "startTime": 1739394003782,
+            "executionTime": 12294,
             "source": [
               {
                 "previousNode": "When clicking \"Test workflow\""
@@ -542,8 +542,8 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2025-01-28T15:29:57.469Z",
-  "stoppedAt": "2025-01-28T15:30:09.289Z",
+  "startedAt": "2025-02-12T21:00:03.782Z",
+  "stoppedAt": "2025-02-12T21:00:16.076Z",
   "status": "running",
   "finished": true
 }
