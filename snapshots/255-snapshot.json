@@ -6,7 +6,7 @@
         "When clicking ‘Test workflow’": [
           {
             "hints": [],
-            "startTime": 1739394028367,
+            "startTime": 1738078234892,
             "executionTime": 0,
             "source": [],
             "executionStatus": "success",
@@ -26,8 +26,8 @@
         ],
         "OpenAI Chat Model": [
           {
-            "startTime": 1739394028373,
-            "executionTime": 303,
+            "startTime": 1738078234898,
+            "executionTime": 220,
             "executionStatus": "error",
             "source": [
               null
@@ -76,7 +76,7 @@
             },
             "error": {
               "message": "The resource you are requesting could not be found",
-              "timestamp": 1739394028675,
+              "timestamp": 1738078235117,
               "name": "NodeApiError",
               "description": "The model `gpt-4o-mini123` does not exist or you do not have access to it.",
               "context": {},
@@ -85,20 +85,20 @@
                 "headers": {
                   "alt-svc": "h3=\":443\"; ma=86400",
                   "cf-cache-status": "DYNAMIC",
-                  "cf-ray": "910f82256e8ce52b-TXL",
+                  "cf-ray": "909206484d3fe52b-TXL",
                   "connection": "keep-alive",
                   "content-encoding": "gzip",
                   "content-type": "application/json; charset=utf-8",
-                  "date": "Wed, 12 Feb 2025 21:00:28 GMT",
+                  "date": "Tue, 28 Jan 2025 15:30:35 GMT",
                   "server": "cloudflare",
-                  "set-cookie": "__cf_bm=YVLNKj3NZ49pb_XfbA_E7x6gaGM134FVepou4btHcac-1739394028-1.0.1.1-jtAn_TqZXZl.iBgzgmPz08qcPriJNuHJPXwNh6dg7Z_fFSvwDf5aNJ.Z7TMqTHynDB3vqVS62boFtTYN7XZe4w; path=/; expires=Wed, 12-Feb-25 21:30:28 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None, _cfuvid=x6GPfIgAq059k6pLHZF00I3uQt3kxT99VvBp.vxj9eI-1739394028602-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None",
+                  "set-cookie": "__cf_bm=xcgWoIUgJP_.kTCBlbkrym3HOC3YSYa3iVNw1kKceug-1738078235-1.0.1.1-T6p_KG0uMWhfeTievF2GiwoF07dZSh.79jsrus6pRkxcb4D1Mxw878PG6e7chrdGBQ0nuswd1luVjUxdzR.PCg; path=/; expires=Tue, 28-Jan-25 16:00:35 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None, _cfuvid=yawlNfx2.r.xhvCp4Ix7sW_zqW4QJOiKODV8_H9gfqs-1738078235092-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None",
                   "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
                   "transfer-encoding": "chunked",
                   "vary": "Origin",
                   "x-content-type-options": "nosniff",
-                  "x-request-id": "req_8e47fc6e84de055f50c67289f80dd968"
+                  "x-request-id": "req_2b0d4110196574252fac588d54c0e336"
                 },
-                "request_id": "req_8e47fc6e84de055f50c67289f80dd968",
+                "request_id": "req_2b0d4110196574252fac588d54c0e336",
                 "error": {
                   "message": "The model `gpt-4o-mini123` does not exist or you do not have access to it.",
                   "type": "invalid_request_error",
@@ -118,8 +118,8 @@
         "Basic LLM Chain": [
           {
             "hints": [],
-            "startTime": 1739394028368,
-            "executionTime": 309,
+            "startTime": 1738078234893,
+            "executionTime": 227,
             "source": [
               {
                 "previousNode": "When clicking ‘Test workflow’"
@@ -166,8 +166,8 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2025-02-12T21:00:28.366Z",
-  "stoppedAt": "2025-02-12T21:00:28.678Z",
+  "startedAt": "2025-01-28T15:30:34.891Z",
+  "stoppedAt": "2025-01-28T15:30:35.120Z",
   "status": "running",
   "finished": true
 }
