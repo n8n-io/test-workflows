@@ -1,0 +1,921 @@
+{
+  "data": {
+    "startData": {},
+    "resultData": {
+      "runData": {
+        "When clicking \"Test workflow\"": [
+          {
+            "hints": [],
+            "startTime": 1741716714991,
+            "executionTime": 0,
+            "source": [],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {},
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Simple Memory": [
+          {
+            "startTime": 1741716714995,
+            "executionTime": 0,
+            "executionStatus": "success",
+            "source": [
+              null
+            ],
+            "data": {
+              "ai_memory": [
+                [
+                  {
+                    "json": {
+                      "action": "loadMemoryVariables",
+                      "chatHistory": [
+                        "json array"
+                      ]
+                    }
+                  }
+                ]
+              ]
+            },
+            "inputOverride": {
+              "ai_memory": [
+                [
+                  {
+                    "json": {
+                      "action": "loadMemoryVariables",
+                      "values": {
+                        "input": "What time is my check-in?",
+                        "system_message": "You are a helpful assistant",
+                        "formatting_instructions": "IMPORTANT: For your response to user, you MUST use the `format_final_json_response` tool with your complete answer formatted according to the required schema. Do not attempt to format the JSON manually - always use this tool. Your response will be rejected if it is not properly formatted through this tool. Only use this tool once you are ready to provide your final answer."
+                      }
+                    }
+                  }
+                ]
+              ]
+            },
+            "metadata": {
+              "subRun": [
+                {
+                  "node": "Simple Memory",
+                  "runIndex": 0
+                },
+                {
+                  "node": "Simple Memory",
+                  "runIndex": 1
+                },
+                {
+                  "node": "Simple Memory",
+                  "runIndex": 2
+                },
+                {
+                  "node": "Simple Memory",
+                  "runIndex": 3
+                }
+              ]
+            }
+          },
+          {
+            "startTime": 1741716717057,
+            "executionTime": 0,
+            "executionStatus": "success",
+            "source": [
+              null
+            ],
+            "data": {
+              "ai_memory": [
+                [
+                  {
+                    "json": {
+                      "action": "saveContext",
+                      "chatHistory": [
+                        "json array"
+                      ]
+                    }
+                  }
+                ]
+              ]
+            },
+            "inputOverride": {
+              "ai_memory": [
+                [
+                  {
+                    "json": {
+                      "action": "saveContext",
+                      "input": {
+                        "input": "What time is my check-in?",
+                        "system_message": "You are a helpful assistant",
+                        "formatting_instructions": "IMPORTANT: For your response to user, you MUST use the `format_final_json_response` tool with your complete answer formatted according to the required schema. Do not attempt to format the JSON manually - always use this tool. Your response will be rejected if it is not properly formatted through this tool. Only use this tool once you are ready to provide your final answer."
+                      },
+                      "output": {
+                        "input": "What time is my check-in?",
+                        "system_message": "You are a helpful assistant",
+                        "formatting_instructions": "IMPORTANT: For your response to user, you MUST use the `format_final_json_response` tool with your complete answer formatted according to the required schema. Do not attempt to format the JSON manually - always use this tool. Your response will be rejected if it is not properly formatted through this tool. Only use this tool once you are ready to provide your final answer.",
+                        "chat_history": [],
+                        "output": {
+                          "resolution": "Please provide more details or check your booking confirmation for your check-in time.",
+                          "reasoning": "The customer has not provided enough information regarding their check-in to give a specific response. Requesting more details ensures accurate assistance."
+                        }
+                      }
+                    }
+                  }
+                ]
+              ]
+            }
+          },
+          {
+            "startTime": 1741716717065,
+            "executionTime": 0,
+            "executionStatus": "success",
+            "source": [
+              null
+            ],
+            "data": {
+              "ai_memory": [
+                [
+                  {
+                    "json": {
+                      "action": "loadMemoryVariables",
+                      "chatHistory": [
+                        "json array"
+                      ]
+                    }
+                  }
+                ]
+              ]
+            },
+            "inputOverride": {
+              "ai_memory": [
+                [
+                  {
+                    "json": {
+                      "action": "loadMemoryVariables",
+                      "values": {
+                        "input": "What time is my check-in?",
+                        "system_message": "You are a helpful assistant",
+                        "formatting_instructions": "IMPORTANT: For your response to user, you MUST use the `format_final_json_response` tool with your complete answer formatted according to the required schema. Do not attempt to format the JSON manually - always use this tool. Your response will be rejected if it is not properly formatted through this tool. Only use this tool once you are ready to provide your final answer."
+                      }
+                    }
+                  }
+                ]
+              ]
+            }
+          },
+          {
+            "startTime": 1741716719154,
+            "executionTime": 0,
+            "executionStatus": "success",
+            "source": [
+              null
+            ],
+            "data": {
+              "ai_memory": [
+                [
+                  {
+                    "json": {
+                      "action": "saveContext",
+                      "chatHistory": [
+                        "json array"
+                      ]
+                    }
+                  }
+                ]
+              ]
+            },
+            "inputOverride": {
+              "ai_memory": [
+                [
+                  {
+                    "json": {
+                      "action": "saveContext",
+                      "input": {
+                        "input": "What time is my check-in?",
+                        "system_message": "You are a helpful assistant",
+                        "formatting_instructions": "IMPORTANT: For your response to user, you MUST use the `format_final_json_response` tool with your complete answer formatted according to the required schema. Do not attempt to format the JSON manually - always use this tool. Your response will be rejected if it is not properly formatted through this tool. Only use this tool once you are ready to provide your final answer."
+                      },
+                      "output": {
+                        "input": "What time is my check-in?",
+                        "system_message": "You are a helpful assistant",
+                        "formatting_instructions": "IMPORTANT: For your response to user, you MUST use the `format_final_json_response` tool with your complete answer formatted according to the required schema. Do not attempt to format the JSON manually - always use this tool. Your response will be rejected if it is not properly formatted through this tool. Only use this tool once you are ready to provide your final answer.",
+                        "chat_history": [
+                          {
+                            "lc": 1,
+                            "type": "constructor",
+                            "id": [
+                              "langchain_core",
+                              "messages",
+                              "HumanMessage"
+                            ],
+                            "kwargs": {
+                              "content": "What time is my check-in?",
+                              "additional_kwargs": {},
+                              "response_metadata": {}
+                            }
+                          },
+                          {
+                            "lc": 1,
+                            "type": "constructor",
+                            "id": [
+                              "langchain_core",
+                              "messages",
+                              "AIMessage"
+                            ],
+                            "kwargs": {
+                              "content": "{\"output\":{\"resolution\":\"Please provide more details or check your booking confirmation for your check-in time.\",\"reasoning\":\"The customer has not provided enough information regarding their check-in to give a specific response. Requesting more details ensures accurate assistance.\"}}",
+                              "tool_calls": [],
+                              "invalid_tool_calls": [],
+                              "additional_kwargs": {},
+                              "response_metadata": {}
+                            }
+                          }
+                        ],
+                        "output": {
+                          "resolution": "Please provide your booking details to assist with your check-in time.",
+                          "reasoning": "The request for more information is necessary to identify your reservation and guide you accurately."
+                        }
+                      }
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "OpenAI Chat Model": [
+          {
+            "startTime": 1741716714999,
+            "executionTime": 948,
+            "executionStatus": "success",
+            "source": [
+              null
+            ],
+            "data": {
+              "ai_languageModel": [
+                [
+                  {
+                    "json": {
+                      "response": {
+                        "object": true
+                      },
+                      "tokenUsage": {
+                        "object": true
+                      }
+                    }
+                  }
+                ]
+              ]
+            },
+            "inputOverride": {
+              "ai_languageModel": [
+                [
+                  {
+                    "json": {
+                      "messages": [
+                        "System: You are a helpful assistant\n\nIMPORTANT: For your response to user, you MUST use the `format_final_json_response` tool with your complete answer formatted according to the required schema. Do not attempt to format the JSON manually - always use this tool. Your response will be rejected if it is not properly formatted through this tool. Only use this tool once you are ready to provide your final answer.\nHuman: What time is my check-in?"
+                      ],
+                      "estimatedTokens": 90,
+                      "options": {
+                        "openai_api_key": {
+                          "lc": 1,
+                          "type": "secret",
+                          "id": [
+                            "OPENAI_API_KEY"
+                          ]
+                        },
+                        "model": "gpt-4o-2024-05-13",
+                        "temperature": 0,
+                        "max_retries": 3,
+                        "timeout": 60000,
+                        "configuration": {
+                          "baseURL": "https://api.openai.com/v1"
+                        },
+                        "model_kwargs": {}
+                      }
+                    }
+                  }
+                ]
+              ]
+            },
+            "metadata": {
+              "subRun": [
+                {
+                  "node": "OpenAI Chat Model",
+                  "runIndex": 0
+                },
+                {
+                  "node": "OpenAI Chat Model",
+                  "runIndex": 1
+                }
+              ]
+            }
+          },
+          {
+            "startTime": 1741716717072,
+            "executionTime": 947,
+            "executionStatus": "success",
+            "source": [
+              null
+            ],
+            "data": {
+              "ai_languageModel": [
+                [
+                  {
+                    "json": {
+                      "response": {
+                        "object": true
+                      },
+                      "tokenUsage": {
+                        "object": true
+                      }
+                    }
+                  }
+                ]
+              ]
+            },
+            "inputOverride": {
+              "ai_languageModel": [
+                [
+                  {
+                    "json": {
+                      "messages": [
+                        "System: You are a helpful assistant\n\nIMPORTANT: For your response to user, you MUST use the `format_final_json_response` tool with your complete answer formatted according to the required schema. Do not attempt to format the JSON manually - always use this tool. Your response will be rejected if it is not properly formatted through this tool. Only use this tool once you are ready to provide your final answer.\nHuman: What time is my check-in?\nAI: {\"output\":{\"resolution\":\"Please provide more details or check your booking confirmation for your check-in time.\",\"reasoning\":\"The customer has not provided enough information regarding their check-in to give a specific response. Requesting more details ensures accurate assistance.\"}}\nHuman: What time is my check-in?"
+                      ],
+                      "estimatedTokens": 150,
+                      "options": {
+                        "openai_api_key": {
+                          "lc": 1,
+                          "type": "secret",
+                          "id": [
+                            "OPENAI_API_KEY"
+                          ]
+                        },
+                        "model": "gpt-4o-2024-05-13",
+                        "temperature": 0,
+                        "max_retries": 3,
+                        "timeout": 60000,
+                        "configuration": {
+                          "baseURL": "https://api.openai.com/v1"
+                        },
+                        "model_kwargs": {}
+                      }
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Auto-fixing Output Parser": [
+          {
+            "startTime": 1741716715948,
+            "executionTime": 1105,
+            "executionStatus": "success",
+            "source": [
+              null
+            ],
+            "data": {
+              "ai_outputParser": [
+                [
+                  {
+                    "json": {
+                      "action": "parse",
+                      "response": {
+                        "object": true
+                      }
+                    }
+                  }
+                ]
+              ]
+            },
+            "inputOverride": {
+              "ai_outputParser": [
+                [
+                  {
+                    "json": {
+                      "action": "parse",
+                      "text": "I don't have access to your personal information or specific details about your check-in. Please provide more context or check your booking confirmation for the check-in time."
+                    }
+                  }
+                ]
+              ]
+            },
+            "metadata": {
+              "subRun": [
+                {
+                  "node": "Auto-fixing Output Parser",
+                  "runIndex": 0
+                },
+                {
+                  "node": "Auto-fixing Output Parser",
+                  "runIndex": 1
+                }
+              ]
+            }
+          },
+          {
+            "startTime": 1741716718022,
+            "executionTime": 1128,
+            "executionStatus": "success",
+            "source": [
+              null
+            ],
+            "data": {
+              "ai_outputParser": [
+                [
+                  {
+                    "json": {
+                      "action": "parse",
+                      "response": {
+                        "object": true
+                      }
+                    }
+                  }
+                ]
+              ]
+            },
+            "inputOverride": {
+              "ai_outputParser": [
+                [
+                  {
+                    "json": {
+                      "action": "parse",
+                      "text": "To assist you with your check-in time, I need more information. Could you please provide details about your booking or reservation? For example, the name of the hotel or airline, and the date of your reservation."
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "Structured Output Parser": [
+          {
+            "startTime": 1741716715948,
+            "executionTime": 2,
+            "executionStatus": "error",
+            "source": [
+              null
+            ],
+            "data": {
+              "ai_outputParser": [
+                [
+                  {
+                    "json": {
+                      "action": "parse",
+                      "text": "I don't have access to your personal information or specific details about your check-in. Please provide more context or check your booking confirmation for the check-in time."
+                    }
+                  }
+                ]
+              ]
+            },
+            "inputOverride": {
+              "ai_outputParser": [
+                [
+                  {
+                    "json": {
+                      "action": "parse",
+                      "text": "I don't have access to your personal information or specific details about your check-in. Please provide more context or check your booking confirmation for the check-in time."
+                    }
+                  }
+                ]
+              ]
+            },
+            "metadata": {
+              "subRun": [
+                {
+                  "node": "Structured Output Parser",
+                  "runIndex": 0
+                },
+                {
+                  "node": "Structured Output Parser",
+                  "runIndex": 1
+                },
+                {
+                  "node": "Structured Output Parser",
+                  "runIndex": 2
+                },
+                {
+                  "node": "Structured Output Parser",
+                  "runIndex": 3
+                }
+              ]
+            },
+            "error": {
+              "message": "Model output doesn't fit required format",
+              "timestamp": 1741716715949,
+              "name": "NodeOperationError",
+              "description": "To continue the execution when this happens, change the 'On Error' parameter in the root node's settings",
+              "context": {},
+              "cause": {
+                "level": "warning",
+                "tags": {
+                  "packageName": "@n8n"
+                }
+              }
+            }
+          },
+          {
+            "startTime": 1741716717052,
+            "executionTime": 1,
+            "executionStatus": "success",
+            "source": [
+              null
+            ],
+            "data": {
+              "ai_outputParser": [
+                [
+                  {
+                    "json": {
+                      "action": "parse",
+                      "response": {
+                        "object": true
+                      }
+                    }
+                  }
+                ]
+              ]
+            },
+            "inputOverride": {
+              "ai_outputParser": [
+                [
+                  {
+                    "json": {
+                      "action": "parse",
+                      "text": "```json\n{\n  \"output\": {\n    \"resolution\": \"Please provide more details or check your booking confirmation for your check-in time.\",\n    \"reasoning\": \"The customer has not provided enough information regarding their check-in to give a specific response. Requesting more details ensures accurate assistance.\"\n  }\n}\n```"
+                    }
+                  }
+                ]
+              ]
+            }
+          },
+          {
+            "startTime": 1741716718022,
+            "executionTime": 0,
+            "executionStatus": "error",
+            "source": [
+              null
+            ],
+            "data": {
+              "ai_outputParser": [
+                [
+                  {
+                    "json": {
+                      "action": "parse",
+                      "text": "To assist you with your check-in time, I need more information. Could you please provide details about your booking or reservation? For example, the name of the hotel or airline, and the date of your reservation."
+                    }
+                  }
+                ]
+              ]
+            },
+            "inputOverride": {
+              "ai_outputParser": [
+                [
+                  {
+                    "json": {
+                      "action": "parse",
+                      "text": "To assist you with your check-in time, I need more information. Could you please provide details about your booking or reservation? For example, the name of the hotel or airline, and the date of your reservation."
+                    }
+                  }
+                ]
+              ]
+            },
+            "error": {
+              "message": "Model output doesn't fit required format",
+              "timestamp": 1741716718022,
+              "name": "NodeOperationError",
+              "description": "To continue the execution when this happens, change the 'On Error' parameter in the root node's settings",
+              "context": {},
+              "cause": {
+                "level": "warning",
+                "tags": {
+                  "packageName": "@n8n"
+                }
+              }
+            }
+          },
+          {
+            "startTime": 1741716719149,
+            "executionTime": 1,
+            "executionStatus": "success",
+            "source": [
+              null
+            ],
+            "data": {
+              "ai_outputParser": [
+                [
+                  {
+                    "json": {
+                      "action": "parse",
+                      "response": {
+                        "object": true
+                      }
+                    }
+                  }
+                ]
+              ]
+            },
+            "inputOverride": {
+              "ai_outputParser": [
+                [
+                  {
+                    "json": {
+                      "action": "parse",
+                      "text": "```json\n{\n  \"output\": {\n    \"resolution\": \"Please provide your booking details to assist with your check-in time.\",\n    \"reasoning\": \"The request for more information is necessary to identify your reservation and guide you accurately.\"\n  }\n}\n```"
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "OpenAI Chat Model1": [
+          {
+            "startTime": 1741716715963,
+            "executionTime": 1088,
+            "executionStatus": "success",
+            "source": [
+              null
+            ],
+            "data": {
+              "ai_languageModel": [
+                [
+                  {
+                    "json": {
+                      "response": {
+                        "object": true
+                      },
+                      "tokenUsage": {
+                        "object": true
+                      }
+                    }
+                  }
+                ]
+              ]
+            },
+            "inputOverride": {
+              "ai_languageModel": [
+                [
+                  {
+                    "json": {
+                      "messages": [
+                        "Human: Instructions:\n--------------\nYou must format your output as a JSON value that adheres to a given \"JSON Schema\" instance.\n\n\"JSON Schema\" is a declarative language that allows you to annotate and validate JSON documents.\n\nFor example, the example \"JSON Schema\" instance {{\"properties\": {{\"foo\": {{\"description\": \"a list of test words\", \"type\": \"array\", \"items\": {{\"type\": \"string\"}}}}}}, \"required\": [\"foo\"]}}}}\nwould match an object with one required property, \"foo\". The \"type\" property specifies \"foo\" must be an \"array\", and the \"description\" property semantically describes it as \"a list of test words\". The items within \"foo\" must be strings.\nThus, the object {{\"foo\": [\"bar\", \"baz\"]}} is a well-formatted instance of this example \"JSON Schema\". The object {{\"properties\": {{\"foo\": [\"bar\", \"baz\"]}}}} is not well-formatted.\n\nYour output will be parsed and type-checked according to the provided schema instance, so make sure all fields in your output match the schema exactly and there are no trailing commas!\n\nHere is the JSON Schema instance your output must adhere to. Include the enclosing markdown codeblock:\n```json\n{\"type\":\"object\",\"properties\":{\"output\":{\"type\":\"object\",\"properties\":{\"resolution\":{\"type\":\"string\",\"description\":\"The customer-facing resolution or response that should be communicated to the customer\"},\"reasoning\":{\"type\":\"string\",\"description\":\"Detailed explanation of the solution and reasoning for internal use\"}},\"required\":[\"resolution\",\"reasoning\"],\"additionalProperties\":{}}},\"additionalProperties\":false,\"$schema\":\"http://json-schema.org/draft-07/schema#\"}\n```\n\n--------------\nCompletion:\n--------------\nI don't have access to your personal information or specific details about your check-in. Please provide more context or check your booking confirmation for the check-in time.\n--------------\n\nAbove, the Completion did not satisfy the constraints given in the Instructions.\nError:\n--------------\nUnexpected token 'I', \"I don't ha\"... is not valid JSON\n\nTroubleshooting URL: https://js.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE/\n\n--------------\n\nPlease try again. Please only respond with an answer that satisfies the constraints laid out in the Instructions:"
+                      ],
+                      "estimatedTokens": 471,
+                      "options": {
+                        "openai_api_key": {
+                          "lc": 1,
+                          "type": "secret",
+                          "id": [
+                            "OPENAI_API_KEY"
+                          ]
+                        },
+                        "model": "gpt-4o-mini",
+                        "timeout": 60000,
+                        "max_retries": 2,
+                        "configuration": {
+                          "baseURL": "https://api.openai.com/v1"
+                        },
+                        "model_kwargs": {}
+                      }
+                    }
+                  }
+                ]
+              ]
+            },
+            "metadata": {
+              "subRun": [
+                {
+                  "node": "OpenAI Chat Model1",
+                  "runIndex": 0
+                },
+                {
+                  "node": "OpenAI Chat Model1",
+                  "runIndex": 1
+                }
+              ]
+            }
+          },
+          {
+            "startTime": 1741716718031,
+            "executionTime": 1117,
+            "executionStatus": "success",
+            "source": [
+              null
+            ],
+            "data": {
+              "ai_languageModel": [
+                [
+                  {
+                    "json": {
+                      "response": {
+                        "object": true
+                      },
+                      "tokenUsage": {
+                        "object": true
+                      }
+                    }
+                  }
+                ]
+              ]
+            },
+            "inputOverride": {
+              "ai_languageModel": [
+                [
+                  {
+                    "json": {
+                      "messages": [
+                        "Human: Instructions:\n--------------\nYou must format your output as a JSON value that adheres to a given \"JSON Schema\" instance.\n\n\"JSON Schema\" is a declarative language that allows you to annotate and validate JSON documents.\n\nFor example, the example \"JSON Schema\" instance {{\"properties\": {{\"foo\": {{\"description\": \"a list of test words\", \"type\": \"array\", \"items\": {{\"type\": \"string\"}}}}}}, \"required\": [\"foo\"]}}}}\nwould match an object with one required property, \"foo\". The \"type\" property specifies \"foo\" must be an \"array\", and the \"description\" property semantically describes it as \"a list of test words\". The items within \"foo\" must be strings.\nThus, the object {{\"foo\": [\"bar\", \"baz\"]}} is a well-formatted instance of this example \"JSON Schema\". The object {{\"properties\": {{\"foo\": [\"bar\", \"baz\"]}}}} is not well-formatted.\n\nYour output will be parsed and type-checked according to the provided schema instance, so make sure all fields in your output match the schema exactly and there are no trailing commas!\n\nHere is the JSON Schema instance your output must adhere to. Include the enclosing markdown codeblock:\n```json\n{\"type\":\"object\",\"properties\":{\"output\":{\"type\":\"object\",\"properties\":{\"resolution\":{\"type\":\"string\",\"description\":\"The customer-facing resolution or response that should be communicated to the customer\"},\"reasoning\":{\"type\":\"string\",\"description\":\"Detailed explanation of the solution and reasoning for internal use\"}},\"required\":[\"resolution\",\"reasoning\"],\"additionalProperties\":{}}},\"additionalProperties\":false,\"$schema\":\"http://json-schema.org/draft-07/schema#\"}\n```\n\n--------------\nCompletion:\n--------------\nTo assist you with your check-in time, I need more information. Could you please provide details about your booking or reservation? For example, the name of the hotel or airline, and the date of your reservation.\n--------------\n\nAbove, the Completion did not satisfy the constraints given in the Instructions.\nError:\n--------------\nUnexpected token 'T', \"To assist \"... is not valid JSON\n\nTroubleshooting URL: https://js.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE/\n\n--------------\n\nPlease try again. Please only respond with an answer that satisfies the constraints laid out in the Instructions:"
+                      ],
+                      "estimatedTokens": 482,
+                      "options": {
+                        "openai_api_key": {
+                          "lc": 1,
+                          "type": "secret",
+                          "id": [
+                            "OPENAI_API_KEY"
+                          ]
+                        },
+                        "model": "gpt-4o-mini",
+                        "timeout": 60000,
+                        "max_retries": 2,
+                        "configuration": {
+                          "baseURL": "https://api.openai.com/v1"
+                        },
+                        "model_kwargs": {}
+                      }
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "AI Agent": [
+          {
+            "hints": [],
+            "startTime": 1741716714991,
+            "executionTime": 2067,
+            "source": [
+              {
+                "previousNode": "When clicking \"Test workflow\""
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "output": {
+                        "object": true
+                      }
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ],
+        "AI Agent1": [
+          {
+            "hints": [],
+            "startTime": 1741716717058,
+            "executionTime": 2097,
+            "source": [
+              {
+                "previousNode": "AI Agent"
+              }
+            ],
+            "executionStatus": "success",
+            "data": {
+              "main": [
+                [
+                  {
+                    "json": {
+                      "output": {
+                        "object": true
+                      }
+                    },
+                    "pairedItem": {
+                      "item": 0
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      "lastNodeExecuted": "AI Agent1"
+    },
+    "executionData": {
+      "contextData": {},
+      "nodeExecutionStack": [],
+      "metadata": {
+        "Simple Memory": [
+          {
+            "subRun": [
+              {
+                "node": "Simple Memory",
+                "runIndex": 0
+              },
+              {
+                "node": "Simple Memory",
+                "runIndex": 1
+              },
+              {
+                "node": "Simple Memory",
+                "runIndex": 2
+              },
+              {
+                "node": "Simple Memory",
+                "runIndex": 3
+              }
+            ]
+          }
+        ],
+        "OpenAI Chat Model": [
+          {
+            "subRun": [
+              {
+                "node": "OpenAI Chat Model",
+                "runIndex": 0
+              },
+              {
+                "node": "OpenAI Chat Model",
+                "runIndex": 1
+              }
+            ]
+          }
+        ],
+        "Structured Output Parser": [
+          {
+            "subRun": [
+              {
+                "node": "Structured Output Parser",
+                "runIndex": 0
+              },
+              {
+                "node": "Structured Output Parser",
+                "runIndex": 1
+              },
+              {
+                "node": "Structured Output Parser",
+                "runIndex": 2
+              },
+              {
+                "node": "Structured Output Parser",
+                "runIndex": 3
+              }
+            ]
+          }
+        ],
+        "OpenAI Chat Model1": [
+          {
+            "subRun": [
+              {
+                "node": "OpenAI Chat Model1",
+                "runIndex": 0
+              },
+              {
+                "node": "OpenAI Chat Model1",
+                "runIndex": 1
+              }
+            ]
+          }
+        ],
+        "Auto-fixing Output Parser": [
+          {
+            "subRun": [
+              {
+                "node": "Auto-fixing Output Parser",
+                "runIndex": 0
+              },
+              {
+                "node": "Auto-fixing Output Parser",
+                "runIndex": 1
+              }
+            ]
+          }
+        ]
+      },
+      "waitingExecution": {},
+      "waitingExecutionSource": {}
+    }
+  },
+  "mode": "cli",
+  "startedAt": "2025-03-11T18:11:54.991Z",
+  "stoppedAt": "2025-03-11T18:11:59.155Z",
+  "status": "running",
+  "finished": true
+}
