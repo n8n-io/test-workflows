@@ -1,0 +1,731 @@
+{
+  "id": 210,
+  "name": "UptimeRobot:Account:get:Monitor:create reset get update getAll delete:AlertContact:create get getAll update delete:MaintenanceWi",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {},
+      "name": "UptimeRobot",
+      "type": "n8n-nodes-base.uptimeRobot",
+      "typeVersion": 1,
+      "position": [
+        460,
+        240
+      ],
+      "credentials": {
+        "uptimeRobotApi": "Uptime Robot API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "monitor",
+        "operation": "create",
+        "friendlyName": "=Monitor1626266310466",
+        "type": 1,
+        "url": "=http://fake_website_{{Date.now()}}.com"
+      },
+      "name": "UptimeRobot1",
+      "type": "n8n-nodes-base.uptimeRobot",
+      "typeVersion": 1,
+      "position": [
+        470,
+        400
+      ],
+      "credentials": {
+        "uptimeRobotApi": "Uptime Robot API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "monitor",
+        "operation": "reset",
+        "id": "={{$node[\"UptimeRobot1\"].json[\"id\"]}}"
+      },
+      "name": "UptimeRobot2",
+      "type": "n8n-nodes-base.uptimeRobot",
+      "typeVersion": 1,
+      "position": [
+        640,
+        400
+      ],
+      "credentials": {
+        "uptimeRobotApi": "Uptime Robot API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "monitor",
+        "operation": "get",
+        "id": "={{$node[\"UptimeRobot1\"].json[\"id\"]}}\n"
+      },
+      "name": "UptimeRobot3",
+      "type": "n8n-nodes-base.uptimeRobot",
+      "typeVersion": 1,
+      "position": [
+        800,
+        400
+      ],
+      "credentials": {
+        "uptimeRobotApi": "Uptime Robot API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "monitor",
+        "operation": "update",
+        "id": "={{$node[\"UptimeRobot1\"].json[\"id\"]}}",
+        "updateFields": {
+          "friendly_name": "UpdatedMonitor",
+          "url": "http://community.n8n.io"
+        }
+      },
+      "name": "UptimeRobot4",
+      "type": "n8n-nodes-base.uptimeRobot",
+      "typeVersion": 1,
+      "position": [
+        1090,
+        400
+      ],
+      "credentials": {
+        "uptimeRobotApi": "Uptime Robot API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "monitor",
+        "limit": 1,
+        "filters": {
+          "monitors": "={{$node[\"UptimeRobot1\"].json[\"id\"]}}"
+        }
+      },
+      "name": "UptimeRobot5",
+      "type": "n8n-nodes-base.uptimeRobot",
+      "typeVersion": 1,
+      "position": [
+        1250,
+        400
+      ],
+      "credentials": {
+        "uptimeRobotApi": "Uptime Robot API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "monitor",
+        "operation": "delete",
+        "id": "={{$node[\"UptimeRobot1\"].json[\"id\"]}}"
+      },
+      "name": "UptimeRobot6",
+      "type": "n8n-nodes-base.uptimeRobot",
+      "typeVersion": 1,
+      "position": [
+        1420,
+        400
+      ],
+      "credentials": {
+        "uptimeRobotApi": "Uptime Robot API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "alertContact",
+        "operation": "create",
+        "friendlyName": "=AlertContact{{Date.now()}}",
+        "type": 2,
+        "value": "=fakeemail{{Date.now().toString().substr(6)}}@test.com"
+      },
+      "name": "UptimeRobot7",
+      "type": "n8n-nodes-base.uptimeRobot",
+      "typeVersion": 1,
+      "position": [
+        470,
+        560
+      ],
+      "credentials": {
+        "uptimeRobotApi": "Uptime Robot API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "alertContact",
+        "limit": 1,
+        "filters": {}
+      },
+      "name": "UptimeRobot8",
+      "type": "n8n-nodes-base.uptimeRobot",
+      "typeVersion": 1,
+      "position": [
+        620,
+        560
+      ],
+      "credentials": {
+        "uptimeRobotApi": "Uptime Robot API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "alertContact",
+        "operation": "update",
+        "id": "={{$node[\"UptimeRobot7\"].json[\"id\"]}}",
+        "updateFields": {
+          "friendly_name": "=UpdatedAlertContact{{Date.now()}}",
+          "value": "=Updatedfakeemail{{Date.now().toString().substr(6)}}@test.com"
+        }
+      },
+      "name": "UptimeRobot9",
+      "type": "n8n-nodes-base.uptimeRobot",
+      "typeVersion": 1,
+      "position": [
+        900,
+        560
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "uptimeRobotApi": "Uptime Robot API creds"
+      },
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "resource": "alertContact",
+        "operation": "delete",
+        "id": "={{$node[\"UptimeRobot7\"].json[\"id\"]}}"
+      },
+      "name": "UptimeRobot10",
+      "type": "n8n-nodes-base.uptimeRobot",
+      "typeVersion": 1,
+      "position": [
+        1180,
+        560
+      ],
+      "credentials": {
+        "uptimeRobotApi": "Uptime Robot API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "maintenanceWindow",
+        "operation": "create",
+        "duration": 5,
+        "friendlyName": "=MaintenanceWindow{{Date.now()}}",
+        "type": 2,
+        "start_time": "2021-05-20T22:00:00.000Z"
+      },
+      "name": "UptimeRobot11",
+      "type": "n8n-nodes-base.uptimeRobot",
+      "typeVersion": 1,
+      "position": [
+        470,
+        710
+      ],
+      "credentials": {
+        "uptimeRobotApi": "Uptime Robot API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "maintenanceWindow",
+        "operation": "get",
+        "id": "={{$node[\"UptimeRobot11\"].json[\"id\"]}}\n"
+      },
+      "name": "UptimeRobot12",
+      "type": "n8n-nodes-base.uptimeRobot",
+      "typeVersion": 1,
+      "position": [
+        640,
+        710
+      ],
+      "credentials": {
+        "uptimeRobotApi": "Uptime Robot API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "maintenanceWindow",
+        "operation": "update",
+        "id": "={{$node[\"UptimeRobot11\"].json[\"id\"]}}",
+        "duration": 4,
+        "updateFields": {
+          "type": 3
+        }
+      },
+      "name": "UptimeRobot13",
+      "type": "n8n-nodes-base.uptimeRobot",
+      "typeVersion": 1,
+      "position": [
+        960,
+        710
+      ],
+      "credentials": {
+        "uptimeRobotApi": "Uptime Robot API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "maintenanceWindow",
+        "limit": 1,
+        "filters": {}
+      },
+      "name": "UptimeRobot14",
+      "type": "n8n-nodes-base.uptimeRobot",
+      "typeVersion": 1,
+      "position": [
+        1120,
+        710
+      ],
+      "credentials": {
+        "uptimeRobotApi": "Uptime Robot API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "maintenanceWindow",
+        "operation": "delete",
+        "id": "={{$node[\"UptimeRobot11\"].json[\"id\"]}}"
+      },
+      "name": "UptimeRobot15",
+      "type": "n8n-nodes-base.uptimeRobot",
+      "typeVersion": 1,
+      "position": [
+        1310,
+        710
+      ],
+      "credentials": {
+        "uptimeRobotApi": "Uptime Robot API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "publicStatusPage",
+        "operation": "create",
+        "friendlyName": "=PublicStatusPage{{Date.now()}}",
+        "monitors": "={{$node[\"UptimeRobot1\"].json[\"id\"]}}",
+        "additionalFields": {}
+      },
+      "name": "UptimeRobot16",
+      "type": "n8n-nodes-base.uptimeRobot",
+      "typeVersion": 1,
+      "position": [
+        610,
+        240
+      ],
+      "credentials": {
+        "uptimeRobotApi": "Uptime Robot API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "publicStatusPage",
+        "limit": 1,
+        "filters": {
+          "psps": "={{$node[\"UptimeRobot16\"].json[\"id\"]}}"
+        }
+      },
+      "name": "UptimeRobot17",
+      "type": "n8n-nodes-base.uptimeRobot",
+      "typeVersion": 1,
+      "position": [
+        1050,
+        240
+      ],
+      "credentials": {
+        "uptimeRobotApi": "Uptime Robot API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "publicStatusPage",
+        "operation": "delete",
+        "id": "={{$node[\"UptimeRobot16\"].json[\"id\"]}}"
+      },
+      "name": "UptimeRobot19",
+      "type": "n8n-nodes-base.uptimeRobot",
+      "typeVersion": 1,
+      "position": [
+        1190,
+        240
+      ],
+      "credentials": {
+        "uptimeRobotApi": "Uptime Robot API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "alertContact",
+        "operation": "get",
+        "id": "={{$node[\"UptimeRobot7\"].json[\"id\"]}}"
+      },
+      "name": "UptimeRobot18",
+      "type": "n8n-nodes-base.uptimeRobot",
+      "typeVersion": 1,
+      "position": [
+        1040,
+        560
+      ],
+      "credentials": {
+        "uptimeRobotApi": "Uptime Robot API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "publicStatusPage",
+        "operation": "get",
+        "id": "={{$node[\"UptimeRobot16\"].json[\"id\"]}}"
+      },
+      "name": "UptimeRobot20",
+      "type": "n8n-nodes-base.uptimeRobot",
+      "typeVersion": 1,
+      "position": [
+        760,
+        240
+      ],
+      "credentials": {
+        "uptimeRobotApi": "Uptime Robot API creds"
+      }
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(800);\n\n// Output data\nreturn items;"
+      },
+      "name": "Sleep 8 Seconds1",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        760,
+        560
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(800);\n\n// Output data\nreturn items;"
+      },
+      "name": "Sleep 8 Seconds",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        1350,
+        240
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(800);\n\n// Output data\nreturn items;"
+      },
+      "name": "Sleep 8 Seconds2",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        900,
+        240
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(800);\n\n// Output data\nreturn items;"
+      },
+      "name": "Sleep 8 Seconds3",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        800,
+        710
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "functionCode": "function sleep(milliseconds) {\n  return new Promise(\n    resolve => setTimeout(resolve, milliseconds)\n  );\n}\n\nawait sleep(800);\n\n// Output data\nreturn items;"
+      },
+      "name": "Sleep 8 Seconds4",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        950,
+        400
+      ],
+      "typeVersion": 1
+    }
+  ],
+  "connections": {
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "UptimeRobot",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "UptimeRobot1",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "UptimeRobot7",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "UptimeRobot11",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "UptimeRobot1": {
+      "main": [
+        [
+          {
+            "node": "UptimeRobot16",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "UptimeRobot2": {
+      "main": [
+        [
+          {
+            "node": "UptimeRobot3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "UptimeRobot3": {
+      "main": [
+        [
+          {
+            "node": "Sleep 8 Seconds4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "UptimeRobot4": {
+      "main": [
+        [
+          {
+            "node": "UptimeRobot5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "UptimeRobot5": {
+      "main": [
+        [
+          {
+            "node": "UptimeRobot6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "UptimeRobot7": {
+      "main": [
+        [
+          {
+            "node": "UptimeRobot8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "UptimeRobot8": {
+      "main": [
+        [
+          {
+            "node": "Sleep 8 Seconds1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "UptimeRobot9": {
+      "main": [
+        [
+          {
+            "node": "UptimeRobot18",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "UptimeRobot11": {
+      "main": [
+        [
+          {
+            "node": "UptimeRobot12",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "UptimeRobot12": {
+      "main": [
+        [
+          {
+            "node": "Sleep 8 Seconds3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "UptimeRobot13": {
+      "main": [
+        [
+          {
+            "node": "UptimeRobot14",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "UptimeRobot14": {
+      "main": [
+        [
+          {
+            "node": "UptimeRobot15",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "UptimeRobot16": {
+      "main": [
+        [
+          {
+            "node": "UptimeRobot20",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "UptimeRobot17": {
+      "main": [
+        [
+          {
+            "node": "UptimeRobot19",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "UptimeRobot19": {
+      "main": [
+        [
+          {
+            "node": "Sleep 8 Seconds",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "UptimeRobot18": {
+      "main": [
+        [
+          {
+            "node": "UptimeRobot10",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "UptimeRobot20": {
+      "main": [
+        [
+          {
+            "node": "Sleep 8 Seconds2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sleep 8 Seconds1": {
+      "main": [
+        [
+          {
+            "node": "UptimeRobot9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sleep 8 Seconds": {
+      "main": [
+        [
+          {
+            "node": "UptimeRobot2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sleep 8 Seconds2": {
+      "main": [
+        [
+          {
+            "node": "UptimeRobot17",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sleep 8 Seconds3": {
+      "main": [
+        [
+          {
+            "node": "UptimeRobot13",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sleep 8 Seconds4": {
+      "main": [
+        [
+          {
+            "node": "UptimeRobot4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-05-31T09:00:50.777Z",
+  "updatedAt": "2021-07-14T12:55:49.414Z",
+  "settings": {},
+  "staticData": null
+}
