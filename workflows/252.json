@@ -94,7 +94,7 @@
       "id": "31e9699d-1959-46db-8745-a107f83986c5",
       "name": "Question and Answer Chain1",
       "type": "@n8n/n8n-nodes-langchain.chainRetrievalQa",
-      "typeVersion": 1.3,
+      "typeVersion": 1.5,
       "position": [
         1140,
         2420
@@ -162,7 +162,7 @@
             {
               "id": "d998ae3e-192c-45ff-a3ff-ad3ed3a20304",
               "name": "output_matches",
-              "value": "={{ $json.response.text.includes('80') }}",
+              "value": "={{ $json.response.includes('80') }}",
               "type": "boolean"
             }
           ]
