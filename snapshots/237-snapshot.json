@@ -5,10 +5,11 @@
       "runData": {
         "When clicking \"Test workflow\"": [
           {
-            "hints": [],
-            "startTime": 1738078194608,
-            "executionTime": 0,
+            "startTime": 1746522731746,
+            "executionIndex": 0,
             "source": [],
+            "hints": [],
+            "executionTime": 0,
             "executionStatus": "success",
             "data": {
               "main": [
@@ -26,8 +27,9 @@
         ],
         "Azure OpenAI Chat Model": [
           {
-            "startTime": 1738078194619,
-            "executionTime": 1440,
+            "startTime": 1746522732524,
+            "executionTime": 1216,
+            "executionIndex": 2,
             "executionStatus": "success",
             "source": [
               null
@@ -58,16 +60,7 @@
                       ],
                       "estimatedTokens": 20,
                       "options": {
-                        "azure_openai_api_deployment_name": "gpt4",
-                        "azure_openai_api_instance_name": "n8n-ai-us",
-                        "azure_openai_api_key": {
-                          "lc": 1,
-                          "type": "secret",
-                          "id": [
-                            "AZURE_OPENAI_API_KEY"
-                          ]
-                        },
-                        "azure_openai_api_version": "2023-07-01-preview",
+                        "azure_endpoint": "https://n8n-ai-us.openai.azure.com/",
                         "temperature": 0,
                         "timeout": 60000,
                         "max_retries": 2,
@@ -78,7 +71,8 @@
                           "id": [
                             "OPENAI_API_KEY"
                           ]
-                        }
+                        },
+                        "deployment_name": "gpt4"
                       }
                     }
                   }
@@ -97,14 +91,15 @@
         ],
         "Azure OpenAI Chat": [
           {
-            "hints": [],
-            "startTime": 1738078194608,
-            "executionTime": 1452,
+            "startTime": 1746522731746,
+            "executionIndex": 1,
             "source": [
               {
                 "previousNode": "When clicking \"Test workflow\""
               }
             ],
+            "hints": [],
+            "executionTime": 1995,
             "executionStatus": "success",
             "data": {
               "main": [
@@ -145,8 +140,8 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2025-01-28T15:29:54.607Z",
-  "stoppedAt": "2025-01-28T15:29:56.060Z",
+  "startedAt": "2025-05-06T09:12:11.745Z",
+  "stoppedAt": "2025-05-06T09:12:13.741Z",
   "status": "running",
   "finished": true
 }

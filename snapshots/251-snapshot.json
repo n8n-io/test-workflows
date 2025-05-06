@@ -5,10 +5,11 @@
       "runData": {
         "When clicking \"Test workflow\"": [
           {
-            "hints": [],
-            "startTime": 1738078216308,
-            "executionTime": 0,
+            "startTime": 1746522733370,
+            "executionIndex": 0,
             "source": [],
+            "hints": [],
+            "executionTime": 0,
             "executionStatus": "success",
             "data": {
               "main": [
@@ -26,8 +27,9 @@
         ],
         "OpenAI Chat Model1": [
           {
-            "startTime": 1738078216318,
-            "executionTime": 889,
+            "startTime": 1746522733384,
+            "executionTime": 981,
+            "executionIndex": 2,
             "executionStatus": "success",
             "source": [
               null
@@ -93,8 +95,9 @@
             }
           },
           {
-            "startTime": 1738078217212,
-            "executionTime": 951,
+            "startTime": 1746522734370,
+            "executionTime": 812,
+            "executionIndex": 4,
             "executionStatus": "success",
             "source": [
               null
@@ -150,8 +153,9 @@
         ],
         "Calculator1": [
           {
-            "startTime": 1738078217208,
+            "startTime": 1746522734366,
             "executionTime": 1,
+            "executionIndex": 3,
             "executionStatus": "success",
             "source": [
               null
@@ -190,21 +194,22 @@
         ],
         "AI Agent1": [
           {
-            "hints": [],
-            "startTime": 1738078216309,
-            "executionTime": 1855,
+            "startTime": 1746522733370,
+            "executionIndex": 1,
             "source": [
               {
                 "previousNode": "When clicking \"Test workflow\""
               }
             ],
+            "hints": [],
+            "executionTime": 1813,
             "executionStatus": "success",
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "output": "The result of your calculation is 100052.",
+                      "output": "The result of the calculation is 100052.",
                       "intermediateSteps": [
                         "json array"
                       ]
@@ -255,8 +260,8 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2025-01-28T15:30:16.307Z",
-  "stoppedAt": "2025-01-28T15:30:18.164Z",
+  "startedAt": "2025-05-06T09:12:13.370Z",
+  "stoppedAt": "2025-05-06T09:12:15.183Z",
   "status": "running",
   "finished": true
 }

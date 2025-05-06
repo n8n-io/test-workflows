@@ -5,10 +5,11 @@
       "runData": {
         "When clicking \"Test workflow\"": [
           {
-            "hints": [],
-            "startTime": 1738078211659,
-            "executionTime": 1,
+            "startTime": 1746522731837,
+            "executionIndex": 0,
             "source": [],
+            "hints": [],
+            "executionTime": 0,
             "executionStatus": "success",
             "data": {
               "main": [
@@ -26,19 +27,20 @@
         ],
         "Code": [
           {
+            "startTime": 1746522731837,
+            "executionIndex": 1,
+            "source": [
+              {
+                "previousNode": "When clicking \"Test workflow\""
+              }
+            ],
             "hints": [
               {
                 "message": "To make sure expressions after this node work, return the input items that produced each output item. <a target=\"_blank\" href=\"https://docs.n8n.io/data/data-mapping/data-item-linking/item-linking-code-node/\">More info</a>",
                 "location": "outputPane"
               }
             ],
-            "startTime": 1738078211660,
-            "executionTime": 6,
-            "source": [
-              {
-                "previousNode": "When clicking \"Test workflow\""
-              }
-            ],
+            "executionTime": 2,
             "executionStatus": "success",
             "data": {
               "main": [
@@ -58,8 +60,9 @@
         ],
         "Default Data Loader2": [
           {
-            "startTime": 1738078211670,
-            "executionTime": 20,
+            "startTime": 1746522731888,
+            "executionTime": 256,
+            "executionIndex": 3,
             "executionStatus": "success",
             "source": [
               null
@@ -106,8 +109,9 @@
         ],
         "Token Splitter2": [
           {
-            "startTime": 1738078211670,
-            "executionTime": 20,
+            "startTime": 1746522731888,
+            "executionTime": 255,
+            "executionIndex": 4,
             "executionStatus": "success",
             "source": [
               null
@@ -148,8 +152,9 @@
         ],
         "Embeddings OpenAI6": [
           {
-            "startTime": 1738078211691,
-            "executionTime": 1238,
+            "startTime": 1746522732147,
+            "executionTime": 1629,
+            "executionIndex": 5,
             "executionStatus": "success",
             "source": [
               null
@@ -203,14 +208,15 @@
         ],
         "In-Memory Vector Store": [
           {
-            "hints": [],
-            "startTime": 1738078211666,
-            "executionTime": 1264,
+            "startTime": 1746522731839,
+            "executionIndex": 2,
             "source": [
               {
                 "previousNode": "Code"
               }
             ],
+            "hints": [],
+            "executionTime": 1938,
             "executionStatus": "success",
             "data": {
               "main": [
@@ -354,14 +360,15 @@
         ],
         "Check Vector Store Populated2": [
           {
-            "hints": [],
-            "startTime": 1738078212930,
-            "executionTime": 2,
+            "startTime": 1746522733777,
+            "executionIndex": 6,
             "source": [
               {
                 "previousNode": "In-Memory Vector Store"
               }
             ],
+            "hints": [],
+            "executionTime": 7,
             "executionStatus": "success",
             "data": {
               "main": [
@@ -383,14 +390,15 @@
         ],
         "Wait": [
           {
-            "hints": [],
-            "startTime": 1738078212932,
-            "executionTime": 10001,
+            "startTime": 1746522733784,
+            "executionIndex": 7,
             "source": [
               {
                 "previousNode": "Check Vector Store Populated2"
               }
             ],
+            "hints": [],
+            "executionTime": 10013,
             "executionStatus": "success",
             "data": {
               "main": [
@@ -412,8 +420,9 @@
         ],
         "Embeddings OpenAI8": [
           {
-            "startTime": 1738078222937,
-            "executionTime": 542,
+            "startTime": 1746522743799,
+            "executionTime": 459,
+            "executionIndex": 9,
             "executionStatus": "success",
             "source": [
               null
@@ -454,14 +463,15 @@
         ],
         "In-Memory Vector Store1": [
           {
-            "hints": [],
-            "startTime": 1738078222933,
-            "executionTime": 551,
+            "startTime": 1746522743797,
+            "executionIndex": 8,
             "source": [
               {
                 "previousNode": "Wait"
               }
             ],
+            "hints": [],
+            "executionTime": 467,
             "executionStatus": "success",
             "data": {
               "main": [
@@ -471,7 +481,7 @@
                       "document": {
                         "object": true
                       },
-                      "score": 0.34844570501920435
+                      "score": 0.34881960082121005
                     },
                     "pairedItem": {
                       "item": 0
@@ -482,7 +492,7 @@
                       "document": {
                         "object": true
                       },
-                      "score": 0.3470684696413845
+                      "score": 0.34627190532297597
                     },
                     "pairedItem": {
                       "item": 0
@@ -504,7 +514,7 @@
                       "document": {
                         "object": true
                       },
-                      "score": 0.3143878677889275
+                      "score": 0.3143362235127524
                     },
                     "pairedItem": {
                       "item": 0
@@ -517,14 +527,15 @@
         ],
         "Check Vector Store Retrieval2": [
           {
-            "hints": [],
-            "startTime": 1738078223484,
-            "executionTime": 3,
+            "startTime": 1746522744264,
+            "executionIndex": 10,
             "source": [
               {
                 "previousNode": "In-Memory Vector Store1"
               }
             ],
+            "hints": [],
+            "executionTime": 6,
             "executionStatus": "success",
             "data": {
               "main": [
@@ -546,8 +557,9 @@
         ],
         "Vector Store Retriever2": [
           {
-            "startTime": 1738078223492,
-            "executionTime": 525,
+            "startTime": 1746522744276,
+            "executionTime": 524,
+            "executionIndex": 12,
             "executionStatus": "success",
             "source": [
               null
@@ -570,7 +582,71 @@
                 [
                   {
                     "json": {
-                      "query": "What is the size of a block header with no transactions? Respond only with number of bytes."
+                      "query": "What is the size of a block header with no transactions? Respond only with number of bytes.",
+                      "config": {
+                        "tags": [],
+                        "metadata": {
+                          "execution_id": "211",
+                          "workflow": {
+                            "id": "248",
+                            "name": "InMemoryVectorStore:*",
+                            "active": false
+                          },
+                          "node": "Question and Answer Chain2"
+                        },
+                        "recursionLimit": 25,
+                        "signal": {},
+                        "callbacks": {
+                          "handlers": [
+                            {
+                              "lc": 1,
+                              "type": "not_implemented",
+                              "id": [
+                                "langchain_core",
+                                "callbacks",
+                                "langchain_tracer",
+                                "LangChainTracer"
+                              ]
+                            }
+                          ],
+                          "inheritableHandlers": [
+                            {
+                              "lc": 1,
+                              "type": "not_implemented",
+                              "id": [
+                                "langchain_core",
+                                "callbacks",
+                                "langchain_tracer",
+                                "LangChainTracer"
+                              ]
+                            }
+                          ],
+                          "tags": [
+                            "seq:step:2"
+                          ],
+                          "inheritableTags": [],
+                          "metadata": {
+                            "execution_id": "211",
+                            "workflow": {
+                              "id": "248",
+                              "name": "InMemoryVectorStore:*",
+                              "active": false
+                            },
+                            "node": "Question and Answer Chain2"
+                          },
+                          "inheritableMetadata": {
+                            "execution_id": "211",
+                            "workflow": {
+                              "id": "248",
+                              "name": "InMemoryVectorStore:*",
+                              "active": false
+                            },
+                            "node": "Question and Answer Chain2"
+                          },
+                          "name": "callback_manager",
+                          "_parentRunId": "bc1d4853-6e65-42dc-a3ac-4558e395d03c"
+                        }
+                      }
                     }
                   }
                 ]
@@ -588,8 +664,9 @@
         ],
         "In-Memory Vector Store2": [
           {
-            "startTime": 1738078223492,
-            "executionTime": 525,
+            "startTime": 1746522744276,
+            "executionTime": 523,
+            "executionIndex": 13,
             "executionStatus": "success",
             "source": [
               null
@@ -631,8 +708,9 @@
         ],
         "Embeddings OpenAI7": [
           {
-            "startTime": 1738078223492,
-            "executionTime": 524,
+            "startTime": 1746522744276,
+            "executionTime": 523,
+            "executionIndex": 14,
             "executionStatus": "success",
             "source": [
               null
@@ -673,8 +751,9 @@
         ],
         "OpenAI Chat Model2": [
           {
-            "startTime": 1738078224023,
-            "executionTime": 555,
+            "startTime": 1746522744813,
+            "executionTime": 591,
+            "executionIndex": 15,
             "executionStatus": "success",
             "source": [
               null
@@ -701,9 +780,9 @@
                   {
                     "json": {
                       "messages": [
-                        "System: Use the following pieces of context to answer the users question. \nIf you don't know the answer, just say that you don't know, don't try to make up an answer.\n----------------\n new coins than everyone else combined, than to undermine the system and the validity of his own wealth. 7. Reclaiming Disk Space Once the latest transaction in a coin is buried under enough blocks, the spent transactions before it can be discarded to save disk space. To facilitate this without breaking the block's hash, transactions are hashed in a Merkle Tree [7][2][5], with only the root included in the block's hash. Old blocks can then be compacted by stubbing off branches of the tree. The interior hashes do not need to be stored. A block header with no transactions would be about 80 bytes. If we suppose blocks are generated every 10 minutes, 80 bytes * 6 * 24 * 365 = 4.2MB per year. With computer systems typically selling with 2GB of RAM as of 2008, and Moore's Law predicting current growth of 1.2GB per year, storage should not be a problem even if the block headers must be kept in memory. 4 BlockBlock Block Header (Block Hash) Prev Hash Nonce Hash01 Hash0 Hash1 Hash2 Hash3 Hash23 Root Hash Hash01 Hash2 Tx3 Hash23 Block Header (Block Hash) Root Hash Transactions Hashed in a Merkle Tree After Pruning Tx0-2 from the Block Prev Hash Nonce Hash3 Tx0 Tx1 Tx2 Tx3 8. Simplified Payment Verification It is possible to verify payments without running a full network node. A user only needs to keep a copy of the block headers of the longest proof-of-work chain, which he can get by querying network nodes until he's convinced he has the longest chain, and obtain the Merkle branch linking the transaction to the block it's timestamped in. He can't check the transaction for himself, but by linking it to a place in the chain, he can see that a network node has accepted it, and blocks added after it further confirm the network has accepted it. As such, the verification is reliable as long as honest nodes control the network, but is more vulnerable if the network is overpowered by an attacker. While network nodes can verify transactions for themselves, the simplified method can be fooled by an attacker's fabricated transactions for as long as the attacker can continue to overpower the network. One strategy to protect against this would be to accept alerts from network nodes when they detect an invalid block, prompting the user's software to download the\n\n next block simultaneously, some nodes may receive one or the other first. In that case, they work on the first one they received, but save the other branch in case it becomes longer. The tie will be broken when the next proof- of-work is found and one branch becomes longer; the nodes that were working on the other branch will then switch to the longer one. 3 Block Prev Hash Nonce Tx Tx ... Block Prev Hash Nonce Tx Tx ... New transaction broadcasts do not necessarily need to reach all nodes. As long as they reach many nodes, they will get into a block before long. Block broadcasts are also tolerant of dropped messages. If a node does not receive a block, it will request it when it receives the next block and realizes it missed one. 6. Incentive By convention, the first transaction in a block is a special transaction that starts a new coin owned by the creator of the block. This adds an incentive for nodes to support the network, and provides a way to initially distribute coins into circulation, since there is no central authority to issue them. The steady addition of a constant of amount of new coins is analogous to gold miners expending resources to add gold to circulation. In our case, it is CPU time and electricity that is expended. The incentive can also be funded with transaction fees. If the output value of a transaction is less than its input value, the difference is a transaction fee that is added to the incentive value of the block containing the transaction. Once a predetermined number of coins have entered circulation, the incentive can transition entirely to transaction fees and be completely inflation free. The incentive may help encourage nodes to stay honest. If a greedy attacker is able to assemble more CPU power than all the honest nodes, he would have to choose between using it to defraud people by stealing back his payments, or using it to generate new coins. He ought to find it more profitable to play by the rules, such rules that favour him with more new coins than everyone else combined, than to undermine the system and the validity of his own wealth. 7. Reclaiming Disk Space Once the latest transaction in a coin is buried under enough blocks, the spent transactions before it can be discarded to save disk space. To facilitate this without breaking the block's hash, transactions are hashed in a Merkle Tree [7][2][5], with only the root included in the block's hash. Old blocks can then be compacted by stubbing\n\n confirm the network has accepted it. As such, the verification is reliable as long as honest nodes control the network, but is more vulnerable if the network is overpowered by an attacker. While network nodes can verify transactions for themselves, the simplified method can be fooled by an attacker's fabricated transactions for as long as the attacker can continue to overpower the network. One strategy to protect against this would be to accept alerts from network nodes when they detect an invalid block, prompting the user's software to download the full block and alerted transactions to confirm the inconsistency. Businesses that receive frequent payments will probably still want to run their own nodes for more independent security and quicker verification. 9. Combining and Splitting Value Although it would be possible to handle coins individually, it would be unwieldy to make a separate transaction for every cent in a transfer. To allow value to be split and combined, transactions contain multiple inputs and outputs. Normally there will be either a single input from a larger previous transaction or multiple inputs combining smaller amounts, and at most two outputs: one for the payment, and one returning the change, if any, back to the sender. It should be noted that fan-out, where a transaction depends on several transactions, and those transactions depend on many more, is not a problem here. There is never the need to extract a complete standalone copy of a transaction's history. 5 Transaction In ... In Out ... Hash01 Hash2 Hash3 Hash23 Block Header Merkle Root Prev Hash Nonce Block Header Merkle Root Prev Hash Nonce Block Header Merkle Root Prev Hash Nonce Merkle Branch for Tx3 Longest Proof-of-Work Chain Tx3 10. Privacy The traditional banking model achieves a level of privacy by limiting access to information to the parties involved and the trusted third party. The necessity to announce all transactions publicly precludes this method, but privacy can still be maintained by breaking the flow of information in another place: by keeping public keys anonymous. The public can see that someone is sending an amount to someone else, but without information linking the transaction to anyone. This is similar to the level of information released by stock exchanges, where the time and size of individual trades, the \"tape\", is made public, but without telling who the parties were. As an additional firewall, a new key pair should be used for each transaction to keep them from being linked to a common owner. Some linking is still unavoidable with multi-input transactions, which necessarily reveal that their inputs\n\n-work, the block cannot be changed without redoing the work. As later blocks are chained after it, the work to change the block would include redoing all the blocks after it. The proof-of-work also solves the problem of determining representation in majority decision making. If the majority were based on one-IP-address-one-vote, it could be subverted by anyone able to allocate many IPs. Proof-of-work is essentially one-CPU-one-vote. The majority decision is represented by the longest chain, which has the greatest proof-of-work effort invested in it. If a majority of CPU power is controlled by honest nodes, the honest chain will grow the fastest and outpace any competing chains. To modify a past block, an attacker would have to redo the proof-of-work of the block and all blocks after it and then catch up with and surpass the work of the honest nodes. We will show later that the probability of a slower attacker catching up diminishes exponentially as subsequent blocks are added. To compensate for increasing hardware speed and varying interest in running nodes over time, the proof-of-work difficulty is determined by a moving average targeting an average number of blocks per hour. If they're generated too fast, the difficulty increases. 5. Network The steps to run the network are as follows: 1) New transactions are broadcast to all nodes. 2) Each node collects new transactions into a block. 3) Each node works on finding a difficult proof-of-work for its block. 4) When a node finds a proof-of-work, it broadcasts the block to all nodes. 5) Nodes accept the block only if all transactions in it are valid and not already spent. 6) Nodes express their acceptance of the block by working on creating the next block in the chain, using the hash of the accepted block as the previous hash. Nodes always consider the longest chain to be the correct one and will keep working on extending it. If two nodes broadcast different versions of the next block simultaneously, some nodes may receive one or the other first. In that case, they work on the first one they received, but save the other branch in case it becomes longer. The tie will be broken when the next proof- of-work is found and one branch becomes longer; the nodes that were working on the other branch will then switch to the longer one. 3 Block Prev Hash Nonce Tx Tx ... Block Prev Hash Nonce Tx Tx ... New transaction broadcasts do not necessarily need\nHuman: What is the size of a block header with no transactions? Respond only with number of bytes."
+                        "System: You are an assistant for question-answering tasks. Use the following pieces of retrieved context to answer the question.\nIf you don't know the answer, just say that you don't know, don't try to make up an answer.\n----------------\nContext:  new coins than everyone else combined, than to undermine the system and the validity of his own wealth. 7. Reclaiming Disk Space Once the latest transaction in a coin is buried under enough blocks, the spent transactions before it can be discarded to save disk space. To facilitate this without breaking the block's hash, transactions are hashed in a Merkle Tree [7][2][5], with only the root included in the block's hash. Old blocks can then be compacted by stubbing off branches of the tree. The interior hashes do not need to be stored. A block header with no transactions would be about 80 bytes. If we suppose blocks are generated every 10 minutes, 80 bytes * 6 * 24 * 365 = 4.2MB per year. With computer systems typically selling with 2GB of RAM as of 2008, and Moore's Law predicting current growth of 1.2GB per year, storage should not be a problem even if the block headers must be kept in memory. 4 BlockBlock Block Header (Block Hash) Prev Hash Nonce Hash01 Hash0 Hash1 Hash2 Hash3 Hash23 Root Hash Hash01 Hash2 Tx3 Hash23 Block Header (Block Hash) Root Hash Transactions Hashed in a Merkle Tree After Pruning Tx0-2 from the Block Prev Hash Nonce Hash3 Tx0 Tx1 Tx2 Tx3 8. Simplified Payment Verification It is possible to verify payments without running a full network node. A user only needs to keep a copy of the block headers of the longest proof-of-work chain, which he can get by querying network nodes until he's convinced he has the longest chain, and obtain the Merkle branch linking the transaction to the block it's timestamped in. He can't check the transaction for himself, but by linking it to a place in the chain, he can see that a network node has accepted it, and blocks added after it further confirm the network has accepted it. As such, the verification is reliable as long as honest nodes control the network, but is more vulnerable if the network is overpowered by an attacker. While network nodes can verify transactions for themselves, the simplified method can be fooled by an attacker's fabricated transactions for as long as the attacker can continue to overpower the network. One strategy to protect against this would be to accept alerts from network nodes when they detect an invalid block, prompting the user's software to download the\n\n next block simultaneously, some nodes may receive one or the other first. In that case, they work on the first one they received, but save the other branch in case it becomes longer. The tie will be broken when the next proof- of-work is found and one branch becomes longer; the nodes that were working on the other branch will then switch to the longer one. 3 Block Prev Hash Nonce Tx Tx ... Block Prev Hash Nonce Tx Tx ... New transaction broadcasts do not necessarily need to reach all nodes. As long as they reach many nodes, they will get into a block before long. Block broadcasts are also tolerant of dropped messages. If a node does not receive a block, it will request it when it receives the next block and realizes it missed one. 6. Incentive By convention, the first transaction in a block is a special transaction that starts a new coin owned by the creator of the block. This adds an incentive for nodes to support the network, and provides a way to initially distribute coins into circulation, since there is no central authority to issue them. The steady addition of a constant of amount of new coins is analogous to gold miners expending resources to add gold to circulation. In our case, it is CPU time and electricity that is expended. The incentive can also be funded with transaction fees. If the output value of a transaction is less than its input value, the difference is a transaction fee that is added to the incentive value of the block containing the transaction. Once a predetermined number of coins have entered circulation, the incentive can transition entirely to transaction fees and be completely inflation free. The incentive may help encourage nodes to stay honest. If a greedy attacker is able to assemble more CPU power than all the honest nodes, he would have to choose between using it to defraud people by stealing back his payments, or using it to generate new coins. He ought to find it more profitable to play by the rules, such rules that favour him with more new coins than everyone else combined, than to undermine the system and the validity of his own wealth. 7. Reclaiming Disk Space Once the latest transaction in a coin is buried under enough blocks, the spent transactions before it can be discarded to save disk space. To facilitate this without breaking the block's hash, transactions are hashed in a Merkle Tree [7][2][5], with only the root included in the block's hash. Old blocks can then be compacted by stubbing\n\n confirm the network has accepted it. As such, the verification is reliable as long as honest nodes control the network, but is more vulnerable if the network is overpowered by an attacker. While network nodes can verify transactions for themselves, the simplified method can be fooled by an attacker's fabricated transactions for as long as the attacker can continue to overpower the network. One strategy to protect against this would be to accept alerts from network nodes when they detect an invalid block, prompting the user's software to download the full block and alerted transactions to confirm the inconsistency. Businesses that receive frequent payments will probably still want to run their own nodes for more independent security and quicker verification. 9. Combining and Splitting Value Although it would be possible to handle coins individually, it would be unwieldy to make a separate transaction for every cent in a transfer. To allow value to be split and combined, transactions contain multiple inputs and outputs. Normally there will be either a single input from a larger previous transaction or multiple inputs combining smaller amounts, and at most two outputs: one for the payment, and one returning the change, if any, back to the sender. It should be noted that fan-out, where a transaction depends on several transactions, and those transactions depend on many more, is not a problem here. There is never the need to extract a complete standalone copy of a transaction's history. 5 Transaction In ... In Out ... Hash01 Hash2 Hash3 Hash23 Block Header Merkle Root Prev Hash Nonce Block Header Merkle Root Prev Hash Nonce Block Header Merkle Root Prev Hash Nonce Merkle Branch for Tx3 Longest Proof-of-Work Chain Tx3 10. Privacy The traditional banking model achieves a level of privacy by limiting access to information to the parties involved and the trusted third party. The necessity to announce all transactions publicly precludes this method, but privacy can still be maintained by breaking the flow of information in another place: by keeping public keys anonymous. The public can see that someone is sending an amount to someone else, but without information linking the transaction to anyone. This is similar to the level of information released by stock exchanges, where the time and size of individual trades, the \"tape\", is made public, but without telling who the parties were. As an additional firewall, a new key pair should be used for each transaction to keep them from being linked to a common owner. Some linking is still unavoidable with multi-input transactions, which necessarily reveal that their inputs\n\n-work, the block cannot be changed without redoing the work. As later blocks are chained after it, the work to change the block would include redoing all the blocks after it. The proof-of-work also solves the problem of determining representation in majority decision making. If the majority were based on one-IP-address-one-vote, it could be subverted by anyone able to allocate many IPs. Proof-of-work is essentially one-CPU-one-vote. The majority decision is represented by the longest chain, which has the greatest proof-of-work effort invested in it. If a majority of CPU power is controlled by honest nodes, the honest chain will grow the fastest and outpace any competing chains. To modify a past block, an attacker would have to redo the proof-of-work of the block and all blocks after it and then catch up with and surpass the work of the honest nodes. We will show later that the probability of a slower attacker catching up diminishes exponentially as subsequent blocks are added. To compensate for increasing hardware speed and varying interest in running nodes over time, the proof-of-work difficulty is determined by a moving average targeting an average number of blocks per hour. If they're generated too fast, the difficulty increases. 5. Network The steps to run the network are as follows: 1) New transactions are broadcast to all nodes. 2) Each node collects new transactions into a block. 3) Each node works on finding a difficult proof-of-work for its block. 4) When a node finds a proof-of-work, it broadcasts the block to all nodes. 5) Nodes accept the block only if all transactions in it are valid and not already spent. 6) Nodes express their acceptance of the block by working on creating the next block in the chain, using the hash of the accepted block as the previous hash. Nodes always consider the longest chain to be the correct one and will keep working on extending it. If two nodes broadcast different versions of the next block simultaneously, some nodes may receive one or the other first. In that case, they work on the first one they received, but save the other branch in case it becomes longer. The tie will be broken when the next proof- of-work is found and one branch becomes longer; the nodes that were working on the other branch will then switch to the longer one. 3 Block Prev Hash Nonce Tx Tx ... Block Prev Hash Nonce Tx Tx ... New transaction broadcasts do not necessarily need\nHuman: What is the size of a block header with no transactions? Respond only with number of bytes."
                       ],
-                      "estimatedTokens": 2059,
+                      "estimatedTokens": 2071,
                       "options": {
                         "openai_api_key": {
                           "lc": 1,
@@ -738,23 +817,22 @@
         ],
         "Question and Answer Chain2": [
           {
-            "hints": [],
-            "startTime": 1738078223487,
-            "executionTime": 1092,
+            "startTime": 1746522744270,
+            "executionIndex": 11,
             "source": [
               {
                 "previousNode": "Check Vector Store Retrieval2"
               }
             ],
+            "hints": [],
+            "executionTime": 1136,
             "executionStatus": "success",
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "response": {
-                        "object": true
-                      }
+                      "response": "80 bytes"
                     },
                     "pairedItem": {
                       "item": 0
@@ -767,14 +845,15 @@
         ],
         "Edit Fields2": [
           {
-            "hints": [],
-            "startTime": 1738078224579,
-            "executionTime": 3,
+            "startTime": 1746522745406,
+            "executionIndex": 16,
             "source": [
               {
                 "previousNode": "Question and Answer Chain2"
               }
             ],
+            "hints": [],
+            "executionTime": 4,
             "executionStatus": "success",
             "data": {
               "main": [
@@ -885,8 +964,8 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2025-01-28T15:30:11.658Z",
-  "stoppedAt": "2025-01-28T15:30:24.582Z",
+  "startedAt": "2025-05-06T09:12:11.837Z",
+  "stoppedAt": "2025-05-06T09:12:25.410Z",
   "status": "running",
   "finished": true
 }
