@@ -5,10 +5,11 @@
       "runData": {
         "When clicking \"Test workflow\"": [
           {
-            "hints": [],
-            "startTime": 1738078218521,
-            "executionTime": 0,
+            "startTime": 1746522733379,
+            "executionIndex": 0,
             "source": [],
+            "hints": [],
+            "executionTime": 0,
             "executionStatus": "success",
             "data": {
               "main": [
@@ -26,8 +27,9 @@
         ],
         "Window Buffer Memory1": [
           {
-            "startTime": 1738078218531,
-            "executionTime": 1,
+            "startTime": 1746522733389,
+            "executionTime": 0,
+            "executionIndex": 2,
             "executionStatus": "success",
             "source": [
               null
@@ -55,7 +57,7 @@
                       "values": {
                         "input": "Hi, my name is Oleg. Tell me about magnets like I'm 5.",
                         "system_message": "You are a helpful assistant. Always provide both `english_answer` and `czech_answer` in the final output and be very concise.",
-                        "formatting_instructions": "IMPORTANT: Always call `format_final_response` to format your final response!"
+                        "formatting_instructions": "IMPORTANT: For your response to user, you MUST use the `format_final_json_response` tool with your complete answer formatted according to the required schema. Do not attempt to format the JSON manually - always use this tool. Your response will be rejected if it is not properly formatted through this tool. Only use this tool once you are ready to provide your final answer."
                       }
                     }
                   }
@@ -84,8 +86,9 @@
             }
           },
           {
-            "startTime": 1738078224979,
+            "startTime": 1746522738401,
             "executionTime": 0,
+            "executionIndex": 5,
             "executionStatus": "success",
             "source": [
               null
@@ -113,16 +116,16 @@
                       "input": {
                         "input": "Hi, my name is Oleg. Tell me about magnets like I'm 5.",
                         "system_message": "You are a helpful assistant. Always provide both `english_answer` and `czech_answer` in the final output and be very concise.",
-                        "formatting_instructions": "IMPORTANT: Always call `format_final_response` to format your final response!"
+                        "formatting_instructions": "IMPORTANT: For your response to user, you MUST use the `format_final_json_response` tool with your complete answer formatted according to the required schema. Do not attempt to format the JSON manually - always use this tool. Your response will be rejected if it is not properly formatted through this tool. Only use this tool once you are ready to provide your final answer."
                       },
                       "output": {
                         "input": "Hi, my name is Oleg. Tell me about magnets like I'm 5.",
                         "system_message": "You are a helpful assistant. Always provide both `english_answer` and `czech_answer` in the final output and be very concise.",
-                        "formatting_instructions": "IMPORTANT: Always call `format_final_response` to format your final response!",
+                        "formatting_instructions": "IMPORTANT: For your response to user, you MUST use the `format_final_json_response` tool with your complete answer formatted according to the required schema. Do not attempt to format the JSON manually - always use this tool. Your response will be rejected if it is not properly formatted through this tool. Only use this tool once you are ready to provide your final answer.",
                         "chat_history": [],
                         "output": {
-                          "english_answer": "Magnets are special things that can pull some metals, like iron, towards them. They have two ends called poles: one is called the north pole and the other is the south pole. If you put two magnets together, the north pole of one magnet will stick to the south pole of another, but if you try to put two north poles or two south poles together, they will push away from each other. Magnets are used in many things, like fridges to hold notes and in toys!",
-                          "czech_answer": "Magnety jsou zvláštní věci, které mohou přitahovat některé kovy, jako je železo. Mají dva konce, které se nazývají póly: jeden se nazývá severní pól a druhý jižní pól. Pokud dáte dva magnety dohromady, severní pól jednoho magnetu se přichytí k jižnímu pólu druhého, ale pokud se pokusíte dát dohromady dva severní póly nebo dva jižní póly, budou se od sebe odtahovat. Magnety se používají v mnoha věcech, jako jsou ledničky na držení poznámek a v hračkách!"
+                          "english_answer": "Magnets are special things that can pull some metals, like iron, towards them. They have two sides: one side is called the north pole and the other is the south pole. If you put two magnets close together, the north pole of one magnet will push away the north pole of another magnet, but the north pole will pull the south pole of another magnet. Magnets are used in many things, like fridges to hold notes and in toys!",
+                          "czech_answer": "Magnety jsou zvláštní věci, které mohou přitahovat některé kovy, jako je železo. Mají dvě strany: jedna strana se nazývá severní pól a druhá jižní pól. Pokud dáte dva magnety blízko sebe, severní pól jednoho magnetu od sebe odtlačí severní pól druhého magnetu, ale severní pól přitáhne jižní pól druhého magnetu. Magnety se používají v mnoha věcech, jako jsou ledničky na držení poznámek a v hračkách!"
                         }
                       }
                     }
@@ -132,8 +135,9 @@
             }
           },
           {
-            "startTime": 1738078224985,
+            "startTime": 1746522738404,
             "executionTime": 0,
+            "executionIndex": 7,
             "executionStatus": "success",
             "source": [
               null
@@ -161,7 +165,7 @@
                       "values": {
                         "input": "Can you still remember my name?",
                         "system_message": "You are a helpful assistant. Always provide both `english_answer` and `czech_answer` in the final output and be very concise.",
-                        "formatting_instructions": "IMPORTANT: Always call `format_final_response` to format your final response!"
+                        "formatting_instructions": "IMPORTANT: For your response to user, you MUST use the `format_final_json_response` tool with your complete answer formatted according to the required schema. Do not attempt to format the JSON manually - always use this tool. Your response will be rejected if it is not properly formatted through this tool. Only use this tool once you are ready to provide your final answer."
                       }
                     }
                   }
@@ -170,8 +174,9 @@
             }
           },
           {
-            "startTime": 1738078228099,
+            "startTime": 1746522739340,
             "executionTime": 0,
+            "executionIndex": 10,
             "executionStatus": "success",
             "source": [
               null
@@ -199,12 +204,12 @@
                       "input": {
                         "input": "Can you still remember my name?",
                         "system_message": "You are a helpful assistant. Always provide both `english_answer` and `czech_answer` in the final output and be very concise.",
-                        "formatting_instructions": "IMPORTANT: Always call `format_final_response` to format your final response!"
+                        "formatting_instructions": "IMPORTANT: For your response to user, you MUST use the `format_final_json_response` tool with your complete answer formatted according to the required schema. Do not attempt to format the JSON manually - always use this tool. Your response will be rejected if it is not properly formatted through this tool. Only use this tool once you are ready to provide your final answer."
                       },
                       "output": {
                         "input": "Can you still remember my name?",
                         "system_message": "You are a helpful assistant. Always provide both `english_answer` and `czech_answer` in the final output and be very concise.",
-                        "formatting_instructions": "IMPORTANT: Always call `format_final_response` to format your final response!",
+                        "formatting_instructions": "IMPORTANT: For your response to user, you MUST use the `format_final_json_response` tool with your complete answer formatted according to the required schema. Do not attempt to format the JSON manually - always use this tool. Your response will be rejected if it is not properly formatted through this tool. Only use this tool once you are ready to provide your final answer.",
                         "chat_history": [
                           {
                             "lc": 1,
@@ -229,7 +234,7 @@
                               "AIMessage"
                             ],
                             "kwargs": {
-                              "content": "{\"output\":{\"english_answer\":\"Magnets are special things that can pull some metals, like iron, towards them. They have two ends called poles: one is called the north pole and the other is the south pole. If you put two magnets together, the north pole of one magnet will stick to the south pole of another, but if you try to put two north poles or two south poles together, they will push away from each other. Magnets are used in many things, like fridges to hold notes and in toys!\",\"czech_answer\":\"Magnety jsou zvláštní věci, které mohou přitahovat některé kovy, jako je železo. Mají dva konce, které se nazývají póly: jeden se nazývá severní pól a druhý jižní pól. Pokud dáte dva magnety dohromady, severní pól jednoho magnetu se přichytí k jižnímu pólu druhého, ale pokud se pokusíte dát dohromady dva severní póly nebo dva jižní póly, budou se od sebe odtahovat. Magnety se používají v mnoha věcech, jako jsou ledničky na držení poznámek a v hračkách!\"}}",
+                              "content": "{\"output\":{\"english_answer\":\"Magnets are special things that can pull some metals, like iron, towards them. They have two sides: one side is called the north pole and the other is the south pole. If you put two magnets close together, the north pole of one magnet will push away the north pole of another magnet, but the north pole will pull the south pole of another magnet. Magnets are used in many things, like fridges to hold notes and in toys!\",\"czech_answer\":\"Magnety jsou zvláštní věci, které mohou přitahovat některé kovy, jako je železo. Mají dvě strany: jedna strana se nazývá severní pól a druhá jižní pól. Pokud dáte dva magnety blízko sebe, severní pól jednoho magnetu od sebe odtlačí severní pól druhého magnetu, ale severní pól přitáhne jižní pól druhého magnetu. Magnety se používají v mnoha věcech, jako jsou ledničky na držení poznámek a v hračkách!\"}}",
                               "tool_calls": [],
                               "invalid_tool_calls": [],
                               "additional_kwargs": {},
@@ -251,8 +256,9 @@
         ],
         "OpenAI Chat Model3": [
           {
-            "startTime": 1738078218538,
-            "executionTime": 6439,
+            "startTime": 1746522733393,
+            "executionTime": 5006,
+            "executionIndex": 3,
             "executionStatus": "success",
             "source": [
               null
@@ -279,9 +285,9 @@
                   {
                     "json": {
                       "messages": [
-                        "System: You are a helpful assistant. Always provide both `english_answer` and `czech_answer` in the final output and be very concise.\n\nIMPORTANT: Always call `format_final_response` to format your final response!\nHuman: Hi, my name is Oleg. Tell me about magnets like I'm 5."
+                        "System: You are a helpful assistant. Always provide both `english_answer` and `czech_answer` in the final output and be very concise.\n\nIMPORTANT: For your response to user, you MUST use the `format_final_json_response` tool with your complete answer formatted according to the required schema. Do not attempt to format the JSON manually - always use this tool. Your response will be rejected if it is not properly formatted through this tool. Only use this tool once you are ready to provide your final answer.\nHuman: Hi, my name is Oleg. Tell me about magnets like I'm 5."
                       ],
-                      "estimatedTokens": 64,
+                      "estimatedTokens": 122,
                       "options": {
                         "openai_api_key": {
                           "lc": 1,
@@ -318,8 +324,9 @@
             }
           },
           {
-            "startTime": 1738078224989,
-            "executionTime": 3108,
+            "startTime": 1746522738408,
+            "executionTime": 927,
+            "executionIndex": 8,
             "executionStatus": "success",
             "source": [
               null
@@ -346,9 +353,9 @@
                   {
                     "json": {
                       "messages": [
-                        "System: You are a helpful assistant. Always provide both `english_answer` and `czech_answer` in the final output and be very concise.\n\nIMPORTANT: Always call `format_final_response` to format your final response!\nHuman: Hi, my name is Oleg. Tell me about magnets like I'm 5.\nAI: {\"output\":{\"english_answer\":\"Magnets are special things that can pull some metals, like iron, towards them. They have two ends called poles: one is called the north pole and the other is the south pole. If you put two magnets together, the north pole of one magnet will stick to the south pole of another, but if you try to put two north poles or two south poles together, they will push away from each other. Magnets are used in many things, like fridges to hold notes and in toys!\",\"czech_answer\":\"Magnety jsou zvláštní věci, které mohou přitahovat některé kovy, jako je železo. Mají dva konce, které se nazývají póly: jeden se nazývá severní pól a druhý jižní pól. Pokud dáte dva magnety dohromady, severní pól jednoho magnetu se přichytí k jižnímu pólu druhého, ale pokud se pokusíte dát dohromady dva severní póly nebo dva jižní póly, budou se od sebe odtahovat. Magnety se používají v mnoha věcech, jako jsou ledničky na držení poznámek a v hračkách!\"}}\nHuman: Can you still remember my name?"
+                        "System: You are a helpful assistant. Always provide both `english_answer` and `czech_answer` in the final output and be very concise.\n\nIMPORTANT: For your response to user, you MUST use the `format_final_json_response` tool with your complete answer formatted according to the required schema. Do not attempt to format the JSON manually - always use this tool. Your response will be rejected if it is not properly formatted through this tool. Only use this tool once you are ready to provide your final answer.\nHuman: Hi, my name is Oleg. Tell me about magnets like I'm 5.\nAI: {\"output\":{\"english_answer\":\"Magnets are special things that can pull some metals, like iron, towards them. They have two sides: one side is called the north pole and the other is the south pole. If you put two magnets close together, the north pole of one magnet will push away the north pole of another magnet, but the north pole will pull the south pole of another magnet. Magnets are used in many things, like fridges to hold notes and in toys!\",\"czech_answer\":\"Magnety jsou zvláštní věci, které mohou přitahovat některé kovy, jako je železo. Mají dvě strany: jedna strana se nazývá severní pól a druhá jižní pól. Pokud dáte dva magnety blízko sebe, severní pól jednoho magnetu od sebe odtlačí severní pól druhého magnetu, ale severní pól přitáhne jižní pól druhého magnetu. Magnety se používají v mnoha věcech, jako jsou ledničky na držení poznámek a v hračkách!\"}}\nHuman: Can you still remember my name?"
                       ],
-                      "estimatedTokens": 335,
+                      "estimatedTokens": 363,
                       "options": {
                         "openai_api_key": {
                           "lc": 1,
@@ -375,8 +382,9 @@
         ],
         "Structured Output Parser1": [
           {
-            "startTime": 1738078224978,
+            "startTime": 1746522738400,
             "executionTime": 0,
+            "executionIndex": 4,
             "executionStatus": "success",
             "source": [
               null
@@ -401,7 +409,7 @@
                   {
                     "json": {
                       "action": "parse",
-                      "text": "{\"output\":{\"english_answer\":\"Magnets are special things that can pull some metals, like iron, towards them. They have two ends called poles: one is called the north pole and the other is the south pole. If you put two magnets together, the north pole of one magnet will stick to the south pole of another, but if you try to put two north poles or two south poles together, they will push away from each other. Magnets are used in many things, like fridges to hold notes and in toys!\",\"czech_answer\":\"Magnety jsou zvláštní věci, které mohou přitahovat některé kovy, jako je železo. Mají dva konce, které se nazývají póly: jeden se nazývá severní pól a druhý jižní pól. Pokud dáte dva magnety dohromady, severní pól jednoho magnetu se přichytí k jižnímu pólu druhého, ale pokud se pokusíte dát dohromady dva severní póly nebo dva jižní póly, budou se od sebe odtahovat. Magnety se používají v mnoha věcech, jako jsou ledničky na držení poznámek a v hračkách!\"}}"
+                      "text": "{\"output\":{\"english_answer\":\"Magnets are special things that can pull some metals, like iron, towards them. They have two sides: one side is called the north pole and the other is the south pole. If you put two magnets close together, the north pole of one magnet will push away the north pole of another magnet, but the north pole will pull the south pole of another magnet. Magnets are used in many things, like fridges to hold notes and in toys!\",\"czech_answer\":\"Magnety jsou zvláštní věci, které mohou přitahovat některé kovy, jako je železo. Mají dvě strany: jedna strana se nazývá severní pól a druhá jižní pól. Pokud dáte dva magnety blízko sebe, severní pól jednoho magnetu od sebe odtlačí severní pól druhého magnetu, ale severní pól přitáhne jižní pól druhého magnetu. Magnety se používají v mnoha věcech, jako jsou ledničky na držení poznámek a v hračkách!\"}}"
                     }
                   }
                 ]
@@ -421,8 +429,9 @@
             }
           },
           {
-            "startTime": 1738078228098,
+            "startTime": 1746522739338,
             "executionTime": 0,
+            "executionIndex": 9,
             "executionStatus": "success",
             "source": [
               null
@@ -457,14 +466,15 @@
         ],
         "AI Agent5": [
           {
-            "hints": [],
-            "startTime": 1738078218521,
-            "executionTime": 6459,
+            "startTime": 1746522733379,
+            "executionIndex": 1,
             "source": [
               {
                 "previousNode": "When clicking \"Test workflow\""
               }
             ],
+            "hints": [],
+            "executionTime": 5022,
             "executionStatus": "success",
             "data": {
               "main": [
@@ -486,14 +496,15 @@
         ],
         "AI Agent3": [
           {
-            "hints": [],
-            "startTime": 1738078224980,
-            "executionTime": 3120,
+            "startTime": 1746522738401,
+            "executionIndex": 6,
             "source": [
               {
                 "previousNode": "AI Agent5"
               }
             ],
+            "hints": [],
+            "executionTime": 939,
             "executionStatus": "success",
             "data": {
               "main": [
@@ -515,14 +526,15 @@
         ],
         "Edit Fields1": [
           {
-            "hints": [],
-            "startTime": 1738078228100,
-            "executionTime": 10,
+            "startTime": 1746522739340,
+            "executionIndex": 11,
             "source": [
               {
                 "previousNode": "AI Agent3"
               }
             ],
+            "hints": [],
+            "executionTime": 1,
             "executionStatus": "success",
             "data": {
               "main": [
@@ -543,8 +555,9 @@
         ],
         "OpenAI Chat Model2": [
           {
-            "startTime": 1738078228123,
-            "executionTime": 641,
+            "startTime": 1746522739349,
+            "executionTime": 539,
+            "executionIndex": 13,
             "executionStatus": "success",
             "source": [
               null
@@ -610,8 +623,9 @@
             }
           },
           {
-            "startTime": 1738078229479,
-            "executionTime": 6353,
+            "startTime": 1746522740376,
+            "executionTime": 8605,
+            "executionIndex": 15,
             "executionStatus": "success",
             "source": [
               null
@@ -667,8 +681,9 @@
         ],
         "HTTP Request": [
           {
-            "startTime": 1738078228766,
-            "executionTime": 709,
+            "startTime": 1746522739890,
+            "executionTime": 482,
+            "executionIndex": 14,
             "executionStatus": "success",
             "source": [
               null
@@ -707,21 +722,22 @@
         ],
         "AI Agent2": [
           {
-            "hints": [],
-            "startTime": 1738078228110,
-            "executionTime": 7723,
+            "startTime": 1746522739341,
+            "executionIndex": 12,
             "source": [
               {
                 "previousNode": "When clicking \"Test workflow\""
               }
             ],
+            "hints": [],
+            "executionTime": 9643,
             "executionStatus": "success",
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "output": "Here is the content of the example website:\n\n```html\n<!doctype html>\n<html>\n<head>\n    <title>Example Domain</title>\n\n    <meta charset=\"utf-8\" />\n    <meta http-equiv=\"Content-type\" content=\"text/html; charset=utf-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n    <style type=\"text/css\">\n    body {\n        background-color: #f0f0f2;\n        margin: 0;\n        padding: 0;\n        font-family: -apple-system, system-ui, BlinkMacSystemFont, \"Segoe UI\", \"Open Sans\", \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n        \n    }\n    div {\n        width: 600px;\n        margin: 5em auto;\n        padding: 2em;\n        background-color: #fdfdff;\n        border-radius: 0.5em;\n        box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.02);\n    }\n    a:link, a:visited {\n        color: #38488f;\n        text-decoration: none;\n    }\n    @media (max-width: 700px) {\n        div {\n            margin: 0 auto;\n            width: auto;\n        }\n    }\n    </style>    \n</head>\n\n<body>\n<div>\n    <h1>Example Domain</h1>\n    <p>This domain is for use in illustrative examples in documents. You may use this\n    domain in literature without prior coordination or asking for permission.</p>\n    <p><a href=\"https://www.iana.org/domains/example\">More information...</a></p>\n</div>\n</body>\n</html>\n```\n\n### Summary of the Content:\n- **Title**: Example Domain\n- **Description**: This domain is for use in illustrative examples in documents. You may use this domain in literature without prior coordination or asking for permission.\n- **Link**: [More information...](https://www.iana.org/domains/example)",
+                      "output": "Here is the content of the example website:\n\n```html\n<!doctype html>\n<html>\n<head>\n    <title>Example Domain</title>\n\n    <meta charset=\"utf-8\" />\n    <meta http-equiv=\"Content-type\" content=\"text/html; charset=utf-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n    <style type=\"text/css\">\n    body {\n        background-color: #f0f0f2;\n        margin: 0;\n        padding: 0;\n        font-family: -apple-system, system-ui, BlinkMacSystemFont, \"Segoe UI\", \"Open Sans\", \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n        \n    }\n    div {\n        width: 600px;\n        margin: 5em auto;\n        padding: 2em;\n        background-color: #fdfdff;\n        border-radius: 0.5em;\n        box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.02);\n    }\n    a:link, a:visited {\n        color: #38488f;\n        text-decoration: none;\n    }\n    @media (max-width: 700px) {\n        div {\n            margin: 0 auto;\n            width: auto;\n        }\n    }\n    </style>    \n</head>\n\n<body>\n<div>\n    <h1>Example Domain</h1>\n    <p>This domain is for use in illustrative examples in documents. You may use this\n    domain in literature without prior coordination or asking for permission.</p>\n    <p><a href=\"https://www.iana.org/domains/example\">More information...</a></p>\n</div>\n</body>\n</html>\n```\n\n### Summary:\n- **Title:** Example Domain\n- **Content:** This domain is for use in illustrative examples in documents. You may use this domain in literature without prior coordination or asking for permission.\n- **Link:** [More information...](https://www.iana.org/domains/example)",
                       "intermediateSteps": [
                         "json array"
                       ]
@@ -737,14 +753,15 @@
         ],
         "Edit Fields9": [
           {
-            "hints": [],
-            "startTime": 1738078235834,
-            "executionTime": 1,
+            "startTime": 1746522748984,
+            "executionIndex": 16,
             "source": [
               {
                 "previousNode": "AI Agent2"
               }
             ],
+            "hints": [],
+            "executionTime": 1,
             "executionStatus": "success",
             "data": {
               "main": [
@@ -766,8 +783,9 @@
         ],
         "OpenAI Chat Model1": [
           {
-            "startTime": 1738078235843,
-            "executionTime": 880,
+            "startTime": 1746522748993,
+            "executionTime": 986,
+            "executionIndex": 18,
             "executionStatus": "success",
             "source": [
               null
@@ -833,8 +851,9 @@
             }
           },
           {
-            "startTime": 1738078236731,
-            "executionTime": 782,
+            "startTime": 1746522749989,
+            "executionTime": 785,
+            "executionIndex": 20,
             "executionStatus": "success",
             "source": [
               null
@@ -890,8 +909,9 @@
         ],
         "Code Tool": [
           {
-            "startTime": 1738078236724,
-            "executionTime": 5,
+            "startTime": 1746522749982,
+            "executionTime": 3,
+            "executionIndex": 19,
             "executionStatus": "success",
             "source": [
               null
@@ -937,21 +957,22 @@
         ],
         "AI Agent1": [
           {
-            "hints": [],
-            "startTime": 1738078235835,
-            "executionTime": 1680,
+            "startTime": 1746522748985,
+            "executionIndex": 17,
             "source": [
               {
                 "previousNode": "When clicking \"Test workflow\""
               }
             ],
+            "hints": [],
+            "executionTime": 1793,
             "executionStatus": "success",
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "output": "The JSON array has been converted to a single string: \"This, Is, An, Array!\".",
+                      "output": "The JSON array has been converted to a single string: \"This, Is, An, Array!\"",
                       "intermediateSteps": [
                         "json array"
                       ]
@@ -967,14 +988,15 @@
         ],
         "Edit Fields8": [
           {
-            "hints": [],
-            "startTime": 1738078237515,
-            "executionTime": 3,
+            "startTime": 1746522750778,
+            "executionIndex": 21,
             "source": [
               {
                 "previousNode": "AI Agent1"
               }
             ],
+            "hints": [],
+            "executionTime": 1,
             "executionStatus": "success",
             "data": {
               "main": [
@@ -999,8 +1021,9 @@
         ],
         "OpenAI Chat Model": [
           {
-            "startTime": 1738078237526,
-            "executionTime": 891,
+            "startTime": 1746522750789,
+            "executionTime": 849,
+            "executionIndex": 23,
             "executionStatus": "success",
             "source": [
               null
@@ -1027,9 +1050,9 @@
                   {
                     "json": {
                       "messages": [
-                        "System: You are a helpful assistant\n\nIMPORTANT: Always call `format_final_response` to format your final response!\nHuman: Tell me about M.C. Escher"
+                        "System: You are a helpful assistant\n\nIMPORTANT: For your response to user, you MUST use the `format_final_json_response` tool with your complete answer formatted according to the required schema. Do not attempt to format the JSON manually - always use this tool. Your response will be rejected if it is not properly formatted through this tool. Only use this tool once you are ready to provide your final answer.\nHuman: Tell me about M.C. Escher"
                       ],
-                      "estimatedTokens": 33,
+                      "estimatedTokens": 91,
                       "options": {
                         "openai_api_key": {
                           "lc": 1,
@@ -1066,8 +1089,9 @@
             }
           },
           {
-            "startTime": 1738078238455,
-            "executionTime": 2606,
+            "startTime": 1746522751657,
+            "executionTime": 2136,
+            "executionIndex": 25,
             "executionStatus": "success",
             "source": [
               null
@@ -1094,9 +1118,9 @@
                   {
                     "json": {
                       "messages": [
-                        "System: You are a helpful assistant\n\nIMPORTANT: Always call `format_final_response` to format your final response!\nHuman: Tell me about M.C. Escher\nAI: \nTool: {\n  \"response\": \"Maurits Cornelis Escher (Dutch pronunciation: [ˈmʌurɪts kɔrˈneːlɪs ˈɛɕər]; 17 June 1898 – 27 March 1972) was a Dutch graphic artist who made woodcuts, lithographs, and mezzotints, many of which were inspired by mathematics. Despite wide popular interest, for most of his life Escher was neglected in the art world, even in his native Netherlands. He was 70 before a retrospective exhibition was held. In the late twentieth century, he became more widely appreciated, and in the twenty-first century he has been celebrated in exhibitions around the world.\\n\\nHis work features mathematical objects and operations including impossible objects, explorations of infinity, reflection, symmetry, perspective, truncated and stellated polyhedra, hyperbolic geometry, and tessellations. Although Escher believed he had no mathematical ability, he interacted with the mathematicians George Pólya, Roger Penrose, and Donald Coxeter, and the crystallographer Friedrich Haag, and conducted his own research into tessellation.\\n\\nEarly in his career, he drew inspiration from nature, making studies of insects, landscapes, and plants such as lichens, all of which he used as details in his artworks. He traveled in Italy and Spain, sketching buildings, townscapes, architecture and the tilings of the Alhambra and the Mezquita of Cordoba, and became steadily more interested in their mathematical structure.\\n\\nEscher's art became well known among scientists and mathematicians, and in popular culture, especially after it was featured by Martin Gardner in his April 1966 Mathematical Games column in Scientific American. Apart from being used in a variety of technical papers, his work has appeared on the covers of many books and albums. He was one of the major inspirations for Douglas Hofstadter's Pulitzer Prize-winning 1979 book Gödel, Escher, Bach.\\n\\nExhibitions\\n\\nPoster advertising the first major exhibition of Escher's work in Britain (Dulwich Picture Gallery, 14 October 2015 – 17 January 2016). The image, which shows Escher and his interest in geometric distortion and multiple levels of distance from reality, is based on his Hand with Reflecting Sphere, 1935.[62][22]\\nDespite wide popular interest, Escher was for a long time somewhat neglected in the art world; even in his native Netherlands, he was 70 before a retrospective exhibition was held.[43][k] In the twenty-first century, major exhibitions have been held in cities around the world.[63][64][65] An exhibition of his work in Rio de Janeiro attracted more than 573,000 visitors in 2011;[63] its daily visitor count of 9,677 made it the most visited museum exhibition of the year, anywhere in the world.[66] No major exhibition of Escher's work was held in Britain until 2015, when the Scottish National Gallery of Modern Art ran one in Edinburgh from June to September 2015,[64] moving in October 2015 to the Dulwich Picture Gallery, London. The exhibition poster is based on Hand with Reflecting Sphere, 1935, which shows Escher in his house reflected in a handheld sphere, thus illustrating the artist, his interest in levels of reality in art (e.g., is the hand in the foreground more real than the reflected one?), perspective, and spherical geometry.[22][62][67] The exhibition moved to Italy in 2015–2016, attracting over 500,000 visitors in Rome and Bologna,[65] and then Milan.[68][69][70]\"\n}"
+                        "System: You are a helpful assistant\n\nIMPORTANT: For your response to user, you MUST use the `format_final_json_response` tool with your complete answer formatted according to the required schema. Do not attempt to format the JSON manually - always use this tool. Your response will be rejected if it is not properly formatted through this tool. Only use this tool once you are ready to provide your final answer.\nHuman: Tell me about M.C. Escher\nAI: \nTool: {\n  \"response\": \"Maurits Cornelis Escher (Dutch pronunciation: [ˈmʌurɪts kɔrˈneːlɪs ˈɛɕər]; 17 June 1898 – 27 March 1972) was a Dutch graphic artist who made woodcuts, lithographs, and mezzotints, many of which were inspired by mathematics. Despite wide popular interest, for most of his life Escher was neglected in the art world, even in his native Netherlands. He was 70 before a retrospective exhibition was held. In the late twentieth century, he became more widely appreciated, and in the twenty-first century he has been celebrated in exhibitions around the world.\\n\\nHis work features mathematical objects and operations including impossible objects, explorations of infinity, reflection, symmetry, perspective, truncated and stellated polyhedra, hyperbolic geometry, and tessellations. Although Escher believed he had no mathematical ability, he interacted with the mathematicians George Pólya, Roger Penrose, and Donald Coxeter, and the crystallographer Friedrich Haag, and conducted his own research into tessellation.\\n\\nEarly in his career, he drew inspiration from nature, making studies of insects, landscapes, and plants such as lichens, all of which he used as details in his artworks. He traveled in Italy and Spain, sketching buildings, townscapes, architecture and the tilings of the Alhambra and the Mezquita of Cordoba, and became steadily more interested in their mathematical structure.\\n\\nEscher's art became well known among scientists and mathematicians, and in popular culture, especially after it was featured by Martin Gardner in his April 1966 Mathematical Games column in Scientific American. Apart from being used in a variety of technical papers, his work has appeared on the covers of many books and albums. He was one of the major inspirations for Douglas Hofstadter's Pulitzer Prize-winning 1979 book Gödel, Escher, Bach.\\n\\nExhibitions\\n\\nPoster advertising the first major exhibition of Escher's work in Britain (Dulwich Picture Gallery, 14 October 2015 – 17 January 2016). The image, which shows Escher and his interest in geometric distortion and multiple levels of distance from reality, is based on his Hand with Reflecting Sphere, 1935.[62][22]\\nDespite wide popular interest, Escher was for a long time somewhat neglected in the art world; even in his native Netherlands, he was 70 before a retrospective exhibition was held.[43][k] In the twenty-first century, major exhibitions have been held in cities around the world.[63][64][65] An exhibition of his work in Rio de Janeiro attracted more than 573,000 visitors in 2011;[63] its daily visitor count of 9,677 made it the most visited museum exhibition of the year, anywhere in the world.[66] No major exhibition of Escher's work was held in Britain until 2015, when the Scottish National Gallery of Modern Art ran one in Edinburgh from June to September 2015,[64] moving in October 2015 to the Dulwich Picture Gallery, London. The exhibition poster is based on Hand with Reflecting Sphere, 1935, which shows Escher in his house reflected in a handheld sphere, thus illustrating the artist, his interest in levels of reality in art (e.g., is the hand in the foreground more real than the reflected one?), perspective, and spherical geometry.[22][62][67] The exhibition moved to Italy in 2015–2016, attracting over 500,000 visitors in Rome and Bologna,[65] and then Milan.[68][69][70]\"\n}"
                       ],
-                      "estimatedTokens": 809,
+                      "estimatedTokens": 867,
                       "options": {
                         "openai_api_key": {
                           "lc": 1,
@@ -1123,8 +1147,9 @@
         ],
         "Search Wiki": [
           {
-            "startTime": 1738078238418,
-            "executionTime": 32,
+            "startTime": 1746522751640,
+            "executionTime": 12,
+            "executionIndex": 24,
             "executionStatus": "success",
             "source": [
               null
@@ -1153,7 +1178,7 @@
             },
             "metadata": {
               "subExecution": {
-                "executionId": "68",
+                "executionId": "227",
                 "workflowId": "253"
               },
               "subRun": [
@@ -1167,8 +1192,9 @@
         ],
         "Structured Output Parser": [
           {
-            "startTime": 1738078241062,
+            "startTime": 1746522753796,
             "executionTime": 0,
+            "executionIndex": 26,
             "executionStatus": "success",
             "source": [
               null
@@ -1193,7 +1219,7 @@
                   {
                     "json": {
                       "action": "parse",
-                      "text": "{\"output\":{\"name\":\"Maurits Cornelis Escher\",\"birthDate\":\"1898-06-17\",\"deathDate\":\"1972-03-27\",\"nationality\":\"Dutch\",\"profession\":\"Graphic Artist\",\"notableWorks\":[\"Relativity\",\"Waterfall\",\"Ascending and Descending\",\"Metamorphosis II\",\"Hand with Reflecting Sphere\"]}}"
+                      "text": "{\"output\":{\"name\":\"Maurits Cornelis Escher\",\"birthDate\":\"1898-06-17\",\"deathDate\":\"1972-03-27\",\"nationality\":\"Dutch\",\"profession\":\"Graphic Artist\",\"notableWorks\":[\"Relativity\",\"Waterfall\",\"Ascending and Descending\",\"Drawing Hands\",\"Hand with Reflecting Sphere\"]}}"
                     }
                   }
                 ]
@@ -1211,14 +1237,15 @@
         ],
         "AI Agent": [
           {
-            "hints": [],
-            "startTime": 1738078237518,
-            "executionTime": 3545,
+            "startTime": 1746522750779,
+            "executionIndex": 22,
             "source": [
               {
                 "previousNode": "When clicking \"Test workflow\""
               }
             ],
+            "hints": [],
+            "executionTime": 3018,
             "executionStatus": "success",
             "data": {
               "main": [
@@ -1240,14 +1267,15 @@
         ],
         "Edit Fields7": [
           {
-            "hints": [],
-            "startTime": 1738078241064,
-            "executionTime": 8,
+            "startTime": 1746522753797,
+            "executionIndex": 27,
             "source": [
               {
                 "previousNode": "AI Agent"
               }
             ],
+            "hints": [],
+            "executionTime": 5,
             "executionStatus": "success",
             "data": {
               "main": [
@@ -1270,8 +1298,9 @@
         ],
         "OpenAI Chat Model4": [
           {
-            "startTime": 1738078241083,
-            "executionTime": 2094,
+            "startTime": 1746522753809,
+            "executionTime": 1273,
+            "executionIndex": 29,
             "executionStatus": "success",
             "source": [
               null
@@ -1337,8 +1366,9 @@
             }
           },
           {
-            "startTime": 1738078243222,
-            "executionTime": 8764,
+            "startTime": 1746522755113,
+            "executionTime": 7264,
+            "executionIndex": 32,
             "executionStatus": "success",
             "source": [
               null
@@ -1394,8 +1424,9 @@
         ],
         "Get Weather": [
           {
-            "startTime": 1738078243179,
-            "executionTime": 37,
+            "startTime": 1746522755085,
+            "executionTime": 22,
+            "executionIndex": 30,
             "executionStatus": "success",
             "source": [
               null
@@ -1424,7 +1455,7 @@
             },
             "metadata": {
               "subExecution": {
-                "executionId": "73",
+                "executionId": "228",
                 "workflowId": "253"
               },
               "subRun": [
@@ -1438,8 +1469,9 @@
         ],
         "Get Events": [
           {
-            "startTime": 1738078243180,
-            "executionTime": 33,
+            "startTime": 1746522755085,
+            "executionTime": 22,
+            "executionIndex": 31,
             "executionStatus": "success",
             "source": [
               null
@@ -1468,7 +1500,7 @@
             },
             "metadata": {
               "subExecution": {
-                "executionId": "72",
+                "executionId": "229",
                 "workflowId": "253"
               },
               "subRun": [
@@ -1482,21 +1514,22 @@
         ],
         "AI Agent4": [
           {
-            "hints": [],
-            "startTime": 1738078241072,
-            "executionTime": 10916,
+            "startTime": 1746522753802,
+            "executionIndex": 28,
             "source": [
               {
                 "previousNode": "When clicking \"Test workflow\""
               }
             ],
+            "hints": [],
+            "executionTime": 8579,
             "executionStatus": "success",
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "output": "### Weather in Berlin, Germany\n- **Current Temperature**: 5.1°C (Feels like 4°C)\n- **Weather Condition**: Fog\n- **Precipitation**: 0.0 mm (No rain expected)\n- **Wind**: 1.7 m/s from the west (275°)\n\n### Upcoming Events in Berlin\n1. **Movie Barf: Dune – Part Two**\n   - **Description**: A new English-friendly film night featuring *Dune: Part Two*, where Paul Atreides seeks revenge against the conspirators who destroyed his family. The event includes intriguing chats with guests and special drink offers.\n   - **End Date**: March 4, 2024, 23:59\n\n2. **Luboš Pospíšil & 5P**\n   - **Description**: Performance by Luboš Pospíšil with the band 5P at the cultural house of Barikadník.\n   - **End Date**: March 4, 2024, 23:59\n\n3. **Fight Club**\n   - **Description**: A film screening about an insomniac office worker who forms an underground fight club that evolves into something much more.\n   - **End Date**: March 4, 2024, 23:59\n\n4. **Poor Things**\n   - **Description**: A film about Bella Baxter, a young woman brought back to life by an unorthodox scientist, who embarks on a whirlwind adventure seeking equality and liberation.\n   - **End Date**: March 4, 2024, 23:59\n\n5. **Tribute to World Legends: Michael Jackson**\n   - **Description**: A concert paying tribute to the King of Pop, Michael Jackson, in a jazz style by Bharata Rajnošek.\n   - **End Date**: March 4, 2024, 23:59\n\n### Summary\nYou can enjoy a cozy day in Berlin with foggy weather, perfect for indoor activities. Consider attending one of the film screenings or the concert tribute to Michael Jackson for a delightful evening!"
+                      "output": "### Weather in Berlin, Germany\n- **Current Temperature**: 5.1°C (Feels like 4°C)\n- **Weather Condition**: Fog\n- **Wind**: 1.7 m/s from the west (275°)\n- **Precipitation**: None expected\n\n### Upcoming Events in Berlin\n1. **Movie Barf: Dune – Part Two**\n   - **Description**: A new English-friendly film night featuring *Dune: Part Two*, where Paul Atreides unites with Chani and the Fremen while seeking revenge against the conspirators who destroyed his family. The event includes intriguing chats with guests and special drink offers.\n   - **End Date**: March 4, 2024, 23:59\n\n2. **Luboš Pospíšil & 5P**\n   - **Description**: Performance by Luboš Pospíšil with the renewed band 5P.\n   - **End Date**: March 4, 2024, 23:59\n\n3. **Fight Club**\n   - **Description**: A film screening about an insomniac office worker who forms an underground fight club that evolves into something much more.\n   - **End Date**: March 4, 2024, 23:59\n\n4. **Poor Things**\n   - **Description**: A film about Bella Baxter, a young woman brought back to life by an unorthodox scientist, who embarks on a whirlwind adventure across continents.\n   - **End Date**: March 4, 2024, 23:59\n\n5. **Tribute to World Legends: Michael Jackson**\n   - **Description**: A concert paying tribute to the king of pop, Michael Jackson, in a jazz style by Bharata Rajnošek.\n   - **End Date**: March 4, 2024, 23:59\n\n### Summary\nYou can enjoy a variety of events today in Berlin, including film screenings and a concert. The weather is cool and foggy, so dress warmly if you plan to go out!"
                     },
                     "pairedItem": {
                       "item": 0
@@ -1509,14 +1542,15 @@
         ],
         "Edit Fields6": [
           {
-            "hints": [],
-            "startTime": 1738078251989,
-            "executionTime": 2,
+            "startTime": 1746522762381,
+            "executionIndex": 33,
             "source": [
               {
                 "previousNode": "AI Agent4"
               }
             ],
+            "hints": [],
+            "executionTime": 1,
             "executionStatus": "success",
             "data": {
               "main": [
@@ -1688,21 +1722,21 @@
             ]
           }
         ],
-        "Get Events": [
-          {
-            "subRun": [
-              {
-                "node": "Get Events",
-                "runIndex": 0
-              }
-            ]
-          }
-        ],
         "Get Weather": [
           {
             "subRun": [
               {
                 "node": "Get Weather",
+                "runIndex": 0
+              }
+            ]
+          }
+        ],
+        "Get Events": [
+          {
+            "subRun": [
+              {
+                "node": "Get Events",
                 "runIndex": 0
               }
             ]
@@ -1714,8 +1748,8 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2025-01-28T15:30:18.519Z",
-  "stoppedAt": "2025-01-28T15:30:51.991Z",
+  "startedAt": "2025-05-06T09:12:13.379Z",
+  "stoppedAt": "2025-05-06T09:12:42.382Z",
   "status": "running",
   "finished": true
 }

@@ -5,10 +5,11 @@
       "runData": {
         "When clicking \"Test workflow\"": [
           {
-            "hints": [],
-            "startTime": 1738078204299,
-            "executionTime": 0,
+            "startTime": 1746522731833,
+            "executionIndex": 0,
             "source": [],
+            "hints": [],
+            "executionTime": 0,
             "executionStatus": "success",
             "data": {
               "main": [
@@ -26,8 +27,9 @@
         ],
         "OpenAI Chat Model1": [
           {
-            "startTime": 1738078204309,
-            "executionTime": 3070,
+            "startTime": 1746522732524,
+            "executionTime": 906,
+            "executionIndex": 2,
             "executionStatus": "success",
             "source": [
               null
@@ -54,9 +56,9 @@
                   {
                     "json": {
                       "messages": [
-                        "Human: What are the top 5 states of US by population?\nYou must format your output as a JSON value that adheres to a given \"JSON Schema\" instance.\n\n\"JSON Schema\" is a declarative language that allows you to annotate and validate JSON documents.\n\nFor example, the example \"JSON Schema\" instance {{\"properties\": {{\"foo\": {{\"description\": \"a list of test words\", \"type\": \"array\", \"items\": {{\"type\": \"string\"}}}}}}, \"required\": [\"foo\"]}}}}\nwould match an object with one required property, \"foo\". The \"type\" property specifies \"foo\" must be an \"array\", and the \"description\" property semantically describes it as \"a list of test words\". The items within \"foo\" must be strings.\nThus, the object {{\"foo\": [\"bar\", \"baz\"]}} is a well-formatted instance of this example \"JSON Schema\". The object {{\"properties\": {{\"foo\": [\"bar\", \"baz\"]}}}} is not well-formatted.\n\nYour output will be parsed and type-checked according to the provided schema instance, so make sure all fields in your output match the schema exactly and there are no trailing commas!\n\nHere is the JSON Schema instance your output must adhere to. Include the enclosing markdown codeblock:\n```json\n{\"type\":\"object\",\"properties\":{\"output\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"state_name\":{},\"capital\":{},\"electoral_college_votes\":{}},\"additionalProperties\":false}}},\"additionalProperties\":false,\"$schema\":\"http://json-schema.org/draft-07/schema#\"}\n```\n"
+                        "Human: What are the top 5 states of US by population?\nYou must format your output as a JSON value that adheres to a given \"JSON Schema\" instance.\n\n\"JSON Schema\" is a declarative language that allows you to annotate and validate JSON documents.\n\nFor example, the example \"JSON Schema\" instance {{\"properties\": {{\"foo\": {{\"description\": \"a list of test words\", \"type\": \"array\", \"items\": {{\"type\": \"string\"}}}}}}, \"required\": [\"foo\"]}}}}\nwould match an object with one required property, \"foo\". The \"type\" property specifies \"foo\" must be an \"array\", and the \"description\" property semantically describes it as \"a list of test words\". The items within \"foo\" must be strings.\nThus, the object {{\"foo\": [\"bar\", \"baz\"]}} is a well-formatted instance of this example \"JSON Schema\". The object {{\"properties\": {{\"foo\": [\"bar\", \"baz\"]}}}} is not well-formatted.\n\nYour output will be parsed and type-checked according to the provided schema instance, so make sure all fields in your output match the schema exactly and there are no trailing commas!\n\nHere is the JSON Schema instance your output must adhere to. Include the enclosing markdown codeblock:\n```json\n{\"type\":\"object\",\"properties\":{\"output\":{\"type\":\"object\",\"properties\":{\"state\":{\"type\":\"string\"},\"cities\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}}},\"additionalProperties\":false}},\"additionalProperties\":false,\"$schema\":\"http://json-schema.org/draft-07/schema#\"}\n```\n"
                       ],
-                      "estimatedTokens": 340,
+                      "estimatedTokens": 336,
                       "options": {
                         "openai_api_key": {
                           "lc": 1,
@@ -91,8 +93,9 @@
         ],
         "Structured Output Parser1": [
           {
-            "startTime": 1738078207380,
+            "startTime": 1746522733430,
             "executionTime": 1,
+            "executionIndex": 3,
             "executionStatus": "success",
             "source": [
               null
@@ -117,7 +120,7 @@
                   {
                     "json": {
                       "action": "parse",
-                      "text": "```json\n{\n  \"output\": [\n    {\n      \"state_name\": \"California\",\n      \"capital\": \"Sacramento\",\n      \"electoral_college_votes\": 55\n    },\n    {\n      \"state_name\": \"Texas\",\n      \"capital\": \"Austin\",\n      \"electoral_college_votes\": 38\n    },\n    {\n      \"state_name\": \"Florida\",\n      \"capital\": \"Tallahassee\",\n      \"electoral_college_votes\": 29\n    },\n    {\n      \"state_name\": \"New York\",\n      \"capital\": \"Albany\",\n      \"electoral_college_votes\": 29\n    },\n    {\n      \"state_name\": \"Pennsylvania\",\n      \"capital\": \"Harrisburg\",\n      \"electoral_college_votes\": 20\n    }\n  ]\n}\n```"
+                      "text": "```json\n{\"output\":{\"state\":\"California\",\"cities\":[\"Los Angeles\",\"San Francisco\",\"San Diego\"]}}\n```"
                     }
                   }
                 ]
@@ -135,23 +138,24 @@
         ],
         "Open AI Chat - Output Parsing": [
           {
-            "hints": [],
-            "startTime": 1738078204299,
-            "executionTime": 3082,
+            "startTime": 1746522731833,
+            "executionIndex": 1,
             "source": [
               {
                 "previousNode": "When clicking \"Test workflow\""
               }
             ],
+            "hints": [],
+            "executionTime": 1598,
             "executionStatus": "success",
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "output": [
-                        "json array"
-                      ]
+                      "output": {
+                        "object": true
+                      }
                     },
                     "pairedItem": {
                       "item": 0
@@ -195,8 +199,8 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2025-01-28T15:30:04.298Z",
-  "stoppedAt": "2025-01-28T15:30:07.381Z",
+  "startedAt": "2025-05-06T09:12:11.832Z",
+  "stoppedAt": "2025-05-06T09:12:13.431Z",
   "status": "running",
   "finished": true
 }

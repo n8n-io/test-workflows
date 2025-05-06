@@ -5,10 +5,11 @@
       "runData": {
         "When clicking \"Test workflow\"": [
           {
-            "hints": [],
-            "startTime": 1738078207199,
-            "executionTime": 0,
+            "startTime": 1746522731829,
+            "executionIndex": 0,
             "source": [],
+            "hints": [],
+            "executionTime": 0,
             "executionStatus": "success",
             "data": {
               "main": [
@@ -26,8 +27,9 @@
         ],
         "OpenAI Chat Model2": [
           {
-            "startTime": 1738078207206,
-            "executionTime": 2042,
+            "startTime": 1746522732523,
+            "executionTime": 1573,
+            "executionIndex": 2,
             "executionStatus": "success",
             "source": [
               null
@@ -93,8 +95,9 @@
             }
           },
           {
-            "startTime": 1738078209250,
-            "executionTime": 1699,
+            "startTime": 1746522734099,
+            "executionTime": 703,
+            "executionIndex": 4,
             "executionStatus": "success",
             "source": [
               null
@@ -121,9 +124,9 @@
                   {
                     "json": {
                       "messages": [
-                        "System: Answer the following questions as best you can. You have access to the following tools:\n\ncalculator: Useful for getting the result of a math expression. The input to this tool should be a valid mathematical expression that could be executed by a simple calculator.\n\nThe way you use the tools is by specifying a json blob, denoted below by $JSON_BLOB\nSpecifically, this $JSON_BLOB should have a \"action\" key (with the name of the tool to use) and a \"action_input\" key (with the input to the tool going here). \nThe $JSON_BLOB should only contain a SINGLE action, do NOT return a list of multiple actions. Here is an example of a valid $JSON_BLOB:\n\n```\n{\n  \"action\": \"calculator\",\n  \"action_input\": \"1 + 2\"\n}\n```\n\nALWAYS use the following format:\n\nQuestion: the input question you must answer\nThought: you should always think about what to do\nAction: \n```\n$JSON_BLOB\n```\nObservation: the result of the action\n... (this Thought/Action/Observation can repeat N times)\nThought: I now know the final answer\nFinal Answer: the final answer to the original input question\n\nBegin! Reminder to always use the exact characters `Final Answer` when responding.\nHuman: What is the result of 30 + (10002200 / 100)? Only respond with a number.\n\nThis was your previous work (but I haven't seen any of it! I only see what you return as final answer):\nThought: I need to calculate the expression 30 + (10002200 / 100). First, I will divide 10002200 by 100, and then I will add 30 to the result. \nAction: \n```\n{\n  \"action\": \"calculator\",\n  \"action_input\": \"30 + (10002200 / 100)\"\n}\n```\n\nObservation: 100052\nThought:"
+                        "System: Answer the following questions as best you can. You have access to the following tools:\n\ncalculator: Useful for getting the result of a math expression. The input to this tool should be a valid mathematical expression that could be executed by a simple calculator.\n\nThe way you use the tools is by specifying a json blob, denoted below by $JSON_BLOB\nSpecifically, this $JSON_BLOB should have a \"action\" key (with the name of the tool to use) and a \"action_input\" key (with the input to the tool going here). \nThe $JSON_BLOB should only contain a SINGLE action, do NOT return a list of multiple actions. Here is an example of a valid $JSON_BLOB:\n\n```\n{\n  \"action\": \"calculator\",\n  \"action_input\": \"1 + 2\"\n}\n```\n\nALWAYS use the following format:\n\nQuestion: the input question you must answer\nThought: you should always think about what to do\nAction: \n```\n$JSON_BLOB\n```\nObservation: the result of the action\n... (this Thought/Action/Observation can repeat N times)\nThought: I now know the final answer\nFinal Answer: the final answer to the original input question\n\nBegin! Reminder to always use the exact characters `Final Answer` when responding.\nHuman: What is the result of 30 + (10002200 / 100)? Only respond with a number.\n\nThis was your previous work (but I haven't seen any of it! I only see what you return as final answer):\nQuestion: What is the result of 30 + (10002200 / 100)?\nThought: I need to calculate the division first and then add 30 to the result.\nAction: \n```\n{\n  \"action\": \"calculator\",\n  \"action_input\": \"30 + (10002200 / 100)\"\n}\n```\n\nObservation: 100052\nThought:"
                       ],
-                      "estimatedTokens": 402,
+                      "estimatedTokens": 394,
                       "options": {
                         "openai_api_key": {
                           "lc": 1,
@@ -150,8 +153,9 @@
         ],
         "Calculator2": [
           {
-            "startTime": 1738078209249,
+            "startTime": 1746522734097,
             "executionTime": 0,
+            "executionIndex": 3,
             "executionStatus": "success",
             "source": [
               null
@@ -190,14 +194,15 @@
         ],
         "AI Agent2": [
           {
-            "hints": [],
-            "startTime": 1738078207199,
-            "executionTime": 3751,
+            "startTime": 1746522731829,
+            "executionIndex": 1,
             "source": [
               {
                 "previousNode": "When clicking \"Test workflow\""
               }
             ],
+            "hints": [],
+            "executionTime": 2973,
             "executionStatus": "success",
             "data": {
               "main": [
@@ -220,14 +225,15 @@
         ],
         "Edit Fields2": [
           {
-            "hints": [],
-            "startTime": 1738078210950,
-            "executionTime": 2,
+            "startTime": 1746522734802,
+            "executionIndex": 5,
             "source": [
               {
                 "previousNode": "AI Agent2"
               }
             ],
+            "hints": [],
+            "executionTime": 1,
             "executionStatus": "success",
             "data": {
               "main": [
@@ -283,8 +289,8 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2025-01-28T15:30:07.198Z",
-  "stoppedAt": "2025-01-28T15:30:10.952Z",
+  "startedAt": "2025-05-06T09:12:11.829Z",
+  "stoppedAt": "2025-05-06T09:12:14.803Z",
   "status": "running",
   "finished": true
 }

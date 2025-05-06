@@ -5,10 +5,11 @@
       "runData": {
         "When clicking \"Test workflow\"": [
           {
-            "hints": [],
-            "startTime": 1738078179484,
-            "executionTime": 0,
+            "startTime": 1746522731813,
+            "executionIndex": 0,
             "source": [],
+            "hints": [],
+            "executionTime": 0,
             "executionStatus": "success",
             "data": {
               "main": [
@@ -26,8 +27,9 @@
         ],
         "Mistral Cloud Chat Model": [
           {
-            "startTime": 1738078182376,
-            "executionTime": 370,
+            "startTime": 1746522732523,
+            "executionTime": 382,
+            "executionIndex": 2,
             "executionStatus": "success",
             "source": [
               null
@@ -40,7 +42,7 @@
                       "response": {
                         "object": true
                       },
-                      "tokenUsageEstimate": {
+                      "tokenUsage": {
                         "object": true
                       }
                     }
@@ -85,14 +87,15 @@
         ],
         "Mistral Cloud Chat": [
           {
-            "hints": [],
-            "startTime": 1738078179484,
-            "executionTime": 3263,
+            "startTime": 1746522731813,
+            "executionIndex": 1,
             "source": [
               {
                 "previousNode": "When clicking \"Test workflow\""
               }
             ],
+            "hints": [],
+            "executionTime": 1093,
             "executionStatus": "success",
             "data": {
               "main": [
@@ -133,8 +136,8 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2025-01-28T15:29:39.483Z",
-  "stoppedAt": "2025-01-28T15:29:42.747Z",
+  "startedAt": "2025-05-06T09:12:11.813Z",
+  "stoppedAt": "2025-05-06T09:12:12.906Z",
   "status": "running",
   "finished": true
 }

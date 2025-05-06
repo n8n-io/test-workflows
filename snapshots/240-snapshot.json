@@ -5,10 +5,11 @@
       "runData": {
         "When clicking \"Test workflow\"": [
           {
-            "hints": [],
-            "startTime": 1738078199417,
-            "executionTime": 0,
+            "startTime": 1746522731815,
+            "executionIndex": 0,
             "source": [],
+            "hints": [],
+            "executionTime": 0,
             "executionStatus": "success",
             "data": {
               "main": [
@@ -26,14 +27,15 @@
         ],
         "Set Baseline": [
           {
-            "hints": [],
-            "startTime": 1738078199417,
-            "executionTime": 1,
+            "startTime": 1746522731815,
+            "executionIndex": 1,
             "source": [
               {
                 "previousNode": "When clicking \"Test workflow\""
               }
             ],
+            "hints": [],
+            "executionTime": 0,
             "executionStatus": "success",
             "data": {
               "main": [
@@ -53,19 +55,20 @@
         ],
         "Set Article": [
           {
+            "startTime": 1746522731815,
+            "executionIndex": 2,
+            "source": [
+              {
+                "previousNode": "Set Baseline"
+              }
+            ],
             "hints": [
               {
                 "message": "To make sure expressions after this node work, return the input items that produced each output item. <a target=\"_blank\" href=\"https://docs.n8n.io/data/data-mapping/data-item-linking/item-linking-code-node/\">More info</a>",
                 "location": "outputPane"
               }
             ],
-            "startTime": 1738078199418,
-            "executionTime": 5,
-            "source": [
-              {
-                "previousNode": "Set Baseline"
-              }
-            ],
+            "executionTime": 2,
             "executionStatus": "success",
             "data": {
               "main": [
@@ -85,8 +88,9 @@
         ],
         "OpenAI Chat Model2": [
           {
-            "startTime": 1738078199433,
-            "executionTime": 1710,
+            "startTime": 1746522732523,
+            "executionTime": 1388,
+            "executionIndex": 4,
             "executionStatus": "success",
             "source": [
               null
@@ -152,8 +156,9 @@
             }
           },
           {
-            "startTime": 1738078201149,
-            "executionTime": 1673,
+            "startTime": 1746522733915,
+            "executionTime": 1670,
+            "executionIndex": 5,
             "executionStatus": "success",
             "source": [
               null
@@ -180,9 +185,9 @@
                   {
                     "json": {
                       "messages": [
-                        "Human: Your job is to produce a final summary\nWe have provided an existing summary up to a certain point: \"The dancing plague of 1518 occurred in Strasbourg, Alsace, where between 50 and 400 people danced uncontrollably for weeks. The cause is unknown, with theories ranging from stress-induced mass hysteria to religious explanations. The outbreak eventually subsided when the dancers were sent to a shrine to pray for absolution. There is controversy over the number of deaths, with some sources claiming up to fifteen deaths per day, but historical documents do not mention fatalities. Similar events have been reported throughout history, with explanations including demonic possession and overheated blood.\"\nWe have the opportunity to refine the existing summary\n(only if needed) with some more context below.\n------------\n\"The main source for the claim is John Waller, who has written several journal articles on the subject and the book A Time to Dance, a Time to Die: The Extraordinary Story of the Dancing Plague of 1518. The sources cited by Waller that mention deaths were all from later accounts of the events. There is also uncertainty around the identity of the initial dancer (either an unnamed woman or \"Frau Troffea\") and the number of dancers involved (somewhere between 50 and 400). Of the six chronicle accounts, four support Lady Troffea as the first dancer.\n\nModern theories\nFood poisoning\nSome believe the dancing could have been brought on by food poisoning caused by the toxic and psychoactive chemical products of ergot fungi (ergotism), which grows commonly on grains (such as rye) used for baking bread. Ergotamine is the main psychoactive product of ergot fungi; it is structurally related to the drug lysergic acid diethylamide (LSD-25) and is the substance from which LSD-25 was originally synthesized. The same fungus has also been implicated in other major historical anomalies, including the Salem witch trials.\n\nIn The Lancet, John Waller argues that \"this theory does not seem tenable, since it is unlikely that those poisoned by ergot could have danced for days at a time. Nor would so many people have reacted to its psychotropic chemicals in the same way. The ergotism theory also fails to explain why almost every outbreak occurred somewhere along the Rhine and Moselle rivers, areas linked by water but with quite different climates and crops\".\n\nStress-induced mass hysteria\nThis could have been an example of fully developed cases of psychogenic movement disorder happening in mass hysteria or mass psychogenic illness, which involves many individuals suddenly exhibiting the same bizarre behavior. The behavior spreads rapidly and broadly in an epidemic pattern. This kind of comportment could have been caused by elevated levels of psychological stress, caused by the ruthless years (even by the rough standards of the early modern period) the people of Alsace were suffering.\n\nWaller speculates that the dancing was \"stress-induced psychosis\" on a mass level, since the region where the people danced was riddled with starvation and disease, and the inhabitants tended to be superstitious. Seven other cases of dancing plague were reported in the same region during the medieval era.\n\nThis psychogenic illness could have created a chorea (from the Greek khoreia meaning \"to dance\"), a situation comprising random and intricate unintentional movements that flit from body part to body part. Diverse choreas (St. Vitus' dance, St. John's dance, and tarantism) were labeled in the Middle Ages referring to the independent epidemics of \"dancing mania\" that happened in central Europe, particularly at the time of the plague.\n\nPop culture and media\nThe event inspired Jonathan Glazer's 2020 short film Strasbourg 1518.\n\nIt was also the inspiration behind the 2022 choral song \"Choreomania\" by Florence and the Machine. It was the third track on the album Dance Fever, which took its title from the song.\n\nThe book series \"A Collection of Utter Speculation\" released a title \"The Dancing Plague: A Collection of Utter Speculation\" in 2022. It is a fictional account about the events that happened in Strasbourg.\n\nThe 2023 novel, The Dance Tree, by Kiran Millwood Hargrave is a fictionalized version of the summer of 1518 in Strasbourg.\n\nThe event is featured as part of the first season of Watcher Entertainment's \"Puppet History\" in the episode \"The Dancing Plague\".\"\n------------\n\nGiven the new context, refine the original summary\nIf the context isn't useful, return the original summary.\n\nREFINED SUMMARY:"
+                        "Human: Your job is to produce a final summary\nWe have provided an existing summary up to a certain point: \"The dancing plague of 1518 occurred in Strasbourg, Alsace, where between 50 and 400 people danced uncontrollably for weeks. The cause is believed to be stress-induced mass hysteria, with other theories including ergot poisoning and religious explanations. The outbreak began with one woman dancing and spread to others, leading to deaths from strokes or heart attacks. The epidemic ended when the dancers were sent to a shrine to pray for absolution. Similar events have been reported throughout history. There is controversy over the number of deaths, with some sources claiming up to fifteen deaths per day, but historical documents do not confirm this.\"\nWe have the opportunity to refine the existing summary\n(only if needed) with some more context below.\n------------\n\"The main source for the claim is John Waller, who has written several journal articles on the subject and the book A Time to Dance, a Time to Die: The Extraordinary Story of the Dancing Plague of 1518. The sources cited by Waller that mention deaths were all from later accounts of the events. There is also uncertainty around the identity of the initial dancer (either an unnamed woman or \"Frau Troffea\") and the number of dancers involved (somewhere between 50 and 400). Of the six chronicle accounts, four support Lady Troffea as the first dancer.\n\nModern theories\nFood poisoning\nSome believe the dancing could have been brought on by food poisoning caused by the toxic and psychoactive chemical products of ergot fungi (ergotism), which grows commonly on grains (such as rye) used for baking bread. Ergotamine is the main psychoactive product of ergot fungi; it is structurally related to the drug lysergic acid diethylamide (LSD-25) and is the substance from which LSD-25 was originally synthesized. The same fungus has also been implicated in other major historical anomalies, including the Salem witch trials.\n\nIn The Lancet, John Waller argues that \"this theory does not seem tenable, since it is unlikely that those poisoned by ergot could have danced for days at a time. Nor would so many people have reacted to its psychotropic chemicals in the same way. The ergotism theory also fails to explain why almost every outbreak occurred somewhere along the Rhine and Moselle rivers, areas linked by water but with quite different climates and crops\".\n\nStress-induced mass hysteria\nThis could have been an example of fully developed cases of psychogenic movement disorder happening in mass hysteria or mass psychogenic illness, which involves many individuals suddenly exhibiting the same bizarre behavior. The behavior spreads rapidly and broadly in an epidemic pattern. This kind of comportment could have been caused by elevated levels of psychological stress, caused by the ruthless years (even by the rough standards of the early modern period) the people of Alsace were suffering.\n\nWaller speculates that the dancing was \"stress-induced psychosis\" on a mass level, since the region where the people danced was riddled with starvation and disease, and the inhabitants tended to be superstitious. Seven other cases of dancing plague were reported in the same region during the medieval era.\n\nThis psychogenic illness could have created a chorea (from the Greek khoreia meaning \"to dance\"), a situation comprising random and intricate unintentional movements that flit from body part to body part. Diverse choreas (St. Vitus' dance, St. John's dance, and tarantism) were labeled in the Middle Ages referring to the independent epidemics of \"dancing mania\" that happened in central Europe, particularly at the time of the plague.\n\nPop culture and media\nThe event inspired Jonathan Glazer's 2020 short film Strasbourg 1518.\n\nIt was also the inspiration behind the 2022 choral song \"Choreomania\" by Florence and the Machine. It was the third track on the album Dance Fever, which took its title from the song.\n\nThe book series \"A Collection of Utter Speculation\" released a title \"The Dancing Plague: A Collection of Utter Speculation\" in 2022. It is a fictional account about the events that happened in Strasbourg.\n\nThe 2023 novel, The Dance Tree, by Kiran Millwood Hargrave is a fictionalized version of the summer of 1518 in Strasbourg.\n\nThe event is featured as part of the first season of Watcher Entertainment's \"Puppet History\" in the episode \"The Dancing Plague\".\"\n------------\n\nGiven the new context, refine the original summary\nIf the context isn't useful, return the original summary.\n\nREFINED SUMMARY:"
                       ],
-                      "estimatedTokens": 944,
+                      "estimatedTokens": 957,
                       "options": {
                         "openai_api_key": {
                           "lc": 1,
@@ -209,14 +214,15 @@
         ],
         "Summary - Simple - Refine": [
           {
-            "hints": [],
-            "startTime": 1738078199424,
-            "executionTime": 3399,
+            "startTime": 1746522731817,
+            "executionIndex": 3,
             "source": [
               {
                 "previousNode": "Set Article"
               }
             ],
+            "hints": [],
+            "executionTime": 3769,
             "executionStatus": "success",
             "data": {
               "main": [
@@ -238,8 +244,9 @@
         ],
         "OpenAI Chat Model9": [
           {
-            "startTime": 1738078202838,
-            "executionTime": 1436,
+            "startTime": 1746522735594,
+            "executionTime": 2286,
+            "executionIndex": 7,
             "executionStatus": "success",
             "source": [
               null
@@ -303,23 +310,27 @@
         ],
         "Evaluate to Baseline4": [
           {
-            "hints": [],
-            "startTime": 1738078202823,
-            "executionTime": 1453,
+            "startTime": 1746522735586,
+            "executionIndex": 6,
             "source": [
               {
                 "previousNode": "Summary - Simple - Refine"
               }
             ],
+            "hints": [],
+            "executionTime": 2295,
             "executionStatus": "success",
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "reasoning": "Step by step reasoning:1. Is the submission helpful, insightful, and appropriate?- The submission provides a concise summary of the Wikipedia article about the dancing plague of 1518, including key details such as the location, number of people involved, possible causes, and outcome.- The submission is informative and relevant to the input provided.- The submission does not contain any irrelevant or misleading information.- Overall, the submission meets the criteria of being helpful, insightful, and appropriate.Therefore, the submission meets the Criteria.",
+                      "reasoning": "Step by step reasoning:1. Is the submission helpful? - The submission provides a brief summary of the Wikipedia article about the dancing plague of 1518, including key details such as the location, number of people involved, possible causes, and outcome.- This information is relevant and informative for someone looking to understand the basics of the dancing plague.- Therefore, the submission is helpful.2. Is the submission insightful?- The submission includes details about the possible causes of the dancing plague, the outcome, and the controversy surrounding the number of deaths.- These insights provide a deeper understanding of the historical event and its implications.- Therefore, the submission is insightful.3. Is the submission appropriate?- The submission stays focused on summarizing the Wikipedia article about the dancing plague of 1518 without including any irrelevant information.- The content is appropriate for the given task of summarizing the article.- Therefore, the submission is appropriate.Based on the step by step reasoning, the submission meets all criteria.",
                       "value": "Y",
-                      "score": 1
+                      "score": 1,
+                      "__run": {
+                        "object": true
+                      }
                     },
                     "pairedItem": {
                       "item": 0
@@ -367,8 +378,8 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2025-01-28T15:29:59.416Z",
-  "stoppedAt": "2025-01-28T15:30:04.276Z",
+  "startedAt": "2025-05-06T09:12:11.815Z",
+  "stoppedAt": "2025-05-06T09:12:17.881Z",
   "status": "running",
   "finished": true
 }

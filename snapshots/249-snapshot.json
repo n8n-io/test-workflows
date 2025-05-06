@@ -5,10 +5,11 @@
       "runData": {
         "When clicking \"Test workflow\"": [
           {
-            "hints": [],
-            "startTime": 1738078212056,
-            "executionTime": 0,
+            "startTime": 1746522731835,
+            "executionIndex": 0,
             "source": [],
+            "hints": [],
+            "executionTime": 0,
             "executionStatus": "success",
             "data": {
               "main": [
@@ -26,14 +27,15 @@
         ],
         "Set Baseline": [
           {
-            "hints": [],
-            "startTime": 1738078212057,
-            "executionTime": 0,
+            "startTime": 1746522731835,
+            "executionIndex": 1,
             "source": [
               {
                 "previousNode": "When clicking \"Test workflow\""
               }
             ],
+            "hints": [],
+            "executionTime": 0,
             "executionStatus": "success",
             "data": {
               "main": [
@@ -53,19 +55,20 @@
         ],
         "Set Article": [
           {
+            "startTime": 1746522731835,
+            "executionIndex": 2,
+            "source": [
+              {
+                "previousNode": "Set Baseline"
+              }
+            ],
             "hints": [
               {
                 "message": "To make sure expressions after this node work, return the input items that produced each output item. <a target=\"_blank\" href=\"https://docs.n8n.io/data/data-mapping/data-item-linking/item-linking-code-node/\">More info</a>",
                 "location": "outputPane"
               }
             ],
-            "startTime": 1738078212058,
-            "executionTime": 6,
-            "source": [
-              {
-                "previousNode": "Set Baseline"
-              }
-            ],
+            "executionTime": 1,
             "executionStatus": "success",
             "data": {
               "main": [
@@ -85,8 +88,9 @@
         ],
         "OpenAI Chat Model": [
           {
-            "startTime": 1738078212074,
-            "executionTime": 2245,
+            "startTime": 1746522732523,
+            "executionTime": 1717,
+            "executionIndex": 4,
             "executionStatus": "success",
             "source": [
               null
@@ -150,14 +154,15 @@
         ],
         "Summary - Simple - Stuff": [
           {
-            "hints": [],
-            "startTime": 1738078212064,
-            "executionTime": 2256,
+            "startTime": 1746522731836,
+            "executionIndex": 3,
             "source": [
               {
                 "previousNode": "Set Article"
               }
             ],
+            "hints": [],
+            "executionTime": 2405,
             "executionStatus": "success",
             "data": {
               "main": [
@@ -179,8 +184,9 @@
         ],
         "OpenAI Chat Model1": [
           {
-            "startTime": 1738078214335,
-            "executionTime": 1946,
+            "startTime": 1746522734246,
+            "executionTime": 1085,
+            "executionIndex": 6,
             "executionStatus": "success",
             "source": [
               null
@@ -207,9 +213,9 @@
                   {
                     "json": {
                       "messages": [
-                        "Human: You are assessing a submitted answer on a given task or input based on a set of criteria. Here is the data:\n[BEGIN DATA]\n***\n[Input]: Summarize Wikipedia article about the dancing plague of 1518\n***\n[Submission]: The dancing plague of 1518 was a case of dancing mania that occurred in Strasbourg, Alsace, where between 50 and 400 people danced uncontrollably for weeks. The cause of the phenomenon is debated, with theories including stress-induced mass hysteria, ergot poisoning, and religious explanations. The outbreak eventually subsided when the dancers were sent to a shrine to pray for absolution. The veracity of deaths during the plague is disputed, with some sources claiming fatalities while others do not mention any deaths. Modern theories suggest food poisoning from ergot fungi or stress-induced mass hysteria as possible explanations. The event has inspired various works of art and media, including films, songs, and novels.\n***\n[Criteria]: helpfulness: Is the submission helpful, insightful, and appropriate? If so, response Y. If not, respond N.\n***\n[Reference]: The dancing plague of 1518 in Strasbourg, Alsace involved between 50 and 400 people dancing uncontrollably for weeks. The cause is unknown, with theories including stress-induced mass hysteria and ergot poisoning. The outbreak ended when the dancers prayed for absolution at a shrine. There is controversy over the number of deaths, with some sources claiming up to fifteen deaths per day, but historical documents do not confirm any fatalities. Similar events have been reported throughout history, inspiring various works of pop culture.\n***\n[END DATA]\nDoes the submission meet the Criteria? First, write out in a step by step manner your reasoning about each criterion to be sure that your conclusion is correct. Avoid simply stating the correct answers at the outset. Then print only the single character \"Y\" or \"N\" (without quotes or punctuation) on its own line corresponding to the correct answer of whether the submission meets all criteria. At the end, repeat just the letter again by itself on a new line."
+                        "Human: You are assessing a submitted answer on a given task or input based on a set of criteria. Here is the data:\n[BEGIN DATA]\n***\n[Input]: Summarize Wikipedia article about the dancing plague of 1518\n***\n[Submission]: The dancing plague of 1518 was a case of dancing mania that occurred in Strasbourg, Alsace, where between 50 and 400 people danced uncontrollably for weeks. The cause of the phenomenon is debated, with theories including stress-induced mass hysteria, ergot poisoning, and religious explanations. The outbreak eventually subsided when the dancers were sent to a shrine to pray for absolution. The veracity of deaths during the plague is disputed, with some sources claiming fatalities while others do not mention any deaths. Modern theories suggest food poisoning or stress-induced mass hysteria as possible explanations. The event has inspired various works of art and media, including films, songs, and novels.\n***\n[Criteria]: helpfulness: Is the submission helpful, insightful, and appropriate? If so, response Y. If not, respond N.\n***\n[Reference]: The dancing plague of 1518 in Strasbourg, Alsace involved between 50 and 400 people dancing uncontrollably for weeks. The cause is unknown, with theories including stress-induced mass hysteria and ergot poisoning. The outbreak ended when the dancers prayed for absolution at a shrine. There is controversy over the number of deaths, with some sources claiming up to fifteen deaths per day, but historical documents do not confirm any fatalities. Similar events have been reported throughout history, inspiring various works of pop culture.\n***\n[END DATA]\nDoes the submission meet the Criteria? First, write out in a step by step manner your reasoning about each criterion to be sure that your conclusion is correct. Avoid simply stating the correct answers at the outset. Then print only the single character \"Y\" or \"N\" (without quotes or punctuation) on its own line corresponding to the correct answer of whether the submission meets all criteria. At the end, repeat just the letter again by itself on a new line."
                       ],
-                      "estimatedTokens": 428,
+                      "estimatedTokens": 424,
                       "options": {
                         "openai_api_key": {
                           "lc": 1,
@@ -244,23 +250,27 @@
         ],
         "Evaluate to Baseline": [
           {
-            "hints": [],
-            "startTime": 1738078214320,
-            "executionTime": 1963,
+            "startTime": 1746522734241,
+            "executionIndex": 5,
             "source": [
               {
                 "previousNode": "Summary - Simple - Stuff"
               }
             ],
+            "hints": [],
+            "executionTime": 1091,
             "executionStatus": "success",
             "data": {
               "main": [
                 [
                   {
                     "json": {
-                      "reasoning": "Step by step reasoning:1. Is the submission helpful? - Yes, the submission provides a concise summary of the Wikipedia article about the dancing plague of 1518, including key details such as the location, number of people involved, possible causes, and outcomes.2. Is the submission insightful? - Yes, the submission offers insights into the various theories surrounding the cause of the dancing plague, the controversy over the number of deaths, and the cultural impact of the event.3. Is the submission appropriate? - Yes, the submission is appropriate as it directly addresses the task of summarizing the Wikipedia article about the dancing plague of 1518.Therefore, the submission meets the Criteria.",
+                      "reasoning": "1. Is the submission helpful?- The submission provides a concise summary of the Wikipedia article about the dancing plague of 1518, including key details such as the location, number of people involved, possible causes, and outcome of the event.- The submission also mentions the controversy surrounding the number of deaths and the inspiration for various works of art and media.- Overall, the submission is informative and covers the main points of the topic.Based on the above analysis, the submission is helpful, insightful, and appropriate.Y",
                       "value": "Y",
-                      "score": 1
+                      "score": 1,
+                      "__run": {
+                        "object": true
+                      }
                     },
                     "pairedItem": {
                       "item": 0
@@ -304,8 +314,8 @@
     }
   },
   "mode": "cli",
-  "startedAt": "2025-01-28T15:30:12.055Z",
-  "stoppedAt": "2025-01-28T15:30:16.283Z",
+  "startedAt": "2025-05-06T09:12:11.835Z",
+  "stoppedAt": "2025-05-06T09:12:15.332Z",
   "status": "running",
   "finished": true
 }
