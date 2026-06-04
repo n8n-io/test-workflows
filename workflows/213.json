@@ -1,0 +1,465 @@
+{
+  "id": 213,
+  "name": "Microsoft To Do:List:*:Task:*:LinkedResource:*",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "list",
+        "operation": "create",
+        "displayName": "=TaskListTest{{Date.now()}}"
+      },
+      "name": "Microsoft To Do",
+      "type": "n8n-nodes-base.microsoftToDo",
+      "typeVersion": 1,
+      "position": [
+        410,
+        300
+      ],
+      "credentials": {
+        "microsoftToDoOAuth2Api": "Microsoft To Do OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "list",
+        "operation": "update",
+        "listId": "={{$node[\"Microsoft To Do\"].json[\"id\"]}}",
+        "displayName": "=UpdatedTaskList{{Date.now()}}"
+      },
+      "name": "Microsoft To Do1",
+      "type": "n8n-nodes-base.microsoftToDo",
+      "typeVersion": 1,
+      "position": [
+        580,
+        300
+      ],
+      "credentials": {
+        "microsoftToDoOAuth2Api": "Microsoft To Do OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "list",
+        "listId": "={{$node[\"Microsoft To Do\"].json[\"id\"]}}"
+      },
+      "name": "Microsoft To Do2",
+      "type": "n8n-nodes-base.microsoftToDo",
+      "typeVersion": 1,
+      "position": [
+        750,
+        300
+      ],
+      "credentials": {
+        "microsoftToDoOAuth2Api": "Microsoft To Do OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "list",
+        "operation": "getAll",
+        "limit": 1
+      },
+      "name": "Microsoft To Do3",
+      "type": "n8n-nodes-base.microsoftToDo",
+      "typeVersion": 1,
+      "position": [
+        1030,
+        440
+      ],
+      "credentials": {
+        "microsoftToDoOAuth2Api": "Microsoft To Do OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "create",
+        "taskListId": "={{$node[\"Microsoft To Do2\"].json[\"id\"]}}",
+        "title": "=Task{{Date.now()}}",
+        "additionalFields": {
+          "content": "<h3>test>/h3>",
+          "importance": "low",
+          "status": "inProgress"
+        }
+      },
+      "name": "Microsoft To Do4",
+      "type": "n8n-nodes-base.microsoftToDo",
+      "typeVersion": 1,
+      "position": [
+        970,
+        260
+      ],
+      "credentials": {
+        "microsoftToDoOAuth2Api": "Microsoft To Do OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "taskListId": "={{$node[\"Microsoft To Do2\"].json[\"id\"]}}",
+        "taskId": "={{$node[\"Microsoft To Do4\"].json[\"id\"]}}"
+      },
+      "name": "Microsoft To Do5",
+      "type": "n8n-nodes-base.microsoftToDo",
+      "typeVersion": 1,
+      "position": [
+        1860,
+        260
+      ],
+      "credentials": {
+        "microsoftToDoOAuth2Api": "Microsoft To Do OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "taskListId": "={{$node[\"Microsoft To Do2\"].json[\"id\"]}}",
+        "limit": 1
+      },
+      "name": "Microsoft To Do6",
+      "type": "n8n-nodes-base.microsoftToDo",
+      "typeVersion": 1,
+      "position": [
+        2010,
+        260
+      ],
+      "credentials": {
+        "microsoftToDoOAuth2Api": "Microsoft To Do OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "taskListId": "={{$node[\"Microsoft To Do2\"].json[\"id\"]}}",
+        "taskId": "={{$node[\"Microsoft To Do4\"].json[\"id\"]}}",
+        "updateFields": {
+          "importance": "high",
+          "status": "completed",
+          "title": "Testa"
+        }
+      },
+      "name": "Microsoft To Do7",
+      "type": "n8n-nodes-base.microsoftToDo",
+      "typeVersion": 1,
+      "position": [
+        2160,
+        260
+      ],
+      "credentials": {
+        "microsoftToDoOAuth2Api": "Microsoft To Do OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "taskListId": "={{$node[\"Microsoft To Do2\"].json[\"id\"]}}",
+        "taskId": "={{$node[\"Microsoft To Do4\"].json[\"id\"]}}"
+      },
+      "name": "Microsoft To Do8",
+      "type": "n8n-nodes-base.microsoftToDo",
+      "typeVersion": 1,
+      "position": [
+        2320,
+        260
+      ],
+      "credentials": {
+        "microsoftToDoOAuth2Api": "Microsoft To Do OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "list",
+        "operation": "delete",
+        "listId": "={{$node[\"Microsoft To Do\"].json[\"id\"]}}"
+      },
+      "name": "Microsoft To Do9",
+      "type": "n8n-nodes-base.microsoftToDo",
+      "typeVersion": 1,
+      "position": [
+        2490,
+        300
+      ],
+      "credentials": {
+        "microsoftToDoOAuth2Api": "Microsoft To Do OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "linkedResource",
+        "operation": "create",
+        "taskListId": "={{$node[\"Microsoft To Do2\"].json[\"id\"]}}",
+        "taskId": "={{$node[\"Microsoft To Do4\"].json[\"id\"]}}",
+        "displayName": "FixedNow",
+        "applicationName": "=TestApplication{{Date.now()}}",
+        "additionalFields": {
+          "externalId": "={{Math.round(Math.random()*1000).toString()}}",
+          "webUrl": "http://n8n.io/blog"
+        }
+      },
+      "name": "Microsoft To Do10",
+      "type": "n8n-nodes-base.microsoftToDo",
+      "typeVersion": 1,
+      "position": [
+        1110,
+        150
+      ],
+      "credentials": {
+        "microsoftToDoOAuth2Api": "Microsoft To Do OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "linkedResource",
+        "operation": "getAll",
+        "taskListId": "={{$node[\"Microsoft To Do2\"].json[\"id\"]}}",
+        "taskId": "={{$node[\"Microsoft To Do4\"].json[\"id\"]}}",
+        "limit": 1
+      },
+      "name": "Microsoft To Do11",
+      "type": "n8n-nodes-base.microsoftToDo",
+      "typeVersion": 1,
+      "position": [
+        1260,
+        150
+      ],
+      "credentials": {
+        "microsoftToDoOAuth2Api": "Microsoft To Do OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "linkedResource",
+        "taskListId": "={{$node[\"Microsoft To Do2\"].json[\"id\"]}}",
+        "taskId": "={{$node[\"Microsoft To Do4\"].json[\"id\"]}}",
+        "linkedResourceId": "={{$node[\"Microsoft To Do10\"].json[\"id\"]}}"
+      },
+      "name": "Microsoft To Do12",
+      "type": "n8n-nodes-base.microsoftToDo",
+      "typeVersion": 1,
+      "position": [
+        1410,
+        150
+      ],
+      "credentials": {
+        "microsoftToDoOAuth2Api": "Microsoft To Do OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "linkedResource",
+        "operation": "delete",
+        "taskListId": "={{$node[\"Microsoft To Do2\"].json[\"id\"]}}",
+        "taskId": "={{$node[\"Microsoft To Do4\"].json[\"id\"]}}",
+        "linkedResourceId": "={{$node[\"Microsoft To Do10\"].json[\"id\"]}}"
+      },
+      "name": "Microsoft To Do13",
+      "type": "n8n-nodes-base.microsoftToDo",
+      "typeVersion": 1,
+      "position": [
+        1720,
+        150
+      ],
+      "credentials": {
+        "microsoftToDoOAuth2Api": "Microsoft To Do OAuth2 API creds"
+      }
+    },
+    {
+      "parameters": {
+        "resource": "linkedResource",
+        "operation": "update",
+        "taskListId": "={{$node[\"Microsoft To Do2\"].json[\"id\"]}}",
+        "taskId": "={{$node[\"Microsoft To Do4\"].json[\"id\"]}}",
+        "linkedResourceId": "={{$node[\"Microsoft To Do10\"].json[\"id\"]}}",
+        "updateFields": {
+          "displayName": "UpdatedTest",
+          "externalId": "4242",
+          "webUrl": "http://community.n8n.io"
+        }
+      },
+      "name": "Microsoft To Do14",
+      "type": "n8n-nodes-base.microsoftToDo",
+      "typeVersion": 1,
+      "position": [
+        1560,
+        150
+      ],
+      "credentials": {
+        "microsoftToDoOAuth2Api": "Microsoft To Do OAuth2 API creds"
+      }
+    }
+  ],
+  "connections": {
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Microsoft To Do",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Microsoft To Do": {
+      "main": [
+        [
+          {
+            "node": "Microsoft To Do1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Microsoft To Do1": {
+      "main": [
+        [
+          {
+            "node": "Microsoft To Do2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Microsoft To Do2": {
+      "main": [
+        [
+          {
+            "node": "Microsoft To Do3",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Microsoft To Do4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Microsoft To Do4": {
+      "main": [
+        [
+          {
+            "node": "Microsoft To Do10",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Microsoft To Do5": {
+      "main": [
+        [
+          {
+            "node": "Microsoft To Do6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Microsoft To Do6": {
+      "main": [
+        [
+          {
+            "node": "Microsoft To Do7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Microsoft To Do7": {
+      "main": [
+        [
+          {
+            "node": "Microsoft To Do8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Microsoft To Do8": {
+      "main": [
+        [
+          {
+            "node": "Microsoft To Do9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Microsoft To Do10": {
+      "main": [
+        [
+          {
+            "node": "Microsoft To Do11",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Microsoft To Do11": {
+      "main": [
+        [
+          {
+            "node": "Microsoft To Do12",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Microsoft To Do12": {
+      "main": [
+        [
+          {
+            "node": "Microsoft To Do14",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Microsoft To Do13": {
+      "main": [
+        [
+          {
+            "node": "Microsoft To Do5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Microsoft To Do14": {
+      "main": [
+        [
+          {
+            "node": "Microsoft To Do13",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2021-06-02T17:44:46.226Z",
+  "updatedAt": "2021-06-07T08:29:30.042Z",
+  "settings": {},
+  "staticData": null
+}
