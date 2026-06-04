@@ -1,0 +1,97 @@
+{
+  "id": 228,
+  "name": "iCalendar:createEventFile",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "title": "TestEvent",
+        "start": "=2021-07-17T10:21:44.572Z",
+        "end": "=2021-07-18T10:25:39.894Z",
+        "additionalFields": {
+          "attendeesUi": {
+            "attendeeValues": [
+              {
+                "name": "nodeqa",
+                "email": "nod8eqa@gmail.com"
+              }
+            ]
+          },
+          "calName": "TestCalendar",
+          "description": "Testing Icalendar node",
+          "location": "remote",
+          "recurrenceRule": "DAILY;INTERVAL=3;COUNT=3",
+          "organizerUi": {
+            "organizerValues": {
+              "name": "nodeqa",
+              "email": "nodeq@n8n.io"
+            }
+          },
+          "uid": "FixedUID"
+        }
+      },
+      "name": "iCalendar",
+      "type": "n8n-nodes-base.iCal",
+      "typeVersion": 1,
+      "position": [
+        550,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "functionCode": "// Code here will run once per input item.\n// More info and help: https://docs.n8n.io/nodes/n8n-nodes-base.functionItem\n// verify that the created event file is correct\n\nkeys = ['BEGIN','VERSION','CALSCALE','PRODID','METHOD','X-WR-CALNAME','X-PUBLISHED-TTL','BEGIN','UID','SUMMARY','DTSTAMP','DTSTART','DTEND','DESCRIPTION','LOCATION','ORGANIZER;CN=nodeqa','ATTENDEE;RSVP=FALSE;CN=nodeqa','RRULE','END','END',]\n\n\ndata = getBinaryData().data.data;\n\nfiledata =( new Buffer(data, 'base64')).toString();\nfilekeys = filedata.split('\\n').map(line => (line.split(':')[0].trim())).filter( key => !!key);\n\nif (JSON.stringify(keys) !== JSON.stringify(filekeys)){\n  throw new Error('Problem in iCalendar node');\n}\n\nreturn item;"
+      },
+      "name": "FunctionItem",
+      "type": "n8n-nodes-base.functionItem",
+      "typeVersion": 1,
+      "position": [
+        750,
+        300
+      ]
+    }
+  ],
+  "connections": {
+    "iCalendar": {
+      "main": [
+        [
+          {
+            "node": "FunctionItem",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "iCalendar",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "FunctionItem": {
+      "main": [
+        []
+      ]
+    }
+  },
+  "createdAt": "2021-07-08T15:05:47.656Z",
+  "updatedAt": "2021-07-16T12:03:58.775Z",
+  "settings": {},
+  "staticData": null
+}
